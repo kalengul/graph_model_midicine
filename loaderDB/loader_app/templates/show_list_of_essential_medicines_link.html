@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Основные ЛС</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2>Список основных лекарственных средств</h2>
+        <table border="5">
+            <thead>
+                <tr>
+                    {% for hl in head_cols %}
+                        <th>{{ hl }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in page_obj %}
+                    <tr>
+                        <td valign="top">{{ item.name }}</td>
+                        <td>
+                            <table border="1">
+                                {% for i in item.instructions %}
+                                <tr>
+                                    <td width="100" valign="top">{{ i.tn }}</td>
+                                    <td width="110" valign="top">{{ i.year }}</td>
+                                    <td>
+                                        <table>
+                                            {% for url in i.URLs %}
+                                                <tr><td width="700">{{ url }}</td></tr>
+                                            {% endfor %}
+                                        </table>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </table>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <nav>
+            <ul>  
+                {% if page_obj.has_previous %}  
+                    <li><a href="?page={{ page_obj.previous_page_number }}">Назад</a></li>         
+                {% endif %}  
+        
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.    
+        
+                {% if page_obj.has_next %}  
+                    <li><a href="?page={{ page_obj.next_page_number }}">Вперед</a></li>         
+                {% endif %}  
+            </ul>
+        </nav>
+    </body>
+</html>
