@@ -1,0 +1,44 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="medicines">
+ <h1>Лекарственные средства</h1>
+ <form method="GET" >
+  <label for="drugs"></label>
+  <input id="search-input-medicines" class="input_medicines" type="text" name="drugs" id="drugs" value="{{ drugs }}">
+     <ul id="suggestions"></ul>
+     <div>
+      <button class="button_next" type="submit">
+          Подробно
+      </button>
+  </div>
+ </form>
+    </div>
+{% load static %}
+<script src="{% static 'pharm/js/AJAX_Medscape_Drugs.js' %}"></script>
+{% if interactions %}
+      <h1>
+          Взаимодействие:
+      </h1>
+  <ul class="medicines_ul">
+   {% for interaction_list in interactions %}
+    {% for interaction in interaction_list %}
+      <li class="medicines_li">
+          <div class="interaction_with">
+              <h3 class="interaction_with_h2">
+              {{ interaction.name }} - {{ interaction.interaction_with }} ({{ interaction.classification }})
+              </h3>
+          </div>
+          <div class="interaction_description_{% if interaction.classification == 'внимательно следите' %}attentively{% elif interaction.classification == 'незначительный' %}insignificant{% elif interaction.classification == 'противопоказано' %}contraindicated{% elif interaction.classification == 'серьезный' %}serious{% endif %}">
+             {{ interaction.description }}
+          </div>
+      </li>
+    {% endfor %}
+   {% endfor %}
+  </ul>
+{% endif %}
+</div>
+{% endblock %}

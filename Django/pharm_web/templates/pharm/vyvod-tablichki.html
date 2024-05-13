@@ -1,0 +1,56 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+<h2>Выберите Лекарственное средство</h2>
+<form method="POST" id="drug_post_method">
+  {% csrf_token %}
+  <select name="selected_drug" onchange="document.getElementById('drug_post_method').submit()">
+    {% for p in Drug %}
+      <option {% if sd == p.name %} selected {% endif %} >
+      {{p.name}}
+      </option>
+    {% endfor %}
+  </select>
+    <input type="hidden" name="selected_drug2" value="{{ sd2 }}">
+</form>
+
+<h2>Выберите дополнительное Лекарственное средство</h2>
+<form method="POST" id="drug2_post_method">
+  {% csrf_token %}
+  <select name="selected_drug2" onchange="document.getElementById('drug2_post_method').submit()">
+    <option {% if sd2 == p.name %} selected {% endif %} ></option>
+    {% for p in Drug %}
+      <option {% if sd2 == p.name %} selected {% endif %} >
+      {{p.name}}
+      </option>
+    {% endfor %}
+  </select>
+    <input type="hidden" name="selected_drug" value="{{ sd }}">
+</form>
+{% if sd2 != '' %}
+{% for interaction in DrugInteraction %}
+<h2>Взаимодействие {{ interaction.DrugOne }} с {{ interaction.DrugTwo }} - {{ interaction.Interaction }}</h2>>
+{% endfor %}
+{% endif %}
+
+<h2>{{StringTable}}</h2>
+    <table class="interaction-table">
+    <thead>
+        <tr>
+            <th>Первое ЛС</th>
+            <th>Второе ЛС</th>
+            <th>Взаимодействие</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for interaction in DrugInteractionTable %}
+            <tr>
+                <td>{{ interaction.DrugOne }}</td>
+                <td>{{ interaction.DrugTwo }}</td>
+                <td>{{ interaction.Interaction }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
