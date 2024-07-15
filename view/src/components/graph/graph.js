@@ -1,114 +1,166 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect} from 'react';
 import ForceGraph2D from "react-force-graph-2d";
 import * as d3 from "d3";
 
-import {Data} from "./data.js"
+import {Data} from "./graph_data.js"
 import { DataParser } from './DataParser.js';
 
 import './graph.css'
 
-const myData2 = {
-    "nodes": [ 
-        { 
-          "id": "id1",
-          "name": "name1",
-          "val": 1,
-          "color": "#D9EDFF"
-        },
-        { 
-          "id": "id2",
-          "name": "name2",
-          "val": 10,
-          "color": "#B3CFE9" 
-        },
-        { 
-            "id": "id3",
-            "name": "name3",
-            "val": 1,
-            "color": "#D9EDFF" 
-        },
-    ],
-    "links": [
-        {
-            "source": "id1",
-            "target": "id2"
-        },
-        {
-            "source": "id2",
-            "target": "id3"
-        },
-    ]
-}
-
-const myData = Data
-
 export const GraphView =() =>{
-    const graphRef = useRef(null);
     const forceRef = useRef();
+
+    const [MyData, setMyData] = useState({'nodes': [], 'links':[]})
+    const [collapsedClusters, setCollapsedClusters] = useState([]);
+    const [initialCenter, setInitialCenter] = useState(true);
 
     useEffect(() => {
         const dataParser = new DataParser(Data)
-        dataParser.Parse()
+        let newData = dataParser.Parse()
 
+        setMyData({'nodes': newData.nodes, 'links': newData.links})
 
+        let rootNodes = []
+        newData.nodes.forEach(node=>{
+            if (node.cluster.isRoot) rootNodes.push(node.id)
+        })
+        setCollapsedClusters(rootNodes)
 
-        // forceRef.current.d3Force("collide", d3.forceCollide(13));
-        forceRef.current.d3Force("charge").strength(-90);
-        forceRef.current.d3Force("link").distance(100);
-        forceRef.current.d3Force("charge").distanceMax(250);
+        forceRef.current.d3Force("charge").strength(-10);
+        forceRef.current.d3Force("link").distance(9);
+        forceRef.current.d3Force("charge").distanceMax(10);
       }, []);
 
 
     //Отображение узлов
     const CanvasHandler = (node, ctx, globalScale) => {
+        //console.log(node)
+        const label = node.name; //Подпись узла
+        const fontSize = node.cluster.isRoot ? 14 * (node.val / 250): 14 / (globalScale * 1.5);//9
 
-        const label = node.id; //Подпись узла
-        const fontSize = 9
-        // const fontSize = node.isClusterNode //Если узел корневой, то размер 1 иначе другой
-        //   ? 14 * (node.val / 1500)
-        //   : 14 / (globalScale * 1.2);
         ctx.font = `${fontSize}px Sans-Serif`;
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = 'black'//node.isClusterNode ? "white" : "black"; //Если корень, то цвет белый иначе черный
-        // if (node.isClusterNode) {
-        //   // console.log();
-        //    const lineHeight = fontSize * 1.2;
-        //   const lines = label.split(",");
-        //   let x = node.x;
-        //   let y = node.y - lineHeight;
-        //   for (let i = 0; i < lines.length; ++i) {
-        //     ctx.fillText(lines[i], x, y);
-        //     y += lineHeight;
-        //   }
-        // } else if (globalScale >= 3.5) {
-          ctx.fillText(label, node.x, node.y + 1.5);
-        //}
-      }
 
-    //Наведение на узел графа
-    const HoverHandler = () =>{
+        //отображение текста в зависимости от его типа (кластер или нет)
+        if(node.cluster.isRoot){
+              const lineHeight = fontSize * 1.1;
+              const lines = label.split(" ");
+              if(lines.length === 1){
+                let x = node.x;
+                let y = node.y; 
+                ctx.fillText(lines[0], x, y);
+              }else{
+                let x = node.x;
+                let y = node.y - lineHeight;
+                for (let i = 0; i < lines.length; ++i) {
+                        ctx.fillText(lines[i], x, y);
+                        y += lineHeight;
+                }
+              }
+              
+        } else {
+            ctx.fillText(label, node.x, node.y);
+        }
 
     }
+
+    //Отображение свзяей между узлами
+    const linkCanvasHandler = (link, ctx, globalScale) => {
+
+        if (link.highlighted) {
+          ctx.strokeStyle = 'red'; // Цвет для выделенных связей
+          ctx.lineWidth = 0.05; // Толщина для выделенных связей
+        } else {
+          ctx.strokeStyle = 'gray'; // Цвет для обычных связей
+          ctx.lineWidth = 0.05; // Толщина для обычных связей
+        }
+   
+        ctx.stroke();
+    };
+
+    //Наведение на узел графа (почему-то выделение связей работает только у амиодарона + при наведении кзлы прыгают)
+    const HoverHandler = (node, hovering) => {
+      if(MyData){
+        let updatedMyData = { ...MyData };
+        if(node){
+          // Выделить связи узла
+          updatedMyData.links.map((link) => {
+            if (link.source.id === node.id || link.target.id === node.id) {
+              link.highlighted = true;
+              console.log(link)
+            }
+          });
+        } else {
+          // Снять выделение с связей
+          updatedMyData.links.forEach((link) => {
+              link.highlighted = false;
+          });
+        }
+        setMyData({...updatedMyData});
+      }
+    }
+    
+    //Появление узлов меньших уровней при клике на родитела
+    const NodeClickHandler = (node) => {
+      //toggleClusterCollapse(node.id);
+      // if (collapsedClusters.includes(node.id)) {
+      //   forceRef.current.zoom(3.5, 400);
+      //   forceRef.current.centerAt(node.x, node.y, 400);
+      // }
+    };
+    
     
     
     return(
-        <div className='Graphcontainer flex jc-center' ref={graphRef}>
+        <div className='Graphcontainer flex jc-center'>
             <ForceGraph2D
                 ref={forceRef}
-                graphData={Data} //Данные для отображения графа
+                graphData={MyData}
 
-                //Размеры окна (Посмотреть как сделать адаптивность в зависимости от ширены экрана)
-                width = {1105} 
-                height = {500}
+                width={(window.innerWidth <= 450) ? 350 : 1105 } //Поработать над адаптивностью
+                height={500}
 
+                enableAnimation={false}
+                nodeRelSize={1}
+                onEngineStop={() => {
+                  if (initialCenter) {
+                    forceRef.current.zoomToFit();
+                  }
+                  setInitialCenter(false);
+                }}
                 
-                nodeRelSize={10} //Размер узлов
-
                 nodeCanvasObjectMode={() => "after"} //Сначала отрсовка узла по умолчанию, затем применение nodeCanvasObject для его доработки
                 nodeCanvasObject={CanvasHandler}
+                
+                
+                linkCanvasObjectMode={()=>"after"}
+                linkCanvasObject={linkCanvasHandler}
+                
+                //enableNodeDrag={false} //Можно двигать узлы мышкой или нет
 
-                onNodeHover = {HoverHandler} //Навередение на узел
+                //Видимость узлов
+                // nodeVisibility={(node) => {
+                //     if (!collapsedClusters.includes(node.id)) {
+                //       return false;
+                //     } else return true;
+                // }}
+
+                //Видимость связей
+                // linkVisibility={(link) => {
+                //     if (
+                //       collapsedClusters.includes(link.source.id) && collapsedClusters.includes(link.target.id)
+                //     ) {
+                //       return true;
+                //     } else return false;
+                // }}
+
+                // nNodeClick={NodeClickHandler}
+
+                //onNodeHover = {HoverHandler} //Навередение на узел
+
+                
             />
         </div>
     )
