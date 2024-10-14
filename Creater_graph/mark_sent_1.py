@@ -1,61 +1,13 @@
 import json
-import pymorphy3
+import time
 
 import concurrent.futures
 
-
 from mark_BIO_spacy import find_series
-import spacy
+from constants import nlp, morph
 
-# Загрузка модели для русского языка
-nlp = spacy.load("ru_core_news_lg")
-
-# Путь к входному и выходному файлам
-diction_file = 'combined_dict_word_3.json'
-# input_file = 'one_corpus\\corpus_modified_3.txt'
-# output_file = 'train_model\\mark_sent_3.json'
-
-# Изменение токенизатора (определение исключений)
-def custom_tokenizer(nlp):
-    # Получаем существующий токенизатор
-    tokenizer = nlp.tokenizer
-
-    # Список исключений
-    special_cases = [
-        'и/или',
-        'мг/кг/сут',
-        'мл/кг/ч',
-        'в/в',
-        'в/м',
-        'T1/2',
-        'л/кг',
-        'мкг/мл',
-        'мг/мл',
-        'нг/мл',
-        'кг/сут',
-        'мкг·ч/мл',
-        'мг/кг',
-        'мг/м2',
-        'мг/сут',
-        'мл/кг',
-        'мл/мин',
-        'л/мин',
-        'ммоль/л',
-        'мг/дл',
-        'г/дл',
-        'п/к'
-    ]
-
-    # Добавляем исключения с помощью цикла
-    for case in special_cases:
-        tokenizer.add_special_case(case, [{'ORTH': case}])
-
-    return tokenizer
-
-nlp.tokenizer = custom_tokenizer(nlp)
-
-# Инициализация морфологического анализатора
-morph = pymorphy3.MorphAnalyzer()
+# Путь к входному и выходному файлам'
+diction_file = 'full_pipeline\\combined_dict_word_3.json'
 
 # Функция для удаления начальных и конечных кавычек
 def remove_quotes(s):
@@ -85,24 +37,29 @@ def preprocess_text(words):
 
 # Определить для слова тег
 def get_tag(token, pos):
-
+    
     # Если знак препинания, наречие, прилагательное
     if pos in ('PUNCT', 'ADV', 'ADJ'):
         return "O"  
-        
-    # Если аббревиатура
-    if pos in ("PROPN"):
-        return "noun"
-        # return "abbr"
     
+    if pos in ("SYM"):
+        return "sym"
+        
     # Поиск по словарю
     for tag, words in tags_dict.items():
-        if token in words:
-            return tag
+
+        if tag != 'noun_ie':
+
+            if token in words:
+                return tag
         
     # Если глагол
     if pos in ('VERB'):
         return "mechanism" 
+    
+    # Если аббревиатура
+    if pos in ("PROPN"):
+        return "abbr"
     
     return "O"  # Если токен не найден в словаре
 
@@ -119,9 +76,8 @@ def copy_tag_for_ne(tokens, tags):
 def process_line(line):
 
     # Токенизация и получение частей речи
-    doc = nlp(line.strip())
-    tokens = [token.text for token in doc]
-    tokens_pos = [token.pos_ for token in doc]
+    tokens = [token.text for token in line]
+    tokens_pos = [token.pos_ for token in line]
 
     # Нормализация токенов
     normalized_words = preprocess_text(tokens)
@@ -129,11 +85,11 @@ def process_line(line):
     # Тегирование слов
     tags = [get_tag(token, pos) for token, pos in zip(normalized_words, tokens_pos)]
 
-    # Учёт "не"
+    # Учёт "не" перед словом
     tags = copy_tag_for_ne(tokens, tags)
 
-    # Нахождение серии
-    tags = find_series(doc, tokens, tags)
+    # Нахождение серии (поиск зависимых слов от главного)
+    tags = find_series(line, tokens, tags)
 
     return {
         "tokens": tokens,
@@ -145,18 +101,21 @@ def process_line(line):
 # На выходе размеченные данные
 def mark_lines(lines):
     data = []
-        
+
+    # Убедись, что многопоточность работает только при запуске основного скрипта
+    if __name__ == "__main__":
+        docs = list(nlp.pipe(lines, n_process=4))
+    else:
+        docs = list(nlp.pipe(lines))
+
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = []
-        for line in lines:
-            future = executor.submit(process_line, line)
+        for doc in docs:
+            future = executor.submit(process_line, doc)
             futures.append(future)
 
         for i, future in enumerate(concurrent.futures.as_completed(futures)):
             data.append(future.result())
+            print('step', i)
 
     return data
-
-
-# Запуск обработки
-# mark_lines(input_file, output_file)
