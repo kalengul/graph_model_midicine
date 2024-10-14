@@ -1,0 +1,13 @@
+.arrow{
+    text-transform: uppercase;
+    &:hover{
+        /* color: var(--text-active); */
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.arrow-small{
+    width: 15px;
+    margin-right: 5px;
+}

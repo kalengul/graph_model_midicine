@@ -1,0 +1,59 @@
+input, textarea{
+    display:block;
+}
+
+input[type='text'], textarea{
+    margin-top: 5px;
+    width: 100%;
+
+    border-radius: 7px;
+    padding: 10px 10px;
+
+    border: 1px solid var(--border-input);
+    outline: none;
+
+    background-color: var(--background-table);
+    box-shadow: inset 0 1px 3px 1px  rgba(188, 203, 220, 0.5), inset 0 0 0 60px rgba(188, 203, 220, 0), 0 1px rgba(255,255,255,.08);
+
+    &:focus{ 
+        outline: 1.5px solid var(--border-table);
+    }
+}
+
+input[type='text']{
+    margin-bottom: 10px;
+}
+
+div[data-err=true]>input{
+    margin-bottom: 0;
+}
+
+div[data-err=true]>textarea{
+    margin-bottom: 0;
+}
+
+
+input[type='file']{
+    max-width: 100%;
+}
+
+input[type=file]::file-selector-button {
+    background-color: #fff;
+    border: none;
+    outline: none;
+
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--background-fill)
+}
+
+input[type=file]::file-selector-button:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+textarea{
+    margin-bottom: 5px;
+    height: 40vh;
+    resize: none;
+}

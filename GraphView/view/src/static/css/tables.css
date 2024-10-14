@@ -1,0 +1,42 @@
+table{
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    max-height: 70vh;
+
+    background-color: var(--background-table);
+    border-radius: 7px;
+}
+
+thead{
+    border-bottom: 2px solid var(--border-table);
+
+    &,th{
+        padding: 15px 10px;
+        text-align: center;
+    }
+}
+
+tbody{
+    &,tr{
+        border-bottom: 0.5px solid var(--border-table);
+    }
+    &,th{
+        padding: 15px 10px;
+        text-align: center;
+    }
+    &,td{
+        padding: 15px 10px;
+        text-align: left;
+        &:last-child{
+            text-align: center;
+        }
+    }
+}
+
+.tr-click{
+    &:hover{
+        cursor: pointer;
+        background-color: var(--background-fill-light);
+    }
+}

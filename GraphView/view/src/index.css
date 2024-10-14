@@ -1,3 +1,25 @@
+@import "../src/static/css/flex.css";
+@import "../src/static/css/headers.css";
+@import "../src/static/css/tables.css";
+@import "../src/static/css/input.css";
+@import "../src/static/css/select.css";
+
+:root{
+  --text-main: #000;
+  --text-active: #E8BD6D;
+  --text-button-fill: #fff;
+  --background-fill: #95BEEF;
+  --background-fill-active: #7AADEB;
+  --background-nofill: #fff;
+  --background-fill-light: #E9EEF4;
+  --background-table: #F5F5F5;
+  --border-table: #95BEEF;
+  --border-input: #DFDBDB;
+  --icon-color: #4D92E5;
+
+  font-size: 14px;
+}
+
 body {
   margin: 0 5%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,16 +27,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  color: var(--text-main);
 }
 
 hr{
   margin: 0;
 }
 
-.flex{
-  display: flex;
+.err{
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  color: #F26E50 !important;
+  font-size: 0.7em;
 }
 
-.jc-center{
-  justify-content: center;
+.errBorder{
+  border-color:  #F26E50 !important;
 }

@@ -1,13 +1,14 @@
-import { Nav } from "./components/nav/nav";
-import { Form } from "./components/form/Form";
-import { GraphView } from "./components/graph/graph";
+
+import { BrowserRouter } from 'react-router-dom';
+import { useRoutes } from './routes';
 
 function App() {
+  const routes = useRoutes()
   return (
     <>
-      <Nav></Nav>
-      <Form></Form>
-      <GraphView></GraphView>
+      <BrowserRouter>
+        {routes}
+      </BrowserRouter>
     </>
   );
 }
