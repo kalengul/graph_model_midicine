@@ -8,13 +8,11 @@ export class DataParser{
         
         //Запись связей
         this.inputData.links.map((elem) => {
-            let sourceNode = this._findNode('name', elem.source)
-            let targetNode = this._findNode('name', elem.target)
             var idLink = "id" + Math.random().toString(16).slice(2)
-
-            let newLink = {id: idLink, 'source': sourceNode.id, 'target': targetNode.id, 'highlighted': false}
+            let newLink = {'id': idLink, 'source': elem.source_id, 'target': elem.target_id, 'highlighted': false}
             outputData.links.push(newLink)
         })
+        //console.log(outputData)
         
         //Запись узлов
         this.inputData.nodes.map((elem)=>{
@@ -26,7 +24,7 @@ export class DataParser{
         
 
 
-        console.log(outputData)
+        // console.log(outputData)
 
         return outputData
     }
@@ -70,7 +68,11 @@ export class DataParser{
         //Создание нового узла
         let newNode = {
             'id': node.id,
+            'line': node.line,
+            'start': node.start,
+            'end': node.end,
             'name': this._modifyString(node.name),
+            'tag': node.tag,
             'level': node.level,
             'cluster': this._findCluster(node),
             'val': this._getSizeNode(node),
@@ -106,8 +108,8 @@ export class DataParser{
         if (node.level === 0) return {'id': null, 'isRoot': true}
         else if (node.level === 1) return {'id': node.id, 'isRoot': true}
         else if (node.level === 2) {
-            let parentNodeId = this._findNode('parent', node.parent)
-            return {'id': parentNodeId.id, 'isRoot': false}
+            let parentNodeId = node.parent_id[0]//this._findNode('parent', node.parent)
+            return {'id': parentNodeId, 'isRoot': false}
         }
     }
 
