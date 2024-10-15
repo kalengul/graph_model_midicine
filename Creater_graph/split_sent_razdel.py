@@ -1,10 +1,6 @@
 from razdel import sentenize
 import re
 
-# # Чтение текстового файла
-# with open('one_corpus\\corpus_full.txt', 'r', encoding='utf-8') as file:
-#     text = file.read()
-
 def split_format_text(text):
 
     text = re.sub(r'\(.*?\)', '', text)                                         # Удаление круглых скобок и их содержимого
@@ -13,7 +9,7 @@ def split_format_text(text):
     text = re.sub(r'^RxList\.com.*$', '', text, flags=re.MULTILINE)             # "RxList.com ..."
     text = re.sub(r',? показаны в таблице \d+', '', text)                       # ", показаны в таблице n"
     text = re.sub(r'представлен(?:а|о|ы)? в таблице \d+', '', text)             # "представлен(а)(о)(ы) в таблице n"
-    text = re.sub(r'приведен(?:а|о|ы)? в таблице \d+', '', text)             # "представлен(а)(о)(ы) в таблице n"
+    text = re.sub(r'приведен(?:а|о|ы)? в таблице \d+', '', text)                # "представлен(а)(о)(ы) в таблице n"
 
     text = re.sub(r'Результаты представлены в таблице \d+.', '', text)          # "Результаты представлены в таблице n"
 
@@ -64,6 +60,3 @@ def split_format_text(text):
     text = filter_line(text)
 
     return text
-
-# with open('one_corpus\\corpus_razdel.txt', 'w', encoding='utf-8') as file:
-#     file.write(text)
