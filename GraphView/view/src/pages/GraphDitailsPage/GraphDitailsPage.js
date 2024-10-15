@@ -9,6 +9,7 @@ import { addValue } from '../../redux/graphSlices';
 import { addVerifyNode, addCurrentVerify, initialState} from '../../redux/verifyGraphSlice';
 
 import { Validator } from "./dataValidator";
+import {numStatusLink} from "../../functions/numerators"
 
 //Components
 import { Nav } from "../../components/nav/nav";
@@ -71,8 +72,10 @@ export const GraphDitailsPage = () =>{
         const newRecordId = uuidv4();
         const newRecord = {
             id: newRecordId,
-            sourseNode: values.sourseNode,
-            targetNode: values.targetNode,
+            sourseNode_id: values.sourseNode,
+            sourseNode_name: graphSchem.schema.nodes.find((node) => node.id === values.sourseNode).name,
+            targetNode_id: values.targetNode,
+            targetNode_name: graphSchem.schema.nodes.find((node) => node.id === values.targetNode).name,
             statusLink: values.statusLink
         }
 
@@ -109,7 +112,7 @@ export const GraphDitailsPage = () =>{
                                                     <option value = {""}>{props.placeholder}</option>
                                                     { (props.nodes) ? (
                                                         props.nodes.map((elem) =>
-                                                            <option value = {elem.id} key={elem.id}>{elem.name}</option>
+                                                            <option value = {elem.id} name={elem.name} key={elem.id}>{elem.name}</option>
                                                         )
                                                     ) : (<option value = {""}>Загрузка...</option>)}
                                                 </select>
@@ -131,7 +134,7 @@ export const GraphDitailsPage = () =>{
                                                     <option value = {""}>{props.placeholder}</option>
                                                     { (props.nodes) ? (
                                                         props.nodes.map((elem) =>
-                                                            <option value = {elem.id} key={elem.id}>{elem.name}</option>
+                                                            <option value = {elem.id} name={elem.name} key={elem.id}>{elem.name}</option>
                                                         )
                                                     ) : (<option value = {""}>Загрузка...</option>)}
                                                 </select>
@@ -144,7 +147,7 @@ export const GraphDitailsPage = () =>{
                                 
                                 <lable>Состояние связи:</lable>
                                 <div>
-                                    <Field name = "statusLink" type='radio' value="1" lable = "Связь есть и она корректна">
+                                    <Field name = "statusLink" type='radio' value="0" lable = {numStatusLink[0]}>
                                         {({ input, meta, ...props }) => (
                                                 <div className='flex radio-block' >
                                                     <input {...input}/>
@@ -153,7 +156,7 @@ export const GraphDitailsPage = () =>{
                                         )}
                                     </Field>
 
-                                    <Field name = "statusLink" type='radio' value="-1" lable = "Связь есть, но она некорректна">
+                                    <Field name = "statusLink" type='radio' value="1" lable = {numStatusLink[1]}>
                                         {({ input, meta, ...props }) => (
                                                 <div className='flex radio-block'>
                                                     <input {...input}/>
@@ -162,7 +165,7 @@ export const GraphDitailsPage = () =>{
                                         )}
                                     </Field>
 
-                                    <Field name = "statusLink" type='radio' value="0" lable = "Связь отсутсвует, но она должна быть">
+                                    <Field name = "statusLink" type='radio' value="2" lable = {numStatusLink[2]}>
                                         {({ input, meta, ...props }) => (
                                                 <div data-err={meta.error && meta.touched}>
                                                     <div className='flex radio-block' >
