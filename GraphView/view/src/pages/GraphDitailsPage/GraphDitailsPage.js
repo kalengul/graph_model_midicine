@@ -3,14 +3,16 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Form} from 'react-final-form';
 import {Field } from 'react-final-form';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid'
 import { useDispatch , useSelector} from 'react-redux';
 import { addValue } from '../../redux/graphSlices';
+import { addVerifyNode, addCurrentVerify, initialState} from '../../redux/verifyGraphSlice';
 
 import { Validator } from "./dataValidator";
 
 //Components
 import { Nav } from "../../components/nav/nav";
-import { GraphView } from '../../components/graph/graph'
+import { GraphView } from '../../components/graph/graphView'
 import { ArrowLink } from "../../components/arrowLink/arrowLink"
 import { Button } from '../../components/button/button';
 
@@ -25,6 +27,9 @@ export const GraphDitailsPage = () =>{
     const dispatch = useDispatch()
 
     useEffect(()=>{
+        //Инициализация данных
+        dispatch(initialState())
+
         try {
             const response = axios({ 
                 method: "GET", 
@@ -54,15 +59,25 @@ export const GraphDitailsPage = () =>{
         }
     }
 
-    // const ChangeNodeHandler = (e) =>{
-    //     setCheckNodes({...checkNodes, [e.target.name]:e.target.value})
-    // }
-    // console.log(checkNodes)
+    const AddCurrentVeridy = (values) =>{
+        dispatch(addCurrentVerify({name: Object.keys(values)[0], value: values[Object.keys(values)[0]]}))
+    }
+
+    const VerifyGraph = useSelector(state=>state.VerifyGraph)
+    console.log(VerifyGraph)
 
     const addNewRecordHandler = (values) =>{
         console.log(values)
-    }
+        const newRecordId = uuidv4();
+        const newRecord = {
+            id: newRecordId,
+            sourseNode: values.sourseNode,
+            targetNode: values.targetNode,
+            statusLink: values.statusLink
+        }
 
+        dispatch(addVerifyNode(newRecord))
+    }
 
 
     return (
@@ -81,10 +96,16 @@ export const GraphDitailsPage = () =>{
                             <form onSubmit={handleSubmit}>
                                 <lable>Узлы:</lable>
                                 <div className='nodeChoice-block'>
-                                    <Field name='sourseNode' nodes={graphSchem.schema.nodes} placeholder = "Выберете узел источник"> 
+                                    <Field name='sourseNode'nodes={graphSchem.schema.nodes} placeholder = "Выберете узел источник"> 
                                         {({ input, meta, ...props }) => (
                                             <div data-err={meta.error && meta.touched}>
-                                                <select {...input} {...props} className={(meta.error && meta.touched) ? 'errBorder' : ''}>
+                                                <select {...input} {...props} 
+                                                    className={(meta.error && meta.touched) ? 'errBorder' : ''}
+                                                    onChange={(e) => {
+                                                        input.onChange(e); // Обновляем значение в форме
+                                                        AddCurrentVeridy({ [input.name]: e.target.value }); // Вызываем функцию с новым значением
+                                                    }}
+                                                >
                                                     <option value = {""}>{props.placeholder}</option>
                                                     { (props.nodes) ? (
                                                         props.nodes.map((elem) =>
@@ -100,7 +121,13 @@ export const GraphDitailsPage = () =>{
                                     <Field name='targetNode' nodes={graphSchem.schema.nodes} placeholder = "Выберете целевой узел">
                                         {({ input, meta, ...props }) => (
                                             <div data-err={meta.error && meta.touched}>
-                                                <select {...input} {...props} className={(meta.error && meta.touched) ? 'errBorder' : ''}>
+                                                <select {...input} {...props} 
+                                                    className={(meta.error && meta.touched) ? 'errBorder' : ''}
+                                                    onChange={(e) => {
+                                                        input.onChange(e); // Обновляем значение в форме
+                                                        AddCurrentVeridy({ [input.name]: e.target.value }); // Вызываем функцию с новым значением
+                                                    }}
+                                                >
                                                     <option value = {""}>{props.placeholder}</option>
                                                     { (props.nodes) ? (
                                                         props.nodes.map((elem) =>

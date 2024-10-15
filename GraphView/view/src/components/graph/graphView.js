@@ -1,36 +1,31 @@
-import React, { useState, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addValue } from '../../redux/graphSlices';
-
-import * as d3 from 'd3';
 
 import { DataParser } from './DataParser.js';
 
 import { d3Graph } from './d3.js';
 
 
-import './graph.css'
+import './graphView.css'
 
 export const GraphView =() =>{
     const svgRef = useRef();
 
-    const [graphData, setGraphData] = useState({'nodes': [], 'links':[]})
-
     const graphSchem = useSelector(state=>state.graph)
+    const selectedNodes = useSelector(state=>state.VerifyGraph.currentVerify)
 
     //Отображение графа
     useEffect(() => {
-        //console.log(graphSchem.schema)
         //Парсер данных 
         if(Object.keys(graphSchem.schema).length!=0){
             const dataParser = new DataParser(graphSchem.schema)
             const  graphData = dataParser.Parse()
 
             //отображение в виде сети
-            d3Graph({graphData: graphData, svgRef: svgRef})
+            d3Graph({graphData: graphData, svgRef: svgRef, selectedNodes: selectedNodes})
         }
 
-    }, [graphSchem]);
+    }, [graphSchem, selectedNodes]);
     
     return (
         <div className='Graphcontainer'>
