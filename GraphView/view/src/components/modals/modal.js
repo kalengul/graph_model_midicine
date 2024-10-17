@@ -12,7 +12,9 @@ export const Modal = (props) => {
                 <NotifyModal text="Запись добавлена успешно!" isOpen={props.isOpen} setIsOpet={props.setIsOpet}/>
             )
         case "changeLinkStatus":
-            return(<ChangeLinkStatusModal isOpen={props.isOpen} setIsOpet={props.setIsOpet} id={props.id}/>)   
+            return(
+                <ChangeLinkStatusModal isOpen={props.isOpen} setIsOpet={props.setIsOpet} id={props.id}/>
+            )   
     
         default:
             break;

@@ -22,7 +22,7 @@ export const NotifyModal = (props) => {
     return (
         <>
             {props.isOpen  &&
-                <div className={`modal temporary ${isClosing ? ' fade-out' : ""}`}>
+                <div className={`modal notify_modal temporary ${isClosing ? ' fade-out-2' : ""}`}>
                     <p>{props.text}</p>
                 </div>
             }

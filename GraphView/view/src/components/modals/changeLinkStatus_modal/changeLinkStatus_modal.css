@@ -3,6 +3,10 @@
     width: 100vw;
     background-color: var(--background-modal);
 
+    transition: opacity 0.5s ease-in-out; /* Плавное изменение непрозрачности */
+    opacity: 1; /* Начальная непрозрачность */
+    z-index: 1000; /* Чтобы окно было поверх остального контента */
+
     position: fixed;
     top: 0;
     left: 0;
@@ -14,4 +18,13 @@
     background-color: var(--background-main);
     border-radius: 7px;
     
+}
+
+.fade-out-1 {
+    opacity: 0; /* Конечная непрозрачность для исчезновения */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.change-container{
+    margin: 5% 0;
 }

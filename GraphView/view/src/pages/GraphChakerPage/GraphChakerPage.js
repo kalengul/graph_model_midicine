@@ -35,6 +35,7 @@ export const GraphChakerPage = () =>{
     //Изменение стостояния связи в списке
     const ChandeStatusLink = (id) =>{
         setChangeNodeId(id)
+        setModalVisible(true)
     }
 
     return(
