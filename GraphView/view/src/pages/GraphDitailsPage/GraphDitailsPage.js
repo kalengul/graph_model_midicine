@@ -16,6 +16,7 @@ import { Nav } from "../../components/nav/nav";
 import { GraphView } from '../../components/graph/graphView'
 import { ArrowLink } from "../../components/arrowLink/arrowLink"
 import { Button } from '../../components/button/button';
+import { Modal } from '../../components/modals/modal';
 
 import "./GraphDitailsPage.css"
 
@@ -24,12 +25,13 @@ export const GraphDitailsPage = () =>{
     const { id } = useParams()
 
     const [graphDitails, setGraphDitails] = useState({})
-    const [checkNodes, setCheckNodes] = useState({ sourseNode: null, targetNode: null })
+    const [isModalVisible, setModalVisible] = useState(false);
     const dispatch = useDispatch()
 
     useEffect(()=>{
         //Инициализация данных
         dispatch(initialState())
+        setModalVisible(false)
 
         try {
             const response = axios({ 
@@ -65,10 +67,10 @@ export const GraphDitailsPage = () =>{
     }
 
     const VerifyGraph = useSelector(state=>state.VerifyGraph)
-    console.log(VerifyGraph)
+    //console.log(VerifyGraph)
 
     const addNewRecordHandler = (values) =>{
-        console.log(values)
+        //console.log(values)
         const newRecordId = uuidv4();
         const newRecord = {
             id: newRecordId,
@@ -80,6 +82,7 @@ export const GraphDitailsPage = () =>{
         }
 
         dispatch(addVerifyNode(newRecord))
+        setModalVisible(true)
     }
 
 
@@ -187,6 +190,8 @@ export const GraphDitailsPage = () =>{
                     </Form>
                 </div>
             </div>
+        
+            <Modal type="notify" text="Запись добавлена успешно!" isOpen={isModalVisible} setIsOpet={setModalVisible}/>
         </div>
     )
 }

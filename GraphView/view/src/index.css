@@ -5,7 +5,6 @@
 @import "../src/static/css/select.css";
 
 :root{
-  --text-main: #000;
   --text-active: #E8BD6D;
   --text-button-fill: #fff;
   --background-fill: #95BEEF;
@@ -16,6 +15,12 @@
   --border-table: #95BEEF;
   --border-input: #DFDBDB;
   --icon-color: #4D92E5;
+
+  /*Новые именования цветов*/
+  --text-main: #000;
+  --background-main: #fff;
+  --background-success: #D7E6C9;
+  --background-modal: #334a66ac;
 
   font-size: 14px;
 }

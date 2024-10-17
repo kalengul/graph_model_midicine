@@ -1,0 +1,24 @@
+.modal{
+    width: 250px;
+    padding: 1px 30px;
+
+    border-radius: 7px;
+    border: 1px solid var(--border-input);
+    box-shadow: 2px 2px 10px  rgba(153, 165, 179, 0.5);
+    background-color: var(--background-success);
+
+    transition: opacity 2s ease-in-out; /* Плавное изменение непрозрачности */
+    opacity: 1; /* Начальная непрозрачность */
+    z-index: 1000; /* Чтобы окно было поверх остального контента */
+}
+
+.temporary{
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+}
+
+.fade-out {
+    opacity: 0; /* Конечная непрозрачность для исчезновения */
+    transition: opacity 2s ease-in-out;
+}

@@ -34,6 +34,7 @@ const VeriyGraphSlice = createSlice({
 
         deliteVerifyNode(state, action){
             const verifiNodeId = action.payload.id
+            console.log(verifiNodeId)
             state.verifyData = state.verifyData.filter((elem) => elem.id !== verifiNodeId)
         },
 
