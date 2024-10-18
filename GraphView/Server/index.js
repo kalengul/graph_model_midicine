@@ -30,6 +30,9 @@ const startApp = async()=>{
         const result = await db.query('SELECT NOW()');
         console.log('Подключение к базе данных успешно:', result.rows[0].now);
 
+        //Создание таблиц
+        db.createTables();
+
         app.listen(PORT, ()=>console.log(`Server start on port ${PORT}`))
 
     } catch (error) {

@@ -38,12 +38,10 @@ class GraphsController{
                 // Перемещаем файл
                 uploadedFile.mv(filePath, function(err) {
                     if (err) return res.status(500).send(err);
-
-                    //return res.send('Новая схема графа добавлена');
                 });
 
                 try{
-                    const result = await db.query('INSERT INTO Graphs_Models (file_name, create_data, update_data, title) VALUES ($1, $2, $3, $4) RETURNING *', [fileName, timestamp, timestamp, titleFile]);
+                    const result = await db.addNewGraphSchema([fileName, timestamp, timestamp, titleFile]);
                     return res.status(200).json({data:'Новая схема графа добавлена'})
                 }
                 catch(err){
@@ -70,9 +68,8 @@ class GraphsController{
                 });
 
                 //Сохранение данных в БД
-
                 try{
-                    const result = await db.query('INSERT INTO Graphs_Models (file_name, create_data, update_data, title) VALUES ($1, $2, $3, $4) RETURNING *', [fileName, timestamp, timestamp, titleFile]);
+                    const result = await db.addNewGraphSchema([fileName, timestamp, timestamp, titleFile]);
                     return res.status(200).json({data:'Новая схема графа добавлена'})
                 }
                 catch(err){
@@ -91,7 +88,7 @@ class GraphsController{
     async GetAll(req, res){
         //console.log(`Запрос на получение всех данных`)
         try {
-            const result = await db.query('SELECT id, create_data, title FROM Graphs_Models');
+            const result = await db.getAllGraphSchemas();
             //console.dir(result)
             return res.status(200).json({Data: result.rows})
             
@@ -110,7 +107,7 @@ class GraphsController{
             if(!id) return res.status(500).json({ message: 'Некорректный id файла' })
 
             //Получем из бд название файла и выдаем ошибку если файла нет
-            let result = await db.query('SELECT file_name, title from Graphs_Models WHERE id = $1', [id])
+            let result = await db.GetByIdGraphSchema([id])
             let fileName = result.rows[0] ? result.rows[0].file_name : null;
             console.log(result.rows[0])
             
@@ -151,7 +148,7 @@ class GraphsController{
             if(!id) return res.status(500).json({ message: 'Некорректный id файла схемы' })
             
             //Удаление с сервера
-            let result = await db.query('SELECT file_name from Graphs_Models WHERE id = $1', [id])
+            let result = await db.GetByIdGraphSchema([id])
             let fileName = result.rows[0] ? result.rows[0].file_name : null;
 
             let filePath = path.resolve(__dirname,'..','files','graphs', fileName)
@@ -164,7 +161,7 @@ class GraphsController{
             }
 
             //Удаление из БД
-            result = await db.query('DELETE FROM Graphs_Models WHERE id = $1', [id])
+            result = await db.DeleteByIdGraphSchema([id])
 
             return res.status(200).json({ message: 'Файл схемы удален' })
 
@@ -181,7 +178,7 @@ class GraphsController{
             if(!id) return res.status(500).json({ message: 'Некорректный id файла схемы' })
 
             //Получем из бд название файла и выдаем ошибку если файла нет
-            let result = await db.query('SELECT file_name, title from Graphs_Models WHERE id = $1', [id])
+            let result = await db.GetByIdGraphSchema([id])
             let fileName = result.rows[0] ? result.rows[0].file_name : null;
             console.log(result.rows[0])
             
