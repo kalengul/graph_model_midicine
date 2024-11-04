@@ -1,8 +1,18 @@
 import * as d3 from 'd3';
+import { Link } from 'react-router-dom';
 
 export const d3Graph=(props)=>{
+
+    const colors = {
+        selectNode: "#E8BD6D",
+        selectLink: "#8B7474",
+        link: '#B8B5B5'
+    }
+
     const graphData = props.graphData
     const svgRef = props.svgRef
+    const selectedNodes = props.selectedNodes
+
     if (graphData && svgRef.current) {
         const width = 800;
         const height = 400;
@@ -33,8 +43,14 @@ export const d3Graph=(props)=>{
         .enter() //Нужен для ввода дополнительных значений (так как data привязывает только первое)
         .append('path')
         .attr('class', 'link')
-        .attr('stroke', '#B8B5B5') // Цвет линии ребра
-        .attr('stroke-width', 1) // Ширина линии ребра
+        .attr('stroke', d=>{
+            if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return colors.selectLink
+            return colors.link
+        }) // Цвет линии ребра
+        .attr('stroke-width', d=>{
+            if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return 2
+            return 1
+        }) // Ширина линии ребра
         .style('pointer-events', 'none') //(устанавливает стиль) Отключение событий на ребрах (клики и т.д.)
 
         // Создание узлов
@@ -49,7 +65,10 @@ export const d3Graph=(props)=>{
         .attr('class', 'node')
         .attr('id', d => d.id)
         .attr('r', d => d.val) // Радиус узла
-        .attr('fill', d=>d.color) // Цвет заполнения
+        .attr('fill', d=>{
+            if(selectedNodes.sourseNode === d.id || selectedNodes.targetNode === d.id) return colors.selectNode
+            return d.color
+        }) // Цвет заполнения
         .attr("cursor", "pointer")
         .on('click', (event, d) => {
             // Добавьте логику для обработки клика по узлу
@@ -79,53 +98,5 @@ export const d3Graph=(props)=>{
  
             nodes.attr('transform', d => `translate(${d.x}, ${d.y})`); // Правильная позиция для групп
         });
-       
-        
-        
-        // //Наведение на узел:
-        // // Обработчик события mouseover для узлов
-        // nodes.on("mouseover", function(event, d) {
-        //     // Находим все связанные ребра
-        //     const linkedLinks = svg.selectAll(".link")
-        //          .filter(link => link.source.id === d || link.target.id === d)
-        //     console.log(linkedLinks)
-        
-        //     // Находим все связанные узлы (кроме самого себя)
-        //     const linkedNodes = svg.selectAll(".node")
-        //         .filter(node => node.id !== d && (
-        //                 linkedLinks.filter(link => link.source.id === node.id || link.target.id === node.id).size() > 0
-        //         ));
-        //     console.log(linkedNodes)
-            
-        //     // Несвязанные узлы
-        //     const unlinkedNodes = svg.selectAll(".node")
-        //         .filter(node => (linkedLinks.filter(link => link.source.id === node.id || link.target.id === node.id).size() === 0))
-        //     console.log(unlinkedNodes)
-        
-        //     // Выделяем ребра
-        //     linkedLinks
-        //         .style("stroke", "black") 
-        //         .style("stroke-width", 1)
-        //         .style("opacity", 1);
-        
-        //     // Выделяем узлы
-        //     linkedNodes
-        //         .style("fill", "steelblue");
-        //     unlinkedNodes
-        //         .style("fill", "#D9D9D9")
-        // });
-        
-        // // Обработчик события mouseout для узлов
-        // nodes.on("mouseout", function(event, d) {
-        //     // Сбрасываем выделение ребер
-        //     svg.selectAll(".link")
-        //         .style("stroke", '#B8B5B5') 
-        //         .style("stroke-width", 1)
-        //         .style("opacity", 1);
-        
-        //     // Сбрасываем выделение узлов
-        //     svg.selectAll(".node")
-        //         .style("fill", d=>d.color); 
-        // });
     }
 }

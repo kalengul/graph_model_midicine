@@ -17,6 +17,7 @@ app.use(cors({
 );
 app.use(express.json({ extended: true }))
 app.use(express.static(path.resolve(__dirname,'files/graphs'))) //Доступ к статическим файлам c графами
+app.use(express.static(path.resolve(__dirname,'files/graphsValid'))) //Доступ к статическим файлам c графами
 app.use(express.static('public'))
 app.use(fileUpload({}))
 app.use('/api', require('./routes/routes.js'))
@@ -26,9 +27,9 @@ app.use('/api', require('./routes/routes.js'))
 //Старт сервера
 const startApp = async()=>{
     try {
-        
-        const result = await db.query('SELECT NOW()');
-        console.log('Подключение к базе данных успешно:', result.rows[0].now);
+        //Создание таблиц
+        db.createTables();
+        console.log('Подключение к базе данных успешно:');
 
         app.listen(PORT, ()=>console.log(`Server start on port ${PORT}`))
 
