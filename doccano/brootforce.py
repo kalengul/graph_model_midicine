@@ -39,13 +39,6 @@ for (dropout,
                                         eps_values,
                                         learn_rate_values):
     
-
-
-    # # Изменение config файла в соответствии с параметрами
-    # config_file = "./configs/config.cfg"
-    # with open(config_file, "r") as file:
-    #     config_data = file.read()
-
     # Восстанавливаем конфигурацию к оригинальному состоянию
     config_data = original_config_data
 

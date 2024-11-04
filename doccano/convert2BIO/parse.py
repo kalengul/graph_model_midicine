@@ -45,7 +45,7 @@ def write_add(file_name, text):
         file.write(text)
 
 
-def split_data(file_path, train_ratio=0.7, val_ratio=0.15):
+def split_data(file_path, train_ratio=0.8):
     # Читаем все данные из файла
     with open(file_path, 'r', encoding='utf-8') as file:
         lines = file.readlines()
@@ -55,20 +55,15 @@ def split_data(file_path, train_ratio=0.7, val_ratio=0.15):
 
     # Рассчитываем количество тренировочных, валидационных и тестировочных данных
     train_size = int(len(lines) * train_ratio)
-    val_size = int(len(lines) * val_ratio)
-    test_size = len(lines) - train_size - val_size
 
     # Разделяем данные на тренировочные, валидационные и тестировочные
     train_data = lines[:train_size]
-    val_data = lines[train_size:train_size + val_size]
-    test_data = lines[train_size + val_size:]
+    val_data = lines[train_size:]
 
-    return train_data, val_data, test_data
+    return train_data, val_data
 
 def convert_data(lines, nlp):
     db = DocBin()  # create a DocBin object
-
-    # with open('logs.txt', 'w', encoding='utf-8') as f:
 
     for line in lines:
         data = json.loads(line)
@@ -104,7 +99,6 @@ def convert_data(lines, nlp):
 
             if span is None:
                 write_add(file_log, f"NONE: id:{id_w}, {start}-{end} '{text[start:end]}'\n")
-                # write_add(file_log, "\n")
             # Проверяем, что span был создан успешно
             else:
                 ents.append(span)
@@ -114,9 +108,6 @@ def convert_data(lines, nlp):
 
         for ent in ents:
             write_add(file_log, f"span: id:{id}, {ent.start_char}-{ent.end_char} {ent}\n")
-            # write_add(file_log, "\n")
-            # f.write(f"span: id:{id}, {ent.start_char}-{ent.end_char} {ent}")
-            # f.write("\n")
         
         # Назначаем сущности документу
         doc.ents = ents
@@ -125,16 +116,14 @@ def convert_data(lines, nlp):
     return db
 
 # Разделение данных
-train_data, val_data, test_data = split_data(file_3, train_ratio=0.8, val_ratio=0.1)
+train_data, val_data = split_data(file_3, train_ratio=0.8)
 
 # Конвертация данных в DocBin формат
 train_db = convert_data(train_data, nlp)
 val_db = convert_data(val_data, nlp)
-test_db = convert_data(test_data, nlp)
 
 # Сохранение в файлы
 train_db.to_disk(f"datasets\\train.spacy")
 val_db.to_disk(f"datasets\\val.spacy")
-test_db.to_disk(f"datasets\\test.spacy")
 
 print("Данные успешно разделены и сохранены.")

@@ -86,8 +86,6 @@ with open(file_path, 'r', encoding='utf-8') as file:
 
             write_add(file_path_log, "\n")
             
-        
-
         with open(file_path_res, 'a', encoding='utf-8') as file_res:
             for item in items:
                 json.dump(item, file_res, ensure_ascii=False)
