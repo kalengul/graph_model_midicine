@@ -35,4 +35,7 @@ form > button.btn{
 .btn-icon path {
     stroke: var(--icon-color);
     stroke-width: 1;
+    &:hover{
+        stroke: var(--icon-color);
+    }
 }

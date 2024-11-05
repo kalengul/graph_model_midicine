@@ -1,10 +1,20 @@
 export class DataParser{
     constructor(data){
-        this.inputData = data
+        this.inputData = data; //Входная схема
+        this.levelMap = new Map() //Коллекция, содержащая количество узлов в каждом уровне
+        
     }
 
-    Parse(){
+    Parse(windowSize){
         let outputData = {"nodes":[], "links": []}
+
+        //Выделяем уровни и количество узлов на них
+        this.inputData.nodes.map((elem)=>{
+            if(!this.levelMap.has(elem.level)) this.levelMap.set(elem.level, 1) //Если уровня нет в коллеции, то добавляем
+            else this.levelMap.set(elem.level, this.levelMap.get(elem.level)+1)
+        })
+
+        console.log(this.levelMap)
         
         //Запись связей
         this.inputData.links.map((elem) => {
@@ -12,7 +22,6 @@ export class DataParser{
             let newLink = {'id': idLink, 'source': elem.source_id, 'target': elem.target_id, 'highlighted': false}
             outputData.links.push(newLink)
         })
-        //console.log(outputData)
         
         //Запись узлов
         this.inputData.nodes.map((elem)=>{
@@ -20,9 +29,8 @@ export class DataParser{
             outputData.nodes.push(newNode)
         })
 
-        //Запись связей между кластерами
+        //Определяем координаты (x, y) для размещения узлов
         
-
 
         // console.log(outputData)
 

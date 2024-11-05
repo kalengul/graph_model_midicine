@@ -16,13 +16,14 @@ export const GraphView =() =>{
 
     //Отображение графа
     useEffect(() => {
+        const size = [800, 400] //Подумать няд адаптивностью размеров
         //Парсер данных 
         if(Object.keys(graphSchem.schema).length!=0){
             const dataParser = new DataParser(graphSchem.schema)
-            const  graphData = dataParser.Parse()
+            const  graphData = dataParser.Parse(size)
 
             //отображение в виде сети
-            d3Graph({graphData: graphData, svgRef: svgRef, selectedNodes: selectedNodes})
+            d3Graph({graphData: graphData, svgRef: svgRef, selectedNodes: selectedNodes, size: size})
         }
 
     }, [graphSchem, selectedNodes]);

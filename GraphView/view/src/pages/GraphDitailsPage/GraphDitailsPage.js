@@ -34,7 +34,7 @@ export const GraphDitailsPage = () =>{
         setModalVisible(false)
 
         try {
-            const response = axios({ 
+            const resGetGraph = axios({ 
                 method: "GET", 
                 url: `http://localhost:7000/api/graphs/${id}`, 
             }).then((res)=>{
@@ -46,6 +46,15 @@ export const GraphDitailsPage = () =>{
                     schema: res.data.Data.schema, // Предполагается, что у вас есть поле 'schema' в данных
                 }));
             })
+
+            const resGetValidsGraph = axios({
+                method: "GET", 
+                url: `http://localhost:7000/api/graphsvalid/all/${id}`, 
+            }).then((res)=>{
+                console.log(res)
+                
+            })
+            
 
         } catch (e) {}
     }, [])
@@ -190,6 +199,9 @@ export const GraphDitailsPage = () =>{
                     </Form>
                 </div>
             </div>
+
+            <hr/>
+            <h2>Файлы с проверками графов</h2>
         
             <Modal type="notify" text="Запись добавлена успешно!" isOpen={isModalVisible} setIsOpet={setModalVisible}/>
         </div>

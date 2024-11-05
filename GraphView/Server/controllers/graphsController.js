@@ -2,6 +2,7 @@ const db = require('../db/db.js')
 const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
+const jsonSchema = require('./hendlers/JSON_SchemaValidation.js')
 
 class GraphsController{
     //Добавление новой схемы графа
@@ -124,7 +125,12 @@ class GraphsController{
 
                     try {
                         const jsonData = JSON.parse(data);
-                        return res.status(200).json({Data: {schema: jsonData, title: result.rows[0].title}})
+
+                        //Проверка на корректность схемы
+                        const resValid = jsonSchema.Validate(jsonData)
+                        if(!resValid.err) return res.status(200).json({Data: {schema: jsonData, title: result.rows[0].title}})
+                        
+                        return res.status(500).json({message: "Схема не соответсвуешь шаблону", err: resValid.err})
 
                     } catch (parseErr) {
                         console.error('Ошибка при парсинге JSON:', parseErr);
@@ -147,7 +153,7 @@ class GraphsController{
 
             if(!id) return res.status(500).json({ message: 'Некорректный id файла схемы' })
             
-            //Удаление с сервера
+            //Удаление с сервера файла схемы
             let result = await db.GetByIdGraphSchema([id])
             let fileName = result.rows[0] ? result.rows[0].file_name : null;
 
@@ -155,12 +161,25 @@ class GraphsController{
 
             if (fs.existsSync(filePath)) {
                 fs.unlinkSync(filePath);
-                res.status(200).send(`Файл схемы удален`);
+                //res.status(200).send(`Файл схемы удален`);
             } else {
                 res.status(404).send(`Файл схемы не найден`);
             }
 
-            //Удаление из БД
+            //Удаление с сервера файлов проверок
+            result = await db.GetAllGraphsValid([id])
+            if(result.rowCount){
+                result.rows.forEach(element => {
+                    let fileName = element ? element.file_name : null;
+                    let filePath = path.resolve(__dirname,'..','files','graphsValid', fileName)
+        
+                    if (fs.existsSync(filePath)) {
+                        fs.unlinkSync(filePath);
+                    }
+                });
+            }
+
+            //Удаление из БД cхемы
             result = await db.DeleteByIdGraphSchema([id])
 
             return res.status(200).json({ message: 'Файл схемы удален' })

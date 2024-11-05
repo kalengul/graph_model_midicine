@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import axios from "axios";
 import { useParams, useNavigate } from 'react-router-dom'
 import { deliteVerifyNode} from '../../redux/verifyGraphSlice';
 import { useSelector, useDispatch} from 'react-redux';
@@ -38,6 +39,26 @@ export const GraphChakerPage = () =>{
         setModalVisible(true)
     }
 
+    const SaveHandler = async () =>{
+        const data = {
+            data: JSON.stringify(verifyData),
+            graph_id: id
+        }
+        console.log(data)
+        try {
+            const response = await axios({ 
+                method: "POST", 
+                url: "http://localhost:7000/api/graphsvalid/addnew", 
+                data,
+                headers: { 'Content-Type': 'multipart/form-data'},
+            }).then((value)=>alert(value.data)
+            ).catch((error)=>{
+                alert(error)
+            })
+            
+        } catch (error) {}
+    }
+
     return(
         <div>
             <Nav></Nav>
@@ -74,7 +95,7 @@ export const GraphChakerPage = () =>{
                     </tbody>
                 </table>
             </div>
-            <Button view="fill" lable = "Сохранить"/>
+            <Button view="fill" lable = "Сохранить" onClick={SaveHandler}/>
             
             <Modal type="changeLinkStatus" isOpen={isModalVisible} setIsOpet={setModalVisible} id={changeNodeId}/>
         </div>

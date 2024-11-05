@@ -14,8 +14,8 @@ export const d3Graph=(props)=>{
     const selectedNodes = props.selectedNodes
 
     if (graphData && svgRef.current) {
-        const width = 800;
-        const height = 400;
+        const width = props.size[0];
+        const height = props.size[1];
 
         const svg = d3.select(svgRef.current)
         svg.selectAll("*").remove() // Очистка предыдущего графа

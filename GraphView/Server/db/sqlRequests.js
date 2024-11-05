@@ -45,15 +45,16 @@ class SqlRequests {
                 id SERIAL PRIMARY KEY,
                 graph_id INTEGER NOT NULL,
                 file_name TEXT NOT NULL,
+                title TEXT NOT NULL,
                 create_data TIMESTAMP NOT NULL,
                 update_data  TIMESTAMP NOT NULL,
-                FOREIGN KEY (graph_id) REFERENCES Graphs_Models(id)
+                FOREIGN KEY (graph_id) REFERENCES Graphs_Models(id) ON DELETE CASCADE
             );
         `
     }
     //Добавление файла с проверкой графа
     sql_INSERT_Graphs_Valid(){
-        return `INSERT INTO graphs_valid (graph_id, file_name, create_data, update_data) VALUES ($1, $2, $3, $4) RETURNING *`
+        return `INSERT INTO graphs_valid (graph_id, file_name, title, create_data, update_data) VALUES ($1, $2, $3, $4, $5) RETURNING *`
     }
     //Полчуение всех проверок графа
     sql_SELECT_ALL_Graphs_Valid(){

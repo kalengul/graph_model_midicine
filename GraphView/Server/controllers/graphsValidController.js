@@ -3,17 +3,21 @@ const fs = require('fs');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
 const ObjectsToCsv = require('objects-to-csv');
+const archiver = require('archiver');
 
 class graphsValidController {
     //Добавление новой проверки
     async AddNew(req, res){
         const {data, graph_id} = req.body
 
+        console.log(req.body)
+
         //Проверки входных данных
-        if(!data) return res.status(500).json({message:"Нет данных о проверки"})
+        if(data.length===0) return res.status(500).json({message:"Нет данных о проверки"})
         if(!graph_id) return res.status(500).json({message:"Нет id графа"})
 
         let result = await db.GetByIdGraphSchema([graph_id])
+        console.log(result)
         if(!result.rowCount) return res.status(500).json({message:"Граф с таким id не существует"})
     
         //Создание имени файла
@@ -33,9 +37,11 @@ class graphsValidController {
             }
         });
 
+        const title = `Проверка графа от ${timestamp}`
+
         //Сохранение данных в БД
         try{
-            const result = await db.AddNewGraphsValid([graph_id, fileName, timestamp, timestamp]);
+            const result = await db.AddNewGraphsValid([graph_id, fileName, title, timestamp, timestamp]);
             return res.status(200).json({data:'Новые результаты проверки графа добавлены'})
         }
         catch(err){
@@ -135,7 +141,7 @@ class graphsValidController {
             const {id} = req.params
             const {format} = req.body
 
-            if(!id) return res.status(500).json({ message: 'Некорректный id файла проверкисхемы' })
+            if(!id) return res.status(500).json({ message: 'Некорректный id файла проверки схемы' })
 
             //Получем из бд название файла и выдаем ошибку если файла нет
             let result = await db.GetByIdGraphsValid([id])
@@ -170,13 +176,53 @@ class graphsValidController {
                             }
                         });
                         break;
-                        
+
                     default: //автоматом json
                         return res.sendFile(filePath)
                 }
             }
 
         }catch (error) {
+            console.error('Что-то пошло не так', error.stack);
+            res.status(500).json({ message: 'Что-то пошло не так' })
+        }
+    }
+
+    //Доделать!!!!
+    async DownloadAll(req, res){
+        try {
+            const {id} = req.params
+            if(!id) return res.status(500).json({ message: 'Некорректный id файла проверки схемы' })
+
+            let result = await db.GetAllGraphsValid([id])
+            if(!result.rowCount){
+                return res.status(500).json({ message: 'Нет файлов для скачивания' })
+            }
+
+            const archive = archiver('zip', {
+                zlib: { level: 9 } // Уровень сжатия
+            });
+
+            res.attachment('files.zip');
+            archive.pipe(res);
+
+             // Добавление файлов в архив
+            const files = []         
+            result.rows.forEach((record)=>{
+                let fileName = record ? record.file_name : null;
+                let filePath = path.resolve(__dirname,'..','files','graphsValid', fileName)
+                files.push(filePath)
+            })
+
+            files.forEach(file => {
+                archive.file(file, { name: path.basename(file) });
+            });
+
+            archive.finalize();
+
+
+            
+        } catch (error) {
             console.error('Что-то пошло не так', error.stack);
             res.status(500).json({ message: 'Что-то пошло не так' })
         }
