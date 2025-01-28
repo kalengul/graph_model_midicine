@@ -1,27 +1,46 @@
 version: '3.8'
 
 services:
-  web:
-    build: 
-      context: .
-      dockerfile: Dockerfile
-    
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    environment:
-      - DATABASE_HOST=localhost
-      - DATABASE_USER=postgres
-      - DATABASE_PASSWORD=userpg
-      - DATABASE_NAME=Central_Storage
-      - DATABASE_PORT=5433
-
   db:
-    image: postgres
+    image: postgres:latest
+    restart: always
+    container_name: postgres_db
+    ports: 
+      - "127.0.0.1:5433:5432"
     environment:
       POSTGRES_DB: Central_Storage
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: userpg
+    volumes:
+      - ./docker_data/postgres_data:/var/lib/postgresql/data  # Прокидывание папки с данными наружу
+    # networks:
+    #   - web_api
+
+
+  app:
+    # image: web-app
+    build: .
+    container_name: server_and_client
     ports:
-      - "5433:5432"
+      - "127.0.0.1:3000:7000"
+    environment:
+      PORT: 7000
+      DB_NAME: Central_Storage
+      DB_USER: postgres
+      DB_PASSWORD: userpg
+      DB_HOST: db
+      DB_PORT: 5432
+    depends_on:
+      - db # app не соберется, пока db соберется
+    networks:
+      - web_api
+    # volumes:
+    #   - ./docker_data/server_data:/app/Server/
+
+volumes:
+  postgres_data:  # Папка данных для postgres
+  # server_data:
+
+networks:
+  web_api:
+    driver: bridge

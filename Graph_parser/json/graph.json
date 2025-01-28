@@ -1,0 +1,95 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "label": "drug",
+            "id": "ЛС1"
+        },
+        {
+            "label": "drug",
+            "id": "ЛС2"
+        },
+        {
+            "label": "drug",
+            "id": "ЛС3"
+        },
+        {
+            "label": "hormone",
+            "id": 1
+        },
+        {
+            "label": "noun",
+            "id": 2
+        },
+        {
+            "label": "mechanism",
+            "id": 3
+        },
+        {
+            "label": "active",
+            "id": 4
+        },
+        {
+            "label": "side_e",
+            "id": 5
+        }
+    ],
+    "links": [
+        {
+            "link": "link",
+            "weight": 5,
+            "source": "ЛС1",
+            "target": 1
+        },
+        {
+            "link": "link",
+            "weight": 5,
+            "source": "ЛС1",
+            "target": 2
+        },
+        {
+            "link": "link",
+            "weight": 5,
+            "source": "ЛС2",
+            "target": 2
+        },
+        {
+            "link": "link",
+            "weight": 5,
+            "source": "ЛС3",
+            "target": 5
+        },
+        {
+            "link": "link",
+            "weight": 5,
+            "source": 1,
+            "target": 3
+        },
+        {
+            "link": "link",
+            "weight": 1,
+            "source": 2,
+            "target": 4
+        },
+        {
+            "link": "link",
+            "weight": 1,
+            "source": 2,
+            "target": 5
+        },
+        {
+            "link": "link",
+            "weight": 1,
+            "source": 3,
+            "target": 4
+        },
+        {
+            "link": "link",
+            "weight": 1,
+            "source": 4,
+            "target": 5
+        }
+    ]
+}

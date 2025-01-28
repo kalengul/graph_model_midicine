@@ -22,6 +22,10 @@ app.use(express.static('public'))
 app.use(fileUpload({}))
 app.use('/api', require('./routes/routes.js'))
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 //app.get('/', (req, res)=>{res.status(200).json({message: 'WORKING'})})
 
 //Старт сервера

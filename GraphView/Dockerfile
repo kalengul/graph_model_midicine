@@ -8,20 +8,21 @@ COPY view/package.json view/package-lock.json ./
 #Устанавливаем необходимые зависимости
 RUN npm install --only=prod --legacy-peer-deps
 #Копируем остальное содержимое в рабочую директорию и собираем React приложение
-COPY view/ ./
+COPY view/ .
 RUN npm run build
 
 #Сборка Node Server
 FROM node:18
 WORKDIR /app
 COPY Server/package.json Server/package-lock.json ./
-RUN npm install
-COPY Server/ ./
+#Запускается при построении образа
+RUN npm install 
+COPY Server/ .
 
 #Копируем собранное React-приложение в директорию ./public текущего образа.
 COPY --from=build-stage /app/client/build ./public
 
-#Указываем, что контейнер будет прослушивать порт 3000
-EXPOSE 3000
+#Указываем, что контейнер будет прослушивать порт 7000
+EXPOSE 7000
 #Команда по умолчанию, которая будет выполнена при запуске контейнера.
 CMD ["node", "index.js"]
