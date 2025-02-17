@@ -155,6 +155,8 @@ class GraphParser {
         this.AssignLevels(graph)
 
         this.GetPosition(graph, window)
+        
+        //Функция привязки таблиц
     }
 
     constructor(){}
