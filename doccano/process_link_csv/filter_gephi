@@ -1,0 +1,15 @@
+/**
+ * Filtering function.
+ *
+ * @param {string} id ID of the item
+ * @param {Object.<string, number | string | boolean | undefined | null>} attributes Attributes of the item
+ * @param {FullGraph} full graph (data and rendering attributes + topology) dataset
+ * @return {boolean} TRUE if the item should be kept in the graph, FALSE to filter it
+ */
+function nodeFilter(id, attributes, graph) {
+  // Check if the label ends with "(side_e)"
+  if (typeof attributes.label === 'string' && attributes.label.endsWith('(side_e)')) {
+    return false; // Exclude this node
+  }
+  return true; // Include all other nodes
+}

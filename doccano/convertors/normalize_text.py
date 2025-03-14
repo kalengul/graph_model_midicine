@@ -7,7 +7,9 @@ def normalize_text(text):
     text = re.sub(r' +\.', '.', text)
     text = re.sub(r' +\:', ':', text)
     text = re.sub(r' +\;', ';', text)
-    text = re.sub(r' - ', '-', text)
+    text = re.sub(r' -', '-', text)
+    text = re.sub(r'- ', '-', text)
+    text = re.sub(r' \+ ', '+', text)
     text = re.sub(r' +\)', ')', text)
     text = re.sub(r'\( +', '(', text)
     text = re.sub(r'\,\.', '.', text)
@@ -23,5 +25,8 @@ def normalize_text(text):
     text = re.sub(r'Т\s+1/2', 'T1/2', text)
     text = re.sub(r'C\s+max', 'Cmax', text)
     text = re.sub(r'С\s+max', 'Cmax', text)
+
+    text = re.sub(r'≤ +', '≤', text)
+    text = re.sub(r'≤ +', '≤', text)
 
     return text
