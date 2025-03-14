@@ -67,7 +67,26 @@ class GraphParser:
         # Определение максимального уровня
         graphJSON['maxLevel'] = max(node_levels.values()) + 1  # Эквивалентно Math.max(...Object.values(nodeLevels))+1
 
+    # Удаление вершин без связей
+    def __DeleteFreeNodes (self, graphJSON):
+        # составляем множество ID вершин, у которы есть связи
+        used_nodes = set()
+        for link in graphJSON['links']:
+            used_nodes.add(link["source"])
+            used_nodes.add(link["target"])
 
+        # Фильтруем и сохраняем связанные узлы графа
+        filtered_nodes = [node for node in graphJSON["nodes"] if node["id"] in used_nodes]
+        graphJSON["nodes"] = filtered_nodes
+
+    def __FindParantes(self, graphJSON):
+        for node in graphJSON["nodes"]:
+            # Находим родителей узла
+            parents = set()
+            for link in graphJSON['links']:
+                if link['target'] == node["id"]:
+                    parents.add(link['source'])
+            node["parents"] = list(parents)
     
     def Parse(self, graphJSON):
         # Проверяем наличие ключа isParse
@@ -75,6 +94,10 @@ class GraphParser:
             
             self.__ChangeID(graphJSON) # Смена ID
             self.__AssignLevels(graphJSON) # Выделение уровней узлов
+
+            self.__DeleteFreeNodes(graphJSON)
+            self.__FindParantes(graphJSON)
+
 
             graphJSON["isParse"] = True
 

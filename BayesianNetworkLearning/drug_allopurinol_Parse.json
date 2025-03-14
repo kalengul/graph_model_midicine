@@ -1,0 +1,227 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "label": "prepare",
+            "weight": 5,
+            "id": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "name": "аллопуринол",
+            "level": 2,
+            "parents": [
+                "ac9dae2a-82cc-4656-bdf0-75d054fa4f90"
+            ]
+        },
+        {
+            "label": "group",
+            "weight": 5,
+            "id": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
+            "name": "препараты, ингибирующие синтез мочевой кислоты",
+            "level": 1,
+            "parents": [
+                "08b2c93b-cf99-493a-a89c-749cd0183b2e"
+            ]
+        },
+        {
+            "label": "mechanism",
+            "weight": 5,
+            "id": "2e2eb346-a611-40bb-b714-af477f848c52",
+            "name": "ингибирует ксантиноксидаза",
+            "level": 3,
+            "parents": [
+                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+            ]
+        },
+        {
+            "label": "group",
+            "weight": 5,
+            "id": "08b2c93b-cf99-493a-a89c-749cd0183b2e",
+            "name": "противоподагрические препараты",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "label": "mechanism",
+            "weight": 5,
+            "id": "2cf6a248-ff14-42ac-8720-fc974b60b642",
+            "name": "угнетение фермент гипоксантин-гуанин фосфорибозил-трансферазa",
+            "level": 3,
+            "parents": [
+                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+            ]
+        },
+        {
+            "label": "mechanism",
+            "weight": 5,
+            "id": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+            "name": "угнетение биосинтез пурин",
+            "level": 4,
+            "parents": [
+                "2cf6a248-ff14-42ac-8720-fc974b60b642"
+            ]
+        },
+        {
+            "label": "excretion",
+            "weight": 5,
+            "id": "04eb0533-50db-44a9-bb9b-417a2eb82926",
+            "name": "кишечник",
+            "level": 3,
+            "parents": [
+                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+            ]
+        },
+        {
+            "label": "excretion",
+            "weight": 5,
+            "id": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
+            "name": "почка",
+            "level": 3,
+            "parents": [
+                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+            ]
+        },
+        {
+            "label": "side_e",
+            "weight": 5,
+            "id": "c549f5e7-1afb-41af-8c27-35b1ec3f919d",
+            "name": "поражение почек",
+            "level": 4,
+            "parents": [
+                "141b786f-b448-46be-8cf9-6e0e5abfe6f7"
+            ]
+        },
+        {
+            "label": "mechanism",
+            "weight": 5,
+            "id": "8aebd735-517b-4d83-8076-c6f682881c2b",
+            "name": "уменьшать концентрация мочевой кислоты кровь",
+            "level": 5,
+            "parents": [
+                "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+                "2e2eb346-a611-40bb-b714-af477f848c52"
+            ]
+        },
+        {
+            "label": "mechanism",
+            "weight": 5,
+            "id": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
+            "name": "уменьшать концентрация мочевой кислоты моча",
+            "level": 5,
+            "parents": [
+                "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+                "2e2eb346-a611-40bb-b714-af477f848c52"
+            ]
+        },
+        {
+            "label": "action",
+            "weight": 5,
+            "id": "04b1b9b1-1131-4db9-b16f-e173b6160012",
+            "name": "растворение кристалл мочевой кислота",
+            "level": 6,
+            "parents": [
+                "deed9cee-a45d-437c-a0b7-dca8197d89d5"
+            ]
+        },
+        {
+            "label": "action",
+            "weight": 5,
+            "id": "969bbff1-5386-490d-b371-98853582fb02",
+            "name": "предотвращает отложение в ткань кристалл мочевой кислота",
+            "level": 6,
+            "parents": [
+                "8aebd735-517b-4d83-8076-c6f682881c2b"
+            ]
+        },
+        {
+            "label": "absobtion",
+            "weight": 5,
+            "id": "8c0b2158-4d2d-469c-9af4-a558ef04af6f",
+            "name": "жкт верхний отдел",
+            "level": 3,
+            "parents": [
+                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "target": "2e2eb346-a611-40bb-b714-af477f848c52",
+            "id": "e1f1e258-bb06-4823-9cf9-9e18576f26ee"
+        },
+        {
+            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "target": "2cf6a248-ff14-42ac-8720-fc974b60b642",
+            "id": "fcb2a175-aeae-46be-acf5-be8841ba13ce"
+        },
+        {
+            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "target": "04eb0533-50db-44a9-bb9b-417a2eb82926",
+            "id": "1ba69275-6d28-450c-a4d8-b44821b9bf66"
+        },
+        {
+            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "target": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
+            "id": "4b189691-9c99-4f7a-b94f-d3ca7662b70b"
+        },
+        {
+            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "target": "8c0b2158-4d2d-469c-9af4-a558ef04af6f",
+            "id": "ad5d67c7-e9dd-4875-bc7a-dd729fc199ee"
+        },
+        {
+            "source": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
+            "target": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "id": "4ee1367c-8a43-4b3b-930f-fec1d861ff15"
+        },
+        {
+            "source": "2e2eb346-a611-40bb-b714-af477f848c52",
+            "target": "8aebd735-517b-4d83-8076-c6f682881c2b",
+            "id": "e79a1be2-4391-496c-a963-26a45884373d"
+        },
+        {
+            "source": "2e2eb346-a611-40bb-b714-af477f848c52",
+            "target": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
+            "id": "d885468a-bbd4-4c33-928b-26769f414699"
+        },
+        {
+            "source": "08b2c93b-cf99-493a-a89c-749cd0183b2e",
+            "target": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
+            "id": "bbeef3c6-752f-44ae-bf35-9b7ec2925e06"
+        },
+        {
+            "source": "2cf6a248-ff14-42ac-8720-fc974b60b642",
+            "target": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+            "id": "2a8bed95-323a-4902-beda-0b1558a54a73"
+        },
+        {
+            "source": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+            "target": "8aebd735-517b-4d83-8076-c6f682881c2b",
+            "id": "2c5a444d-12a0-4ee7-8b82-aaf947543831"
+        },
+        {
+            "source": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+            "target": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
+            "id": "ea472088-bc1a-4233-951b-1fb298fd00e0"
+        },
+        {
+            "source": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
+            "target": "c549f5e7-1afb-41af-8c27-35b1ec3f919d",
+            "id": "0d396fa6-2043-48c8-9940-f81ff3b14249"
+        },
+        {
+            "source": "8aebd735-517b-4d83-8076-c6f682881c2b",
+            "target": "969bbff1-5386-490d-b371-98853582fb02",
+            "id": "a21bc8a9-052e-47cb-b003-dcd953c15920"
+        },
+        {
+            "source": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
+            "target": "04b1b9b1-1131-4db9-b16f-e173b6160012",
+            "id": "1a66933b-1cbd-4fd6-8d74-40ec476bfc0a"
+        }
+    ],
+    "name": "аллопуринол",
+    "maxLevel": 7,
+    "isParse": true
+}
