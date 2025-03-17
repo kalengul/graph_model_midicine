@@ -6,37 +6,37 @@
         {
             "label": "prepare",
             "weight": 5,
-            "id": "b5167a64-2e11-4861-9f28-a443e388ce6c",
+            "id": "7f07ea49-aff8-4475-b300-b944a2f668e8",
             "name": "аллопуринол",
             "level": 2,
             "parents": [
-                "ac9dae2a-82cc-4656-bdf0-75d054fa4f90"
+                "0a0f7679-0586-4fec-b10f-9200f38d2556"
             ]
         },
         {
             "label": "group",
             "weight": 5,
-            "id": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
+            "id": "0a0f7679-0586-4fec-b10f-9200f38d2556",
             "name": "препараты, ингибирующие синтез мочевой кислоты",
             "level": 1,
             "parents": [
-                "08b2c93b-cf99-493a-a89c-749cd0183b2e"
+                "f6292154-2c73-4989-82a8-30d4a64a8bdd"
             ]
         },
         {
             "label": "mechanism",
             "weight": 5,
-            "id": "2e2eb346-a611-40bb-b714-af477f848c52",
+            "id": "a2808801-9397-444b-924a-5a4baeedae02",
             "name": "ингибирует ксантиноксидаза",
             "level": 3,
             "parents": [
-                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+                "7f07ea49-aff8-4475-b300-b944a2f668e8"
             ]
         },
         {
             "label": "group",
             "weight": 5,
-            "id": "08b2c93b-cf99-493a-a89c-749cd0183b2e",
+            "id": "f6292154-2c73-4989-82a8-30d4a64a8bdd",
             "name": "противоподагрические препараты",
             "level": 0,
             "parents": []
@@ -44,181 +44,181 @@
         {
             "label": "mechanism",
             "weight": 5,
-            "id": "2cf6a248-ff14-42ac-8720-fc974b60b642",
+            "id": "58735548-6f5b-4654-9cd6-e01c72aed456",
             "name": "угнетение фермент гипоксантин-гуанин фосфорибозил-трансферазa",
             "level": 3,
             "parents": [
-                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+                "7f07ea49-aff8-4475-b300-b944a2f668e8"
             ]
         },
         {
             "label": "mechanism",
             "weight": 5,
-            "id": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
+            "id": "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c",
             "name": "угнетение биосинтез пурин",
             "level": 4,
             "parents": [
-                "2cf6a248-ff14-42ac-8720-fc974b60b642"
+                "58735548-6f5b-4654-9cd6-e01c72aed456"
             ]
         },
         {
             "label": "excretion",
             "weight": 5,
-            "id": "04eb0533-50db-44a9-bb9b-417a2eb82926",
+            "id": "ec10a6a5-13d3-45da-87e4-42fefb71b3dd",
             "name": "кишечник",
             "level": 3,
             "parents": [
-                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+                "7f07ea49-aff8-4475-b300-b944a2f668e8"
             ]
         },
         {
             "label": "excretion",
             "weight": 5,
-            "id": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
+            "id": "231cfaa5-7460-4465-94fc-bab193f4ebeb",
             "name": "почка",
             "level": 3,
             "parents": [
-                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+                "7f07ea49-aff8-4475-b300-b944a2f668e8"
             ]
         },
         {
             "label": "side_e",
             "weight": 5,
-            "id": "c549f5e7-1afb-41af-8c27-35b1ec3f919d",
+            "id": "1e2d6f18-f10a-4a32-b139-446960463235",
             "name": "поражение почек",
             "level": 4,
             "parents": [
-                "141b786f-b448-46be-8cf9-6e0e5abfe6f7"
+                "231cfaa5-7460-4465-94fc-bab193f4ebeb"
             ]
         },
         {
             "label": "mechanism",
             "weight": 5,
-            "id": "8aebd735-517b-4d83-8076-c6f682881c2b",
+            "id": "5c86578a-52fe-4893-978f-16d44a69b683",
             "name": "уменьшать концентрация мочевой кислоты кровь",
             "level": 5,
             "parents": [
-                "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
-                "2e2eb346-a611-40bb-b714-af477f848c52"
+                "a2808801-9397-444b-924a-5a4baeedae02",
+                "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c"
             ]
         },
         {
             "label": "mechanism",
             "weight": 5,
-            "id": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
+            "id": "0898b6dc-d22e-42af-8163-e8756330eead",
             "name": "уменьшать концентрация мочевой кислоты моча",
             "level": 5,
             "parents": [
-                "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
-                "2e2eb346-a611-40bb-b714-af477f848c52"
+                "a2808801-9397-444b-924a-5a4baeedae02",
+                "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c"
             ]
         },
         {
             "label": "action",
             "weight": 5,
-            "id": "04b1b9b1-1131-4db9-b16f-e173b6160012",
+            "id": "bff2d4b8-234b-49aa-8344-bdbd4cd1adb8",
             "name": "растворение кристалл мочевой кислота",
             "level": 6,
             "parents": [
-                "deed9cee-a45d-437c-a0b7-dca8197d89d5"
+                "0898b6dc-d22e-42af-8163-e8756330eead"
             ]
         },
         {
             "label": "action",
             "weight": 5,
-            "id": "969bbff1-5386-490d-b371-98853582fb02",
+            "id": "67436b22-6645-4d85-9301-b574af3a3773",
             "name": "предотвращает отложение в ткань кристалл мочевой кислота",
             "level": 6,
             "parents": [
-                "8aebd735-517b-4d83-8076-c6f682881c2b"
+                "5c86578a-52fe-4893-978f-16d44a69b683"
             ]
         },
         {
             "label": "absobtion",
             "weight": 5,
-            "id": "8c0b2158-4d2d-469c-9af4-a558ef04af6f",
+            "id": "c5ef3dfa-bb72-448a-bf0f-bb2992121980",
             "name": "жкт верхний отдел",
             "level": 3,
             "parents": [
-                "b5167a64-2e11-4861-9f28-a443e388ce6c"
+                "7f07ea49-aff8-4475-b300-b944a2f668e8"
             ]
         }
     ],
     "links": [
         {
-            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "target": "2e2eb346-a611-40bb-b714-af477f848c52",
-            "id": "e1f1e258-bb06-4823-9cf9-9e18576f26ee"
+            "source": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "target": "a2808801-9397-444b-924a-5a4baeedae02",
+            "id": "a3baffbc-db73-42e1-aebe-2921064d2682"
         },
         {
-            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "target": "2cf6a248-ff14-42ac-8720-fc974b60b642",
-            "id": "fcb2a175-aeae-46be-acf5-be8841ba13ce"
+            "source": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "target": "58735548-6f5b-4654-9cd6-e01c72aed456",
+            "id": "42edfa18-a995-4117-a5c6-e4c5cd85cc4c"
         },
         {
-            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "target": "04eb0533-50db-44a9-bb9b-417a2eb82926",
-            "id": "1ba69275-6d28-450c-a4d8-b44821b9bf66"
+            "source": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "target": "ec10a6a5-13d3-45da-87e4-42fefb71b3dd",
+            "id": "66a41d9d-15aa-42da-81c0-0ab64db1395e"
         },
         {
-            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "target": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
-            "id": "4b189691-9c99-4f7a-b94f-d3ca7662b70b"
+            "source": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "target": "231cfaa5-7460-4465-94fc-bab193f4ebeb",
+            "id": "ee1bb2bf-8268-43d0-9841-344025a63bd1"
         },
         {
-            "source": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "target": "8c0b2158-4d2d-469c-9af4-a558ef04af6f",
-            "id": "ad5d67c7-e9dd-4875-bc7a-dd729fc199ee"
+            "source": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "target": "c5ef3dfa-bb72-448a-bf0f-bb2992121980",
+            "id": "e72a0f75-25ed-49c4-bade-f0ded46f8f4e"
         },
         {
-            "source": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
-            "target": "b5167a64-2e11-4861-9f28-a443e388ce6c",
-            "id": "4ee1367c-8a43-4b3b-930f-fec1d861ff15"
+            "source": "0a0f7679-0586-4fec-b10f-9200f38d2556",
+            "target": "7f07ea49-aff8-4475-b300-b944a2f668e8",
+            "id": "bf8d8ca0-98ce-4f44-b5b2-6bfe383d0d08"
         },
         {
-            "source": "2e2eb346-a611-40bb-b714-af477f848c52",
-            "target": "8aebd735-517b-4d83-8076-c6f682881c2b",
-            "id": "e79a1be2-4391-496c-a963-26a45884373d"
+            "source": "a2808801-9397-444b-924a-5a4baeedae02",
+            "target": "5c86578a-52fe-4893-978f-16d44a69b683",
+            "id": "ff49096f-0cfe-462f-b7f8-7d2c31c0b83e"
         },
         {
-            "source": "2e2eb346-a611-40bb-b714-af477f848c52",
-            "target": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
-            "id": "d885468a-bbd4-4c33-928b-26769f414699"
+            "source": "a2808801-9397-444b-924a-5a4baeedae02",
+            "target": "0898b6dc-d22e-42af-8163-e8756330eead",
+            "id": "a1c4fe60-0f16-4cb4-ad36-79d0bf5c1a2b"
         },
         {
-            "source": "08b2c93b-cf99-493a-a89c-749cd0183b2e",
-            "target": "ac9dae2a-82cc-4656-bdf0-75d054fa4f90",
-            "id": "bbeef3c6-752f-44ae-bf35-9b7ec2925e06"
+            "source": "f6292154-2c73-4989-82a8-30d4a64a8bdd",
+            "target": "0a0f7679-0586-4fec-b10f-9200f38d2556",
+            "id": "1f5fe203-b746-4a23-a148-250527a1cae1"
         },
         {
-            "source": "2cf6a248-ff14-42ac-8720-fc974b60b642",
-            "target": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
-            "id": "2a8bed95-323a-4902-beda-0b1558a54a73"
+            "source": "58735548-6f5b-4654-9cd6-e01c72aed456",
+            "target": "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c",
+            "id": "c89cd9f5-ff06-430c-8a9a-55a62866a5f0"
         },
         {
-            "source": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
-            "target": "8aebd735-517b-4d83-8076-c6f682881c2b",
-            "id": "2c5a444d-12a0-4ee7-8b82-aaf947543831"
+            "source": "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c",
+            "target": "5c86578a-52fe-4893-978f-16d44a69b683",
+            "id": "f559ee02-7c89-4424-971b-6f8c3d42a782"
         },
         {
-            "source": "5d5e3bf2-7905-4bd6-8a59-5f1bdae0f08b",
-            "target": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
-            "id": "ea472088-bc1a-4233-951b-1fb298fd00e0"
+            "source": "5a7c3748-2dd6-4b7c-bfee-da05ec4d855c",
+            "target": "0898b6dc-d22e-42af-8163-e8756330eead",
+            "id": "f13f127c-0c1e-49d7-9f35-1ad1af33fea7"
         },
         {
-            "source": "141b786f-b448-46be-8cf9-6e0e5abfe6f7",
-            "target": "c549f5e7-1afb-41af-8c27-35b1ec3f919d",
-            "id": "0d396fa6-2043-48c8-9940-f81ff3b14249"
+            "source": "231cfaa5-7460-4465-94fc-bab193f4ebeb",
+            "target": "1e2d6f18-f10a-4a32-b139-446960463235",
+            "id": "10859694-34d7-4ded-9c62-1c80fb43c47f"
         },
         {
-            "source": "8aebd735-517b-4d83-8076-c6f682881c2b",
-            "target": "969bbff1-5386-490d-b371-98853582fb02",
-            "id": "a21bc8a9-052e-47cb-b003-dcd953c15920"
+            "source": "5c86578a-52fe-4893-978f-16d44a69b683",
+            "target": "67436b22-6645-4d85-9301-b574af3a3773",
+            "id": "04d604e9-2f77-46e6-bc43-25fcd6957bd3"
         },
         {
-            "source": "deed9cee-a45d-437c-a0b7-dca8197d89d5",
-            "target": "04b1b9b1-1131-4db9-b16f-e173b6160012",
-            "id": "1a66933b-1cbd-4fd6-8d74-40ec476bfc0a"
+            "source": "0898b6dc-d22e-42af-8163-e8756330eead",
+            "target": "bff2d4b8-234b-49aa-8344-bdbd4cd1adb8",
+            "id": "2f307f36-1871-47ca-94d2-caa37510fda5"
         }
     ],
     "name": "аллопуринол",
