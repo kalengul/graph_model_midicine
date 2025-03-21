@@ -212,7 +212,7 @@ class Bayesian:
                 self.__WriteTrase(f"Таблица условных вероятностей")
                 table = self.__Get_node_table(levelNodes[0]["id"])
                 self.__WriteTrase_table(table["conditional_probability"])
-                self.__WriteTrase("\n")
+                self.__WriteTrase("----------------------------------------------------------------------\n")
             
                 
 
