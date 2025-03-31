@@ -1,4 +1,4 @@
-from Parser.Parser import GraphParser 
+from Parser import GraphParser 
 import json
 import os
 import random
@@ -25,7 +25,6 @@ class Bayesian:
         self.graphFile = graphFilePath
         self.graphFileParse =  f"{base}_Parse{ext}"
         self.graphFileTables = f"{base}_Tables{ext}"
-        self.graphFileInfo = f"{base}_Info{ext}"
         with open(self.graphFileParse, 'w', encoding='utf-8') as file:
             json.dump(self.graph, file, ensure_ascii=False, indent=4)
 
@@ -213,44 +212,13 @@ class Bayesian:
                 self.__WriteTrase(f"Таблица условных вероятностей")
                 table = self.__Get_node_table(levelNodes[0]["id"])
                 self.__WriteTrase_table(table["conditional_probability"])
-                self.__WriteTrase("----------------------------------------------------------------------\n")
-       
-    def GetInfo(self):
-        # Получаем информацию о узлах и таблицах БС
-        # Nodes: [
-        #   {
-        #       id: "id",
-        #       combins: [00, 01 ....] - сомбинации для появления узла
-        #   },
-        # ]
-        info = []
-        idNullLevel = "" #Id нулевого уровня
-        for node in self.graph["nodes"]:
-            parentsCount = len(node["parents"]) # определили количество родителей
-            if parentsCount==0: idNullLevel=node["id"]
-            total = 2 ** parentsCount  # Общее количество комбинаций
-            combinations = {}
-            combinations["node_id"] = node["id"]
-            combinations["node_name"] = node["name"]
-            combinations["conmbin"] = [] #массив условных вероятностей
-            for i in range(total):
-                combination = []
-                for j in range(parentsCount):
-                    combination.append((i >> j) & 1)  # Извлекаем биты
-                # Генерируем случайные вероятности и добавляем ключи в json (не появления побочки)
-                if " ".join(map(str, combination[::-1])) != "": # Пропускаем корневой узел
-                    combinations["conmbin"].append(" ".join(map(str, combination[::-1])))
+                self.__WriteTrase("\n")
+            
+                
 
-            info.append(combinations)
-
-        with open(self.graphFileInfo, 'w', encoding='utf-8') as file:
-            json.dump({"nodes": info}, file, ensure_ascii=False, indent=4)
-
-        return {"nodes": info}
 
     # Обучение сети 
     def Learn(self):
-        self.GetInfo()
         self.__GenerateTables() # Построение таблиц условных вероятностей с рандомным значением
         self.__Сalculating_joint_distributions() # Подсчет совместных распределений для каждой комбинации состояния радителей
 
@@ -260,5 +228,5 @@ class Bayesian:
         
 
 
-bayesian = Bayesian("./drug_allopurinol.json")
+bayesian = Bayesian("test_graphs\\merged_graph_fozinopril_ramipril.json")
 bayesian.Learn()
