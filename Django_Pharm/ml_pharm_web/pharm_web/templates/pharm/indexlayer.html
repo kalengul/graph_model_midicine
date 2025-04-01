@@ -1,0 +1,13 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+<ul class="list-articles">
+	{% for p in node %}
+			<li>
+				<h4>{{p.name_node}}</h4><h4>{{p.parametr}}</h4><h4>{{p.normParametr}}</h4><h4>{{p.kolSolution}}</h4><h4>{{p.kolSolutionNorm}}</h4>
+			<div class="clear"></div>
+
+			</li>
+	{% endfor %}
+</ul>
+{% endblock %}

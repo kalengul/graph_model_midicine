@@ -1,0 +1,80 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <!-- Форма для выбора способа отображения побочек -->
+    <form method="post"> 
+        {% csrf_token %}
+        {{ form_check_type_view.as_p }}
+        <button type = "submit" class="btn">Отобразить</button>
+    </form>
+   
+    <hr/>
+
+    <!-- Форма для отображения новой побочки -->
+    {% if tipe_view == 'all'%}
+        <br/>
+        <h2>Добавить побочку</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-error">{{ form.non_field_errors }}</div>
+            {{ form_add_SideEffect.as_p }}
+            <button type = "submit" class="btn">Добавить</button>
+        </form>
+        <br/>
+        <hr/>
+    {% endif %}
+
+    
+    <!-- Отображение побочек в соответсвии с выбором формы -->
+    {% if side_effects %}
+        <br/>
+        <h2>{{title_type_view_side_effects}}</h2>
+        {% if tipe_view == 'all'%} <!-- Отображение всех побочек-->
+        <ul>
+            {% for side_effect in side_effects %} 
+                <!-- Отображение списка побочек для возможности их удаления или и-->
+                <li>
+                        <div class="flex jc-sb align-center sideEffectCard">
+                            {{side_effect}}
+                            <button class="delete-btn" type="submit">Удалить</button>
+                        </div>
+                </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {%if tipe_view == 'drug'%} <!-- Отображение побочек с рангами для каждого лс-->
+
+            <br/>
+            <h2>Изменить коэффициент побочки</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form_add_SideEffect_rande.as_p }}
+                <button type = "submit" class="btn">Изменить</button>
+            </form>
+            <br/>
+            <hr/>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-num">№</th>
+                        <th scope="col" class="col-sideName">Побочный эффект</th>
+                        <th scope="col" class="col-rang">Коэффициент появления</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for side_effect in side_effects %}
+                    <tr>
+                        <th>{{side_effect.index}}</th>
+                        <td>{{side_effect.name}}</td>
+                        <td>{{side_effect.rang}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    {% endif %}
+
+{% endblock %}
