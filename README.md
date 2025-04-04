@@ -1,8 +1,9 @@
 # Для чего нужно?
 Программа на основе библиотеки dedoc для преобразования
 сканов текст.
-[Ссылка на документацию Dedoc:](https://dedoc.readthedocs.io/en/latest/)
-[Ссылка на статью на Хабре:](https://habr.com/ru/companies/isp_ras/articles/779390/)
+## Ссылки:
+- [документация Dedoc](https://dedoc.readthedocs.io/en/latest/)
+- [статья на Хабре](https://habr.com/ru/companies/isp_ras/articles/779390/)
 # Установка
 Создание виртуальной среды
 ```
