@@ -1,0 +1,9 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+<ul>
+    {% for interaction in interactions %}
+        <li>{{ interaction.classification_type_ru }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

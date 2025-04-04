@@ -1,0 +1,9 @@
+@echo off
+cd /d "%~dp0ml_pharm_web"
+echo Download Django psycopg2 numpy...
+python -m pip install Django psycopg2 numpy
+echo Server Start...
+start python manage.py runserver
+echo Open brauser...
+timeout /t 3 /nobreak >nul
+start http://127.0.0.1:8000/
