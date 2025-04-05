@@ -25,12 +25,14 @@ class ScanConverter:
         self.converter = converter
         self.saver = saver
         self.extractor = extractor
+
         if len(sys.argv) > 3:
             raise ValueError("Ошибка: слишком много аргуметов!")
         elif len(sys.argv) < 2:
             raise ValueError('Ошибка: не введёно название файла!')
         else:
             self.input_path = Path(sys.argv[self.INPUT_PATH])
+
             if len(sys.argv) == 3:
                 print('Есть второй аргумент!')
                 self.output_path = Path(sys.argv[self.OUTPUT_PATH])
@@ -55,10 +57,13 @@ class ScanConverter:
 
 def main():
     """Точка входа в программу."""
-    scan_converter = ScanConverter(DedocConverter(),
-                                   JSONSaver(),
-                                   TextExtractor())
-    scan_converter.convert_scan()
+    try:
+        scan_converter = ScanConverter(DedocConverter(),
+                                       JSONSaver(),
+                                       TextExtractor())
+        scan_converter.convert_scan()
+    except Exception as error:
+        print(f'Ошибка: {error}')
 
 
 if __name__ == '__main__':

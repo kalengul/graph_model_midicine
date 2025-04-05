@@ -12,7 +12,7 @@ class TextExtractor(Extractor):
     TEXT = 'text'
 
     @classmethod
-    def extract(cls, inputs):
+    def extract_to_dict(cls, inputs):
         """
         Метод извлечения текст в список словарей.
 
@@ -33,12 +33,6 @@ class TextExtractor(Extractor):
             elif isinstance(data, list):
                 for item in data:
                     extract_texts(item)
-
-        # for subparag in inputs[cls.CONTENT][cls.STRUCTURE][cls.SUBPARAGS]:
-        #     extracted_texts.append({cls.TEXT: subparag[cls.TEXT]})
-        #     if subparag[cls.SUBPARAGS]:
-        #         for item in subparag[cls.SUBPARAGS]:
-        #             extracted_texts.append({cls.TEXT: item[cls.TEXT]})
 
         extract_texts(inputs)
         return [{cls.TEXT: text} for text in extracted_texts]
@@ -65,10 +59,30 @@ class TextExtractor(Extractor):
                     extract_texts(item)
 
         extract_texts(inputs)
-        # for subparag in inputs[cls.CONTENT][cls.STRUCTURE][cls.SUBPARAGS]:
-        #     extracted_texts.append({cls.TEXT: subparag[cls.TEXT]})
-        #     if subparag[cls.SUBPARAGS]:
-        #         for item in subparag[cls.SUBPARAGS]:
-        #             extracted_texts.append({cls.TEXT: item[cls.TEXT]})
-
         return extracted_texts
+
+    @classmethod
+    def extract(cls, inputs):
+        """
+        Метод извлечения текст в список словарей.
+
+        Результат - извлечённый текст в виде строки.
+        """
+        extracted_text = ''
+
+        def extract_texts(data):
+            """Функция рекурсивного извлечения текстов."""
+            nonlocal extracted_text
+
+            if isinstance(data, dict):
+                for key, value in data.items():
+                    if key == "text":
+                        extracted_text += value.strip() + '\n'
+                    else:
+                        extract_texts(value)
+            elif isinstance(data, list):
+                for item in data:
+                    extract_texts(item)
+
+        extract_texts(inputs)
+        return extracted_text.replace('-\n', '').replace('_', ' ')
