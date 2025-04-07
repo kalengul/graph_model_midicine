@@ -9,6 +9,19 @@ from django.views.generic.list import ListView
 from django.views.decorators.http import require_GET
 from django.db.models import Q
 
+from rest_framework.generics import (ListAPIView,
+                                     CreateAPIView,
+                                     RetrieveUpdateAPIView)
+from pharm_web.models import (MedicationSideEffect,
+                              SideEffect,
+                              Medication)
+from pharm_web.serializers import (MedicationSideEffectSerializer,
+                                   MedicationSerializer,
+                                   SideEffectSerializer)
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.permissions import AllowAny
+from rest_framework.views import APIView
+
 from .all_drug_table_views import all_drug_table
 from .iteraction_medscape import *
 from .medscape_out_date import *
@@ -18,7 +31,9 @@ from .forms import *
 from .models import *
 from .viewsAdd import *
 from .Fortran_to_Python_IPM import *
+
 from pharm_web.auxiliary_module.text_getter_drugs import TextGetterDrugs
+from pharm_web.db_manipulator import DBManipulator
 
 
 menu = [{'title': "Главная", 'url_name': 'home'},
@@ -31,6 +46,8 @@ add_menu = [{'name_model': "Добавить группу ЛС", 'pk': "1", 'url
             ]
 
 DRUGS_PATH = 'txt_files_db\\drugs_xcn.txt'
+
+RANG_START = 0.0
 
 
 def index_views(request):
@@ -197,28 +214,6 @@ def search_polipharma_drugs(request):
     return JsonResponse({'drugs': drugs})
 
 
-
-def finding_matches(request):
-    """
-    Вью-функция для сопосталения ЛС из файли и БД.
-
-    Вспомогательная функция.
-    Кандидат на удаление.
-    """
-    print('Drug.objects.all() =', Drug.objects.count())
-    db_drug_names = [drug.name for drug in Drug.objects.all()]
-    txt_drug_names = TextGetterDrugs(DRUGS_PATH).get_drug_names()
-    identical = set(db_drug_names) & set(txt_drug_names)
-    different = set(db_drug_names) ^ set(txt_drug_names)
-    return JsonResponse({'Названий ЛС в БД': len(db_drug_names),
-                         'Одинаковых элементов': len(identical),
-                         'Разные': len(different),
-                         'ЛС из БД': db_drug_names,
-                         'ЛС из файла': txt_drug_names},
-                        json_dumps_params={'ensure_ascii': False,
-                                           'indent': 4})
-
-
 class RegisterUser(CreateView):
     form_class = RegisterUserForm
     template_name = 'pharm/register.html'
@@ -244,3 +239,145 @@ class LoginUser(LoginView):
 def logout_user(request):
     logout(request)
     return redirect('login')
+
+
+def finding_matches(request):
+    """
+    Вью-функция для сопосталения ЛС из файли и БД.
+
+    Вспомогательная функция.
+    Кандидат на удаление.
+    """
+    print('Drug.objects.all() =', Drug.objects.count())
+    db_drug_names = [drug.name for drug in Drug.objects.all()]
+    txt_drug_names = TextGetterDrugs(DRUGS_PATH).get_drug_names()
+    identical = set(db_drug_names) & set(txt_drug_names)
+    different = set(db_drug_names) ^ set(txt_drug_names)
+    return JsonResponse({'Названий ЛС в БД': len(db_drug_names),
+                         'Одинаковых элементов': len(identical),
+                         'Разные': len(different),
+                         'ЛС из БД': db_drug_names,
+                         'ЛС из файла': txt_drug_names},
+                        json_dumps_params={'ensure_ascii': False,
+                                           'indent': 4})
+
+
+def load_to_db(request):
+    """Вью-функция импорта данных из файлов в БД."""
+    try:
+        rangs_count = DBManipulator().load_to_db()
+        return HttpResponse(('Данные из файлов импортированы успешно!'
+                             f'Рангов {rangs_count}'))
+    except Exception as error:
+        return HttpResponse(('При импортировании данных возника ошибка:'
+                             f'{error}'))
+
+
+def clean_db(request):
+    """
+    Вью-функция очистки таблиц БД.
+
+    Очищаются таблицы:
+        - Medication;
+        - SifeEffect;
+        - MedicationSifeEffect.
+    """
+    try:
+        DBManipulator().clean_db()
+        return HttpResponse('Очистка таблиц прошла успешно!')
+    except Exception as error:
+        return HttpResponse(('При очистке БД возника ошибка:'
+                             f'{error}'))
+
+
+def show_list_med_side_effect(request):
+    """Вью отображения таблицы."""
+    # print('ЛС:', list(Medication.objects.all()))
+    # print('ПД:', list(SideEffect.objects.all()))
+    # print('ЛС-ПД:', list(MedicationSifeEffect.objects.all()))
+    return render(request, 'pharm/show_list_med_side_effect.html')
+
+
+class MedicationSideEffectPagination(PageNumberPagination):
+    """Класс пагинации."""
+
+    page_size = 1000
+
+
+class MedicationSideEffectListView(ListAPIView):
+    """Вью для вывода списка рангов."""
+
+    serializer_class = MedicationSideEffectSerializer
+    pagination_class = MedicationSideEffectPagination
+
+    def get_queryset(self):
+        """Фильтрация по лекарству."""
+        queryset = MedicationSideEffect.objects.select_related('medication',
+                                                               'side_effect')
+        medication_id = self.request.query_params.get('medication_id', None)
+
+        if medication_id:
+            queryset = queryset.filter(medication_id=medication_id)
+
+        return queryset
+
+
+class MedicationCreateView(CreateAPIView):
+    """Вью-класс добавления лС."""
+
+    queryset = Medication.objects.all()
+    serializer_class = MedicationSerializer
+
+    def perform_create(self, serializer):
+        """Действия выполнемые при добавлении ЛС."""
+        medication = serializer.save()
+
+        for side in SideEffect.objects.all():
+            MedicationSideEffect.objects.create(
+                medication=medication,
+                side_effect=side,
+                rang_base=RANG_START,
+                rang_f1=RANG_START,
+                rang_f2=RANG_START,
+                rang_freq=RANG_START,
+                rang_m1=RANG_START,
+                rang_m2=RANG_START,
+                rang_s=RANG_START
+            )
+
+
+class SideEffectCreateView(CreateAPIView):
+    """Вью-класс добавления ПД."""
+
+    queryset = SideEffect.objects.all()
+    serializer_class = SideEffectSerializer
+
+    def perform_create(self, serializer):
+        """Действия выполняется при добавлении ПД."""
+        side_effect = serializer.save()
+
+        for med in Medication.objects.all():
+            MedicationSideEffect.objects.create(
+                medication=med,
+                side_effect=side_effect,
+                rang_base=RANG_START,
+                rang_f1=RANG_START,
+                rang_f2=RANG_START,
+                rang_freq=RANG_START,
+                rang_m1=RANG_START,
+                rang_m2=RANG_START,
+                rang_s=RANG_START
+            )
+
+
+class MedicationSideEffectDetailView(RetrieveUpdateAPIView):
+    """Вью-класс редакирования рангов."""
+
+    queryset = MedicationSideEffect.objects.all()
+    serializer_class = MedicationSideEffectSerializer
+
+
+class SomeApiView(APIView):
+    """Вью-класс разрешения доступа для всех и ко всему."""
+
+    permission_classes = [AllowAny]

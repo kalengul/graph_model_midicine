@@ -54,7 +54,7 @@ def addDrug(request):
             if line != '\n':
                 side_effect_number += 1
 
-    print('Число ПД при добавлении ЛС:', side_effect_number)
+    # print('Число ПД при добавлении ЛС:', side_effect_number)
 
     if request.method == 'POST':
         form = AddDrugForm(request.POST)
@@ -161,7 +161,7 @@ def CheckSideEffectsView(request):
         # print(form)
         if form.is_valid():
             display_method = form.cleaned_data['display_method']
-            print('display_method =', display_method)
+            # print('display_method =', display_method)
             # Обычный список побочек
             if display_method == "all":
                 side_effects = []
@@ -205,9 +205,9 @@ def CheckSideEffectsView(request):
             end_idx = start_idx + counter_se
             drug_rangs = rangs[start_idx:end_idx]
 
-            print('all_side_effects =', all_side_effects)
-            print('all_side_effects =', len(all_side_effects))
-            print('counter_se =', counter_se)
+            # print('all_side_effects =', all_side_effects)
+            # print('all_side_effects =', len(all_side_effects))
+            # print('counter_se =', counter_se)
 
             # Формируем список побочек с рангами
             side_effects = [
@@ -218,7 +218,7 @@ def CheckSideEffectsView(request):
                 }
                 for i in range(counter_se)
             ]
-            print('Сработало отображение!')
+            # print('Сработало отображение!')
             return "drug", drug_name, side_effects, form
 
     # print('Сработало отображение!')
@@ -280,7 +280,7 @@ def AddNewSideEffect(request):
             if line != '\n':
                 side_effect_count += 1
 
-    print('Число ПД при добавлении нового ПД:', side_effect_count)
+    # print('Число ПД при добавлении нового ПД:', side_effect_count)
 
     # for rang in rangs:
     #     print('rang =', rang)
@@ -291,15 +291,15 @@ def AddNewSideEffect(request):
             # Добавлениеновой побочки
             side_effect_name = form.cleaned_data.get('name')
             if not re.search(r'[a-zA-Zа-яА-Я]', side_effect_name):
-                print('Не правильное название побочки!')
+                # print('Не правильное название побочки!')
                 return AddSideEffect()
-            print('Новой побочки:', side_effect_name)
+            # print('Новой побочки:', side_effect_name)
 
             with open(path_rangs, 'r', encoding='utf-8') as file:
                 rangs = [line for line in file if line != '\n']
 
             rangs = insert_after_every_n(rangs, '0.0\n', side_effect_count, drug_number)
-            print('Число добавленных рангов', rangs.count('0.0\n'))
+            # print('Число добавленных рангов', rangs.count('0.0\n'))
 
             with open(path_rangs, 'w', encoding='utf-8') as file:
                 for rang in rangs:
@@ -307,7 +307,7 @@ def AddNewSideEffect(request):
                     file.write(f'{rang}')
 
             with open(path_side_effects, 'a', encoding='utf-8') as file:
-                print('Отработала запись новой побочки в файл!!!')
+                # print('Отработала запись новой побочки в файл!!!')
                 file.write(f"\n{last_side_effect['id']+1}\t{side_effect_name}\t{0.0}")
             return form
     else: form = AddSideEffect()
@@ -411,7 +411,7 @@ def UpdateSeideEffectRande(request, drug_id):
     with open(path_rang, 'r', encoding='utf-8') as file:
         rangs = [line.strip() for line in file if line != '\n']
 
-    print('Тип запроса =', request.method)
+    # print('Тип запроса =', request.method)
 
     if request.method == 'POST':
         form = updateSeideEffectRande(request.POST)
@@ -439,12 +439,12 @@ def UpdateSeideEffectRande(request, drug_id):
             #         print(f"{side_effect['id']}\t{side_effect['side effect']}")
             #         file.write(f"{side_effect['id']}\t{side_effect['side effect']}")
             count_side_effect = len(side_effects) - 1
-            print('Число побочек =', count_side_effect)
-            print('идентификатора ЛС =', drug_true_id)
+            # print('Число побочек =', count_side_effect)
+            # print('идентификатора ЛС =', drug_true_id)
             start = count_side_effect * drug_true_id
-            print('начало нужной последовательности =', start)
+            # print('начало нужной последовательности =', start)
             rang_index = start + side_effect_id
-            print('Индекс ранга =', rang_index)
+            # print('Индекс ранга =', rang_index)
             rangs[rang_index] = rang
             with open(path_rang, 'w', encoding='utf-8') as file:
                 for rang in rangs:
@@ -464,11 +464,11 @@ def UpdateSeideEffectRande(request, drug_id):
             #         # )
             # # for drug in drugs:
             # #     if drug ==
-            print('Возврат вормы')
+            # print('Возврат вормы')
             return form
 
     else:
-        print('Внимание!!!')
+        # print('Внимание!!!')
         # form = AddSideEffect()
         form = updateSeideEffectRande()
     return form

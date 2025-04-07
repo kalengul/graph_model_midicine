@@ -1,0 +1,58 @@
+# dependencies
+/node_modules
+/Graph_parser/node_modules
+/Graph_parser/DataSetParse/node_modules
+/VigiAccessApi/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/doccano/auto_nosplitText_nosplitTestText
+/doccano/auto_splitText_nosplitTestText
+/doccano/output
+/doccano/standard_mark/results
+/train_summarization/archive/BBC News Summary
+/doccano/visualizations
+/train_summarization/data
+/train_summarization/results/runs
+/doccano/Устарело/spacy/auto_nosplitText_nosplitTestText
+/doccano/Устарело/spacy/auto_splitText_nosplitTestText
+/doccano/Устарело
+<<<<<<< Updated upstream
+
+Graph_parser/DataSetParse/Data/~$SideEffectTable.xlsx
+/doccano/data/graph_data_yEd
+/doccano/convertors/__pycache__
+=======
+/doccano/convertors/__pycache__
+/doccano/convertors/__pycache__
+/doccano/convertors/__pycache__
+/doccano/data/graph_data_yEd
+doccano/data/Список вопросов.txt
+>>>>>>> Stashed changes
+/doccano/data_jsonl_export/drug_instructions_text
+/doccano/data_bio
+/doccano/data/graph_data_yEd_edit
+
+
+
+# Data bases
+*.db
+*.sqlite3
+pharm.db
+ml_pharm_web/pharm.db
