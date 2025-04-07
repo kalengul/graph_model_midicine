@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Побочные эффекты ЛС</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+
+    <!-- Форма для добавления лекарства -->
+    <form id="medication-form">
+        <input type="text" id="med-name" placeholder="Название ЛС" required>
+        <button type="submit">Добавить ЛС</button>
+    </form>
+
+    <!-- Форма для добавления побочного эффекта -->
+    <form id="side-effect-form">
+        <input type="text" id="side-name" placeholder="Название побочки" required>
+        <input type="number" id="side-weight" placeholder="Вес (например, 0.0)" step="0.01" required>
+        <button type="submit">Добавить побочку</button>
+    </form>
+
+    <div id="form-status"></div>
+
+    <h1>Побочные эффекты лекарств</h1>
+    
+    <!-- Выпадающий список для выбора лекарства -->
+    <label for="medication-select">Выберите лекарство:</label>
+    <select id="medication-select">
+        <option value="">Все лекарства</option>
+        <!-- Опции для лекарства будут добавлены динамически -->
+    </select>
+
+    <table id="medication-table">
+        <thead>
+            <tr>
+                <th>Лекарство</th>
+                <th>Побочный эффект</th>
+                <th>Вес</th>
+                <th>Rang base</th>
+                <th>F1</th>
+                <th>F2</th>
+                <th>Freq</th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>S</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        // Функция для обновления ранга
+        function updateRang(id, updatedData) {
+            fetch(`/api/medication-side-effects/${id}/`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(updatedData)
+            })
+            .then(res => res.json())
+            .then(data => console.log("Обновлено:", data))
+            .catch(error => console.error("Ошибка:", error));
+        }
+
+        // Функция для загрузки списка лекарств
+        function loadMedications() {
+            fetch('/api/medication-side-effects/')
+                .then(response => response.json())
+                .then(data => {
+                    const medicationSelect = document.getElementById('medication-select');
+                    const medications = [...new Set(data.results.map(item => item.medication.id))]; // Получаем уникальные лекарства
+
+                    medications.forEach(medicationId => {
+                        const option = document.createElement('option');
+                        option.value = medicationId;
+                        option.textContent = data.results.find(item => item.medication.id === medicationId).medication.name;
+                        medicationSelect.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Ошибка при загрузке лекарств:', error));
+        }
+
+        // Функция для загрузки данных с фильтрацией по лекарству
+        function loadMedicationSideEffects(medicationId = '') {
+            const url = medicationId ? `/api/medication-side-effects/?medication_id=${medicationId}` : '/api/medication-side-effects/';
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const tbody = document.querySelector('#medication-table tbody');
+                    tbody.innerHTML = '';  // Очищаем таблицу перед загрузкой новых данных
+
+                    data.results.forEach(item => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${item.medication.name}</td>
+                            <td>${item.side_effect.name}</td>
+                            <td>${item.side_effect.weight}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_base')">${item.rang_base}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_f1')">${item.rang_f1}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_f2')">${item.rang_f2}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_freq')">${item.rang_freq}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_m1')">${item.rang_m1}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_m2')">${item.rang_m2}</td>
+                            <td contenteditable="true" onblur="saveRang(this, ${item.id}, 'rang_s')">${item.rang_s}</td>
+                        `;
+                        tbody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Ошибка при загрузке данных:', error));
+        }
+
+        // Слушатель изменения в выпадающем списке
+        document.getElementById('medication-select').addEventListener('change', (event) => {
+            const medicationId = event.target.value;
+            loadMedicationSideEffects(medicationId);
+        });
+
+        // Сохранение изменений в ранге
+        function saveRang(cell, id, field) {
+            const value = parseFloat(cell.innerText);
+            if (!isNaN(value)) {
+                updateRang(id, { [field]: value });
+            }
+        }
+
+        // Загружаем данные при загрузке страницы
+        window.onload = () => {
+            loadMedications();
+            loadMedicationSideEffects();
+        };
+        // Добавление ЛС
+        document.getElementById('medication-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('med-name').value;
+
+            fetch('/api/medications/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name })
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("Ошибка при добавлении ЛС");
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('form-status').textContent = `✅ ЛС "${data.name}" добавлено.`;
+                document.getElementById('medication-form').reset();
+                loadMedications();  // обновить селект
+                loadMedicationSideEffects();  // обновить таблицу
+            })
+            .catch(err => document.getElementById('form-status').textContent = `❌ ${err.message}`);
+        });
+
+        // Добавление побочки
+        document.getElementById('side-effect-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('side-name').value;
+            const weight = parseFloat(document.getElementById('side-weight').value);
+
+            fetch('/api/side-effects/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, weight })
+            })
+            .then(res => {
+                if (!res.ok) throw new Error("Ошибка при добавлении побочки");
+                return res.json();
+            })
+            .then(data => {
+                document.getElementById('form-status').textContent = `✅ Побочка "${data.name}" добавлена.`;
+                document.getElementById('side-effect-form').reset();
+                loadMedicationSideEffects();  // обновить таблицу
+            })
+            .catch(err => document.getElementById('form-status').textContent = `❌ ${err.message}`);
+        });
+    </script>
+</body>
+</html>
