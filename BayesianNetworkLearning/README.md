@@ -23,7 +23,7 @@
 |graphFilePath|string|Файл с графом сущностей|
 
 ##### Пример входного графа
-````json
+```json
 {
 	"directed": true,
     "multigraph": false,
