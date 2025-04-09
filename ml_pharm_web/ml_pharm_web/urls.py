@@ -11,7 +11,7 @@ urlpatterns = [
 
     path('api/v1/', include('drugs.urls')),
     
-    path('test-api/v1/', include('test_drf.urls')),
+    path('api/v1/test/', include('test_drf.urls')),
 ]
 
 
