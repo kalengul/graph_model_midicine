@@ -35,7 +35,7 @@ class Drug(models.Model):
     name = models.CharField(max_length=MAX_LENGTH, verbose_name='Название ЛС')
     slug = models.SlugField(max_length=MAX_LENGTH, unique=True, db_index=True, verbose_name="URL")
     drug_group = models.ForeignKey(DrugGroup, on_delete=models.CASCADE, 
-                                  related_name='drugs', verbose_name='Группа ЛС')
+                                  related_name='drugs', verbose_name='Группа ЛС', default=1)
     side_effects = models.ManyToManyField('SideEffect', through='DrugSideEffect', related_name='drugs')
 
     def save(self, *args, **kwargs):

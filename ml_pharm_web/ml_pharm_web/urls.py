@@ -9,7 +9,7 @@ urlpatterns = [
     path('', include('pharm_web.urls')),
     path('accounts/', include('accounts.urls')),
 
-    path('api/v1/drugs/', include('drugs.urls')),
+    path('api/v1/', include('drugs.urls')),
     
     path('test-api/v1/', include('test_drf.urls')),
 ]
