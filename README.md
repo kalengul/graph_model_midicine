@@ -1,1 +1,1 @@
-[API](docs/API.md)
+[Описание API](docs/API.md)
