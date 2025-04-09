@@ -1,24 +1,25 @@
 """Модуль загрузки лекарств."""
 
-# from tqdm import tqdm
 
-from pharm_web.models import (Medication,
-                              SideEffect,
-                              MedicationSideEffect)
+import os
+
+from django.conf import settings
+
+from ..models import DrugGroup, Drug, DrugSideEffect, SideEffect
 
 
 class DBManipulator:
     """Загрузчик БД."""
 
-    DRUGS_PATH = '..\\ml_pharm_web\\txt_files_db\\drugs_xcn.txt'
-    SIDE_EFFECTS_PATH = '..\\ml_pharm_web\\txt_files_db\\side_effects.txt'
-    RANGS_PATH = '..\\ml_pharm_web\\txt_files_db\\rangs.txt'
-    RANGSF1_PATH = '..\\ml_pharm_web\\txt_files_db\\rangf1.txt'
-    RANGSF2_PATH = '..\\ml_pharm_web\\txt_files_db\\rangf2.txt'
-    RANGSM1_PATH = '..\\ml_pharm_web\\txt_files_db\\rangm1.txt'
-    RANGSM2_PATH = '..\\ml_pharm_web\\txt_files_db\\rangm2.txt'
-    RANGSBASE_PATH = '..\\ml_pharm_web\\txt_files_db\\rangbase.txt'
-    RANGSFREQ_PATH = '..\\ml_pharm_web\\txt_files_db\\rangfreq.txt'
+    DRUGS_PATH = os.path.join(settings.TXT_DB_PATH, 'drugs_xcn.txt')
+    SIDE_EFFECTS_PATH = os.path.join(settings.TXT_DB_PATH, 'side_effects.txt')
+    RANGS_PATH = os.path.join(settings.TXT_DB_PATH, 'rangs.txt')
+    RANGSF1_PATH = os.path.join(settings.TXT_DB_PATH, 'rangf1.txt')
+    RANGSF2_PATH = os.path.join(settings.TXT_DB_PATH, 'rangf2.txt')
+    RANGSM1_PATH = os.path.join(settings.TXT_DB_PATH, 'rangm1.txt')
+    RANGSM2_PATH = os.path.join(settings.TXT_DB_PATH, 'rangm2.txt')
+    RANGSBASE_PATH = os.path.join(settings.TXT_DB_PATH, 'rangbase.txt')
+    RANGSFREQ_PATH = os.path.join(settings.TXT_DB_PATH, 'rangfreq.txt')
 
     @classmethod
     def __load_drugs(cls):
@@ -26,7 +27,7 @@ class DBManipulator:
         try:
             with open(cls.DRUGS_PATH, 'r', encoding='utf-8') as file:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
-                    Medication.objects.create(name=drug.split('\t')[1])
+                    Drug.objects.create(name=drug.split('\t')[1])
             print('ЛС успешно сохранены!')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
@@ -37,7 +38,7 @@ class DBManipulator:
         try:
             with open(cls.SIDE_EFFECTS_PATH, 'r', encoding='utf-8') as file:
                 for s_e in [s_e.strip() for s_e in file if s_e != '\n']:
-                    SideEffect.objects.create(
+                    DrugSideEffect.objects.create(
                         name=s_e.split('\t')[1].replace(';', ''),
                         weight=float(s_e.split('\t')[2].replace(',', '.')))
             print('ПД успешно сохранены!')
@@ -62,17 +63,17 @@ class DBManipulator:
         rangsbase = cls.__load_file(cls.RANGSBASE_PATH)
         rangsfreq = cls.__load_file(cls.RANGSFREQ_PATH)
 
-        drugs = list(Medication.objects.order_by('id'))
-        effects = list(SideEffect.objects.order_by('id'))
+        drugs = list(Drug.objects.order_by('id'))
+        effects = list(Drug.objects.order_by('id'))
 
         print('len(drugs) =', len(drugs))
         print('len(effects) =', len(effects))
         assert len(rangs) == len(drugs) * len(effects), "Размерность рангов не совпадает"
 
         idx = 0
-        for drug in tqdm(drugs, ncols=80):
+        for drug in drugs:
             for effect in effects:
-                MedicationSideEffect.objects.create(
+                DrugSideEffect.objects.create(
                     medication=drug,
                     side_effect=effect,
                     rang_base=float(rangsbase[idx]),
@@ -90,7 +91,7 @@ class DBManipulator:
         self.__load_drugs()
         self.__load_side_effects()
         self.__load_rangs()
-        return MedicationSideEffect.objects.count()
+        return DrugSideEffect.objects.count()
 
     def clean_db(self):
         """
@@ -101,8 +102,8 @@ class DBManipulator:
         - SifeEffect;
         - MedicationSifeEffect.
         """
-        MedicationSideEffect.objects.all().delete()
-        Medication.objects.all().delete()
+        DrugSideEffect.objects.all().delete()
+        Drug.objects.all().delete()
         SideEffect.objects.all().delete()
 
     def export_from_db(self):
