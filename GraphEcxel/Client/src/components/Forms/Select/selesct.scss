@@ -1,0 +1,17 @@
+.select-sh-m{
+    box-shadow: 6px 6px 12px var(--shadow-color-2), -6px -6px 12px var(--shadow-color-1);
+}
+.select-sh-s{
+    box-shadow: 1px 1px 5px var(--shadow-color-2), -1px -1px 5px var(--shadow-color-1);
+}
+select{
+    padding: 0.7rem 2.25rem 0.7rem 1rem !important;
+    background-color: var(--background-input-light) !important;
+    border-radius: 25px !important;
+}
+
+.table-select{
+    padding: 0.35rem 2.25rem 0.35rem .75rem !important;
+    background-color: var(--background-light) !important;
+    border: none;
+}

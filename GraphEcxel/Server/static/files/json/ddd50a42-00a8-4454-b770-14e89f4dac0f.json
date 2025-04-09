@@ -1,0 +1,240 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "средства, действующий на ренин-ангиотензиновый система",
+            "label": "group",
+            "weight": 5,
+            "id": "940bc8f2-6daa-49d3-95ee-9af0a0a9df02"
+        },
+        {
+            "name": "антагонисты рецепторов ангиотензина ii",
+            "label": "group",
+            "weight": 5,
+            "id": "9ee439e2-2a91-4496-9dd6-ff719ab43795"
+        },
+        {
+            "name": "кандесартан",
+            "label": "prepare",
+            "weight": 5,
+            "id": "0c3eabac-1de3-4e42-b035-3e35e5c19850"
+        },
+        {
+            "name": "антагонист рецептор ангиотензин ii 1 тип",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "13c4d355-64e2-40f2-acba-dc951c369cf3"
+        },
+        {
+            "name": "снижение концентрация альдостерон",
+            "label": "action",
+            "weight": 5,
+            "id": "37af8f5c-4760-41e4-93fd-750012f1406e"
+        },
+        {
+            "name": "снижение ад",
+            "label": "action",
+            "weight": 5,
+            "id": "b29efacb-b956-49c2-b5e2-a02b63966c8f"
+        },
+        {
+            "name": "снижение общий периферический сопротивление сосуд",
+            "label": "action",
+            "weight": 5,
+            "id": "81958fc9-ebc9-4526-9257-9a112f5518d8"
+        },
+        {
+            "name": "антигипертензивный эффект",
+            "label": "action",
+            "weight": 5,
+            "id": "c8e7175e-0964-4bcd-892d-e06a26ffa994"
+        },
+        {
+            "name": "увеличивает почечный кровоток",
+            "label": "action",
+            "weight": 5,
+            "id": "b774bdb6-d804-49f5-8590-2f831b2ac980"
+        },
+        {
+            "name": "желудочный-кишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "fef3a9f2-6240-4553-8842-30a06150dde3"
+        },
+        {
+            "name": "белками плазмы крови",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "a122f36c-ffcf-465f-8db7-dba1a66f6efe"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "79a9efca-76ad-4c11-8e6f-df29235d334c"
+        },
+        {
+            "name": "желчь",
+            "label": "excretion",
+            "weight": 5,
+            "id": "8d962560-ed30-4859-8591-e51fa4cdc830"
+        },
+        {
+            "name": "гиперкалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "6f9549c1-17c5-40b3-be8b-ab6ecdbb57e7"
+        },
+        {
+            "name": "гипонатриемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "67eba9a5-088b-4491-967a-1b8aa9f444ea"
+        },
+        {
+            "name": "нарушение функция почка",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3a56a851-7010-409a-a7bb-fa8d125fe2d5"
+        },
+        {
+            "name": "выраженное снижение ад",
+            "label": "side_e",
+            "weight": 5,
+            "id": "1f4c4c11-f5be-46aa-823f-a9e5887708e9"
+        },
+        {
+            "name": "повышение активности ренина",
+            "label": "action",
+            "weight": 5,
+            "id": "1b35cc93-7869-472a-bf0e-dcbb332cac39"
+        },
+        {
+            "name": "повышает скорость клубочковой фильтрации",
+            "label": "action",
+            "weight": 5,
+            "id": "554aa6b5-84db-4149-9efd-37551a2feffd"
+        },
+        {
+            "name": "не изменять скорость клубочковой фильтрации",
+            "label": "action",
+            "weight": 5,
+            "id": "f259dbe3-35cc-4402-99ec-ac25f11d5b5a"
+        },
+        {
+            "name": "повышение концентрация ангиотензин i",
+            "label": "action",
+            "weight": 5,
+            "id": "29328cd1-4df4-43b0-9860-4acad65272b4"
+        },
+        {
+            "name": "повышение концентрация ангиотензин ii",
+            "label": "action",
+            "weight": 5,
+            "id": "8b9cc39c-94f6-4650-9860-a9758a971ad9"
+        }
+    ],
+    "links": [
+        {
+            "source": "940bc8f2-6daa-49d3-95ee-9af0a0a9df02",
+            "target": "9ee439e2-2a91-4496-9dd6-ff719ab43795"
+        },
+        {
+            "source": "9ee439e2-2a91-4496-9dd6-ff719ab43795",
+            "target": "0c3eabac-1de3-4e42-b035-3e35e5c19850"
+        },
+        {
+            "source": "0c3eabac-1de3-4e42-b035-3e35e5c19850",
+            "target": "13c4d355-64e2-40f2-acba-dc951c369cf3"
+        },
+        {
+            "source": "0c3eabac-1de3-4e42-b035-3e35e5c19850",
+            "target": "fef3a9f2-6240-4553-8842-30a06150dde3"
+        },
+        {
+            "source": "0c3eabac-1de3-4e42-b035-3e35e5c19850",
+            "target": "a122f36c-ffcf-465f-8db7-dba1a66f6efe"
+        },
+        {
+            "source": "0c3eabac-1de3-4e42-b035-3e35e5c19850",
+            "target": "79a9efca-76ad-4c11-8e6f-df29235d334c"
+        },
+        {
+            "source": "0c3eabac-1de3-4e42-b035-3e35e5c19850",
+            "target": "8d962560-ed30-4859-8591-e51fa4cdc830"
+        },
+        {
+            "source": "13c4d355-64e2-40f2-acba-dc951c369cf3",
+            "target": "37af8f5c-4760-41e4-93fd-750012f1406e"
+        },
+        {
+            "source": "13c4d355-64e2-40f2-acba-dc951c369cf3",
+            "target": "1b35cc93-7869-472a-bf0e-dcbb332cac39"
+        },
+        {
+            "source": "13c4d355-64e2-40f2-acba-dc951c369cf3",
+            "target": "29328cd1-4df4-43b0-9860-4acad65272b4"
+        },
+        {
+            "source": "13c4d355-64e2-40f2-acba-dc951c369cf3",
+            "target": "8b9cc39c-94f6-4650-9860-a9758a971ad9"
+        },
+        {
+            "source": "37af8f5c-4760-41e4-93fd-750012f1406e",
+            "target": "81958fc9-ebc9-4526-9257-9a112f5518d8"
+        },
+        {
+            "source": "37af8f5c-4760-41e4-93fd-750012f1406e",
+            "target": "6f9549c1-17c5-40b3-be8b-ab6ecdbb57e7"
+        },
+        {
+            "source": "37af8f5c-4760-41e4-93fd-750012f1406e",
+            "target": "67eba9a5-088b-4491-967a-1b8aa9f444ea"
+        },
+        {
+            "source": "b29efacb-b956-49c2-b5e2-a02b63966c8f",
+            "target": "b774bdb6-d804-49f5-8590-2f831b2ac980"
+        },
+        {
+            "source": "b29efacb-b956-49c2-b5e2-a02b63966c8f",
+            "target": "c8e7175e-0964-4bcd-892d-e06a26ffa994"
+        },
+        {
+            "source": "81958fc9-ebc9-4526-9257-9a112f5518d8",
+            "target": "b29efacb-b956-49c2-b5e2-a02b63966c8f"
+        },
+        {
+            "source": "c8e7175e-0964-4bcd-892d-e06a26ffa994",
+            "target": "1f4c4c11-f5be-46aa-823f-a9e5887708e9"
+        },
+        {
+            "source": "b774bdb6-d804-49f5-8590-2f831b2ac980",
+            "target": "554aa6b5-84db-4149-9efd-37551a2feffd"
+        },
+        {
+            "source": "b774bdb6-d804-49f5-8590-2f831b2ac980",
+            "target": "f259dbe3-35cc-4402-99ec-ac25f11d5b5a"
+        },
+        {
+            "source": "79a9efca-76ad-4c11-8e6f-df29235d334c",
+            "target": "3a56a851-7010-409a-a7bb-fa8d125fe2d5"
+        },
+        {
+            "source": "1b35cc93-7869-472a-bf0e-dcbb332cac39",
+            "target": "81958fc9-ebc9-4526-9257-9a112f5518d8"
+        },
+        {
+            "source": "554aa6b5-84db-4149-9efd-37551a2feffd",
+            "target": "3a56a851-7010-409a-a7bb-fa8d125fe2d5"
+        },
+        {
+            "source": "f259dbe3-35cc-4402-99ec-ac25f11d5b5a",
+            "target": "3a56a851-7010-409a-a7bb-fa8d125fe2d5"
+        }
+    ],
+    "name": [
+        "0c3eabac-1de3-4e42-b035-3e35e5c19850"
+    ]
+}

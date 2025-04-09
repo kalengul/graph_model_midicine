@@ -1,0 +1,48 @@
+table{
+    margin: 1% 0 2% 0;
+
+    vertical-align: middle !important;
+}
+
+.table-success {
+    --bs-table-bg: var(--background-light);
+    --bs-table-striped-bg: var(--background-light);/*#F7F9FD;*/
+    --bs-table-striped-color: #000;
+    --bs-table-active-bg: #C9D3E7;
+    --bs-table-active-color: #000;
+    --bs-table-hover-bg: hsl(206, 18%, 90%);/*#edf2fa*/;
+    --bs-table-hover-color: #000;
+    color: #000;
+    border-color: var(--border-light);
+}
+
+.scroll{
+    max-height: 58vh;
+    overflow: auto;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--background-light);
+}
+  
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--scrolbar-bg);
+}
+
+.sticky-header-table thead th {
+    position: sticky;
+    top: 0;
+    background-color:var(--background-light); /* фон обязателен, чтобы скрыть текст при прокрутке */
+    z-index: 10; /* поверх tbody */
+    box-shadow: inset 0 -1px #c3c6ca; /*inset 0 1px #dee2e6; /* границы как у Bootstrap */
+}
+
+.table>:not(caption)>*>* {
+    padding: 0.2rem 0.5rem;
+}
+
+/* .table>:not(:last-child)>:last-child>* {
+    border-bottom-color: currentColor;
+} */

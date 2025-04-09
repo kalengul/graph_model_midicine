@@ -1,0 +1,54 @@
+input[type="text"], input[type=file]{
+    
+    background-color: var(--background-input-light);
+    /* border: none; */
+    box-shadow: 6px 6px 12px var(--shadow-color-2), -6px -6px 12px var(--shadow-color-1);
+
+    &:focus{
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        background-color: var(--background-input-light);
+    }
+
+
+    
+    border-radius: 25px;
+}
+
+input[type="text"] {
+    padding: 0.7rem 2.25rem 0.7rem 1rem;
+
+    &:focus{
+        /* border-color: var(--background-light); */
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        background-color: var(--background-input-light);
+        box-shadow: 4px 4px 8px var(--shadow-color-2) inset, -2px -2px 7px var(--shadow-color-1) inset;
+    }
+
+}
+
+input[type="search"]{
+    padding: 0.5rem 1rem;
+    background-color: var(--background-input-light);
+    border-radius: 25px;
+    box-shadow: 4px 4px 8px var(--shadow-color-2) inset, -2px -2px 7px var(--shadow-color-1) inset;
+
+    &:focus{
+        /* border-color: var(--background-light); */
+        border: var(--bs-border-width) solid var( --scrolbar-bg);
+        background-color: var(--background-input-light);
+        box-shadow: 4px 4px 8px var(--shadow-color-2) inset, -2px -2px 7px var(--shadow-color-1) inset;
+    }
+}
+
+
+input[type=file]::-webkit-file-upload-button {
+    background-color: var(--scrolbar-bg);
+    padding: 0.7rem 2.25rem 0.7rem 1rem;
+}
+  
+// input[type=file]::file-selector-button {
+//     padding: 0.7rem 2.25rem 0.7rem 1rem;
+//     &:hover{
+//         background-color: var(--background-nav-light);
+//     }
+// }

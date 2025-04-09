@@ -1,0 +1,53 @@
+.btn-icon-m{
+    width: 20px;
+
+    &:hover{
+        cursor: pointer;
+        /* width: 23px; */
+    }
+}
+
+.btn-icon-s{
+    width: 15px;
+
+    &:hover{
+        cursor: pointer;
+        /* width: 23px; */
+    }
+}
+
+.btn{
+    font-weight: 500;
+}
+
+.btn-br-sm{
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.btn-br-m{
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+}
+
+.btn-light{
+    --bs-btn-color: #000;
+    --bs-btn-bg: #F5F5F5;
+    --bs-btn-border-color: #E8E8E9;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #d3d4d5;
+    --bs-btn-hover-border-color: #c6c7c8;
+    --bs-btn-focus-shadow-rgb: 211, 212, 213;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #c6c7c8;
+    --bs-btn-active-border-color: #babbbc;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #F5F5F5;
+    --bs-btn-disabled-border-color: #E8E8E9;
+}
+
+.search-btn{
+    --bs-btn-bg: var(--scrolbar-bg);
+    --bs-btn-hover-bg: hsl(208, 22%, 75%);
+}

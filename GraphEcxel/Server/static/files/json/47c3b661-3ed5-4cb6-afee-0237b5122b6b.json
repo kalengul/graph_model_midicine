@@ -1,0 +1,282 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "средство для лечения заболеваний сердце",
+            "label": "group",
+            "weight": 5,
+            "id": "854baac6-522c-4f8f-a9c9-156c04e84e97"
+        },
+        {
+            "name": "вазодилататоры для лечения заболеваний сердце",
+            "label": "group",
+            "weight": 5,
+            "id": "a4e9eef1-5cd8-4c4c-b573-02876a112656"
+        },
+        {
+            "name": "другие вазодилататоры для лечения заболеваний сердца",
+            "label": "group",
+            "weight": 5,
+            "id": "adb7fbb2-d4bc-4e0c-a39e-499f74148b0b"
+        },
+        {
+            "name": "никорандил",
+            "label": "prepare",
+            "weight": 5,
+            "id": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b"
+        },
+        {
+            "name": "открывать аденозинтрифосфат-зависимые (АТФ-зависимые) калиевые каналы",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "9e243a13-9e1e-4725-9ab7-acb481e2220e"
+        },
+        {
+            "name": "увеличение внутриклеточный циклический гуанозинмонофосфат (цГМФ)",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "2e16be3e-c484-4190-9d5e-1c27e278ecec"
+        },
+        {
+            "name": "вызывать гиперполяризацию мембран гладкомышечных клеток сосудистой стенки",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "c09302ec-e48c-4448-b440-470ce80ff96e"
+        },
+        {
+            "name": "уменьшать поступление ионов кальция (Са2+) в цитозоль",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e9abe1bd-b5e1-44c8-95d6-3e781f9d7f75"
+        },
+        {
+            "name": "релаксация гладких мышц",
+            "label": "action",
+            "weight": 5,
+            "id": "a1a4b141-8e0d-4703-8cf5-a0b16a66e27f"
+        },
+        {
+            "name": "расширение артерий",
+            "label": "action",
+            "weight": 5,
+            "id": "95dd4034-256c-4ddc-b2a2-d620b69e8482"
+        },
+        {
+            "name": "снижение посленагрузка",
+            "label": "action",
+            "weight": 5,
+            "id": "388d052d-02cc-47d5-8aba-799387eabcc7"
+        },
+        {
+            "name": "имитирование ишемический прекондиционирование",
+            "label": "action",
+            "weight": 5,
+            "id": "d59975eb-8e6f-41ae-8a82-a8648050cb7d"
+        },
+        {
+            "name": "кардиопротективный эффект",
+            "label": "action",
+            "weight": 5,
+            "id": "43bd5554-e35d-4561-bda3-54d0957a4917"
+        },
+        {
+            "name": "увеличение объем емкостный кровеносный сосуд",
+            "label": "action",
+            "weight": 5,
+            "id": "df437a4c-9808-4c94-ab85-f212c0cf6a4b"
+        },
+        {
+            "name": "снижение преднагрузки",
+            "label": "action",
+            "weight": 5,
+            "id": "b91d6c71-708f-413b-baf7-ac6ae88099c9"
+        },
+        {
+            "name": "желудочно-кишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "094236b4-2bb4-490f-8523-5903884b13c7"
+        },
+        {
+            "name": "белок плазма кровь",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "e2fd621e-0734-4815-b56e-862698cb0b11"
+        },
+        {
+            "name": "печень",
+            "label": "metabol",
+            "weight": 5,
+            "id": "ee2b64f0-5c5e-4889-a151-ba5b2d960d12"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "60b3c6ce-a22e-48b4-80e5-6e239b5cfc87"
+        },
+        {
+            "name": "вазодилататор",
+            "label": "action",
+            "weight": 5,
+            "id": "03d52e39-b443-4841-81a9-b028a56126ae"
+        },
+        {
+            "name": "гиперкалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "fb0e95da-cb87-4e48-8ea2-049b6db96f2e"
+        },
+        {
+            "name": "снижение АД",
+            "label": "side_e",
+            "weight": 5,
+            "id": "c3bbf705-f384-4a8b-bc9b-0f26f55d19c2"
+        },
+        {
+            "name": "увеличение ЧСС",
+            "label": "side_e",
+            "weight": 5,
+            "id": "364fa5e1-5a36-4e70-8d03-622def9c5bcd"
+        },
+        {
+            "name": "расширение сосудов кожи с ощущением «прилива жара»",
+            "label": "side_e",
+            "weight": 5,
+            "id": "49006143-9c2c-4dad-a0d1-af2fc98c21a8"
+        },
+        {
+            "name": "головная боль",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b89efabe-6848-4b77-a6ea-952e3abd2419"
+        },
+        {
+            "name": "головокружение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "f6decc42-076e-4e95-adce-36d0768c47bc"
+        },
+        {
+            "name": "открывать аденозинтрифосфат-зависимые (АТФ-зависимые) калиевые каналы митохондрия",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e1059c85-b47c-4720-b636-830295dbae89"
+        }
+    ],
+    "links": [
+        {
+            "source": "854baac6-522c-4f8f-a9c9-156c04e84e97",
+            "target": "a4e9eef1-5cd8-4c4c-b573-02876a112656"
+        },
+        {
+            "source": "a4e9eef1-5cd8-4c4c-b573-02876a112656",
+            "target": "adb7fbb2-d4bc-4e0c-a39e-499f74148b0b"
+        },
+        {
+            "source": "adb7fbb2-d4bc-4e0c-a39e-499f74148b0b",
+            "target": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "9e243a13-9e1e-4725-9ab7-acb481e2220e"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "2e16be3e-c484-4190-9d5e-1c27e278ecec"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "094236b4-2bb4-490f-8523-5903884b13c7"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "e2fd621e-0734-4815-b56e-862698cb0b11"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "ee2b64f0-5c5e-4889-a151-ba5b2d960d12"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "60b3c6ce-a22e-48b4-80e5-6e239b5cfc87"
+        },
+        {
+            "source": "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b",
+            "target": "e1059c85-b47c-4720-b636-830295dbae89"
+        },
+        {
+            "source": "9e243a13-9e1e-4725-9ab7-acb481e2220e",
+            "target": "c09302ec-e48c-4448-b440-470ce80ff96e"
+        },
+        {
+            "source": "9e243a13-9e1e-4725-9ab7-acb481e2220e",
+            "target": "fb0e95da-cb87-4e48-8ea2-049b6db96f2e"
+        },
+        {
+            "source": "2e16be3e-c484-4190-9d5e-1c27e278ecec",
+            "target": "a1a4b141-8e0d-4703-8cf5-a0b16a66e27f"
+        },
+        {
+            "source": "c09302ec-e48c-4448-b440-470ce80ff96e",
+            "target": "e9abe1bd-b5e1-44c8-95d6-3e781f9d7f75"
+        },
+        {
+            "source": "e9abe1bd-b5e1-44c8-95d6-3e781f9d7f75",
+            "target": "a1a4b141-8e0d-4703-8cf5-a0b16a66e27f"
+        },
+        {
+            "source": "a1a4b141-8e0d-4703-8cf5-a0b16a66e27f",
+            "target": "03d52e39-b443-4841-81a9-b028a56126ae"
+        },
+        {
+            "source": "95dd4034-256c-4ddc-b2a2-d620b69e8482",
+            "target": "388d052d-02cc-47d5-8aba-799387eabcc7"
+        },
+        {
+            "source": "d59975eb-8e6f-41ae-8a82-a8648050cb7d",
+            "target": "43bd5554-e35d-4561-bda3-54d0957a4917"
+        },
+        {
+            "source": "df437a4c-9808-4c94-ab85-f212c0cf6a4b",
+            "target": "b91d6c71-708f-413b-baf7-ac6ae88099c9"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "95dd4034-256c-4ddc-b2a2-d620b69e8482"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "df437a4c-9808-4c94-ab85-f212c0cf6a4b"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "c3bbf705-f384-4a8b-bc9b-0f26f55d19c2"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "364fa5e1-5a36-4e70-8d03-622def9c5bcd"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "49006143-9c2c-4dad-a0d1-af2fc98c21a8"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "b89efabe-6848-4b77-a6ea-952e3abd2419"
+        },
+        {
+            "source": "03d52e39-b443-4841-81a9-b028a56126ae",
+            "target": "f6decc42-076e-4e95-adce-36d0768c47bc"
+        },
+        {
+            "source": "e1059c85-b47c-4720-b636-830295dbae89",
+            "target": "d59975eb-8e6f-41ae-8a82-a8648050cb7d"
+        }
+    ],
+    "name": [
+        "95346b0e-f5ad-48e8-a5f8-b97fc1c0000b"
+    ]
+}

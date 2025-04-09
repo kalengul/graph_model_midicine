@@ -1,0 +1,248 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "комбинированные пероральные гипогликемические средства",
+            "label": "group",
+            "weight": 5,
+            "id": "0b3640aa-7df9-401c-9d6d-ae62038323b5"
+        },
+        {
+            "name": "эмпаглифлозин",
+            "label": "prepare",
+            "weight": 5,
+            "id": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39"
+        },
+        {
+            "name": "ингибитор натрий-зависимый переносчик глюкоза 2 тип",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e12b2ec5-6bec-47d4-bc7d-a3928756cd45"
+        },
+        {
+            "name": "уменьшение реабсорбция глюкоза в почка",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "30c3641d-6dc2-4310-a3bd-ad554641d9ec"
+        },
+        {
+            "name": "выведение избыток глюкоза почка",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "50106cfc-9bc9-4ae5-bea6-72737a665723"
+        },
+        {
+            "name": "уменьшать концентрация глюкоза в плазма кровь",
+            "label": "action",
+            "weight": 5,
+            "id": "3a7cba3d-cbc8-4c40-ae49-502d302dbbee"
+        },
+        {
+            "name": "внутрь",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "e45828ab-e477-42a9-bb24-ab6a383c7e36"
+        },
+        {
+            "name": "белками плазмы",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "07f22285-19ae-4615-8cdb-1954338b9a44"
+        },
+        {
+            "name": "эритроцитами",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "5c3c6342-3aff-4160-b767-aca5d0548eb5"
+        },
+        {
+            "name": "ugt1a3",
+            "label": "metabol",
+            "weight": 5,
+            "id": "a562c756-6672-45e8-b68c-8fe4972d59ac"
+        },
+        {
+            "name": "ugt1a8",
+            "label": "metabol",
+            "weight": 5,
+            "id": "d1ddb9a8-a954-46b5-ac0a-c2901d339c97"
+        },
+        {
+            "name": "ugt1a9",
+            "label": "metabol",
+            "weight": 5,
+            "id": "b301f984-b275-4502-af3f-f55e28b56e95"
+        },
+        {
+            "name": "ugt2b7",
+            "label": "metabol",
+            "weight": 5,
+            "id": "38a41ae5-4292-417f-892b-cc5ffc2ac6c9"
+        },
+        {
+            "name": "кишечник",
+            "label": "excretion",
+            "weight": 5,
+            "id": "cac31216-a4aa-42e9-ad23-cb58ba9564b0"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "58d3068c-9158-4ac6-bbc5-3acc0a7ad5ce"
+        },
+        {
+            "name": "гипогликемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "fc96326e-1adf-41f8-8113-12db963dd606"
+        },
+        {
+            "name": "гиповолемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "c184251a-9f20-4b6b-b57c-2fa53c4bf242"
+        },
+        {
+            "name": "учащенное мочеиспускание",
+            "label": "side_e",
+            "weight": 5,
+            "id": "1318c356-8ea0-406e-8d27-70b8dbc4c945"
+        },
+        {
+            "name": "жажда",
+            "label": "side_e",
+            "weight": 5,
+            "id": "27e3b2af-8bf9-4518-9c5d-5bfb35482edb"
+        },
+        {
+            "name": "дизурия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "cba211f3-ecae-4887-81bc-79a9bb50acfe"
+        },
+        {
+            "name": "вагинальный кандидоз",
+            "label": "side_e",
+            "weight": 5,
+            "id": "8f935e02-1e7f-4767-be0b-2f00e6a7bd82"
+        },
+        {
+            "name": "вульвовагинит",
+            "label": "side_e",
+            "weight": 5,
+            "id": "4748ae17-1792-43e3-ade3-704fb30e695d"
+        },
+        {
+            "name": "баланит",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3a997bc3-8e15-4f37-bf65-b65183b6da59"
+        },
+        {
+            "name": "инфекция мочевыводить путь",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e199f31a-24fa-4854-969e-395026807105"
+        }
+    ],
+    "links": [
+        {
+            "source": "0b3640aa-7df9-401c-9d6d-ae62038323b5",
+            "target": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "e12b2ec5-6bec-47d4-bc7d-a3928756cd45"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "e45828ab-e477-42a9-bb24-ab6a383c7e36"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "07f22285-19ae-4615-8cdb-1954338b9a44"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "5c3c6342-3aff-4160-b767-aca5d0548eb5"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "a562c756-6672-45e8-b68c-8fe4972d59ac"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "d1ddb9a8-a954-46b5-ac0a-c2901d339c97"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "b301f984-b275-4502-af3f-f55e28b56e95"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "38a41ae5-4292-417f-892b-cc5ffc2ac6c9"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "cac31216-a4aa-42e9-ad23-cb58ba9564b0"
+        },
+        {
+            "source": "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39",
+            "target": "58d3068c-9158-4ac6-bbc5-3acc0a7ad5ce"
+        },
+        {
+            "source": "e12b2ec5-6bec-47d4-bc7d-a3928756cd45",
+            "target": "30c3641d-6dc2-4310-a3bd-ad554641d9ec"
+        },
+        {
+            "source": "30c3641d-6dc2-4310-a3bd-ad554641d9ec",
+            "target": "50106cfc-9bc9-4ae5-bea6-72737a665723"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "3a7cba3d-cbc8-4c40-ae49-502d302dbbee"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "1318c356-8ea0-406e-8d27-70b8dbc4c945"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "cba211f3-ecae-4887-81bc-79a9bb50acfe"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "8f935e02-1e7f-4767-be0b-2f00e6a7bd82"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "4748ae17-1792-43e3-ade3-704fb30e695d"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "3a997bc3-8e15-4f37-bf65-b65183b6da59"
+        },
+        {
+            "source": "50106cfc-9bc9-4ae5-bea6-72737a665723",
+            "target": "e199f31a-24fa-4854-969e-395026807105"
+        },
+        {
+            "source": "3a7cba3d-cbc8-4c40-ae49-502d302dbbee",
+            "target": "fc96326e-1adf-41f8-8113-12db963dd606"
+        },
+        {
+            "source": "c184251a-9f20-4b6b-b57c-2fa53c4bf242",
+            "target": "27e3b2af-8bf9-4518-9c5d-5bfb35482edb"
+        },
+        {
+            "source": "1318c356-8ea0-406e-8d27-70b8dbc4c945",
+            "target": "c184251a-9f20-4b6b-b57c-2fa53c4bf242"
+        }
+    ],
+    "name": [
+        "3f307ed6-fc7f-4719-abeb-1e0ebd4ecd39"
+    ]
+}

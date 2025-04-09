@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>873fff2c-2767-4fcf-ba3b-abb5cdefe92b</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            .Graphcontainer{
+                width: 98%;
+                height: 85vh;
+
+                border: solid 0.5px black;
+                border-radius: 7px;
+            }
+
+            .svgGraph{
+                width: 100%;
+                height: 100%;
+            }   
+        </style>
+        <script src="./d3.v7.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="flex jc-center">
+                <h1>873fff2c-2767-4fcf-ba3b-abb5cdefe92b</h1>
+            </div>
+            <br/>
+            <div class='Graphcontainer' >
+                <svg class='svgGraph'> </svg>
+            </div>
+        </main>
+
+        <script>
+            const colors = {
+                selectNode: "#E8BD6D",
+                selectLink: "#8B7474",
+                node: "#E9EEF4",
+                link: '#B8B5B5'
+            }
+
+            const nodeView = {
+                r: 30
+            }
+
+            const graphData = {"directed":true,"multigraph":false,"graph":{},"nodes":[{"name":"антитромботические средства","label":"group","weight":5,"id":"47c86181-46be-4518-8d3c-1a1b0b3a0e07","level":0,"r":30,"y":137.5,"x":1200},{"name":"гепарин натрия","label":"prepare","weight":5,"id":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","level":2,"r":30,"y":397.5,"x":1200},{"name":"группа гепарин","label":"group","weight":5,"id":"a21319b4-e010-475c-82b8-ebbf980fbe3d","level":1,"r":30,"y":267.5,"x":1200},{"name":"связывание с антитромбином III","label":"mechanism","weight":5,"id":"00cae6d9-c9da-460b-8592-2526bdccd718","level":3,"r":30,"y":527.5,"x":171.42857142857142},{"name":"конформационный изменение в его молекула","label":"mechanism","weight":5,"id":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","level":4,"r":30,"y":657.5,"x":150},{"name":"блокировать их ферментативный активность","label":"mechanism","weight":5,"id":"dbc4e121-bf19-4b31-a503-a843a84ddfdd","level":6,"r":30,"y":917.5,"x":1200},{"name":"снижать вязкость кровь","label":"action","weight":5,"id":"30dc1bbe-9c4b-40f2-888d-f13d789f4fcb","level":7,"r":30,"y":1047.5,"x":1200},{"name":"уменьшает проницаемость сосудов","label":"action","weight":5,"id":"38eb1dba-7883-4d1d-9e7e-252dc7934f23","level":3,"r":30,"y":527.5,"x":251.42857142857142},{"name":"препятствовать адгезия и агрегация тромбоцит","label":"action","weight":5,"id":"c2acacac-0ed1-48ef-aebf-f4d26fc19f69","level":4,"r":30,"y":657.5,"x":230},{"name":"замедлять гиперплазия гладкий мышца","label":"action","weight":5,"id":"73730f58-19b3-4111-bdee-1476aa8c5220","level":3,"r":30,"y":527.5,"x":331.42857142857144},{"name":"активировать липопротеинлипаза","label":"action","weight":5,"id":"4770626c-dc57-4037-a19d-808485307a92","level":3,"r":30,"y":527.5,"x":411.42857142857144},{"name":"препятствовать развитие атеросклероз","label":"action","weight":5,"id":"ea788632-0496-4d41-a8ba-4aabf55c36cd","level":4,"r":30,"y":657.5,"x":310},{"name":"гиполипидемическое действие","label":"action","weight":5,"id":"6aab2a02-21cd-445a-b9b8-06454c4e1aff","level":5,"r":30,"y":787.5,"x":171.42857142857142},{"name":"связывать некоторый компонента система комплемент, снижая ее активность","label":"mechanism","weight":5,"id":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7","level":3,"r":30,"y":527.5,"x":491.42857142857144},{"name":"противоаллергический эффект","label":"action","weight":5,"id":"ff176126-c3e2-4bd0-91e1-ce582e91751e","level":5,"r":30,"y":787.5,"x":251.42857142857142},{"name":"препятствует кооперации лимфоцитов","label":"mechanism","weight":5,"id":"5abc03a6-2c14-4c7d-af7c-b881246b79a8","level":4,"r":30,"y":657.5,"x":390},{"name":"препятствует образованию иммуноглобулинов","label":"mechanism","weight":5,"id":"fd256f53-ba0a-4784-b55a-df1ffbfdb47c","level":4,"r":30,"y":657.5,"x":470},{"name":"препятствует развитие стаза","label":"mechanism","weight":5,"id":"72d5117c-d542-40a4-8679-ccf87560eb98","level":4,"r":30,"y":657.5,"x":550},{"name":"ускорять связывание антитромбин III с факторами IIа","label":"mechanism","weight":5,"id":"91430373-56a9-4b71-9153-c40141e79787","level":5,"r":30,"y":787.5,"x":331.42857142857144},{"name":"ускорять связывание антитромбин III с факторами IXa","label":"mechanism","weight":5,"id":"7d72024b-3fa4-46eb-bdec-082fadd260ca","level":5,"r":30,"y":787.5,"x":411.42857142857144},{"name":"ускорять связывание антитромбин III с факторами Ха","label":"mechanism","weight":5,"id":"726becf1-4cd7-4916-96ec-3c867836fc10","level":5,"r":30,"y":787.5,"x":491.42857142857144},{"name":"ускорять связывание антитромбин III с факторами XIа","label":"mechanism","weight":5,"id":"8fc867e1-3d81-4ec4-8368-6f9371580307","level":5,"r":30,"y":787.5,"x":571.4285714285714},{"name":"ускорять связывание антитромбин III с факторами ХIIа","label":"mechanism","weight":5,"id":"059de3de-fe08-4f98-811c-b4df415698c8","level":5,"r":30,"y":787.5,"x":651.4285714285714},{"name":"связывает гистамин","label":"mechanism","weight":5,"id":"fe8ef000-4732-41c4-bc63-31d186f9cc44","level":4,"r":30,"y":657.5,"x":630},{"name":"связывает серотонин","label":"mechanism","weight":5,"id":"372d9f0e-8c15-49a0-9838-3aa5e19c241f","level":4,"r":30,"y":657.5,"x":710},{"name":"сорбироваться на поверхность мембран эндотелий увеличивать их отрицательный заряд","label":"mechanism","weight":5,"id":"167a107a-1b83-47e1-aab7-2e9ab384e0cf","level":3,"r":30,"y":527.5,"x":571.4285714285714},{"name":"сорбироваться на поверхность мембран форменный элемент кровь увеличивать их отрицательный заряд","label":"mechanism","weight":5,"id":"6db2c555-8408-4f4e-b79b-b5329c88f3db","level":3,"r":30,"y":527.5,"x":651.4285714285714}],"links":[{"source":"47c86181-46be-4518-8d3c-1a1b0b3a0e07","target":"a21319b4-e010-475c-82b8-ebbf980fbe3d"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"00cae6d9-c9da-460b-8592-2526bdccd718"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"38eb1dba-7883-4d1d-9e7e-252dc7934f23"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"73730f58-19b3-4111-bdee-1476aa8c5220"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"4770626c-dc57-4037-a19d-808485307a92"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"167a107a-1b83-47e1-aab7-2e9ab384e0cf"},{"source":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b","target":"6db2c555-8408-4f4e-b79b-b5329c88f3db"},{"source":"a21319b4-e010-475c-82b8-ebbf980fbe3d","target":"873fff2c-2767-4fcf-ba3b-abb5cdefe92b"},{"source":"00cae6d9-c9da-460b-8592-2526bdccd718","target":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a"},{"source":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","target":"91430373-56a9-4b71-9153-c40141e79787"},{"source":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","target":"7d72024b-3fa4-46eb-bdec-082fadd260ca"},{"source":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","target":"726becf1-4cd7-4916-96ec-3c867836fc10"},{"source":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","target":"8fc867e1-3d81-4ec4-8368-6f9371580307"},{"source":"6bd43aa1-8872-4f5e-8a3c-9608d76cff9a","target":"059de3de-fe08-4f98-811c-b4df415698c8"},{"source":"dbc4e121-bf19-4b31-a503-a843a84ddfdd","target":"30dc1bbe-9c4b-40f2-888d-f13d789f4fcb"},{"source":"38eb1dba-7883-4d1d-9e7e-252dc7934f23","target":"72d5117c-d542-40a4-8679-ccf87560eb98"},{"source":"73730f58-19b3-4111-bdee-1476aa8c5220","target":"ea788632-0496-4d41-a8ba-4aabf55c36cd"},{"source":"4770626c-dc57-4037-a19d-808485307a92","target":"ea788632-0496-4d41-a8ba-4aabf55c36cd"},{"source":"ea788632-0496-4d41-a8ba-4aabf55c36cd","target":"6aab2a02-21cd-445a-b9b8-06454c4e1aff"},{"source":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7","target":"5abc03a6-2c14-4c7d-af7c-b881246b79a8"},{"source":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7","target":"fd256f53-ba0a-4784-b55a-df1ffbfdb47c"},{"source":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7","target":"fe8ef000-4732-41c4-bc63-31d186f9cc44"},{"source":"6d3759e5-13e5-41f6-a40a-bf6c905bcda7","target":"372d9f0e-8c15-49a0-9838-3aa5e19c241f"},{"source":"91430373-56a9-4b71-9153-c40141e79787","target":"dbc4e121-bf19-4b31-a503-a843a84ddfdd"},{"source":"7d72024b-3fa4-46eb-bdec-082fadd260ca","target":"dbc4e121-bf19-4b31-a503-a843a84ddfdd"},{"source":"726becf1-4cd7-4916-96ec-3c867836fc10","target":"dbc4e121-bf19-4b31-a503-a843a84ddfdd"},{"source":"8fc867e1-3d81-4ec4-8368-6f9371580307","target":"dbc4e121-bf19-4b31-a503-a843a84ddfdd"},{"source":"059de3de-fe08-4f98-811c-b4df415698c8","target":"dbc4e121-bf19-4b31-a503-a843a84ddfdd"},{"source":"fe8ef000-4732-41c4-bc63-31d186f9cc44","target":"ff176126-c3e2-4bd0-91e1-ce582e91751e"},{"source":"372d9f0e-8c15-49a0-9838-3aa5e19c241f","target":"ff176126-c3e2-4bd0-91e1-ce582e91751e"},{"source":"167a107a-1b83-47e1-aab7-2e9ab384e0cf","target":"c2acacac-0ed1-48ef-aebf-f4d26fc19f69"},{"source":"6db2c555-8408-4f4e-b79b-b5329c88f3db","target":"c2acacac-0ed1-48ef-aebf-f4d26fc19f69"}],"name":["873fff2c-2767-4fcf-ba3b-abb5cdefe92b"],"maxLevel":8,"levelsInfo":{"levelNodesCount":{"0":1,"1":1,"2":1,"3":7,"4":8,"5":7,"6":1,"7":1}},"isParse":true}
+            const window_params = {"width":1200,"height":600,"xStep":50,"yStep":100}
+
+            console.log(graphData)
+
+            
+
+            if (graphData){
+                const svg = d3.select("svg")
+                svg.selectAll("*").remove() // Очистка предыдущего графа
+
+                svg.attr("width",   window_params.width) //Устанавливает атрибут width
+                .attr("height",   window_params.height)
+                .append("g").attr('class', 'group') //добавляет новый элемент, тег которого передается в метод в качестве параметра
+
+                const svgGroup = svg.select('g.group')
+
+                // Масштабирование и перемещение
+                const zoom = d3.zoom()
+                .scaleExtent([0.1, 10])
+                .on("zoom", (event)=>{ //Обновление позиционирования элементов при масштабировании
+                    svgGroup.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+
+
+                const dragstarted = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0.3).restart(); // Увеличиваем "температуру" симуляции для более плавного движения
+                    d.fx = d.x; // Фиксируем позицию узла
+                    d.fy = d.y;
+                }
+                
+                const dragged = (event, d)=>{
+                    d.fx = event.x; // Обновляем фиксированные координаты узла
+                    d.fy = event.y;
+                }
+                
+                const dragended = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0); // Охлаждаем симуляцию после перетаскивания
+                    d.fx = null; // Отпускаем узел, позволяя симуляции снова влиять на его позицию
+                    d.fy = null;
+                }
+
+                // Создаем обработчик drag
+                const drag = d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+
+
+                // Определение маркера стрелки
+                svgGroup.append("defs")
+                .append("marker")
+                .attr("id", "arrowhead")
+                .attr("markerWidth", 5) //Размер области, в которой будет отображаться маркер
+                .attr("markerHeight", 4)
+                .attr("refX", nodeView.r+4)
+                .attr("refY", 2)
+                .attr("orient", "auto")
+                .append("polygon")
+                .attr("points", "0 0, 5 2, 0 4")
+                .style("fill", colors.link);
+
+                
+                //Добавление ссылок
+                let links = svgGroup.append("g").attr('class', 'links')
+                .selectAll('.link')
+                .data(graphData.links) //Добавление данных
+                .enter() //Нужен для ввода дополнительных значений (так как data привязывает только первое)
+                .append('path')
+                .attr('class', 'link')
+                .attr('stroke', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return colors.selectLink
+                    return colors.link
+                }) // Цвет линии ребра
+                .attr('stroke-width', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return 2
+                    return 1
+                }) // Ширина линии ребра
+                .attr("marker-end", "url(#arrowhead)") // Добавление стрелки в конец ребра
+                .style('pointer-events', 'none') //(устанавливает стиль) Отключение событий на ребрах (клики и т.д.)
+
+                // Создание узлов
+                let nodes = svgGroup.append("g").attr('class', 'nodes')
+                .selectAll('.node')
+                .data(graphData.nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'node')
+                .call(drag);
+
+                nodes.append('circle')
+                .attr('class', 'node')
+                .attr('id', d => d.id)
+                .attr('r', d => d.r) // Радиус узла
+                .attr('fill', d=>{
+                    //if(selectedNodes.sourseNode === d.id || selectedNodes.targetNode === d.id) return colors.selectNode
+                    return colors.node
+                }) // Цвет заполнения
+                .attr("cursor", "pointer")
+                .on('click', (event, d) => {
+                    // Добавьте логику для обработки клика по узлу
+                });
+
+                //Отображение текста v2
+                nodes.append('foreignObject')
+                .attr('x', d => -d.r * 0.8)
+                .attr('y', d => -d.r * 0.8)
+                .attr('width', d => d.r * 1.6)
+                .attr('height', d => d.r * 1.6)
+                .append('xhtml:div')
+                .style('display', 'flex')
+                .style('justify-content', 'center')
+                .style('align-items', 'center')
+                .style('width', '100%')
+                .style('height', '100%')
+                .style('font-size', '5px')
+                .style('text-anchor', 'middle')
+                .style('word-wrap', 'break-word')
+                .style('overflow', 'hidden')
+                .style('pointer-events', 'none')
+                .text(d => d.name);
+
+                //Создание симуляции силы v3
+                const simulation = d3.forceSimulation(graphData.nodes)
+                // Связи между узлами
+                .force("link", d3.forceLink(graphData.links).id(d => d.id))//.distance(nodeView.r*10)) //!!! Сила в зависимости от количества узлов в уровне!!!!!
+                // Отталкивание узлов
+                .force("charge", d3.forceManyBody(graphData.nodes).strength(d=>graphData.levelsInfo.levelNodesCount[d.level]*(-100)))//-3000))
+                // Центрирование по x
+                .force("center", d3.forceCenter( window_params.width / 2,  window_params.height / 2))
+                // Выравнивание по уровням
+                .force("y", d3.forceY().strength(6)
+                    .y(d =>  window_params.height * ((d.level+1) / (graphData.maxLevel-1)))) //!!!!!!!!!!Уровень с большим числом узлов шире, чем с меньшим
+                // Отталкивание по x в рамках одного уровня
+                .force("x", d3.forceX().strength(0.05)
+                    .x( window_params.width / 2))
+                // Дополнительная сила для предотвращения наложения узлов
+                .force("collision", d3.forceCollide().radius(40));
+
+                // Обновление позиций узлов и связей при каждой итерации симуляции
+                //Обновление симуляции
+                simulation.on('tick', () => {
+                    links.attr("d", d => `M${d.source.x},${d.source.y} L${d.target.x},${d.target.y}`);
+                    nodes.attr('transform', d => `translate(${d.x}, ${d.y})`); // Правильная позиция для групп
+                });
+            }
+        </script>
+    </body>
+</html>

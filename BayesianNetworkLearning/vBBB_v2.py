@@ -228,20 +228,21 @@ class Bayesian:
         for node in self.graph["nodes"]:
             parentsCount = len(node["parents"]) # определили количество родителей
             if parentsCount==0: idNullLevel=node["id"]
-            total = 2 ** parentsCount  # Общее количество комбинаций
-            combinations = {}
-            combinations["node_id"] = node["id"]
-            combinations["node_name"] = node["name"]
-            combinations["conmbin"] = [] #массив условных вероятностей
-            for i in range(total):
-                combination = []
-                for j in range(parentsCount):
-                    combination.append((i >> j) & 1)  # Извлекаем биты
-                # Генерируем случайные вероятности и добавляем ключи в json (не появления побочки)
-                if " ".join(map(str, combination[::-1])) != "": # Пропускаем корневой узел
-                    combinations["conmbin"].append(" ".join(map(str, combination[::-1])))
+            else:
+                total = 2 ** parentsCount  # Общее количество комбинаций
+                combinations = {}
+                combinations["node_id"] = node["id"]
+                combinations["node_name"] = node["name"]
+                combinations["combin"] = [] #массив условных вероятностей
+                for i in range(total):
+                    combination = []
+                    for j in range(parentsCount):
+                        combination.append((i >> j) & 1)  # Извлекаем биты
+                    # Генерируем случайные вероятности и добавляем ключи в json (не появления побочки)
+                    if " ".join(map(str, combination[::-1])) != "": # Пропускаем корневой узел
+                        combinations["combin"].append(" ".join(map(str, combination[::-1])))
 
-            info.append(combinations)
+                info.append(combinations)
 
         with open(self.graphFileInfo, 'w', encoding='utf-8') as file:
             json.dump({"nodes": info}, file, ensure_ascii=False, indent=4)

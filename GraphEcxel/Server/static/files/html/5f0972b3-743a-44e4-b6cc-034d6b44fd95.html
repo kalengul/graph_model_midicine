@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ацетилсалициловый кислота</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            .Graphcontainer{
+                width: 98%;
+                height: 85vh;
+
+                border: solid 0.5px black;
+                border-radius: 7px;
+            }
+
+            .svgGraph{
+                width: 100%;
+                height: 100%;
+            }   
+        </style>
+        <script src="./d3.v7.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="flex jc-center">
+                <h1>ацетилсалициловый кислота</h1>
+            </div>
+            <br/>
+            <div class='Graphcontainer' >
+                <svg class='svgGraph'> </svg>
+            </div>
+        </main>
+
+        <script>
+            const colors = {
+                selectNode: "#E8BD6D",
+                selectLink: "#8B7474",
+                node: "#E9EEF4",
+                link: '#B8B5B5'
+            }
+
+            const nodeView = {
+                r: 30
+            }
+
+            const graphData = {"directed":true,"multigraph":false,"graph":{},"nodes":[{"label":"prepare","weight":5,"id":"7914aca0-cc78-41f9-93af-7382d285b840","name":"ацетилсалициловый кислота","level":2,"r":30,"y":397.5,"x":1200},{"label":"group","weight":5,"id":"c067ac73-c63e-473c-af5c-136e0206b702","name":"антитромботический средство","level":0,"r":30,"y":137.5,"x":1200},{"label":"group","weight":5,"id":"9302a53b-4e02-40ba-9c10-f49153f68f0f","name":"антиагрегант, кроме гепарин","level":1,"r":30,"y":267.5,"x":1200},{"label":"mechanism","weight":5,"id":"2f756e89-005a-4486-9933-0b225d4b2f3a","name":"блокировать синтез тромбоксан А2","level":4,"r":30,"y":657.5,"x":171.42857142857142},{"label":"mechanism","weight":5,"id":"5ea5a88d-3455-4023-9a8c-9edba9221528","name":"подавлять агрегация тромбоцит","level":5,"r":30,"y":787.5,"x":1200},{"label":"side_e","weight":5,"id":"6ac739c9-ba61-418b-a356-40b48161f4e8","name":"язвы","level":4,"r":30,"y":657.5,"x":251.42857142857142},{"label":"side_e","weight":5,"id":"7cd96622-5a78-4bcb-976d-4c397af95130","name":"эрозия слизистый оболочка желудок и двенадцатиперстной кишка","level":4,"r":30,"y":657.5,"x":331.42857142857144},{"label":"side_e","weight":5,"id":"25ee6a60-ee80-4d31-96cb-df7e8693f794","name":"перфоративные язвы слизистой оболочки желудка и двенадцатиперстной кишки","level":4,"r":30,"y":657.5,"x":411.42857142857144},{"label":"side_e","weight":5,"id":"cdb8b4a5-32d6-4011-8bc8-352aae0f2848","name":"внутричерепной кровотечение","level":6,"r":30,"y":917.5,"x":133.33333333333334},{"label":"side_e","weight":5,"id":"f20d2259-1702-4a24-9f70-6981bcf2f04c","name":"геморрагический инсульт","level":7,"r":30,"y":1047.5,"x":1200},{"label":"side_e","weight":5,"id":"ae88fa50-7eee-4f1d-a221-74dd16c921f6","name":"кровотечение из желудочно-кишечный тракт","level":6,"r":30,"y":917.5,"x":213.33333333333334},{"label":"side_e","weight":5,"id":"52e70192-576c-4012-892c-a387e110f8f1","name":"кровоточивость десен","level":6,"r":30,"y":917.5,"x":293.33333333333337},{"label":"side_e","weight":5,"id":"6011e0cf-3d0a-4ebe-b2f1-6dd10204f82b","name":"носовой кровотечение","level":6,"r":30,"y":917.5,"x":373.33333333333337},{"label":"side_e","weight":5,"id":"1f3d3764-90fd-4139-b027-d2f218ccfb47","name":"мышечный кровоизлияние","level":6,"r":30,"y":917.5,"x":453.33333333333337},{"label":"side_e","weight":5,"id":"39ae89d6-5f69-4e39-9a5a-c1cc7273ce53","name":"гематома","level":6,"r":30,"y":917.5,"x":533.3333333333334},{"label":"side_e","weight":5,"id":"4524a133-aaa0-456e-967e-6a81c6e8b36d","name":"геморрагия","level":6,"r":30,"y":917.5,"x":613.3333333333334},{"label":"side_e","weight":5,"id":"73fe1788-37fc-4ec0-b48f-5c8f2ae5136a","name":"кровотечение во время медицинский процедура","level":6,"r":30,"y":917.5,"x":693.3333333333334},{"label":"side_e","weight":5,"id":"cf44d60a-0853-4c5f-99be-924f9819a36f","name":"кровотечение из мочеполовой путь","level":6,"r":30,"y":917.5,"x":773.3333333333334},{"label":"excretion","weight":5,"id":"bcae4389-4e9c-4123-bda3-d17ec8cff142","name":"почка","level":3,"r":30,"y":527.5,"x":300},{"label":"absorbtion","weight":5,"id":"17d673ec-da74-4324-9e78-6d8e24c16577","name":"желудочный-кишечный тракт","level":3,"r":30,"y":527.5,"x":380},{"label":"prot_link","weight":5,"id":"292199b5-e5f8-43e8-88f1-13114c4753fa","name":"белок плазма кровь","level":3,"r":30,"y":527.5,"x":460},{"label":"action","weight":5,"id":"b06c9731-c487-4dfa-ae36-57ea439513c1","name":"действие противовоспалительный","level":4,"r":30,"y":657.5,"x":491.42857142857144},{"label":"action","weight":5,"id":"1f5180d3-90bd-4908-a6d7-7c58c8f74f1f","name":"действие анальгезировать","level":4,"r":30,"y":657.5,"x":571.4285714285714},{"label":"action","weight":5,"id":"0c0e8534-72d7-4aee-ba67-94c8c2e5132a","name":"действие жаропонировать","level":4,"r":30,"y":657.5,"x":651.4285714285714},{"label":"mechanism","weight":5,"id":"b9b86102-0180-4a57-b567-6fdb68618548","name":"ингибирование цог-1","level":3,"r":30,"y":527.5,"x":540}],"links":[{"source":"7914aca0-cc78-41f9-93af-7382d285b840","target":"bcae4389-4e9c-4123-bda3-d17ec8cff142","id":"e1d269ac-9b7f-41ba-898d-43540a0e7031"},{"source":"7914aca0-cc78-41f9-93af-7382d285b840","target":"17d673ec-da74-4324-9e78-6d8e24c16577","id":"caa80eec-d8ec-4575-92ef-f5fb90d47e5f"},{"source":"7914aca0-cc78-41f9-93af-7382d285b840","target":"292199b5-e5f8-43e8-88f1-13114c4753fa","id":"41b64009-da7e-4117-9b03-fda9b3841d36"},{"source":"7914aca0-cc78-41f9-93af-7382d285b840","target":"b9b86102-0180-4a57-b567-6fdb68618548","id":"129230b3-5ca7-4a39-a659-ee07126981a0"},{"source":"c067ac73-c63e-473c-af5c-136e0206b702","target":"9302a53b-4e02-40ba-9c10-f49153f68f0f","id":"de5ba6dd-3465-46e8-91a3-093256678930"},{"source":"9302a53b-4e02-40ba-9c10-f49153f68f0f","target":"7914aca0-cc78-41f9-93af-7382d285b840","id":"4e6a3963-ab7c-4045-a3b5-fea1cd0dd9d8"},{"source":"2f756e89-005a-4486-9933-0b225d4b2f3a","target":"5ea5a88d-3455-4023-9a8c-9edba9221528","id":"4624a642-6e8e-415e-a85e-6779ef20931a"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"cdb8b4a5-32d6-4011-8bc8-352aae0f2848","id":"75ad9d47-4b79-457a-8cf0-0c8cb2378da1"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"ae88fa50-7eee-4f1d-a221-74dd16c921f6","id":"c08b89ef-6d72-4904-a560-3acc7b2bdb4f"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"52e70192-576c-4012-892c-a387e110f8f1","id":"0ed5df61-42c1-4e0c-87eb-05ea6cfae03d"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"6011e0cf-3d0a-4ebe-b2f1-6dd10204f82b","id":"a293fd59-634d-42ab-b949-8ec42bbb472b"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"1f3d3764-90fd-4139-b027-d2f218ccfb47","id":"bdaeff56-e7ef-4f60-bef2-270d47b0715b"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"39ae89d6-5f69-4e39-9a5a-c1cc7273ce53","id":"88bbeb58-7656-4a32-b696-b05a1e75e470"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"4524a133-aaa0-456e-967e-6a81c6e8b36d","id":"98c22847-70dc-4c95-8a22-5acb2e0d8342"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"73fe1788-37fc-4ec0-b48f-5c8f2ae5136a","id":"cdf3d955-c147-4469-b907-6af5bd8543e5"},{"source":"5ea5a88d-3455-4023-9a8c-9edba9221528","target":"cf44d60a-0853-4c5f-99be-924f9819a36f","id":"95bb7711-5b08-4191-b868-ed1849979eaa"},{"source":"cdb8b4a5-32d6-4011-8bc8-352aae0f2848","target":"f20d2259-1702-4a24-9f70-6981bcf2f04c","id":"f6793a97-e8c7-4a68-8187-f5e4e9a0819f"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"2f756e89-005a-4486-9933-0b225d4b2f3a","id":"dca89bb5-7c60-4c22-87c9-04b74e1a617e"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"6ac739c9-ba61-418b-a356-40b48161f4e8","id":"b671d7dd-1778-43ff-b274-5d473e7f2c19"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"7cd96622-5a78-4bcb-976d-4c397af95130","id":"62ce52cf-2d4b-412d-82c8-c134f07598a2"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"25ee6a60-ee80-4d31-96cb-df7e8693f794","id":"5f7de150-a44a-4411-804e-2290b0074e57"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"b06c9731-c487-4dfa-ae36-57ea439513c1","id":"c3b02e1f-8646-41fd-aaa2-7cc8b24ce2d4"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"1f5180d3-90bd-4908-a6d7-7c58c8f74f1f","id":"842ea77f-5b5e-478d-b837-006395d76b41"},{"source":"b9b86102-0180-4a57-b567-6fdb68618548","target":"0c0e8534-72d7-4aee-ba67-94c8c2e5132a","id":"634555a9-5efb-4fa8-882a-2e5624e4a76f"}],"name":["ацетилсалициловый кислота"],"maxLevel":8,"levelsInfo":{"levelNodesCount":{"0":1,"1":1,"2":1,"3":4,"4":7,"5":1,"6":9,"7":1}},"isParse":true}
+            const window_params = {"width":1200,"height":600,"xStep":50,"yStep":100}
+
+            console.log(graphData)
+
+            
+
+            if (graphData){
+                const svg = d3.select("svg")
+                svg.selectAll("*").remove() // Очистка предыдущего графа
+
+                svg.attr("width",   window_params.width) //Устанавливает атрибут width
+                .attr("height",   window_params.height)
+                .append("g").attr('class', 'group') //добавляет новый элемент, тег которого передается в метод в качестве параметра
+
+                const svgGroup = svg.select('g.group')
+
+                // Масштабирование и перемещение
+                const zoom = d3.zoom()
+                .scaleExtent([0.1, 10])
+                .on("zoom", (event)=>{ //Обновление позиционирования элементов при масштабировании
+                    svgGroup.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+
+
+                const dragstarted = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0.3).restart(); // Увеличиваем "температуру" симуляции для более плавного движения
+                    d.fx = d.x; // Фиксируем позицию узла
+                    d.fy = d.y;
+                }
+                
+                const dragged = (event, d)=>{
+                    d.fx = event.x; // Обновляем фиксированные координаты узла
+                    d.fy = event.y;
+                }
+                
+                const dragended = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0); // Охлаждаем симуляцию после перетаскивания
+                    d.fx = null; // Отпускаем узел, позволяя симуляции снова влиять на его позицию
+                    d.fy = null;
+                }
+
+                // Создаем обработчик drag
+                const drag = d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+
+
+                // Определение маркера стрелки
+                svgGroup.append("defs")
+                .append("marker")
+                .attr("id", "arrowhead")
+                .attr("markerWidth", 5) //Размер области, в которой будет отображаться маркер
+                .attr("markerHeight", 4)
+                .attr("refX", nodeView.r+4)
+                .attr("refY", 2)
+                .attr("orient", "auto")
+                .append("polygon")
+                .attr("points", "0 0, 5 2, 0 4")
+                .style("fill", colors.link);
+
+                
+                //Добавление ссылок
+                let links = svgGroup.append("g").attr('class', 'links')
+                .selectAll('.link')
+                .data(graphData.links) //Добавление данных
+                .enter() //Нужен для ввода дополнительных значений (так как data привязывает только первое)
+                .append('path')
+                .attr('class', 'link')
+                .attr('stroke', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return colors.selectLink
+                    return colors.link
+                }) // Цвет линии ребра
+                .attr('stroke-width', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return 2
+                    return 1
+                }) // Ширина линии ребра
+                .attr("marker-end", "url(#arrowhead)") // Добавление стрелки в конец ребра
+                .style('pointer-events', 'none') //(устанавливает стиль) Отключение событий на ребрах (клики и т.д.)
+
+                // Создание узлов
+                let nodes = svgGroup.append("g").attr('class', 'nodes')
+                .selectAll('.node')
+                .data(graphData.nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'node')
+                .call(drag);
+
+                nodes.append('circle')
+                .attr('class', 'node')
+                .attr('id', d => d.id)
+                .attr('r', d => d.r) // Радиус узла
+                .attr('fill', d=>{
+                    //if(selectedNodes.sourseNode === d.id || selectedNodes.targetNode === d.id) return colors.selectNode
+                    return colors.node
+                }) // Цвет заполнения
+                .attr("cursor", "pointer")
+                .on('click', (event, d) => {
+                    // Добавьте логику для обработки клика по узлу
+                });
+
+                //Отображение текста v2
+                nodes.append('foreignObject')
+                .attr('x', d => -d.r * 0.8)
+                .attr('y', d => -d.r * 0.8)
+                .attr('width', d => d.r * 1.6)
+                .attr('height', d => d.r * 1.6)
+                .append('xhtml:div')
+                .style('display', 'flex')
+                .style('justify-content', 'center')
+                .style('align-items', 'center')
+                .style('width', '100%')
+                .style('height', '100%')
+                .style('font-size', '5px')
+                .style('text-anchor', 'middle')
+                .style('word-wrap', 'break-word')
+                .style('overflow', 'hidden')
+                .style('pointer-events', 'none')
+                .text(d => d.name);
+
+                //Создание симуляции силы v3
+                const simulation = d3.forceSimulation(graphData.nodes)
+                // Связи между узлами
+                .force("link", d3.forceLink(graphData.links).id(d => d.id))//.distance(nodeView.r*10)) //!!! Сила в зависимости от количества узлов в уровне!!!!!
+                // Отталкивание узлов
+                .force("charge", d3.forceManyBody(graphData.nodes).strength(d=>graphData.levelsInfo.levelNodesCount[d.level]*(-100)))//-3000))
+                // Центрирование по x
+                .force("center", d3.forceCenter( window_params.width / 2,  window_params.height / 2))
+                // Выравнивание по уровням
+                .force("y", d3.forceY().strength(6)
+                    .y(d =>  window_params.height * ((d.level+1) / (graphData.maxLevel-1)))) //!!!!!!!!!!Уровень с большим числом узлов шире, чем с меньшим
+                // Отталкивание по x в рамках одного уровня
+                .force("x", d3.forceX().strength(0.05)
+                    .x( window_params.width / 2))
+                // Дополнительная сила для предотвращения наложения узлов
+                .force("collision", d3.forceCollide().radius(40));
+
+                // Обновление позиций узлов и связей при каждой итерации симуляции
+                //Обновление симуляции
+                simulation.on('tick', () => {
+                    links.attr("d", d => `M${d.source.x},${d.source.y} L${d.target.x},${d.target.y}`);
+                    nodes.attr('transform', d => `translate(${d.x}, ${d.y})`); // Правильная позиция для групп
+                });
+            }
+        </script>
+    </body>
+</html>

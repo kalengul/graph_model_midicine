@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>карведилол</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            .Graphcontainer{
+                width: 98%;
+                height: 85vh;
+
+                border: solid 0.5px black;
+                border-radius: 7px;
+            }
+
+            .svgGraph{
+                width: 100%;
+                height: 100%;
+            }   
+        </style>
+        <script src="./d3.v7.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="flex jc-center">
+                <h1>карведилол</h1>
+            </div>
+            <br/>
+            <div class='Graphcontainer' >
+                <svg class='svgGraph'> </svg>
+            </div>
+        </main>
+
+        <script>
+            const colors = {
+                selectNode: "#E8BD6D",
+                selectLink: "#8B7474",
+                node: "#E9EEF4",
+                link: '#B8B5B5'
+            }
+
+            const nodeView = {
+                r: 30
+            }
+
+            const graphData = {"directed":true,"multigraph":false,"graph":{},"nodes":[{"label":"prepare","weight":5,"id":"f4d79ec5-8968-4028-a750-6e02002ceab2","name":"карведилол","level":2,"r":30,"y":390,"x":1200},{"label":"side_e","weight":5,"id":"652a1c15-8b89-42da-99bc-7153aa3ce02e","name":"пневмония","level":0,"r":30,"y":130,"x":18.181818181818183},{"label":"side_e","weight":5,"id":"9f89cb47-a824-4e8b-96e5-310e13597356","name":"бронхит","level":0,"r":30,"y":130,"x":98.18181818181819},{"label":"side_e","weight":5,"id":"af65441b-923d-486a-b61d-2b1f0469e886","name":"инфекция верхний дыхательный путь","level":0,"r":30,"y":130,"x":178.1818181818182},{"label":"side_e","weight":5,"id":"038d864d-bf68-4dd1-bf03-172c8a23383a","name":"инфекция мочевыводящий путь","level":0,"r":30,"y":130,"x":258.1818181818182},{"label":"side_e","weight":5,"id":"3c092bd4-d801-4b80-bce2-b0cb4566ecf9","name":"анемия","level":0,"r":30,"y":130,"x":338.1818181818182},{"label":"side_e","weight":5,"id":"c9740b01-d08a-425d-b67a-725b6c04ae1f","name":"тромбоцитопения","level":0,"r":30,"y":130,"x":418.1818181818182},{"label":"side_e","weight":5,"id":"b553116a-981a-4b08-abf7-b6f260de0433","name":"лейкопения","level":0,"r":30,"y":130,"x":498.1818181818182},{"label":"side_e","weight":5,"id":"e1f21496-b3d9-47ac-adab-3fb09b6c301a","name":"гиперчувствительность (аллергический реакция)","level":0,"r":30,"y":130,"x":578.1818181818182},{"label":"side_e","weight":5,"id":"06eeb849-7d81-4546-89e7-369be3f8e56c","name":"увеличение масса тело","level":0,"r":30,"y":130,"x":658.1818181818182},{"label":"side_e","weight":5,"id":"b4853a81-cab8-4941-a830-210d8bcc14d1","name":"депрессия","level":0,"r":30,"y":130,"x":738.1818181818182},{"label":"side_e","weight":5,"id":"539e32c5-4d29-420e-8c39-ec9d7ffb449e","name":"подавить настроение","level":0,"r":30,"y":130,"x":818.1818181818182},{"label":"side_e","weight":5,"id":"f3c67565-3034-4a16-b51d-7447a148eb13","name":"расстройство сон","level":0,"r":30,"y":130,"x":898.1818181818182},{"label":"side_e","weight":5,"id":"5e1fcd3e-01da-4896-8499-66cb29e666e2","name":"синкопальный","level":0,"r":30,"y":130,"x":978.1818181818182},{"label":"side_e","weight":5,"id":"3398ffc9-b7ee-4fd0-b278-4287f0ab32ff","name":"парестезия","level":0,"r":30,"y":130,"x":1058.1818181818182},{"label":"side_e","weight":5,"id":"48c90cb9-eb66-4d0f-bdb8-814e8a779f58","name":"зрение","level":0,"r":30,"y":130,"x":1138.1818181818182},{"label":"side_e","weight":5,"id":"4389fc2d-27ff-4589-884a-c5379c92c421","name":"уменьшение слезоотделение","level":0,"r":30,"y":130,"x":1218.1818181818182},{"label":"side_e","weight":5,"id":"5e1f2a42-015c-44ad-91f3-3037e4c2e06e","name":"раздражение глаз","level":0,"r":30,"y":130,"x":1298.1818181818182},{"label":"side_e","weight":5,"id":"4394d890-2ea1-4d90-92b3-ac425bb78eaf","name":"гиперволемия","level":0,"r":30,"y":130,"x":1378.1818181818182},{"label":"side_e","weight":5,"id":"417bf36f-b73d-4fad-9fcc-1aaddc1b38be","name":"задержка жидкость","level":0,"r":30,"y":130,"x":1458.1818181818182},{"label":"side_e","weight":5,"id":"71bed302-dd0f-45d5-bd6f-5f381f9f4439","name":"атриовентрикулярный блокада","level":0,"r":30,"y":130,"x":1538.1818181818182},{"label":"side_e","weight":5,"id":"6cde47dc-21f3-4086-bae7-a1819d2dd72c","name":"стенокардия","level":0,"r":30,"y":130,"x":1618.1818181818182},{"label":"side_e","weight":5,"id":"a0522df6-d5e0-4b67-aaef-757c092ce12a","name":"выраженный снижение ад","level":0,"r":30,"y":130,"x":1698.1818181818182},{"label":"side_e","weight":5,"id":"9e8bc069-6e3e-4cdf-b9a0-ebcc1c8c7d35","name":"повышение ад","level":0,"r":30,"y":130,"x":1778.1818181818182},{"label":"side_e","weight":5,"id":"ec04a737-fc9a-42e4-a938-6eea50ddf7e7","name":"одышка","level":0,"r":30,"y":130,"x":1858.1818181818182},{"label":"side_e","weight":5,"id":"f14bf60c-3ee3-4b3c-9493-4210a3266c4e","name":"отёк лёгкий","level":0,"r":30,"y":130,"x":1938.1818181818182},{"label":"side_e","weight":5,"id":"a57a8c6e-6ed5-4eb9-86e7-a1241eabfb37","name":"заложенность нос","level":0,"r":30,"y":130,"x":2018.1818181818182},{"label":"side_e","weight":5,"id":"75002b47-3387-4bb5-af49-72b578debd48","name":"диарея","level":0,"r":30,"y":130,"x":2098.181818181818},{"label":"side_e","weight":5,"id":"9d69104d-2b7a-413f-9319-be03a50b2a2f","name":"рвота","level":0,"r":30,"y":130,"x":2178.181818181818},{"label":"side_e","weight":5,"id":"f4ccb5df-a57a-4385-bb9e-6ccc7dc62877","name":"диспепсический расстройство","level":0,"r":30,"y":130,"x":2258.181818181818},{"label":"side_e","weight":5,"id":"4b155212-2037-49dc-8e63-127c535aa6e8","name":"боль в живот","level":0,"r":30,"y":130,"x":2338.181818181818},{"label":"side_e","weight":5,"id":"5325c05a-cf7f-44d7-a7a5-f77c424a7f4f","name":"запор","level":0,"r":30,"y":130,"x":2418.181818181818},{"label":"side_e","weight":5,"id":"ad720426-3c8b-4459-be1a-940a59909eb0","name":"сухость слизистый оболочка полость рот","level":0,"r":30,"y":130,"x":2498.181818181818},{"label":"side_e","weight":5,"id":"69d8d7ad-f8f4-43bc-9969-7fe6ba8c381d","name":"кожный реакция","level":0,"r":30,"y":130,"x":2578.181818181818},{"label":"side_e","weight":5,"id":"59455f0f-384c-44fd-95d0-5a079c6d2e3c","name":"кожный сыпь","level":0,"r":30,"y":130,"x":2658.181818181818},{"label":"side_e","weight":5,"id":"6d97b216-4792-4729-9a9a-8eeb8de129e1","name":"дерматит","level":0,"r":30,"y":130,"x":2738.181818181818},{"label":"side_e","weight":5,"id":"a64d1a93-cd4c-4b70-9fba-d45d721e695e","name":"крапивница","level":0,"r":30,"y":130,"x":2818.181818181818},{"label":"side_e","weight":5,"id":"a8c7613f-4ef3-4466-b25b-2ed511c9c4e4","name":"кожный зуд","level":0,"r":30,"y":130,"x":2898.181818181818},{"label":"side_e","weight":5,"id":"bdcb5928-1aa7-405f-a3d0-21715e9e91af","name":"поражение кожа по тип псориаз и красный плоский лишать","level":0,"r":30,"y":130,"x":2978.181818181818},{"label":"side_e","weight":5,"id":"670c23d2-06a1-44c5-8930-f69608f58912","name":"боль в конечность","level":0,"r":30,"y":130,"x":3058.181818181818},{"label":"side_e","weight":5,"id":"470e4e29-2e67-4372-95be-f38d6e1e1474","name":"нарушение мочеиспускание","level":0,"r":30,"y":130,"x":3138.181818181818},{"label":"side_e","weight":5,"id":"c3ad2840-6394-45f4-a83d-286888b3c290","name":"потенция","level":0,"r":30,"y":130,"x":3218.181818181818},{"label":"side_e","weight":5,"id":"a383e4bc-361a-43ee-8a0d-d336baa0d99b","name":"астения","level":0,"r":30,"y":130,"x":3298.181818181818},{"label":"side_e","weight":5,"id":"c3ffc91d-f751-4264-8ae6-208a524911a6","name":"общий слабость","level":0,"r":30,"y":130,"x":3378.181818181818},{"label":"side_e","weight":5,"id":"54cef869-3434-4170-becc-a683c598e573","name":"отёк","level":0,"r":30,"y":130,"x":3458.181818181818},{"label":"side_e","weight":5,"id":"bb17ab98-3e84-4326-9e4d-2eb06d752a9d","name":"болевой синдром","level":0,"r":30,"y":130,"x":3538.181818181818},{"label":"side_e","weight":5,"id":"99c68fde-33a7-4e2d-8b98-4919dadc12ce","name":"повышение активность аланинаминотрансфераза (алта)","level":0,"r":30,"y":130,"x":3618.181818181818},{"label":"side_e","weight":5,"id":"d292f1d1-faf3-41e3-be18-9e2c86c937e9","name":"аспартатаминотрансфераза (аста)","level":0,"r":30,"y":130,"x":3698.181818181818},{"label":"side_e","weight":5,"id":"233660c1-ef14-47fc-a56c-fee7385882f8","name":"гамма-глутамилтрансфераза (ггт)","level":0,"r":30,"y":130,"x":3778.181818181818},{"label":"side_e","weight":5,"id":"05fdb56c-c837-4877-8789-4ff8cf896d24","name":"нарушение зрение","level":0,"r":30,"y":130,"x":3858.181818181818},{"label":"side_e","weight":5,"id":"6fb91ee4-c93c-4ce7-93d1-478adeef66ba","name":"возможный усугубление симптом сердечный недостаточность","level":0,"r":30,"y":130,"x":3938.181818181818},{"label":"side_e","weight":5,"id":"fcce5aaa-7aa7-4214-a036-b752a49692e0","name":"декомпенсация уже иметься сахарный диабет","level":0,"r":30,"y":130,"x":4018.181818181818},{"label":"side_e","weight":5,"id":"9fe11ea9-19a3-4338-90db-7f482037b81a","name":"угнетение контринсулярный система","level":0,"r":30,"y":130,"x":4098.181818181818},{"label":"side_e","weight":5,"id":"da3285d2-448e-4f32-a266-b33c8a0de8fb","name":"алопеция","level":0,"r":30,"y":130,"x":4178.181818181818},{"label":"side_e","weight":5,"id":"01ed2244-2fac-4348-9d0c-9d86648f1d74","name":"серьёзный кожный","level":0,"r":30,"y":130,"x":4258.181818181818},{"label":"side_e","weight":5,"id":"ddb01321-fcee-4b91-af23-754191ea52b8","name":"токсический эпидермальный некролиз","level":0,"r":30,"y":130,"x":4338.181818181818},{"label":"side_e","weight":5,"id":"8dcec223-f11d-4b49-a289-0b20edc046c6","name":"синдром стивенс-джонсон","level":0,"r":30,"y":130,"x":4418.181818181818},{"label":"side_e","weight":5,"id":"bb116503-baac-4359-a309-bd308e421761","name":"недержание моча у женщина, обратимый","level":0,"r":30,"y":130,"x":4498.181818181818},{"label":"side_e","weight":5,"id":"be596a32-cfe6-4802-bef2-f5b5f750af8e","name":"замедление атриовентрикулярный проводимость","level":0,"r":30,"y":130,"x":4578.181818181818},{"label":"side_e","weight":5,"id":"b55f0bb1-2247-4b56-a004-7abffa4b1f08","name":"нарушение проводимость","level":0,"r":30,"y":130,"x":4658.181818181818},{"label":"side_e","weight":5,"id":"24d6a0ca-6374-4c00-877e-41a11ae2a713","name":"с нарушение показатель гемодинамика","level":0,"r":30,"y":130,"x":4738.181818181818},{"label":"side_e","weight":5,"id":"3b0919a1-f61b-4c4f-9c0c-fea844e42fdf","name":"потенцировать антигипертензивный и брадикардический эффект","level":0,"r":30,"y":130,"x":4818.181818181818},{"label":"side_e","weight":5,"id":"7c5645c2-7c9c-4162-8917-fd868a8fbba1","name":"синергичный отрицательный инотропный действие","level":0,"r":30,"y":130,"x":4898.181818181818},{"label":"side_e","weight":5,"id":"c7910e2a-0f4c-426a-8406-1c0f6cf7c4cf","name":"ухудшение контроль за ад","level":0,"r":30,"y":130,"x":4978.181818181818},{"label":"group","weight":5,"id":"7de3d381-54e9-4276-9551-283ec2f4b232","name":"бета-адреноблокатор","level":1,"r":30,"y":260,"x":1200},{"label":"group","weight":5,"id":"2cc30a71-3bef-4101-a1b3-2187dce1a519","name":"альфа и бета-адреноблокатор","level":0,"r":30,"y":130,"x":5058.181818181818},{"label":"action","weight":5,"id":"52b0f3a6-c1b6-4305-93f5-2367eb8fec0f","name":"вазодилатировать","level":5,"r":30,"y":780,"x":150},{"label":"action","weight":5,"id":"629949b1-4b54-429c-932f-c3681dbd6e5a","name":"антиангинальный","level":6,"r":30,"y":910,"x":150},{"label":"action","weight":5,"id":"8b5c6d26-12c9-4652-8982-7096c918a3c9","name":"антиаритмический действие","level":5,"r":30,"y":780,"x":230},{"label":"mechanism","weight":5,"id":"56fafaf2-96c3-4fbf-8789-0e180b9b6681","name":"блокатор","level":3,"r":30,"y":520,"x":400},{"label":"action","weight":5,"id":"e931c0ba-a5c4-48de-b7aa-b9a4db8a9156","name":"снижать общий периферический сосудистый сопротивление (опсс)","level":6,"r":30,"y":910,"x":230},{"label":"action","weight":5,"id":"64e8c1b6-6f27-4ba1-9acf-469c3a263f08","name":"уменьшать пред постнагрузка на сердце","level":5,"r":30,"y":780,"x":310},{"label":"action","weight":5,"id":"0371bdc6-c95b-44e3-9bdf-5f0a8ee368a0","name":"антигипертензивный эффект","level":7,"r":30,"y":1040,"x":600},{"label":"side_e","weight":5,"id":"b28b29ed-bd41-4832-a140-6e55339d4246","name":"гипергликемия","level":5,"r":30,"y":780,"x":390},{"label":"side_e","weight":5,"id":"2a751396-ac47-43d4-9353-705ec8cf94f3","name":"гиперхолестеринемия","level":0,"r":30,"y":130,"x":5138.181818181818},{"label":"side_e","weight":5,"id":"4aec883a-0070-4f21-ab32-22d608fb4b19","name":"гипогликемия","level":5,"r":30,"y":780,"x":470},{"label":"side_e","weight":5,"id":"413a9549-4718-411b-9241-ade3f32f43ce","name":"тахикардия","level":0,"r":30,"y":130,"x":5218.181818181818},{"label":"side_e","weight":5,"id":"88c25184-d5c5-465e-a5cb-33d58d53ada3","name":"артериальный гипотензия","level":8,"r":30,"y":1170,"x":1200},{"label":"side_e","weight":5,"id":"fc5a3a74-f0ea-4d6b-a9a3-51a163183196","name":"головной боль","level":9,"r":30,"y":1300,"x":240},{"label":"side_e","weight":5,"id":"44663000-a779-4e02-bda7-5c5e1859c666","name":"пресинкопальный состояние","level":9,"r":30,"y":1300,"x":320},{"label":"side_e","weight":5,"id":"8ec372c3-7b70-4062-9541-010ad8abac1b","name":"сердечный недостаточность","level":5,"r":30,"y":780,"x":550},{"label":"side_e","weight":5,"id":"5e2a1363-b58c-4239-8143-d5ad11c41d8f","name":"постуральный гипотензия","level":7,"r":30,"y":1040,"x":680},{"label":"side_e","weight":5,"id":"88a39cc2-3389-44ab-8225-b9d7c666a490","name":"синкопальный состояние","level":9,"r":30,"y":1300,"x":400},{"label":"side_e","weight":5,"id":"5d317174-82ea-4810-b413-6cb2722eafff","name":"головокружение","level":9,"r":30,"y":1300,"x":480},{"label":"side_e","weight":5,"id":"2643d1a4-a2f1-4d09-af3c-34413ecd3b61","name":"тошнота","level":9,"r":30,"y":1300,"x":560},{"label":"side_e","weight":5,"id":"4233c030-4838-42f9-a728-40dab7e2c112","name":"похолодание конечность","level":6,"r":30,"y":910,"x":310},{"label":"side_e","weight":5,"id":"7493c2f6-f5e9-493d-a252-d537620b7e29","name":"заболевание периферический сосуд","level":6,"r":30,"y":910,"x":390},{"label":"side_e","weight":5,"id":"87e96a7f-fcd9-4c00-b007-5348d55cff38","name":"обострение синдром «перемежаться» хромота","level":6,"r":30,"y":910,"x":470},{"label":"side_e","weight":5,"id":"d4a2f276-abaa-4d39-9ae9-3b41295c5bb1","name":"синдром рейно","level":6,"r":30,"y":910,"x":550},{"label":"side_e","weight":5,"id":"bcf59811-04b7-439e-84b9-f425c1144310","name":"нарушение периферический кровообращение","level":5,"r":30,"y":780,"x":630},{"label":"side_e","weight":5,"id":"b6f7cd3b-c9de-4543-a830-e56d1c908af8","name":"бронхоспазм","level":5,"r":30,"y":780,"x":710},{"label":"side_e","weight":5,"id":"0cf084b2-4701-418d-91cc-88b8307afc83","name":"брадикардия","level":6,"r":30,"y":910,"x":630},{"label":"side_e","weight":5,"id":"2cfda215-b3f1-4384-a9f8-a7f33fdc1e47","name":"нарушение атриовентрикулярный проводимость","level":6,"r":30,"y":910,"x":710},{"label":"metabol","weight":5,"id":"a6169665-d7e8-4c7d-bdc0-f12a9ebb55be","name":"биотрансформация в печень","level":3,"r":30,"y":520,"x":480},{"label":"excretion","weight":5,"id":"1a98f985-4a76-42e4-a779-9b6fbd0db053","name":"жёлчь","level":4,"r":30,"y":650,"x":240},{"label":"excretion","weight":5,"id":"779fde4a-ed68-4b67-a2ac-8d82c8b8d3c5","name":"почка","level":3,"r":30,"y":520,"x":560},{"label":"side_e","weight":5,"id":"642452f3-15c6-4644-845b-23cef4c98b23","name":"почечный недостаточность","level":4,"r":30,"y":650,"x":320},{"label":"mechanism","weight":5,"id":"8789e3da-793e-4d71-aa05-33f738393824","name":"адренорецептор α1","level":4,"r":30,"y":650,"x":400},{"label":"mechanism","weight":5,"id":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","name":"адренорецептор β1","level":4,"r":30,"y":650,"x":480},{"label":"mechanism","weight":5,"id":"21679134-8149-4d9b-8737-5566aabea35a","name":"адренорецептор β2","level":4,"r":30,"y":650,"x":560}],"links":[{"source":"f4d79ec5-8968-4028-a750-6e02002ceab2","target":"56fafaf2-96c3-4fbf-8789-0e180b9b6681","id":"934d95da-2b64-4ce5-88a9-78e0ac2d3f2f"},{"source":"f4d79ec5-8968-4028-a750-6e02002ceab2","target":"a6169665-d7e8-4c7d-bdc0-f12a9ebb55be","id":"b0f948ad-7e3d-43f4-a6e8-6b93fcb4ec88"},{"source":"f4d79ec5-8968-4028-a750-6e02002ceab2","target":"779fde4a-ed68-4b67-a2ac-8d82c8b8d3c5","id":"9932a71d-292f-403f-9c0d-8de39ea3eed6"},{"source":"7de3d381-54e9-4276-9551-283ec2f4b232","target":"f4d79ec5-8968-4028-a750-6e02002ceab2","id":"14f2e549-51a3-45d9-98d9-c3d2ddbcc25a"},{"source":"2cc30a71-3bef-4101-a1b3-2187dce1a519","target":"7de3d381-54e9-4276-9551-283ec2f4b232","id":"dcf4c4e6-da72-4f18-9739-f1e320824598"},{"source":"52b0f3a6-c1b6-4305-93f5-2367eb8fec0f","target":"e931c0ba-a5c4-48de-b7aa-b9a4db8a9156","id":"53ff7624-c3fc-440d-973c-63e0cf8c232b"},{"source":"8b5c6d26-12c9-4652-8982-7096c918a3c9","target":"0cf084b2-4701-418d-91cc-88b8307afc83","id":"be77ba2c-2688-492b-8045-15f567a04e93"},{"source":"8b5c6d26-12c9-4652-8982-7096c918a3c9","target":"2cfda215-b3f1-4384-a9f8-a7f33fdc1e47","id":"30f5b5ec-0ba6-4a2b-b008-6a8774fc1f97"},{"source":"56fafaf2-96c3-4fbf-8789-0e180b9b6681","target":"8789e3da-793e-4d71-aa05-33f738393824","id":"ada24f13-b964-4c15-83d7-a69eff797bdb"},{"source":"56fafaf2-96c3-4fbf-8789-0e180b9b6681","target":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","id":"3cd444c3-aa0b-44d3-89f9-9fe0a27e1a0e"},{"source":"56fafaf2-96c3-4fbf-8789-0e180b9b6681","target":"21679134-8149-4d9b-8737-5566aabea35a","id":"c0457cb1-f5f8-497c-b1a9-45bbe3934235"},{"source":"e931c0ba-a5c4-48de-b7aa-b9a4db8a9156","target":"0371bdc6-c95b-44e3-9bdf-5f0a8ee368a0","id":"a27430ac-7f72-46c8-9dd7-8cac9cebde55"},{"source":"e931c0ba-a5c4-48de-b7aa-b9a4db8a9156","target":"5e2a1363-b58c-4239-8143-d5ad11c41d8f","id":"4ec7d472-c686-4fe4-aa1b-922dfbc18eb0"},{"source":"64e8c1b6-6f27-4ba1-9acf-469c3a263f08","target":"629949b1-4b54-429c-932f-c3681dbd6e5a","id":"ad99fe7d-48c5-468a-8632-b68ab87edeae"},{"source":"0371bdc6-c95b-44e3-9bdf-5f0a8ee368a0","target":"88c25184-d5c5-465e-a5cb-33d58d53ada3","id":"c89c3e50-abef-49de-8d0d-e0ed53555e6c"},{"source":"88c25184-d5c5-465e-a5cb-33d58d53ada3","target":"88a39cc2-3389-44ab-8225-b9d7c666a490","id":"b7469b1f-9c80-42d8-924b-ba4d1124a7d8"},{"source":"88c25184-d5c5-465e-a5cb-33d58d53ada3","target":"5d317174-82ea-4810-b413-6cb2722eafff","id":"e4056c8f-ec32-4d63-bd72-72ed0f495dc3"},{"source":"88c25184-d5c5-465e-a5cb-33d58d53ada3","target":"44663000-a779-4e02-bda7-5c5e1859c666","id":"86f038d5-c47a-431d-897c-97030de73849"},{"source":"88c25184-d5c5-465e-a5cb-33d58d53ada3","target":"fc5a3a74-f0ea-4d6b-a9a3-51a163183196","id":"6679f27f-5558-4578-bf75-2c540babcf1f"},{"source":"88c25184-d5c5-465e-a5cb-33d58d53ada3","target":"2643d1a4-a2f1-4d09-af3c-34413ecd3b61","id":"bd430162-a8f0-44b9-bded-233762b00b10"},{"source":"bcf59811-04b7-439e-84b9-f425c1144310","target":"4233c030-4838-42f9-a728-40dab7e2c112","id":"27cfaa67-61ee-4dab-8e5c-28281207503a"},{"source":"bcf59811-04b7-439e-84b9-f425c1144310","target":"87e96a7f-fcd9-4c00-b007-5348d55cff38","id":"4d97ae14-134d-4fbb-8400-e7ccaa882d84"},{"source":"bcf59811-04b7-439e-84b9-f425c1144310","target":"7493c2f6-f5e9-493d-a252-d537620b7e29","id":"83430c2d-263f-4160-b4ec-05529288c15e"},{"source":"bcf59811-04b7-439e-84b9-f425c1144310","target":"d4a2f276-abaa-4d39-9ae9-3b41295c5bb1","id":"a973850b-ed6b-4b80-b2ed-ff90f4c071de"},{"source":"a6169665-d7e8-4c7d-bdc0-f12a9ebb55be","target":"1a98f985-4a76-42e4-a779-9b6fbd0db053","id":"4b3dc115-5d6c-416d-843e-5264d4383d8f"},{"source":"779fde4a-ed68-4b67-a2ac-8d82c8b8d3c5","target":"642452f3-15c6-4644-845b-23cef4c98b23","id":"89025e7f-5d09-4e0e-b084-9fb2da3bf8af"},{"source":"8789e3da-793e-4d71-aa05-33f738393824","target":"52b0f3a6-c1b6-4305-93f5-2367eb8fec0f","id":"536186e2-0d15-4174-847f-5828568027c3"},{"source":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","target":"8b5c6d26-12c9-4652-8982-7096c918a3c9","id":"9d35db72-8696-4d2b-be70-76c87d5ce8d9"},{"source":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","target":"64e8c1b6-6f27-4ba1-9acf-469c3a263f08","id":"6bf3784c-5b4b-4dbe-86c7-9d067b912fd8"},{"source":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","target":"0371bdc6-c95b-44e3-9bdf-5f0a8ee368a0","id":"72e605a0-17e2-43a3-b8e0-002fcac1c98c"},{"source":"716bccd6-8ed1-4621-ac75-afe32bbb69b3","target":"8ec372c3-7b70-4062-9541-010ad8abac1b","id":"ee6d5998-40cd-4a5f-b1eb-b1a24ec63568"},{"source":"21679134-8149-4d9b-8737-5566aabea35a","target":"4aec883a-0070-4f21-ab32-22d608fb4b19","id":"6344fdc9-fd98-498c-a1e5-ffa78d810cad"},{"source":"21679134-8149-4d9b-8737-5566aabea35a","target":"b28b29ed-bd41-4832-a140-6e55339d4246","id":"e55c1801-f3d2-4972-a009-30e8786e84a3"},{"source":"21679134-8149-4d9b-8737-5566aabea35a","target":"bcf59811-04b7-439e-84b9-f425c1144310","id":"08617beb-ac91-48ed-b91d-3be02064cbb0"},{"source":"21679134-8149-4d9b-8737-5566aabea35a","target":"b6f7cd3b-c9de-4543-a830-e56d1c908af8","id":"ccd03a27-a7a4-44b9-9ffe-055c007a2c6f"}],"name":"карведилол","maxLevel":10,"levelsInfo":{"levelNodesCount":{"0":66,"1":1,"2":1,"3":3,"4":5,"5":8,"6":8,"7":2,"8":1,"9":5}},"isParse":true}
+            const window_params = {"width":1200,"height":600,"xStep":50,"yStep":100}
+
+            console.log(graphData)
+
+            
+
+            if (graphData){
+                const svg = d3.select("svg")
+                svg.selectAll("*").remove() // Очистка предыдущего графа
+
+                svg.attr("width",   window_params.width) //Устанавливает атрибут width
+                .attr("height",   window_params.height)
+                .append("g").attr('class', 'group') //добавляет новый элемент, тег которого передается в метод в качестве параметра
+
+                const svgGroup = svg.select('g.group')
+
+                // Масштабирование и перемещение
+                const zoom = d3.zoom()
+                .scaleExtent([0.1, 10])
+                .on("zoom", (event)=>{ //Обновление позиционирования элементов при масштабировании
+                    svgGroup.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+
+
+                const dragstarted = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0.3).restart(); // Увеличиваем "температуру" симуляции для более плавного движения
+                    d.fx = d.x; // Фиксируем позицию узла
+                    d.fy = d.y;
+                }
+                
+                const dragged = (event, d)=>{
+                    d.fx = event.x; // Обновляем фиксированные координаты узла
+                    d.fy = event.y;
+                }
+                
+                const dragended = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0); // Охлаждаем симуляцию после перетаскивания
+                    d.fx = null; // Отпускаем узел, позволяя симуляции снова влиять на его позицию
+                    d.fy = null;
+                }
+
+                // Создаем обработчик drag
+                const drag = d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+
+
+                // Определение маркера стрелки
+                svgGroup.append("defs")
+                .append("marker")
+                .attr("id", "arrowhead")
+                .attr("markerWidth", 5) //Размер области, в которой будет отображаться маркер
+                .attr("markerHeight", 4)
+                .attr("refX", nodeView.r+4)
+                .attr("refY", 2)
+                .attr("orient", "auto")
+                .append("polygon")
+                .attr("points", "0 0, 5 2, 0 4")
+                .style("fill", colors.link);
+
+                
+                //Добавление ссылок
+                let links = svgGroup.append("g").attr('class', 'links')
+                .selectAll('.link')
+                .data(graphData.links) //Добавление данных
+                .enter() //Нужен для ввода дополнительных значений (так как data привязывает только первое)
+                .append('path')
+                .attr('class', 'link')
+                .attr('stroke', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return colors.selectLink
+                    return colors.link
+                }) // Цвет линии ребра
+                .attr('stroke-width', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return 2
+                    return 1
+                }) // Ширина линии ребра
+                .attr("marker-end", "url(#arrowhead)") // Добавление стрелки в конец ребра
+                .style('pointer-events', 'none') //(устанавливает стиль) Отключение событий на ребрах (клики и т.д.)
+
+                // Создание узлов
+                let nodes = svgGroup.append("g").attr('class', 'nodes')
+                .selectAll('.node')
+                .data(graphData.nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'node')
+                .call(drag);
+
+                nodes.append('circle')
+                .attr('class', 'node')
+                .attr('id', d => d.id)
+                .attr('r', d => d.r) // Радиус узла
+                .attr('fill', d=>{
+                    //if(selectedNodes.sourseNode === d.id || selectedNodes.targetNode === d.id) return colors.selectNode
+                    return colors.node
+                }) // Цвет заполнения
+                .attr("cursor", "pointer")
+                .on('click', (event, d) => {
+                    // Добавьте логику для обработки клика по узлу
+                });
+
+                //Отображение текста v2
+                nodes.append('foreignObject')
+                .attr('x', d => -d.r * 0.8)
+                .attr('y', d => -d.r * 0.8)
+                .attr('width', d => d.r * 1.6)
+                .attr('height', d => d.r * 1.6)
+                .append('xhtml:div')
+                .style('display', 'flex')
+                .style('justify-content', 'center')
+                .style('align-items', 'center')
+                .style('width', '100%')
+                .style('height', '100%')
+                .style('font-size', '5px')
+                .style('text-anchor', 'middle')
+                .style('word-wrap', 'break-word')
+                .style('overflow', 'hidden')
+                .style('pointer-events', 'none')
+                .text(d => d.name);
+
+                //Создание симуляции силы v3
+                const simulation = d3.forceSimulation(graphData.nodes)
+                // Связи между узлами
+                .force("link", d3.forceLink(graphData.links).id(d => d.id))//.distance(nodeView.r*10)) //!!! Сила в зависимости от количества узлов в уровне!!!!!
+                // Отталкивание узлов
+                .force("charge", d3.forceManyBody(graphData.nodes).strength(d=>graphData.levelsInfo.levelNodesCount[d.level]*(-100)))//-3000))
+                // Центрирование по x
+                .force("center", d3.forceCenter( window_params.width / 2,  window_params.height / 2))
+                // Выравнивание по уровням
+                .force("y", d3.forceY().strength(6)
+                    .y(d =>  window_params.height * ((d.level+1) / (graphData.maxLevel-1)))) //!!!!!!!!!!Уровень с большим числом узлов шире, чем с меньшим
+                // Отталкивание по x в рамках одного уровня
+                .force("x", d3.forceX().strength(0.05)
+                    .x( window_params.width / 2))
+                // Дополнительная сила для предотвращения наложения узлов
+                .force("collision", d3.forceCollide().radius(40));
+
+                // Обновление позиций узлов и связей при каждой итерации симуляции
+                //Обновление симуляции
+                simulation.on('tick', () => {
+                    links.attr("d", d => `M${d.source.x},${d.source.y} L${d.target.x},${d.target.y}`);
+                    nodes.attr('transform', d => `translate(${d.x}, ${d.y})`); // Правильная позиция для групп
+                });
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,218 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "33cbee24-102c-4dfd-a59f-912119cd9a48"
+        },
+        {
+            "name": "эмпаглифлозин",
+            "label": "prepare",
+            "weight": 5,
+            "id": "3616a023-c2d5-463d-b0d7-cb05b4515990"
+        },
+        {
+            "name": "антагонист альдостерон",
+            "label": "group",
+            "weight": 5,
+            "id": "8e35336c-bed7-4aff-ab99-0666df63934f"
+        },
+        {
+            "name": "антагонист альдостерон и другой калийсберегающий диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "77163e3c-32ce-412e-8876-e76501538001"
+        },
+        {
+            "name": "калийсберегающий диуретик",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "14c85d44-4e33-4e31-9186-4a21cc920b53"
+        },
+        {
+            "name": "антагонист альдостерон",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "57d677e1-9be4-436e-b617-cc3d878f9df4"
+        },
+        {
+            "name": "внутрь",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "7317d699-2ad3-42fd-8111-219a1c46eda0"
+        },
+        {
+            "name": "белкок плазма кровь",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "6d8f782c-d715-465b-8644-a6a2f2e975a1"
+        },
+        {
+            "name": "cyp3a4",
+            "label": "metabol",
+            "weight": 5,
+            "id": "f64354ef-5bfa-4220-b56e-5b796a8f71c1"
+        },
+        {
+            "name": "кишечник",
+            "label": "excretion",
+            "weight": 5,
+            "id": "33f2e90a-c775-4358-98dc-9f1318b93af5"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "2bb04473-60d3-4ad8-90dc-0635688f977f"
+        },
+        {
+            "name": "гиперкалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "84493902-490b-42e5-9c1f-f560fc6a2cc4"
+        },
+        {
+            "name": "гиперхолестеринемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "5cf733c1-6712-4aee-8352-7cd454b96a82"
+        },
+        {
+            "name": "гипертриглицеридемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "829110eb-b9f1-4bc3-9883-1f762b8caea6"
+        },
+        {
+            "name": "регуляция артериальный давление",
+            "label": "action",
+            "weight": 5,
+            "id": "817f090c-d083-4a24-915f-43bf2d93b161"
+        },
+        {
+            "name": "снижение ад",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e65c49da-5755-49b8-9763-574fddffcf2c"
+        },
+        {
+            "name": "ортостатический гипотензия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "59ff40a7-3c36-4a34-b01c-a1e4e61f7972"
+        },
+        {
+            "name": "гинекомастия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "43a3488c-6af0-48e1-adec-aebe9c4c4377"
+        },
+        {
+            "name": "судорога в икроножный мышца нога",
+            "label": "side_e",
+            "weight": 5,
+            "id": "783b0cfe-05ce-4f1b-b304-fab7d7fbb22a"
+        },
+        {
+            "name": "увеличение концентрация ренин в плазма кровь",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "062e06cd-a6d4-4957-8a9b-dd1f26d00ad5"
+        },
+        {
+            "name": "увеличение концентрация альдостерон в сыворотка кровь",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "73b8523e-5c19-47cd-ab82-4e50545b6f9b"
+        }
+    ],
+    "links": [
+        {
+            "source": "33cbee24-102c-4dfd-a59f-912119cd9a48",
+            "target": "77163e3c-32ce-412e-8876-e76501538001"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "57d677e1-9be4-436e-b617-cc3d878f9df4"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "7317d699-2ad3-42fd-8111-219a1c46eda0"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "6d8f782c-d715-465b-8644-a6a2f2e975a1"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "f64354ef-5bfa-4220-b56e-5b796a8f71c1"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "33f2e90a-c775-4358-98dc-9f1318b93af5"
+        },
+        {
+            "source": "3616a023-c2d5-463d-b0d7-cb05b4515990",
+            "target": "2bb04473-60d3-4ad8-90dc-0635688f977f"
+        },
+        {
+            "source": "8e35336c-bed7-4aff-ab99-0666df63934f",
+            "target": "3616a023-c2d5-463d-b0d7-cb05b4515990"
+        },
+        {
+            "source": "77163e3c-32ce-412e-8876-e76501538001",
+            "target": "8e35336c-bed7-4aff-ab99-0666df63934f"
+        },
+        {
+            "source": "14c85d44-4e33-4e31-9186-4a21cc920b53",
+            "target": "84493902-490b-42e5-9c1f-f560fc6a2cc4"
+        },
+        {
+            "source": "14c85d44-4e33-4e31-9186-4a21cc920b53",
+            "target": "5cf733c1-6712-4aee-8352-7cd454b96a82"
+        },
+        {
+            "source": "14c85d44-4e33-4e31-9186-4a21cc920b53",
+            "target": "829110eb-b9f1-4bc3-9883-1f762b8caea6"
+        },
+        {
+            "source": "14c85d44-4e33-4e31-9186-4a21cc920b53",
+            "target": "817f090c-d083-4a24-915f-43bf2d93b161"
+        },
+        {
+            "source": "14c85d44-4e33-4e31-9186-4a21cc920b53",
+            "target": "783b0cfe-05ce-4f1b-b304-fab7d7fbb22a"
+        },
+        {
+            "source": "57d677e1-9be4-436e-b617-cc3d878f9df4",
+            "target": "14c85d44-4e33-4e31-9186-4a21cc920b53"
+        },
+        {
+            "source": "57d677e1-9be4-436e-b617-cc3d878f9df4",
+            "target": "43a3488c-6af0-48e1-adec-aebe9c4c4377"
+        },
+        {
+            "source": "57d677e1-9be4-436e-b617-cc3d878f9df4",
+            "target": "062e06cd-a6d4-4957-8a9b-dd1f26d00ad5"
+        },
+        {
+            "source": "57d677e1-9be4-436e-b617-cc3d878f9df4",
+            "target": "73b8523e-5c19-47cd-ab82-4e50545b6f9b"
+        },
+        {
+            "source": "817f090c-d083-4a24-915f-43bf2d93b161",
+            "target": "e65c49da-5755-49b8-9763-574fddffcf2c"
+        },
+        {
+            "source": "817f090c-d083-4a24-915f-43bf2d93b161",
+            "target": "59ff40a7-3c36-4a34-b01c-a1e4e61f7972"
+        }
+    ],
+    "name": [
+        "3616a023-c2d5-463d-b0d7-cb05b4515990"
+    ]
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>3616a023-c2d5-463d-b0d7-cb05b4515990</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/index.css">
+        <style>
+            .Graphcontainer{
+                width: 98%;
+                height: 85vh;
+
+                border: solid 0.5px black;
+                border-radius: 7px;
+            }
+
+            .svgGraph{
+                width: 100%;
+                height: 100%;
+            }   
+        </style>
+        <script src="./d3.v7.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="flex jc-center">
+                <h1>3616a023-c2d5-463d-b0d7-cb05b4515990</h1>
+            </div>
+            <br/>
+            <div class='Graphcontainer' >
+                <svg class='svgGraph'> </svg>
+            </div>
+        </main>
+
+        <script>
+            const colors = {
+                selectNode: "#E8BD6D",
+                selectLink: "#8B7474",
+                node: "#E9EEF4",
+                link: '#B8B5B5'
+            }
+
+            const nodeView = {
+                r: 30
+            }
+
+            const graphData = {"directed":true,"multigraph":false,"graph":{},"nodes":[{"name":"диуретик","label":"group","weight":5,"id":"33cbee24-102c-4dfd-a59f-912119cd9a48","level":0,"r":30,"y":137.5,"x":1200},{"name":"эмпаглифлозин","label":"prepare","weight":5,"id":"3616a023-c2d5-463d-b0d7-cb05b4515990","level":3,"r":30,"y":527.5,"x":1200},{"name":"антагонист альдостерон","label":"group","weight":5,"id":"8e35336c-bed7-4aff-ab99-0666df63934f","level":2,"r":30,"y":397.5,"x":1200},{"name":"антагонист альдостерон и другой калийсберегающий диуретик","label":"group","weight":5,"id":"77163e3c-32ce-412e-8876-e76501538001","level":1,"r":30,"y":267.5,"x":1200},{"name":"калийсберегающий диуретик","label":"mechanism","weight":5,"id":"14c85d44-4e33-4e31-9186-4a21cc920b53","level":5,"r":30,"y":787.5,"x":300},{"name":"антагонист альдостерон","label":"mechanism","weight":5,"id":"57d677e1-9be4-436e-b617-cc3d878f9df4","level":4,"r":30,"y":657.5,"x":200},{"name":"внутрь","label":"absorbtion","weight":5,"id":"7317d699-2ad3-42fd-8111-219a1c46eda0","level":4,"r":30,"y":657.5,"x":280},{"name":"белкок плазма кровь","label":"prot_link","weight":5,"id":"6d8f782c-d715-465b-8644-a6a2f2e975a1","level":4,"r":30,"y":657.5,"x":360},{"name":"cyp3a4","label":"metabol","weight":5,"id":"f64354ef-5bfa-4220-b56e-5b796a8f71c1","level":4,"r":30,"y":657.5,"x":440},{"name":"кишечник","label":"excretion","weight":5,"id":"33f2e90a-c775-4358-98dc-9f1318b93af5","level":4,"r":30,"y":657.5,"x":520},{"name":"почка","label":"excretion","weight":5,"id":"2bb04473-60d3-4ad8-90dc-0635688f977f","level":4,"r":30,"y":657.5,"x":600},{"name":"гиперкалиемия","label":"side_e","weight":5,"id":"84493902-490b-42e5-9c1f-f560fc6a2cc4","level":6,"r":30,"y":917.5,"x":240},{"name":"гиперхолестеринемия","label":"side_e","weight":5,"id":"5cf733c1-6712-4aee-8352-7cd454b96a82","level":6,"r":30,"y":917.5,"x":320},{"name":"гипертриглицеридемия","label":"side_e","weight":5,"id":"829110eb-b9f1-4bc3-9883-1f762b8caea6","level":6,"r":30,"y":917.5,"x":400},{"name":"регуляция артериальный давление","label":"action","weight":5,"id":"817f090c-d083-4a24-915f-43bf2d93b161","level":6,"r":30,"y":917.5,"x":480},{"name":"снижение ад","label":"side_e","weight":5,"id":"e65c49da-5755-49b8-9763-574fddffcf2c","level":7,"r":30,"y":1047.5,"x":600},{"name":"ортостатический гипотензия","label":"side_e","weight":5,"id":"59ff40a7-3c36-4a34-b01c-a1e4e61f7972","level":7,"r":30,"y":1047.5,"x":680},{"name":"гинекомастия","label":"side_e","weight":5,"id":"43a3488c-6af0-48e1-adec-aebe9c4c4377","level":5,"r":30,"y":787.5,"x":380},{"name":"судорога в икроножный мышца нога","label":"side_e","weight":5,"id":"783b0cfe-05ce-4f1b-b304-fab7d7fbb22a","level":6,"r":30,"y":917.5,"x":560},{"name":"увеличение концентрация ренин в плазма кровь","label":"mechanism","weight":5,"id":"062e06cd-a6d4-4957-8a9b-dd1f26d00ad5","level":5,"r":30,"y":787.5,"x":460},{"name":"увеличение концентрация альдостерон в сыворотка кровь","label":"mechanism","weight":5,"id":"73b8523e-5c19-47cd-ab82-4e50545b6f9b","level":5,"r":30,"y":787.5,"x":540}],"links":[{"source":"33cbee24-102c-4dfd-a59f-912119cd9a48","target":"77163e3c-32ce-412e-8876-e76501538001"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"57d677e1-9be4-436e-b617-cc3d878f9df4"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"7317d699-2ad3-42fd-8111-219a1c46eda0"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"6d8f782c-d715-465b-8644-a6a2f2e975a1"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"f64354ef-5bfa-4220-b56e-5b796a8f71c1"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"33f2e90a-c775-4358-98dc-9f1318b93af5"},{"source":"3616a023-c2d5-463d-b0d7-cb05b4515990","target":"2bb04473-60d3-4ad8-90dc-0635688f977f"},{"source":"8e35336c-bed7-4aff-ab99-0666df63934f","target":"3616a023-c2d5-463d-b0d7-cb05b4515990"},{"source":"77163e3c-32ce-412e-8876-e76501538001","target":"8e35336c-bed7-4aff-ab99-0666df63934f"},{"source":"14c85d44-4e33-4e31-9186-4a21cc920b53","target":"84493902-490b-42e5-9c1f-f560fc6a2cc4"},{"source":"14c85d44-4e33-4e31-9186-4a21cc920b53","target":"5cf733c1-6712-4aee-8352-7cd454b96a82"},{"source":"14c85d44-4e33-4e31-9186-4a21cc920b53","target":"829110eb-b9f1-4bc3-9883-1f762b8caea6"},{"source":"14c85d44-4e33-4e31-9186-4a21cc920b53","target":"817f090c-d083-4a24-915f-43bf2d93b161"},{"source":"14c85d44-4e33-4e31-9186-4a21cc920b53","target":"783b0cfe-05ce-4f1b-b304-fab7d7fbb22a"},{"source":"57d677e1-9be4-436e-b617-cc3d878f9df4","target":"14c85d44-4e33-4e31-9186-4a21cc920b53"},{"source":"57d677e1-9be4-436e-b617-cc3d878f9df4","target":"43a3488c-6af0-48e1-adec-aebe9c4c4377"},{"source":"57d677e1-9be4-436e-b617-cc3d878f9df4","target":"062e06cd-a6d4-4957-8a9b-dd1f26d00ad5"},{"source":"57d677e1-9be4-436e-b617-cc3d878f9df4","target":"73b8523e-5c19-47cd-ab82-4e50545b6f9b"},{"source":"817f090c-d083-4a24-915f-43bf2d93b161","target":"e65c49da-5755-49b8-9763-574fddffcf2c"},{"source":"817f090c-d083-4a24-915f-43bf2d93b161","target":"59ff40a7-3c36-4a34-b01c-a1e4e61f7972"}],"name":["3616a023-c2d5-463d-b0d7-cb05b4515990"],"maxLevel":8,"levelsInfo":{"levelNodesCount":{"0":1,"1":1,"2":1,"3":1,"4":6,"5":4,"6":5,"7":2}},"isParse":true}
+            const window_params = {"width":1200,"height":600,"xStep":50,"yStep":100}
+
+            console.log(graphData)
+
+            
+
+            if (graphData){
+                const svg = d3.select("svg")
+                svg.selectAll("*").remove() // Очистка предыдущего графа
+
+                svg.attr("width",   window_params.width) //Устанавливает атрибут width
+                .attr("height",   window_params.height)
+                .append("g").attr('class', 'group') //добавляет новый элемент, тег которого передается в метод в качестве параметра
+
+                const svgGroup = svg.select('g.group')
+
+                // Масштабирование и перемещение
+                const zoom = d3.zoom()
+                .scaleExtent([0.1, 10])
+                .on("zoom", (event)=>{ //Обновление позиционирования элементов при масштабировании
+                    svgGroup.attr("transform", event.transform);
+                });
+                svg.call(zoom);
+
+
+                const dragstarted = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0.3).restart(); // Увеличиваем "температуру" симуляции для более плавного движения
+                    d.fx = d.x; // Фиксируем позицию узла
+                    d.fy = d.y;
+                }
+                
+                const dragged = (event, d)=>{
+                    d.fx = event.x; // Обновляем фиксированные координаты узла
+                    d.fy = event.y;
+                }
+                
+                const dragended = (event, d)=>{
+                    if (!event.active) simulation.alphaTarget(0); // Охлаждаем симуляцию после перетаскивания
+                    d.fx = null; // Отпускаем узел, позволяя симуляции снова влиять на его позицию
+                    d.fy = null;
+                }
+
+                // Создаем обработчик drag
+                const drag = d3.drag()
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended);
+
+
+                // Определение маркера стрелки
+                svgGroup.append("defs")
+                .append("marker")
+                .attr("id", "arrowhead")
+                .attr("markerWidth", 5) //Размер области, в которой будет отображаться маркер
+                .attr("markerHeight", 4)
+                .attr("refX", nodeView.r+4)
+                .attr("refY", 2)
+                .attr("orient", "auto")
+                .append("polygon")
+                .attr("points", "0 0, 5 2, 0 4")
+                .style("fill", colors.link);
+
+                
+                //Добавление ссылок
+                let links = svgGroup.append("g").attr('class', 'links')
+                .selectAll('.link')
+                .data(graphData.links) //Добавление данных
+                .enter() //Нужен для ввода дополнительных значений (так как data привязывает только первое)
+                .append('path')
+                .attr('class', 'link')
+                .attr('stroke', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return colors.selectLink
+                    return colors.link
+                }) // Цвет линии ребра
+                .attr('stroke-width', d=>{
+                    //if((d.source.id === selectedNodes.sourseNode && d.target.id === selectedNodes.targetNode)||(d.target.id === selectedNodes.sourseNode && d.source.id === selectedNodes.targetNode)) return 2
+                    return 1
+                }) // Ширина линии ребра
+                .attr("marker-end", "url(#arrowhead)") // Добавление стрелки в конец ребра
+                .style('pointer-events', 'none') //(устанавливает стиль) Отключение событий на ребрах (клики и т.д.)
+
+                // Создание узлов
+                let nodes = svgGroup.append("g").attr('class', 'nodes')
+                .selectAll('.node')
+                .data(graphData.nodes)
+                .enter()
+                .append('g')
+                .attr('class', 'node')
+                .call(drag);
+
+                nodes.append('circle')
+                .attr('class', 'node')
+                .attr('id', d => d.id)
+                .attr('r', d => d.r) // Радиус узла
+                .attr('fill', d=>{
+                    //if(selectedNodes.sourseNode === d.id || selectedNodes.targetNode === d.id) return colors.selectNode
+                    return colors.node
+                }) // Цвет заполнения
+                .attr("cursor", "pointer")
+                .on('click', (event, d) => {
+                    // Добавьте логику для обработки клика по узлу
+                });
+
+                //Отображение текста v2
+                nodes.append('foreignObject')
+                .attr('x', d => -d.r * 0.8)
+                .attr('y', d => -d.r * 0.8)
+                .attr('width', d => d.r * 1.6)
+                .attr('height', d => d.r * 1.6)
+                .append('xhtml:div')
+                .style('display', 'flex')
+                .style('justify-content', 'center')
+                .style('align-items', 'center')
+                .style('width', '100%')
+                .style('height', '100%')
+                .style('font-size', '5px')
+                .style('text-anchor', 'middle')
+                .style('word-wrap', 'break-word')
+                .style('overflow', 'hidden')
+                .style('pointer-events', 'none')
+                .text(d => d.name);
+
+                //Создание симуляции силы v3
+                const simulation = d3.forceSimulation(graphData.nodes)
+                // Связи между узлами
+                .force("link", d3.forceLink(graphData.links).id(d => d.id))//.distance(nodeView.r*10)) //!!! Сила в зависимости от количества узлов в уровне!!!!!
+                // Отталкивание узлов
+                .force("charge", d3.forceManyBody(graphData.nodes).strength(d=>graphData.levelsInfo.levelNodesCount[d.level]*(-100)))//-3000))
+                // Центрирование по x
+                .force("center", d3.forceCenter( window_params.width / 2,  window_params.height / 2))
+                // Выравнивание по уровням
+                .force("y", d3.forceY().strength(6)
+                    .y(d =>  window_params.height * ((d.level+1) / (graphData.maxLevel-1)))) //!!!!!!!!!!Уровень с большим числом узлов шире, чем с меньшим
+                // Отталкивание по x в рамках одного уровня
+                .force("x", d3.forceX().strength(0.05)
+                    .x( window_params.width / 2))
+                // Дополнительная сила для предотвращения наложения узлов
+                .force("collision", d3.forceCollide().radius(40));
+
+                // Обновление позиций узлов и связей при каждой итерации симуляции
+                //Обновление симуляции
+                simulation.on('tick', () => {
+                    links.attr("d", d => `M${d.source.x},${d.source.y} L${d.target.x},${d.target.y}`);
+                    nodes.attr('transform', d => `translate(${d.x}, ${d.y})`); // Правильная позиция для групп
+                });
+            }
+        </script>
+    </body>
+</html>

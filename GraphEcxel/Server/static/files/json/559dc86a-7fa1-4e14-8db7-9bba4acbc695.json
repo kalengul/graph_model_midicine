@@ -1,0 +1,202 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "ангиотензина II рецепторов антагонист",
+            "label": "group",
+            "weight": 5,
+            "id": "21de3e2d-e857-4485-8e0d-8bd73bdb49f5"
+        },
+        {
+            "name": "лозартан",
+            "label": "prepare",
+            "weight": 5,
+            "id": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927"
+        },
+        {
+            "name": "антагонист рецептор ангиотензин II",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "fa0f0176-290d-42dd-93cc-ee5d0a2fbefb"
+        },
+        {
+            "name": "желудочно-кишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "6fefe76c-5595-40a8-8b7f-4373d9dc1f2a"
+        },
+        {
+            "name": "связывать с ат1-рецептор",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "902839b6-ad12-42aa-b851-0df84cffa025"
+        },
+        {
+            "name": "повышение активность ренин плазма кровь",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "d437cb1e-d909-49c9-9a06-1f6d26bf358c"
+        },
+        {
+            "name": "повышение концентрация ангиотензин II в плазма кровь",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "513dbbb8-9f99-4a7a-8a08-1a92035814a5"
+        },
+        {
+            "name": "антигипертензивная активность",
+            "label": "action",
+            "weight": 5,
+            "id": "2eec5009-bbef-4bdc-826c-2fc0019c93e5"
+        },
+        {
+            "name": "снижение концентрация альдостерон плазма кровь",
+            "label": "action",
+            "weight": 5,
+            "id": "3d7f4790-9390-46e4-a3dd-f1f76d37eeb0"
+        },
+        {
+            "name": "печень",
+            "label": "metabol",
+            "weight": 5,
+            "id": "7769a1c5-e600-4229-a2d1-a49a9800ff54"
+        },
+        {
+            "name": "cyp2c9",
+            "label": "metabol",
+            "weight": 5,
+            "id": "62d2b019-9f85-49b1-8597-a31c1494cfc5"
+        },
+        {
+            "name": "белок плазма кровь",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "b9bd44d5-199f-4d4a-9429-368f6730bee4"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "54894de4-1bab-404c-8711-0db68ac116dc"
+        },
+        {
+            "name": "кишечник",
+            "label": "excretion",
+            "weight": 5,
+            "id": "bc3e4a80-55c6-4dfa-a3b1-54d84d8d75c3"
+        },
+        {
+            "name": "головная боль",
+            "label": "side_e",
+            "weight": 5,
+            "id": "4879ab4a-a1fb-41e0-a612-c544fa8f2569"
+        },
+        {
+            "name": "головокружение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "2c083802-305d-4c93-a0d5-3dd1aa0bc5c8"
+        },
+        {
+            "name": "выраженное снижение АД",
+            "label": "side_e",
+            "weight": 5,
+            "id": "78d65b39-2336-4dac-85ca-dae402293d18"
+        },
+        {
+            "name": "гиперкалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "43220f0f-313d-45fc-9cf6-e020ededae5f"
+        },
+        {
+            "name": "мигрень",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a36fc011-4e57-40f7-9d71-0860cbaa2877"
+        }
+    ],
+    "links": [
+        {
+            "source": "21de3e2d-e857-4485-8e0d-8bd73bdb49f5",
+            "target": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "fa0f0176-290d-42dd-93cc-ee5d0a2fbefb"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "6fefe76c-5595-40a8-8b7f-4373d9dc1f2a"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "7769a1c5-e600-4229-a2d1-a49a9800ff54"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "b9bd44d5-199f-4d4a-9429-368f6730bee4"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "54894de4-1bab-404c-8711-0db68ac116dc"
+        },
+        {
+            "source": "0ee9be4f-1ae8-4c35-93c0-855ab84a9927",
+            "target": "bc3e4a80-55c6-4dfa-a3b1-54d84d8d75c3"
+        },
+        {
+            "source": "fa0f0176-290d-42dd-93cc-ee5d0a2fbefb",
+            "target": "902839b6-ad12-42aa-b851-0df84cffa025"
+        },
+        {
+            "source": "902839b6-ad12-42aa-b851-0df84cffa025",
+            "target": "d437cb1e-d909-49c9-9a06-1f6d26bf358c"
+        },
+        {
+            "source": "902839b6-ad12-42aa-b851-0df84cffa025",
+            "target": "2eec5009-bbef-4bdc-826c-2fc0019c93e5"
+        },
+        {
+            "source": "902839b6-ad12-42aa-b851-0df84cffa025",
+            "target": "3d7f4790-9390-46e4-a3dd-f1f76d37eeb0"
+        },
+        {
+            "source": "d437cb1e-d909-49c9-9a06-1f6d26bf358c",
+            "target": "513dbbb8-9f99-4a7a-8a08-1a92035814a5"
+        },
+        {
+            "source": "2eec5009-bbef-4bdc-826c-2fc0019c93e5",
+            "target": "78d65b39-2336-4dac-85ca-dae402293d18"
+        },
+        {
+            "source": "3d7f4790-9390-46e4-a3dd-f1f76d37eeb0",
+            "target": "2eec5009-bbef-4bdc-826c-2fc0019c93e5"
+        },
+        {
+            "source": "3d7f4790-9390-46e4-a3dd-f1f76d37eeb0",
+            "target": "43220f0f-313d-45fc-9cf6-e020ededae5f"
+        },
+        {
+            "source": "7769a1c5-e600-4229-a2d1-a49a9800ff54",
+            "target": "62d2b019-9f85-49b1-8597-a31c1494cfc5"
+        },
+        {
+            "source": "4879ab4a-a1fb-41e0-a612-c544fa8f2569",
+            "target": "a36fc011-4e57-40f7-9d71-0860cbaa2877"
+        },
+        {
+            "source": "78d65b39-2336-4dac-85ca-dae402293d18",
+            "target": "4879ab4a-a1fb-41e0-a612-c544fa8f2569"
+        },
+        {
+            "source": "78d65b39-2336-4dac-85ca-dae402293d18",
+            "target": "2c083802-305d-4c93-a0d5-3dd1aa0bc5c8"
+        }
+    ],
+    "name": [
+        "0ee9be4f-1ae8-4c35-93c0-855ab84a9927"
+    ]
+}

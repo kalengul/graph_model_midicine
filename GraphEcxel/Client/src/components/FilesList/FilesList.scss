@@ -1,0 +1,12 @@
+.file-card{
+
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    background-color: var(--background-input-light);
+    box-shadow: 6px 6px 12px var(--shadow-color-2), -6px -6px 12px var(--shadow-color-1);
+
+}
+
+.scroll-fileList{
+    max-height: 75vh;
+    overflow: auto;
+}

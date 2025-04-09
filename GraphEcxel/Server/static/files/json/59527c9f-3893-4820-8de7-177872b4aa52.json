@@ -1,0 +1,668 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "торасемид",
+            "label": "prepare",
+            "weight": 5,
+            "id": "90a080b3-4377-489e-bc56-c2a73f8fc07a"
+        },
+        {
+            "name": "диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "5047daa0-4dc1-4332-ad39-f886cf82e8df"
+        },
+        {
+            "name": "«петлевой» диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "f70e38cc-c64c-4291-96e1-f23d8b9f804d"
+        },
+        {
+            "name": "сульфонамид",
+            "label": "group",
+            "weight": 5,
+            "id": "aec19a17-8d1a-452f-bab3-087030afd9a0"
+        },
+        {
+            "name": "«петлевой» диуретик",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "285f36c8-8754-42df-948d-cdf2688f3802"
+        },
+        {
+            "name": "блокировать альдостероновый рецептор в миокард",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "50b48ea3-c1a0-45e6-b18d-2add282807c8"
+        },
+        {
+            "name": "уменьшать фиброз",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "c88eaab7-c48b-4421-b2c9-815c4ff40ce4"
+        },
+        {
+            "name": "улучшать диастолический функция миокард",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e0cead93-a4eb-44a6-983d-5f870d529ac0"
+        },
+        {
+            "name": "быстрый дозозависимый диурез",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5"
+        },
+        {
+            "name": "желудочно-кишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "c89a188f-46fb-46be-b8b7-aed1abcf3a35"
+        },
+        {
+            "name": "белок плазма кровь",
+            "label": "prot_link",
+            "weight": 5,
+            "id": "13b65dc8-927b-4092-b2d4-ec970dc7c849"
+        },
+        {
+            "name": "печень",
+            "label": "metabol",
+            "weight": 5,
+            "id": "1eea74bc-631a-4940-9698-e8af4b7a13a8"
+        },
+        {
+            "name": "Р450",
+            "label": "metabol",
+            "weight": 5,
+            "id": "586b45dd-7138-4a81-a602-c99454d004bc"
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "56290a67-bdb8-439f-ba42-9f71442e27c0"
+        },
+        {
+            "name": "гипонатриемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "170350c9-4143-4868-845c-9b30caa91b20"
+        },
+        {
+            "name": "гипохлоремия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "ed7c6a8b-ae0b-44c4-96b5-da8649af582a"
+        },
+        {
+            "name": "гипокалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "7c643b5f-7b0f-4b8a-a158-ac70704482a4"
+        },
+        {
+            "name": "гипомагниемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "8d01ac8c-a003-43db-88d7-cd09b7d2c1f2"
+        },
+        {
+            "name": "гипокальциемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "ae6f6af2-a34e-4ebf-bbfe-36a68f9a5ffc"
+        },
+        {
+            "name": "метаболический алкалоз",
+            "label": "side_e",
+            "weight": 5,
+            "id": "060b8161-a7ca-40f7-9360-6589f6f83ebf"
+        },
+        {
+            "name": "экстрасистолия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "05fbeb43-f6e2-428d-a3b7-39840b8b34c5"
+        },
+        {
+            "name": "аритмия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "696a3b2a-d710-4530-ab32-993caeb761c0"
+        },
+        {
+            "name": "тахикардия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "f25d5f2d-8201-43a1-9f2a-470ceaddd732"
+        },
+        {
+            "name": "усиленное сердцебиение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "1c2f9880-d469-4899-9aef-fc063e765f95"
+        },
+        {
+            "name": "чрезмерный артериальный гипотензия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "2040067b-c948-45a6-beec-2b8a50fc00df"
+        },
+        {
+            "name": "ортостатическая гипотензия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "2654e744-8976-4d4d-88f7-15a6c8d2e653"
+        },
+        {
+            "name": "коллапс",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a70da602-449a-4f31-8d11-a84199ebda7e"
+        },
+        {
+            "name": "гиповолемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "fda302c7-8768-4b96-b971-53d4150e6315"
+        },
+        {
+            "name": "головная боль",
+            "label": "side_e",
+            "weight": 5,
+            "id": "bcd2329d-69bc-4141-8990-a9e79d20661f"
+        },
+        {
+            "name": "головокружение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "f59143f7-0022-406d-8b48-4a6d512dfa51"
+        },
+        {
+            "name": "судорога мышца нижний конечность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "bc92f9c5-b4cd-4d99-929e-a0c1f88e389a"
+        },
+        {
+            "name": "парестезия в конечность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "ba6946d0-ad5f-4f1d-8908-c59b1cc237e0"
+        },
+        {
+            "name": "спутанность сознание",
+            "label": "side_e",
+            "weight": 5,
+            "id": "4c04894e-fa1d-44dd-bda0-9e489eafa313"
+        },
+        {
+            "name": "обморок",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e9865cab-1eda-4282-9ca5-44dc1820487f"
+        },
+        {
+            "name": "носовой кровотечение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "bbd018be-ece3-4f05-9a98-452d856b73c1"
+        },
+        {
+            "name": "диарея",
+            "label": "side_e",
+            "weight": 5,
+            "id": "fad32207-9a46-421e-82b1-b42f41e601ab"
+        },
+        {
+            "name": "боль в животе",
+            "label": "side_e",
+            "weight": 5,
+            "id": "506fabe4-a7b1-4361-92f9-b903f8c0c5e3"
+        },
+        {
+            "name": "метеоризм",
+            "label": "side_e",
+            "weight": 5,
+            "id": "7c1ad60f-786a-4d49-b537-6a3c1e758303"
+        },
+        {
+            "name": "сухость во рту",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a2a87825-01c4-4c4a-9cbe-b01efd6f3781"
+        },
+        {
+            "name": "тошнота",
+            "label": "side_e",
+            "weight": 5,
+            "id": "c7e8a609-6262-47b9-bfb7-f1c5a517eb1a"
+        },
+        {
+            "name": "холестаз",
+            "label": "side_e",
+            "weight": 5,
+            "id": "643463c0-c63c-4185-8aed-bf533f01a51a"
+        },
+        {
+            "name": "потеря аппетита",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b8b39f44-b00c-4a69-873e-a82412269677"
+        },
+        {
+            "name": "диспепсические расстройства",
+            "label": "side_e",
+            "weight": 5,
+            "id": "330bb0e5-a2af-446c-83bd-cf191399d097"
+        },
+        {
+            "name": "мышечный слабость",
+            "label": "side_e",
+            "weight": 5,
+            "id": "9ba1353f-d2d8-4bb4-b976-e8e56715a73c"
+        },
+        {
+            "name": "увеличение частоты мочеиспускания",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b8be21e7-12d3-42a5-b265-370c13529e13"
+        },
+        {
+            "name": "учащенный позыв к мочеиспускание",
+            "label": "side_e",
+            "weight": 5,
+            "id": "dbb16ef3-9705-4a55-8b97-1f03a0a2d31a"
+        },
+        {
+            "name": "никтурия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "c8fae064-dacf-4203-b345-2aa7293dd6cc"
+        },
+        {
+            "name": "полиурия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3bf592bd-dd58-4167-b290-645d60a9f419"
+        },
+        {
+            "name": "астения",
+            "label": "side_e",
+            "weight": 5,
+            "id": "68246a99-3c93-42c7-8267-b53c04ccfb63"
+        },
+        {
+            "name": "жажда",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3aaa8323-a388-4058-9416-52ebc6eb8f66"
+        },
+        {
+            "name": "повышенный утомляемость",
+            "label": "side_e",
+            "weight": 5,
+            "id": "961c7762-ce2b-4c18-b053-171e93a669c0"
+        },
+        {
+            "name": "гиперактивность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "299783d7-b007-422d-8065-f717a3b9f90a"
+        },
+        {
+            "name": "нервозность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "182374f4-d009-421a-8c60-f05f4b96ba59"
+        },
+        {
+            "name": "снижать реабсорбция ионов натрия",
+            "label": "action",
+            "weight": 5,
+            "id": "dfeae597-1905-42c8-8096-9077daf6fc21"
+        },
+        {
+            "name": "уменьшать смотический давление внутриклеточный жидкость",
+            "label": "action",
+            "weight": 5,
+            "id": "51d485f6-5d42-4699-b5c9-fc3d6ac033c1"
+        },
+        {
+            "name": "уменьшать реабсорбция вода",
+            "label": "action",
+            "weight": 5,
+            "id": "f56783e8-6d71-4cd3-83eb-119cefe03b9f"
+        },
+        {
+            "name": "связывание котранспортер ион в апикальной мембране толстого сегмента восходящего отдела петли Генле",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "a2d55fba-d319-4d87-9844-f7768bb3ddb3"
+        },
+        {
+            "name": "связывание котранспортер ион в апикальной мембране толстого сегмента восходящего отдела петли Генле натрий",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "1d0a51c9-ca41-4ffd-b54d-72ba7cf7f8e3"
+        },
+        {
+            "name": "связывание котранспортер ион в апикальной мембране толстого сегмента восходящего отдела петли Генле хлор",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "4aeceddb-4d66-4820-b592-d470724aaa0f"
+        },
+        {
+            "name": "связывание котранспортер ион в апикальной мембране толстого сегмента восходящего отдела петли Генле калий",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "d5313402-d502-404f-9000-eb0534f6e9b0"
+        }
+    ],
+    "links": [
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "285f36c8-8754-42df-948d-cdf2688f3802"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "50b48ea3-c1a0-45e6-b18d-2add282807c8"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "c88eaab7-c48b-4421-b2c9-815c4ff40ce4"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "e0cead93-a4eb-44a6-983d-5f870d529ac0"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "c89a188f-46fb-46be-b8b7-aed1abcf3a35"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "13b65dc8-927b-4092-b2d4-ec970dc7c849"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "1eea74bc-631a-4940-9698-e8af4b7a13a8"
+        },
+        {
+            "source": "90a080b3-4377-489e-bc56-c2a73f8fc07a",
+            "target": "56290a67-bdb8-439f-ba42-9f71442e27c0"
+        },
+        {
+            "source": "5047daa0-4dc1-4332-ad39-f886cf82e8df",
+            "target": "f70e38cc-c64c-4291-96e1-f23d8b9f804d"
+        },
+        {
+            "source": "f70e38cc-c64c-4291-96e1-f23d8b9f804d",
+            "target": "aec19a17-8d1a-452f-bab3-087030afd9a0"
+        },
+        {
+            "source": "aec19a17-8d1a-452f-bab3-087030afd9a0",
+            "target": "90a080b3-4377-489e-bc56-c2a73f8fc07a"
+        },
+        {
+            "source": "285f36c8-8754-42df-948d-cdf2688f3802",
+            "target": "a2d55fba-d319-4d87-9844-f7768bb3ddb3"
+        },
+        {
+            "source": "285f36c8-8754-42df-948d-cdf2688f3802",
+            "target": "1d0a51c9-ca41-4ffd-b54d-72ba7cf7f8e3"
+        },
+        {
+            "source": "285f36c8-8754-42df-948d-cdf2688f3802",
+            "target": "4aeceddb-4d66-4820-b592-d470724aaa0f"
+        },
+        {
+            "source": "285f36c8-8754-42df-948d-cdf2688f3802",
+            "target": "d5313402-d502-404f-9000-eb0534f6e9b0"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "2040067b-c948-45a6-beec-2b8a50fc00df"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "2654e744-8976-4d4d-88f7-15a6c8d2e653"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "fda302c7-8768-4b96-b971-53d4150e6315"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "b8be21e7-12d3-42a5-b265-370c13529e13"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "c8fae064-dacf-4203-b345-2aa7293dd6cc"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "dbb16ef3-9705-4a55-8b97-1f03a0a2d31a"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "3bf592bd-dd58-4167-b290-645d60a9f419"
+        },
+        {
+            "source": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5",
+            "target": "3aaa8323-a388-4058-9416-52ebc6eb8f66"
+        },
+        {
+            "source": "1eea74bc-631a-4940-9698-e8af4b7a13a8",
+            "target": "586b45dd-7138-4a81-a602-c99454d004bc"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "05fbeb43-f6e2-428d-a3b7-39840b8b34c5"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "696a3b2a-d710-4530-ab32-993caeb761c0"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "f25d5f2d-8201-43a1-9f2a-470ceaddd732"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "1c2f9880-d469-4899-9aef-fc063e765f95"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "fad32207-9a46-421e-82b1-b42f41e601ab"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "506fabe4-a7b1-4361-92f9-b903f8c0c5e3"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "7c1ad60f-786a-4d49-b537-6a3c1e758303"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "a2a87825-01c4-4c4a-9cbe-b01efd6f3781"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "b8b39f44-b00c-4a69-873e-a82412269677"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "c7e8a609-6262-47b9-bfb7-f1c5a517eb1a"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "330bb0e5-a2af-446c-83bd-cf191399d097"
+        },
+        {
+            "source": "170350c9-4143-4868-845c-9b30caa91b20",
+            "target": "643463c0-c63c-4185-8aed-bf533f01a51a"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "060b8161-a7ca-40f7-9360-6589f6f83ebf"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "f25d5f2d-8201-43a1-9f2a-470ceaddd732"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "696a3b2a-d710-4530-ab32-993caeb761c0"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "1c2f9880-d469-4899-9aef-fc063e765f95"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "05fbeb43-f6e2-428d-a3b7-39840b8b34c5"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "bc92f9c5-b4cd-4d99-929e-a0c1f88e389a"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "ba6946d0-ad5f-4f1d-8908-c59b1cc237e0"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "4c04894e-fa1d-44dd-bda0-9e489eafa313"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "bbd018be-ece3-4f05-9a98-452d856b73c1"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "fad32207-9a46-421e-82b1-b42f41e601ab"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "506fabe4-a7b1-4361-92f9-b903f8c0c5e3"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "7c1ad60f-786a-4d49-b537-6a3c1e758303"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "a2a87825-01c4-4c4a-9cbe-b01efd6f3781"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "b8b39f44-b00c-4a69-873e-a82412269677"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "c7e8a609-6262-47b9-bfb7-f1c5a517eb1a"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "330bb0e5-a2af-446c-83bd-cf191399d097"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "643463c0-c63c-4185-8aed-bf533f01a51a"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "9ba1353f-d2d8-4bb4-b976-e8e56715a73c"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "68246a99-3c93-42c7-8267-b53c04ccfb63"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "961c7762-ce2b-4c18-b053-171e93a669c0"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "299783d7-b007-422d-8065-f717a3b9f90a"
+        },
+        {
+            "source": "7c643b5f-7b0f-4b8a-a158-ac70704482a4",
+            "target": "182374f4-d009-421a-8c60-f05f4b96ba59"
+        },
+        {
+            "source": "2040067b-c948-45a6-beec-2b8a50fc00df",
+            "target": "a70da602-449a-4f31-8d11-a84199ebda7e"
+        },
+        {
+            "source": "2040067b-c948-45a6-beec-2b8a50fc00df",
+            "target": "bcd2329d-69bc-4141-8990-a9e79d20661f"
+        },
+        {
+            "source": "2040067b-c948-45a6-beec-2b8a50fc00df",
+            "target": "f59143f7-0022-406d-8b48-4a6d512dfa51"
+        },
+        {
+            "source": "2654e744-8976-4d4d-88f7-15a6c8d2e653",
+            "target": "bcd2329d-69bc-4141-8990-a9e79d20661f"
+        },
+        {
+            "source": "2654e744-8976-4d4d-88f7-15a6c8d2e653",
+            "target": "f59143f7-0022-406d-8b48-4a6d512dfa51"
+        },
+        {
+            "source": "a70da602-449a-4f31-8d11-a84199ebda7e",
+            "target": "e9865cab-1eda-4282-9ca5-44dc1820487f"
+        },
+        {
+            "source": "dfeae597-1905-42c8-8096-9077daf6fc21",
+            "target": "170350c9-4143-4868-845c-9b30caa91b20"
+        },
+        {
+            "source": "dfeae597-1905-42c8-8096-9077daf6fc21",
+            "target": "51d485f6-5d42-4699-b5c9-fc3d6ac033c1"
+        },
+        {
+            "source": "dfeae597-1905-42c8-8096-9077daf6fc21",
+            "target": "f56783e8-6d71-4cd3-83eb-119cefe03b9f"
+        },
+        {
+            "source": "f56783e8-6d71-4cd3-83eb-119cefe03b9f",
+            "target": "118614f2-8bf6-48dd-8b8c-ea5f631aecb5"
+        },
+        {
+            "source": "f56783e8-6d71-4cd3-83eb-119cefe03b9f",
+            "target": "060b8161-a7ca-40f7-9360-6589f6f83ebf"
+        },
+        {
+            "source": "a2d55fba-d319-4d87-9844-f7768bb3ddb3",
+            "target": "8d01ac8c-a003-43db-88d7-cd09b7d2c1f2"
+        },
+        {
+            "source": "a2d55fba-d319-4d87-9844-f7768bb3ddb3",
+            "target": "ae6f6af2-a34e-4ebf-bbfe-36a68f9a5ffc"
+        },
+        {
+            "source": "1d0a51c9-ca41-4ffd-b54d-72ba7cf7f8e3",
+            "target": "dfeae597-1905-42c8-8096-9077daf6fc21"
+        },
+        {
+            "source": "4aeceddb-4d66-4820-b592-d470724aaa0f",
+            "target": "ed7c6a8b-ae0b-44c4-96b5-da8649af582a"
+        },
+        {
+            "source": "d5313402-d502-404f-9000-eb0534f6e9b0",
+            "target": "7c643b5f-7b0f-4b8a-a158-ac70704482a4"
+        }
+    ],
+    "name": [
+        "90a080b3-4377-489e-bc56-c2a73f8fc07a"
+    ]
+}

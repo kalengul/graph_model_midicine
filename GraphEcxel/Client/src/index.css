@@ -1,0 +1,121 @@
+@import "./css/flex.scss";
+@import "./css/headers.scss";
+@import "./css/icons.scss";
+
+@import "./css/fonts/MonaSans/stylesheet.css";
+@import "./css/input.scss";
+
+:root {
+  font-family: "Mona-Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
+  /*Палитра цветов*/
+  --background-light: hsl(0, 0%, 98%)/*#f0f0f0/*#e4EBF1*/;
+  --background-nav-light: hsl(206, 40%, 88%)/*#bdd2e1*//*#d1d9df*/;
+
+  --background-input-light: #EAEAEA/*#eef0f2*/;
+
+  --shadow-color-1: #ffffff;
+  --shadow-color-2: rgba(22, 27, 29, 0.23);
+
+  --border-light: hsl(208, 22%, 80%);
+
+  --scrolbar-bg: #7e9dcc/*#a0b2c2*/;
+  
+
+  /* --background-light: #FFFFFF;
+  --color-light: #262626;
+  --color-dark: #FFFFFF;
+  --background-nav-light: #F9F9F9;
+
+  --btn-background: #80A2A6; */
+
+
+  /* line-height: 1.5;
+  font-weight: 400; */
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+.sh-s{
+  box-shadow: 1px 1px 5px var(--shadow-color-2), -1px -1px 5px var(--shadow-color-1);
+}
+.sh-m{
+  box-shadow: 6px 6px 10px var(--shadow-color-2), -6px -6px 10px var(--shadow-color-1);
+}
+
+body{
+  background-color: var(--background-light);
+  /* margin: 0.5%; */
+
+  color: var(--color-light)
+  
+}
+
+main{
+  width: 100%;
+  padding: 1%;
+
+  margin: 0.5%;
+}
+
+form{
+  margin-top: 3%;
+  width: 70%;
+}
+
+.err{
+  margin-top: 0;
+  color: #F26E50;
+  font-size: 0.7em;
+}
+
+.errBorder{
+  border-color:  #F26E50;
+}
+
+.form-check-input:checked {
+  background-color: #6C91E0;
+  border-color: #6C91E0;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5783DB;
+  --bs-btn-border-color: #5783DB;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #0b5ed7;
+  --bs-btn-hover-border-color: #0a58ca;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #0a58ca;
+  --bs-btn-active-border-color: #0a53be;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #5783DB;
+  --bs-btn-disabled-border-color: #5783DB;
+}
+
+.btn-color-active{
+  background-color: #a0b2c2;
+  box-shadow: 1px 1px 5px var(--shadow-color-2), -1px -1px 5px var(--shadow-color-1);
+
+  &:hover{
+    background-color: hsl(208, 22%, 65%);
+  }
+}
+
+.icon-s{
+  width: 15px;
+}
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  /* background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important; */
+}
