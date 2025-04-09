@@ -41,6 +41,8 @@ INSTALLED_APPS = [
 
     'pharm_web.apps.PharmWebConfig',
     'test_drf',
+    'accounts',
+    'drugs',
 
     'rest_framework',
 ]

@@ -33,7 +33,7 @@ from .viewsAdd import *
 from .Fortran_to_Python_IPM import *
 
 from pharm_web.auxiliary_module.text_getter_drugs import TextGetterDrugs
-from pharm_web.db_manipulator import DBManipulator
+from drugs.utils.db_manipulator import DBManipulator
 
 
 menu = [{'title': "Главная", 'url_name': 'home'},
