@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.postgres',
+
     'pharm_web.apps.PharmWebConfig',
-    'django.contrib.postgres', #это модуль Django, который предоставляет интеграцию с базой данных PostgreSQL
+    'test_drf',
+
     'rest_framework',
 ]
 
