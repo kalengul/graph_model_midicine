@@ -32,7 +32,7 @@
 |drug_id|integer|нет|id ЛС|
 
 ### Пример входныйх данных
-Для получение одного ЛС ```GET api/v1/getDrug/?drug_id=1```
+Для получение одного ЛС ```GET api/v1/getDrug/?drug_id=1``` <br/>
 Для получение списка ЛС ```GET api/v1/getDrug/```
 
 ## Выход
