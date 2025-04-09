@@ -1,1 +1,1 @@
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+[API](docs/API.md)
