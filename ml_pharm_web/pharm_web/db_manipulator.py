@@ -1,6 +1,6 @@
 """Модуль загрузки лекарств."""
 
-from tqdm import tqdm
+# from tqdm import tqdm
 
 from pharm_web.models import (Medication,
                               SideEffect,

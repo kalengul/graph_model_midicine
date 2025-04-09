@@ -1,7 +1,8 @@
-# import json
+import os
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.conf import settings
 
 from .models import *
 
@@ -23,7 +24,8 @@ class DisplaySideEffectsForm(forms.Form):
     DISPLAY_CHOICES = []
     DISPLAY_CHOICES.append(('all', 'Показать всё'))
 
-    path = '..\\ml_pharm_web\\txt_files_db\\drugs_xcn.txt'
+    filename = 'drugs_xcn.txt'
+    path = os.path.join(settings.TXT_DB_PATH, filename)
 
     with open(path, 'r', encoding='utf-8') as file:
         for line in file:
@@ -58,7 +60,9 @@ class updateSeideEffectRande(forms.Form):
     #     ('2', 'Почечная недостаточность'),
     # ]
     DISPLAY_CHOICES = []
-    path = '..\\ml_pharm_web\\txt_files_db\\side_effects.txt'
+    filename = 'side_effects.txt'
+    path = os.path.join(settings.TXT_DB_PATH, filename)
+
     with open(path, 'r', encoding='utf-8') as file:
         for line in file:
             if line == '\n':

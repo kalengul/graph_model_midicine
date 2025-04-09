@@ -151,3 +151,5 @@ REST_FRAMEWORK = {
     #     'rest_framework.renderers.BrowsableAPIRenderer',
     # )
 }
+
+TXT_DB_PATH = os.path.join(BASE_DIR, 'txt_files_db')
