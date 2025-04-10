@@ -729,6 +729,13 @@
 |title|String|да|Заголовок мею для пользователя|
 |slug|String|да|Ссылка на страницу пользователя|
 
+### Компоненты меню
+|**title**|**slug**|
+|:-----:|:--------|
+|Взаимодействие по MedScape|`/computationMedScape`|
+|Взаимодействие по Fortran|`/computationFortran`|
+|Добавить данные|`/addData`|
+
 ### Статусы ответа
 200 - Меню получено<br/>
 400 - Ошибка при получении меню<br/>
@@ -743,16 +750,16 @@
     },
     "data": [
         {
-            "title": "Взаимодействие MedScape",
-            "slug": "/medScape"
+            "title": "Взаимодействие по MedScape",
+            "slug": "/computationMedScape"
         },
         {
-            "title": "Взаимодействие Fortran",
-            "slug": "/fortran"
+            "title": "Взаимодействие по Fortran",
+            "slug": "/computationFortran"
         },
         {
-            "title": "Добавить ЛС",
-            "slug": "/addDrug"
+            "title": "Добавить данные",
+            "slug": "/addData"
         }
     ]
 }
