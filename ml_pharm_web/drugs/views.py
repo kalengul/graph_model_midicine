@@ -6,20 +6,25 @@ from django.db import IntegrityError
 
 from .models import Drug, DrugGroup, SideEffect
 from .serializers import (
-    DrugSerializer, 
-    DrugGroupSerializer, 
+    DrugSerializer,
+    DrugGroupSerializer,
     DrugListRetrieveSerializer,
     SideEffectListRetrieveSerializer
 )
+from utils.db_manipulator import DBManipulator
 
 
 class AddDrugGroupAPI(APIView):
+    """Вью-класс для создания групп ЛС."""
+
     def post(self, request):
+        """Метод для запросов POST."""
         serializer = DrugGroupSerializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+                return Response(serializer.data,
+                                status=status.HTTP_201_CREATED)
             except IntegrityError:
                 return Response(
                     {"error": "Группа с таким именем или slug уже существует"},
@@ -29,6 +34,8 @@ class AddDrugGroupAPI(APIView):
 
 
 class GetDrugGroupAPI(APIView):
+    """Вью-класс для получения групп ЛС."""
+
     def get(self, request):
         """Пример вью, которая возвращает одну группу по id."""
         pk = request.query_params.get('id') 
@@ -49,12 +56,16 @@ class GetDrugGroupAPI(APIView):
 
 
 class AddDrugAPI(APIView):
+    """Вью-класс для создания ЛС."""
+
     def post(self, request):
+        """Метод для запросов POST."""
         serializer = DrugSerializer(data=request.data)
         if serializer.is_valid():
             try:
                 serializer.save()
-                return Response(serializer.data, status=status.HTTP_201_CREATED)
+                return Response(serializer.data,
+                                status=status.HTTP_201_CREATED)
             except IntegrityError as e:
                 if 'slug' in str(e):
                     return Response(
@@ -70,11 +81,14 @@ class AddDrugAPI(APIView):
 
 class GetDrugAPI(APIView):
     """
-    GET api/v1/getDrug/?drug_id={id}
+    GET api/v1/getDrug/?drug_id={id}.
+
     Если drug_id не указан — вернуть список всех ЛС.
     Если указан — вернуть одно ЛС.
     """
+
     def get(self, request):
+        """Метод для запросов GET."""
         drug_id = request.query_params.get('drug_id')
 
         # Если drug_id не указан, возвращаем список всех ЛС
@@ -119,17 +133,21 @@ class GetDrugAPI(APIView):
 
 class GetSideEffectAPI(APIView):
     """
-    GET api/v1/getSideEffect/?se_id={id}
+    GET api/v1/getSideEffect/?se_id={id}.
+
     Если se_id не указан — вернуть список всех побочных эффектов.
     Если указан — вернуть один.
     """
+
     def get(self, request):
+        """Метод для запросов GET."""
         se_id = request.query_params.get('se_id')
 
         # Если se_id не указан, возвращаем список всех
         if not se_id:
             side_effects = SideEffect.objects.all()
-            serializer = SideEffectListRetrieveSerializer(side_effects, many=True)
+            serializer = SideEffectListRetrieveSerializer(side_effects,
+                                                          many=True)
             return Response({
                 "result": {
                     "status": 200,
@@ -164,3 +182,42 @@ class GetSideEffectAPI(APIView):
                     "message": "Неизвестная ошибка сервера"
                 }
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class DataImportView(APIView):
+    """Вью-класс для импорта данных в БД из файлов."""
+
+    def post(self, request):
+        """Импорт данных из файлов в БД."""
+        try:
+            rangs_count = DBManipulator().load_to_db()
+            return Response({
+                'message': ('Данные из файлов импортированы успешно!'
+                            f'Рангов {rangs_count}')},
+                            status=status.HTTP_200_OK)
+        except Exception as error:
+            return Response({
+                'message': ('При импортировании данных возника ошибка:'
+                            f'{error}')},
+                            status=status.HTTP_400_BAD_REQUEST)
+
+
+class DatabaseCleanView(APIView):
+    """Вью-класс для отчистки таблиц БД.
+
+    Очищаются таблицы:
+        - Drug;
+        - SifeEffect;
+        - DrugSifeEffect.
+    """
+
+    def post(self, request):
+        """Очистка таблиц БД."""
+        try:
+            DBManipulator().clean_db()
+            return Response({'message': 'Очистка таблиц прошла успешно!'},
+                            status=status.HTTP_200_OK)
+        except Exception as error:
+            return Response({'message': ('При очистке БД возника ошибка:'
+                                         f'{error}')},
+                            status=status.HTTP_400_BAD_REQUEST)

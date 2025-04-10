@@ -1,7 +1,6 @@
 """Модуль маршрутов."""
 
 from django.urls import path
-from rest_framework.permissions import AllowAny
 
 from .views import (
     index_views,
@@ -15,15 +14,6 @@ from .views import (
     updateSideEffects_views,
     search_drugs,
     search_polipharma_drugs,
-    load_to_db,
-    clean_db,
-    finding_matches,
-    MedicationSideEffectListView,
-    show_list_med_side_effect,
-    MedicationCreateView,
-    SideEffectCreateView,
-    MedicationSideEffectDetailView,
-    SomeApiView
 )
 
 urlpatterns = [
@@ -44,26 +34,4 @@ urlpatterns = [
     path('search_polipharma/',
          search_polipharma_drugs,
          name='search_polipharma'),
-
-    # Манипуляции с БД.
-    path('load_to_db/', load_to_db, name='load_to_db'),
-    path('clean_db/', clean_db, name='clean_db'),
-    # Вспомогательный маршрут. Кандидат на удаление.
-    path('finding_matches/', finding_matches, name='finding_matches'),
-    # Для просмотра таблиц рангов соотвтествующих ЛС с ПД.
-    path('show_list_med_side_effect/',
-         show_list_med_side_effect,
-         name='show_list_med_side_effect'),
-    path('api/medication-side-effects/',
-         MedicationSideEffectListView.as_view(),
-         name='med-side-effects'),
-    path('api/medications/',
-         MedicationCreateView.as_view(),
-         name='medication-create'),
-    path('api/side-effects/',
-         SideEffectCreateView.as_view(),
-         name='side-effect-create'),
-    path('api/medication-side-effects/<int:pk>/',
-         MedicationSideEffectDetailView.as_view()),
-    path('some-api/', SomeApiView.as_view(permission_classes=[AllowAny])),
 ]

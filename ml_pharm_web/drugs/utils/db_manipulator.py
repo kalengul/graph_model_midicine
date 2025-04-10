@@ -1,11 +1,13 @@
 """Модуль загрузки лекарств."""
 
-
 import os
 
 from django.conf import settings
 
-from ..models import DrugGroup, Drug, DrugSideEffect, SideEffect
+from ..models import (DrugGroup,
+                      Drug,
+                      DrugSideEffect,
+                      SideEffect)
 
 
 class DBManipulator:
@@ -25,9 +27,13 @@ class DBManipulator:
     def __load_drugs(cls):
         """Метод загрузки ЛС."""
         try:
+            group = DrugGroup.objects.get_or_create(
+                id=1,
+                defaults={'name': 'Общая группа'})
             with open(cls.DRUGS_PATH, 'r', encoding='utf-8') as file:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
-                    Drug.objects.create(name=drug.split('\t')[1])
+                    Drug.objects.create(name=drug.split('\t')[1],
+                                        drug_group=group)
             print('ЛС успешно сохранены!')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
@@ -38,7 +44,7 @@ class DBManipulator:
         try:
             with open(cls.SIDE_EFFECTS_PATH, 'r', encoding='utf-8') as file:
                 for s_e in [s_e.strip() for s_e in file if s_e != '\n']:
-                    DrugSideEffect.objects.create(
+                    SideEffect.objects.create(
                         name=s_e.split('\t')[1].replace(';', ''),
                         weight=float(s_e.split('\t')[2].replace(',', '.')))
             print('ПД успешно сохранены!')
@@ -64,24 +70,25 @@ class DBManipulator:
         rangsfreq = cls.__load_file(cls.RANGSFREQ_PATH)
 
         drugs = list(Drug.objects.order_by('id'))
-        effects = list(Drug.objects.order_by('id'))
+        effects = list(SideEffect.objects.order_by('id'))
 
         print('len(drugs) =', len(drugs))
         print('len(effects) =', len(effects))
-        assert len(rangs) == len(drugs) * len(effects), "Размерность рангов не совпадает"
+        assert len(rangs) == len(drugs) * len(effects), (
+            "Размерность рангов не совпадает")
 
         idx = 0
         for drug in drugs:
             for effect in effects:
                 DrugSideEffect.objects.create(
-                    medication=drug,
+                    drug=drug,
                     side_effect=effect,
                     rang_base=float(rangsbase[idx]),
                     rang_f1=float(rangsf1[idx]),
                     rang_f2=float(rangsf2[idx]),
                     rang_m1=float(rangsm1[idx]),
                     rang_m2=float(rangsm2[idx]),
-                    rang_s=float(rangs[idx]),
+                    probability=float(rangs[idx]),
                     rang_freq=float(rangsfreq[idx])
                 )
                 idx += 1
