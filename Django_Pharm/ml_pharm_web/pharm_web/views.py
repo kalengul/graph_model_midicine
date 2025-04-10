@@ -1,26 +1,8 @@
-from django.conf import settings, Settings
-from django.contrib.auth.views import LoginView
-from django.http import HttpResponse, HttpResponseNotFound, Http404
+from django.conf import settings
 from django.http import JsonResponse
-from django.shortcuts import render, redirect
-from django.urls import reverse_lazy
-from django.views.generic import CreateView
-from django.views.generic.list import ListView
+from django.shortcuts import render
 from django.views.decorators.http import require_GET
 from django.db.models import Q
-
-from rest_framework.generics import (ListAPIView,
-                                     CreateAPIView,
-                                     RetrieveUpdateAPIView)
-from pharm_web.models import (MedicationSideEffect,
-                              SideEffect,
-                              Medication)
-from pharm_web.serializers import (MedicationSideEffectSerializer,
-                                   MedicationSerializer,
-                                   SideEffectSerializer)
-from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import AllowAny
-from rest_framework.views import APIView
 
 from .all_drug_table_views import all_drug_table
 from .iteraction_medscape import *
@@ -31,23 +13,20 @@ from .forms import *
 from .models import *
 from .viewsAdd import *
 from .Fortran_to_Python_IPM import *
-
+from drugs.models import Drug
 from pharm_web.auxiliary_module.text_getter_drugs import TextGetterDrugs
-from pharm_web.db_manipulator import DBManipulator
 
 
-menu = [{'title': "Главная", 'url_name': 'home'},
-        {'title': "Добавить данные", 'url_name': 'add_page'},
-        ]
+def get_menu_for_user(user):
+    menu = [{'title': "Главная", 'url_name': 'home'}]
+    
+    if user.is_authenticated and user.is_staff:
+        menu.append({'title': "Добавить данные", 'url_name': 'add_page'})
+    
+    return menu
 
-add_menu = [{'name_model': "Добавить группу ЛС", 'pk': "1", 'url_name': 'add_DrugGroup'},
-            {'name_model': "Добавить ЛС", 'pk': "1", 'url_name': 'add_Drug'},
-            {'name_model': "Изменить побочки", 'pk': "1", 'url_name': 'update_SideEffects'},
-            ]
 
 DRUGS_PATH = 'txt_files_db\\drugs_xcn.txt'
-
-RANG_START = 0.0
 
 
 def index_views(request):
@@ -55,22 +34,12 @@ def index_views(request):
     ml = ml_model.objects.filter(is_visible=True)
     context = {
         'ml_model': ml,
-        'menu': menu,
+        'menu': get_menu_for_user(request.user),
         'title': 'Главная страница',
         'ml_model_selected': 0,
         'main_element': 'Главная страница',
     }
     return render(request, 'pharm/index.html', context=context)
-
-
-def addpage_views(request):
-    context = {
-        'add_element': add_menu,
-        'menu': menu,
-        'title': 'Добавить данные в БД',
-        'add_element_selected': 0,
-    }
-    return render(request, 'pharm/addElementDB.html', context=context)
 
 
 def aboutpage_views(request):
@@ -80,58 +49,12 @@ def aboutpage_views(request):
     return render(request, 'pharm/index.html', context=context)
 
 
-
-def addDrugGroup_views(request):
-    form = addDrugGroup(request)
-    context = {
-        'add_element': add_menu,
-        'menu': menu,
-        'form': form,
-        'title': 'Добавление новой группы ЛС',
-        'add_element_selected': 0,
-    }
-    return render(request, 'pharm/addDrugGroup.html', context=context)
-
-
-def addDrug_views(request):
-    form = addDrug(request)
-    context = {
-        'add_element': add_menu,
-        'menu': menu,
-        'form': form,
-        'title': 'Добавление нового ЛС',
-        'add_element_selected': 0,
-    }
-    return render(request, 'pharm/addDrugGroup.html', context=context)
-
-def updateSideEffects_views(request):
-    tipe_view, title_type_view_side_effects, side_effects, form_check_type_view,  = CheckSideEffectsView(request)
-    form_add_SideEffect = AddNewSideEffect(request)
-    form_add_SideEffect_rande = UpdateSeideEffectRande(request, title_type_view_side_effects)
-    context = {
-        'add_element': add_menu,                        # боковое меню
-        'menu': menu, # Шапка сайта
-
-        'form_check_type_view': form_check_type_view, # Форма для выбора способа отображения побочек
-        "side_effects": side_effects,
-        "title_type_view_side_effects": title_type_view_side_effects,
-        "tipe_view": tipe_view,
-
-        "form_add_SideEffect": form_add_SideEffect,
-        "form_add_SideEffect_rande": form_add_SideEffect_rande,
-
-        'title': 'Изменить побочки',
-        'add_element_selected': 0,
-    }
-    return render(request, 'pharm/updateSideEffects.html', context=context)
-
-
 def show_model_views(request, ml_model_slug):
     # Получаем все объекты, где is_visible=True
     ml = ml_model.objects.filter(is_visible=True)
     context = {
         'ml_model': ml,
-        'menu': menu,
+        'menu': get_menu_for_user(request.user),
         'title': 'Главная страница',
         'main_element': 'show_model + ' + ml_model_slug,
     }
@@ -192,6 +115,7 @@ def search_drugs(request):
     # Возвращаем список в формате JSON
     return JsonResponse({'drugs': drugs})
 
+
 @require_GET
 def search_polipharma_drugs(request):
     # Получаем значение из параметра "q" в запросе
@@ -214,33 +138,6 @@ def search_polipharma_drugs(request):
     return JsonResponse({'drugs': drugs})
 
 
-class RegisterUser(CreateView):
-    form_class = RegisterUserForm
-    template_name = 'pharm/register.html'
-    success_url = reverse_lazy('login')
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return dict(list(context.items()))
-
-
-class LoginUser(LoginView):
-    form_class = LoginUserForm
-    template_name = 'pharm/login.html'
-
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return dict(list(context.items()))
-
-    def get_success_url(self):
-        return reverse_lazy('home')
-
-
-def logout_user(request):
-    logout(request)
-    return redirect('login')
-
-
 def finding_matches(request):
     """
     Вью-функция для сопосталения ЛС из файли и БД.
@@ -260,124 +157,3 @@ def finding_matches(request):
                          'ЛС из файла': txt_drug_names},
                         json_dumps_params={'ensure_ascii': False,
                                            'indent': 4})
-
-
-def load_to_db(request):
-    """Вью-функция импорта данных из файлов в БД."""
-    try:
-        rangs_count = DBManipulator().load_to_db()
-        return HttpResponse(('Данные из файлов импортированы успешно!'
-                             f'Рангов {rangs_count}'))
-    except Exception as error:
-        return HttpResponse(('При импортировании данных возника ошибка:'
-                             f'{error}'))
-
-
-def clean_db(request):
-    """
-    Вью-функция очистки таблиц БД.
-
-    Очищаются таблицы:
-        - Medication;
-        - SifeEffect;
-        - MedicationSifeEffect.
-    """
-    try:
-        DBManipulator().clean_db()
-        return HttpResponse('Очистка таблиц прошла успешно!')
-    except Exception as error:
-        return HttpResponse(('При очистке БД возника ошибка:'
-                             f'{error}'))
-
-
-def show_list_med_side_effect(request):
-    """Вью отображения таблицы."""
-    # print('ЛС:', list(Medication.objects.all()))
-    # print('ПД:', list(SideEffect.objects.all()))
-    # print('ЛС-ПД:', list(MedicationSifeEffect.objects.all()))
-    return render(request, 'pharm/show_list_med_side_effect.html')
-
-
-class MedicationSideEffectPagination(PageNumberPagination):
-    """Класс пагинации."""
-
-    page_size = 1000
-
-
-class MedicationSideEffectListView(ListAPIView):
-    """Вью для вывода списка рангов."""
-
-    serializer_class = MedicationSideEffectSerializer
-    pagination_class = MedicationSideEffectPagination
-
-    def get_queryset(self):
-        """Фильтрация по лекарству."""
-        queryset = MedicationSideEffect.objects.select_related('medication',
-                                                               'side_effect')
-        medication_id = self.request.query_params.get('medication_id', None)
-
-        if medication_id:
-            queryset = queryset.filter(medication_id=medication_id)
-
-        return queryset
-
-
-class MedicationCreateView(CreateAPIView):
-    """Вью-класс добавления лС."""
-
-    queryset = Medication.objects.all()
-    serializer_class = MedicationSerializer
-
-    def perform_create(self, serializer):
-        """Действия выполнемые при добавлении ЛС."""
-        medication = serializer.save()
-
-        for side in SideEffect.objects.all():
-            MedicationSideEffect.objects.create(
-                medication=medication,
-                side_effect=side,
-                rang_base=RANG_START,
-                rang_f1=RANG_START,
-                rang_f2=RANG_START,
-                rang_freq=RANG_START,
-                rang_m1=RANG_START,
-                rang_m2=RANG_START,
-                rang_s=RANG_START
-            )
-
-
-class SideEffectCreateView(CreateAPIView):
-    """Вью-класс добавления ПД."""
-
-    queryset = SideEffect.objects.all()
-    serializer_class = SideEffectSerializer
-
-    def perform_create(self, serializer):
-        """Действия выполняется при добавлении ПД."""
-        side_effect = serializer.save()
-
-        for med in Medication.objects.all():
-            MedicationSideEffect.objects.create(
-                medication=med,
-                side_effect=side_effect,
-                rang_base=RANG_START,
-                rang_f1=RANG_START,
-                rang_f2=RANG_START,
-                rang_freq=RANG_START,
-                rang_m1=RANG_START,
-                rang_m2=RANG_START,
-                rang_s=RANG_START
-            )
-
-
-class MedicationSideEffectDetailView(RetrieveUpdateAPIView):
-    """Вью-класс редакирования рангов."""
-
-    queryset = MedicationSideEffect.objects.all()
-    serializer_class = MedicationSideEffectSerializer
-
-
-class SomeApiView(APIView):
-    """Вью-класс разрешения доступа для всех и ко всему."""
-
-    permission_classes = [AllowAny]

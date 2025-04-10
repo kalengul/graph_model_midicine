@@ -1,4 +1,4 @@
-"""Модуль вспомогательных данных из файлов."""
+"""Модуль вспомогательных моделей."""
 
 from django.db import models
 from django.core.validators import (MinValueValidator,
@@ -21,7 +21,7 @@ class Medication(models.Model):
         ordering = ['name']
 
 
-class SideEffect(models.Model):
+class SifeEffect(models.Model):
     """Класс ПД."""
 
     name = models.CharField(max_length=MAX_LENGTH,
@@ -40,13 +40,13 @@ class SideEffect(models.Model):
         ordering = ['name']
 
 
-class MedicationSideEffect(models.Model):
+class MedicationSifeEffect(models.Model):
     """Класс коэфециентов ПД ЛС."""
 
     medication = models.ForeignKey(Medication,
                                    on_delete=models.CASCADE,
                                    related_name='side_effrects')
-    side_effect = models.ForeignKey(SideEffect,
+    side_effect = models.ForeignKey(SifeEffect,
                                     on_delete=models.CASCADE,
                                     related_name='medications')
     rang_base = models.FloatField(

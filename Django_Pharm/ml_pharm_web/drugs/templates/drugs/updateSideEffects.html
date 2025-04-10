@@ -1,0 +1,68 @@
+{% extends 'pharm/base.html' %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+
+    <form method="post" action="{% url 'side_effects_list' %}">
+        {% csrf_token %}
+        {{ form_check_type_view.as_p }}
+        <button type="submit" class="btn">Отобразить</button>
+    </form>
+   
+    <hr/>
+
+    {% if tipe_view == 'all' %}
+        <br/>
+        <h2>Добавить побочку</h2>
+        <form method="post" action="{% url 'side_effects_add' %}">
+            {% csrf_token %}
+            <div class="form-error">{{ form_add_SideEffect.non_field_errors }}</div>
+            {{ form_add_SideEffect.as_p }}
+            <button type="submit" class="btn">Добавить</button>
+        </form>
+        <br/>
+        <hr/>
+    {% endif %}
+
+    {% if side_effects %}
+        <br/>
+        <h2>{{ title_type_view_side_effects }}</h2>
+        {% if tipe_view == 'all' %}
+            <ul>
+                {% for se in side_effects %}
+                    <li>{{ se.name }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if tipe_view == 'drug' and data_obj %}
+            <br/>
+            <h2>Изменить коэффициент побочки для препарата {{ data_obj.name }}</h2>
+            <form method="post" action="{% url 'side_effects_update' data_obj.id %}">
+                {% csrf_token %}
+                {{ form_add_SideEffect_rande.as_p }}
+                <button type="submit" class="btn">Изменить</button>
+            </form>
+            <br/>
+            <hr/>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" class="col-num">№</th>
+                        <th scope="col" class="col-sideName">Побочный эффект</th>
+                        <th scope="col" class="col-rang">Коэффициент появления</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for se in side_effects %}
+                        <tr>
+                            <th>{{ forloop.counter }}</th>
+                            <td>{{ se.side_effect.name }}</td>
+                            <td>{{ se.probability }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    {% endif %}
+{% endblock %}

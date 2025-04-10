@@ -20,12 +20,23 @@
 
 					<!-- Заголовки основного меню -->
 					{% for m in menu %}
-					<li class="nav-li"><a href="{% url m.url_name %}">{{m.title}}</a></li>
+						<li class="nav-li"><a href="{% url m.url_name %}">{{m.title}}</a></li>
 					{% endfor %}
 				</ul>
 
 				<ul class="nav-ul flex align-center">
-					<li class="last"><a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a></li>
+					<li class="last">
+						{% if user.is_authenticated %}
+							{% if user.is_staff %}
+								Admin:  
+							{% else %}
+								User: 
+							{% endif %} 
+							{{ user.get_username }} | <a href="{% url 'logout' %}">Выйти</a>
+						{% else %}
+						<a href="{% url 'register' %}">Регистрация</a> | <a href="{% url 'login' %}">Войти</a>
+						{% endif %}
+					</li>
 				</ul>
 			</div>
 		{% endblock mainmenu %}

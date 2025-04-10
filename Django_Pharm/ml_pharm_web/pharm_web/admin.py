@@ -70,9 +70,6 @@ class Interaction_MedScape_Admin(admin.ModelAdmin):
 # Регистрация моделей для административного сайта
 admin.site.register(ml_model, ml_modelAdmin)
 
-admin.site.register(Drug, DrugAdmin)
-admin.site.register(DrugGroup, DrugGroupAdmin)
-
 admin.site.register(DrugInteractionTable, DrugInteractionTableAdmin)
 
 admin.site.register(Drugs_information_MedScape, Drugs_information_MedScape_Admin)
