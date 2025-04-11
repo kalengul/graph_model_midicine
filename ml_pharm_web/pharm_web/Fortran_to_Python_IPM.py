@@ -2,22 +2,24 @@ import numpy as np
 import os
 from pharm_web.models import *
 
+
 # Определение размеров
 n_rangs = 4266
-n_j = 54
-n_k = 79
+n_j = 54                            # число ЛС
+n_k = 79                            # число ПД
 
 files_all_iteractions = [
-    {'name':'Общий','file':"rangbase.txt"},
+    {'name': 'Общий', 'file': "rangbase.txt"},
     {'name': 'Нормированный', 'file': "rangfreq.txt"},
-    {'name':'Мужчины до 65','file':"rangm1.txt"},
+    {'name': 'Мужчины до 65', 'file': "rangm1.txt"},
     {'name': 'Мужчины после 65', 'file': "rangm2.txt"},
     {'name':'Женщины до 65','file':"rangf1.txt"},
     {'name':'Женщины после 65','file':"rangf2.txt"}
     ]
 
-# загрузка побочек из файла
+
 def load_disease_chf_from_file(BASE_DIR):
+    """загрузка побочек из файла."""
     # Инициализируем пустой список для хранения данных
     file_path = os.path.join(BASE_DIR, 'txt_files_db', 'side_effects.txt')
 
@@ -32,8 +34,9 @@ def load_disease_chf_from_file(BASE_DIR):
                     value = float(parts[1].replace(',', '.'))  # Заменяем запятую на точку для float
                     disease_chf.objects.update_or_create(index=index, defaults={'name': name, 'value': value})
 
-# загрузка названия ЛС 
+
 def load_drugs_from_file(BASE_DIR):
+    """загрузка названия ЛС."""
     # Инициализируем пустой список для хранения данных
     data = []
     file_path = os.path.join(BASE_DIR, 'txt_files_db', 'drugs_xcn.txt')

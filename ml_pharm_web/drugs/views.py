@@ -11,7 +11,7 @@ from .serializers import (
     DrugListRetrieveSerializer,
     SideEffectListRetrieveSerializer
 )
-from utils.db_manipulator import DBManipulator
+from drugs.utils.db_manipulator import DBManipulator
 
 
 class AddDrugGroupAPI(APIView):

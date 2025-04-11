@@ -68,7 +68,6 @@ class updateSeideEffectRande(forms.Form):
             if line == '\n':
                 continue
             line = line.strip()
-            print('line =', line)
             DISPLAY_CHOICES.append(
                 (line.split('\t')[0],
                  line.split('\t')[1].replace(';', ''))

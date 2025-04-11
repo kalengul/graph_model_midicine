@@ -75,7 +75,7 @@ class DBManipulator:
         print('len(drugs) =', len(drugs))
         print('len(effects) =', len(effects))
         assert len(rangs) == len(drugs) * len(effects), (
-            "Размерность рангов не совпадает")
+            "Размерность рангов не совпадает!")
 
         idx = 0
         for drug in drugs:
@@ -105,13 +105,90 @@ class DBManipulator:
         Метод очистки таблиц.
 
         Очищаются таблицы:
-        - Medication;
+        - Drug;
         - SifeEffect;
-        - MedicationSifeEffect.
+        - DrugSifeEffect.
         """
         DrugSideEffect.objects.all().delete()
         Drug.objects.all().delete()
         SideEffect.objects.all().delete()
 
+    @classmethod
+    def __export_drugs(cls):
+        """Метод экспорта ЛС из БД в файл."""
+        try:
+            with open(cls.DRUGS_PATH, 'w', encoding='utf-8') as file:
+                for i, drug in enumerate(
+                    Drug.objects.order_by('id').iterator(),
+                        start=1):
+                    file.write(f'{i}\t{drug.name}\n')
+        except Exception as error:
+            raise Exception(f'Проблема при экспорте ЛС в файл: {error}')
+
+    @classmethod
+    def __export_side_effects(cls):
+        """Метод экспорта ПД из БД в файл."""
+        try:
+            with open(cls.SIDE_EFFECTS_PATH, 'w', encoding='utf-8') as file:
+                for i, effect in enumerate(
+                    SideEffect.objects.order_by('id').iterator(),
+                        start=1):
+                    file.write(f'{i}\t{effect.name};\t{effect.weight}\n')
+        except Exception as error:
+            raise Exception(f'Проблема при экспорте ПД в файл: {error}')
+
+    @classmethod
+    def __clean_file(cls, path):
+        """Метод очистки файла."""
+        with open(path, 'r+', encoding='utf-8') as file:
+            file.truncate(0)
+
+    @classmethod
+    def __clean_rang_files(cls):
+        """Метод очистки всех файлов с рагнами."""
+        cls.__clean_file(cls, cls.RANGS_PATH)
+        cls.__clean_file(cls, cls.RANGSBASE_PATH)
+        cls.__clean_file(cls, cls.RANGSFREQ_PATH)
+        cls.__clean_file(cls, cls.RANGSM1_PATH)
+        cls.__clean_file(cls, cls.RANGSM2_PATH)
+        cls.__clean_file(cls, cls.RANGSF1_PATH)
+        cls.__clean_file(cls, cls.RANGSF2_PATH)
+
+    @classmethod
+    def __write_to_file(cls, path, rang):
+        """Метод дозаписи в файл значения."""
+        with open(path, 'a', encoding='utf-8') as file:
+            file.write(f'{rang}\n')
+
+    @classmethod
+    def __export_rangs(cls):
+        """Метод экспорта рангов из БД в файл."""
+        try:
+            cls.__clean_rang_files()
+            for drug in Drug.objects.order_by('id').iterator():
+                for effect in SideEffect.objects.order_by('id').iterator():
+                    drug_effect = DrugSideEffect.objects.get(
+                        drug=drug,
+                        side_effect=effect)
+                    cls.__write_to_file(cls.RANGS_PATH,
+                                        drug_effect.probability)
+                    cls.__write_to_file(cls.RANGSBASE_PATH,
+                                        drug_effect.rang_base)
+                    cls.__write_to_file(cls.RANGSFREQ_PATH,
+                                        drug_effect.rang_freq)
+                    cls.__write_to_file(cls.RANGSF1_PATH,
+                                        drug_effect.rang_f1)
+                    cls.__write_to_file(cls.RANGSF2_PATH,
+                                        drug_effect.rang_f2)
+                    cls.__write_to_file(cls.RANGSM1_PATH,
+                                        drug_effect.rang_m1)
+                    cls.__write_to_file(cls.RANGSM2_PATH,
+                                        drug_effect.rang_m2)
+        except Exception as error:
+            raise Exception(f'Проблема при экспорте рангов в файл: {error}')
+
     def export_from_db(self):
         """Метод экспорта из БД."""
+        self.__export_drugs()
+        self.__export_side_effects()
+        self.__export_rangs()

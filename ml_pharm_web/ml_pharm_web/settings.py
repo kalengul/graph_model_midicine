@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'test_drf',
     'accounts',
     'drugs',
+    'ranker',
+    'medscape_api',
 
     'rest_framework',
 ]

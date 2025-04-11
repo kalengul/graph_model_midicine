@@ -2,11 +2,8 @@
 
 from django.contrib.auth.models import User
 from django.db import models
-
-# Create your models here.
-# Импорт модуля models из библиотеки Django
-from django.db import models
 from django.urls import reverse
+
 
 class DrugGroup(models.Model):
     title = models.CharField(max_length=255, verbose_name="Название группы")

@@ -32,11 +32,11 @@ class DrugGroup(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        """Форматтер вывода."""
+        """Строковое представление."""
         return self.name
 
     class Meta:
-        """Настроечный класс."""
+        """Настройка модели."""
 
         verbose_name = 'Группа ЛС'
         verbose_name_plural = 'Группы ЛС'
@@ -76,11 +76,11 @@ class Drug(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        """Форматтер вывода."""
+        """Строковое представление."""
         return self.name
 
     class Meta:
-        """Настроечный класс."""
+        """Настройка модели."""
 
         verbose_name = 'ЛС'
         verbose_name_plural = 'ЛС'
@@ -100,7 +100,7 @@ class SideEffect(models.Model):
                                ])
 
     def __str__(self):
-        """Форматтер."""
+        """Строковое представление."""
         return self.name
 
 
@@ -167,12 +167,12 @@ class DrugSideEffect(models.Model):
     # )
 
     def __str__(self):
-        """Форматтер."""
+        """Строковое представление."""
         return (f"{self.drug.name} - {self.side_effect.name}:"
                 f"{self.probability}")
 
     class Meta:
-        """Настроечный класс."""
+        """Настройка модели."""
 
         unique_together = ('drug', 'side_effect')
         verbose_name = "Показатель побочного эффекта"

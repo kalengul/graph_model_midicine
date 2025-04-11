@@ -10,10 +10,14 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
 
     path('api/v1/', include('drugs.urls')),
-    
+
     path('api/v1/test/', include('test_drf.urls')),
+
+    path('api/v1/polifarmakoterapiya-fortran/', include('ranker.urls')),
+    path('api/v1/iteraction_medscape/', include('medscape_api.urls')),
 ]
 
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
