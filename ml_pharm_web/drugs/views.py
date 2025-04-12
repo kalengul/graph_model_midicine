@@ -38,7 +38,7 @@ class GetDrugGroupAPI(APIView):
 
     def get(self, request):
         """Пример вью, которая возвращает одну группу по id."""
-        pk = request.query_params.get('id') 
+        pk = request.query_params.get('id')
         if not pk:
             return Response(
                 {"error": "Необходимо указать ID группы"},

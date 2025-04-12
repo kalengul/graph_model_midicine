@@ -1,9 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.urls import reverse
 
 
 MAX_LENGTH = 255
 MAX_LENGTH_K = 10000
+USER = 'Пользователь'
 
 
 class NameDrugsMedScape(models.Model):
@@ -233,3 +235,102 @@ class DrugsInformationMedScape(models.Model):
 
         verbose_name = 'Информация о ЛС MedScape'
         ordering = ['name_file']
+
+
+class DrugGroup(models.Model):
+    """Группа ЛС."""
+
+    title = models.CharField(max_length=MAX_LENGTH,
+                             verbose_name="Название группы")
+    time_create = models.DateTimeField(auto_now_add=True)
+    time_update = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User,
+                             verbose_name=USER,
+                             on_delete=models.CASCADE)
+    slug = models.SlugField(max_length=MAX_LENGTH,
+                            unique=True,
+                            db_index=True,
+                            verbose_name="URL")
+
+    def __str__(self):
+        """Строковое представление."""
+        return self.title
+
+    def get_absolute_url(self):
+        """Получение URL."""
+        return reverse('DrugGroup', kwargs={'DrugGroup_slug': self.slug})
+
+    class Meta:
+        """Настройка модели."""
+
+        verbose_name = 'Группа ЛС'
+        verbose_name_plural = 'Группы ЛС'
+        ordering = ['title']
+
+
+class Drug(models.Model):
+    """ЛС."""
+
+    name = models.CharField(max_length=MAX_LENGTH,
+                            verbose_name='Название лекарственного средства')
+    time_create = models.DateTimeField(auto_now_add=True)
+    time_update = models.DateTimeField(auto_now=True)
+    pg = models.ForeignKey('DrugGroup',
+                           null=True,
+                           on_delete=models.CASCADE,
+                           verbose_name='Группа лекарственных средств')
+    user = models.ForeignKey(User, verbose_name=USER, on_delete=models.CASCADE)
+    slug = models.SlugField(max_length=MAX_LENGTH,
+                            unique=True,
+                            db_index=True,
+                            verbose_name="URL")
+
+    def __str__(self):
+        """Строковое представление."""
+        return self.name
+
+    def get_absolute_url(self):
+        """Получение URL."""
+        return reverse('Drug', kwargs={'Drug_slug': self.slug})
+
+    class Meta:
+        """Настройка модели."""
+
+        verbose_name = 'ЛС'
+        verbose_name_plural = 'ЛС'
+        ordering = ['name']
+
+
+class DrugInteractionTable(models.Model):
+    """Таблица взаимодействий ЛС."""
+
+    drug_one = models.ForeignKey('Drug',
+                                 null=True,
+                                 on_delete=models.CASCADE,
+                                 verbose_name='ЛС №1',
+                                 related_name='druginteractions_one')
+    drug_two = models.ForeignKey('Drug',
+                                 null=True,
+                                 on_delete=models.CASCADE,
+                                 verbose_name='ЛС №2',
+                                 related_name='druginteractions_two')
+    interaction = models.TextField(verbose_name="Взаимодействие")
+    time_create = models.DateTimeField(auto_now_add=True)
+    time_update = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(User, verbose_name=USER, on_delete=models.CASCADE)
+
+    def __str__(self):
+        """Строковое представление."""
+        return self.interaction
+
+    def get_absolute_url(self):
+        """Получение URL."""
+        return reverse('DrugInteractionTable',
+                       kwargs={'DrugInteractionTable_slug': self.slug})
+
+    class Meta:
+        """Настройка модели."""
+
+        verbose_name = 'Взаимодействие ЛС (Таблица)'
+        verbose_name_plural = 'Взаимодействие ЛС (Таблица)'
+        ordering = ['drug_one']
