@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
 
-    'test_drf',
     'accounts',
     'drugs',
     'ranker',
