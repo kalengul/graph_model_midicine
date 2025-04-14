@@ -6,9 +6,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,6 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* Палитра */
+  --bg-color: #E0E5EC;
   --nav-bg: #E0E5EC;
   --nav-link-hover: #C9D2DE;
   --nav-link-active: #C9D6E8;
@@ -24,8 +25,10 @@
   --btn-send-hover: #B2CFE5;
   --btn-send-active: #9FC4DF;
 
+  --input-bg: #E0E5EC;
+
   --light-shadow: #fff;
-  --dark-shadow: #000
+  --dark-shadow: #000;
 }
 
 body {
@@ -38,9 +41,9 @@ body {
   font-size: 0.7em;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: var(--bg-color);
   }
-}
+} */

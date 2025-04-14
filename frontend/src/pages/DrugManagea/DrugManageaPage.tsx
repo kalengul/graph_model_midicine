@@ -4,9 +4,9 @@ import axios from 'axios'
 import { Nav } from "../../components/nav/nav"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
 
-import { useDispatch} from 'react-redux';
- import {initStates} from '../../redux/DrugManageSlice'
-// import { RootState } from '../../redux/store';
+import { useDispatch, useSelector} from 'react-redux';
+import {addValue, initStates} from '../../redux/DrugManageSlice'
+import { RootState } from '../../redux/store';
 
 import "./DrugManagePage.scss"
 import chevronRight from "../../../public/chevron-right.svg"
@@ -20,10 +20,12 @@ export const DrugManagePage = ()=>{
             method: "GET", 
             url: "/api/getDrug/", 
         }).then((res)=>{
-            console.log(res.data)
-            
+            //console.log(res.data)
+            dispatch(addValue({title: "drugs", value: res.data.data}))
         })
-     }, [])
+    }, [])
+
+    const drugList = useSelector((state: RootState)=>state.drugManage.drugs)
 
     return(
         <div className="flex">
@@ -35,7 +37,6 @@ export const DrugManagePage = ()=>{
                         <div className="flex ai-center">
                             <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
                             <h4>Добавить лекарственное средство</h4>
-                            
                         </div>
                     </a>
                     <div className="collapse mt-4" id="collapseAddDrug">
@@ -54,10 +55,19 @@ export const DrugManagePage = ()=>{
                         </div>
                     </a>
                     <div className="collapse mt-4" id="collapseGetDrug">
-                        <AddDrugForm/>
+                        {Array.isArray(drugList) ? drugList.map((drug)=>
+                            <div>
+                            </div>
+                        )
+                    :
+                        <div>
+                            <p>Не удалось получить список лекарственных средств</p>
+                            <p>Пожалуйста, попробуйте позже</p>
+                        </div>
+                    }
                     </div>
-                    
                 </div>
+                
 
             </main>
         </div>
