@@ -1,0 +1,16 @@
+div.drugManage a{
+    text-decoration: none;
+}
+
+div.drugManage img{
+    width: 3%;
+}
+
+div.drugManage .chevron-icon {
+    transition: transform 0.3s ease;
+}
+
+div.drugManage a[aria-expanded=true] .chevron-icon {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}

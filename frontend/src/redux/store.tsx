@@ -3,9 +3,13 @@ import { persistStore, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import MenuSlice from './MenuSlice.tsx'
+import AddDrugSlice from './AddDrugSlice.tsx'
+import DrugManageSlice from './DrugManageSlice.tsx'
 
 const reducers = combineReducers({
     menu: MenuSlice,
+    addDrug: AddDrugSlice,
+    drugManage: DrugManageSlice,
 });
 
 const persistConfig = {
@@ -26,4 +30,5 @@ const store = configureStore({
 });
 
 const persistor = persistStore(store);
+export type RootState = ReturnType<typeof store.getState>; // Типизированный RootState
 export { store, persistor };

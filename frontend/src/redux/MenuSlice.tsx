@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface IPayload{
     title: string //ключ сохраняемого объекта
-    value: object //значение для сохранения
+    slug: string //значение для сохранения
 }
 
 interface IState {

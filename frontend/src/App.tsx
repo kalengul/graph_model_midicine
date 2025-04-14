@@ -1,13 +1,15 @@
-import './App.css'
-import { Nav } from './components/nav/nav'
+import { BrowserRouter } from 'react-router-dom';
+import {useRoutes}  from './routes';
 
 function App() {
-
+  const routes = useRoutes()
   return (
-    <div className='flex'>
-     <Nav></Nav>
-     <main></main>
-    </div>
+    <>
+      
+        <BrowserRouter>
+          {routes}
+        </BrowserRouter>
+      </>
   )
 }
 
