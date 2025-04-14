@@ -10,8 +10,8 @@ MAX_LENGTH = 255
 class DrugGroup(models.Model):
     """Класс группы ЛС."""
 
-    name = models.CharField(max_length=MAX_LENGTH,
-                            verbose_name="Название группы")
+    drug_name = models.CharField(max_length=MAX_LENGTH,
+                                 verbose_name="Название группы")
     slug = models.SlugField(max_length=MAX_LENGTH,
                             unique=True,
                             db_index=True,
