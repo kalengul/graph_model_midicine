@@ -4,9 +4,9 @@ import axios from 'axios'
 import { Nav } from "../../components/nav/nav"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
 
-import { useDispatch, useSelector} from 'react-redux';
-import {addValue, initStates} from '../../redux/DrugManageSlice'
-import { RootState } from '../../redux/store';
+import { useDispatch} from 'react-redux';
+ import {initStates} from '../../redux/DrugManageSlice'
+// import { RootState } from '../../redux/store';
 
 import "./DrugManagePage.scss"
 import chevronRight from "../../../public/chevron-right.svg"
