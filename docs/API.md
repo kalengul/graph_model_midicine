@@ -468,7 +468,8 @@
 
 |**Параметр**|**Тип данных**|**Обязательность**|**Описание**|
 |:-----:|:--------|:--------|:------|
-|drug_name|String|нет|название ЛС|
+|drug_name|String|да|название ЛС|
+|dg_id|String|нет|название ЛС|
 |side_effects|Array(Objact)|нет|Список побочек|
 
 #### Объект side_effects
@@ -758,8 +759,8 @@
             "slug": "/computationFortran"
         },
         {
-            "title": "Добавить данные",
-            "slug": "/addData"
+            "title": "Управление данными",
+            "slug": "/dataManage"
         }
     ]
 }

@@ -1,0 +1,10 @@
+.send-btn{
+    background-color: var(--btn-send);
+
+    &:hover{
+        background-color: var(--btn-send-hover);
+    }
+    &:active{
+        background-color: var(--btn-send-active);
+    }
+}

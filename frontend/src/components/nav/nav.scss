@@ -1,0 +1,46 @@
+nav{
+    height: 100vh;
+    background-color: var(--nav-bg);
+}
+
+li.nav-main a.nav-link {
+    box-shadow: 
+    -3px -3px 5px rgba(255, 255, 255, 0.8),   
+    3px 3px 5px rgba(0, 0, 0, 0.2);       
+
+    &:focus{
+        background-color: var(--nav-bg) !important;
+        transition: background-color 0.1s ease;
+        box-shadow: 
+        inset -3px -3px 5px rgba(255, 255, 255, 0.8),   
+        inset 3px 3px 5px rgba(0, 0, 0, 0.2);       
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: var(--nav-link-hover);
+        transition: background-color 0.5s ease;
+    }
+}
+
+li.nav-main a.nav-link.active{
+    background-color: var(--nav-link-active);      
+}
+
+li.nav-sub a.nav-link {
+    box-shadow: 
+    -1px -1px 5px rgba(255, 255, 255, 0.8),   
+    1px 1px 5px rgba(0, 0, 0, 0.2);       
+
+    &:focus{
+        background-color: var(--nav-bg) !important;
+        transition: background-color 0.1s ease;
+        box-shadow: 
+        inset -1px -1px 5px rgba(255, 255, 255, 0.8),   
+        inset 1px 1px 5px rgba(0, 0, 0, 0.2);       
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: var(--nav-link-hover);
+        transition: background-color 0.5s ease;
+    }
+}

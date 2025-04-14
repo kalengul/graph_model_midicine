@@ -1,4 +1,5 @@
 @import "./css/flex.scss";
+@import "./css/btn.scss";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,10 +14,28 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Палитра */
+  --nav-bg: #E0E5EC;
+  --nav-link-hover: #C9D2DE;
+  --nav-link-active: #C9D6E8;
+
+  --btn-send: #C6DBEC;
+  --btn-send-hover: #B2CFE5;
+  --btn-send-active: #9FC4DF;
+
+  --light-shadow: #fff;
+  --dark-shadow: #000
 }
 
 body {
   margin: 0;
+}
+
+.err{
+  margin-top: 0;
+  color: #F26E50;
+  font-size: 0.7em;
 }
 
 @media (prefers-color-scheme: light) {
