@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'drugs',
     'ranker',
     'medscape_api',
+    'menu',
 
     'rest_framework',
 ]
