@@ -33,7 +33,7 @@ class DrugGroup(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.group_name
 
     class Meta:
         """Настройка модели."""
@@ -46,8 +46,8 @@ class DrugGroup(models.Model):
 class Drug(models.Model):
     """Класс ЛС."""
 
-    name = models.CharField(max_length=MAX_LENGTH,
-                            verbose_name='Название ЛС')
+    drug_name = models.CharField(max_length=MAX_LENGTH,
+                                 verbose_name='Название ЛС')
     slug = models.SlugField(max_length=MAX_LENGTH,
                             unique=True,
                             db_index=True,
@@ -77,21 +77,21 @@ class Drug(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.drug_name
 
     class Meta:
         """Настройка модели."""
 
         verbose_name = 'ЛС'
         verbose_name_plural = 'ЛС'
-        ordering = ['name']
+        ordering = ['drug_name']
 
 
 class SideEffect(models.Model):
     """Класс ПД."""
 
-    name = models.CharField(max_length=MAX_LENGTH,
-                            verbose_name="Побочный эффект")
+    se_name = models.CharField(max_length=MAX_LENGTH,
+                               verbose_name="Побочный эффект")
     weight = models.FloatField(default=0.0,
                                verbose_name='Вес побочки',
                                validators=[
@@ -101,7 +101,7 @@ class SideEffect(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.se_name
 
 
 class DrugSideEffect(models.Model):
@@ -168,7 +168,7 @@ class DrugSideEffect(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return (f"{self.drug.name} - {self.side_effect.name}:"
+        return (f"{self.drug.drug_name} - {self.side_effect.se_name}:"
                 f"{self.probability}")
 
     class Meta:

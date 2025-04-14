@@ -24,10 +24,10 @@ class DrugSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Drug
-        fields = ['id', 'name', 'slug', 'drug_group', 'side_effects']
+        fields = ['id', 'drug_name', 'slug', 'drug_group', 'side_effects']
         extra_kwargs = {
             'slug': {'read_only': True},
-            'side_effects': {'required': False} 
+            'side_effects': {'required': False}
         }
 
 
