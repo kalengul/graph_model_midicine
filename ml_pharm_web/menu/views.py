@@ -7,7 +7,7 @@ from .serializers import MenuSerializer
 
 
 class GetMenuAPI(APIView):
-    def __get(self, request):
+    def get(self, _):
         try:
             menu_items = Menu.objects.all()
             serializer = MenuSerializer(menu_items, many=True)
@@ -36,28 +36,3 @@ class GetMenuAPI(APIView):
                 },
                 "data": {}
             }, status=error_status)
-    
-    def get(self, request):
-        response_data = {
-            "result": {
-                "status": status.HTTP_200_OK, 
-                "message": "Группа ЛС диуретики добавлена"
-            },
-            "data": [
-                {
-                    "title": "Взаимодействие по MedScape",
-                    "slug": "/computationMedScape"
-                },
-                {
-                    "title": "Взаимодействие по Fortran",
-                    "slug": "/computationFortran"
-                },
-                {
-                    "title": "Управление данными",
-                    "slug": "/dataManage"
-                }
-            ]
-        }
-
-        return Response(response_data, status=status.HTTP_200_OK)
-    
