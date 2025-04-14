@@ -86,12 +86,12 @@ WSGI_APPLICATION = 'ml_pharm_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',   # Используется PostgreSQL
-        'NAME': BASE_DIR/'pharm.db'               # Имя базы данных
-        # 'USER': 'postgres', # Имя пользователя
-        # 'PASSWORD': 'postgres', # Пароль пользователя
-        # 'HOST': 'pgdb', # Наименование контейнера для базы данных в Docker Compose
-        # 'PORT': '5432',  # Порт базы данных
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DB', 'ml_db'),
+        'USER': os.environ.get('POSTGRES_USER', 'ml_user'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'ml_pass'),
+        'HOST': os.environ.get('POSTGRES_HOST', 'localhost'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 }
 
