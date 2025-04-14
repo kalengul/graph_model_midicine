@@ -40,7 +40,7 @@ class GetMenuAPI(APIView):
     def get(self, request):
         response_data = {
             "result": {
-                "status": 200, 
+                "status": status.HTTP_200_OK, 
                 "message": "Группа ЛС диуретики добавлена"
             },
             "data": [
@@ -53,8 +53,8 @@ class GetMenuAPI(APIView):
                     "slug": "/computationFortran"
                 },
                 {
-                    "title": "Добавить данные",
-                    "slug": "/addData"
+                    "title": "Управление данными",
+                    "slug": "/dataManage"
                 }
             ]
         }
