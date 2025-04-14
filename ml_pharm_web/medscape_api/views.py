@@ -6,11 +6,11 @@ from django.db.models import Q
 from django.conf import settings
 
 from .models import (Drug,
-                                 DrugGroup,
-                                 DrugInteractionTable)
+                     DrugGroup,
+                     DrugInteractionTable)
 from .interaction_retriever import (InteractionRetriever,
-                                   InteractionMedScape,
-                                   NameDrugsMedScape,)
+                                    InteractionMedScape,
+                                    NameDrugsMedScape,)
 from .json_loader import JSONLoader
 
 

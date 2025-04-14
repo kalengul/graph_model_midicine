@@ -36,7 +36,7 @@ class CalculationAPI(APIView):
         print('file_name =', file_name)
         print('type(file_name) =', type(file_name['age']))
         print('type(file_name[0]) =', type(file_name['age'][0]))
-
+        file_name = file_name['age'][0]
         # Принудительная перезагрузка БД из файлов
         FileLoader.load_drugs_from_file(base_dir)
         FileLoader.load_disease_chf_from_file(base_dir)
