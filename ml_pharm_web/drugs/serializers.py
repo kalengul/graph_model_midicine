@@ -5,9 +5,9 @@ from .models import DrugGroup, Drug, SideEffect
 class DrugGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = DrugGroup
-        fields = ['id', 'name', 'slug']
+        fields = ['id', 'group_name', 'slug']
         extra_kwargs = {
-            'slug': {'read_only': True} 
+            'slug': {'read_only': True}
         }
 
 

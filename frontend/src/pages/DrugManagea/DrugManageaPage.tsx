@@ -30,7 +30,7 @@ export const DrugManagePage = ()=>{
             <Nav></Nav>
             <main className="ms-2 p-3 w-100">
                 <h1>Управление лекарственными средствами</h1>
-                <div className="w-75 mt-4 add-drug">
+                <div className="w-75 mt-4 drugManage">
                     <a className='link-dark' data-bs-toggle="collapse" href="#collapseAddDrug" role="button" aria-expanded="false" aria-controls="collapseAddDrug">
                         <div className="flex ai-center">
                             <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
@@ -44,6 +44,20 @@ export const DrugManagePage = ()=>{
                     
                 </div>
                 <hr/>
+
+                <div className="w-75 mt-4 drugManage">
+                    <a className='link-dark' data-bs-toggle="collapse" href="#collapseGetDrug" role="button" aria-expanded="false" aria-controls="collapseGetDrug">
+                        <div className="flex ai-center">
+                            <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
+                            <h4>Список лекарственных средств</h4>
+                            
+                        </div>
+                    </a>
+                    <div className="collapse mt-4" id="collapseGetDrug">
+                        <AddDrugForm/>
+                    </div>
+                    
+                </div>
 
             </main>
         </div>
