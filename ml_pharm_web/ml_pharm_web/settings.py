@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
 
-    'pharm_web.apps.PharmWebConfig',
+    # 'pharm_web.apps.PharmWebConfig',
     'test_drf',
     'accounts',
     'drugs',

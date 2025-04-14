@@ -1,5 +1,5 @@
 from django.db.models import Q
-from medscape_api.models import (NameDrugsMedScape,
+from .models import (NameDrugsMedScape,
                                  InteractionMedScape,
                                  DrugsInformationMedScape,)
 

@@ -5,13 +5,13 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.conf import settings
 
-from medscape_api.models import (Drug,
+from .models import (Drug,
                                  DrugGroup,
                                  DrugInteractionTable)
-from interaction_retriever import (InteractionRetriever,
+from .interaction_retriever import (InteractionRetriever,
                                    InteractionMedScape,
                                    NameDrugsMedScape,)
-from json_loader import JSONLoader
+from .json_loader import JSONLoader
 
 
 NO_DRUG = 'Не найдены данных об указанном ЛС!'
