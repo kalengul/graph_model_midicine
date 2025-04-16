@@ -12,6 +12,7 @@ from .interaction_retriever import (InteractionRetriever,
                                     InteractionMedScape,
                                     NameDrugsMedScape,)
 from .json_loader import JSONLoader
+from drugs.utils.custom_response import CustomResponse
 
 
 NO_DRUG = 'Не найдены данных об указанном ЛС!'
@@ -39,12 +40,19 @@ class InteractionMedScapeView(APIView):
             context = {
                 'drugs': drugs,
                 #        'classification_type': classification_type,
-                'interactions': interactions
+                'description': interactions[0]['description'],
+                'compatible': interactions[0]['classification']
             }
-            return Response(data=context, status=status.HTTP_200_OK)
+            return CustomResponse.response(
+                data=context,
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по MedScape успешно расcчитана',
+                http_status=status.HTTP_200_OK)
         except ObjectDoesNotExist:
-            return Response({'error': NO_DRUG},
-                            status=status.HTTP_404_NOT_FOUND)
+            return CustomResponse.response(
+                status=status.HTTP_404_NOT_FOUND,
+                message='Ресурс не найден',
+                http_status=status.HTTP_404_NOT_FOUND)
 
 
 class MedscapeOutDateView(APIView):

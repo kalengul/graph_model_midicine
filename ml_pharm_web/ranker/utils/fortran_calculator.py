@@ -22,7 +22,7 @@ class FortranCalculator:
         self.n_j = DrugCHF.objects.count()
         self.n_k = DiseaseCHF.objects.count()
 
-    def load_data_in_file(self, base_dir, file_name, nj):
+    def load_data_in_file(self, base_dir, file_name, nj, drug_indices2):
         """
         Метод непосредственного вычисления рангов.
 
@@ -62,15 +62,15 @@ class FortranCalculator:
         ram = ramax[self.n_k - 1]
 
         if ram >= 1.0:
-            classification = 'Запрещено'
+            classification = 'incompatible'         # 'Запрещено'
         elif ram >= 0.5:
-            classification = 'Под наблюдением врача'
+            classification = 'caution'              # 'Под наблюдением врача'
         else:
-            classification = 'Разрешено'
+            classification = 'compatible'           # 'Разрешено'
 
         context = {
-            'rand_iteractions': round(float(ram), 2),
-            'classification_description': classification
+            'rank_iteractions': round(float(ram), 2),
+            'сompatibility_fortran': classification
         }
 
         side_effects = []
@@ -83,19 +83,39 @@ class FortranCalculator:
                 nom[k] = 1
             disease = DiseaseCHF.objects.get(index=k)
             side_effects.append({
-                'name': disease.name,
+                'se_name': disease.name,
                 'class': int(nom[k]),
-                'rangsum': round(float(rangsum[k]), 2)
+                'rank': round(float(rangsum[k]), 2)
             })
+        # ...
 
-        context.update({
-            'side_effects_class_1': [e for e in side_effects
-                                     if e['class'] == 1],
-            'side_effects_class_2': [e for e in side_effects
-                                     if e['class'] == 2],
-            'side_effects_class_3': [e for e in side_effects
-                                     if e['class'] == 3],
-        })
+        context.update({'side_effects': [
+            {"сompatibility": "incompatible",
+             'effects': []},
+            {"сompatibility": "caution",
+             'effects': []},
+            {"сompatibility": "compatible",
+             'effects': []},
+        ]})
+
+        for side_effect in side_effects:
+            if side_effect['class'] == 1:
+                del side_effect['class']
+                context['side_effects'][0]['effects'].append(side_effect)
+            elif side_effect['class'] == 2:
+                del side_effect['class']
+                context['side_effects'][1]['effects'].append(side_effect)
+            elif side_effect['class'] == 3:
+                del side_effect['class']
+                context['side_effects'][2]['effects'].append(side_effect)
+        # context.update({
+        #     'side_effects_class_1': [e for e in side_effects
+        #                              if e['class'] == 1],
+        #     'side_effects_class_2': [e for e in side_effects
+        #                              if e['class'] == 2],
+        #     'side_effects_class_3': [e for e in side_effects
+        #                              if e['class'] == 3],
+        # })
 
         # Анализ потенциальных ЛС
         drugs_class_1, drugs_class_2, drugs_class_3 = [], [], []
@@ -119,14 +139,37 @@ class FortranCalculator:
                 else:
                     drugs_class_3.append(j)
 
+        idx2сompatibility = {3: 'compatible',
+                             2: 'caution',
+                             1: 'incompatible'}
+
         def fetch_drugs(indices, c):
-            return [{'name': DrugCHF.objects.get(index=i).name, 'class': c}
+            return [{'drugs': DrugCHF.objects.get(index=i).name,
+                     'сompatibility': idx2сompatibility(c)}
                     for i in indices]
 
-        context.update({
-            'arr_drugs_class_1': fetch_drugs(drugs_class_1, 1),
-            'arr_drugs_class_2': fetch_drugs(drugs_class_2, 2),
-            'arr_drugs_class_3': fetch_drugs(drugs_class_3, 3),
-        })
+        context['combinations'] = [
+            {"сompatibility": "compatible",
+             "drugs": fetch_drugs(drugs_class_3, 3)},
+            {"сompatibility": "caution",
+             "drugs": fetch_drugs(drugs_class_2, 2)},
+            {"сompatibility": "incompatible",
+             "drugs": fetch_drugs(drugs_class_1, 1)},
+        ]
+
+        # def fetch_drugs(indices, c):
+        #     return [{'name': DrugCHF.objects.get(index=i).name, 'class': c}
+        #             for i in indices]
+
+        # context.update({
+        #     'arr_drugs_class_1': fetch_drugs(drugs_class_1, 1),
+        #     'arr_drugs_class_2': fetch_drugs(drugs_class_2, 2),
+        #     'arr_drugs_class_3': fetch_drugs(drugs_class_3, 3),
+        # })
+
+        context['compatibility_medscape'] = ''
+        context['description'] = 'Справка из MedScape'
+        context['drugs'] = [DrugCHF.objects.get(index=i).name
+                            for i in drug_indices2]
 
         return context

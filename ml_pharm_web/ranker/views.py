@@ -8,6 +8,7 @@ from django.conf import settings
 from ranker.models import DrugCHF
 from ranker.utils.file_loader import FileLoader
 from ranker.utils.fortran_calculator import FortranCalculator
+from drugs.utils.custom_response import CustomResponse
 
 
 class CalculationAPI(APIView):
@@ -16,47 +17,48 @@ class CalculationAPI(APIView):
     def get(self, request):
         """Метод для GET-запроса."""
         # Получаем параметры
-        # base_dir = settings.BASE_DIR
-        # drugs_param = request.GET.get('drugs', '')
-        # file_name = request.GET.get('file_upload', '')
+        base_dir = settings.BASE_DIR
 
         base_dir = settings.BASE_DIR
-        drug_indices = request.GET.get('drugs', '')
-        file_name = request.GET.get('humanData', '')
+        drugs_raw = request.query_params.get('drugs')
+        file_name = request.query_params.get('humanData', '')
+        drug_indices = [int(x.strip())
+                        for x in drugs_raw.split(",")] if drugs_raw else []
 
-        print('file_name =', file_name)
-
-        drug_indices = json.loads(drug_indices)
-        file_name = json.loads(file_name)
-
-        print('drugs_param =', drug_indices)
-        print('type(drugs_param) =', type(drug_indices))
-        print('type(drugs_param[0]) =', type(drug_indices[0]))
-
-        print('file_name =', file_name)
-        print('type(file_name) =', type(file_name['age']))
-        print('type(file_name[0]) =', type(file_name['age'][0]))
-        file_name = file_name['age'][0]
+        # print('file_name =', file_name)
+        # print('type(file_name) =', type(file_name['age']))
+        # print('type(file_name[0]) =', type(file_name['age'][0]))
+        if file_name:
+            file_name = json.loads(file_name)
+            file_name = file_name['age'][0]
+        else:
+            file_name = 'rangbase.txt'
         # Принудительная перезагрузка БД из файлов
         FileLoader.load_drugs_from_file(base_dir)
         FileLoader.load_disease_chf_from_file(base_dir)
 
         calculator = FortranCalculator()
 
+        drug_indices2 = drug_indices[:]
+
         while len(drug_indices) < calculator.n_k:
             drug_indices.append(0)
-
-        print('len(drug_indices) =', len(drug_indices))
 
         try:
             context = calculator.load_data_in_file(base_dir,
                                                    file_name,
-                                                   drug_indices)
-            return Response(context, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({'error': str(e)},
-                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+                                                   drug_indices,
+                                                   drug_indices2)
+            return CustomResponse.response(
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по Fortran успешно расcчитана',
+                http_status=status.HTTP_200_OK,
+                data=context)
+        except Exception:
+            return CustomResponse.response(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='Ошибка определения совместимости',
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         # Поиск препаратов в БД
         # drug_names = [name.strip().lower() for name in drugs_param.split(',')]

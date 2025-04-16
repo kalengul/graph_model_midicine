@@ -10,9 +10,10 @@ MAX_LENGTH = 255
 class DrugGroup(models.Model):
     """Класс группы ЛС."""
 
-    group_name = models.CharField(max_length=MAX_LENGTH,
-                                  verbose_name="Название группы")
+    dg_name = models.CharField(max_length=MAX_LENGTH,
+                               verbose_name="Название группы")
     slug = models.SlugField(max_length=MAX_LENGTH,
+                            null=True,
                             unique=True,
                             db_index=True,
                             verbose_name="URL")
@@ -20,7 +21,7 @@ class DrugGroup(models.Model):
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""
         if not self.slug:
-            base_slug = slugify(self.name)
+            base_slug = slugify(self.dg_name)
             unique_slug = base_slug
             counter = 1
 
@@ -33,14 +34,14 @@ class DrugGroup(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.group_name
+        return self.dg_name
 
     class Meta:
         """Настройка модели."""
 
         verbose_name = 'Группа ЛС'
         verbose_name_plural = 'Группы ЛС'
-        ordering = ['group_name']
+        ordering = ['dg_name']
 
 
 class Drug(models.Model):
@@ -49,6 +50,7 @@ class Drug(models.Model):
     drug_name = models.CharField(max_length=MAX_LENGTH,
                                  verbose_name='Название ЛС')
     slug = models.SlugField(max_length=MAX_LENGTH,
+                            null=True,
                             unique=True,
                             db_index=True,
                             verbose_name="URL")
@@ -56,15 +58,17 @@ class Drug(models.Model):
                                    on_delete=models.CASCADE,
                                    related_name='drugs',
                                    verbose_name='Группа ЛС',
-                                   default=1)
+                                   default=1,
+                                   null=True)
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
-                                          related_name='drugs')
+                                          related_name='drugs',
+                                          null=True)
 
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""
         if not self.slug:
-            base_slug = slugify(self.name)
+            base_slug = slugify(self.drug_name)
             unique_slug = base_slug
             counter = 1
 

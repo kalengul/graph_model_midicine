@@ -1,7 +1,7 @@
 from django.db.models import Q
 from .models import (NameDrugsMedScape,
-                                 InteractionMedScape,
-                                 DrugsInformationMedScape,)
+                     InteractionMedScape,
+                     DrugsInformationMedScape,)
 
 
 class InteractionRetriever:
