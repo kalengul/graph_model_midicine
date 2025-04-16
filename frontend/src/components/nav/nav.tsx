@@ -8,20 +8,9 @@ import { RootState } from '../../redux/store';
 
 import "./nav.scss"
 
-interface ISubMenu{
-    title: string,
-    slug: string
-}
-
 export const Nav = ()=>{
     const dispatch = useDispatch()
     const location = useLocation();
-
-    const subMenu: ISubMenu[] = [
-        {title: "Лекарственные средства", slug: "/drugManage"},
-        {title: "Побочные эффекты", slug: "/sedeEffectsManage"}
-
-    ]
 
     useEffect(()=>{
         dispatch(initStates())
@@ -29,29 +18,22 @@ export const Nav = ()=>{
             method: "GET", 
             url: "/api/getMenu/", 
         }).then((res)=>{
-            console.log(res.data)
+            // console.log(res.data)
             dispatch(addValue({title: "links", value: res.data.data}));
 
             const locat: string = location.pathname
 
-            if(!subMenu.some(item => item.slug === locat))
-            {
-                dispatch(addValue({title: "isActive", value: locat}));
-            }
-            else dispatch(addValue({title: "isActive", value: "/dataManage"}));
+            dispatch(addValue({title: "isActive", value: locat}));
 
-            
         })
      }, [])
 
 
     const menu = useSelector((state: RootState)=>state.menu.links)
     const activeLink = useSelector((state: RootState)=>state.menu.isActive)
-    console.log(menu)
-    console.log(activeLink)
 
     return (
-        <nav className='flex-column flex-shrink-0 p-3 sticky-top me-3'>
+        <nav className='flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav'>
             <h1>ТОШ</h1>
             <hr />
             <ul className="nav nav-pills flex-column mb-auto">
@@ -64,21 +46,6 @@ export const Nav = ()=>{
                 )}
             </ul>
 
-            {(activeLink=='/dataManage')?
-            <>
-                <hr />
-                <ul className="nav nav-pills flex-column mb-auto">
-                {Array.isArray(subMenu) && subMenu.map((elem)=>
-                    <li className='nav-item nav-sub mb-2'>
-                        <a href={elem.slug} className='nav-link link-dark'>
-                            {elem.title}
-                        </a>
-                    </li>
-                )}
-                </ul>
-            </> :<></>}
-            
-            
         </nav>
     )
 

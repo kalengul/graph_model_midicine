@@ -19,7 +19,7 @@ const MenuSlice = createSlice({
     } as IState,
     reducers: {
         addValue(state, action){
-            console.log(action.payload)
+            // console.log(action.payload)
             for(const key in state){
                 if (key === action.payload.title) state[key] = action.payload.value
             }
