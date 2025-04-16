@@ -1,23 +1,23 @@
-nav{
+nav.mainNav{
     height: 100vh;
     background-color: var(--nav-bg);
 
     box-shadow: 
-    -3px -3px 5px rgba(255, 255, 255, 0.8),   
-    3px 3px 5px rgba(0, 0, 0, 0.2);       
+    -2px -2px 5px rgba(255, 255, 255, 0.8),   
+    2px 2px 5px rgba(0, 0, 0, 0.2);       
 }
 
-li.nav-main a.nav-link {
+nav.mainNav li.nav-main a.nav-link {
     box-shadow: 
-    -3px -3px 5px rgba(255, 255, 255, 0.8),   
-    3px 3px 5px rgba(0, 0, 0, 0.2);       
+    -2px -2px 5px rgba(255, 255, 255, 0.8),   
+    2px 2px 5px rgba(0, 0, 0, 0.2);       
 
     &:focus{
         background-color: var(--nav-bg) !important;
         transition: background-color 0.1s ease;
         box-shadow: 
-        inset -3px -3px 5px rgba(255, 255, 255, 0.8),   
-        inset 3px 3px 5px rgba(0, 0, 0, 0.2);       
+        inset -2px -2px 5px rgba(255, 255, 255, 0.8),   
+        inset 2px 2px 5px rgba(0, 0, 0, 0.2);       
     }
     &:hover{
         cursor: pointer;
@@ -26,11 +26,11 @@ li.nav-main a.nav-link {
     }
 }
 
-li.nav-main a.nav-link.active{
+nav.mainNav li.nav-main a.nav-link.active{
     background-color: var(--nav-link-active);      
 }
 
-li.nav-sub a.nav-link {
+nav.mainNav li.nav-sub a.nav-link {
     box-shadow: 
     -1px -1px 5px rgba(255, 255, 255, 0.8),   
     1px 1px 5px rgba(0, 0, 0, 0.2);       
