@@ -11,7 +11,8 @@ class DrugGroup(models.Model):
     """Класс группы ЛС."""
 
     dg_name = models.CharField(max_length=MAX_LENGTH,
-                               verbose_name="Название группы")
+                               verbose_name="Название группы",
+                               unique=True)
     slug = models.SlugField(max_length=MAX_LENGTH,
                             null=True,
                             unique=True,
@@ -62,8 +63,7 @@ class Drug(models.Model):
                                    null=True)
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
-                                          related_name='drugs',
-                                          null=True)
+                                          related_name='drugs')
 
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""

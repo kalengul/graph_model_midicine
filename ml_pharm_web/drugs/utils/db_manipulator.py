@@ -27,12 +27,12 @@ class DBManipulator:
     def __load_drugs(cls):
         """Метод загрузки ЛС."""
         try:
-            group = DrugGroup.objects.get_or_create(
+            group, _ = DrugGroup.objects.get_or_create(
                 id=1,
-                defaults={'name': 'Общая группа'})
+                defaults={'dg_name': 'Общая группа'})
             with open(cls.DRUGS_PATH, 'r', encoding='utf-8') as file:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
-                    Drug.objects.create(name=drug.split('\t')[1],
+                    Drug.objects.create(drug_name=drug.split('\t')[1].strip(),
                                         drug_group=group)
             print('ЛС успешно сохранены!')
         except Exception as error:
@@ -45,8 +45,9 @@ class DBManipulator:
             with open(cls.SIDE_EFFECTS_PATH, 'r', encoding='utf-8') as file:
                 for s_e in [s_e.strip() for s_e in file if s_e != '\n']:
                     SideEffect.objects.create(
-                        name=s_e.split('\t')[1].replace(';', ''),
-                        weight=float(s_e.split('\t')[2].replace(',', '.')))
+                        se_name=s_e.split('\t')[1].replace(';', '').strip(),
+                        weight=float(
+                            s_e.split('\t')[2].replace(',', '.').strip()))
             print('ПД успешно сохранены!')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой {error}')
@@ -105,10 +106,12 @@ class DBManipulator:
         Метод очистки таблиц.
 
         Очищаются таблицы:
+        - DrugGroup;
         - Drug;
         - SifeEffect;
         - DrugSifeEffect.
         """
+        DrugGroup.objects.all().delete()
         DrugSideEffect.objects.all().delete()
         Drug.objects.all().delete()
         SideEffect.objects.all().delete()

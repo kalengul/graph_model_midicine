@@ -33,10 +33,10 @@ class DrugGroupAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
-                    status=status.HTTP_201_CREATED,
+                    status=status.HTTP_200_OK,
                     message=(f'Группа ЛС {request.data.get("dg_name")}'
-                             'добавлена'),
-                    http_status=status.HTTP_201_CREATED)
+                             ' добавлена'),
+                    http_status=status.HTTP_200_OK)
             except IntegrityError:
                 return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
@@ -57,10 +57,13 @@ class DrugGroupAPI(APIView):
 
     def get(self, request):
         """Пример вью, которая возвращает группу/список групп."""
-        pk = request.query_params.get('id')
+        pk = request.query_params.get('dg_id')
+        print('pk =', pk)
         if not pk:
             queryset = DrugGroup.objects.all()
             serializer = DrugGroupSerializer(queryset, many=True)
+            print('Список групп ЛС!')
+            print('serializer.data =', serializer.data)
             return CustomResponse.response(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
@@ -69,6 +72,8 @@ class DrugGroupAPI(APIView):
         try:
             group = DrugGroup.objects.get(pk=pk)
             serializer = DrugGroupSerializer(group)
+            print('Группа ЛС по id!')
+            print('serializer.data =', serializer.data)
             return CustomResponse.response(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
@@ -121,9 +126,9 @@ class DrugAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
-                    status=status.HTTP_201_CREATED,
+                    status=status.HTTP_200_OK,
                     message=f"ЛС {request.data.get('drug_name')} добавлен",
-                    http_status=status.HTTP_201_CREATED)
+                    http_status=status.HTTP_200_OK)
             except IntegrityError as error:
                 if 'slug' in str(error):
                     return CustomResponse.response(
@@ -207,9 +212,9 @@ class DrugAPI(APIView):
 #             try:
 #                 serializer.save()
 #                 return CustomResponse.response(
-#                     status=status.HTTP_201_CREATED,
+#                     status=status.HTTP_200_OK,
 #                     message=f'Группа ЛС {request.data.get('dg_name')}',
-#                     http_status=status.HTTP_201_CREATED)
+#                     http_status=status.HTTP_200_OK)
 #             except IntegrityError:
 #                 return CustomResponse.response(
 #                     status=status.HTTP_400_BAD_REQUEST,
@@ -261,9 +266,9 @@ class DrugAPI(APIView):
 #             try:
 #                 serializer.save()
 #                 return CustomResponse.response(
-#                     status=status.HTTP_201_CREATED,
+#                     status=status.HTTP_200_OK,
 #                     message=f"ЛС {request.data.get('drug_name')} добавлен",
-#                     http_status=status.HTTP_201_CREATED)
+#                     http_status=status.HTTP_200_OK)
 #             except IntegrityError as e:
 #                 if 'slug' in str(e):
 #                     return CustomResponse.response(
