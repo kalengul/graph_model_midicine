@@ -131,15 +131,15 @@ class DrugSideEffectSerializer(serializers.ModelSerializer):
             return super().to_internal_value(data)
 
     drug_id = serializers.PrimaryKeyRelatedField(
-        queryset=Drug.objects.all(),
+        # queryset=Drug.objects.all(),
         source='drug',
-        required=True,
+        # required=True,
         read_only=True)
 
     se_id = serializers.PrimaryKeyRelatedField(
-        queryset=SideEffect.objects.all(),
+        # queryset=SideEffect.objects.all(),
         source='side_effect',
-        required=True,
+        # required=True,
         read_only=True)
 
     rank = FloatWithCommanField(source='probability')
