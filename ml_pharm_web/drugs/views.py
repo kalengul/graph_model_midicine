@@ -41,7 +41,7 @@ class DrugGroupAPI(APIView):
                 return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=(f'Группа {request.data.get("dg_name")}'
-                             'уже существует'),
+                             ' уже существует'),
                     http_status=status.HTTP_400_BAD_REQUEST
                 )
             except Exception:
@@ -50,9 +50,21 @@ class DrugGroupAPI(APIView):
                     message=SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                     )
+
+        print('serializer.errors =', serializer.errors)
+        if "dg_name" in serializer.errors:
+            for error in serializer.errors["dg_name"]:
+                if "уже существует" in error.lower():
+                    return CustomResponse.response(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message=((f'Группа {request.data.get("dg_name")}'
+                                  ' уже существует')),
+                        http_status=status.HTTP_400_BAD_REQUEST)
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
-            message=INCORRECT_DATA,
+            # message=INCORRECT_DATA,
+            message=((f'Группа {request.data.get("dg_name")}'
+                      ' уже существует')),
             http_status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
@@ -134,16 +146,26 @@ class DrugAPI(APIView):
                     return CustomResponse.response(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=(f"ЛС {request.data.get('drug_name')}"
-                                 "уже существует"),
+                                 " уже существует"),
                         http_status=status.HTTP_400_BAD_REQUEST)
             except Exception:
                 return CustomResponse.response(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message='Ошибка при создании лекарства',
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        if "drug_name" in serializer.errors:
+            for error in serializer.errors["drug_name"]:
+                if "уже существует" in error.lower():
+                    return CustomResponse.response(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message=((f'ЛС {request.data.get("drug_name")}'
+                                  ' уже существует')),
+                        http_status=status.HTTP_400_BAD_REQUEST)
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
-            message=INCORRECT_DATA,
+            # message=INCORRECT_DATA,
+            message=(f"ЛС {request.data.get('drug_name')}"
+                     " уже существует"),
             http_status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
@@ -363,24 +385,33 @@ class SideEffectAPI(APIView):
                 return CustomResponse.response(
                     status=status.HTTP_200_OK,
                     message=(f'Побочный эффект {request.data.get("se_name")}'
-                             'добавлен'),
+                             ' добавлен'),
                     http_status=status.HTTP_200_OK)
             except IntegrityError:
                 return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=(f'Побочный эффект {request.data.get("se_name")}'
-                             'уже существует'),
-                    http_status=status.HTTP_400_BAD_REQUEST
-                )
+                             ' уже существует'),
+                    http_status=status.HTTP_400_BAD_REQUEST)
             except Exception:
                 return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=SERVER_ERROR,
-                    http_status=status.HTTP_400_BAD_REQUEST
-                )
+                    http_status=status.HTTP_400_BAD_REQUEST)
+        if "se_name" in serializer.errors:
+            for error in serializer.errors["se_name"]:
+                if " уже существует" in error.lower():
+                    return CustomResponse.response(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message=(('Побочное действие '
+                                  f'{request.data.get("se_name")}'
+                                  ' уже существует')),
+                        http_status=status.HTTP_400_BAD_REQUEST)
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
-            message=INCORRECT_DATA,
+            # message=INCORRECT_DATA,
+            message=(f'Побочный эффект {request.data.get("se_name")}'
+                     'уже существует'),
             http_status=status.HTTP_400_BAD_REQUEST)
 
     def get(self, request):
@@ -496,55 +527,128 @@ class DrugSideEffectView(APIView):
 
     def put(self, request):
         """Метод для запроса PUT."""
-        drug_id = request.data.get('drug_id')
-        if not drug_id:
+        update_data = request.data.get('update_rsgs')
+
+        if not update_data or not isinstance(update_data, list):
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
-                message='id ЛС не передан',
+                message='Передан некорректный формат данных',
                 http_status=status.HTTP_400_BAD_REQUEST)
-        se_id = request.data.get('se_id')
 
-        if not se_id:
-            return CustomResponse.response(
-                status=status.HTTP_400_BAD_REQUEST,
-                message='id побочного действия не передан')
+        for item in update_data:
+            drug_id = item.get('drug_id')
+            print('drug_id =', drug_id)
+            se_id = item.get('se_id')
+            print('se_id =', se_id)
+            rank = item.get('rank')
+            print('rank =', rank)
 
-        if not Drug.objects.filter(id=drug_id).exists():
-            return CustomResponse.response(
-                status=status.HTTP_404_NOT_FOUND,
-                message='Такого ЛС не существует',
-                http_status=status.HTTP_404_NOT_FOUND)
-        if not SideEffect.objects.filter(id=se_id).exists():
-            return CustomResponse.response(
-                status=status.HTTP_404_NOT_FOUND,
-                message='Такого побочного эффекта не существует',
-                http_status=status.HTTP_404_NOT_FOUND)
+            if not drug_id:
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message='id ЛС не передан',
+                    http_status=status.HTTP_400_BAD_REQUEST)
 
-        try:
-            drug_side_effect = DrugSideEffect.objects.get(
-                drug_id=drug_id,
-                side_effect_id=se_id)
-        except DrugSideEffect.DoesNotExist:
-            return CustomResponse.response(
-                status=status.HTTP_404_NOT_FOUND,
-                message='Нет такого ранга',
-                http_status=status.HTTP_404_NOT_FOUND
-            )
-        serializer = DrugSideEffectSerializer(drug_side_effect,
-                                              data=request.data)
+            if not se_id:
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message='id побочного действия не передан',
+                    http_status=status.HTTP_400_BAD_REQUEST)
 
-        if serializer.is_valid():
-            serializer.save()
-            return CustomResponse.response(
-                status=status.HTTP_200_OK,
-                message='Ранги обновлены',
-                http_status=status.HTTP_200_OK
-            )
+            if not Drug.objects.filter(id=drug_id).exists():
+                return CustomResponse.response(
+                    status=status.HTTP_404_NOT_FOUND,
+                    message=f'ЛС с id={drug_id} не найдено',
+                    http_status=status.HTTP_404_NOT_FOUND)
+
+            if not SideEffect.objects.filter(id=se_id).exists():
+                return CustomResponse.response(
+                    status=status.HTTP_404_NOT_FOUND,
+                    message=f'Побочный эффект с id={se_id} не найден',
+                    http_status=status.HTTP_404_NOT_FOUND)
+
+            try:
+                drug_side_effect = DrugSideEffect.objects.get(
+                    drug_id=drug_id,
+                    side_effect_id=se_id
+                )
+            except DrugSideEffect.DoesNotExist:
+                return CustomResponse.response(
+                    status=status.HTTP_404_NOT_FOUND,
+                    message=f'Связь drug_id={drug_id} и se_id={se_id} не найдена',
+                    http_status=status.HTTP_404_NOT_FOUND
+                )
+
+            serializer = DrugSideEffectSerializer(drug_side_effect, data=item)
+            if serializer.is_valid():
+                serializer.save()
+            else:
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message=f'Некорректный ранг: {serializer.errors}',
+                    http_status=status.HTTP_400_BAD_REQUEST
+                )
+
         return CustomResponse.response(
-                status=status.HTTP_404_NOT_FOUND,
-                message='Ранг задан некорректно',
-                http_status=status.HTTP_404_NOT_FOUND
-            )
+            status=status.HTTP_200_OK,
+            message='Ранги успешно обновлены',
+            http_status=status.HTTP_200_OK
+        )
+
+# class DrugSideEffectView(APIView):
+#     """Вью для работы с рангами."""
+
+#     def put(self, request):
+#         """Метод для запроса PUT."""
+#         drug_id = request.data.get('drug_id')
+#         if not drug_id:
+#             return CustomResponse.response(
+#                 status=status.HTTP_400_BAD_REQUEST,
+#                 message='id ЛС не передан',
+#                 http_status=status.HTTP_400_BAD_REQUEST)
+#         se_id = request.data.get('se_id')
+
+#         if not se_id:
+#             return CustomResponse.response(
+#                 status=status.HTTP_400_BAD_REQUEST,
+#                 message='id побочного действия не передан')
+
+#         if not Drug.objects.filter(id=drug_id).exists():
+#             return CustomResponse.response(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message='Такого ЛС не существует',
+#                 http_status=status.HTTP_404_NOT_FOUND)
+#         if not SideEffect.objects.filter(id=se_id).exists():
+#             return CustomResponse.response(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message='Такого побочного эффекта не существует',
+#                 http_status=status.HTTP_404_NOT_FOUND)
+
+#         try:
+#             drug_side_effect = DrugSideEffect.objects.get(
+#                 drug_id=drug_id,
+#                 side_effect_id=se_id)
+#         except DrugSideEffect.DoesNotExist:
+#             return CustomResponse.response(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message='Нет такого ранга',
+#                 http_status=status.HTTP_404_NOT_FOUND
+#             )
+#         serializer = DrugSideEffectSerializer(drug_side_effect,
+#                                               data=request.data)
+
+#         if serializer.is_valid():
+#             serializer.save()
+#             return CustomResponse.response(
+#                 status=status.HTTP_200_OK,
+#                 message='Ранги обновлены',
+#                 http_status=status.HTTP_200_OK
+#             )
+#         return CustomResponse.response(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message='Ранг задан некорректно',
+#                 http_status=status.HTTP_404_NOT_FOUND
+#             )
 
 
 class MultiDeleteView(APIView):

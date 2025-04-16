@@ -49,7 +49,8 @@ class Drug(models.Model):
     """Класс ЛС."""
 
     drug_name = models.CharField(max_length=MAX_LENGTH,
-                                 verbose_name='Название ЛС')
+                                 verbose_name='Название ЛС',
+                                 unique=True)
     slug = models.SlugField(max_length=MAX_LENGTH,
                             null=True,
                             unique=True,
@@ -95,7 +96,8 @@ class SideEffect(models.Model):
     """Класс ПД."""
 
     se_name = models.CharField(max_length=MAX_LENGTH,
-                               verbose_name="Побочный эффект")
+                               verbose_name="Побочный эффект",
+                               unique=True)
     weight = models.FloatField(default=0.0,
                                verbose_name='Вес побочки',
                                validators=[
