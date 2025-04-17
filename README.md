@@ -1,3 +1,3 @@
-[Описание API](docs/API.md)
-[Вспомогательные команды](docs/devRunServer.md)
-[Статусы выполнения задач](docs/status.md)
+[Описание API](docs/API.md) <br/>
+[Вспомогательные команды](docs/devRunServer.md) <br/>
+[Статусы выполнения задач](docs/status.md) <br/>
