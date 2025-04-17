@@ -27,6 +27,7 @@ class DBManipulator:
     def __load_drugs(cls):
         """Метод загрузки ЛС."""
         try:
+            print('Загрузка ЛС началась')
             group, _ = DrugGroup.objects.get_or_create(
                 id=1,
                 defaults={'dg_name': 'Общая группа'})
@@ -34,7 +35,7 @@ class DBManipulator:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
                     Drug.objects.create(drug_name=drug.split('\t')[1].strip(),
                                         drug_group=group)
-            print('ЛС успешно сохранены!')
+            print('Загружено ЛС:', Drug.objects.count())
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
@@ -42,13 +43,14 @@ class DBManipulator:
     def __load_side_effects(cls):
         """Метод загрузки ПД."""
         try:
+            print('Загрузка побочных действий началась')
             with open(cls.SIDE_EFFECTS_PATH, 'r', encoding='utf-8') as file:
                 for s_e in [s_e.strip() for s_e in file if s_e != '\n']:
                     SideEffect.objects.create(
                         se_name=s_e.split('\t')[1].replace(';', '').strip(),
                         weight=float(
                             s_e.split('\t')[2].replace(',', '.').strip()))
-            print('ПД успешно сохранены!')
+            print('Загружено побочных действий:', SideEffect.objects.count())
         except Exception as error:
             raise Exception(f'Проблема с загрузкой {error}')
 
@@ -72,12 +74,10 @@ class DBManipulator:
 
         drugs = list(Drug.objects.order_by('id'))
         effects = list(SideEffect.objects.order_by('id'))
-
-        print('len(drugs) =', len(drugs))
-        print('len(effects) =', len(effects))
         assert len(rangs) == len(drugs) * len(effects), (
             "Размерность рангов не совпадает!")
 
+        print('Загрузка рангов началась')
         idx = 0
         for drug in drugs:
             for effect in effects:
@@ -93,6 +93,7 @@ class DBManipulator:
                     rang_freq=float(rangsfreq[idx])
                 )
                 idx += 1
+        print('Загружено рангов:', idx)
 
     def load_to_db(self):
         """Метод загрузки данных в БД."""
