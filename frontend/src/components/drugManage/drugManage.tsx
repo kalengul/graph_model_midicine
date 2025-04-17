@@ -48,9 +48,13 @@ export const DrugManage = () =>{
                     </div>
                 </a>
                 <div className="collapse mt-4" id="collapseGetDrug">
-                    {Array.isArray(drugList) ? drugList.map((drug)=>
+                    {Array.isArray(drugList) ? ( drugList.length > 0 ? drugList.map((drug)=>
                         <div>
                         </div>
+                    ):
+                    <div>
+                        <p>Нет Добавленных лекарственных средств</p>
+                    </div>
                     )
                 :
                     <div>

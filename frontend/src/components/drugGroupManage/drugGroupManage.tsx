@@ -30,7 +30,7 @@ export const DrugGroupManage = () =>{
 
     const drugGroupList = useSelector((state: RootState)=>state.drugGroupManage.drugGroups)
     
-    //console.log(drugGroupList)
+    console.log(drugGroupList)
 
     const deleteDrugGroupHendler = (id: string) =>{
         axios({ 
@@ -64,12 +64,12 @@ export const DrugGroupManage = () =>{
                 <a className='link-dark' data-bs-toggle="collapse" href="#collapseGetDrug" role="button" aria-expanded="false" aria-controls="collapseGetDrug">
                     <div className="flex ai-center">
                         <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
-                        <h4>Список лекарственных средств</h4>
+                        <h4>Список групп лекарственных средств</h4>
                         
                     </div>
                 </a>
                 <div className="collapse mt-4" id="collapseGetDrug">
-                    {Array.isArray(drugGroupList) ? drugGroupList.map((drugGroup, index)=>
+                    {Array.isArray(drugGroupList) ? ( drugGroupList.length > 0 ? drugGroupList.map((drugGroup, index)=>
                     <>
                         <div className='flex jc-sb w-100 ps-3 pe-3' key={drugGroup.id}>
                             <div>
@@ -80,6 +80,10 @@ export const DrugGroupManage = () =>{
                         </div>
                         <hr/>
                     </>
+                    ) : 
+                    <div>
+                        <p>Нет добавленных групп лекарственных средств</p>
+                    </div>
                     )
                 :
                     <div>
