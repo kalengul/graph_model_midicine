@@ -62,14 +62,14 @@ export const DrugGroupManage = () =>{
             <hr/>
 
             <div className="w-100 mt-4 drugManage">
-                <a className='link-dark' data-bs-toggle="collapse" href="#collapseGetDrug" role="button" aria-expanded="false" aria-controls="collapseGetDrug">
+                <a className='link-dark' data-bs-toggle="collapse" href="#collapseGetDrugGroup" role="button" aria-expanded="false" aria-controls="collapseGetDrugGroup">
                     <div className="flex ai-center">
                         <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
                         <h4>Список групп лекарственных средств</h4>
                         
                     </div>
                 </a>
-                <div className="collapse mt-4" id="collapseGetDrug">
+                <div className="collapse mt-4" id="collapseGetDrugGroup">
                     {Array.isArray(drugGroupList) ? ( drugGroupList.length > 0 ? drugGroupList.map((drugGroup, index)=>
                     <>
                         <div className='flex jc-sb w-100 ps-3 pe-3' key={drugGroup.id}>

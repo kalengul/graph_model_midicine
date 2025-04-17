@@ -1,15 +1,41 @@
 import { useEffect } from 'react'
 import axios from 'axios'
 
-import { useDispatch} from 'react-redux';
-import {addValue} from '../../redux/DrugGroupManageSlice'
+import { useSelector, useDispatch} from 'react-redux';
+import {addValue as addValueDrug} from '../../redux/DrugManageSlice'
+import {addValue as addValueSE} from '../../redux/SideEffectManageSlice'
 import { RootState } from '../../redux/store';
 
 import "./sideEffectsTable.scss"
 
 
 export const SideEffectsTable = ()=>{
+    const dispatch = useDispatch();
+    const drugs = useSelector((state: RootState)=>state.drugManage.drugs)
+    const sideEffects = useSelector((state: RootState)=>state.sideEffectManage.sideEffects)
 
+    useEffect(()=>{
+        console.log(drugs)
+        console.log(sideEffects)
+        if(!Array.isArray(drugs) || drugs.length==0){
+            axios({ 
+                method: "GET", 
+                url: "/api/getDrug/", 
+            }).then((res)=>{
+                dispatch(addValueDrug({title: "drugs", value: res.data.data}))
+            })
+        }
+        if (!Array.isArray(sideEffects) || sideEffects.length==0){
+            axios({ 
+                method: "GET", 
+                url: "/api/getSideEffect/", 
+            }).then((res)=>{
+                dispatch(addValueDrug({title: "sideEffects", value: res.data.data}))
+            })
+        }
+       
+    }, [drugs, sideEffects, dispatch])
+    
     return (
     <table className="SE-table table">
      <thead>
