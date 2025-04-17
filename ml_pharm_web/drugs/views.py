@@ -595,6 +595,27 @@ class DrugSideEffectView(APIView):
             http_status=status.HTTP_200_OK
         )
 
+    def get(self, request):
+        """Метод для PUT-запросов."""
+        try:
+            serializer = DrugSideEffectSerializer(DrugSideEffect.objects.all(),
+                                                  many=True)
+            return CustomResponse.response(
+                data=serializer.data,
+                status=status.HTTP_200_OK,
+                message="Ранги получены",
+                http_status=status.HTTP_200_OK)
+        except ValueError:
+            return CustomResponse.response(
+                status=status.HTTP_400_BAD_REQUEST,
+                message="Ошибка при получении ранга",
+                http_status=status.HTTP_400_BAD_REQUEST)
+        except Exception:
+            return CustomResponse.response(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message="Неизвестная ошибка сервера",
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 # class DrugSideEffectView(APIView):
 #     """Вью для работы с рангами."""
 
