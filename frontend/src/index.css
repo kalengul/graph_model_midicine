@@ -29,6 +29,9 @@
 
   --light-shadow: #fff;
   --dark-shadow: #000;
+
+  --mc-err: #f0c1ad;
+  --err-color: #F26E50;
 }
 
 body {
@@ -37,7 +40,7 @@ body {
 
 .err{
   margin-top: 0;
-  color: #F26E50;
+  color: var(--err-color);
   font-size: 0.7em;
 }
 

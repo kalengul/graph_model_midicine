@@ -4,6 +4,7 @@ import axios from 'axios'
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
 import { AddDrugGroupForm} from '../../components/addDrugGroupForm/addDrugGroupForm';
+import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useDispatch, useSelector} from 'react-redux';
 import {addValue, initStates} from '../../redux/DrugGroupManageSlice'
@@ -80,17 +81,10 @@ export const DrugGroupManage = () =>{
                         </div>
                         <hr/>
                     </>
-                    ) : 
-                    <div>
-                        <p>Нет добавленных групп лекарственных средств</p>
-                    </div>
-                    )
-                :
-                    <div>
-                        <p>Не удалось получить список групп лекарственных средств</p>
-                        <p>Пожалуйста, попробуйте позже</p>
-                    </div>
-                }
+                    ) : <ErrMessageCard message='Нет добавленных групп лекарственных средств'/>)
+                    : 
+                    <ErrMessageCard message='Не удалось получить список групп лекарственных средств. Пожалуйста, перезагрузите страницу или попробуйте позже'/>
+                    }
                 </div>
             </div>
         </>

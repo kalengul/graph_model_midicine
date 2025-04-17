@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import chevronRight from "../../../public/chevron-right.svg"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
+import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useDispatch, useSelector} from 'react-redux';
 import {addValue, initStates} from '../../redux/DrugManageSlice'
@@ -39,7 +40,7 @@ export const DrugManage = () =>{
             </div>
             <hr/>
 
-            <div className="w-75 mt-4 drugManage">
+            <div className="w-100 mt-4 drugManage">
                 <a className='link-dark' data-bs-toggle="collapse" href="#collapseGetDrug" role="button" aria-expanded="false" aria-controls="collapseGetDrug">
                     <div className="flex ai-center">
                         <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
@@ -51,17 +52,10 @@ export const DrugManage = () =>{
                     {Array.isArray(drugList) ? ( drugList.length > 0 ? drugList.map((drug)=>
                         <div>
                         </div>
-                    ):
-                    <div>
-                        <p>Нет Добавленных лекарственных средств</p>
-                    </div>
-                    )
-                :
-                    <div>
-                        <p>Не удалось получить список лекарственных средств</p>
-                        <p>Пожалуйста, попробуйте позже</p>
-                    </div>
-                }
+                    ): <ErrMessageCard message='Нет Добавленных лекарственных средств'/>)
+                    :
+                    <ErrMessageCard message="Не удалось получить список лекарственных средств. Пожалуйста, перезагрузите страницу или попробуйте позже"/>
+                    }
                 </div>
             </div>
         </>
