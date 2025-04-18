@@ -1,0 +1,1865 @@
+{
+    "name": "pexidartinib",
+    "comment": "Rx",
+    "other_names": [
+        "Turalio"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors",
+        "CSF1R Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/turalio-pexidartinib-1000329",
+    "pregnancy": {
+        "common": [
+            "Based on findings from animal studies and its mechanism of action, embryofetal harm may occur when administered to a pregnant woman",
+            "Available human data do not establish the presence or absence of major birth defects or miscarriage related to use in pregnant women"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Oral administration of pexidartinib to pregnant animals during organogenesis resulted in malformations, postimplantation loss, and abortion at maternal exposures that were approximately equal to the human exposure at the 800 mg-dose",
+                    "Advise pregnant women of the potential risk to a fetus"
+                ]
+            },
+            {
+                "type": "Pregnancy testing",
+                "description": [
+                    "Verify pregnancy status in females of reproductive potential before initiating treatment"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females of reproductive potential: Use effective nonhormonal contraception during treatment and for 1 month after final dose; therapy can render hormonal contraceptives ineffective",
+                    "Males with female partners of reproductive potential: Use effective contraception during treatment and for 1 week after final dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on findings from animal studies, treatment may impair both male and female fertility"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data available on presence of pexidartinib or its metabolites in either human or animal milk or its effects on a breastfed child or on milk production",
+            "Advise females not to breastfeed during treatment and for at least 1 week after final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                " "
+            ],
+            "specific": [
+                {
+                    "type": "Black Box Warnings",
+                    "description": [
+                        "Serious and potentially fatal liver injury may occur",
+                        "Monitor liver tests before initiating treatment and periodically during treatment",
+                        "Withhold and dose reduce or permanently discontinue based on severity of hepatotoxicity",
+                        "Available only through a restricted program called the Turalio Risk Evaluation and Mitigation Strategy (REMS)"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Based on animal studies and its mechanism of action, fetal harm may occur when administered to a pregnant woman"
+            ],
+            "specific": [
+                {
+                    "type": "Hepatoxicity",
+                    "description": [
+                        "Hepatotoxicity with ductopenia and cholestasis occurred; mechanism of cholestatic hepatotoxicity is unknown and its occurrence cannot be predicted",
+                        "It is unknown whether liver injury occurs in the absence of increased transaminases",
+                        "Administration with food increases drug exposure by 100% and may increase risk of hepatotoxicity",
+                        "Monitor liver tests before initiating treatment, weekly for the first 8 weeks, every 2 weeks for the next month, and every 3 months thereafter",
+                        "Risks associated with high-fat meal ",
+                        "Taking with high-fat meal increases pexidartinib concentrations, which may increase incidence and severity of adverse reactions, including hepatotoxicity",
+                        "Instruct patients to take drug with a low-fat meal ",
+                        "Consider referring patients to a dietician as deemed necessary "
+                    ]
+                },
+                {
+                    "type": "REMS program",
+                    "description": [
+                        "Available only through a restricted program under a REMS, owing to the risk of hepatoxicity",
+                        "Requirements of the program include the following:",
+                        "Prescribers must be certified with the program by enrolling and completing training",
+                        "Patients must complete and sign an enrollment form for inclusion in a patient registry",
+                        "Pharmacies must be certified with the program and must only dispense to patients who are authorized to receive pexidartinib",
+                        "Further information is available at www.turalioREMS.com or 1-833-887-2546"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Substrate of CYP3A4 and UGT1A4; also known to cause hepatoxicity",
+                        "Moderate CYP3A inducer",
+                        "Hepatotoxic agents",
+                        "Avoid coadministration of pexidartinib with other products known to cause hepatoxicity in patients with increased serum transaminases, total bilirubin, or direct bilirubin (>ULN) or active liver or biliary tract disease, owning to increased risk of hepatoxicity",
+                        "Strong or moderate CYP3A inhibitors or UGT inhibitors",
+                        "Avoid coadministration",
+                        "Strong CYP3A inhibitors increase pexidartinib plasma concentrations and potentially increases the incidence and severity of adverse reactions",
+                        "Reduce pexidartinib dose according to recommendations",
+                        "Strong CYP3A inducers",
+                        "Avoid coadministration",
+                        "Strong CYP3A inducers decrease pexidartinib plasma levels, which may decrease pexidartinib efficacy",
+                        "CYP3A substrates",
+                        "Pexidartinib decreases the concentration of CYP3A substrates, which may reduce the efficacy of these substrates",
+                        "Avoid coadministration with hormonal contraceptives",
+                        "Avoid coadministration with CYP3A substrates where minimal concentration changes may lead to serious therapeutic failures; if coadministration unavoidable, increase the CYP3A substrate dosage in accordance with prescribing information",
+                        "Acid-reducing agents ",
+                        "Avoid coadministration with proton pump inhibitors (PPIs)",
+                        "PPIs decrease pexidartinib plasma concentrations, which may decrease pexidartinib efficacy",
+                        "Alternatively, may use locally-acting antacid or H2-receptor antagonist "
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of lonafarnib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lonafarnib is a sensitive CYP3A4 substrate. Coadministration with strong or moderate CYP3A4 inducers is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of mavacamten by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "acetaminophen",
+            "description": {
+                "common": "acetaminophen and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "allopurinol",
+            "description": {
+                "common": "allopurinol and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amoxicillin",
+            "description": {
+                "common": "amoxicillin and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "auranofin",
+            "description": {
+                "common": "auranofin and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "azathioprine",
+            "description": {
+                "common": "azathioprine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bicalutamide",
+            "description": {
+                "common": "bicalutamide will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "busulfan",
+            "description": {
+                "common": "busulfan and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will increase the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Separate pexidartinib by 2 hr before or 10 hr after taking an H2-antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clavulanate",
+            "description": {
+                "common": "clavulanate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "danazol",
+            "description": {
+                "common": "danazol and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dantrolene",
+            "description": {
+                "common": "dantrolene and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of daridorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "dexlansoprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "didanosine",
+            "description": {
+                "common": "didanosine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "dienogest/estradiol valerate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disulfiram",
+            "description": {
+                "common": "disulfiram and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elacestrant",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of elacestrant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, pexidartinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 substrate) with encorafenib (a CYP3A4 inducer and inhibitor) may increase or decrease plasma levels or effects of pexidartinib."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "esomeprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "famotidine",
+            "description": {
+                "common": "famotidine will increase the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Separate pexidartinib by 2 hr before or 10 hr after taking an H2-antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "floxuridine",
+            "description": {
+                "common": "floxuridine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxymesterone",
+            "description": {
+                "common": "fluoxymesterone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flutamide",
+            "description": {
+                "common": "flutamide and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of ganaxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ganaxolone with moderate or strong CYP3A4 inducers. If coadministration unavoidable, consider increasing ganaxolone dose; however, do not exceed maximum daily dose for weight."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gemfibrozil",
+            "description": {
+                "common": "gemfibrozil will increase the level or effect of pexidartinib by  Other (see comment). Avoid or Use Alternate Drug. Pexdartinib is a UGTA4 substrate. Reduce pexdartinib dose if concomitant use of UGT inhibitors cannot be avoided (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydralazine",
+            "description": {
+                "common": "hydralazine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infigratinib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of infigratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infliximab",
+            "description": {
+                "common": "infliximab and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "interferon alfa 2b",
+            "description": {
+                "common": "interferon alfa 2b and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "interferon beta 1a",
+            "description": {
+                "common": "interferon beta 1a and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "interferon beta 1b",
+            "description": {
+                "common": "interferon beta 1b and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "lansoprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of larotrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of lefamulin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lefamulin with strong or moderate CYP3A inducers unless the benefit outweighs risks. Monitor for reduced efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of lenacapavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lenacapavir with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of leniolisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levonorgestrel oral",
+            "description": {
+                "common": "levonorgestrel oral and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumateperone",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of lumateperone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "methotrexate and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methyldopa",
+            "description": {
+                "common": "methyldopa and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methyltestosterone",
+            "description": {
+                "common": "methyltestosterone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "milk thistle",
+            "description": {
+                "common": "milk thistle will increase the level or effect of pexidartinib by  Other (see comment). Avoid or Use Alternate Drug. Pexdartinib is a UGTA4 substrate. Reduce pexdartinib dose if concomitant use of UGT inhibitors cannot be avoided (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "minocycline",
+            "description": {
+                "common": "minocycline and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "netupitant/palonosetron will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nitrofurantoin",
+            "description": {
+                "common": "nitrofurantoin and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nizatidine",
+            "description": {
+                "common": "nizatidine will increase the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Separate pexidartinib by 2 hr before or 10 hr after taking an H2-antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olutasidenib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of olutasidenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong or moderate CYP3A inducers decrease olutasidenib (a CYP3A4 substrate) plasma concentrations and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of omaveloxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "omeprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxandrolone",
+            "description": {
+                "common": "oxandrolone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxymetholone",
+            "description": {
+                "common": "oxymetholone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "peginterferon alfa 2a",
+            "description": {
+                "common": "peginterferon alfa 2a and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "peginterferon alfa 2b",
+            "description": {
+                "common": "peginterferon alfa 2b and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "peginterferon beta-1a",
+            "description": {
+                "common": "peginterferon beta-1a and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propylthiouracil",
+            "description": {
+                "common": "propylthiouracil and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pyrazinamide",
+            "description": {
+                "common": "pyrazinamide and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinupristin/dalfopristin",
+            "description": {
+                "common": "quinupristin/dalfopristin will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Avoid coadministration of proton pump inhibitors (PPIs) with pexidartinib. Use H2-receptor antagonists or antacids if needed. When using alternatives to PPIs, administer pexidartinib 2 hr before or after taking locally-acting antacids OR administer pexidartinib at least 2 hr before or 10 hr after taking an H2-receptor antagonist."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "schisandra",
+            "description": {
+                "common": "schisandra will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "simvastatin and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, pexidartinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 substrate) with stiripentol (a CYP3A4 inducer and inhibitor) may increase or decrease plasma levels or effects of pexidartinib."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulfadiazine",
+            "description": {
+                "common": "sulfadiazine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "sulfamethoxazole and pexidartinib both increase  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulfisoxazole",
+            "description": {
+                "common": "sulfisoxazole and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tegaserod",
+            "description": {
+                "common": "tegaserod and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone",
+            "description": {
+                "common": "testosterone and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone buccal system",
+            "description": {
+                "common": "testosterone buccal system and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone intranasal",
+            "description": {
+                "common": "testosterone intranasal and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone topical",
+            "description": {
+                "common": "testosterone topical and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "thioguanine",
+            "description": {
+                "common": "thioguanine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticlopidine",
+            "description": {
+                "common": "ticlopidine and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of pexidartinib (a CYP3A4 inducer) with sensitive CYP3A substrates may lead to serious therapeutic failures. If concomitant use is unavoidable, increase the CYP3A substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valerian",
+            "description": {
+                "common": "valerian will increase the level or effect of pexidartinib by  Other (see comment). Avoid or Use Alternate Drug. Pexdartinib is a UGTA4 substrate. Reduce pexdartinib dose if concomitant use of UGT inhibitors cannot be avoided (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valproic acid",
+            "description": {
+                "common": "valproic acid and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vitamin A",
+            "description": {
+                "common": "vitamin A and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vitamin D",
+            "description": {
+                "common": "vitamin D and pexidartinib both increase  Other (see comment). Avoid or Use Alternate Drug. Pexidartinib can cause hepatotoxicity. Avoid coadministration of pexidartinib with other products know to cause hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of voclosporin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vonoprazan",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of vonoprazan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium trisilicate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium trisilicate will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Recommended atogepant dosage with concomitant use of strong or moderate CYP3A4 inducers is 30 mg or 60 mg qDay."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belumosudil",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of belumosudil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citric acid/sodium bicarbonate",
+            "description": {
+                "common": "citric acid/sodium bicarbonate will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of pexidartinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium hydroxide",
+            "description": {
+                "common": "magnesium hydroxide will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "simethicone",
+            "description": {
+                "common": "simethicone will decrease the level or effect of pexidartinib by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Separate pexidartinib by 2 hr before or after taking a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and pexidartinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tivozanib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of tivozanib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of warfarin by  Other (see comment). Use Caution/Monitor. Warfarin's less potent R-enantiomer is metabolized in part by CYP3A4 (and also CYP1A2 and CYP2C19). Monitor INR more frequently if coadministered with inducers of these isoenzymes and adjust warfarin dose if needed. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zanubrutinib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of zanubrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Avoid coadministration of zanubrutinib (a CYP3A4 substrate) with moderate CYP3A4 inhibitors. If unavoidable, increase zanubrutinib dose to 320 mg PO BID. After discontinuing the CYP3A4 inhibitor, resume previous dose of zanubrutinib. "
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "All grades of severity listed unless otherwise indicated",
+            "percent": "92"
+        },
+        {
+            "name": "Increased LDH",
+            "percent": "67"
+        },
+        {
+            "name": "Hair color changes",
+            "percent": "64"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "1"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "61"
+        },
+        {
+            "name": "Grade",
+            "percent": "44"
+        },
+        {
+            "name": "Increased cholesterol",
+            "percent": "44"
+        },
+        {
+            "name": "Decreased neutrophils",
+            "percent": "38"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "31"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "31"
+        },
+        {
+            "name": "Increased ALP",
+            "percent": "30"
+        },
+        {
+            "name": "Eye edema",
+            "percent": "30"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "28"
+        },
+        {
+            "name": "Rash",
+            "percent": "26"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "20"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "20"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "18"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "16"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "2"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "15"
+        },
+        {
+            "name": "Grade",
+            "percent": "15"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "2"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "13"
+        },
+        {
+            "name": "Grade",
+            "percent": "12"
+        },
+        {
+            "name": "Constipation",
+            "percent": "10"
+        },
+        {
+            "name": "Blurred vision",
+            "percent": "20"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "12"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "10"
+        },
+        {
+            "name": "Neuropathy",
+            "percent": "10"
+        },
+        {
+            "name": "Photophobia",
+            "percent": "10"
+        },
+        {
+            "name": "Diplopia",
+            "percent": "10"
+        },
+        {
+            "name": "Reduced visual acuity",
+            "percent": "10"
+        },
+        {
+            "name": "Dry mouth",
+            "percent": "10"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "10"
+        },
+        {
+            "name": "Mouth ulceration",
+            "percent": "10"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "10"
+        },
+        {
+            "name": "Cholangitis",
+            "percent": "10"
+        },
+        {
+            "name": "Hepatotoxicity",
+            "percent": "10"
+        },
+        {
+            "name": "Liver disorder",
+            "percent": "10"
+        },
+        {
+            "name": "Cognitive disorders",
+            "percent": "10"
+        },
+        {
+            "name": "eg",
+            "percent": "10"
+        },
+        {
+            "name": "memory impairment",
+            "percent": "4.9"
+        },
+        {
+            "name": "amnesia",
+            "percent": "3.3"
+        },
+        {
+            "name": "confusional state",
+            "percent": "2"
+        },
+        {
+            "name": "disturbance in attention",
+            "percent": "3.3"
+        },
+        {
+            "name": "attention",
+            "percent": "1-2"
+        },
+        {
+            "name": "deficit",
+            "percent": "3.3"
+        },
+        {
+            "name": "hyperactivity disorder",
+            "percent": "4.9"
+        },
+        {
+            "name": "Alopecia",
+            "percent": "4.9"
+        },
+        {
+            "name": "Skin pigment changes",
+            "percent": "3.3"
+        },
+        {
+            "name": "hypopigmentation",
+            "percent": "3.3"
+        },
+        {
+            "name": "depigmentation",
+            "percent": "1.6"
+        },
+        {
+            "name": "discoloration",
+            "percent": "1.6"
+        },
+        {
+            "name": "hyperpigmentation",
+            "percent": "1.6"
+        },
+        {
+            "name": "Increased cholesterol",
+            "percent": "1.6"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": null
+        },
+        {
+            "name": "Increased ALP",
+            "percent": null
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": null
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "Hypertension",
+            "percent": null
+        },
+        {
+            "name": "Increased ALP",
+            "percent": null
+        },
+        {
+            "name": "Decreased neutrophils",
+            "percent": null
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Eye edema",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": null
+        },
+        {
+            "name": "Blood creatine phosphokinase increased",
+            "percent": null
+        }
+    ]
+}

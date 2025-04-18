@@ -1,0 +1,915 @@
+{
+    "name": "treprostinil",
+    "comment": "Rx",
+    "other_names": [
+        "Remodulin",
+        "Orenitram"
+    ],
+    "classes": [
+        "PAH",
+        "Prostacyclin Analogs"
+    ],
+    "source": "https://reference.medscape.com/drug/remodulin-orenitram-treprostinil-342402",
+    "pregnancy": {
+        "common": [
+            "Limited case reports of treprostinil insufficient to inform a drug-associated risk of adverse developmental outcomes; however, there are risks to mother and fetus associated with pulmonary arterial hypertension associated with an increased risk of maternal and fetal mortality; in animal studies, no adverse reproductive and developmental effects observed"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Animal reproductive studies have shown an adverse effect on fetus; in rats, administration to pregnant rats during period of organogenesis at doses greater than or equal to 10 mg/kg/day (approximately 15 times the human exposure at the dose of 3.5 mg BID on an AUC basis) resulted in decreased pregnancy rate, increased post-implantation loss, and decreased fetal viability and growth",
+                    "In rabbits, teratogenicity and decreased fetal viability and growth were observed at doses greater than or equal to 1.5 mg/kg/day (approximately 7 times the human exposure at dose of 3.5 mg BID on an AUC basis)"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on presence of treprostinil in human milk, effects on breastfed infant, or on milk production"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Extended-release tablets: Severe hepatic impairment (Child Pugh Class C)",
+                "Injectable: None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hepatic/renal impairment (titrate up slowly); such patients will likely be exposed to greater systemic concentrations relative to patients with normal hepatic or renal function",
+                "Use caution in patients with low arterial blood pressure (may produce symptomatic hypotension)",
+                "Do not take oral tablets with alcohol; faster release of treprostinil from the tablet may occur",
+                "The tablet shell does not dissolve and can lodge in a diverticulum in patients with diverticulosis",
+                "Abrupt withdrawal may worsen pulmonary arterial hypertension symptoms",
+                "Inhibits platelet aggregation and increases risk of bleeding; use caution in patients receiving concurrent anticoagulant/antiplatelet therapy",
+                "Indwelling central venous catherer associated with serious blood stream infections; use this method only in patients intolerant to the SC therapy",
+                "Experienced personnel required to administer therapy"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Dosage adjustment may be necessary if CYP2C8 inhibitors (eg, atazanavir, gemfibrozil, ritonavir) or inducers (eg, carbamazepine, phenobarbital, phenytoin, rifampin ) are added or withdrawn"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that decrease pulse or blood pressure to mitigate risk of excessive bradycardia and hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aldesleukin",
+            "description": {
+                "common": "aldesleukin increases effects of treprostinil by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "candesartan",
+            "description": {
+                "common": "treprostinil increases effects of candesartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cannabidiol",
+            "description": {
+                "common": "cannabidiol will increase the level or effect of treprostinil by  decreasing metabolism. Modify Therapy/Monitor Closely. Cannabidiol may potentially  inhibit CYP2C8 activity. Consider reducing the dose when concomitantly using CYP2C8 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbidopa",
+            "description": {
+                "common": "carbidopa increases effects of treprostinil by pharmacodynamic synergism. Use Caution/Monitor. Therapy with carbidopa, given with or without levodopa or carbidopa-levodopa combination products, is started, dosage adjustment of the antihypertensive drug may be required."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "dabigatran and treprostinil both increase  anticoagulation. Use Caution/Monitor. Both drugs have the potential to cause bleeding. Concomitant use may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dichlorphenamide",
+            "description": {
+                "common": "dichlorphenamide and treprostinil both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "eluxadoline increases levels of treprostinil by decreasing metabolism. Use Caution/Monitor. Eluxadoline may increase the systemic exposure of coadministered OATP1B1 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epoprostenol",
+            "description": {
+                "common": "epoprostenol, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eprosartan",
+            "description": {
+                "common": "treprostinil increases effects of eprosartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoldopam",
+            "description": {
+                "common": "fenoldopam, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil triglycerides",
+            "description": {
+                "common": "fish oil triglycerides will increase the level or effect of treprostinil by  anticoagulation. Use Caution/Monitor. Prolonged bleeding reported in patients taking antiplatelet agents or anticoagulants and oral omega-3 fatty acids. Periodically monitor bleeding time in patients receiving fish oil triglycerides and concomitant antiplatelet agents or anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea, treprostinil. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydralazine",
+            "description": {
+                "common": "hydralazine, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of treprostinil by  anticoagulation. Use Caution/Monitor. Ibrutinib may increase the risk of hemorrhage in patients receiving antiplatelet or anticoagulant therapies and monitor for signs of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloprost",
+            "description": {
+                "common": "iloprost, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "treprostinil increases effects of irbesartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "levodopa increases effects of treprostinil by pharmacodynamic synergism. Use Caution/Monitor. Consider decreasing dosage of antihypertensive agent."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "treprostinil increases effects of losartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of treprostinil by  Other (see comment). Use Caution/Monitor. Inhibits CYP2C8/2C9; use smallest recommended doses for substrates and monitor"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "minoxidil",
+            "description": {
+                "common": "minoxidil, treprostinil.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "treprostinil increases effects of olmesartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "omaveloxolone will decrease the level or effect of treprostinil by  Other (see comment). Use Caution/Monitor. Omaveloxolone may reduce systemic exposure of sensitive CYP2C8 substrates. Check prescribing information of substrate if dosage modification is needed.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "treprostinil increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of treprostinil by  Other (see comment). Modify Therapy/Monitor Closely. Stiripentol is a CYP2C8 inhibitor. Consider dosage reduction for CYP2C8 substrates if adverse effects are experienced when coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will increase the level or effect of treprostinil by  affecting hepatic enzyme CYP2C19 metabolism. Use Caution/Monitor. Tecovirimat is a weak inhibitor of CYP2C8 and CYP2C19. Monitor for adverse effects if coadministered with sensitive substrates of these enzymes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "treprostinil increases effects of telmisartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teriflunomide",
+            "description": {
+                "common": "teriflunomide increases levels of treprostinil by Other (see comment). Use Caution/Monitor. \nComment: Teriflunomide inhibits CYP2C8; caution when coadministered with CYP2C8 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valsartan",
+            "description": {
+                "common": "treprostinil increases effects of valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xipamide",
+            "description": {
+                "common": "xipamide increases effects of treprostinil by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "treprostinil increases effects of acebutolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "agrimony",
+            "description": {
+                "common": "agrimony increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "treprostinil increases effects of alfuzosin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amiloride",
+            "description": {
+                "common": "treprostinil increases effects of amiloride by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amlodipine",
+            "description": {
+                "common": "treprostinil increases effects of amlodipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "treprostinil increases effects of asenapine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "treprostinil increases effects of atenolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "treprostinil increases effects of benazepril by pharmacodynamic synergism. Minor/Significance Unknown. Enhanced hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "treprostinil increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "treprostinil increases effects of betaxolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "treprostinil increases effects of bisoprolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "treprostinil increases effects of bosentan by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bumetanide",
+            "description": {
+                "common": "treprostinil increases effects of bumetanide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "treprostinil increases effects of captopril by pharmacodynamic synergism. Minor/Significance Unknown. Both drugs lower blood pressure. Monitor blood pressure."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "treprostinil increases effects of carvedilol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "treprostinil increases effects of celiprolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "treprostinil increases effects of chlorothiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "treprostinil increases effects of chlorthalidone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "clevidipine",
+            "description": {
+                "common": "treprostinil increases effects of clevidipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "treprostinil increases effects of clonidine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cornsilk",
+            "description": {
+                "common": "cornsilk increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "treprostinil increases effects of cyclopenthiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "treprostinil increases effects of diltiazem by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "doxazosin",
+            "description": {
+                "common": "treprostinil increases effects of doxazosin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "treprostinil increases effects of drospirenone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "treprostinil increases effects of enalapril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "treprostinil increases effects of eplerenone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "epoprostenol",
+            "description": {
+                "common": "treprostinil increases effects of epoprostenol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "treprostinil increases effects of esmolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ethacrynic acid",
+            "description": {
+                "common": "treprostinil increases effects of ethacrynic acid by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "felodipine",
+            "description": {
+                "common": "treprostinil increases effects of felodipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenoldopam",
+            "description": {
+                "common": "treprostinil increases effects of fenoldopam by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "forskolin",
+            "description": {
+                "common": "forskolin increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "treprostinil increases effects of fosinopril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "treprostinil increases effects of furosemide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "treprostinil increases effects of guanfacine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydralazine",
+            "description": {
+                "common": "treprostinil increases effects of hydralazine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "treprostinil increases effects of hydrochlorothiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "iloprost",
+            "description": {
+                "common": "treprostinil increases effects of iloprost by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imidapril",
+            "description": {
+                "common": "treprostinil increases effects of imidapril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "treprostinil increases effects of indapamide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "isradipine",
+            "description": {
+                "common": "treprostinil increases effects of isradipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketanserin",
+            "description": {
+                "common": "treprostinil increases effects of ketanserin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "treprostinil increases effects of labetalol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "treprostinil increases effects of lisinopril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "maitake",
+            "description": {
+                "common": "maitake increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown. Maitake mushroom has anti-tumor effects (animal/in vitro research)."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mecamylamine",
+            "description": {
+                "common": "treprostinil increases effects of mecamylamine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "treprostinil increases effects of methyclothiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "treprostinil increases effects of metolazone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "treprostinil increases effects of metoprolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "minoxidil",
+            "description": {
+                "common": "treprostinil increases effects of minoxidil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "treprostinil increases effects of moexipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "moxisylyte",
+            "description": {
+                "common": "treprostinil increases effects of moxisylyte by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "moxonidine",
+            "description": {
+                "common": "treprostinil increases effects of moxonidine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "treprostinil increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "treprostinil increases effects of nebivolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "treprostinil increases effects of nicardipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nifedipine",
+            "description": {
+                "common": "treprostinil increases effects of nifedipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nisoldipine",
+            "description": {
+                "common": "treprostinil increases effects of nisoldipine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "treprostinil increases effects of penbutolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "treprostinil increases effects of perindopril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "phenoxybenzamine",
+            "description": {
+                "common": "treprostinil increases effects of phenoxybenzamine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "phentolamine",
+            "description": {
+                "common": "treprostinil increases effects of phentolamine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "treprostinil increases effects of pindolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "treprostinil increases effects of prazosin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "treprostinil increases effects of propranolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "treprostinil increases effects of quinapril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "treprostinil increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "reishi",
+            "description": {
+                "common": "reishi increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse, treprostinil. Other (see comment). Minor/Significance Unknown. \nComment: Theoretically, shepherd's purse may interfere with BP control."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "treprostinil increases effects of silodosin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "treprostinil increases effects of sotalol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "treprostinil increases effects of spironolactone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "terazosin",
+            "description": {
+                "common": "treprostinil increases effects of terazosin by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "treprostinil increases effects of timolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tizanidine",
+            "description": {
+                "common": "tizanidine increases effects of treprostinil by pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "torsemide",
+            "description": {
+                "common": "treprostinil increases effects of torsemide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trandolapril",
+            "description": {
+                "common": "treprostinil increases effects of trandolapril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "triamterene",
+            "description": {
+                "common": "treprostinil increases effects of triamterene by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "treprostinil increases effects of verapamil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "zotepine",
+            "description": {
+                "common": "treprostinil increases effects of zotepine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Thrombophlebitis associated with peripheral IV infusion",
+            "percent": null
+        },
+        {
+            "name": "thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "bone pain",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "dizziness",
+            "percent": null
+        },
+        {
+            "name": "arthralgia",
+            "percent": null
+        },
+        {
+            "name": "myalgia",
+            "percent": null
+        },
+        {
+            "name": "muscle spasm",
+            "percent": null
+        },
+        {
+            "name": "and pain in extremity",
+            "percent": null
+        },
+        {
+            "name": "Generalized rashes",
+            "percent": null
+        },
+        {
+            "name": "sometimes macular or papular in nature",
+            "percent": null
+        },
+        {
+            "name": "and cellulitis have been infrequently reported",
+            "percent": null
+        }
+    ]
+}

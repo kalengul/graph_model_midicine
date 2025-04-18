@@ -1,0 +1,177 @@
+{
+    "name": "remdesivir",
+    "comment": "Rx",
+    "other_names": [
+        "Veklury"
+    ],
+    "classes": [
+        "Antivirals",
+        "SARS-CoV-2"
+    ],
+    "source": "https://reference.medscape.com/drug/veklury-remdesivir-4000090",
+    "pregnancy": {
+        "common": [
+            "There is a pregnancy exposure registry that monitors pregnancy outcomes in individuals exposed to the drug during pregnancy; pregnant and recently pregnant individuals can go to ",
+            "Available data from published case reports and compassionate use of remdesivir in pregnant women are insufficient to evaluate for a drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes",
+            "Data are not available regarding the presence of remdesivir in human milk, effects on breastfed infants, or effects on milk production"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "In nonclinical reproductive toxicity studies, remdesivir demonstrated no adverse effect on embryofetal development when administered to pregnant animals at systemic exposures of the predominant circulating metabolite of remdesivir (GS-441524) that were 4 times (rats and rabbits) the exposure in humans at the recommended human dose"
+                ]
+            },
+            {
+                "type": "Clinical considerations",
+                "description": [
+                    "There are maternal and fetal risks associated with untreated COVID-19 in pregnancy; COVID-19 in pregnancy is associated with adverse maternal and fetal outcomes, including preeclampsia, eclampsia, preterm birth, premature rupture of membranes, venous thromboembolic disease, and fetal death"
+                ]
+            },
+            {
+                "type": "Animal studies",
+                "description": [
+                    "In nonclinical reproductive toxicity studies, remdesivir demonstrated no adverse effect on embryofetal development when administered to pregnant animals at systemic exposures of the predominant circulating metabolite of remdesivir (GS-441524) that were 4 times (rats and rabbits) the exposure in humans at the recommended human dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data are not available regarding the presence of remdesivir in human milk, effects on breastfed infants, or effects on milk production"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to drug or any ingredient"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hypersensitivity, including infusion-related reactions"
+            ],
+            "specific": [
+                {
+                    "type": "Hepatic transaminases",
+                    "description": [
+                        "Hypersensitivity, including infusion-related reactions observed during and following administration; most occur within 1 hr of administration ",
+                        "Signs and symptoms may include hypotension, hypertension, tachycardia, bradycardia, hypoxia, fever, dyspnea, wheezing, angioedema, rash, nausea, diaphoresis, and shivering",
+                        "Consider slowing infusion rate (up to 120 minutes) to potentially prevent these signs and symptoms; observe patient for 1 hr after completing administration ",
+                        "If clinically significant reaction occurs, discontinue immediately and implement appropriate treatment"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Increased hepatic transaminases reported in healthy volunteers and patients with COVID-19",
+                        "Because transaminase elevations are reported as a clinical feature of COVID-19, and the incidence in clinical trials was similar in patients receiving placebo versus remdesivir, it is challenging to discern the contribution of remdesivir to transaminase elevations in patients with COVID-19",
+                        "ALT levels increase to >10x ULN: Consider discontinuing remdesivir",
+                        "ALT elevation accompanied by signs or symptoms of liver inflammation: Discontinue remdesivir"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine decreases effects of remdesivir by unspecified interaction mechanism. Avoid or Use Alternate Drug. Coadministration not recommended owing to antagonistic effect on remdesivir?s intracellular metabolic activation and antiviral activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxychloroquine sulfate decreases effects of remdesivir by unspecified interaction mechanism. Avoid or Use Alternate Drug. Coadministration not recommended owing to antagonistic effect on remdesivir?s intracellular metabolic activation and antiviral activity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of remdesivir by immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "remdesivir increases effects of warfarin by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "eGFR decreased",
+            "percent": "18"
+        },
+        {
+            "name": "Decreased CrCl",
+            "percent": "10-18"
+        },
+        {
+            "name": "calculated by Cockcroft",
+            "percent": "5-15"
+        },
+        {
+            "name": "Gault",
+            "percent": "6-15"
+        },
+        {
+            "name": "Creatinine increased",
+            "percent": "11-12"
+        },
+        {
+            "name": "Hemoglobin decreased",
+            "percent": "11"
+        },
+        {
+            "name": "Glucose increased",
+            "percent": "1-10"
+        },
+        {
+            "name": "Lymphocytes decreased",
+            "percent": "9"
+        },
+        {
+            "name": "Prothrombin time increased",
+            "percent": "3-8"
+        },
+        {
+            "name": "ALT increased",
+            "percent": "6-7"
+        },
+        {
+            "name": "AST increased",
+            "percent": "3-5"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2"
+        },
+        {
+            "name": "Bilirubin increased",
+            "percent": "2"
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": "2"
+        },
+        {
+            "name": "Generalized seizure",
+            "percent": "2"
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        }
+    ]
+}

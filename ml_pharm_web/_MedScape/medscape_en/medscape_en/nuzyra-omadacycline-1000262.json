@@ -1,0 +1,768 @@
+{
+    "name": "omadacycline",
+    "comment": "Rx",
+    "other_names": [
+        "Nuzyra"
+    ],
+    "classes": [
+        "Tetracyclines"
+    ],
+    "source": "https://reference.medscape.com/drug/nuzyra-omadacycline-1000262",
+    "pregnancy": {
+        "common": [
+            "Like other tetracycline-class antibacterial drugs, may cause discoloration of deciduous teeth and reversible inhibition of bone growth when administered during second and third trimesters of pregnancy",
+            "Pregnant women should discontinue omadacycline as soon as pregnancy is recognized"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Administration during organogenesis resulted in fetal loss and/or congenital malformations in pregnant rats and rabbits at 7 times and 3 times the mean AUC exposure, respectively, of the clinical IV dose of 100 mg and the oral dose of 300 mg; reductions in fetal weight occurred in rats at all administered doses"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Males: Based on animal studies, can lead to impaired spermiation and sperm maturation, resulting in abnormal sperm morphology and poor motility",
+                    "Females: Based on animal studies, omadacycline affected fertility parameters, resulting in reduced ovulation and increased embryonic loss at intended human exposures"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Advise women of reproductive potential to use highly effective form of contraception"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Tetracyclines are excreted in human milk",
+            "Because of the potential for serious adverse reactions on bone and tooth development in nursing infants, omadacycline is not recommended in breastfeeding women",
+            "Advise women not to breastfeed during treatment and for 4 days after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to any antimicrobials#tetracyclines"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Mortality imbalance observed in the CABP clinical trial, with 8 deaths (2%) occurring in patients treated with omadacycline compared with 4 deaths (1%) in patients treated with moxifloxacin; cause not established; all deaths, in both treatment arms, occurred in patients aged >65 years and most patients had multiple comorbidities",
+                "Clostridium difficile-associated diarrhea (CDAD) reported with use of nearly all antibacterial agents, and may range in severity from mild diarrhea to fatal colitis; if CDAD is suspected or confirmed, consider discontinuing ongoing antibacterial drug use not directed against C difficile and initiating treatment-appropriate measures",
+                "Bacterial resistance to antimicrobials#tetracyclines may develop; because of this, use only as indicated",
+                "As with other antibiotics, use may result in overgrowth of nonsusceptible organisms, including fungi",
+                "Hypersensitivity reactions reported; life-threatening hypersensitivity (anaphylactic) reactions reported with other antimicrobials#tetracyclines (see Contraindications)"
+            ],
+            "specific": [
+                {
+                    "type": "Tetracycline class effects",
+                    "description": [
+                        "Intracranial hypertension, pseudotumor cerebri, antianabolic action reported in adults and adolescents associated with tetracycline use; clinical manifestations include headache, blurred vision, and papilledema",
+                        "Photosensitivity manifested by an exaggerated sunburn reaction observed with antimicrobials#tetracyclines; instruct patients to minimize or avoid exposure to natural or artificial sunlight",
+                        "Increased BUN, azotemia, acidosis, hyperphosphatemia, pancreatitis, and abnormal liver function tests may occur",
+                        "Discontinue if these adverse effects suspected"
+                    ]
+                },
+                {
+                    "type": "Teratogenic effects",
+                    "description": [
+                        "Can cause fetal harm if used during pregnancy",
+                        "Use during tooth and bone development",
+                        "Use during tooth development (last half of pregnancy, infancy, and childhood to age 8 years) may cause permanent discoloration of the teeth (yellow-grey-brown); enamel hypoplasia reported with antimicrobials#tetracyclines; advise patient of potential risk",
+                        "May cause reversible inhibition of bone growth during pregnancy, infancy, and early childhood",
+                        "All antimicrobials#tetracyclines form a stable calcium complex in any bone-forming tissue",
+                        "Decreased fibula growth rate observed in premature infants given PO tetracycline in doses of 25 mg/kg q6hr; reversible when drug discontinued",
+                        "Also see Pregnancy"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Avoid coadministration with oral retinoids; may have additive effects on increasing intracranial pressure",
+                        "Coadministration with antacids containing aluminum, calcium, or magnesium; bismuth subsalicylate; and iron-containing preparations decrease tetracycline absorption, which may decrease efficacy; separate doses",
+                        "May interfere with bacteriocidal action of penicillin; avoid coadministration",
+                        "May depress plasma prothrombin activity, which may increase bleeding risk in patients who are on anticoagulant therapy"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "acitretin",
+            "description": {
+                "common": "acitretin increases toxicity of omadacycline by Mechanism: unknown. Contraindicated. Concomitant use of oral retinoids with tetracyclines may increase the risk of pseudotumor cerebri/intracranial hypertension. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amoxicillin",
+            "description": {
+                "common": "omadacycline decreases effects of amoxicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ampicillin",
+            "description": {
+                "common": "omadacycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atracurium",
+            "description": {
+                "common": "omadacycline increases effects of atracurium by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bexarotene",
+            "description": {
+                "common": "bexarotene increases toxicity of omadacycline by Mechanism: unknown. Avoid or Use Alternate Drug. Concomitant use of oral retinoids with tetracyclines may increase risk of pseudotumor cerebri/intracranial hypertension. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "omadacycline, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cisatracurium",
+            "description": {
+                "common": "omadacycline increases effects of cisatracurium by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dicloxacillin",
+            "description": {
+                "common": "omadacycline decreases effects of dicloxacillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isotretinoin",
+            "description": {
+                "common": "isotretinoin increases toxicity of omadacycline by Mechanism: unknown. Avoid or Use Alternate Drug. Concomitant use of oral retinoids with tetracyclines may increase risk of pseudotumor cerebri/intracranial hypertension. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "omadacycline decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "omadacycline decreases effects of nafcillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxacillin",
+            "description": {
+                "common": "omadacycline decreases effects of oxacillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pancuronium",
+            "description": {
+                "common": "omadacycline increases effects of pancuronium by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "penicillin G aqueous",
+            "description": {
+                "common": "omadacycline decreases effects of penicillin G aqueous by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "penicillin G benzathine",
+            "description": {
+                "common": "omadacycline decreases effects of penicillin G benzathine by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "penicillin G procaine",
+            "description": {
+                "common": "omadacycline decreases effects of penicillin G procaine by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "penicillin VK",
+            "description": {
+                "common": "omadacycline decreases effects of penicillin VK by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "piperacillin",
+            "description": {
+                "common": "omadacycline decreases effects of piperacillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rocuronium",
+            "description": {
+                "common": "omadacycline increases effects of rocuronium by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride decreases levels of omadacycline by inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Administer tetracyclines at least 2 hr before and no less than 6 hr after each dose to avoid chelation with magnesium. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate decreases levels of omadacycline by inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Administer tetracyclines at least 2 hr before and no less than 6 hr after each dose to avoid chelation with magnesium. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "succinylcholine",
+            "description": {
+                "common": "omadacycline increases effects of succinylcholine by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "omadacycline decreases effects of ticarcillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tretinoin",
+            "description": {
+                "common": "tretinoin increases toxicity of omadacycline by Mechanism: unknown. Avoid or Use Alternate Drug. Concomitant use of oral retinoids with tetracyclines may increase risk of pseudotumor cerebri/intracranial hypertension. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vecuronium",
+            "description": {
+                "common": "omadacycline increases effects of vecuronium by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium trisilicate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium trisilicate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aminobenzoate potassium",
+            "description": {
+                "common": "aminobenzoate potassium will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ascorbic acid",
+            "description": {
+                "common": "ascorbic acid will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bismuth subgallate",
+            "description": {
+                "common": "bismuth subgallate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bismuth subsalicylate",
+            "description": {
+                "common": "bismuth subsalicylate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium acetate",
+            "description": {
+                "common": "calcium acetate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium chloride",
+            "description": {
+                "common": "calcium chloride will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium citrate",
+            "description": {
+                "common": "calcium citrate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium gluconate",
+            "description": {
+                "common": "calcium gluconate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium/vitamin D",
+            "description": {
+                "common": "calcium/vitamin D will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbonyl iron",
+            "description": {
+                "common": "carbonyl iron will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholestyramine",
+            "description": {
+                "common": "cholestyramine will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Monitor for decreased effects of tetracyclines if coadministered with a bile acid sequestrant.  Separate doses 2 or more hours if these agents are used concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chromium",
+            "description": {
+                "common": "chromium will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citric acid/sodium bicarbonate",
+            "description": {
+                "common": "citric acid/sodium bicarbonate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colesevelam",
+            "description": {
+                "common": "colesevelam will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Monitor for decreased effects of tetracyclines if coadministered with a bile acid sequestrant.  Separate doses 2 or more hours if these agents are used concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colestipol",
+            "description": {
+                "common": "colestipol will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Monitor for decreased effects of tetracyclines if coadministered with a bile acid sequestrant.  Separate doses 2 or more hours if these agents are used concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "copper",
+            "description": {
+                "common": "copper will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyanocobalamin",
+            "description": {
+                "common": "cyanocobalamin will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric carboxymaltose",
+            "description": {
+                "common": "ferric carboxymaltose will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric citrate",
+            "description": {
+                "common": "ferric citrate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric gluconate",
+            "description": {
+                "common": "ferric gluconate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric maltol",
+            "description": {
+                "common": "ferric maltol will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric pyrophosphate DIALYSATE",
+            "description": {
+                "common": "ferric pyrophosphate DIALYSATE will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous fumarate",
+            "description": {
+                "common": "ferrous fumarate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous gluconate",
+            "description": {
+                "common": "ferrous gluconate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous sulfate",
+            "description": {
+                "common": "ferrous sulfate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferumoxytol",
+            "description": {
+                "common": "ferumoxytol will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "folic acid",
+            "description": {
+                "common": "folic acid will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iodine",
+            "description": {
+                "common": "iodine will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iron dextran complex",
+            "description": {
+                "common": "iron dextran complex will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iron sucrose",
+            "description": {
+                "common": "iron sucrose will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iron/folic acid/vitamin/mineral",
+            "description": {
+                "common": "iron/folic acid/vitamin/mineral will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium chloride",
+            "description": {
+                "common": "magnesium chloride will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium citrate",
+            "description": {
+                "common": "magnesium citrate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium gluconate",
+            "description": {
+                "common": "magnesium gluconate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium hydroxide",
+            "description": {
+                "common": "magnesium hydroxide will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium supplement",
+            "description": {
+                "common": "magnesium supplement will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products; administer magnesium 2hr before the tetracycline or 4hr after the tetracycline.."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "manganese",
+            "description": {
+                "common": "manganese will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "molybdenum",
+            "description": {
+                "common": "molybdenum will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "multivitamins",
+            "description": {
+                "common": "multivitamins will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "multivitamins, vision",
+            "description": {
+                "common": "multivitamins, vision will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "niacin",
+            "description": {
+                "common": "niacin will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polysaccharide iron",
+            "description": {
+                "common": "polysaccharide iron will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pyridoxine",
+            "description": {
+                "common": "pyridoxine will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selenium",
+            "description": {
+                "common": "selenium will decrease the level or effect of omadacycline by  cation binding in GI tract. Modify Therapy/Monitor Closely. Do not take polyvalent cations within 4 hr before or after omadacycline."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium acid phosphate",
+            "description": {
+                "common": "sodium acid phosphate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium bicarbonate",
+            "description": {
+                "common": "sodium bicarbonate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium citrate/citric acid",
+            "description": {
+                "common": "sodium citrate/citric acid will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium phosphate rectal",
+            "description": {
+                "common": "sodium phosphate rectal will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "sodium picosulfate/magnesium oxide/anhydrous citric acid will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiamine",
+            "description": {
+                "common": "thiamine will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimagnesium citrate anhydrous",
+            "description": {
+                "common": "trimagnesium citrate anhydrous will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tripotassium dicitratobismuthate",
+            "description": {
+                "common": "tripotassium dicitratobismuthate will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vitamin B2",
+            "description": {
+                "common": "vitamin B2 will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Multivalent cation-containing products may impair absorption of tetracyclines, which may decrease its efficacy. Separate dosing of tetracyclines from these products."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "omadacycline increases effects of warfarin by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zinc",
+            "description": {
+                "common": "zinc will decrease the level or effect of omadacycline by  cation binding in GI tract. Modify Therapy/Monitor Closely. Separate administration of oral tetracycline derivatives and oral zinc salts by at least 2 hr."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Nausea",
+            "percent": "21.9"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "11.4"
+        },
+        {
+            "name": "Infusion site reactions",
+            "percent": "5.2"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "4.1"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "3.6"
+        },
+        {
+            "name": "Headache",
+            "percent": "3.3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3.2"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "3.7"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "3.4"
+        },
+        {
+            "name": "Increased GGT",
+            "percent": "2.6"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "2.6"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2.6"
+        },
+        {
+            "name": "Constipation",
+            "percent": "2.4"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2.4"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "2.1"
+        },
+        {
+            "name": "Headache",
+            "percent": "2.1"
+        }
+    ]
+}

@@ -1,0 +1,1627 @@
+{
+    "name": "phenylephrine/guaifenesin",
+    "comment": "OTC",
+    "other_names": [
+        "Sudafed PE Non-Drying Sinus Caplets"
+    ],
+    "classes": [
+        "Cough/Cold",
+        "Other Combos"
+    ],
+    "source": "https://reference.medscape.com/drug/sudafed-pe-non-drying-sinus-caplets-phenylephrine-iv-guaifenesin-999536",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Lactation: small amounts of phenylephrine excreted in breast milk, caution advised"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: small amounts of phenylephrine excreted in breast milk, caution advised"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [],
+            "specific": []
+        },
+        "cautions": {
+            "common": [],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "iobenguane I 123",
+            "description": {
+                "common": "phenylephrine decreases effects of iobenguane I 123 by receptor binding competition. Contraindicated. If clinically appropriate, discontinue drugs that compete for NE receptor sites for at least 5 half-lives; may cause false-negative imaging results."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "isocarboxazid increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "linezolid",
+            "description": {
+                "common": "linezolid increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "phenelzine increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "procarbazine",
+            "description": {
+                "common": "procarbazine increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "selegiline transdermal",
+            "description": {
+                "common": "selegiline transdermal increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "tranylcypromine increases effects of phenylephrine by pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "amitriptyline, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "amoxapine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabergoline",
+            "description": {
+                "common": "cabergoline, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "clomipramine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane increases toxicity of phenylephrine by Mechanism: unknown. Avoid or Use Alternate Drug. Risk of V tach, HTN."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "desipramine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "dihydroergotamine, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "dihydroergotamine intranasal, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxapram",
+            "description": {
+                "common": "doxapram increases effects of phenylephrine by pharmacodynamic synergism. Avoid or Use Alternate Drug. Additive pressor effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergoloid mesylates",
+            "description": {
+                "common": "ergoloid mesylates, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "ergotamine, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ether",
+            "description": {
+                "common": "ether increases toxicity of phenylephrine by Mechanism: unknown. Avoid or Use Alternate Drug. Risk of V tach, HTN."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etomidate",
+            "description": {
+                "common": "etomidate increases levels of phenylephrine by decreasing metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "imipramine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "isoflurane increases toxicity of phenylephrine by Mechanism: unknown. Avoid or Use Alternate Drug. Risk of V tach, HTN."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "lofepramine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "maprotiline, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methoxyflurane",
+            "description": {
+                "common": "methoxyflurane increases toxicity of phenylephrine by Mechanism: unknown. Avoid or Use Alternate Drug. Risk of V tach, HTN."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methylergonovine",
+            "description": {
+                "common": "methylergonovine, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Additive vasospasm; risk of hypertension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "nortriptyline, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propofol",
+            "description": {
+                "common": "propofol increases levels of phenylephrine by decreasing metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "protriptyline, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane increases toxicity of phenylephrine by Mechanism: unknown. Avoid or Use Alternate Drug. Risk of V tach, HTN."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "trazodone, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "trimipramine, phenylephrine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Tricyclic antidepressants increase or decrease effects of sympathomimetics, by blocking reuptake of NE, or blocking uptake of indirect sympathomimetics into the adrenergic neuron."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "yohimbe",
+            "description": {
+                "common": "yohimbe, phenylephrine. Mechanism: pharmacodynamic synergism. Contraindicated. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "alfentanil increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "alprazolam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "amitriptyline increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "amoxapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "arformoterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine, phenylephrine. Other (see comment). Use Caution/Monitor. \nComment: Due to the potential for increases in blood pressure and heart rate, atomoxetine should be used cautiously with vasopressors such as  phenylephrine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azelastine",
+            "description": {
+                "common": "azelastine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belladonna and opium",
+            "description": {
+                "common": "belladonna and opium increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benperidol",
+            "description": {
+                "common": "benperidol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benzphetamine",
+            "description": {
+                "common": "benzphetamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bromocriptine",
+            "description": {
+                "common": "bromocriptine, phenylephrine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Hypertension, V tach."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brompheniramine",
+            "description": {
+                "common": "brompheniramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butorphanol",
+            "description": {
+                "common": "butorphanol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "caffeine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbinoxamine",
+            "description": {
+                "common": "carbinoxamine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloral hydrate",
+            "description": {
+                "common": "chloral hydrate increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlordiazepoxide",
+            "description": {
+                "common": "chlordiazepoxide increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpheniramine",
+            "description": {
+                "common": "chlorpheniramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinnarizine",
+            "description": {
+                "common": "cinnarizine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clemastine",
+            "description": {
+                "common": "clemastine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "clomipramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonazepam",
+            "description": {
+                "common": "clonazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clorazepate",
+            "description": {
+                "common": "clorazepate increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "codeine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclizine",
+            "description": {
+                "common": "cyclizine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyproheptadine",
+            "description": {
+                "common": "cyproheptadine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "desipramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexchlorpheniramine",
+            "description": {
+                "common": "dexchlorpheniramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexfenfluramine",
+            "description": {
+                "common": "dexfenfluramine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmedetomidine",
+            "description": {
+                "common": "dexmedetomidine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmethylphenidate",
+            "description": {
+                "common": "dexmethylphenidate and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextroamphetamine",
+            "description": {
+                "common": "dextroamphetamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextromoramide",
+            "description": {
+                "common": "dextromoramide increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diamorphine",
+            "description": {
+                "common": "diamorphine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diethylpropion",
+            "description": {
+                "common": "diethylpropion and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "difenoxin hcl",
+            "description": {
+                "common": "difenoxin hcl increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dimenhydrinate",
+            "description": {
+                "common": "dimenhydrinate increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenhydramine",
+            "description": {
+                "common": "diphenhydramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenoxylate hcl",
+            "description": {
+                "common": "diphenoxylate hcl increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipipanone",
+            "description": {
+                "common": "dipipanone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "dobutamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopamine",
+            "description": {
+                "common": "dopamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "dopexamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "droperidol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droxidopa",
+            "description": {
+                "common": "phenylephrine and droxidopa both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor. May increase risk for supine hypertension"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "ephedrine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "epinephrine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine inhaled",
+            "description": {
+                "common": "phenylephrine, epinephrine inhaled.\nEither increases effects of the other by sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "epinephrine racemic and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estazolam",
+            "description": {
+                "common": "estazolam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethanol",
+            "description": {
+                "common": "ethanol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenfluramine",
+            "description": {
+                "common": "fenfluramine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurazepam",
+            "description": {
+                "common": "flurazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "formoterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydralazine",
+            "description": {
+                "common": "hydralazine, phenylephrine. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Sympathomimetics can antagonize the activity of some antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "hydromorphone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "hydroxyzine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "imipramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indacaterol, inhaled",
+            "description": {
+                "common": "phenylephrine increases effects of indacaterol, inhaled by Other (see comment). Use Caution/Monitor. \nComment: If additional adrenergic drugs are to be administered by any route, they should be used with caution because the sympathetic effects of indacaterol may be potentiated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "phenylephrine decreases effects of insulin degludec by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Sympathomimetics increase blood glucose by stimulating alpha and beta receptors; this action results in increased hepatic glucose production, glycogenolysis, and decreased insulin secretion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "phenylephrine decreases effects of insulin degludec/insulin aspart by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Sympathomimetics increase blood glucose by stimulating alpha and beta receptors; this action results in increased hepatic glucose production, glycogenolysis, and decreased insulin secretion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "phenylephrine decreases effects of insulin inhaled by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Sympathomimetics increase blood glucose by stimulating alpha and beta receptors; this action results in increased hepatic glucose production, glycogenolysis, and decreased insulin secretion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "isoproterenol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketotifen, ophthalmic",
+            "description": {
+                "common": "ketotifen, ophthalmic increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "levalbuterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levorphanol",
+            "description": {
+                "common": "levorphanol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lisdexamfetamine",
+            "description": {
+                "common": "lisdexamfetamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "lofepramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loprazolam",
+            "description": {
+                "common": "loprazolam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorazepam",
+            "description": {
+                "common": "lorazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lormetazepam",
+            "description": {
+                "common": "lormetazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine",
+            "description": {
+                "common": "loxapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine inhaled",
+            "description": {
+                "common": "loxapine inhaled increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "maprotiline increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "marijuana",
+            "description": {
+                "common": "marijuana increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meperidine",
+            "description": {
+                "common": "meperidine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meprobamate",
+            "description": {
+                "common": "meprobamate increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "metaproterenol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "methadone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methamphetamine",
+            "description": {
+                "common": "methamphetamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyldopa",
+            "description": {
+                "common": "methyldopa increases effects of phenylephrine by unknown mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylenedioxymethamphetamine",
+            "description": {
+                "common": "methylenedioxymethamphetamine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "midazolam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midodrine",
+            "description": {
+                "common": "midodrine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "mirtazapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "modafinil and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "morphine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "motherwort",
+            "description": {
+                "common": "motherwort increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxonidine",
+            "description": {
+                "common": "moxonidine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabilone",
+            "description": {
+                "common": "nabilone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "nadolol increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nalbuphine",
+            "description": {
+                "common": "nalbuphine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "norepinephrine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "nortriptyline increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olodaterol inhaled",
+            "description": {
+                "common": "phenylephrine and olodaterol inhaled both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor. Caution with coadministration of adrenergic drugs by any route because of additive sympathetic effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "opium tincture",
+            "description": {
+                "common": "opium tincture increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxazepam",
+            "description": {
+                "common": "oxazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "oxycodone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymetazoline topical",
+            "description": {
+                "common": "oxymetazoline topical and phenylephrine both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymorphone",
+            "description": {
+                "common": "oxymorphone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxytocin",
+            "description": {
+                "common": "oxytocin increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "papaveretum",
+            "description": {
+                "common": "papaveretum increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentazocine",
+            "description": {
+                "common": "pentazocine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phendimetrazine",
+            "description": {
+                "common": "phendimetrazine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phentermine",
+            "description": {
+                "common": "phentermine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pholcodine",
+            "description": {
+                "common": "pholcodine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "pimozide increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "pindolol increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "pirbuterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promazine",
+            "description": {
+                "common": "promazine, phenylephrine. Mechanism: unknown. Use Caution/Monitor. Risk of cardiac arrhythmia or sudden death, more likely w/thioridazine than other phenothiazines.  Interaction more likely in certain predisposed pts. only."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "promethazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propofol",
+            "description": {
+                "common": "propofol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propylhexedrine",
+            "description": {
+                "common": "phenylephrine and propylhexedrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "protriptyline increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pseudoephedrine",
+            "description": {
+                "common": "phenylephrine and pseudoephedrine both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quazepam",
+            "description": {
+                "common": "quazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "quetiapine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rasagiline",
+            "description": {
+                "common": "rasagiline increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "risperidone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "phenylephrine and safinamide both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor. Monitor patients for hypertension if safinamide is prescribed concomitantly with prescription or nonprescription sympathomimetics, including nasal, oral, or ophthalmic decongestants and cold remedies."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "salmeterol and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "scullcap",
+            "description": {
+                "common": "scullcap increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selegiline",
+            "description": {
+                "common": "selegiline increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "serdexmethylphenidate/dexmethylphenidate",
+            "description": {
+                "common": "serdexmethylphenidate/dexmethylphenidate and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solriamfetol",
+            "description": {
+                "common": "phenylephrine and solriamfetol both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "sufentanil increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tapentadol",
+            "description": {
+                "common": "tapentadol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temazepam",
+            "description": {
+                "common": "temazepam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "terbutaline and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiothixene",
+            "description": {
+                "common": "thiothixene increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "timolol increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topiramate",
+            "description": {
+                "common": "topiramate increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tramadol",
+            "description": {
+                "common": "tramadol increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "trazodone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "triazolam increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclofos",
+            "description": {
+                "common": "triclofos increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "trifluoperazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "trimipramine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triprolidine",
+            "description": {
+                "common": "triprolidine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xylometazoline",
+            "description": {
+                "common": "phenylephrine and xylometazoline both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "yohimbine",
+            "description": {
+                "common": "yohimbine and phenylephrine both decrease  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziconotide",
+            "description": {
+                "common": "ziconotide increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "ziprasidone increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "desmopressin",
+            "description": {
+                "common": "desmopressin increases effects of phenylephrine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "doxazosin",
+            "description": {
+                "common": "doxazosin, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "eucalyptus",
+            "description": {
+                "common": "eucalyptus increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "moxisylyte",
+            "description": {
+                "common": "moxisylyte, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "phenoxybenzamine",
+            "description": {
+                "common": "phenoxybenzamine, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "phentolamine",
+            "description": {
+                "common": "phentolamine, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "prazosin, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sage",
+            "description": {
+                "common": "sage increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "silodosin, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "terazosin",
+            "description": {
+                "common": "terazosin, phenylephrine.\nEither decreases effects of the other by Mechanism: pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Anxiety",
+            "percent": null
+        },
+        {
+            "name": "Nervousness",
+            "percent": null
+        },
+        {
+            "name": "Restlessness",
+            "percent": null
+        },
+        {
+            "name": "Tremor",
+            "percent": null
+        },
+        {
+            "name": "Weakness",
+            "percent": null
+        },
+        {
+            "name": "Insomnia",
+            "percent": null
+        },
+        {
+            "name": "Hallucinations",
+            "percent": null
+        },
+        {
+            "name": "Convulsions",
+            "percent": null
+        },
+        {
+            "name": "CNS depression",
+            "percent": null
+        },
+        {
+            "name": "Tachycardia",
+            "percent": null
+        },
+        {
+            "name": "Palpitations",
+            "percent": null
+        },
+        {
+            "name": "Arrhythmias",
+            "percent": null
+        },
+        {
+            "name": "Cardiovascular collapse with hypotension",
+            "percent": null
+        },
+        {
+            "name": "Respiratory difficulty",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Dysuria",
+            "percent": null
+        },
+        {
+            "name": "Pallor",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,565 @@
+{
+    "name": "streptozocin",
+    "comment": "Rx",
+    "other_names": [
+        "Zanosar"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Alkylating"
+    ],
+    "source": "https://reference.medscape.com/drug/zanosar-streptozocin-342128",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: D",
+            "Lactation: not known if excreted in breast milk, do not nurse"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: not known if excreted in breast milk, do not nurse"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "The drug should be administered under the supervision of an experienced cancer chemotherapy physician in a facility equipped to monitor drug tolerance and to protect and maintain a patient compromised by drug toxicity",
+                "Renal toxicity is dose-related and cumulative and may be severe or fatal",
+                "Nausea and vomiting may be severe and treatment limiting at times",
+                "Liver dysfunction, diarrhea, and hematologic changes reported",
+                "Parenteral streptozocin is mutagenic and found to be tumorigenic in some rodents",
+                "The physician must weigh risks versus benefits to the patient"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity; pregnancy"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Risk of severe nephrotoxicity, dose-related & cumulative (ie, >1500 mg/m²/dose may cause azotemia)",
+                "Risk of severe nausea/vomiting",
+                "Rapid infusion may cause burning sensation",
+                "May alter glucose metabolism in some patients",
+                "Avoid pregnancy"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "amphotericin B deoxycholate",
+            "description": {
+                "common": "amphotericin B deoxycholate and streptozocin both increase  nephrotoxicity and/or ototoxicity. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "streptozocin and tenofovir DF both increase  nephrotoxicity and/or ototoxicity. Contraindicated. Streptozocin should not be used in combination with or concomitantly with other potential nephrotoxins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "axicabtagene ciloleucel",
+            "description": {
+                "common": "streptozocin, axicabtagene ciloleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brexucabtagene autoleucel",
+            "description": {
+                "common": "streptozocin, brexucabtagene autoleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cidofovir",
+            "description": {
+                "common": "cidofovir and streptozocin both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug. Concomitant use of cidofovir and agents with nephrotoxic potential is contraindicated. Such agents must be discontinued at least 7 days prior to starting therapy with cidofovir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciltacabtagene autoleucel",
+            "description": {
+                "common": "streptozocin, ciltacabtagene autoleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idecabtagene vicleucel",
+            "description": {
+                "common": "streptozocin, idecabtagene vicleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ioversol",
+            "description": {
+                "common": "ioversol and streptozocin both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lisocabtagene maraleucel",
+            "description": {
+                "common": "streptozocin, lisocabtagene maraleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of streptozocin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hrbefore, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, streptozocin.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tisagenlecleucel",
+            "description": {
+                "common": "streptozocin, tisagenlecleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tofacitinib",
+            "description": {
+                "common": "streptozocin, tofacitinib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may increase risk of myelosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acyclovir",
+            "description": {
+                "common": "acyclovir and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "adefovir",
+            "description": {
+                "common": "adefovir and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amikacin",
+            "description": {
+                "common": "amikacin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendamustine",
+            "description": {
+                "common": "bendamustine, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "busulfan",
+            "description": {
+                "common": "busulfan, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capreomycin",
+            "description": {
+                "common": "capreomycin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carboplatin",
+            "description": {
+                "common": "carboplatin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carmustine",
+            "description": {
+                "common": "carmustine, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorambucil",
+            "description": {
+                "common": "chlorambucil, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "streptozocin decreases effects of cholera vaccine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs and corticosteroids (used in greater than physiologic doses), may reduce the immune response to cholera vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisplatin",
+            "description": {
+                "common": "cisplatin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colistin",
+            "description": {
+                "common": "colistin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dacarbazine",
+            "description": {
+                "common": "dacarbazine, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "streptozocin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "streptozocin increases levels of doxorubicin by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "streptozocin increases levels of doxorubicin liposomal by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "streptozocin increases effects of fingolimod by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Concomitant therapy is expected to increase the risk of immunosuppression. Use caution when switching patients from long-acting therapies with immune effects. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "foscarnet and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gentamicin",
+            "description": {
+                "common": "gentamicin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza A (H5N1) vaccine",
+            "description": {
+                "common": "streptozocin decreases effects of influenza A (H5N1) vaccine by pharmacodynamic antagonism. Use Caution/Monitor. Immunosuppressive therapies may reduce immune response to H5N1 vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza virus vaccine (H5N1), adjuvanted",
+            "description": {
+                "common": "streptozocin decreases effects of influenza virus vaccine (H5N1), adjuvanted by pharmacodynamic antagonism. Use Caution/Monitor. Immunosuppressive therapies may reduce immune response to H5N1 vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "streptozocin and isavuconazonium sulfate both decrease  immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomustine",
+            "description": {
+                "common": "lomustine, streptozocin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "methotrexate and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "neomycin PO",
+            "description": {
+                "common": "neomycin PO and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC, streptozocin.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Consider the risk of additive immune system effects when coadministering immunosuppressive therapies with coadministration. When switching from therapies with immune effects, take into account the duration and mechanism of action of these therapies when initiating ofatumumab SC."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paromomycin",
+            "description": {
+                "common": "paromomycin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "pentamidine and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polymyxin B",
+            "description": {
+                "common": "polymyxin B and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and streptozocin both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sipuleucel-T",
+            "description": {
+                "common": "streptozocin decreases effects of sipuleucel-T by pharmacodynamic antagonism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "streptomycin",
+            "description": {
+                "common": "streptomycin and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "streptozocin and tacrolimus both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiotepa",
+            "description": {
+                "common": "streptozocin, thiotepa.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin",
+            "description": {
+                "common": "streptozocin and tobramycin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, streptozocin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, streptozocin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vancomycin",
+            "description": {
+                "common": "streptozocin and vancomycin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, streptozocin.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Coadministration with drugs associated with nephrotoxicity may increase the risk for acute and/or chronic nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vitamin A",
+            "description": {
+                "common": "vitamin A, streptozocin. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Antioxidants such as vitamin A enhance the efficacy, and reduce toxicity, of antineoplastic drugs."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vitamin E",
+            "description": {
+                "common": "vitamin E, streptozocin. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Antioxidants such as vitamin E enhance the efficacy, and reduce toxicity, of antineoplastic drugs."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Nephrotoxicity",
+            "percent": "75"
+        },
+        {
+            "name": "up to",
+            "percent": "90"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "25"
+        },
+        {
+            "name": "up to",
+            "percent": "20"
+        },
+        {
+            "name": "if no antiemetic",
+            "percent": "10-20"
+        },
+        {
+            "name": "Metabolic changes",
+            "percent": null
+        },
+        {
+            "name": "including elevated LFTs",
+            "percent": null
+        },
+        {
+            "name": "increased LDH",
+            "percent": null
+        },
+        {
+            "name": "Hypoglycemia",
+            "percent": null
+        },
+        {
+            "name": "Myelosuppression",
+            "percent": null
+        },
+        {
+            "name": "Confusion Lethargy Depression",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Fever",
+            "percent": null
+        },
+        {
+            "name": "Chills",
+            "percent": null
+        },
+        {
+            "name": "Hematologic toxicity",
+            "percent": null
+        },
+        {
+            "name": "fatal reported",
+            "percent": null
+        },
+        {
+            "name": "Injection site reactions",
+            "percent": null
+        },
+        {
+            "name": "Decreased liver function",
+            "percent": null
+        },
+        {
+            "name": "Jaundice",
+            "percent": null
+        },
+        {
+            "name": "Nail changes",
+            "percent": null
+        },
+        {
+            "name": "Nephrogenic diabetes insipidus",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        }
+    ]
+}

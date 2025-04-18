@@ -1,0 +1,581 @@
+{
+    "name": "ampicillin",
+    "comment": "Rx",
+    "other_names": [
+        "Ampi",
+        "Omnipen",
+        "Penglobe",
+        "Principen"
+    ],
+    "classes": [
+        "Penicillins",
+        "Amino"
+    ],
+    "source": "https://reference.medscape.com/drug/ampi-omnipen-ampicillin-342475",
+    "pregnancy": {
+        "common": [
+            "Pregnancy category: B",
+            "Lactation: Excreted in breast milk; use caution"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Excreted in breast milk; use caution"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Use caution in allergy to cephalosporins, carbapenems",
+                "Adjust dose in renal failure; evaluate rash and differentiate from hypersensitivity reaction",
+                "Endocarditis prophylaxis: Use only for high-risk patients, per AHA Guidelines",
+                "Prolonged use associated with fungal or bacterial superinfection",
+                "Rash has developed during therapy in high percentage of patients with infectious mononucleosis receiving ampicillin class antibiotics; avoid therapy in these patients"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "BCG vaccine live",
+            "description": {
+                "common": "ampicillin decreases effects of BCG vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "ampicillin, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "demeclocycline",
+            "description": {
+                "common": "demeclocycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eravacycline",
+            "description": {
+                "common": "eravacycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "ampicillin decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "minocycline",
+            "description": {
+                "common": "minocycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "ampicillin, mycophenolate.\nEither increases levels of the other by decreasing renal clearance. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omadacycline",
+            "description": {
+                "common": "omadacycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxytetracycline",
+            "description": {
+                "common": "oxytetracycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline decreases effects of ampicillin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Tetracyclines may interfere with the bactericidal action of penicillins. Monitor for decreased therapeutic effects of penicillins if concomitantly used with a tetracycline."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "typhoid vaccine live",
+            "description": {
+                "common": "ampicillin decreases effects of typhoid vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "ampicillin, aspirin.\nEither increases levels of the other by plasma protein binding competition. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "ampicillin, aspirin rectal.\nEither increases levels of the other by plasma protein binding competition. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "ampicillin, aspirin/citric acid/sodium bicarbonate.\nEither increases levels of the other by plasma protein binding competition. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "ampicillin will decrease the level or effect of bazedoxifene/conjugated estrogens by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine decreases levels of ampicillin by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Separate doses by at least 2 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "ampicillin, choline magnesium trisalicylate.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "ampicillin and deflazacort both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "dexlansoprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "ampicillin will decrease the level or effect of dienogest/estradiol valerate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. An alternate or additional form of birth control may be advisable during concomitant use."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "esomeprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "ampicillin will decrease the level or effect of ethinylestradiol by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen/famotidine",
+            "description": {
+                "common": "ibuprofen/famotidine will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "lansoprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lanthanum carbonate",
+            "description": {
+                "common": "lanthanum carbonate decreases levels of ampicillin by cation binding in GI tract. Use Caution/Monitor. Administer ampicillin at least 2 hr before or after lanthanum. Interaction applies to oral ampicillin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "ampicillin will decrease the level or effect of levonorgestrel oral/ethinylestradiol/ferrous bisglycinate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. Antibiotics may decrease hormonal contraceptive efficacy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mestranol",
+            "description": {
+                "common": "ampicillin will decrease the level or effect of mestranol by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "ampicillin increases levels of methotrexate by decreasing renal clearance. Use Caution/Monitor. Increased serum concentrations of methotrexate with concomitant hematologic and gastrointestinal toxicity have been observed with concurrent administration of high or low doses of methotrexate and penicillins."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "omeprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "ampicillin, rose hips.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium bicarbonate",
+            "description": {
+                "common": "sodium bicarbonate will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium citrate/citric acid",
+            "description": {
+                "common": "sodium citrate/citric acid will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium phenylacetate",
+            "description": {
+                "common": "ampicillin, sodium phenylacetate.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "ampicillin decreases effects of sodium picosulfate/magnesium oxide/anhydrous citric acid by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate/polyethylene glycol",
+            "description": {
+                "common": "ampicillin and sodium sulfate/potassium sulfate/magnesium sulfate/polyethylene glycol both decrease  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "ampicillin increases effects of spironolactone by unspecified interaction mechanism. Use Caution/Monitor. Hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "ampicillin, sulfasalazine.\nEither increases levels of the other by plasma protein binding competition. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "ampicillin, willow bark.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "allopurinol",
+            "description": {
+                "common": "ampicillin, allopurinol. Mechanism: unknown. Minor/Significance Unknown. Increased incidence of rash."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "ampicillin decreases levels of atenolol by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "bendroflumethiazide increases effects of ampicillin by decreasing renal clearance. Minor/Significance Unknown. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "chlorothiazide increases levels of ampicillin by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "colestipol",
+            "description": {
+                "common": "colestipol decreases levels of ampicillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "didanosine",
+            "description": {
+                "common": "didanosine will decrease the level or effect of ampicillin by  increasing gastric pH. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "hydrochlorothiazide increases levels of ampicillin by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "methyclothiazide increases levels of ampicillin by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "metolazone increases levels of ampicillin by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of ampicillin by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "roxithromycin",
+            "description": {
+                "common": "roxithromycin decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "Exfoliative dermatitis",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Urticaria",
+            "percent": null
+        },
+        {
+            "name": "Fever",
+            "percent": null
+        },
+        {
+            "name": "Seizure",
+            "percent": null
+        },
+        {
+            "name": "Black hairy tongue",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Enterocolitis",
+            "percent": null
+        },
+        {
+            "name": "Glossitis",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Oral candidiasis",
+            "percent": null
+        },
+        {
+            "name": "Pseudomembranous colitis",
+            "percent": null
+        },
+        {
+            "name": "Stomatitis",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "Hemolytic anemia",
+            "percent": null
+        },
+        {
+            "name": "Eosinophilia",
+            "percent": null
+        },
+        {
+            "name": "Leukopenia",
+            "percent": null
+        },
+        {
+            "name": "Thrombocytopenia purpura",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Aspartate aminotransferase increased",
+            "percent": null
+        },
+        {
+            "name": "Interstitial nephritis",
+            "percent": null
+        },
+        {
+            "name": "Laryngeal stridor",
+            "percent": null
+        },
+        {
+            "name": "Serum sickness",
+            "percent": null
+        },
+        {
+            "name": "like reaction",
+            "percent": null
+        }
+    ]
+}

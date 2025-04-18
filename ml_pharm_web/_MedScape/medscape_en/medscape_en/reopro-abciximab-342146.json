@@ -1,0 +1,463 @@
+{
+    "name": "abciximab",
+    "comment": "Rx",
+    "other_names": [
+        "ReoPro"
+    ],
+    "classes": [
+        "Antiplatelet Agents",
+        "Cardiovascular",
+        "Glycoprotein IIb/IIIa Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/reopro-abciximab-342146",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Lactation: not known if excreted in breast milk; use caution"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: not known if excreted in breast milk; use caution"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Active internal bleeding",
+                "Recent (within six weeks) gastrointestinal (GI) or genitourinary (GU) bleeding of clinical significance",
+                "History of CVA (within 2 years) or CVA with a significant residual neurological deficit",
+                "Bleeding diathesis",
+                "Administration of oral anticoagulants within seven days unless prothrombin time is ≤1.2 times control",
+                "Thrombocytopenia (< 100,000 cells/μL)",
+                "Recent (within six weeks) major surgery or trauma",
+                "Intracranial neoplasm, arteriovenous malformation, or aneurysm",
+                "Severe uncontrolled hypertension",
+                "Presumed or documented history of vasculitis"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Intended for use with aspirin and heparin, and has only been studied in that setting",
+                "Allergic reactions, some of which were anaphylaxis (sometimes fatal), reported rarely in patients receiving therapy; patients with allergic reactions should receive appropriate treatment; treatment of anaphylaxis should include immediate discontinuation of therapy and initiation of resuscitative measures",
+                "In the event of serious uncontrolled bleeding or need for emergency surgery, therapy should be discontinued; if platelet function does not return to normal, it may be restored, at least in part, with platelet transfusions"
+            ],
+            "specific": [
+                {
+                    "type": "Bleeding events",
+                    "description": [
+                        "Has the potential to increase risk of bleeding events, rarely including those with a fatal outcome, particularly in presence of anticoagulation, eg, from heparin, other anticoagulants, or thrombolytics",
+                        "Risk of major bleeds due to therapy is increased in patients receiving thrombolytics and should be weighed against anticipated benefits",
+                        "Should serious bleeding occur that is not controllable with pressure, the infusion of this medication and any concomitant heparin should be stopped"
+                    ]
+                },
+                {
+                    "type": "Bleeding precautions",
+                    "description": [
+                        "To minimize risk of bleeding, important to use a low-dose, weight-adjusted heparin regimen, a weight-adjusted Abciximab bolus and infusion, strict anticoagulation guidelines, careful vascular access site management, discontinuation of heparin after procedure and early femoral arterial sheath removal",
+                        "Therapy requires careful attention to all potential bleeding sites including catheter insertion sites, arterial and venous puncture sites, cutdown sites, needle puncture sites, and gastrointestinal, genitourinary, pulmonary (alveolar), and retroperitoneal sites",
+                        "Arterial and venous punctures, intramuscular injections, and use of urinary catheters, nasotracheal intubation, nasogastric tubes and automatic blood pressure cuffs should be minimized",
+                        "When obtaining intravenous access, non-compressible sites (eg, subclavian or jugular veins) should be avoided; saline or heparin locks should be considered for blood drawing; vascular puncture sites should be documented and monitored; gentle care should be provided when removing dressings",
+                        "Arterial access site care is important to prevent bleeding; care should be taken when attempting vascular access that only anterior wall of femoral artery is punctured, avoiding a Seldinger (through and through) technique for obtaining sheath access",
+                        "Femoral vein sheath placement should be avoided unless needed; while vascular sheath is in place, patients should be maintained on complete bed rest with head of the bed ≤30°and affected limb restrained in a straight position; patients may be medicated for back/groin pain as necessary",
+                        "Discontinuation of heparin immediately upon completion of procedure and removal of arterial sheath within six hours is strongly recommended if APTT ≤50 sec or ACT ≤175 sec; in all circumstances, heparin should be discontinued at least two hours prior to arterial sheath removal",
+                        "Following sheath removal, pressure should be applied to femoral artery for at least 30 minutes using either manual compression or a mechanical device for hemostasis; a pressure dressing should be applied following hemostasis; the patient should be maintained on bed rest for six to eight hours following sheath removal or discontinuation of therapy, or four hours following discontinuation of heparin, whichever is later",
+                        "The pressure dressing should be removed prior to ambulation; the sheath insertion site and distal pulses of affected leg(s) should be frequently checked while the femoral artery sheath is in place and for six hours after femoral artery sheath removal; any hematoma should be measured and monitored for enlargement",
+                        "The following conditions have been associated with an increased risk of bleeding and may be additive with effect of therapy in the angioplasty setting: PCI within 12 hr of onset of symptoms for acute myocardial infarction, prolonged PCI (lasting more than 70 minutes) and failed PCI"
+                    ]
+                },
+                {
+                    "type": "Use of thrombolytics, anticoagulants, and other antiplatelet agents",
+                    "description": [
+                        "Because drug inhibits platelet aggregation, caution should be employed when it is used with other drugs that affect hemostasis, including thrombolytics, oral anticoagulants, non-steroidal anti-inflammatory drugs, dipyridamole, and ticlopidine",
+                        "Because of observed synergistic effects on bleeding, therapy should be used judiciously in patients who have received systemic thrombolytic therapy"
+                    ]
+                },
+                {
+                    "type": "Thrombocytopenia",
+                    "description": [
+                        "Thrombocytopenia, including severe thrombocytopenia, reported with therapy",
+                        "Monitor platelet counts prior to, during, and after treatment",
+                        "Acute decreases in platelet count should be differentiated between true thrombocytopenia and pseudothrombocytopenia",
+                        "If true thrombocytopenia is verified, therapy should be immediately discontinued, and the condition appropriately monitored and treated"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "abrocitinib and abciximab both increase  anticoagulation. Contraindicated. Antiplatelet drugs, except for low-dose aspirin (=81 mg qDay), during the first 3 months of treatment are contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin alfa",
+            "description": {
+                "common": "antithrombin alfa, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin III",
+            "description": {
+                "common": "antithrombin III, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "abciximab and apixaban both increase  anticoagulation. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "argatroban, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal increases effects of abciximab by pharmacodynamic synergism. Avoid or Use Alternate Drug. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bemiparin",
+            "description": {
+                "common": "bemiparin, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "bivalirudin, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "caplacizumab",
+            "description": {
+                "common": "caplacizumab, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "fondaparinux, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenindione",
+            "description": {
+                "common": "phenindione, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protamine",
+            "description": {
+                "common": "protamine, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases effects of abciximab by anticoagulation. Modify Therapy/Monitor Closely. Coadministration of acalabrutinib with antiplatelets or anticoagulants may further increase risk of hemorrhage. Monitor for signs of bleeding and consider the benefit-risk of withholding acalabrutinib for 3-7 days presurgery and postsurgery depending upon the type of surgery and the risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, abciximab.\nEither increases toxicity of the other by anticoagulation. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate, abciximab.\nEither increases toxicity of the other by anticoagulation. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azficel-T",
+            "description": {
+                "common": "azficel-T, abciximab. Other (see comment). Use Caution/Monitor. \nComment: Coadministration with anticoagulants or antiplatelets may increase bruising or bleeding at biopsy and/or injection sites; concomitant use not recommended. Decisions regarding continued use or cessation of anticoagulants or antiplatelets should be made by a physician."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "abciximab, betrixaban.\nEither increases levels of the other by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram increases effects of abciximab by pharmacodynamic synergism. Use Caution/Monitor. Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "dabigatran, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs have the potential to cause bleeding. Concomitant use may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox, abciximab. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "edoxaban, abciximab.\nEither increases toxicity of the other by anticoagulation. Modify Therapy/Monitor Closely. Both drugs have the potential to cause bleeding. The need for simultaneous use of platelet aggregation inhibitors with anticoagulants is common for patients with cardiovascular disease, but may result in increased bleeding; monitor closely. Promptly evaluate any signs or symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil triglycerides",
+            "description": {
+                "common": "fish oil triglycerides will increase the level or effect of abciximab by  anticoagulation. Use Caution/Monitor. Prolonged bleeding reported in patients taking antiplatelet agents or anticoagulants and oral omega-3 fatty acids. Periodically monitor bleeding time in patients receiving fish oil triglycerides and concomitant antiplatelet agents or anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea increases effects of abciximab by pharmacodynamic synergism. Use Caution/Monitor. (Theoretical interaction).   Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of abciximab by  anticoagulation. Use Caution/Monitor. Ibrutinib may increase the risk of hemorrhage in patients receiving antiplatelet or anticoagulant therapies and monitor for signs of bleeding. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "icosapent",
+            "description": {
+                "common": "icosapent, abciximab.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Icosapent may prolong bleeding time; monitor periodically if coadministered with other drugs that affect bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin increases effects of abciximab by anticoagulation. Use Caution/Monitor. Melatonin may decrease prothrombin time."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "porfimer",
+            "description": {
+                "common": "abciximab decreases effects of porfimer by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "rivaroxaban, abciximab.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Avoid concurrent use of rivaroxaban with other anticoagulants due to increased bleeding risk other than during therapeutic transition periods where patients should be observed closely. Monitor for signs/symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "abciximab and selumetinib both increase  anticoagulation. Modify Therapy/Monitor Closely. An increased risk of bleeding may occur in patients taking a vitamin-K antagonist or an antiplatelet agent with selumetinib. Monitor for bleeding and INR or PT in patients coadministered a vitamin-K antagonist or an antiplatelet agent with selumetinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor, abciximab.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Increased risk of bleeding during concomitant use of medications that increase potential for bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vortioxetine",
+            "description": {
+                "common": "abciximab, vortioxetine.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "abciximab, warfarin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Drugs with antiplatelet properties may increase anticoagulation effect of warfarin."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "devil's claw",
+            "description": {
+                "common": "devil's claw, abciximab. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginger",
+            "description": {
+                "common": "ginger, abciximab. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginkgo biloba",
+            "description": {
+                "common": "ginkgo biloba, abciximab. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence.ÿ Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "horse chestnut seed",
+            "description": {
+                "common": "horse chestnut seed, abciximab. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Theoretical. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verteporfin",
+            "description": {
+                "common": "abciximab decreases effects of verteporfin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Bleeding",
+            "percent": "70-82"
+        },
+        {
+            "name": "minor",
+            "percent": "17-21"
+        },
+        {
+            "name": "Bleeding",
+            "percent": "14-21"
+        },
+        {
+            "name": "major",
+            "percent": "17.6"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "13.6"
+        },
+        {
+            "name": "Back pain",
+            "percent": "11.4"
+        },
+        {
+            "name": "Nausea",
+            "percent": "7-11"
+        },
+        {
+            "name": "Chest pain",
+            "percent": "6"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2-6"
+        },
+        {
+            "name": "Headache",
+            "percent": "5"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "3.6"
+        },
+        {
+            "name": "Bradycardia",
+            "percent": "3.5"
+        },
+        {
+            "name": "Injection site pain",
+            "percent": "3"
+        },
+        {
+            "name": "Extremity pain",
+            "percent": "2"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "1.8"
+        },
+        {
+            "name": "UTI",
+            "percent": "1.6"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1.2"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "1"
+        },
+        {
+            "name": "Anemia",
+            "percent": "1"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Hypoesthesia",
+            "percent": null
+        }
+    ]
+}

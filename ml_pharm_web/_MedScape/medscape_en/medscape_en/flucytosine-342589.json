@@ -1,0 +1,385 @@
+{
+    "name": "flucytosine",
+    "comment": "Rx",
+    "other_names": [
+        "Ancobon",
+        "5-FC",
+        "5-fluorocytosine"
+    ],
+    "classes": [
+        "Antifungals",
+        "Systemic"
+    ],
+    "source": "https://reference.medscape.com/drug/flucytosine-342589",
+    "pregnancy": {
+        "common": [
+            "Flucytosine was shown to be teratogenic (vertebral fusions) in the rat at doses of 40 mg/kg/day(298 mg/m2/day or 0.051 times the human dose) administered on days 7 to 13 of gestation",
+            "At higher doses (700 mg/kg/day; 5208 mg/m2/day or 0.89 times the human dose administered on days 9 to 12 of gestation), cleft lip and palate and micrognathia reported",
+            "This drug was not teratogenic in rabbits up to a dose of 100 mg/kg/day (1423 mg/m2/day or 0.243 times human dose) administered on days 6 to 18 of gestation",
+            "In mice, 400 mg/kg/day of flucytosine (1380 mg/M2/day or 0.236 times the human dose) administered on days 7 to 13 of gestation was associated with low incidence of cleft palate that was not statistically significant",
+            "Studies in pregnant rats have shown that flucytosine injected intraperitoneally crosses the placental barrier; there are no adequate and well-controlled studies in pregnant women; this drug should be used during pregnancy only if the potential benefit justifies potential risk to fetus"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Not known whether this drug is excreted in human milk; because many drugs are excreted in human milk and because of potential for serious adverse reactions in nursing infants, a decision should be made whether to discontinue nursing or to discontinue the drug, taking into account the importance of the drug to the mother"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Use extreme caution in patients with renal impairment",
+                "Monitor hematologic, renal, and hepatic function",
+                "Review instructions thoroughly before administration"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Patients with known complete dihydropyrimidine dehydrogenase (DPD) enzyme deficiency"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Measurement of serum creatinine levels should be determined by Jaffé reaction since this drug does not interfere with determination of creatinine values by this method; most automated equipment for measurement of creatinine makes use of the Jaffé reaction",
+                "Electrolytes (because of hypokalemia), hematologic, and renal status of the patient should be determined before therapy instituted; close monitoring of patient during therapy is essential.",
+                "Use extreme caution in patients with impaired renal function; monitor blood concentrations and kidney function in renal impairment; drug can progressively accumulate; dosage adjustments should be made in patients with renal insufficiency to prevent progressive accumulation of active drug"
+            ],
+            "specific": [
+                {
+                    "type": "Bone marrow depression",
+                    "description": [
+                        "Administer with extreme caution to patients with bone marrow depression; patients maybe more prone to depression of bone marrow function if they have a hematologic disease or are being treated with radiation, treated with drugs which depress bone marrow, or have a history of treatment with such drugs or radiation",
+                        "Bone marrow toxicity can be irreversible and may lead to death in immunosuppressed patients; frequent monitoring of hepatic function and of the hematopoietic system indicated during therapy"
+                    ]
+                },
+                {
+                    "type": "Dihydropyrimidine dehydrogenase deficiency",
+                    "description": [
+                        "5-Fluorouracil is a metabolite of flucytosine; dihydropyrimidine dehydrogenase is a key enzyme involved in the metabolism and elimination of 5-fluorouracil; the risk of severe drug toxicity is increased when drug used in individuals with deficiency in DPD",
+                        "Possible drug toxicitiesinclude mucositis, diarrhea, neutropenia, and neurotoxicity; determination of DPD activity may be considered where drug toxicity is confirmed or suspected; in the event of suspected drug toxicity, consider stopping treatment"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Cytosine arabinoside, a cytostatic agent, reported to inactivate the antifungal activity of this drug by competitive inhibition; drugs that impair glomerular filtration may prolong biological half-life of flucytosine"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bacitracin",
+            "description": {
+                "common": "flucytosine and bacitracin both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug. Avoid concurrent use of bacitracin with other nephrotoxic drugs"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, flucytosine.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, flucytosine.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "Saccharomyces boulardii",
+            "description": {
+                "common": "flucytosine decreases effects of Saccharomyces boulardii by unspecified interaction mechanism. Avoid or Use Alternate Drug. Systemic or oral antifungals may decrease activity of probiotic."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dichlorphenamide",
+            "description": {
+                "common": "dichlorphenamide and flucytosine both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyurea",
+            "description": {
+                "common": "flucytosine, hydroxyurea. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide, flucytosine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Ifosfamide may enhance the toxicities of myelosuppressive agents. Monitor for increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomustine",
+            "description": {
+                "common": "lomustine, flucytosine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may increase risk of myelosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peramivir",
+            "description": {
+                "common": "flucytosine increases levels of peramivir by decreasing renal clearance. Use Caution/Monitor. Caution when peramivir coadministered with nephrotoxic drugs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "flucytosine, tenofovir DF.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin inhaled",
+            "description": {
+                "common": "tobramycin inhaled and flucytosine both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Avoid concurrent or sequential use to decrease risk for ototoxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, flucytosine.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Coadministration with drugs associated with nephrotoxicity may increase the risk for acute and/or chronic nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amphotericin B deoxycholate",
+            "description": {
+                "common": "flucytosine increases effects of amphotericin B deoxycholate by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "flucytosine increases effects of fluconazole by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "ganciclovir increases toxicity of flucytosine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "flucytosine increases effects of itraconazole by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "valganciclovir increases toxicity of flucytosine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "zidovudine",
+            "description": {
+                "common": "zidovudine increases toxicity of flucytosine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Confusion",
+            "percent": "1-800"
+        },
+        {
+            "name": "Headache",
+            "percent": "321"
+        },
+        {
+            "name": "Hallucinations",
+            "percent": "4576"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1-800"
+        },
+        {
+            "name": "Drowsiness",
+            "percent": "1088"
+        },
+        {
+            "name": "Psychosis",
+            "percent": null
+        },
+        {
+            "name": "Parkinsonism",
+            "percent": null
+        },
+        {
+            "name": "Ataxia",
+            "percent": null
+        },
+        {
+            "name": "Sedation",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Photosensitivity",
+            "percent": null
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "Urticaria",
+            "percent": null
+        },
+        {
+            "name": "Temporary growth failure",
+            "percent": null
+        },
+        {
+            "name": "Hypoglycemia",
+            "percent": null
+        },
+        {
+            "name": "Hypokalemia",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": null
+        },
+        {
+            "name": "Loss of appetite",
+            "percent": null
+        },
+        {
+            "name": "Bone marrow suppression",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "Leukopenia",
+            "percent": null
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "Elevated liver enzymes",
+            "percent": null
+        },
+        {
+            "name": "Hepatitis",
+            "percent": null
+        },
+        {
+            "name": "Azotemia",
+            "percent": null
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": null
+        },
+        {
+            "name": "Paresthesia",
+            "percent": null
+        },
+        {
+            "name": "Weakness",
+            "percent": null
+        },
+        {
+            "name": "Hearing loss",
+            "percent": null
+        },
+        {
+            "name": "Elevated BUN and serum creatinine",
+            "percent": null
+        },
+        {
+            "name": "Renal failure",
+            "percent": null
+        },
+        {
+            "name": "Respiratory arrest",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "To report suspected adverse reactions",
+            "percent": null
+        },
+        {
+            "name": "contact Bausch Health US",
+            "percent": null
+        },
+        {
+            "name": "LLC at",
+            "percent": null
+        },
+        {
+            "name": "or FDA at",
+            "percent": null
+        },
+        {
+            "name": "FDA",
+            "percent": null
+        },
+        {
+            "name": "or www",
+            "percent": null
+        },
+        {
+            "name": "fda",
+            "percent": null
+        },
+        {
+            "name": "gov",
+            "percent": null
+        },
+        {
+            "name": "medwatch",
+            "percent": null
+        }
+    ]
+}

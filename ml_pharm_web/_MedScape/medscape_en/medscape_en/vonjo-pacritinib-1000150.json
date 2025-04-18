@@ -1,0 +1,1241 @@
+{
+    "name": "pacritinib",
+    "comment": "Rx",
+    "other_names": [
+        "Vonjo"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors",
+        "Antineoplastics",
+        "JAK Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/vonjo-pacritinib-1000150",
+    "pregnancy": {
+        "common": [
+            "No data are available on use in pregnant females to evaluate for a drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes",
+            "Advise pregnant females of potential risk to a fetus",
+            "Consider benefits and risks for mother and possible risks to the fetus when prescribing to pregnant females"
+        ],
+        "specific": [
+            {
+                "type": "Infertility",
+                "description": [
+                    "May reduced male mating and fertility indices in BALB/c mice",
+                    "Therefore, may impair male fertility in humans "
+                ]
+            },
+            {
+                "type": "Animal data ",
+                "description": [
+                    "Pregnant mice: Orally administered doses of 30, 100, or 250 mg/kg/day from gestation day 6 to day 15; the high dose was associated with an increased incidence of an external malformation (cleft palate) in presence of maternal toxicity ",
+                    "Pregnant rabbits: Orally administered doses of 15, 30, or 60 mg/kg/day from gestation day 7 to day 20",
+                    "In both species, pacritinib was associated with maternal toxicity, which resulted in postimplantation loss in mice, abortions in rabbits, and reduced fetal body weights in mice and rabbits at exposures 0.1x (mice) and 0.3x (rabbits) the exposure at the recommended human dose (AUC-based)"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on presence in either human or animal milk, effects on breastfed children, or effects on milk production ",
+            "Unknown whether pacritinib is excreted in human milk ",
+            "Advise patients that breastfeeding is not recommended during treatment, and for 2 weeks after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Coadministration with strong CYP3A4 inhibitors or inducers"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "May worsen thrombocytopenia; monitor platelet count before initiating and as clinically indicated during treatment ",
+                "Manage QTc prolongation using interruption and electrolyte management ",
+                "Serious bacterial, mycobacterial, fungal, and viral infections may occur with therapy; delay initiating therapy until active serious infections are resolved"
+            ],
+            "specific": [
+                {
+                    "type": "Hemorrhage",
+                    "description": [
+                        "Serious and fatal hemorrhages have occurred in treated patients with platelet counts <50 x 10",
+                        "9",
+                        "/L",
+                        "Avoid use in patients with active bleeding and hold therapy 7 days before any planned surgical or invasive procedures ",
+                        "Assess platelet counts periodically, as clinically indicated ",
+                        "Interrupt treatment and treat appropriately, if necessary"
+                    ]
+                },
+                {
+                    "type": "Diarrhea",
+                    "description": [
+                        "May cause diarrhea ",
+                        "Median time to resolution was 2 weeks ",
+                        "Incidence of reported diarrhea decreased over time ",
+                        "Control preexisting diarrhea before starting treatment ",
+                        "Manage diarrhea with antidiarrheal medications, fluid replacement, and dosage modification ",
+                        "Treat diarrhea with antidiarrheal medications promptly at the first onset of symptoms ",
+                        "Interrupt or reduce dose in patients with significant diarrhea despite optimal supportive care "
+                    ]
+                },
+                {
+                    "type": "QTc prolongation",
+                    "description": [
+                        "QTc prolongation may occur; no cases of torsade de pointes were reported",
+                        "Avoid use in patients with a baseline QTc of >480 msec",
+                        "Avoid coadministration with drugs that cause significant QTc prolongation ",
+                        "Correct hypokalemia before and during treatment ",
+                        "Advise patients to consult their healthcare provider immediately if they feel faint, lose consciousness, or have signs or symptoms suggestive of arrhythmia",
+                        "Manage QTc prolongation using interruption and electrolyte management"
+                    ]
+                },
+                {
+                    "type": "Janus-associated kinase (JAK) inhibitor–associated adverse effects",
+                    "description": [
+                        "Another JAK inhibitor has increased the risk of the following",
+                        "Major adverse cardiac events (MACE; eg, cardiovascular death, myocardial infarction, stroke) in patients with rheumatoid arthritis (RA), a condition for which pacritinib is not indicated",
+                        "Thrombosis (eg, deep venous thrombosis, pulmonary embolism, arterial thrombosis) in patients with RA ",
+                        "Secondary malignancies, such as lymphoma and other malignancies, excluding non-melanoma skin cancer (NMSC), in patients with RA",
+                        "Serious infections in patients with myeloproliferative neoplasms ",
+                        "Consider the benefits and risks before initiating or continuing therapy, particularly in patients who are current or past smokers, patients with other cardiovascular risk factors, and patients with a developed or known malignancy (other than a successfully treated NMSC)",
+                        "Consult about symptoms of serious cardiovascular events and the necessary steps to take if they occur",
+                        "Monitor for signs and symptoms of infection and manage promptly",
+                        "Use active surveillance and prophylactic antibiotics according to clinical guidelines "
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Substrate of CYP3A4",
+                        "Inhibitor of CYP1A2, CYP3A4, P-glycoprotein (P-gp), breast cancer resistance protein (BCRP), and organic cation transporter 1 (OCT1) ",
+                        "CYP3A4 inhibitors",
+                        "Strong inhibitors: Contraindicated",
+                        "Moderate inhibitors: Avoid use ",
+                        "Coadministration with clarithromycin (a strong CYP3A4 inhibitor) increases AUC and peak plasma concentration of pacritinib by 80% and 30%, respectively; exposure to pacritinib may increase following a longer treatment with clarithromycin that results in maximal CYP3A4 inhibition",
+                        "Impact of moderate CYP3A4 inhibition not studied",
+                        "CYP3A4 inducers",
+                        "Strong inducers: Contraindicated",
+                        "Moderate inducers: Avoid use",
+                        "Coadministration with rifampin (a strong CYP3A4 inducer) decreases AUC and peak plasma concentration of pacritinib by 87% and 51%, respectively",
+                        "Impact of moderate CYP3A4 inducers not studied",
+                        "Sensitive CYP1A2 or CYP3A4 substrates",
+                        "Avoid coadministration ",
+                        "Pacritinib may increase plasma concentrations of sensitive CYP1A2 or CYP3A4 substrates ",
+                        "Sensitive P-gp, BCRP, or OCT1 substrates",
+                        "Avoid coadministration ",
+                        "Pacritinib may increase plasma concentrations of sensitive P-gp, BCRP, or OCT1 substrates "
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, pacritinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Encorafenib (a CYP3A4 inhibitor and inducer) may increase or decrease levels of pacritinib."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of pacritinib by  affecting hepatic enzyme CYP2E1 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mitapivat",
+            "description": {
+                "common": "mitapivat will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "modafinil will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pexidartinib",
+            "description": {
+                "common": "pexidartinib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "adagrasib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of adagrasib, a CYP3A4 inhibitor, with sensitive CYP3A substrates unless otherwise recommended in the prescribing information for these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "pacritinib will increase the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brigatinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "calcitriol",
+            "description": {
+                "common": "calcitriol will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of carbamazepine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cidofovir",
+            "description": {
+                "common": "pacritinib will increase the level or effect of cidofovir by  Other (see comment). Avoid or Use Alternate Drug. Concomitant administration of pacritinib (OCT1 inhibitor) with OCT1 substrates may increase the plasma concentrations of these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of clonidine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clopidogrel",
+            "description": {
+                "common": "clopidogrel will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clotrimazole",
+            "description": {
+                "common": "clotrimazole will increase the level or effect of pacritinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "colchicine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conjugated estrogens",
+            "description": {
+                "common": "conjugated estrogens will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dicloxacillin",
+            "description": {
+                "common": "dicloxacillin will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "pacritinib will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "pacritinib will increase the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entacapone",
+            "description": {
+                "common": "entacapone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "estradiol will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "estrogens conjugated synthetic",
+            "description": {
+                "common": "estrogens conjugated synthetic will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "pacritinib will increase the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "pacritinib will increase the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "felbamate",
+            "description": {
+                "common": "felbamate will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "pacritinib will increase the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "griseofulvin",
+            "description": {
+                "common": "griseofulvin will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol will increase the level or effect of pacritinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "hydrocortisone will decrease the level or effect of pacritinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibrexafungerp",
+            "description": {
+                "common": "ibrexafungerp will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "pacritinib will increase the level or effect of irinotecan by  Other (see comment). Avoid or Use Alternate Drug. Concomitant administration of pacritinib (BCRP inhibitor) with BCRP substrates may increase the plasma concentrations of these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "isavuconazonium sulfate will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "lenvatinib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lesinurad",
+            "description": {
+                "common": "lesinurad will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "medroxyprogesterone",
+            "description": {
+                "common": "medroxyprogesterone will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "pacritinib will increase the level or effect of metformin by  Other (see comment). Avoid or Use Alternate Drug. Concomitant administration of pacritinib (OCT1 inhibitor) with OCT1 substrates may increase the plasma concentrations of these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "pacritinib will increase the level or effect of methotrexate by  Other (see comment). Avoid or Use Alternate Drug. Concomitant administration of pacritinib (BCRP inhibitor) with BCRP substrates may increase the plasma concentrations of these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole will increase the level or effect of pacritinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metyrapone",
+            "description": {
+                "common": "metyrapone will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "pacritinib will increase the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "netupitant/palonosetron will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olutasidenib",
+            "description": {
+                "common": "olutasidenib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of olutasidenib (a CYP3A4 inducer) with sensitive CYP3A substrates unless otherwise instructed in substrates prescribing information. If unavoidable, monitor for loss of therapeutic effect of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "paclitaxel will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of pacritinib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "pacritinib will increase the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "pioglitazone will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "prednisone will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of quinidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "pacritinib will increase the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinupristin/dalfopristin",
+            "description": {
+                "common": "quinupristin/dalfopristin will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rufinamide",
+            "description": {
+                "common": "rufinamide will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "schisandra",
+            "description": {
+                "common": "schisandra will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "pacritinib will increase the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "somatropin",
+            "description": {
+                "common": "somatropin will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "pacritinib will increase the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "pacritinib will increase the level or effect of temsirolimus by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "terbinafine",
+            "description": {
+                "common": "terbinafine will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "pacritinib will increase the level or effect of theophylline by  affecting hepatic enzyme CYP1A2 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topiramate",
+            "description": {
+                "common": "topiramate will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "pacritinib will increase the level or effect of topotecan by  Other (see comment). Avoid or Use Alternate Drug. Concomitant administration of pacritinib (BCRP inhibitor) with BCRP substrates may increase the plasma concentrations of these substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "pacritinib will increase the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "upadacitinib",
+            "description": {
+                "common": "pacritinib, upadacitinib.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "omaveloxolone will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Omaveloxolone may reduce systemic exposure of sensitive CYP3A4 substrates. Check prescribing information of substrate if dosage modification is needed.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and pacritinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teclistamab",
+            "description": {
+                "common": "teclistamab will increase the level or effect of pacritinib by  altering metabolism. Use Caution/Monitor. Teclistamab causes release of cytokines that may suppress activity of CYP450 enzymes, resulting in increased exposure of CYP substrates. Monitor for increased concentrations or toxicities of sensitive CYP substrates. Adjust dose of CYP substrate drug as needed. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trofinetide",
+            "description": {
+                "common": "trofinetide will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor CYP3A4 substrates for which a small increase in plasma concentration may lead to serious toxicities if coadministered with trofinetide (a weak CYP3A4 inhibitor)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "turmeric",
+            "description": {
+                "common": "turmeric will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab and pacritinib both increase  immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Owing to potential additive immunosuppressive effects, consider duration of effect and mechanism of action of these therapies if coadministered"
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Diarrhea",
+            "percent": "48"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "34"
+        },
+        {
+            "name": "Nausea",
+            "percent": "32"
+        },
+        {
+            "name": "Anemia",
+            "percent": "24"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "20"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "19"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "15"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "15"
+        },
+        {
+            "name": "Epistaxis",
+            "percent": "12"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "32"
+        },
+        {
+            "name": "Anemia",
+            "percent": "22"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "10"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "10"
+        },
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": "10"
+        },
+        {
+            "name": "Cough",
+            "percent": "8"
+        },
+        {
+            "name": "Epistaxis",
+            "percent": "5"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "4"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "2"
+        },
+        {
+            "name": "Cough",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea",
+            "percent": "1"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "1"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "1"
+        }
+    ]
+}

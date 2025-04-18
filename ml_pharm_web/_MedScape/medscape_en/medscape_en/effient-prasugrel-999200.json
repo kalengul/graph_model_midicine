@@ -1,0 +1,777 @@
+{
+    "name": "prasugrel",
+    "comment": "Rx",
+    "other_names": [
+        "Effient"
+    ],
+    "classes": [
+        "Antiplatelet Agents",
+        "Cardiovascular",
+        "Antiplatelet Agents",
+        "Hematologic"
+    ],
+    "source": "https://reference.medscape.com/drug/effient-prasugrel-999200",
+    "pregnancy": {
+        "common": [
+            "There are no data with prasugrel use in pregnant women to inform a drug-associated risk",
+            "Due to the mechanism of action, and the associated identified risk of bleeding, consider the benefits and possible risks to the fetus when prescribing prasugrel to a pregnant woman"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "There is no information regarding the presence of prasugrel in human milk, the effects on the breastfed infant, or the effects on milk production",
+            "Metabolites of prasugrel were found in rat milk",
+            "Consider the developmental and health benefits of breastfeeding along with the mother’s clinical need for prasugrel and any potential adverse effects on the breastfed child from prasugrel or from the underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Potential for significant, sometimes fatal, bleeding",
+                    "description": [
+                        "Prasugrel can cause significant, sometimes fatal, bleeding",
+                        "Do not use in patients with active pathological bleeding or a history of transient ischemic attack or stroke",
+                        "In patients ≥75 years of age, use is generally not recommended, owing to increased risk of fatal and intracranial bleeding and uncertain benefit, except in high-risk situations (eg, diabetes or prior MI)",
+                        "Do not start in patients likely to undergo urgent coronary artery bypass graft surgery (CABG); when possible, discontinue prasugrel at least 7 days prior to any surgery",
+                        "If possible, manage bleeding without discontinuing (risk of subsequent cardiovascular events is increased if prasugrel stopped, particularly in first few weeks after ACS)",
+                        "Suspect bleeding in any patient who is hypotensive and has recently undergone invasive or surgical procedures"
+                    ]
+                },
+                {
+                    "type": "Additional risk factors for bleeding",
+                    "description": [
+                        "Weight <60 kg increases risk of bleeding",
+                        "Propensity to bleed (eg, recent trauma, recent surgery, recent or recurrent GI bleeding, active peptic ulcer disease, severe hepatic impairment, or moderate-to-severe renal impairment)",
+                        "Concomitant use of other drugs that increase bleeding risk"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Active pathologic bleeding (eg, peptic ulcer, intracranial hemorrhage)",
+                "Prior TIA or stroke"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hypersensitivity with angioedema reported",
+                "Bleeding diathesis",
+                "Thrombocytopenic purpura occurring within 2 weeks of initiation of therapy reported",
+                "Discontinue treatment for active bleeding, elective surgery, stroke, or TIA; premature discontinuation of any antiplatelet medication conveys an increased risk of stent thrombosis, myocardial infarction, and death; patients who require premature discontinuation of a thienopyridine will be at increased risk for cardiac events; avoid lapses in therapy, and if thienopyridines must be temporarily discontinued because of an adverse event(s), restart as soon as possible",
+                "Risk increases in patients receiving drug who undergo CABG",
+                "Premature discontinuation increases risk of stent thrombosis, MI, and death",
+                "See Black Box Warnings"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Coadministration with warfarin or nonsteroidal anti-inflammatory drugs (NSAIDs) (used chronically) increases the risk of bleeding",
+                        "Coadministration of opioid agonists delay and reduce the absorption of prasugrel’s active metabolite presumably because of slowed gastric emptying"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "abrocitinib and prasugrel both increase  anticoagulation. Contraindicated. Antiplatelet drugs, except for low-dose aspirin (=81 mg qDay), during the first 3 months of treatment are contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "prasugrel and apixaban both increase  anticoagulation. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cangrelor",
+            "description": {
+                "common": "cangrelor decreases effects of prasugrel by receptor binding competition. Avoid or Use Alternate Drug. The expected antiplatelet effect of a 60 mg loading dose of prasugrel was blocked when prasugrel was administered during a cangrelor infusion. Therefore, prasugrel should not be administered until cangrelor infusion is discontinued."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "caplacizumab",
+            "description": {
+                "common": "caplacizumab, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "codeine will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Co-administration of opioid agonists delay and reduce absorption of prasugrel and its active metabolite presumably by slowing gastric emptying; consider the use of a parenteral anti-platelet agent in acute coronary syndrome patients requiring co-administration of opioid agonists"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "hydromorphone will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Co-administration of opioid agonists delay and reduce absorption of prasugrel and its active metabolite presumably by slowing gastric emptying; consider the use of a parenteral anti-platelet agent in acute coronary syndrome patients requiring co-administration of opioid agonists"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "morphine will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Coadministration of opioid agonists delay and reduce the absorption of prasugrel?s active metabolite presumably because of slowed gastric emptying. Consider using a parenteral antiplatelet agent in acute coronary syndrome patients requiring coadministration of morphine or other opioid agonists. Risks associated with other opioids are unknown."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "oxycodone will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Co-administration of opioid agonists delay and reduce absorption of prasugrel and its active metabolite presumably by slowing gastric emptying; consider the use of a parenteral anti-platelet agent in acute coronary syndrome patients requiring co-administration of opioid agonists"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxymorphone",
+            "description": {
+                "common": "oxymorphone will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Co-administration of opioid agonists delay and reduce absorption of prasugrel and its active metabolite presumably by slowing gastric emptying; consider the use of a parenteral anti-platelet agent in acute coronary syndrome patients requiring co-administration of opioid agonists"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protamine",
+            "description": {
+                "common": "protamine, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases effects of prasugrel by anticoagulation. Modify Therapy/Monitor Closely. Coadministration of acalabrutinib with antiplatelets or anticoagulants may further increase risk of hemorrhage. Monitor for signs of bleeding and consider the benefit-risk of withholding acalabrutinib for 3-7 days presurgery and postsurgery depending upon the type of surgery and the risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithrombin alfa",
+            "description": {
+                "common": "antithrombin alfa, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithrombin III",
+            "description": {
+                "common": "antithrombin III, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "argatroban, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, prasugrel.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal, prasugrel. pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate, prasugrel.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azficel-T",
+            "description": {
+                "common": "azficel-T, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Coadministration with anticoagulants or antiplatelets may increase bruising or bleeding at biopsy and/or injection sites; concomitant use not recommended. Decisions regarding continued use or cessation of anticoagulants or antiplatelets should be made by a physician."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "prasugrel, betrixaban.\nEither increases levels of the other by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "bivalirudin, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram increases effects of prasugrel by pharmacodynamic synergism. Use Caution/Monitor. Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "dabigatran, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs have the potential to cause bleeding. Concomitant use may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "defibrotide",
+            "description": {
+                "common": "defibrotide increases effects of prasugrel by Other (see comment). Use Caution/Monitor. \nComment: Defibrotide may enhance effects of platelet inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "edoxaban, prasugrel.\nEither increases toxicity of the other by anticoagulation. Modify Therapy/Monitor Closely. Both drugs have the potential to cause bleeding. The need for simultaneous use of platelet aggregation inhibitors with anticoagulants is common for patients with cardiovascular disease, but may result in increased bleeding; monitor closely. Promptly evaluate any signs or symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "fentanyl will decrease the level or effect of prasugrel by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Coadministration of opioid agonists delay and reduce the absorption of prasugrel?s active metabolite presumably because of slowed gastric emptying. Consider using a parenteral antiplatelet agent in acute coronary syndrome patients requiring coadministration of morphine or other opioid agonists. Risks associated with other opioids are unknown."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil",
+            "description": {
+                "common": "fish oil, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Patients taking fish oil and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil triglycerides",
+            "description": {
+                "common": "fish oil triglycerides will increase the level or effect of prasugrel by  anticoagulation. Use Caution/Monitor. Prolonged bleeding reported in patients taking antiplatelet agents or anticoagulants and oral omega-3 fatty acids. Periodically monitor bleeding time in patients receiving fish oil triglycerides and concomitant antiplatelet agents or anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "fondaparinux, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea increases effects of prasugrel by pharmacodynamic synergism. Use Caution/Monitor. (Theoretical interaction).  Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of prasugrel by  anticoagulation. Use Caution/Monitor. Ibrutinib may increase the risk of hemorrhage in patients receiving antiplatelet or anticoagulant therapies and monitor for signs of bleeding. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen/famotidine",
+            "description": {
+                "common": "ibuprofen/famotidine, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "icosapent",
+            "description": {
+                "common": "icosapent, prasugrel.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Icosapent may prolong bleeding time; monitor periodically if coadministered with other drugs that affect bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib, prasugrel.\nEither increases toxicity of the other by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Imatinib may cause thrombocytopenia; bleeding risk increased when imatinib is   coadministered with anticoagulants, NSAIDs, platelet inhibitors, and thrombolytic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ketorolac intranasal, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin increases effects of prasugrel by anticoagulation. Use Caution/Monitor. Melatonin may decrease prothrombin time."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 carboxylic acids",
+            "description": {
+                "common": "omega 3 carboxylic acids, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3 acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 fatty acids",
+            "description": {
+                "common": "omega 3 fatty acids, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3-fatty acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "oxaprozin, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piracetam",
+            "description": {
+                "common": "piracetam increases effects of prasugrel by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "porfimer",
+            "description": {
+                "common": "prasugrel decreases effects of porfimer by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "rivaroxaban, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Avoid concurrent use of rivaroxaban with other anticoagulants due to increased bleeding risk other than during therapeutic transition periods where patients should be observed closely. Monitor for signs/symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "prasugrel and selumetinib both increase  anticoagulation. Modify Therapy/Monitor Closely. An increased risk of bleeding may occur in patients taking a vitamin-K antagonist or an antiplatelet agent with selumetinib. Monitor for bleeding and INR or PT in patients coadministered a vitamin-K antagonist or an antiplatelet agent with selumetinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium zirconium cyclosilicate",
+            "description": {
+                "common": "sodium zirconium cyclosilicate will decrease the level or effect of prasugrel by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Check specific recommendations for drugs that exhibit pH-dependent solubility that may affect their systemic exposure and efficacy. In general, administer drugs at least 2 hr before or after sodium zirconium cyclosilicate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Increased risk of bleeding during concomitant use of medications that increase potential for bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin, prasugrel.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Chronic use of NSAIDs with prasugrel may increase bleeding risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorapaxar",
+            "description": {
+                "common": "prasugrel, vorapaxar.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Coadministration of anticoagulants, antiplatelets, or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vortioxetine",
+            "description": {
+                "common": "prasugrel increases effects of vortioxetine by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "prasugrel, warfarin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Drugs with antiplatelet properties may increase anticoagulation effect of warfarin."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "devil's claw",
+            "description": {
+                "common": "devil's claw, prasugrel. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginger",
+            "description": {
+                "common": "ginger, prasugrel. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginkgo biloba",
+            "description": {
+                "common": "ginkgo biloba, prasugrel. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence.ÿ Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "horse chestnut seed",
+            "description": {
+                "common": "horse chestnut seed, prasugrel. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Theoretical. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verteporfin",
+            "description": {
+                "common": "prasugrel decreases effects of verteporfin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Hypertension",
+            "percent": "7.5"
+        },
+        {
+            "name": "Hypercholesterolemia",
+            "percent": "7"
+        },
+        {
+            "name": "hyperlipidemia",
+            "percent": "5.5"
+        },
+        {
+            "name": "Headache",
+            "percent": "5"
+        },
+        {
+            "name": "Back pain",
+            "percent": "4.9"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "4.6"
+        },
+        {
+            "name": "Nausea",
+            "percent": "4.1"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "3.9"
+        },
+        {
+            "name": "Cough",
+            "percent": "3.9"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "3.7"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "3.1"
+        },
+        {
+            "name": "Noncardiac chest pain",
+            "percent": "2.9"
+        },
+        {
+            "name": "Atrial fibrillation",
+            "percent": "2.9"
+        },
+        {
+            "name": "Bradycardia",
+            "percent": "4"
+        },
+        {
+            "name": "Leukopenia",
+            "percent": "10"
+        },
+        {
+            "name": "x",
+            "percent": "9"
+        },
+        {
+            "name": "WBC",
+            "percent": "2.8"
+        },
+        {
+            "name": "L",
+            "percent": "2.8"
+        },
+        {
+            "name": "Rash",
+            "percent": "2.7"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "2.7"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "2.6"
+        },
+        {
+            "name": "Pain in extremity",
+            "percent": "2.3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Thrombotic thrombocytopenic purpura",
+            "percent": null
+        },
+        {
+            "name": "Abnormal hepatic function",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "Hematoma",
+            "percent": null
+        },
+        {
+            "name": "Hemolysis",
+            "percent": null
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "Abnormal liver function",
+            "percent": null
+        },
+        {
+            "name": "Blood and lymphatic system disorders",
+            "percent": null
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "thrombotic thrombocytopenic purpura",
+            "percent": null
+        },
+        {
+            "name": "TTP",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": null
+        },
+        {
+            "name": "eg",
+            "percent": null
+        },
+        {
+            "name": "anaphylaxis",
+            "percent": null
+        }
+    ]
+}

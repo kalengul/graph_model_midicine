@@ -1,6 +1,7 @@
 import json
+import ast
+import traceback
 
-from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
@@ -19,19 +20,17 @@ class CalculationAPI(APIView):
         # Получаем параметры
         base_dir = settings.BASE_DIR
 
-        base_dir = settings.BASE_DIR
-        drugs_raw = request.query_params.get('drugs')
-        file_name = request.query_params.get('humanData', '')
-        drug_indices = [int(x.strip())
-                        for x in drugs_raw.split(",")] if drugs_raw else []
+        drugs_raw = request.query_params.get('drugs', [])
+        human_data_raw = request.query_params.get('humanData', {})
+        try:
+            drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
+        except (ValueError, SyntaxError):
+            drug_indices = []
 
-        # print('file_name =', file_name)
-        # print('type(file_name) =', type(file_name['age']))
-        # print('type(file_name[0]) =', type(file_name['age'][0]))
-        if file_name:
-            file_name = json.loads(file_name)
-            file_name = file_name['age'][0]
-        else:
+        try:
+            human_data = json.loads(human_data_raw)
+            file_name = human_data.get('age', ['rangbase.txt'])[0]
+        except (json.JSONDecodeError, TypeError, IndexError, KeyError):
             file_name = 'rangbase.txt'
         # Принудительная перезагрузка БД из файлов
         FileLoader.load_drugs_from_file(base_dir)
@@ -44,6 +43,11 @@ class CalculationAPI(APIView):
         while len(drug_indices) < calculator.n_k:
             drug_indices.append(0)
 
+        print('base_dir =', base_dir)
+        print('file_name =', file_name)
+        print('drug_indices =', drug_indices)
+        print('drug_indices2 =', drug_indices2)
+
         try:
             context = calculator.load_data_in_file(base_dir,
                                                    file_name,
@@ -55,29 +59,8 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_200_OK,
                 data=context)
         except Exception:
+            print(traceback.format_exc())
             return CustomResponse.response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-        # Поиск препаратов в БД
-        # drug_names = [name.strip().lower() for name in drugs_param.split(',')]
-
-        # print('drug_names =', drug_names)
-        # print('type(drug_names) =', type(drug_names))
-
-        # drugs = DrugCHF.objects.filter(name__in=drugs_param)
-        # drug_indices = list(drugs.values_list('index', flat=True))
-
-        # calculator = FortranCalculator()
-
-        # while len(drug_indices) < calculator.n_k:
-        #     drug_indices.append(0)
-
-        # try:
-        #     context = calculator.load_data_in_file(base_dir,
-        #                                            file_name,
-        #                                            drug_indices)
-        #     return Response(context, status=status.HTTP_200_OK)
-        # except Exception as e:
-        #     return Response({'error': str(e)},

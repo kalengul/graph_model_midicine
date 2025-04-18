@@ -1,0 +1,1468 @@
+{
+    "name": "berotralstat",
+    "comment": "Rx",
+    "other_names": [
+        "Orladeyo"
+    ],
+    "classes": [
+        "Kallikrein Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/orladeyo-berotralstat-4000073",
+    "pregnancy": {
+        "common": [
+            "Insufficient data available regarding use in pregnant females to inform drug-associated risks "
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "No structural alterations observed when orally administered to pregnant rats and rabbits during organogenesis at doses up to ~10 and 2x, respectively, the maximum recommended human daily dose in adults based on AUC "
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on drug presence in human milk, effects on breastfed infants, or effects on milk production ",
+            "Low levels of berotralstat detected in plasma of rat pups when oral administered to dams during lactation period; berotralstat concentration in pup plasma was ~2% of maternal plasma ",
+            "When drug is present in animal milk, it is likely the drug will be present in human milk"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "QT prolongation may occur at dosages >150 mg/day; additional doses or doses >150 mg/day are not recommended "
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Berotralstat is a P-gp and BCRP substrate, a P-gp inhibitor, a moderate CYP2D6 inhibitor, and weak CYP2D6 and CYP2C19 inhibitor",
+                        "P-gp or BCRP inhibitors",
+                        "Reduce berotralstat dose when coadministered ",
+                        "Cyclosporine, a P-gp and BCRP inhibitor, increased berotralstat peak plasma concentration by 25%, AUC(0-last) by 55%, and AUC(0-inf) by 69%",
+                        "P-gp inducers",
+                        "Avoid coadministration",
+                        "P-gp inducers (eg, rifampin, St. John’s wort) may decrease berotralstat plasma concentration and efficacy ",
+                        "CYP2D6 or CYP3A4 ",
+                        "Monitor or titrate substrate dose when coadministered with narrow therapeutic index drugs that are CYP2D6 or CYP3A substrates",
+                        "Berotralstat moderately inhibits CYP2D6 or CYP3A4 at recommended dose (ie, 150 mg)",
+                        "P-gp substrates",
+                        "Monitoring or dose titration is recommended for P-gp substrates (eg, digoxin)",
+                        "Berotralstat inhibits P-gp at higher than recommended dose (ie, 300 mg)"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of lonafarnib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lonafarnib is a sensitive CYP3A4 substrate. Coadministration with strong or moderate CYP3A4 inhibitors is contraindicated. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of berotralstat by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "vinblastine decreases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abemaciclib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of afatinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "berotralstat will increase the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "berotralstat will increase the level or effect of aliskiren by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ambrisentan",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ambrisentan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "berotralstat will increase the level or effect of apixaban by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "berotralstat will increase the level or effect of artesunate by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of atazanavir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "atorvastatin increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avatrombopag",
+            "description": {
+                "common": "berotralstat will increase the level or effect of avatrombopag by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendamustine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of bendamustine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "berotralstat will increase the level or effect of betrixaban by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brentuximab vedotin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of budesonide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capmatinib",
+            "description": {
+                "common": "capmatinib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of carbamazepine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carfilzomib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of carfilzomib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ceritinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cetirizine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of cetirizine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of cimetidine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ciprofloxacin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of colchicine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of crizotinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP and P-gp substrate) to 110 mg/day when coadministered with cyclosporine (a P-gp and BCRP inhibitor)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "berotralstat will increase the level or effect of dabigatran by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daclatasvir",
+            "description": {
+                "common": "daclatasvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "darolutamide increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasabuvir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of dasabuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of daunorubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin liposomal",
+            "description": {
+                "common": "berotralstat will increase the level or effect of daunorubicin liposomal by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desloratadine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of desloratadine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of dexamethasone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "berotralstat will increase the level or effect of diltiazem by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "berotralstat will increase the level or effect of docetaxel by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of doxorubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of duvelisib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "berotralstat will increase the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "berotralstat will increase the level or effect of eletriptan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elexacaftor",
+            "description": {
+                "common": "elexacaftor increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eltrombopag",
+            "description": {
+                "common": "eltrombopag increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "eluxadoline increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "erdafitinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etoposide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of etoposide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "berotralstat will increase the level or effect of everolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "berotralstat will increase the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fexofenadine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of fexofenadine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "flibanserin increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "fostemsavir increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "gefitinib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of hydrocortisone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idarubicin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of idarubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of indinavir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "berotralstat will increase the level or effect of irinotecan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "berotralstat will increase the level or effect of irinotecan liposomal by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivermectin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ivermectin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of larotrectinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ledipasvir/sofosbuvir",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of lefamulin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of lenvatinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of letermovir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "linagliptin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of linagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lomitapide increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of loperamide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loratadine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of loratadine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of lovastatin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "berotralstat will increase the level or effect of maraviroc by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "mefloquine increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "berotralstat will increase the level or effect of methotrexate by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "berotralstat will increase the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitomycin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of mitomycin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of morphine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of naldemedine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nelfinavir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "neratinib",
+            "description": {
+                "common": "neratinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nicardipine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nilotinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nintedanib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nintedanib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir",
+            "description": {
+                "common": "ombitasvir/paritaprevir/ritonavir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ondansetron by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "berotralstat will increase the level or effect of paclitaxel by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "berotralstat will increase the level or effect of paclitaxel protein bound by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of paliperidone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of pazopanib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pomalidomide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of pomalidomide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pralsetinib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of pralsetinib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of pravastatin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of prednisolone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "propafenone increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "reserpine",
+            "description": {
+                "common": "reserpine increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of rifampin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifaximin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "berotralstat will increase the level or effect of rimegepant by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of riociguat by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of risperidone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rolapitant",
+            "description": {
+                "common": "rolapitant increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of romidepsin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of saquinavir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of saxagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "selumetinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of silodosin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "simeprevir",
+            "description": {
+                "common": "simeprevir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "berotralstat will increase the level or effect of sirolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sitagliptin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of sitagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir",
+            "description": {
+                "common": "berotralstat will increase the level or effect of sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "berotralstat will increase the level or effect of tacrolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis",
+            "description": {
+                "common": "tafamidis increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis meglumine",
+            "description": {
+                "common": "tafamidis meglumine increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "berotralstat will increase the level or effect of talazoparib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of tazemetostat by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "berotralstat will increase the level or effect of temsirolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teniposide",
+            "description": {
+                "common": "berotralstat will increase the level or effect of teniposide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir AF",
+            "description": {
+                "common": "berotralstat will increase the level or effect of tenofovir AF by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "berotralstat will increase the level or effect of tenofovir DF by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "testosterone",
+            "description": {
+                "common": "berotralstat will increase the level or effect of testosterone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tezacaftor",
+            "description": {
+                "common": "tezacaftor increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of thioridazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP2D6 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "berotralstat will increase the level or effect of tolvaptan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "berotralstat will increase the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of trabectedin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "berotralstat will increase the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor or titrate substrate dose when berotralstat is coadministered with narrow therapeutic index drugs that are CYP3A substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "berotralstat will increase the level or effect of ubrogepant by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "velpatasvir",
+            "description": {
+                "common": "velpatasvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "berotralstat will increase the level or effect of venetoclax by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "berotralstat will increase the level or effect of verapamil by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of vinblastine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "berotralstat will increase the level or effect of vincristine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "berotralstat will increase the level or effect of vincristine liposomal by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "berotralstat will increase the level or effect of voclosporin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce voclosporin daily dosage to 15.8 mg PO in AM and 7.9 mg PO in PM."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voxilaprevir",
+            "description": {
+                "common": "voxilaprevir increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Minor/Significance Unknown. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Abdominal pain",
+            "percent": "10-23"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "10-15"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "10-15"
+        },
+        {
+            "name": "Gastroesophageal reflux disease",
+            "percent": "5-10"
+        },
+        {
+            "name": "Back pain",
+            "percent": "2-10"
+        },
+        {
+            "name": "Headache",
+            "percent": "9"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "6"
+        },
+        {
+            "name": "Flatulence",
+            "percent": "6"
+        },
+        {
+            "name": "In Trial",
+            "percent": "1,"
+        },
+        {
+            "name": "single patient discontinued treatment after a single",
+            "percent": "150"
+        },
+        {
+            "name": "mg dose due to asymptomatic elevated ALT",
+            "percent": "8"
+        },
+        {
+            "name": "x ULN and AST",
+            "percent": "3"
+        },
+        {
+            "name": "x ULN and total bilirubin was normal",
+            "percent": null
+        }
+    ]
+}

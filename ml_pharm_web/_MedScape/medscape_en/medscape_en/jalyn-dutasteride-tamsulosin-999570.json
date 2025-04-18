@@ -1,0 +1,1447 @@
+{
+    "name": "dutasteride/tamsulosin",
+    "comment": "Rx",
+    "other_names": [
+        "Jalyn"
+    ],
+    "classes": [
+        "Urologics",
+        "Other"
+    ],
+    "source": "https://reference.medscape.com/drug/jalyn-dutasteride-tamsulosin-999570",
+    "pregnancy": {
+        "common": [
+            "Not indicated for use in females; contraindicated for use in pregnancy because may cause harm to male fetus; dutasteride is a 5-alpha-reductase inhibitor that prevents conversion of testosterone to dihydrotestosterone (DHT), a hormone necessary for normal development of male genitalia",
+            "Abnormalities in genitalia of male fetuses is an expected physiological consequence of inhibition of this conversion; these results are similar to observations in male infants with genetic 5-alpha-reductase deficiency"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies, dutasteride inhibited normal development of external genitalia in male offspring when given to rats or rabbits during organogenesis at less than maximum recommended human dose (MRHD) of 0.5 mg daily, in absence of maternal toxicity; at 15 times MRHD, prolonged pregnancy, decreased reproductive organ weights, and delayed puberty in male offspring were observed in rats, with no-effect levels less than the MRHD of 0.5 mg daily",
+                    "Increased placental weights in rabbits were also observed, with no-effect levels less than the MRHD of 0.5 mg daily",
+                    "Although dutasteride is secreted into human semen, drug concentration in human female partner is approximately 100 times less than concentrations producing abnormalities of male genitalia in animal studies ",
+                    "In monkeys dosed during organogenesis at blood concentrations comparable to or above levels to which a human female partner is estimated to be exposed, male offspring external genitalia was not adversely affected",
+                    "No feminization occurred in male offspring of untreated female rats mated to treated male rats even though detectable blood levels of dutasteride were observed in the female rats",
+                    "No adverse developmental effects were observed in animal studies in which tamsulosin hydrochloride was administered to rats or rabbits during period of organogenesis"
+                ]
+            },
+            {
+                "type": "Reproductive potential",
+                "description": [
+                    "Effects of dutasteride 0.5 mg/day on semen characteristics were evaluated in normal volunteers aged 18 to 52 years (n = 27 dutasteride, n = 23 placebo) throughout 52 weeks of treatment and 24 weeks of post-treatment follow-up; at 52 weeks, mean percent reductions from baseline in total sperm count, semen volume, and sperm motility were 23%, 26%, and 18%, respectively, in the dutasteride group when adjusted for changes from baseline in placebo group; sperm concentration and morphology were unaffected",
+                    "After 24 weeks of follow-up, mean percent change in total sperm count in dutasteride group remained 23% lower than baseline, while mean values for all semen parameters at all timepoints remained within normal ranges and did not meet predefined criteria for a clinically significant change (30%), 2 subjects in the dutasteride group had decreases in sperm count of greater than 90% from baseline at 52 weeks, with partial recovery at 24-week follow-up; clinical significance of these effects on semen characteristics for an individual patient’s fertility is not known"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Therapy not indicated for use in females"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Clinically significant hypersensitivity (eg, serious skin reactions, angioedema, urticaria, pruritus, respiratory symptoms) to dutasteride, other 5 alpha-reductase inhibitors, or tamsulosin",
+                "Females who are pregnant"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Orthostatic hypotension and/or syncope can occur",
+                "Reduces total serum prostate-specific antigen (PSA) concentration by ~50%, evaluate any confirmed increases in PSA levels from nadir, even if those values are within normal range, for the presence of prostate cancer",
+                "Caution patients about the possibility and seriousness of priapism",
+                "Advise patients to not donate blood until 6 months after their last dose",
+                "Intraoperative floppy iris syndrome has been observed during cataract surgery after alpha-adrenergic antagonist exposure"
+            ],
+            "specific": [
+                {
+                    "type": "5-ARIs and prostate cancer risk",
+                    "description": [
+                        "June 9, 2011: Recent data from 2 large, randomized, controlled trials, Prostate Cancer Prevention Trial (PCPT) and the Reduction by Dutasteride of Prostate Cancer Events (REDUCE) trial, observed an increased risk of being diagnosed with a more serious form of prostate cancer (high-grade prostate cancer) in trial participants taking 5-alpha reductase inhibitors (5-ARIs)",
+                        "Revised prescribing information recommends that before initiating 5-ARIs, rule out other urological conditions, including prostate cancer that might mimic benign prostatic hyperplasia (BPH)"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Tamsulosin: CYP3A4 and CYP2D6 substrate",
+                        "Dutasteride: CYP3A4 and CYP3A5 substrate",
+                        "Additive hypotensive effects",
+                        "Coadministration with PDE-5 inhibitors (eg, sildenafil) or other alpha-antagonists (eg, doxazosin, terazosin may increase risk of hypotension",
+                        "CYP3A4 and CYP2D6 inhibitors",
+                        "Strong CYP3A4 inhibitors (eg, ketoconazole): Avoid coadministration",
+                        "Less potent CYP3A4 inhibitors (eg, terbinafine), strong or moderate (eg, terbinafine, paroxetine) CYP2D6 inhibitors, a combination of both CYP3A4 and CYP2D6 inhibitors, or poor metabolizers of CYP2D6: Use caution",
+                        "Ketoconazole (strong CYP3A4 inhibitor) and paroxetine (strong CYP2D6 inhibitor) resulted in increased in plasma levels of tamsulosinEffects of CYP3A4 inhibitors on dutasteride has not been studied",
+                        "Calcium channel blockers",
+                        "No dosage adjustment recommended",
+                        "Coadministration of verapamil or diltiazem decreases clearance and increases effects of dutasteride ",
+                        "Warfarin",
+                        "Use caution; monitor INR",
+                        "Limited studies showed inconclusive results regarding coadministration of tamsulosin with warfarin"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Increased risk for hypotensio"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dacomitinib",
+            "description": {
+                "common": "dacomitinib will increase the level or effect of tamsulosin by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid use with CYP2D6 substrates where minimal increases in concentration of the CYP2D6 substrate may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxazosin",
+            "description": {
+                "common": "doxazosin, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "givosiran",
+            "description": {
+                "common": "givosiran will increase the level or effect of tamsulosin by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP2D6 substrates with givosiran. If unavoidable, decrease the CYP2D6 substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Idelalisib is a strong CYP3A inhibitor; avoid coadministration with sensitive CYP3A substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Not recommended during and 2 weeks after itraconazole treatment. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternative therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Tamsulosin metabolized mainly by CYP3A4 and to a lesser extent by CYP2D6. Pause tamsulosin and restart 3 days after completing nirmatrelvir/ritonavir given that CYP3A4 inhibition takes several days to resolve. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenoxybenzamine",
+            "description": {
+                "common": "phenoxybenzamine, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phentolamine",
+            "description": {
+                "common": "phentolamine, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "prazosin, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "silodosin, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "terazosin",
+            "description": {
+                "common": "terazosin, tamsulosin.\nEither increases effects of the other by additive vasodilation. Avoid or Use Alternate Drug. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abiraterone",
+            "description": {
+                "common": "abiraterone increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Avoid coadministration of abiraterone with substrates of CYP2D6. If alternative therapy cannot be used, exercise caution and consider a dose reduction of the CYP2D6 substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, tamsulosin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be neeed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil, tamsulosin.\nEither increases effects of the other by additive vasodilation. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bicalutamide",
+            "description": {
+                "common": "bicalutamide increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bortezomib",
+            "description": {
+                "common": "bortezomib increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "bupropion increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine increases levels of tamsulosin by decreasing renal clearance. Use Caution/Monitor. Decreases tamsulosin clearance by 26% resulting in increased AUC (44%)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinacalcet",
+            "description": {
+                "common": "cinacalcet increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "clomipramine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "cocaine topical increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crofelemer",
+            "description": {
+                "common": "crofelemer increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Crofelemer has the potential to inhibit CYP3A4 at concentrations expected in the gut; unlikely to inhibit systemically because minimally absorbed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "darifenacin increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "desipramine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmedetomidine",
+            "description": {
+                "common": "dexmedetomidine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenhydramine",
+            "description": {
+                "common": "diphenhydramine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disulfiram",
+            "description": {
+                "common": "disulfiram increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duloxetine",
+            "description": {
+                "common": "duloxetine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with duvelisib increases AUC of a sensitive CYP3A4 substrate which may increase the risk of toxicities of these drugs. Consider reducing the dose of the sensitive CYP3A4 substrate and monitor for signs of toxicities of the coadministered sensitive CYP3A substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Monitor therapeutic drug concentrations, as indicated, or consider reducing the dosage of the concomitant drug and titrate to clinical effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Cobicistat is a CYP3A4 inhibitor; contraindicated with CYP3A4 substrates for which elevated plasma concentrations are associated with serious and/or life-threatening events."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, tamsulosin. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "fluoxetine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Iloperidone is a time-dependent CYP3A inhibitor and may lead to increased plasma levels of drugs predominantly eliminated by CYP3A4."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "imipramine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir increases levels of dutasteride by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "lidocaine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorcaserin",
+            "description": {
+                "common": "lorcaserin increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "methadone increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methimazole",
+            "description": {
+                "common": "methimazole increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane decreases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Mitotane is a strong inducer of cytochrome P-4503A4; monitor when coadministered with CYP3A4 substrates for possible dosage adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymetazoline topical",
+            "description": {
+                "common": "oxymetazoline topical increases and tamsulosin decreases sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "paroxetine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pseudoephedrine",
+            "description": {
+                "common": "pseudoephedrine decreases effects of tamsulosin by sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pyrimethamine",
+            "description": {
+                "common": "pyrimethamine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir increases levels of tamsulosin by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "artemether/lumefantrine will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "tamsulosin, benazepril.\nEither increases effects of the other by pharmacodynamic synergism. Minor/Significance Unknown. May increase risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "budesonide will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "tamsulosin, captopril.\nEither increases effects of the other by pharmacodynamic synergism. Minor/Significance Unknown. May increase risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "cortisone will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Ejaculation disorders",
+            "percent": "1.6-7.8"
+        },
+        {
+            "name": "Impotence",
+            "percent": "1.1-5.4"
+        },
+        {
+            "name": "Decreased libido",
+            "percent": "4.5"
+        },
+        {
+            "name": "Breast disorders",
+            "percent": "1.1"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1.1"
+        },
+        {
+            "name": "Impotence",
+            "percent": "1.1-5.4"
+        },
+        {
+            "name": "Ejaculation disorders",
+            "percent": "1"
+        },
+        {
+            "name": "Decreased libido",
+            "percent": null
+        },
+        {
+            "name": "Breast disorders",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": null
+        },
+        {
+            "name": "including rash",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "localized edema",
+            "percent": null
+        },
+        {
+            "name": "serious skin reactions",
+            "percent": null
+        },
+        {
+            "name": "and angioedema",
+            "percent": null
+        },
+        {
+            "name": "Neoplasms",
+            "percent": null
+        },
+        {
+            "name": "Male breast cancer",
+            "percent": null
+        },
+        {
+            "name": "Psychiatric disorders",
+            "percent": null
+        },
+        {
+            "name": "Depressed mood",
+            "percent": null
+        },
+        {
+            "name": "Reproductive system and breast disorders",
+            "percent": null
+        },
+        {
+            "name": "Testicular pain and testicular swelling",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": null
+        },
+        {
+            "name": "including rash",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "angioedema",
+            "percent": null
+        },
+        {
+            "name": "and respiratory problems have been reported with positive rechallenge in some cases",
+            "percent": null
+        },
+        {
+            "name": "Cardiac disorders",
+            "percent": null
+        },
+        {
+            "name": "Palpitations",
+            "percent": null
+        },
+        {
+            "name": "dyspnea",
+            "percent": null
+        },
+        {
+            "name": "atrial fibrillation",
+            "percent": null
+        },
+        {
+            "name": "arrhythmia",
+            "percent": null
+        },
+        {
+            "name": "and tachycardia",
+            "percent": null
+        },
+        {
+            "name": "Skin disorders",
+            "percent": null
+        },
+        {
+            "name": "Skin desquamation",
+            "percent": null
+        },
+        {
+            "name": "including Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "dermatitis exfoliative",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal disorders",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        },
+        {
+            "name": "vomiting",
+            "percent": null
+        },
+        {
+            "name": "dry mouth",
+            "percent": null
+        },
+        {
+            "name": "Reproductive system and breast disorders",
+            "percent": null
+        },
+        {
+            "name": "Priapism",
+            "percent": null
+        },
+        {
+            "name": "Vascular disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        },
+        {
+            "name": "Ophthalmologic disorders",
+            "percent": null
+        },
+        {
+            "name": "During cataract surgery",
+            "percent": null
+        },
+        {
+            "name": "a variant of small pupil syndrome known as intraoperative floppy iris syndrome",
+            "percent": null
+        },
+        {
+            "name": "IFIS",
+            "percent": null
+        },
+        {
+            "name": "associated with alpha adrenergic antagonist therapy",
+            "percent": null
+        },
+        {
+            "name": "blurred vision",
+            "percent": null
+        },
+        {
+            "name": "visual impairment",
+            "percent": null
+        },
+        {
+            "name": "glaucoma",
+            "percent": null
+        },
+        {
+            "name": "Respiratory",
+            "percent": null
+        },
+        {
+            "name": "Epistaxis",
+            "percent": null
+        }
+    ]
+}

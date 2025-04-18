@@ -9,7 +9,7 @@ class DrugGroup(models.Model):
     title = models.CharField(max_length=255, verbose_name="Название группы")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE, related_name="+")
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
 
     def __str__(self):
@@ -29,7 +29,7 @@ class Drug(models.Model):
     time_update = models.DateTimeField(auto_now=True)
     pg = models.ForeignKey('DrugGroup', null=True, on_delete=models.CASCADE,
                            verbose_name='Группа лекарственных средств')
-    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE, related_name="+")
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
 
     def __str__(self):
@@ -59,7 +59,7 @@ class UserGroupAll(models.Model):
 
 class UserInGroup(models.Model):
     user_group = models.ForeignKey('UserGroupAll', null=True, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE, related_name="+")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name="URL")
@@ -102,7 +102,7 @@ class DrugInteractionTable(models.Model):
     Interaction = models.TextField(verbose_name="Взаимодействие")
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
-    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, verbose_name='Пользователь', on_delete=models.CASCADE, related_name="+")
 
     def __str__(self):
         return self.Interaction

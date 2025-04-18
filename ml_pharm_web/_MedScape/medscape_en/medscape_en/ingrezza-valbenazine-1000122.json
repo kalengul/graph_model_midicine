@@ -1,0 +1,1858 @@
+{
+    "name": "valbenazine",
+    "comment": "Rx",
+    "other_names": [
+        "Ingrezza"
+    ],
+    "classes": [
+        "VMAT2 Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/ingrezza-valbenazine-1000122",
+    "pregnancy": {
+        "common": [
+            "Data are limited on use in pregnant women",
+            "Based on animal studies, may cause fetal harm; advise pregnant women of the potential risk"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "Administration to pregnant rats during organogenesis through lactation produced an increase in the number of stillborn pups and postnatal pup mortalities at doses <1 times the maximum recommended human dose (MRHD) of 80 mg/day based on mg/m² body surface area",
+                    "However, no malformations were observed when administered orally to rats and rabbits during the period of organogenesis at doses up to 1.8 or 24 times, respectively, the MRHD"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Valbenazine and its metabolites have been detected in rat milk at concentrations higher than in plasma following oral administration at doses 0.1-1.2 times the MRHD based on mg/m²",
+            "Based on animal findings of increased perinatal mortality in exposed fetuses and pups, advise a woman not to breastfeed during treatment and for 5 days after the final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "History of hypersensitivity to drug or components; rash urticaria, and reactions consistent with angioedema (eg, swelling of face, lips, mouth) reported "
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Can cause somnolence; warn patients not to perform activities requiring mental alertness (eg, driving or operating hazardous machinery) until they know how they will be affected",
+                "Increased exposure (Cmax and AUC) to active metabolite is anticipated in CYP2D6 poor metabolizers; increased exposure of active metabolite may increase risk of exposure-related adverse reactions; dose reduction recommended"
+            ],
+            "specific": [
+                {
+                    "type": "Parkinsonism",
+                    "description": [
+                        "May cause parkinsonism in patients with tardive dyskinesia",
+                        "Also reported with other VMAT2 inhibitors",
+                        "Postmarketing safety reports have described parkinson-like symptoms that required hospitalization",
+                        "In most cases, severe parkinsonism occurred within first two weeks of initiating or increasing dose of drug",
+                        "Associated symptoms have included falls, gait disturbances, tremor, drooling and hypokinesia",
+                        "In cases in which follow-up clinical information was available, parkinson-like symptoms were reported to resolve following discontinuation of therapy",
+                        "Reduce dose or discontinue treatment in patients who develop clinically significant parkinson-like signs or symptoms"
+                    ]
+                },
+                {
+                    "type": "QT prolongation",
+                    "description": [
+                        "May prolong the QT interval, although the degree of QT prolongation is not clinically significant at concentrations expected with recommended dosing",
+                        "If coadministered with a strong CYP2D6 or CYP3A4 inhibitor, or patients who are CYP2D6 poor metabolizers, valbenazine concentrations may increase and cause clinically significant QT prolongation (see Dosage Modifications)",
+                        "Avoid in patients with congenital long QT syndrome or with arrhythmias associated with a prolonged QT interval",
+                        "For patients at increased risk of a prolonged QT interval, assess the QT interval before increasing the dosage"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "MAOIs",
+                        "Avoid coadministration",
+                        "Concomitant use may increase concentration of monoamine neurotransmitters in synapses, potentially leading to increased risk of adverse reactions (eg, serotonin syndrome) or attenuated treatment effect of valbenazine",
+                        "Strong CYP3A4 inhibitors",
+                        "Reduce valbenazine dose (see Dosage Modifications)",
+                        "Coadministration increases exposure (Cmax and AUC) to valbenazine and its active metabolite compared with the use of valbenazine alone",
+                        "Strong CYP2D6 inhibitors",
+                        "Reduce valbenazine dose (see Dosage Modifications)",
+                        "Coadministration increases exposure (Cmax and AUC) to valbenazine’s active metabolite compared with the use of valbenazine alone",
+                        "Strong CYP3A4 inducers",
+                        "Concomitant use not recommended",
+                        "Coadministration decreases systemic exposure of valbenazine and its active metabolite, thereby decreasing efficacy",
+                        "Digoxin",
+                        "Coadministration increases digoxin levels owing to P-gp inhibition",
+                        "Monitor digoxin levels if coadministered; dosage adjustment of digoxin may be necessary"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "deutetrabenazine, valbenazine.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Do not use these drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "tetrabenazine, valbenazine.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Do not use these drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dacomitinib",
+            "description": {
+                "common": "dacomitinib will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid use with CYP2D6 substrates where minimal increases in concentration of the CYP2D6 substrate may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "givosiran",
+            "description": {
+                "common": "givosiran will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP2D6 substrates with givosiran. If unavoidable, decrease the CYP2D6 substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iobenguane I 131",
+            "description": {
+                "common": "valbenazine will decrease the level or effect of iobenguane I 131 by  Other (see comment). Avoid or Use Alternate Drug. Based on the mechanism of action of iobenguane, drugs that reduce catecholamine uptake or that deplete catecholamine stores may interfere with iobenguane uptake into cells, and thus, reduce iobenguane efficacy. Discontinue interfering drugs for at least 5 half-lives before administration of either the dosimetry or an iobenguane dose. Do not administer these drugs until at least 7 days after each iobenguane dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "isocarboxazid, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternative therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "linezolid",
+            "description": {
+                "common": "linezolid, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methylene blue",
+            "description": {
+                "common": "methylene blue, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "phenelzine, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rasagiline",
+            "description": {
+                "common": "rasagiline, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline",
+            "description": {
+                "common": "selegiline, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline transdermal",
+            "description": {
+                "common": "selegiline transdermal, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Concomitant use not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "tranylcypromine, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "valbenazine and albuterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "valbenazine and alfuzosin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "valbenazine and amiodarone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "valbenazine and amisulpride both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "valbenazine and amitriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "valbenazine and amoxapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "valbenazine and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "valbenazine and apomorphine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "valbenazine and arformoterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "valbenazine and aripiprazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "valbenazine and arsenic trioxide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "valbenazine and artemether both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "valbenazine and artemether/lumefantrine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "valbenazine and asenapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg daily when coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "valbenazine and atomoxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "valbenazine and azithromycin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "valbenazine and bedaquiline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "valbenazine and buprenorphine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "bupropion will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "valbenazine and ceritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "valbenazine and chloroquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinacalcet",
+            "description": {
+                "common": "cinacalcet will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "valbenazine and ciprofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisapride",
+            "description": {
+                "common": "valbenazine and cisapride both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "valbenazine and citalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "valbenazine and clomipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "valbenazine and clozapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2E1 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "cocaine topical will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "valbenazine and crizotinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "valbenazine and dasatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "valbenazine and degarelix both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "valbenazine and desflurane both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "valbenazine and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "valbenazine and deutetrabenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmedetomidine",
+            "description": {
+                "common": "dexmedetomidine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "valbenazine and disopyramide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "valbenazine and dofetilide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "valbenazine and dolasetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "valbenazine and donepezil both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "valbenazine and doxepin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "valbenazine and dronedarone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "valbenazine and droperidol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with duvelisib increases AUC of a sensitive CYP3A4 substrate which may increase the risk of toxicities of these drugs. Consider reducing the dose of the sensitive CYP3A4 substrate and monitor for signs of toxicities of the coadministered sensitive CYP3A substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "valbenazine and efavirenz both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of valbenazine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "valbenazine and eliglustat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, valbenazine. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "valbenazine and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "valbenazine and eribulin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "valbenazine and erythromycin base both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "valbenazine and erythromycin ethylsuccinate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "valbenazine and erythromycin lactobionate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "valbenazine and erythromycin stearate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "valbenazine and escitalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "valbenazine and fexinidazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "valbenazine and fingolimod both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "valbenazine and flecainide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "valbenazine and fluconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "fluoxetine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "valbenazine and fluphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "valbenazine and fluvoxamine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "valbenazine and foscarnet both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "valbenazine and fostemsavir both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "valbenazine and ganaxolone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "valbenazine and gemifloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "valbenazine and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "valbenazine and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "valbenazine and glasdegib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "valbenazine and goserelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "valbenazine and granisetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "valbenazine and haloperidol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "valbenazine and histrelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "valbenazine and hydroxychloroquine sulfate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "valbenazine and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "valbenazine and ibutilide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "valbenazine and iloperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "valbenazine and imipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indacaterol, inhaled",
+            "description": {
+                "common": "valbenazine and indacaterol, inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "valbenazine and inotuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "valbenazine and isoflurane both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "valbenazine and ivosidenib both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "valbenazine and lapatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "valbenazine and lefamulin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "valbenazine and lenvatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "valbenazine and leuprolide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "valbenazine and levalbuterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "valbenazine and levofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "valbenazine and lithium both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "valbenazine and lofexidine both increase  QTc interval. Use Caution/Monitor. ECG monitoring is recommended."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "valbenazine and loperamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorcaserin",
+            "description": {
+                "common": "lorcaserin will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "valbenazine and macimorelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "valbenazine and maprotiline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "valbenazine and mefloquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "valbenazine and methadone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "valbenazine and midostaurin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "valbenazine and mifepristone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "valbenazine and mirtazapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "valbenazine and mobocertinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "valbenazine and moxifloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "valbenazine and nilotinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "valbenazine and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "valbenazine and octreotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "valbenazine and ofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "valbenazine and olanzapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olodaterol inhaled",
+            "description": {
+                "common": "valbenazine and olodaterol inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "valbenazine and ondansetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "valbenazine and osilodrostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "valbenazine and osimertinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "valbenazine and oxaliplatin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "valbenazine and ozanimod both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "valbenazine and paliperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "valbenazine and panobinostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "paroxetine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "valbenazine and pasireotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "valbenazine and pazopanib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "valbenazine and pentamidine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "valbenazine and perphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "valbenazine and pimavanserin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "valbenazine and pimozide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "valbenazine and pitolisant both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "valbenazine and ponesimod both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "valbenazine and primaquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "valbenazine and procainamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "valbenazine and prochlorperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "valbenazine and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "valbenazine and propafenone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "valbenazine and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "valbenazine and ranolazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "remimazolam",
+            "description": {
+                "common": "remimazolam, valbenazine.\nEither increases toxicity of the other by sedation. Modify Therapy/Monitor Closely. Coadministration may result in profound sedation, respiratory depression, coma, and/or death. Continuously monitor vital signs during sedation and recovery period if coadministered. Carefully titrate remimazolam dose if administered with opioid analgesics and/or sedative/hypnotics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rilpivirine",
+            "description": {
+                "common": "valbenazine and rilpivirine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "valbenazine and risperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Consider reducing valbenazine dose based on tolerability if coadministered with a strong CYP2D6 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rolapitant",
+            "description": {
+                "common": "rolapitant will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Rolapitant may increase plasma concentrations of CYP2D6 substrates for at least 28 days following rolapitant administration."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "valbenazine and romidepsin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "valbenazine and salmeterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "valbenazine and selpercatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "valbenazine and sertraline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "valbenazine and sevoflurane both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "valbenazine and siponimod both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "valbenazine and solifenacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sorafenib",
+            "description": {
+                "common": "valbenazine and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, valbenazine. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "valbenazine and sunitinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "valbenazine and tacrolimus both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "valbenazine and telavancin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbinafine",
+            "description": {
+                "common": "terbinafine will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Assess need to reduce dose of CYP2D6-metabolized drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "valbenazine and trazodone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "valbenazine and trifluoperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "valbenazine and trimipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "valbenazine and triptorelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "valbenazine and umeclidinium bromide/vilanterol inhaled both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "valbenazine and vandetanib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "valbenazine and vardenafil both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "valbenazine and vemurafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "valbenazine and venlafaxine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "valbenazine and vilanterol/fluticasone furoate inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "valbenazine and vorinostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Somnolence",
+            "percent": "10.9"
+        },
+        {
+            "name": "Anticholinergic effects",
+            "percent": "5.4"
+        },
+        {
+            "name": "Balance disorders",
+            "percent": "4.1"
+        },
+        {
+            "name": "fall",
+            "percent": "3.4"
+        },
+        {
+            "name": "Headache",
+            "percent": "2.7"
+        },
+        {
+            "name": "Akathisia",
+            "percent": "2.6"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2.3"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2.3"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity",
+            "percent": null
+        },
+        {
+            "name": "QT prolongation",
+            "percent": null
+        },
+        {
+            "name": "Skin and subcutaneous tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "rash",
+            "percent": null
+        }
+    ]
+}

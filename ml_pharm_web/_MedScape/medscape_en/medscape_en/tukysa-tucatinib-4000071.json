@@ -1,0 +1,478 @@
+{
+    "name": "tucatinib",
+    "comment": "Rx",
+    "other_names": [
+        "Tukysa"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Anti-HER2",
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/tukysa-tucatinib-4000071",
+    "pregnancy": {
+        "common": [
+            "Refer to the full prescribing information of trastuzumab and capecitabine for pregnancy and lactation information",
+            "Based on animal data and its mechanism of action, fetal harm may occur when administer to pregnant females",
+            "No data available on use in pregnant females to inform a drug-associated risk",
+            "Verify pregnancy status of females of reproductive potential before treatment"
+        ],
+        "specific": [
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females of reproductive potential or males with female partners of reproductive potential: Use effective contraception during treatment and at least 1 week after final dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "May impair male and female fertility"
+                ]
+            },
+            {
+                "type": "Animal data",
+                "description": [
+                    "Administration to pregnant rats and rabbits during organogenesis resulted in embryofetal mortality, reduced fetal weight, and fetal abnormalities at maternal exposure ≥1.3x the AUC at the recommended dose",
+                    "Advise pregnant women and females of reproductive potential of potential risk to fetus"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data available on the presence of tucatinib or its metabolites in human or animal milk or its effects on the breastfed child or on milk production",
+            "Advise females not to breastfeed during treatment and for at least 1 week after final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Severe hepatotoxicity has been report; monitor ALT, AST, and bilirubin prior to initiation, q3Weeks during treatment, and as clinically indicated",
+                "May cause fetal harm",
+                "Tucatinib is a substrate of CYP3A4, CYP2C8, P-glycoprotein (P-gp), and BCRP",
+                "Also, reversible inhibitor of CYP3A4 and CYP2C8; time-dependent inhibitor of CYP3A4; P-gp inhibitor"
+            ],
+            "specific": [
+                {
+                    "type": "Diarrhea",
+                    "description": [
+                        "Severe diarrhea, including dehydration, acute kidney injury, and death, has been reported",
+                        "Administer antidiarrheal treatment as clinically indicated",
+                        "Perform diagnostic tests as clinically indicated to exclude other causes of diarrhea"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Strong CYP3A or moderate CYP2C8 inducers ",
+                        "Avoid coadministration",
+                        "Concomitant use of tucatinib with a strong CYP3A or moderate CYP2C8 inducer decreased tucatinib plasma concentrations, which may reduce the efficacy of tucatinib",
+                        "CYP2C8 inhibitors",
+                        "Avoid coadministration with strong CYP2C8 inhibitors; reduce tucatinib dose if concomitant use cannot be avoided",
+                        "Concomitant use of tucatinib with a strong CYP2C8 inhibitor may increase tucatinib plasma concentrations, which may increase the risk of tucatinib toxicity",
+                        "Coadministration with moderate CYP2C8 inhibitors: Increase monitoring for tucatinib toxicity",
+                        "CYP3A substrates",
+                        "Avoid coadministration with sensitive CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities",
+                        "P-gp substrates",
+                        "Consider reducing dose of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [],
+    "adverse effects": [
+        {
+            "name": "Diarrhea",
+            "percent": "81"
+        },
+        {
+            "name": "Palmoplantar erythrodysesthesia syndrome",
+            "percent": "63"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "59"
+        },
+        {
+            "name": "Nausea",
+            "percent": "58"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "57"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "47"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "46"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "43"
+        },
+        {
+            "name": "Hepatotoxicity",
+            "percent": "42"
+        },
+        {
+            "name": "Decreased magnesium",
+            "percent": "40"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "36"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "36"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "33"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "32"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "28"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "26"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "25"
+        },
+        {
+            "name": "Anemia",
+            "percent": "21"
+        },
+        {
+            "name": "Rash",
+            "percent": "20"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "15"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "14"
+        },
+        {
+            "name": "Decreased weight",
+            "percent": "13"
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": "13"
+        },
+        {
+            "name": "Epistaxis",
+            "percent": "12"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "64"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "58"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "56"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "46"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "46"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "44"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "39"
+        },
+        {
+            "name": "Rash",
+            "percent": "37"
+        },
+        {
+            "name": "Nausea",
+            "percent": "35"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "33"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "28"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "25"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "24"
+        },
+        {
+            "name": "Decreased leukocytes",
+            "percent": "22"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "21"
+        },
+        {
+            "name": "Infusion",
+            "percent": "21"
+        },
+        {
+            "name": "related reaction",
+            "percent": "20"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "20"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "19"
+        },
+        {
+            "name": "Chills",
+            "percent": "19"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "17"
+        },
+        {
+            "name": "Back pain",
+            "percent": "16"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "16"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "16"
+        },
+        {
+            "name": "Cough",
+            "percent": "16"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "14"
+        },
+        {
+            "name": "Constipation",
+            "percent": "14"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "13"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "13"
+        },
+        {
+            "name": "Palmoplantar erythrodysesthesia syndrome",
+            "percent": "0.5-12"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "12"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "0.2-9"
+        },
+        {
+            "name": "Hepatoxicity",
+            "percent": "8"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "8"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "6"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "6"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "3.7"
+        },
+        {
+            "name": "Anemia",
+            "percent": "3.7"
+        },
+        {
+            "name": "Nausea",
+            "percent": "3.3"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "3"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2.5"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "2.5"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "1.5"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "1"
+        },
+        {
+            "name": "Decreased weight",
+            "percent": "10"
+        },
+        {
+            "name": "Anemia",
+            "percent": "10"
+        },
+        {
+            "name": "Anxiety",
+            "percent": "7"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "6"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "3.5"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3.5"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "2.4-3.5"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "2.4-3.5"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "2.4"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "2.4"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "2.3"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "2.3"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "2.3"
+        },
+        {
+            "name": "Back pain",
+            "percent": "1.2"
+        },
+        {
+            "name": "Constipation",
+            "percent": "1.2"
+        },
+        {
+            "name": "Chills",
+            "percent": "1.2"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "1.2"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "1.2"
+        },
+        {
+            "name": "Decreased bilirubin",
+            "percent": "1.2"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "0.8"
+        },
+        {
+            "name": "Decreased magnesium",
+            "percent": "0.7"
+        },
+        {
+            "name": "Rash",
+            "percent": "0.5"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "0.5"
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": "0.5"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "0.5"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": null
+        }
+    ]
+}

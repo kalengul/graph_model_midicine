@@ -1,0 +1,686 @@
+{
+    "name": "azilsartan",
+    "comment": "Rx",
+    "other_names": [
+        "Edarbi"
+    ],
+    "classes": [
+        "ARBs"
+    ],
+    "source": "https://reference.medscape.com/drug/edarbi-azilsartan-999625",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C (1st trimester); D (2nd and 3rd trimesters)",
+            "Discontinue as soon as possible when pregnancy is detected; affects renin-angiotensin system causing oligohydramnios, which may result in fetal injury and/or death",
+            "Lactation: unknown whether distributed in breast milk, decide on alternate antihypertensive therapy or do not breastfeed"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: unknown whether distributed in breast milk, decide on alternate antihypertensive therapy or do not breastfeed"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Discontinue as soon as possible when pregnancy is detected; affects renin-angiotensin system causing oligohydramnios, which may result in fetal injury and/or death"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Do not coadminister with aliskiren in patients with diabetes"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Abnormally high serum creatinine values more likely reported in patients aged 75 or older",
+                "Caution with hyperkalemia",
+                "NSAIDs may attenuate antihypertensive response",
+                "Coadministration with NSAIDs increase risk of renal impairment including acute renal failure"
+            ],
+            "specific": [
+                {
+                    "type": "Hypotension in volume- or salt-depleted patients",
+                    "description": [
+                        "In patients with an activated renin-angiotensin system, such as volume-and/or salt-depleted patients (eg, those being treated with high doses of diuretics), symptomatic hypotension may occur after initiation of treatment",
+                        "Correct volume or salt depletion prior to administration of therapy, or start treatment at 40 mg",
+                        "If hypotension does occur, the patient should be placed in the supine position and, if necessary, given an intravenous infusion of normal saline",
+                        "Transient hypotensive response is not a contraindication to further treatment, which usually can be continued without difficulty once the blood pressure has stabilized"
+                    ]
+                },
+                {
+                    "type": "Impaired renal function",
+                    "description": [
+                        "As a consequence of inhibiting the renin-angiotensin system, changes in renal function may be anticipated in susceptible individuals receiving therapy",
+                        "In patients whose renal function may depend on activity of renin-angiotensin system (eg, patients with severe congestive heart failure, renal artery stenosis, or volume depletion)",
+                        "Treatment with angiotensin-converting enzyme inhibitors and angiotensin receptor blockers has been associated with oliguria or progressive azotemia and rarely with acute renal failure and death",
+                        "In studies of ACE inhibitors in patients with unilateral or bilateral renal artery stenosis, increases in serum creatinine or blood urea nitrogen have been reported; there has been no long-term use of the drug in patients with unilateral or bilateral renal artery stenosis, but similar results may be expected"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "In patients who are elderly, volume-depleted (including those on diuretic therapy), or who have compromised renal function, coadministration of NSAIDs, including selective COX-2 inhibitors, with angiotensin II receptor antagonists, may result in deterioration of renal function, including possible acute renal failure; these effects are usually reversible",
+                        "Monitor renal function periodically in patients receiving azilsartan and NSAID therapy; the antihypertensive effect of angiotensin II receptor antagonists may be attenuated by NSAIDs, including selective COX-2 inhibitors",
+                        "Dual blockade of the RAS with angiotensin receptor blockers, ACE inhibitors, or aliskiren is associated with increased risks of hypotension, hyperkalemia, and changes in renal function (including acute renal failure) compared to monotherapy",
+                        "Most patients receiving combination of two RAS inhibitors do not obtain any additional benefit compared to monotherapy; in general, avoid combined use of RAS inhibitors; closely monitor blood pressure, renal function and electrolytes in patients receiving therapy and other agents that affect the RAS",
+                        "Do not coadminister aliskiren with azilsartan in patients with diabetes; avoid use of aliskiren with azilsartan in patients with renal impairment (GFR <60 mL/min)"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "azilsartan decreases effects of aliskiren by Other (see comment). Contraindicated. \nComment: Aliskiren use contraindicated with ARBs in patients with diabetes; avoid coadministration with ARBs if GFR. In patients who are elderly, volume-depleted (including those on diuretic therapy), or with compromised renal function, coadministration of ARBS with drugs that affect RAAS may increase the risk of renal impairment (including acute renal failure) and cause loss of antihypertensive effect. Monitor renal function periodically."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sparsentan",
+            "description": {
+                "common": "sparsentan, azilsartan.\nEither increases toxicity of the other by pharmacodynamic synergism. Contraindicated. Coadministration of ARBs with sparsentan is associated with increased risks of hypotension, syncope, hyperkalemia, and changes in renal function (eg, acute renal failure)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "aliskiren, azilsartan.\nEither increases toxicity of the other by unspecified interaction mechanism. Avoid or Use Alternate Drug. Coadministration associated with increased risk of non-fatal stroke, renal complications, hyperkalemia, and hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "azilsartan, benazepril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "azilsartan, captopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "azilsartan, enalapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "azilsartan, fosinopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "azilsartan, lisinopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "azilsartan increases toxicity of lithium by decreasing renal clearance. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine, azilsartan.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that decrease pulse or blood pressure to mitigate risk of excessive bradycardia and hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "azilsartan, moexipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "azilsartan, perindopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "potassium phosphates, IV",
+            "description": {
+                "common": "azilsartan and potassium phosphates, IV both increase  serum potassium. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "azilsartan, quinapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "azilsartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trandolapril",
+            "description": {
+                "common": "azilsartan, trandolapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albiglutide",
+            "description": {
+                "common": "azilsartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, azilsartan.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil increases effects of azilsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bretylium",
+            "description": {
+                "common": "azilsartan, bretylium.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Each drug may cause hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "canagliflozin",
+            "description": {
+                "common": "azilsartan and canagliflozin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin increases toxicity of azilsartan by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin increases toxicity of azilsartan by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable solution",
+            "description": {
+                "common": "azilsartan increases effects of exenatide injectable solution by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable suspension",
+            "description": {
+                "common": "azilsartan increases effects of exenatide injectable suspension by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin increases toxicity of azilsartan by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "azilsartan increases effects of insulin aspart by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart protamine/insulin aspart",
+            "description": {
+                "common": "azilsartan increases effects of insulin aspart protamine/insulin aspart by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "azilsartan, insulin degludec.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "azilsartan, insulin degludec/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "azilsartan increases effects of insulin detemir by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "azilsartan increases effects of insulin glargine by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "azilsartan increases effects of insulin glulisine by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "azilsartan, insulin inhaled.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin isophane human/insulin regular human",
+            "description": {
+                "common": "azilsartan increases effects of insulin isophane human/insulin regular human by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "azilsartan increases effects of insulin lispro by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro protamine/insulin lispro",
+            "description": {
+                "common": "azilsartan increases effects of insulin lispro protamine/insulin lispro by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "azilsartan increases effects of insulin NPH by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "azilsartan increases effects of insulin regular human by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "liraglutide",
+            "description": {
+                "common": "azilsartan increases effects of liraglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc, azilsartan.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate",
+            "description": {
+                "common": "methylphenidate will decrease the level or effect of azilsartan by  pharmacodynamic antagonism. Use Caution/Monitor. Methylphenidate may diminish antihypertensive effects. Monitor BP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate transdermal",
+            "description": {
+                "common": "methylphenidate transdermal decreases effects of azilsartan by anti-hypertensive channel blocking. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitroglycerin rectal",
+            "description": {
+                "common": "nitroglycerin rectal, azilsartan.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Observe for possible additive hypotensive effects during concomitant use. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "oxaprozin, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate/citric acid",
+            "description": {
+                "common": "azilsartan and potassium citrate/citric acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium iodide",
+            "description": {
+                "common": "potassium iodide and azilsartan both increase  serum potassium. Use Caution/Monitor. Potassium salts may increase the hyperkalemic effects of ARBs; the effect may be the result of aldosterone suppression in patients receiving ARBs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of azilsartan by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of azilsartan by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "synthetic human angiotensin II",
+            "description": {
+                "common": "azilsartan decreases effects of synthetic human angiotensin II by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "tadalafil increases effects of azilsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin, azilsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin and azilsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "entecavir",
+            "description": {
+                "common": "azilsartan, entecavir.\nEither increases effects of the other by decreasing renal clearance. Minor/Significance Unknown. Coadministration with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of either entecavir or the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "patiromer",
+            "description": {
+                "common": "patiromer, azilsartan. cation binding in GI tract. Minor/Significance Unknown. No observed clinically important interaction. No separation of dosing required."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Diarrhea",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Asthenia",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "Muscle spasm",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Postural hypotension",
+            "percent": null
+        },
+        {
+            "name": "Cough",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Muscle spasm",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "angioedema",
+            "percent": null
+        }
+    ]
+}

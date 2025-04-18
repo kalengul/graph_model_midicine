@@ -1,0 +1,760 @@
+{
+    "name": "ixazomib",
+    "comment": "Rx",
+    "other_names": [
+        "Ninlaro"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Proteasome Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/ninlaro-ixazomib-1000064",
+    "pregnancy": {
+        "common": [
+            "Can cause fetal harm when administered to a pregnant woman",
+            "There are no human data available regarding the potential effect of ixazomib on pregnancy or development of the embryo or fetus"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "Ixazomib caused embryofetal toxicity in pregnant rats and rabbits at doses resulting in exposures that were slightly higher than those observed in patients receiving the recommended dose",
+                    "Increases in fetal skeletal variations/abnormalities (fused caudal vertebrae, number of lumbar vertebrae, and full supernumerary ribs) in rabbit studies",
+                    "Decrease fetal weights, a trend towards decreased fetal viability, and increased postimplantation losses were observed in rat studies"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Advise women of the potential risk to a fetus and to avoid becoming pregnant while being treated",
+                    "Male and female patients of childbearing potential must use effective contraceptive measures during and for 90 days following the final dose",
+                    "Dexamethasone is known to be a weak to moderate inducer of CYP3A4 as well as other enzymes and transporters; because drug is administered with dexamethasone, consider risk for reduced efficacy of contraceptives; advise women using hormonal contraceptives to also use a barrier method of contraception"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data are available in human milk; effects of drug on breastfed infant, or effects of drug on milk production; because potential for serious adverse reactions from drug in breastfed infants is unknown, advise nursing women not to breastfeed during treatment and for 90 days after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Cases, sometimes fatal, of thrombotic microangiopathy, including thrombotic thrombocytopenic purpura/hemolytic uremic syndrome (TTP/HUS), reported; monitor for signs and symptoms of TTP/HUS; if TTP/HUS is suspected, stop therapy, and evaluate; if TTP/HUS is excluded, consider restarting therapy; safety of reinitiating therapy in patients previously experiencing TTP/HUS not known",
+                "Thrombocytopenia reported with platelet nadirs typically occurring between days 14 and 21 of each 28-day cycle and recovery to baseline by the start of the next cycle; monitor platelet counts at least monthly during treatment; consider more frequent monitoring during the first 3 cycles ",
+                "Diarrhea, constipation, nausea, and vomiting reported, occasionally requiring use of antidiarrheals, antiemetics, and supportive care",
+                "Peripheral neuropathy reported; monitor for symptoms; new or worsening peripheral neuropathy may require dose modification",
+                "Peripheral edema reported; evaluate for underlying causes and provide supportive care, as necessary; adjust dosing of dexamethasone per its prescribing information or ixazomib for Grade 3 or 4 symptoms ",
+                "Cutaneous reactions reported, including maculopapular and macular rash; manage with supportive care or with dose modification if Grade ≥2; Stevens-Johnson syndrome, including a fatal case, reported; discontinue therapy if Stevens-Johnson syndrome occurs and manage as clinically indicated",
+                "Rare occurrence of drug-induced liver injury, hepatocellular injury, hepatic steatosis, hepatitis cholestatic, and hepatotoxicity reported; monitor hepatic enzymes regularly and adjust dosing for Grade 3 or 4 symptoms ",
+                "Herpes zoster infection reported; consider antiviral prophylaxis during therapy to decrease risk of herpes zoster reactivation",
+                "Can cause fetal harm when administered to a pregnant woman based on the mechanism of action and findings in animals ",
+                "Maintenance treatment for multiple myeloma in clinical trial resulted in increased deaths; therefore, not recommended for maintenance treatment outside of controlled trials "
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Substrate of CYP3A4",
+                        "Strong CYP3A4 inducers",
+                        "Avoid coadministration ",
+                        "Rifampin (a strong CYP3A4 inducer) decreased ixazomib Cmax by 54% and AUC by 74%"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternative therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of ixazomib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ixazomib with strong CYP3A inducers. Strong inducers have been shown to decrease ixazomib Cmax by 54% and AUC by 74%."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of ixazomib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and ixazomib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of ixazomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Percentages listed are for any grade toxicity unless otherwise stated",
+            "percent": "78"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "67"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "42"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "34"
+        },
+        {
+            "name": "Constipation",
+            "percent": "28"
+        },
+        {
+            "name": "Peripheral neuropathies",
+            "percent": "26"
+        },
+        {
+            "name": "Nausea",
+            "percent": "3-4"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "26"
+        },
+        {
+            "name": "grade",
+            "percent": "3-4"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "26"
+        },
+        {
+            "name": "grade",
+            "percent": "25"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "22"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "21"
+        },
+        {
+            "name": "Back pain",
+            "percent": "19"
+        },
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": "19"
+        },
+        {
+            "name": "Rash",
+            "percent": "3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "6"
+        },
+        {
+            "name": "grade",
+            "percent": "6"
+        },
+        {
+            "name": "Blurred vision",
+            "percent": "6"
+        },
+        {
+            "name": "Conjunctivitis",
+            "percent": "5"
+        },
+        {
+            "name": "Dry eye",
+            "percent": "4"
+        },
+        {
+            "name": "Herpes zoster",
+            "percent": "3"
+        },
+        {
+            "name": "without antiviral prophylaxis",
+            "percent": "3"
+        },
+        {
+            "name": "Rash",
+            "percent": "2"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": "2"
+        },
+        {
+            "name": "Peripheral neuropathies",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "1"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Herpes zoster",
+            "percent": "3"
+        },
+        {
+            "name": "with antiviral prophylaxis",
+            "percent": null
+        },
+        {
+            "name": "Drug",
+            "percent": null
+        },
+        {
+            "name": "induced liver injury",
+            "percent": null
+        },
+        {
+            "name": "hepatocellular injury",
+            "percent": null
+        },
+        {
+            "name": "hepatic steatosis",
+            "percent": null
+        },
+        {
+            "name": "hepatitis cholestatic",
+            "percent": null
+        },
+        {
+            "name": "and hepatotoxicity",
+            "percent": null
+        },
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Back pain",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Acute febrile neutrophilic dermatosis",
+            "percent": null
+        },
+        {
+            "name": "Sweet syndrome",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "Transverse myelitis",
+            "percent": null
+        },
+        {
+            "name": "Posterior reversible encephalopathy syndrome",
+            "percent": null
+        },
+        {
+            "name": "Tumor lysis syndrome",
+            "percent": null
+        },
+        {
+            "name": "Thrombotic thrombocytopenic purpura",
+            "percent": null
+        }
+    ]
+}

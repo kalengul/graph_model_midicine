@@ -1,0 +1,2207 @@
+{
+    "name": "entrectinib",
+    "comment": "Rx",
+    "other_names": [
+        "Rozlytrek"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/rozlytrek-entrectinib-1000336",
+    "pregnancy": {
+        "common": [
+            "Based on literature reports in humans with congenital mutations leading to changes in TRK signaling, findings from animal studies, and its mechanism of action, fetal harm may occur when administered to a pregnant woman",
+            "No data available on use in pregnant women",
+            "Verify pregnancy status of females of reproductive potential before initiating treatment"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Administration of entrectinib to pregnant rats during organogenesis resulted in malformations at maternal exposures ~2.7 times the human exposure at the 600-mg dose",
+                    " Advise pregnant women of the potential risk to a fetus"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females of reproductive potential: Use effective contraception during treatment and for at least 5 weeks following the final dose",
+                    "Males with female partners of reproductive potential: Use effective contraception during treatment and for 3 months following the final dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on the presence of entrectinib or its metabolites in human milk or their effects on either the breastfed child or on milk production",
+            "Owing to the potential adverse reactions in breastfed children from entrectinib, advise a lactating woman to discontinue breastfeeding during treatment and for 7 days after the final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Increase of fractures reported; promptly evaluate patients with signs or symptoms (eg, pain, changes in mobility, deformity) of fractures",
+                "Increased liver transaminase reported; monitor liver tests every 2 weeks during the first month of treatment, then monthly thereafter, and as clinically indicated",
+                "Hyperuricemia reported, as well as elevated uric acid levels; assess serum uric acid levels prior to initiation and periodically during treatment",
+                "Vision disorders have occurred, including blurred vision, photophobia, diplopia, visual impairment, photopsia, cataract, and vitreous floaters",
+                "Based on literature reports in humans with congenital mutations leading to changes in TRK signaling, findings from animal studies, and its mechanism of action, fetal harm may occur when administered to a pregnant woman",
+                "Entrectinib is a CYP3A4 substrate"
+            ],
+            "specific": [
+                {
+                    "type": "QT prolongation",
+                    "description": [
+                        "QT prolongation reported; patients with at least 1 post-baseline ECG assessment experienced prolonged QT interval of >60 ms after starting treatment",
+                        "Assess QT interval and electrolytes at baseline and periodically during treatment",
+                        "Adjust monitoring frequency based on risk factors such as congestive heart failure (CHF), electrolyte abnormalities, or concomitant medications known to prolong the QTc interval"
+                    ]
+                },
+                {
+                    "type": "CNS adverse reactions",
+                    "description": [
+                        "CNS adverse reactions reported, including cognitive impairment, mood disorders, dizziness, and sleep disturbances",
+                        "Advise patients and caregivers of these risks",
+                        "Instruct patients not to drive or operate hazardous machinery if experiencing CNS adverse reactions"
+                    ]
+                },
+                {
+                    "type": "Congestive heart failure",
+                    "description": [
+                        "CHF occurred in clinical trials",
+                        "Among patients with CHF, median time to onset was 2 months",
+                        "Myocarditis in the absence of CHF was also documented",
+                        "Assess left ventricular ejection fraction before initiation in patients with symptoms or known risk factors for CHF",
+                        "Monitor for clinical signs and symptoms of CHF, including shortness of breath and edema",
+                        "For patients with myocarditis, with or without a decreased ejection fraction, MRI or cardiac biopsy may be required to make the diagnosis"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Moderate and strong CYP3A inhibitors",
+                        "Coadministration with a strong or moderate CYP3A inhibitor increases entrectinib plasma concentrations, which could increase frequency or severity of adverse reactions",
+                        "Avoid coadministration",
+                        "If coadministration is unavoidable, reduce dose",
+                        "Grapefruit products are CYP3A4 inhibitors; avoid these products during treatment",
+                        "Moderate and strong CYP3A inducers",
+                        "Coadministration with a strong or moderate CYP3A inducer decreases entrectinib plasma concentrations, which may reduce entrectinib efficacy",
+                        "Avoid coadministration",
+                        "Drugs that prolong QT interval",
+                        "QTc interval prolongation can occur",
+                        "Avoid coadministration with other products with a known potential to prolong QT interval"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lefamulin is contraindicated with CYP3A substrates know to prolong the QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "adagrasib, entrectinib.\nEither increases effects of the other by QTc interval. Avoid or Use Alternate Drug. Each drug prolongs the QTc interval, which may increased the risk of Torsade de pointes, other serious arryhthmias, and sudden death. If coadministration unavoidable, more frequent monitoring is recommended for such patients."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "entrectinib and amisulpride both increase  QTc interval. Avoid or Use Alternate Drug. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "anagrelide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "apomorphine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "arsenic trioxide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "artemether and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "entrectinib and bedaquiline both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bexarotene",
+            "description": {
+                "common": "bexarotene will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bicalutamide",
+            "description": {
+                "common": "bicalutamide will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brigatinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "entrectinib and buprenorphine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "ciprofloxacin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clofazimine",
+            "description": {
+                "common": "clofazimine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clotrimazole",
+            "description": {
+                "common": "clotrimazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "dasatinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "disopyramide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "dofetilide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "dolasetron and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "droperidol and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "escitalopram and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ezogabine",
+            "description": {
+                "common": "ezogabine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels or prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "flecainide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "fluoxetine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidabole, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.5m2. Resume previous entrectinib dose after discontinuing moderate CYP3A4 inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "formoterol and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "entrectinib and foscarnet both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "gemtuzumab and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "entrectinib and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "glasdegib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "goserelin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "granisetron and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid grapefruit products with entrectinib, a CYP3A4 substrate."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "histrelin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxychloroquine sulfate and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "entrectinib and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "ibutilide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indacaterol, inhaled",
+            "description": {
+                "common": "indacaterol, inhaled and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "inotuzumab and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "entrectinib and isoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "entrectinib and ivosidenib both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "entrectinib and lefamulin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "lenvatinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "leuprolide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "levofloxacin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "entrectinib and lithium both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "entrectinib and loperamide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "lumefantrine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "entrectinib and macimorelin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "entrectinib and maprotiline both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "entrectinib and mefloquine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "methadone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "entrectinib and midostaurin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "entrectinib and mirtazapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "mobocertinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, reduce mobocertinib dose and monitor QTc interval more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "moxifloxacin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "netupitant/palonosetron will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "nilotinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "entrectinib and octreotide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "ofloxacin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "entrectinib and ondansetron both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "entrectinib and oxaliplatin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "panobinostat and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "pasireotide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "pazopanib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "pentamidine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "pimavanserin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "pimozide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "pitolisant and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "entrectinib and ponesimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "primaquine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "procainamide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "entrectinib and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "propafenone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "quetiapine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinupristin/dalfopristin",
+            "description": {
+                "common": "quinupristin/dalfopristin will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rilpivirine",
+            "description": {
+                "common": "entrectinib and rilpivirine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "risperidone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "romidepsin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "schisandra",
+            "description": {
+                "common": "schisandra will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "entrectinib and sevoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "entrectinib and siponimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "entrectinib and solifenacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorafenib",
+            "description": {
+                "common": "sorafenib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "sotalol and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "entrectinib and tacrolimus both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "telavancin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "telotristat ethyl",
+            "description": {
+                "common": "telotristat ethyl will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "tetrabenazine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "toremifene and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "trazodone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "triclabendazole and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "triptorelin and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "entrectinib and umeclidinium bromide/vilanterol inhaled both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "entrectinib and vardenafil both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "entrectinib and venlafaxine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce dose to 200 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "entrectinib and vorinostat both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "ziprasidone and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "entrectinib and amitriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "arformoterol and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin increases toxicity of entrectinib by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "entrectinib and clomipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "entrectinib and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "deutetrabenazine and entrectinib both increase  QTc interval. Use Caution/Monitor. At the maximum recommended dose, deutetrabenazine does not prolong QT interval to a clinically relevant extent. Certain circumstances may increase risk of torsade de pointes and/or sudden death in association with drugs that prolong the QTc interval (eg, bradycardia, hypokalemia or hypomagnesemia, coadministration with other drugs that prolong QTc interval, presence of congenital QT prolongation)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "entrectinib and fluphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "entrectinib and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gadobenate",
+            "description": {
+                "common": "gadobenate and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "entrectinib and imipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Avoid coadministration of moderate CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose. Resume previous entrectinib dose after discontinuing moderate CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir (a moderate CYP3A4 inhibitor) may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "entrectinib and levalbuterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "entrectinib and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olodaterol inhaled",
+            "description": {
+                "common": "entrectinib and olodaterol inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "osilodrostat and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "ozanimod and entrectinib both increase  QTc interval. Modify Therapy/Monitor Closely. The potential additive effects on heart rate, treatment with ozanimod should generally not be initiated in patients who are concurrently treated with QT prolonging drugs with known arrhythmogenic properties."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "entrectinib and perphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod and entrectinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "entrectinib and prochlorperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "entrectinib and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "entrectinib and salmeterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "selpercatinib increases toxicity of entrectinib by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and entrectinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "entrectinib and trifluoperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "entrectinib and trimipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and entrectinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "entrectinib and vilanterol/fluticasone furoate inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, entrectinib.\nEither increases effects of the other by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Increased creatinine",
+            "percent": "73"
+        },
+        {
+            "name": "Anemia",
+            "percent": "67"
+        },
+        {
+            "name": "Hyperuricemia",
+            "percent": "52"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "48"
+        },
+        {
+            "name": "Constipation",
+            "percent": "46"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "44"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "44"
+        },
+        {
+            "name": "Edema",
+            "percent": "40"
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": "40"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "38"
+        },
+        {
+            "name": "Hyponatremia",
+            "percent": "35"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "35"
+        },
+        {
+            "name": "Dysesthesia",
+            "percent": "34"
+        },
+        {
+            "name": "Nausea",
+            "percent": "34"
+        },
+        {
+            "name": "Hypocalcemia",
+            "percent": "34"
+        },
+        {
+            "name": "Hypophosphatemia",
+            "percent": "30"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "30"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "28"
+        },
+        {
+            "name": "Hypoalbuminemia",
+            "percent": "28"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "28"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "28"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "28"
+        },
+        {
+            "name": "Cognitive impairment",
+            "percent": "27"
+        },
+        {
+            "name": "Increased amylase",
+            "percent": "26"
+        },
+        {
+            "name": "Hyperkalemia",
+            "percent": "25"
+        },
+        {
+            "name": "Increased weight",
+            "percent": "25"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "25"
+        },
+        {
+            "name": "Cough",
+            "percent": "24"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "24"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "21"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "21"
+        },
+        {
+            "name": "Vision disorders",
+            "percent": "21"
+        },
+        {
+            "name": "Peripheral sensory neuropathy",
+            "percent": "18"
+        },
+        {
+            "name": "Headache",
+            "percent": "18"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "18"
+        },
+        {
+            "name": "Ataxia",
+            "percent": "17"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "16"
+        },
+        {
+            "name": "Sleep",
+            "percent": "14"
+        },
+        {
+            "name": "Urinary tract infection",
+            "percent": "13"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "13"
+        },
+        {
+            "name": "Muscular weakness",
+            "percent": "12"
+        },
+        {
+            "name": "Back pain",
+            "percent": "12"
+        },
+        {
+            "name": "Extremity pain",
+            "percent": "11"
+        },
+        {
+            "name": "Rash",
+            "percent": "11"
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": "12"
+        },
+        {
+            "name": "Mood disorders",
+            "percent": "10"
+        },
+        {
+            "name": "Dehydration",
+            "percent": "10"
+        },
+        {
+            "name": "Lung infection",
+            "percent": "10"
+        },
+        {
+            "name": "Anemia",
+            "percent": "9"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "7"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "3.9"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "3.7"
+        },
+        {
+            "name": "Pleural effusion",
+            "percent": "3.4"
+        },
+        {
+            "name": "Sepsis",
+            "percent": "2.5"
+        },
+        {
+            "name": "Pulmonary embolism",
+            "percent": "2.3"
+        },
+        {
+            "name": "Respiratory failure",
+            "percent": "2"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "2"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "10"
+        },
+        {
+            "name": "Hyperuricemia",
+            "percent": "10"
+        },
+        {
+            "name": "Hypophosphatemia",
+            "percent": "7"
+        },
+        {
+            "name": "Increased weight",
+            "percent": "7"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "6"
+        },
+        {
+            "name": "Lung infection",
+            "percent": "5-6"
+        },
+        {
+            "name": "Increased amylase",
+            "percent": "5.4"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "5"
+        },
+        {
+            "name": "asthenia",
+            "percent": "4.5"
+        },
+        {
+            "name": "Cognitive disorders",
+            "percent": "3.8"
+        },
+        {
+            "name": "Hyperglycemia",
+            "percent": "3.4"
+        },
+        {
+            "name": "Pulmonary embolism",
+            "percent": "3.4"
+        },
+        {
+            "name": "Hypoxia",
+            "percent": "3.1"
+        },
+        {
+            "name": "Pleural effusion",
+            "percent": "2.9"
+        },
+        {
+            "name": "Hypoalbuminemia",
+            "percent": "2.9"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "2.8"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "2.7"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "2.5"
+        },
+        {
+            "name": "Syncope",
+            "percent": "2.3-2.5"
+        },
+        {
+            "name": "Urinary tract infection",
+            "percent": "2.1"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "2"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "1.8"
+        },
+        {
+            "name": "Hypocalcemia",
+            "percent": "1.1"
+        },
+        {
+            "name": "Dehydration",
+            "percent": "1.1"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "1"
+        },
+        {
+            "name": "Back pain",
+            "percent": "0.9"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "0.9"
+        },
+        {
+            "name": "Hyponatremia",
+            "percent": "0.8"
+        },
+        {
+            "name": "Rash",
+            "percent": "0.8"
+        },
+        {
+            "name": "Vision disorders",
+            "percent": "0.8"
+        },
+        {
+            "name": "Muscular weakness",
+            "percent": "0.8"
+        },
+        {
+            "name": "Ataxia",
+            "percent": "0.6"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "0.6"
+        },
+        {
+            "name": "Mood disorders",
+            "percent": "0.6"
+        },
+        {
+            "name": "Sleep disorders",
+            "percent": "0.3"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "0.3"
+        },
+        {
+            "name": "Pain in extremity",
+            "percent": "0.3"
+        },
+        {
+            "name": "Cough",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,469 @@
+{
+    "name": "cefepime",
+    "comment": "Rx",
+    "other_names": [
+        "Maxipime"
+    ],
+    "classes": [
+        "Cephalosporins",
+        "Other"
+    ],
+    "source": "https://reference.medscape.com/drug/maxipime-cefepime-342511",
+    "pregnancy": {
+        "common": [
+            "There are no cases of drug exposure during pregnancy reported from postmarketing experience or from clinical trials; available data from published observational studies and case reports over several decades with cephalosporin use in pregnant women have not established drug-associated risks of major birth defects, miscarriage or adverse maternal or fetal outcomes"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Cefepime was not associated with adverse developmental outcomes in rats, mice, or rabbits when administered parenterally during period of organogenesis; the doses used in these studies were 1.6 times (rats), approximately equal to (mice) and 0.3 times (rabbits) the maximum recommended clinical dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Drug is present in human milk at low concentration (0.5 mcg/mL); a nursing infant consuming approximately 1000 mL of human milk per day would receive approximately 0.5 mg of cefepime per day",
+            "There is no information regarding effects on milk production or on breastfed infant",
+            "Developmental and health benefits of breastfeeding should be considered along with mother’s clinical need for cefepime and any potential adverse effects on breastfed child from drug or from underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Documented hypersensitivity to cefepime, penicillins, or other beta-lactam antibiotics"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "IM recommended only for mild-to-moderate complicated or uncomplicated UTI due to E coli",
+                "Prescribing drug in the absence of a proven or strongly suspected bacterial infection or a prophylactic indication is unlikely to provide benefit to patient and increases risk of development of drug-resistant bacteria",
+                "Prolonged use may cause superinfection",
+                "May increase international normalized ratio (INR) with prolonged treatment, especially in nutritionally deficient patients",
+                "Caution warranted with history of previous immediate hypersensitivity reactions to cefepime, cephalosporins, penicillins, or other drugs; exercise caution if product is to be given to penicillin-sensitive patients; cross-hypersensitivity among beta-lactam antibacterials documented to occur up to 10% of patients with history of penicillin allergy; if allergic reaction to this drug occurs, discontinue drug and institute appropriate supportive measures",
+                "Use with caution in patients with GI disease, particularly colitis",
+                "If CrCl <60 mL/min, adjust dosage to compensate for slower renal elimination rate"
+            ],
+            "specific": [
+                {
+                    "type": "Neurotoxicity",
+                    "description": [
+                        "Neurotoxicity has been reported, including life-threatening or fatal occurrences such as aphasia, encephalopathy, myoclonus, seizures, and nonconvulsive status epilepticus",
+                        "Most cases occurred in patients with renal impairment who did not receive appropriate dosage adjustment; however, some cases of neurotoxicity occurred in patients receiving a dosage adjustment appropriate for their degree of renal impairment",
+                        "In majority of cases, symptoms of neurotoxicity were reversible and resolved after discontinuation of therapy and/or after hemodialysis; if neurotoxicity associated with cefepime therapy occurs, discontinue therapy and institute appropriate supportive measures"
+                    ]
+                },
+                {
+                    "type": "Clostridioides difficile",
+                    "description": [
+                        "Clostridioides difficile-associated diarrhea (CDAD) may occur and should be considered in all patients who present with persistent diarrhea after use",
+                        "Careful medical history is necessary since CDAD has been reported to occur over two months after administration of antibacterial agents",
+                        "C. difficile ",
+                        "produces toxins A and B, which contribute to development of CDAD",
+                        "Hypertoxin-producing strains of ",
+                        "C. difficile ",
+                        "cause increased morbidity and mortality, as these infections can be refractory to antimicrobial therapy and may require colectomy",
+                        "Careful medical history is necessary since CDAD has been reported to occur over two months after administration of antibacterial agents",
+                        "If CDAD is suspected or confirmed, ongoing antibacterial drug use not directed against ",
+                        "C. difficile ",
+                        "may need to be discontinued",
+                        "Appropriate fluid and electrolyte management, protein supplementation, antibacterial drug treatment of ",
+                        "C. difficile",
+                        ", and surgical evaluation should be instituted as clinically indicated"
+                    ]
+                },
+                {
+                    "type": "Nonconvulsive status epilepticus",
+                    "description": [
+                        "Risk of nonconvulsive status epilepticus may be increased if inadequate dosing adjustment is made with renal impairment",
+                        "Most cases occurred in patients with renal impairment who did not receive appropriate dosage adjustment; however, some occurred in patients receiving dosage adjustment appropriate for their degree of renal impairment",
+                        "Signs and symptoms of nonconvulsive status epilepticus may include altered mental status, confusion, and decreased responsiveness"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "BCG vaccine live",
+            "description": {
+                "common": "cefepime decreases effects of BCG vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "cefepime, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "cefepime decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "typhoid vaccine live",
+            "description": {
+                "common": "cefepime decreases effects of typhoid vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifampridine",
+            "description": {
+                "common": "cefepime increases toxicity of amifampridine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Amifampridine can cause seizures. Coadministration with drugs that lower seizure threshold may increase this risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "cefepime will decrease the level or effect of bazedoxifene/conjugated estrogens by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "cefepime will decrease the level or effect of dienogest/estradiol valerate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. An alternate or additional form of birth control may be advisable during concomitant use."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "cefepime will decrease the level or effect of estradiol by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "cefepime will decrease the level or effect of ethinylestradiol by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "cefepime will decrease the level or effect of levonorgestrel oral/ethinylestradiol/ferrous bisglycinate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. Antibiotics may decrease hormonal contraceptive efficacy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "probenecid will increase the level or effect of cefepime by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "cefepime decreases effects of sodium picosulfate/magnesium oxide/anhydrous citric acid by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "cefepime increases effects of warfarin by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aminohippurate sodium",
+            "description": {
+                "common": "cefepime will increase the level or effect of aminohippurate sodium by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "cefepime will increase the level or effect of aspirin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "cefepime will increase the level or effect of aspirin rectal by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "cefepime will increase the level or effect of aspirin/citric acid/sodium bicarbonate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "cefepime will increase the level or effect of choline magnesium trisalicylate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "cefepime increases toxicity of furosemide by pharmacodynamic synergism. Minor/Significance Unknown. Increased risk of nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "rose hips will increase the level or effect of cefepime by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "cefepime will increase the level or effect of sulfasalazine by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "cefepime will increase the level or effect of tolmetin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "cefepime will increase the level or effect of willow bark by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Positive Coombs test result without hemolysis",
+            "percent": "16"
+        },
+        {
+            "name": "Rash",
+            "percent": "1-4"
+        },
+        {
+            "name": "Elevated alanine aminotransferase",
+            "percent": "3"
+        },
+        {
+            "name": "Hypophosphatemia",
+            "percent": "3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3"
+        },
+        {
+            "name": "Eosinophilia",
+            "percent": "2"
+        },
+        {
+            "name": "Erythema at injection site",
+            "percent": "2"
+        },
+        {
+            "name": "Normal partial thromboplastin time",
+            "percent": "2"
+        },
+        {
+            "name": "PTT",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea or vomiting",
+            "percent": "1"
+        },
+        {
+            "name": "Fever",
+            "percent": "1"
+        },
+        {
+            "name": "Headache",
+            "percent": "1"
+        },
+        {
+            "name": "Pain",
+            "percent": "1"
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "Agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "Anaphylactic shock",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Coma",
+            "percent": null
+        },
+        {
+            "name": "Encephalopathy",
+            "percent": null
+        },
+        {
+            "name": "Hallucinations",
+            "percent": null
+        },
+        {
+            "name": "Leukopenia",
+            "percent": null
+        },
+        {
+            "name": "Myoclonus",
+            "percent": null
+        },
+        {
+            "name": "Neuromuscular excitability",
+            "percent": null
+        },
+        {
+            "name": "Neutropenia",
+            "percent": null
+        },
+        {
+            "name": "Seizures",
+            "percent": null
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "Neurotoxicity",
+            "percent": null
+        },
+        {
+            "name": "Encephalopathy",
+            "percent": null
+        },
+        {
+            "name": "disturbance of consciousness including confusion",
+            "percent": null
+        },
+        {
+            "name": "hallucinations",
+            "percent": null
+        },
+        {
+            "name": "stupor",
+            "percent": null
+        },
+        {
+            "name": "and coma",
+            "percent": null
+        },
+        {
+            "name": "aphasia",
+            "percent": null
+        },
+        {
+            "name": "myoclonus",
+            "percent": null
+        },
+        {
+            "name": "seizures",
+            "percent": null
+        },
+        {
+            "name": "and nonconvulsive status epilepticus",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "anaphylactic shock",
+            "percent": null
+        },
+        {
+            "name": "transient leukopenia",
+            "percent": null
+        },
+        {
+            "name": "neutropenia",
+            "percent": null
+        },
+        {
+            "name": "agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "and thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "renal impairment",
+            "percent": null
+        },
+        {
+            "name": "toxic nephropathy",
+            "percent": null
+        },
+        {
+            "name": "aplastic anemia",
+            "percent": null
+        },
+        {
+            "name": "hemolytic anemia",
+            "percent": null
+        },
+        {
+            "name": "hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "hepatic impairment including cholestasis",
+            "percent": null
+        },
+        {
+            "name": "and pancytopenia",
+            "percent": null
+        }
+    ]
+}

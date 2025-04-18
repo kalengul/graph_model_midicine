@@ -1,0 +1,3492 @@
+{
+    "name": "promethazine",
+    "comment": "Rx",
+    "other_names": [
+        "Phenergan",
+        "Phenadoz"
+    ],
+    "classes": [
+        "Antiemetic Agents",
+        "Antihistamines",
+        "1st Generation"
+    ],
+    "source": "https://reference.medscape.com/drug/phenergan-phenadoz-promethazine-342056",
+    "pregnancy": {
+        "common": [
+            "Pregnancy category: C",
+            "Lactation: Not known whether drug crosses into breast milk; discontinue drug, or do not nurse"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Not known whether drug crosses into breast milk; discontinue drug, or do not nurse"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "IV administration can cause severe tissue injury, including burning, gangrene, or thrombophlebitis, necessitating fasciotomy, skin graft, or amputation",
+                "Severe tissue injury can occur from perivascular extravasation, unintentional intra-arterial injection, and intraneuronal or perineuronal infiltration",
+                "Deep IM injection is preferred method of administration",
+                "Intra-arterial and SC administration are contraindicated",
+                "25 mg/mL product may be administered by deep IM injection or IV infusion (at rate not to exceed 25 mg/min through flowing IV tubing)",
+                "Monitor for signs and symptoms of potential tissue injury including burning or pain at site of injection, phlebitis, swelling, and blistering",
+                "Discontinue IV infusion immediately if patient complains of pain during injection",
+                "Respiratory fatalities reported with use in children <2 years (use contraindicated); use lowest effective dose in children >2 years; avoid other drugs with respiratory depressant effects"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Newborn/premature infants <2 years old (risk of potentially fatal respiratory depression)",
+                "SC or intra-arterial administration",
+                "Coma",
+                "Treatment of lower respiratory tract symptoms, including asthma"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Use caution in asthma, hepatic impairment, peptic ulcer disease, respiratory impairment, bone marrow suppression, anaphylaxis in susceptible individuals",
+                "May impair ability to drive or perform hazardous tasks",
+                "May impair core body temperature regulation; caution when taking medications with anticholinergic effects, heat exposure, or strenuous exercise",
+                "Depresses hypothalamic thermoregulatory mechanism; exposure to extreme temperatures may cause hypo- or hyperthermia",
+                "May alter cardiac conduction (life-threatening arrhythmias reported)",
+                "Antiemetic effect may obscure toxicity of chemotherapeutic drugs",
+                "Monitor closely in patients with cardiovascular disease, hepatic impairment, Reye syndrome, or history of sleep apnea",
+                "Has anticholinergic effects; use with caution in patients with decreased gastrointestinal motility or obstructions (partial or complete), urinary retention, urinary obstructions, xerostomia, BPH, or visual problems",
+                "May cause extrapyramidal symptoms including pseudoparkinsonism, acute dystonic reactions, tardive dyskinesia, and akathisia",
+                "Neuroleptic malignant syndrome reported with use; monitor for fever, muscle rigidity and/or autonomic instability, or mental status changes",
+                "May cause orthostatic hypotension; use caution in patients at risk of experiencing hypotensive episodes (cardiovascular disease, cerebrovascular disease, hypovolemia or taking medications that may predispose to bradycardia or hypotension)",
+                "May cause photosensitivity",
+                "Pyloroduodenal obstruction, stenosing peptic ulcer disease, bladder neck obstruction",
+                "Anticholinergic effects of promethazine may exacerbate condition in patients with narrow-angle glaucoma or myasthenia gravis"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "promethazine and disopyramide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "promethazine and ibutilide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "promethazine and indapamide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "metrizamide",
+            "description": {
+                "common": "promethazine, metrizamide. Mechanism: unknown. Contraindicated. Risk of seizure.  D/C phenothiazine 24h before admin. of metrizamide."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "promethazine and pentamidine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "promethazine and pimozide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "promethazine and procainamide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "promethazine and quinidine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "promethazine and sotalol both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP2D6 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "promethazine and amiodarone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "promethazine and amisulpride both increase  QTc interval. Avoid or Use Alternate Drug. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "anagrelide and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "promethazine decreases effects of apomorphine by pharmacodynamic antagonism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "promethazine and arsenic trioxide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "promethazine and artemether/lumefantrine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "benzhydrocodone/acetaminophen",
+            "description": {
+                "common": "benzhydrocodone/acetaminophen and promethazine both increase  sedation. Avoid or Use Alternate Drug. Limit use to patients for whom alternative treatment options are inadequate"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bromocriptine",
+            "description": {
+                "common": "promethazine decreases effects of bromocriptine by pharmacodynamic antagonism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "buprenorphine and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabergoline",
+            "description": {
+                "common": "promethazine decreases effects of cabergoline by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "calcium/magnesium/potassium/sodium oxybates",
+            "description": {
+                "common": "promethazine, calcium/magnesium/potassium/sodium oxybates.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Profound sedation, respiratory depression, coma, and death may result if coadministered. Reserve concomitant prescribing of these drugs in patients for whom other treatment options are inadequate. Limit dosages and durations to the minimum required. Monitor closely for signs of respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "promethazine and clarithromycin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "promethazine and clomipramine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dacomitinib",
+            "description": {
+                "common": "dacomitinib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid use with CYP2D6 substrates where minimal increases in concentration of the CYP2D6 substrate may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "promethazine and dofetilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dopamine",
+            "description": {
+                "common": "promethazine decreases effects of dopamine by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dosulepin",
+            "description": {
+                "common": "promethazine and dosulepin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "promethazine and dronedarone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "promethazine and droperidol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "promethazine, eluxadoline.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that cause constipation. Increases risk for constipation related serious adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "entrectinib and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "epinephrine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "epinephrine racemic and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "promethazine and erythromycin base both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "promethazine and erythromycin ethylsuccinate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "promethazine and erythromycin lactobionate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "promethazine and erythromycin stearate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will decrease the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Avoid or Use Alternate Drug. Coadministration may decrease plasma concentrations of CYP2B6 substrates owing to fexinidazole inducing CYP2B6."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "promethazine and fluconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "fluoxetine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "promethazine and formoterol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "givosiran",
+            "description": {
+                "common": "givosiran will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP2D6 substrates with givosiran. If unavoidable, decrease the CYP2D6 substrate dosage in accordance with approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "promethazine and haloperidol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "isocarboxazid increases effects of promethazine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Isocarboxazid should not be administered in combination with antihistamines because of potential additive CNS depressant effects.  MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "promethazine and itraconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "promethazine and ketoconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "promethazine decreases effects of levodopa by pharmacodynamic antagonism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "promethazine and levoketoconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lisuride",
+            "description": {
+                "common": "promethazine decreases effects of lisuride by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "promethazine and lofepramine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "promethazine and lumefantrine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "mefloquine increases toxicity of promethazine by QTc interval. Avoid or Use Alternate Drug. Mefloquine may enhance the QTc prolonging effect of high risk QTc prolonging agents."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methyldopa",
+            "description": {
+                "common": "promethazine decreases effects of methyldopa by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methylene blue",
+            "description": {
+                "common": "methylene blue and promethazine both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metoclopramide intranasal",
+            "description": {
+                "common": "promethazine, metoclopramide intranasal.\nEither increases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Avoid use of metoclopramide intranasal or interacting drug, depending on importance of drug to patient."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "promethazine and moxifloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "promethazine and nilotinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "promethazine and octreotide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "octreotide (Antidote)",
+            "description": {
+                "common": "promethazine and octreotide (Antidote) both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olopatadine intranasal",
+            "description": {
+                "common": "promethazine and olopatadine intranasal both increase  sedation. Avoid or Use Alternate Drug. Coadministration increases risk of CNS depression, which can lead to additive impairment of psychomotor performance and cause daytime impairment. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "paroxetine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "promethazine decreases effects of pitolisant by Other (see comment). Avoid or Use Alternate Drug. \nComment: Pitolisant increases histamine levels in the brain; therefore, H1 receptor antagonists that cross the blood-brain barrier may reduce the efficacy of pitolisant."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pramipexole",
+            "description": {
+                "common": "promethazine decreases effects of pramipexole by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "promazine",
+            "description": {
+                "common": "promazine and promethazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Additive cardiac effects."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropinirole",
+            "description": {
+                "common": "promethazine decreases effects of ropinirole by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sodium oxybate",
+            "description": {
+                "common": "promethazine, sodium oxybate.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Profound sedation, respiratory depression, coma, and death may result if coadministered. Reserve concomitant prescribing of these drugs in patients for whom other treatment options are inadequate. Limit dosages and durations to the minimum required. Monitor closely for signs of respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "tetrabenazine and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "promethazine and thioridazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "tranylcypromine increases effects of promethazine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Tranylcypromine should not be administered in combination with antihistamines because of potential additive CNS depressant effects.  MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines. Combination of tranylcypromine and promethazine may result in additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tretinoin",
+            "description": {
+                "common": "promethazine, tretinoin. Mechanism: pharmacodynamic synergism. Avoid or Use Alternate Drug. Increased phototoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tretinoin topical",
+            "description": {
+                "common": "promethazine, tretinoin topical. Mechanism: pharmacodynamic synergism. Avoid or Use Alternate Drug. Increased phototoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "promethazine and trifluoperazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "promethazine and trimipramine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "venlafaxine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "yohimbe",
+            "description": {
+                "common": "yohimbe decreases effects of promethazine by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "promethazine and ziprasidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abiraterone",
+            "description": {
+                "common": "abiraterone increases levels of promethazine by affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Avoid coadministration of abiraterone with substrates of CYP2D6. If alternative therapy cannot be used, exercise caution and consider a dose reduction of the CYP2D6 substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aclidinium",
+            "description": {
+                "common": "aclidinium decreases levels of promethazine by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acrivastine",
+            "description": {
+                "common": "acrivastine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albiglutide",
+            "description": {
+                "common": "promethazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "promethazine increases and albuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "promethazine and alfentanil both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "promethazine and alprazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifampridine",
+            "description": {
+                "common": "promethazine increases toxicity of amifampridine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Amifampridine can cause seizures. Coadministration with drugs that lower seizure threshold may increase this risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "promethazine and amitriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "promethazine and amobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "promethazine and amoxapine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "anticholinergic/sedative combos",
+            "description": {
+                "common": "anticholinergic/sedative combos decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "promethazine and apomorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "promethazine increases and arformoterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "promethazine increases and armodafinil decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "artemether/lumefantrine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "promethazine, asenapine. unspecified interaction mechanism. Use Caution/Monitor. Serotonin modulators may enhance dopamine blockade, possibly increasing the risk for neuroleptic malignant syndrome. Antipsychotics may enhance serotonergic effect of serotonin modulators, which may result in serotonin syndrome. Monitor for evidence of serotonin toxicity (eg, mental status changes, autonomic instability, and neuromuscular hyperactivity) or neuroleptic malignant syndrome (eg, hyperthermia, muscle rigidity, autonomic dysfunction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atracurium",
+            "description": {
+                "common": "atracurium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atropine",
+            "description": {
+                "common": "atropine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atropine IV/IM",
+            "description": {
+                "common": "promethazine increases effects of atropine IV/IM by pharmacodynamic synergism. Use Caution/Monitor. Additive anticholinergic effects, possible hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "avapritinib and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azelastine",
+            "description": {
+                "common": "azelastine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "promethazine and azithromycin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "baclofen",
+            "description": {
+                "common": "promethazine and baclofen both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belladonna alkaloids",
+            "description": {
+                "common": "belladonna alkaloids decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belladonna and opium",
+            "description": {
+                "common": "promethazine and belladonna and opium both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benperidol",
+            "description": {
+                "common": "benperidol and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benzphetamine",
+            "description": {
+                "common": "promethazine increases and benzphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benztropine",
+            "description": {
+                "common": "promethazine increases effects of benztropine by pharmacodynamic synergism. Use Caution/Monitor. Additive anticholinergic adverse effects may be seen with concurrent use. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexanolone",
+            "description": {
+                "common": "brexanolone, promethazine.\nEither increases toxicity of the other by sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexpiprazole",
+            "description": {
+                "common": "brexpiprazole and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brompheniramine",
+            "description": {
+                "common": "brompheniramine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "promethazine and buprenorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "promethazine and buprenorphine buccal both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "bupropion will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "promethazine and butabarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "promethazine and butalbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butorphanol",
+            "description": {
+                "common": "promethazine and butorphanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "promethazine increases and caffeine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbinoxamine",
+            "description": {
+                "common": "carbinoxamine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cariprazine",
+            "description": {
+                "common": "promethazine, cariprazine. unspecified interaction mechanism. Use Caution/Monitor. Serotonin modulators may enhance dopamine blockade, possibly increasing the risk for neuroleptic malignant syndrome. Antipsychotics may enhance serotonergic effect of serotonin modulators, which may result in serotonin syndrome. Monitor for evidence of serotonin toxicity (eg, mental status changes, autonomic instability, and neuromuscular hyperactivity) or neuroleptic malignant syndrome (eg, hyperthermia, muscle rigidity, autonomic dysfunction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carisoprodol",
+            "description": {
+                "common": "promethazine and carisoprodol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP2B6 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloral hydrate",
+            "description": {
+                "common": "promethazine and chloral hydrate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlordiazepoxide",
+            "description": {
+                "common": "promethazine and chlordiazepoxide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpheniramine",
+            "description": {
+                "common": "chlorpheniramine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorzoxazone",
+            "description": {
+                "common": "promethazine and chlorzoxazone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cigarette smoking",
+            "description": {
+                "common": "cigarette smoking decreases levels of promethazine by increasing metabolism. Use Caution/Monitor. Interaction mainly seen w/chlorpromazine & thioridazine, but may occur w/other phenothiazines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinnarizine",
+            "description": {
+                "common": "cinnarizine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisatracurium",
+            "description": {
+                "common": "cisatracurium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram and promethazine both increase  serotonin levels. Use Caution/Monitor. Combination may increase risk of serotonin syndrome or neuroleptic malignant syndrome-like reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clemastine",
+            "description": {
+                "common": "clemastine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Lower doses of drugs metabolized by CYP2D6 may be required when used concomitantly. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "promethazine and clomipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonazepam",
+            "description": {
+                "common": "promethazine and clonazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "clonidine, promethazine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Additive hypotensive effects; potential delirium."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clorazepate",
+            "description": {
+                "common": "promethazine and clorazepate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "promethazine and codeine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclizine",
+            "description": {
+                "common": "cyclizine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclobenzaprine",
+            "description": {
+                "common": "promethazine and cyclobenzaprine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyproheptadine",
+            "description": {
+                "common": "cyproheptadine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dantrolene",
+            "description": {
+                "common": "promethazine and dantrolene both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "promethazine and daridorexant both increase  sedation. Modify Therapy/Monitor Closely. Coadministration increases risk of CNS depression, which can lead to additive impairment of psychomotor performance and cause daytime impairment. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "darifenacin decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "promethazine and dasatinib both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "promethazine and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desvenlafaxine",
+            "description": {
+                "common": "desvenlafaxine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Desvenlafaxine inhibits CYP2D6; with higher desvenlafaxine doses (ie, 400 mg) decrease the CYP2D6 substrate dose by up to 50%; no dosage adjustment needed with desvenlafaxine doses <100 mg"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "promethazine and deutetrabenazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexchlorpheniramine",
+            "description": {
+                "common": "dexchlorpheniramine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexfenfluramine",
+            "description": {
+                "common": "promethazine increases and dexfenfluramine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmedetomidine",
+            "description": {
+                "common": "promethazine and dexmedetomidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmethylphenidate",
+            "description": {
+                "common": "promethazine increases and dexmethylphenidate decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextroamphetamine",
+            "description": {
+                "common": "promethazine increases and dextroamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextromoramide",
+            "description": {
+                "common": "promethazine and dextromoramide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diamorphine",
+            "description": {
+                "common": "promethazine and diamorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam",
+            "description": {
+                "common": "promethazine and diazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam intranasal",
+            "description": {
+                "common": "diazepam intranasal, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may potentiate the CNS-depressant effects of each drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dicyclomine",
+            "description": {
+                "common": "dicyclomine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diethylpropion",
+            "description": {
+                "common": "promethazine increases and diethylpropion decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "difelikefalin",
+            "description": {
+                "common": "difelikefalin and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "difenoxin hcl",
+            "description": {
+                "common": "promethazine and difenoxin hcl both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dimenhydrinate",
+            "description": {
+                "common": "dimenhydrinate and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenhydramine",
+            "description": {
+                "common": "diphenhydramine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenoxylate hcl",
+            "description": {
+                "common": "promethazine and diphenoxylate hcl both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipipanone",
+            "description": {
+                "common": "promethazine and dipipanone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "promethazine increases and dobutamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "promethazine and dolasetron both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil transdermal",
+            "description": {
+                "common": "donepezil transdermal, promethazine.\nEither decreases effects of the other by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopamine",
+            "description": {
+                "common": "promethazine increases and dopamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "promethazine increases and dopexamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dosulepin",
+            "description": {
+                "common": "promethazine and dosulepin both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "promethazine and doxepin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxylamine",
+            "description": {
+                "common": "promethazine and doxylamine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "droperidol and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of promethazine by affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Monitor therapeutic drug concentrations, as indicated, or consider reducing the dosage of the concomitant drug and titrate to clinical effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF increases levels of promethazine by affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Cobicistat is a CYP2D6 inhibitor; caution with CYP2D6 substrates for which elevated plasma concentrations are associated with serious and/or life-threatening events."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "promethazine increases and ephedrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "promethazine increases and epinephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "promethazine increases and epinephrine racemic decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esketamine intranasal",
+            "description": {
+                "common": "esketamine intranasal, promethazine.\nEither increases toxicity of the other by sedation. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estazolam",
+            "description": {
+                "common": "promethazine and estazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethanol",
+            "description": {
+                "common": "promethazine and ethanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etomidate",
+            "description": {
+                "common": "etomidate and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP2D6 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenfluramine",
+            "description": {
+                "common": "promethazine increases and fenfluramine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "fentanyl, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "fentanyl intranasal, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "fentanyl transdermal, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "fentanyl transmucosal, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fesoterodine",
+            "description": {
+                "common": "fesoterodine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flavoxate",
+            "description": {
+                "common": "flavoxate decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "promethazine and flecainide both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "promethazine and flibanserin both increase  sedation. Modify Therapy/Monitor Closely. Risk for sedation increased if flibanserin is coadministration with other CNS depressants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "promethazine and fluoxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurazepam",
+            "description": {
+                "common": "promethazine and flurazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine and promethazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "promethazine increases and formoterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "promethazine and foscarnet both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gabapentin",
+            "description": {
+                "common": "gabapentin, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gabapentin enacarbil",
+            "description": {
+                "common": "gabapentin enacarbil, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "promethazine and ganaxolone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "gilteritinib and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glycopyrrolate",
+            "description": {
+                "common": "promethazine increases effects of glycopyrrolate by pharmacodynamic synergism. Use Caution/Monitor. Additive anticholinergic effects, possible hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glycopyrrolate inhaled",
+            "description": {
+                "common": "glycopyrrolate inhaled decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glycopyrronium tosylate topical",
+            "description": {
+                "common": "glycopyrronium tosylate topical, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of glycopyrronium tosylate topical with other anticholinergic medications may result in additive anticholinergic adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gotu kola",
+            "description": {
+                "common": "gotu kola increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "granisetron and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "guanfacine, promethazine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Additive hypotensive effects; potential delirium."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hawthorn",
+            "description": {
+                "common": "hawthorn increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "henbane",
+            "description": {
+                "common": "henbane decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "homatropine",
+            "description": {
+                "common": "homatropine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hops",
+            "description": {
+                "common": "hops increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyaluronidase",
+            "description": {
+                "common": "promethazine decreases effects of hyaluronidase by Other (see comment). Use Caution/Monitor. \nComment: Antihistamines, when given in large systemic doses, may render tissues partially resistant to the action of hyaluronidase. Patients may require larger amounts of hyaluronidase for equivalent dispersing effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "promethazine and hydromorphone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "hydroxyzine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyoscyamine",
+            "description": {
+                "common": "hyoscyamine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyoscyamine spray",
+            "description": {
+                "common": "promethazine increases effects of hyoscyamine spray by pharmacodynamic synergism. Use Caution/Monitor. Additive anticholinergic effects, possible hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "promethazine and imipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "incobotulinumtoxinA",
+            "description": {
+                "common": "promethazine, incobotulinumtoxinA.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Use of anticholinergic drugs after administration of botulinum toxin-containing products may potentiate systemic anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ipratropium",
+            "description": {
+                "common": "ipratropium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "isoflurane and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "promethazine increases and isoproterenol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "kava",
+            "description": {
+                "common": "kava increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketamine",
+            "description": {
+                "common": "ketamine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketotifen, ophthalmic",
+            "description": {
+                "common": "promethazine and ketotifen, ophthalmic both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "promethazine and lapatinib both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan, promethazine.\nEither increases effects of the other by sedation. Use Caution/Monitor. Coadministration of lasmiditan and other CNS depressant drugs, including alcohol have not been evaluated in clinical studies. Lasmiditan may cause sedation, as well as other cognitive and/or neuropsychiatric adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "lemborexant will decrease the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Modify Therapy/Monitor Closely. Monitor CYP2B6 substrate for adequate clinical response. Consider increasing the CYP2B6 substrate dose according to specific prescribing recommendations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "promethazine increases and levalbuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "promethazine and levofloxacin both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levorphanol",
+            "description": {
+                "common": "promethazine and levorphanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "liraglutide",
+            "description": {
+                "common": "promethazine, liraglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lisdexamfetamine",
+            "description": {
+                "common": "promethazine increases and lisdexamfetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "lithium, promethazine. Other (see comment). Use Caution/Monitor. \nComment: Risk of neurotoxicity.  Multiple mechanisms involved."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "promethazine and lofepramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "promethazine and lofexidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loprazolam",
+            "description": {
+                "common": "promethazine and loprazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorazepam",
+            "description": {
+                "common": "promethazine and lorazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorcaserin",
+            "description": {
+                "common": "lorcaserin will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lormetazepam",
+            "description": {
+                "common": "promethazine and lormetazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine",
+            "description": {
+                "common": "loxapine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine inhaled",
+            "description": {
+                "common": "loxapine inhaled and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor, promethazine. affecting hepatic enzyme CYP2B6 metabolism. Use Caution/Monitor. In vitro studies suggest that lumacaftor may induce and ivacaftor may inhibit CYP2B6 substrates. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "lumefantrine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone increases effects of promethazine by Other (see comment). Use Caution/Monitor. \nComment: Potential  for increased risk of hypotension with concurrent use. Monitor blood pressure and adjust  dose of  antihypertensive agent as needed.; potendial for additive CNS effects ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "promethazine and maprotiline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "marijuana",
+            "description": {
+                "common": "promethazine and marijuana both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclizine",
+            "description": {
+                "common": "meclizine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "promethazine and melatonin both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meperidine",
+            "description": {
+                "common": "promethazine and meperidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meprobamate",
+            "description": {
+                "common": "promethazine and meprobamate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "promethazine increases and metaproterenol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaxalone",
+            "description": {
+                "common": "promethazine and metaxalone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "promethazine decreases effects of metformin by pharmacodynamic antagonism. Use Caution/Monitor. Patient should be closely observed for loss of blood glucose control; when drugs are withdrawn from a patient receiving metformin, patient should be observed closely for hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "promethazine and methadone both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methamphetamine",
+            "description": {
+                "common": "promethazine increases and methamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methocarbamol",
+            "description": {
+                "common": "promethazine and methocarbamol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methoxsalen",
+            "description": {
+                "common": "methoxsalen, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive photosensitizing effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methscopolamine",
+            "description": {
+                "common": "methscopolamine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylenedioxymethamphetamine",
+            "description": {
+                "common": "promethazine increases and methylenedioxymethamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate",
+            "description": {
+                "common": "promethazine, methylphenidate. Mechanism: unknown. Use Caution/Monitor. Risk of cardiac arrhythmia or sudden death, more likely w/thioridazine than other phenothiazines.  Interaction more likely in certain predisposed pts. only."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoclopramide",
+            "description": {
+                "common": "promethazine and metoclopramide both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "promethazine and midazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "midazolam intranasal, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Concomitant use of barbiturates, alcohol, or other CNS depressants may increase the risk of hypoventilation, airway obstruction, desaturation, or apnea and may contribute to profound and/or prolonged drug effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midodrine",
+            "description": {
+                "common": "promethazine increases and midodrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirabegron",
+            "description": {
+                "common": "mirabegron will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "promethazine and mirtazapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "promethazine increases and modafinil decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "molindone",
+            "description": {
+                "common": "promethazine, molindone. unspecified interaction mechanism. Use Caution/Monitor. Serotonin modulators may enhance dopamine blockade, possibly increasing the risk for neuroleptic malignant syndrome. Antipsychotics may enhance serotonergic effect of serotonin modulators, which may result in serotonin syndrome. Monitor for evidence of serotonin toxicity (eg, mental status changes, autonomic instability, and neuromuscular hyperactivity) or neuroleptic malignant syndrome (eg, hyperthermia, muscle rigidity, autonomic dysfunction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "promethazine and morphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "motherwort",
+            "description": {
+                "common": "promethazine and motherwort both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxonidine",
+            "description": {
+                "common": "promethazine and moxonidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabilone",
+            "description": {
+                "common": "promethazine and nabilone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nalbuphine",
+            "description": {
+                "common": "promethazine and nalbuphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "promethazine increases and norepinephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "promethazine and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "promethazine and ofloxacin both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "onabotulinumtoxinA",
+            "description": {
+                "common": "onabotulinumtoxinA decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "opium tincture",
+            "description": {
+                "common": "promethazine and opium tincture both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "orphenadrine",
+            "description": {
+                "common": "promethazine and orphenadrine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxazepam",
+            "description": {
+                "common": "promethazine and oxazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxybutynin",
+            "description": {
+                "common": "oxybutynin decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxybutynin topical",
+            "description": {
+                "common": "oxybutynin topical decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxybutynin transdermal",
+            "description": {
+                "common": "oxybutynin transdermal decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "promethazine and oxycodone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymorphone",
+            "description": {
+                "common": "promethazine and oxymorphone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pancuronium",
+            "description": {
+                "common": "pancuronium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "papaveretum",
+            "description": {
+                "common": "promethazine and papaveretum both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "papaverine",
+            "description": {
+                "common": "promethazine and papaverine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "promethazine and paroxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "passion flower",
+            "description": {
+                "common": "passion flower increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "promethazine and pazopanib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2b",
+            "description": {
+                "common": "peginterferon alfa 2b, promethazine. Other (see comment). Use Caution/Monitor. \nComment: When patients are administered peginterferon alpha-2b with CYP2D6 substrates, the therapeutic effect of these drugs may be altered. Peginterferon alpha-2b may increase or decrease levels of CYP2D6 substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentazocine",
+            "description": {
+                "common": "promethazine and pentazocine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "promethazine and pentobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perampanel",
+            "description": {
+                "common": "perampanel and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phendimetrazine",
+            "description": {
+                "common": "promethazine increases and phendimetrazine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "phenelzine increases effects of promethazine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Coadministration of phenelzine and antihistamines may result in additive CNS depressant effects. MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "promethazine and phenobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phentermine",
+            "description": {
+                "common": "promethazine increases and phentermine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine",
+            "description": {
+                "common": "promethazine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine PO",
+            "description": {
+                "common": "promethazine increases and phenylephrine PO decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pholcodine",
+            "description": {
+                "common": "promethazine and pholcodine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "promethazine, pimavanserin. unspecified interaction mechanism. Use Caution/Monitor. Serotonin modulators may enhance dopamine blockade, possibly increasing the risk for neuroleptic malignant syndrome. Antipsychotics may enhance serotonergic effect of serotonin modulators, which may result in serotonin syndrome. Monitor for evidence of serotonin toxicity (eg, mental status changes, autonomic instability, and neuromuscular hyperactivity) or neuroleptic malignant syndrome (eg, hyperthermia, muscle rigidity, autonomic dysfunction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "pimozide and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "promethazine increases and pirbuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "porfimer",
+            "description": {
+                "common": "promethazine, porfimer. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Enhanced photosensitivity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "promethazine and posaconazole both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pralidoxime",
+            "description": {
+                "common": "pralidoxime decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pregabalin",
+            "description": {
+                "common": "pregabalin, promethazine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "primaquine and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "promethazine and primidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procarbazine",
+            "description": {
+                "common": "procarbazine, promethazine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Excessive sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine and promethazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "propafenone will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propantheline",
+            "description": {
+                "common": "propantheline decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propofol",
+            "description": {
+                "common": "propofol and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propylhexedrine",
+            "description": {
+                "common": "promethazine increases and propylhexedrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "promethazine and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pseudoephedrine",
+            "description": {
+                "common": "promethazine, pseudoephedrine. Mechanism: unknown. Use Caution/Monitor. Risk of cardiac arrhythmia or sudden death, more likely w/thioridazine than other phenothiazines.  Interaction more likely in certain predisposed pts. only."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quazepam",
+            "description": {
+                "common": "promethazine and quazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "promethazine and quetiapine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ramelteon",
+            "description": {
+                "common": "promethazine and ramelteon both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "promethazine and ranolazine both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rapacuronium",
+            "description": {
+                "common": "rapacuronium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "promethazine and risperidone both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rocuronium",
+            "description": {
+                "common": "rocuronium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rolapitant",
+            "description": {
+                "common": "rolapitant will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Rolapitant may increase plasma concentrations of CYP2D6 substrates for at least 28 days following rolapitant administration."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "promethazine increases and salmeterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "scopolamine",
+            "description": {
+                "common": "scopolamine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "scullcap",
+            "description": {
+                "common": "promethazine and scullcap both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "promethazine and secobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "serdexmethylphenidate/dexmethylphenidate",
+            "description": {
+                "common": "promethazine, serdexmethylphenidate/dexmethylphenidate. Mechanism: unknown. Use Caution/Monitor. Risk of cardiac arrhythmia or sudden death, more likely w/thioridazine than other phenothiazines.  Interaction more likely in certain predisposed pts. only."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "promethazine and shepherd's purse both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "smoking",
+            "description": {
+                "common": "smoking decreases levels of promethazine by increasing metabolism. Use Caution/Monitor. Interaction mainly seen w/chlorpromazine & thioridazine, but may occur w/other phenothiazines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "solifenacin decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sparsentan",
+            "description": {
+                "common": "sparsentan will decrease the level or effect of promethazine by  affecting hepatic enzyme CYP2B6 metabolism. Use Caution/Monitor. Sparsentan (a CYP2B6 inducer) decreases exposure of CYP2B6 substrates and reduces efficacy related to these substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, promethazine. affecting hepatic enzyme CYP2B6 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP2B6 inhibitor and inducer. Monitor CYP2B6 substrates coadministered with stiripentol for increased or decreased effects. CYP2B6 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "promethazine and sufentanil both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "promethazine and sulfamethoxazole both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tapentadol",
+            "description": {
+                "common": "promethazine and tapentadol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "promethazine and telavancin both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temazepam",
+            "description": {
+                "common": "promethazine and temazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbinafine",
+            "description": {
+                "common": "terbinafine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Assess need to reduce dose of CYP2D6-metabolized drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "promethazine increases and terbutaline decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "promethazine and tetrabenazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "promethazine and thioridazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiothixene",
+            "description": {
+                "common": "promethazine and thiothixene both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tiotropium",
+            "description": {
+                "common": "tiotropium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobacco use",
+            "description": {
+                "common": "tobacco use decreases levels of promethazine by increasing metabolism. Use Caution/Monitor. Interaction mainly seen w/chlorpromazine & thioridazine, but may occur w/other phenothiazines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolterodine",
+            "description": {
+                "common": "tolterodine decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topiramate",
+            "description": {
+                "common": "promethazine and topiramate both increase  sedation. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tramadol",
+            "description": {
+                "common": "promethazine and tramadol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "promethazine and trazodone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "promethazine and triazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclofos",
+            "description": {
+                "common": "promethazine and triclofos both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "promethazine and trifluoperazine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trihexyphenidyl",
+            "description": {
+                "common": "trihexyphenidyl decreases levels of promethazine by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "promethazine and trimethoprim both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "promethazine and trimipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triprolidine",
+            "description": {
+                "common": "promethazine and triprolidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tropisetron",
+            "description": {
+                "common": "promethazine and tropisetron both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trospium chloride",
+            "description": {
+                "common": "trospium chloride decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valerian",
+            "description": {
+                "common": "valerian increases effects of promethazine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vecuronium",
+            "description": {
+                "common": "vecuronium decreases levels of promethazine by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "promethazine and venlafaxine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "promethazine and voriconazole both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "vorinostat and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xylometazoline",
+            "description": {
+                "common": "promethazine increases and xylometazoline decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "yohimbine",
+            "description": {
+                "common": "promethazine increases and yohimbine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziconotide",
+            "description": {
+                "common": "promethazine and ziconotide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "promethazine and ziprasidone both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zotepine",
+            "description": {
+                "common": "promethazine and zotepine both increase  antidopaminergic effects, including extrapyramidal symptoms and neuroleptic malignant syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "amitriptyline, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "amoxapine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ashwagandha",
+            "description": {
+                "common": "ashwagandha increases effects of promethazine by pharmacodynamic synergism. Minor/Significance Unknown. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atropine",
+            "description": {
+                "common": "promethazine increases toxicity of atropine by unknown mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atropine IV/IM",
+            "description": {
+                "common": "promethazine increases toxicity of atropine IV/IM by unknown mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "promethazine increases effects of benazepril by unspecified interaction mechanism. Minor/Significance Unknown. Enhanced hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of promethazine by pharmacodynamic synergism. Minor/Significance Unknown. Increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "promethazine increases toxicity of bupropion by unspecified interaction mechanism. Minor/Significance Unknown. May lower seizure threshold; keep bupropion dose as low as possible."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "promethazine increases effects of captopril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chasteberry",
+            "description": {
+                "common": "chasteberry decreases effects of promethazine by pharmacodynamic antagonism. Minor/Significance Unknown. (Theoretical interaction)."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "clomipramine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "darifenacin will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "desipramine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diphenhydramine",
+            "description": {
+                "common": "diphenhydramine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "duloxetine",
+            "description": {
+                "common": "duloxetine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "promethazine increases effects of enalapril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ethanol",
+            "description": {
+                "common": "ethanol, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Minor/Significance Unknown. Additive CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "eucalyptus",
+            "description": {
+                "common": "promethazine and eucalyptus both increase  sedation. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "famciclovir",
+            "description": {
+                "common": "promethazine, famciclovir. aldehyde dehydrogenase inhibition. Minor/Significance Unknown. The conversion of 6-deoxy penciclovir to penciclovir is catalyzed by aldehyde oxidase. Interactions with other drugs metabolized by this enzyme and/or inhibiting this enzyme could potentially occur. Clinical interaction studies of famciclovir with promethazine did not show relevant effects on the formation of penciclovir."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "promethazine increases effects of fosinopril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glycopyrrolate",
+            "description": {
+                "common": "promethazine increases toxicity of glycopyrrolate by unknown mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glycopyrrolate inhaled",
+            "description": {
+                "common": "promethazine increases toxicity of glycopyrrolate inhaled by unknown mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imidapril",
+            "description": {
+                "common": "promethazine increases effects of imidapril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "imipramine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "promethazine increases effects of lisinopril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "lofepramine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "maprotiline, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "marijuana",
+            "description": {
+                "common": "marijuana will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metyrapone",
+            "description": {
+                "common": "promethazine decreases effects of metyrapone by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metyrosine",
+            "description": {
+                "common": "metyrosine increases toxicity of promethazine by pharmacodynamic synergism. Minor/Significance Unknown. Increased extrapyramidal symptoms."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "promethazine increases effects of moexipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nettle",
+            "description": {
+                "common": "nettle increases effects of promethazine by pharmacodynamic synergism. Minor/Significance Unknown. (High dose nettle; theoretical interaction) May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "nilotinib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "nortriptyline, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxybutynin",
+            "description": {
+                "common": "oxybutynin increases toxicity of promethazine by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxybutynin topical",
+            "description": {
+                "common": "oxybutynin topical increases toxicity of promethazine by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxybutynin transdermal",
+            "description": {
+                "common": "oxybutynin transdermal increases toxicity of promethazine by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "parecoxib will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "promethazine increases effects of perindopril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "protriptyline, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pyrimethamine",
+            "description": {
+                "common": "pyrimethamine increases levels of promethazine by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "quinacrine",
+            "description": {
+                "common": "quinacrine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "promethazine increases effects of quinapril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "promethazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sage",
+            "description": {
+                "common": "promethazine and sage both increase  sedation. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "Siberian ginseng",
+            "description": {
+                "common": "Siberian ginseng increases effects of promethazine by pharmacodynamic synergism. Minor/Significance Unknown. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of promethazine by  affecting hepatic enzyme CYP2D6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trandolapril",
+            "description": {
+                "common": "promethazine increases effects of trandolapril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "trazodone, promethazine.\nEither increases toxicity of the other by pharmacodynamic synergism. Minor/Significance Unknown. Additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "trimipramine, promethazine.\nEither increases levels of the other by decreasing metabolism. Minor/Significance Unknown. Additive anticholinergic effects."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Sedation",
+            "percent": null
+        },
+        {
+            "name": "Confusion",
+            "percent": null
+        },
+        {
+            "name": "Disorientation",
+            "percent": null
+        },
+        {
+            "name": "Blurred vision",
+            "percent": null
+        },
+        {
+            "name": "Hallucinations",
+            "percent": null
+        },
+        {
+            "name": "Dystonias",
+            "percent": null
+        },
+        {
+            "name": "Catatonic states",
+            "percent": null
+        },
+        {
+            "name": "Euphoria",
+            "percent": null
+        },
+        {
+            "name": "Excitation",
+            "percent": null
+        },
+        {
+            "name": "Extrapyramidal symptoms",
+            "percent": null
+        },
+        {
+            "name": "Tachycardia",
+            "percent": null
+        },
+        {
+            "name": "Bradycardia",
+            "percent": null
+        },
+        {
+            "name": "Leukopenia",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Obstructive jaundice",
+            "percent": null
+        },
+        {
+            "name": "Photosensitivity",
+            "percent": null
+        },
+        {
+            "name": "Dry mouth",
+            "percent": null
+        },
+        {
+            "name": "Angioneurotic edema",
+            "percent": null
+        },
+        {
+            "name": "Tardive dyskinesia",
+            "percent": null
+        },
+        {
+            "name": "Urticaria",
+            "percent": null
+        },
+        {
+            "name": "Xerostomia",
+            "percent": null
+        },
+        {
+            "name": "Impotence",
+            "percent": null
+        },
+        {
+            "name": "Urinary retention",
+            "percent": null
+        }
+    ]
+}

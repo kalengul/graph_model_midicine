@@ -1,0 +1,597 @@
+{
+    "name": "ceftriaxone",
+    "comment": "Rx",
+    "other_names": [
+        "Rocephin (DSC)"
+    ],
+    "classes": [
+        "Cephalosporins",
+        "3rd Generation"
+    ],
+    "source": "https://reference.medscape.com/drug/ceftriaxone-342510",
+    "pregnancy": {
+        "common": [
+            "Available data from published prospective cohort studies, case series, and case reports over several decades in pregnant women have not established a drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes",
+            "The estimated background risk of major birth defects and miscarriage for the indicated population is unknown; all pregnancies have a background risk of birth defect, loss, or other adverse outcomes"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies, no adverse developmental effects were observed when ceftriaxone was administered to pregnant rats at doses up to approximately 2.8 times clinical dose of 2 g/day"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data from published literature report that ceftriaxone is present in human milk; there are no data on effects of drug on breastfed child or on milk production",
+            "The developmental and health benefits of breastfeeding should be considered along with mother’s clinical need for drug and dextrose injection and any potential adverse effects on breastfed child from antibiotic for Injection and dextrose injection or from mother’s underlying condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Documented hypersensitivity; hyperbilirubinemic neonates, particularly those who are premature; neonates <28 days if they receive calcium-containing IV products",
+                "Intravenous administration of ceftriaxone solutions containing lidocaine",
+                "Lidocaine contraindications if lidocaine solution used as solvent with ceftriaxone for intramuscular injection"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "10-g pharmacy bulk package should not be used for direct infusion",
+                "Immune-mediated hemolytic anemia reported; if patient develops anemia while on ceftriaxone, stop antibiotic until etiology determined; severe hemolytic anemia, including fatalities, reported in both adults and children",
+                "May increase INR, especially in nutritionally deficient patients, hepatic or renal disease or prolonged treatment",
+                "Dosage must be adjusted in severe renal insufficiency (high dosages may cause CNS toxicity)",
+                "Superinfections and promotion of nonsusceptible organisms may occur with prolonged use or repeated therapy",
+                "Use with caution in patients with history of penicillin allergy",
+                "Use with caution in patients with history of GI disease, especially colitis",
+                "Use with caution in breast-feeding women; drug may displace bilirubin from albumin-binding sites, increasing risk of kernicterus",
+                "Abnormal gallbladder sonograms reported, possibly the result of ceftriaxone-calcium precipitates; discontinue if signs or symptoms of gallbladder disease occur",
+                "Ceftriaxone-calcium precipitates in urinary tract observed in patients receiving ceftriaxone; may be detected as sonographic abnormalities; patients may be asymptomatic or may develop symptoms of urolithiasis, and ureteral obstruction and post-renal acute renal failure; appears to be reversible upon discontinuation of therapy and institution of appropriate management; ensure adequate hydration; discontinue therapy in patients who develop signs and symptoms suggestive of urolithiasis, oliguria or renal failure and/or the sonographic findings",
+                "Clostridium difficile-associated diarrhea (CDAD reported with use of nearly all antibacterial agents, including ceftriaxone; If CDAD suspected or confirmed, may consider discontinuing ongoing antibacterial use not directed against C. difficile; institute appropriate fluid and electrolyte management, protein supplementation, antibacterial treatment of C. difficile, and surgical evaluation",
+                "Pancreatitis secondary to biliary obstruction reported rarely; use with caution in patients with gallbladder, biliary tract, liver, or pancreatic disease and patients with history of penicillin hypersensitivity",
+                "Inform patients that use of local anesthetics may cause methemoglobinemia, which must be treated promptly; advise patients or caregivers to stop use and seek immediate medical attention if they or someone in their care experience the following signs or symptoms: pale, gray, or blue colored skin (cyanosis); headache; rapid heart rate; shortness of breath; lightheadedness; or fatigue",
+                "Use with caution in patients with history of GI disease (eg, colitis)"
+            ],
+            "specific": [
+                {
+                    "type": "Neurological adverse reactions",
+                    "description": [
+                        "Serious neurological adverse reactions reported during postmarketing surveillance with ceftriaxone use; reactions include encephalopathy (disturbance of consciousness including somnolence, lethargy, and confusion), seizures, myoclonus, and non-convulsive status epilepticus",
+                        "Some cases occurred in patients with severe renal impairment who did not receive appropriate dosage adjustment; however, in other cases, neurological adverse reactions occurred in patients receiving an appropriate dosage adjustment",
+                        "The neurological adverse reactions were reversible and resolved after discontinuation; if neurological adverse reactions associated with therapy occur, discontinue treatment and institute appropriate supportive measures",
+                        "Make appropriate dosage adjustments in patients with severe renal impairment"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "calcium acetate",
+            "description": {
+                "common": "ceftriaxone, calcium acetate. Other (see comment). Contraindicated. \nComment: Do not use ANY calcium containing solutions (including Ringer or Harmann solutions) in combination with IV ceftriaxone; risk of potentially fatal particulate precipitation in lungs, kidneys. Separate administration by at least 48 hrs."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "ceftriaxone, calcium carbonate. Other (see comment). Contraindicated. \nComment: Do not use ANY calcium containing solutions (including Ringer or Harmann solutions) in combination with IV ceftriaxone; risk of potentially fatal particulate precipitation in lungs, kidneys. Separate by at least 48 hrs."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "calcium chloride",
+            "description": {
+                "common": "ceftriaxone, calcium chloride. Other (see comment). Contraindicated. \nComment: Contraindicated in neonates if they require (or are expected to require) treatment with calcium containing IV solutions, including continuous calcium containing infusions such as parenteral nutrition because of the risk of precipitation of ceftriaxone and calcium. Separate IV ceftriaxone and IV calcium by at least 48 hrs. However, in patients other than neonates, ceftriaxone and calcium containing solutions may be administered sequentially of one another if the IV infusion lines are thoroughly flushed between infusions with a compatible fluid."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "calcium citrate",
+            "description": {
+                "common": "ceftriaxone, calcium citrate. Other (see comment). Contraindicated. \nComment: Do not use ANY calcium containing solutions (including Ringer or Harmann) in combination with IV ceftriaxone; risk of potentially fatal particulate precipitation in lungs, kidneys. Separate by at least 48 hrs."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "calcium gluconate",
+            "description": {
+                "common": "ceftriaxone, calcium gluconate. Other (see comment). Contraindicated. \nComment: Do not use ANY calcium containing solutions (including Ringer or Harmann) in combination with IV ceftriaxone; risk of potentially fatal particulate precipitation in lungs, kidneys. Separate by at least 48 hrs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "ceftriaxone will increase the level or effect of argatroban by  anticoagulation. Avoid or Use Alternate Drug. cephalosporins may decrease prothrombin activity"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "BCG vaccine live",
+            "description": {
+                "common": "ceftriaxone decreases effects of BCG vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "ceftriaxone will increase the level or effect of bivalirudin by  anticoagulation. Avoid or Use Alternate Drug. cephalosporins may decrease prothrombin activity"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "ceftriaxone, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "ceftriaxone increases effects of dalteparin by anticoagulation. Avoid or Use Alternate Drug. Cephalosporins may decrease prothrombin activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "ceftriaxone increases effects of enoxaparin by anticoagulation. Avoid or Use Alternate Drug. cephalosporins may decrease prothrombin activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "ceftriaxone increases effects of fondaparinux by anticoagulation. Avoid or Use Alternate Drug. cephalosporins may decrease prothrombin activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "ceftriaxone will increase the level or effect of heparin by  anticoagulation. Avoid or Use Alternate Drug. cephalosporins may decrease prothrombin activity"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "ceftriaxone decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "typhoid vaccine live",
+            "description": {
+                "common": "ceftriaxone decreases effects of typhoid vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "ceftriaxone will decrease the level or effect of bazedoxifene/conjugated estrogens by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "demeclocycline",
+            "description": {
+                "common": "demeclocycline decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "ceftriaxone will decrease the level or effect of dienogest/estradiol valerate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. An alternate or additional form of birth control may be advisable during concomitant use."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "minocycline",
+            "description": {
+                "common": "minocycline decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "probenecid will increase the level or effect of ceftriaxone by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "ceftriaxone decreases effects of sodium picosulfate/magnesium oxide/anhydrous citric acid by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, ceftriaxone.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Coadministration with drugs associated with nephrotoxicity may increase the risk for acute and/or chronic nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "ceftriaxone increases effects of warfarin by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "ceftriaxone will increase the level or effect of choline magnesium trisalicylate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "ceftriaxone increases toxicity of furosemide by pharmacodynamic synergism. Minor/Significance Unknown. Increased risk of nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "rose hips will increase the level or effect of ceftriaxone by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "ceftriaxone will increase the level or effect of willow bark by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Induration after IM injection",
+            "percent": "5-17"
+        },
+        {
+            "name": "Eosinophilia",
+            "percent": "6"
+        },
+        {
+            "name": "Thrombocytosis",
+            "percent": "5"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3"
+        },
+        {
+            "name": "Elevated hepatic transaminases",
+            "percent": "3"
+        },
+        {
+            "name": "Leukopenia",
+            "percent": "2"
+        },
+        {
+            "name": "Rash",
+            "percent": "2"
+        },
+        {
+            "name": "Increased blood urea nitrogen",
+            "percent": "1"
+        },
+        {
+            "name": "BUN",
+            "percent": "1"
+        },
+        {
+            "name": "Induration at IV site",
+            "percent": "1"
+        },
+        {
+            "name": "Pain",
+            "percent": null
+        },
+        {
+            "name": "Agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "Basophilia",
+            "percent": null
+        },
+        {
+            "name": "Bronchospasm",
+            "percent": null
+        },
+        {
+            "name": "Candidiasis",
+            "percent": null
+        },
+        {
+            "name": "Chills",
+            "percent": null
+        },
+        {
+            "name": "Diaphoresis",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": null
+        },
+        {
+            "name": "Flushing",
+            "percent": null
+        },
+        {
+            "name": "Gallstones",
+            "percent": null
+        },
+        {
+            "name": "Glycosuria",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Hematuria",
+            "percent": null
+        },
+        {
+            "name": "Hemolytic anemia",
+            "percent": null
+        },
+        {
+            "name": "Increased alkaline phosphatase or bilirubin",
+            "percent": null
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": null
+        },
+        {
+            "name": "Jaundice",
+            "percent": null
+        },
+        {
+            "name": "Leukocytosis",
+            "percent": null
+        },
+        {
+            "name": "Lymphocytosis",
+            "percent": null
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": null
+        },
+        {
+            "name": "Monocytosis",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Neutropenia",
+            "percent": null
+        },
+        {
+            "name": "Phlebitis",
+            "percent": null
+        },
+        {
+            "name": "Prolonged or decreased prothrombin time",
+            "percent": null
+        },
+        {
+            "name": "PT",
+            "percent": null
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "Renal stones",
+            "percent": null
+        },
+        {
+            "name": "Serum sickness",
+            "percent": null
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "Urinary casts",
+            "percent": null
+        },
+        {
+            "name": "Vaginitis",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Pancreatitis",
+            "percent": null
+        },
+        {
+            "name": "stomatitis and glossitis",
+            "percent": null
+        },
+        {
+            "name": "Oliguria",
+            "percent": null
+        },
+        {
+            "name": "ureteric obstruction",
+            "percent": null
+        },
+        {
+            "name": "post",
+            "percent": null
+        },
+        {
+            "name": "renal acute renal failure",
+            "percent": null
+        },
+        {
+            "name": "Exanthema",
+            "percent": null
+        },
+        {
+            "name": "allergic dermatitis",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "edema",
+            "percent": null
+        },
+        {
+            "name": "acute generalized exanthematous pustulosis",
+            "percent": null
+        },
+        {
+            "name": "AGEP",
+            "percent": null
+        },
+        {
+            "name": "and isolated cases of severe cutaneous adverse reactions",
+            "percent": null
+        },
+        {
+            "name": "erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome or Lyell",
+            "percent": null
+        },
+        {
+            "name": "s syndrome",
+            "percent": null
+        },
+        {
+            "name": "toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "Neurological adverse reactions",
+            "percent": null
+        },
+        {
+            "name": "including encephalopathy",
+            "percent": null
+        },
+        {
+            "name": "seizures",
+            "percent": null
+        },
+        {
+            "name": "myoclonus",
+            "percent": null
+        },
+        {
+            "name": "and non",
+            "percent": null
+        },
+        {
+            "name": "convulsive status epilepticus",
+            "percent": null
+        }
+    ]
+}

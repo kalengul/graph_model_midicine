@@ -1,0 +1,263 @@
+{
+    "name": "letrozole",
+    "comment": "Rx",
+    "other_names": [
+        "Femara"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Aromatase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/femara-letrozole-342220",
+    "pregnancy": {
+        "common": [
+            "Based on post-marketing reports, findings from animal studies and mechanism of action, therapy can cause fetal harm and is contraindicated for use in pregnant women; in post-marketing reports, use during pregnancy resulted in cases of spontaneous abortions and congenital birth defects; however, data are insufficient to inform a drug-associated risk"
+        ],
+        "specific": [
+            {
+                "type": "Contraception",
+                "description": [
+                    "Advise females of reproductive potential to use effective contraception during treatment and for at least 3 weeks after last dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Therapy may impair fertility in females and males of reproductive potential"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Not known if therapy is present in human milk; there are no data on effects on breastfed infant or milk production; exposure of lactating rats to drug was associated with impaired reproductive performance of male offspring; because of potential for serious adverse reactions in breastfed infants, advise lactating women not to breastfeed while receiving therapy and for at least 3 weeks after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to drug or excipients",
+                "Pregnancy, premenopausal women"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Use caution in liver impairment; administer a low dose to patients with hepatic impairment; effect of hepatic impairment on drug exposure in cancer patients with elevated bilirubin levels not determined",
+                "Decreases in bone mineral density may occur; consider bone mineral density monitoring; increased risk of osteoporosis",
+                "May cause dizziness, somnolence and fatigue; exercise caution when operating machinery",
+                "May increase total serum cholesterol; consider cholesterol monitoring",
+                "Avoid concomitant estrogens"
+            ],
+            "specific": [
+                {
+                    "type": "Risk of birth defects if given to pregnant women",
+                    "description": [
+                        "Used off-label to induce ovulation",
+                        "Health Canada & Novartis Canada warned against such use"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "ethinylestradiol decreases effects of letrozole by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Letrozole should not be given concurrently with any estrogens or estrogen-containing products."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "tamoxifen decreases levels of letrozole by unspecified interaction mechanism. Contraindicated. Letrozole should not be given concurrently with tamoxifen. Letrozole therapy after the completion of standard tamoxifen treatment is not associated with impaired effects of letrozole."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "letrozole decreases effects of cholera vaccine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs and corticosteroids (used in greater than physiologic doses), may reduce the immune response to cholera vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "letrozole decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "letrozole increases levels of eluxadoline by decreasing metabolism. Use Caution/Monitor. As a precautionary measure due to incomplete information on the metabolism of eluxadoline, use caution when coadministered with strong CYP2A6 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir increases levels of letrozole by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "letrozole will increase the level or effect of mavacamten by  affecting hepatic enzyme CYP2C19 metabolism. Modify Therapy/Monitor Closely. Inititiation of weak CYP2C19 inhibitors may require decreased mavacamten dose. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and letrozole both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Diaphoresis",
+            "percent": "24"
+        },
+        {
+            "name": "Bone pain",
+            "percent": "22"
+        },
+        {
+            "name": "Hot flashes",
+            "percent": "19"
+        },
+        {
+            "name": "Back pain",
+            "percent": "18"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "18"
+        },
+        {
+            "name": "Nausea",
+            "percent": "17"
+        },
+        {
+            "name": "Night sweats",
+            "percent": "14"
+        },
+        {
+            "name": "Cough",
+            "percent": "13"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "13"
+        },
+        {
+            "name": "Constipation",
+            "percent": "10"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "8"
+        },
+        {
+            "name": "Chest pain",
+            "percent": "8"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "8"
+        },
+        {
+            "name": "Decr wt",
+            "percent": "7"
+        },
+        {
+            "name": "Edema",
+            "percent": "7"
+        },
+        {
+            "name": "Breast pain",
+            "percent": "7"
+        },
+        {
+            "name": "Bone fractures",
+            "percent": "6"
+        },
+        {
+            "name": "UTI",
+            "percent": "6"
+        },
+        {
+            "name": "Hypercalcemia",
+            "percent": "5"
+        },
+        {
+            "name": "Headache",
+            "percent": "4"
+        },
+        {
+            "name": "Weakness",
+            "percent": "4"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "3"
+        },
+        {
+            "name": "Osteoporosis",
+            "percent": "2"
+        },
+        {
+            "name": "Blurred vision",
+            "percent": null
+        },
+        {
+            "name": "Increased hepatic enzyme levels",
+            "percent": null
+        },
+        {
+            "name": "Blurred vision",
+            "percent": null
+        },
+        {
+            "name": "Increased hepatic enzymes",
+            "percent": null
+        },
+        {
+            "name": "Hepatitis",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "Anaphylactic reactions",
+            "percent": null
+        },
+        {
+            "name": "Toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "Erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "Carpal tunnel syndrome",
+            "percent": null
+        },
+        {
+            "name": "Trigger finger",
+            "percent": null
+        }
+    ]
+}

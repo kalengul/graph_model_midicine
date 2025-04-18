@@ -1,0 +1,554 @@
+{
+    "name": "epirubicin",
+    "comment": "Rx",
+    "other_names": [
+        "Ellence"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Anthracyclines"
+    ],
+    "source": "https://reference.medscape.com/drug/epirubicin-342251",
+    "pregnancy": {
+        "common": [
+            "Verify pregnancy status in female patients of reproductive potential prior to initiating",
+            "Based on findings from animal studies and mechanism of action, drug can cause fetal harm when administered to a pregnant woman; avoid use during the 1st trimester ",
+            "Available human data do not establish presence or absence of major birth defects and miscarriage related to use during the 2nd and 3rd trimesters; there are reports of fetal and/or neonatal cardiotoxicity following in utero exposure to epirubicin",
+            "There have been rare reports of fetal and/or neonatal transient ventricular hypokinesia, transient elevation of cardiac enzymes, and a case of fetal demise from suspected anthracycline-induced cardiotoxicity following in utero exposure to epirubicin in 2nd and/or 3rd trimesters",
+            "Cardiotoxicity is a known risk of anthracycline treatment in adults; monitor fetus and/or neonate for cardiotoxicity and perform testing consistent with community standards of care",
+            "Advise pregnant women and females of reproductive potential of potential risk to a fetus"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies in pregnant rats, drug was embryo-fetal lethal and caused structural abnormalities when administered during organogenesis at doses less than maximum recommended human dose on a body surface area basis"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Can cause fetal harm in females when administered to a pregnant woman; advise female patients of reproductive potential to use effective contraception during treatment and for 6 months after last dose ",
+                    "Based on its mechanism of action and genotoxicity studies, advise male patients with female partners of reproductive potential to use effective contraception during treatment and for 3 months after last dose ",
+                    "Advise male patients with pregnant partners to use condoms during treatment and for at least 7 days after last dose "
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on clinical findings and animal studies, therapy may impair female fertility and result in amenorrhea; premature menopause can occur; recovery of menses and ovulation is related to age at treatment ",
+                    "Based on clinical findings and animal studies in males, therapy may cause oligospermia, azoospermia, and permanent loss of fertility; sperm counts have been reported to return to normal levels in some men; may occur several years after end of therapy"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on presence of drug in human milk, effects on breastfed child, or on milk production; drug is present in rat milk; when a drug is present in animal milk it is likely the drug will be present in human milk ",
+            "Because of potential for serious adverse reactions in breastfed child, advise lactating women not to breastfeed during treatment and for at least 7 days after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Reduce dosage with impaired hepatic function ",
+                "Myelosuppression resulting in serious infection, septic shock, requirement for transfusions, hospitalization, and death may occur",
+                "Administer only under the supervision of physician experienced in the use of cancer chemotherapeutic agents"
+            ],
+            "specific": [
+                {
+                    "type": "Extravasation",
+                    "description": [
+                        "Severe local tissue necrosis associated with extravasation during administration; administer only by IV route (not IM or SC); immediately terminate the drug and apply ice to the affected area "
+                    ]
+                },
+                {
+                    "type": "Cardiotoxicity",
+                    "description": [
+                        "Myocardial damage, including acute left ventricular failure can occur; manifested in its most severe form by potentially fatal congestive heart failure (CHF); may occur months to years after treatment discontinued",
+                        "Probability of cardiotoxicity estimated to be 0.9% at a cumulative dose of 550 mg/m², 1.6% at 700 mg/m², and 3.3% at 900 mg/m²",
+                        "Risk of cardiomyopathy is further increased with concomitant cardiotoxic therapy; assess left ventricular ejection fraction (LVEF) before and regularly during and after treatment"
+                    ]
+                },
+                {
+                    "type": "Secondary malignancies",
+                    "description": [
+                        "Secondary acute myelogenous leukemia (AML) or myelodysplastic syndrome (MDS)",
+                        "More common when given in combination with DNA-damaging antineoplastic agents, patients heavily pretreated with cytotoxic drugs, or with escalated anthracycline doses",
+                        "Cumulative risk of developing treatment-related AML or MDS estimated as 0.27% at 3 years, 0.46% at 5 years, and 0.55% at 8 years"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Severe hypersensitivity to drug, other anthracyclines, or anthracenediones",
+                "Baseline ANC<1500/mm³",
+                "Cardiomyopathy and/or heart failure, recent MI, or severe arrhythmias",
+                "Severe myocardial insufficiency",
+                "Cumulative dose achieved in previous anthracycline treatment",
+                "Severe persistent drug-induced myelosuppression",
+                "Severe hepatic impairment (Child-Pugh Class C or serum bilirubin level greater than 5 mg/dL)"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Lysis syndrome may occur; evaluate blood uric acid levels, potassium, calcium, phosphate, and creatinine after initial treatment; consider hydration, urine alkalinization, and prophylaxis with allopurinol to minimize potential complications of hyperuricemia and tumor lysis syndrome ",
+                "Thrombophlebitis and thromboembolic events, including pulmonary embolism (in some cases fatal) reported with therapy; venous sclerosis may result from an injection into small vessel or from repeated injections into same vein ",
+                "Administration of live or live-attenuated vaccines in patients immunocompromised by chemotherapeutic agents may result in serious or fatal infections ",
+                "Administration after previous radiation therapy may induce an inflammatory recall reaction at site of irradiation ",
+                "Therapy can cause fetal harm; advise patients of potential risk to a fetus and to use effective contraception",
+                "Women of child-bearing potential should be advised to avoid becoming pregnant during treatment and should use effective contraceptive methods"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adenovirus types 4 and 7 live, oral",
+            "description": {
+                "common": "epirubicin decreases effects of adenovirus types 4 and 7 live, oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Immunosuppressives may diminish therapeutic effects of vaccines and increase risk of adverse effects (increased risk of infection). Live-attenuated vaccines should be avoided for at least 3mo after cessation of immunosuppressive therapy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, epirubicin.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "influenza virus vaccine quadrivalent, adjuvanted",
+            "description": {
+                "common": "epirubicin decreases effects of influenza virus vaccine quadrivalent, adjuvanted by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Immunosuppressive drugs may reduce the immune response to influenza vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "influenza virus vaccine trivalent, adjuvanted",
+            "description": {
+                "common": "epirubicin decreases effects of influenza virus vaccine trivalent, adjuvanted by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Immunosuppressive drugs may reduce the immune response to influenza vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of epirubicin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hrbefore, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, epirubicin.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tofacitinib",
+            "description": {
+                "common": "epirubicin, tofacitinib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, epirubicin.\nEither increases toxicity of the other by unknown mechanism. Avoid or Use Alternate Drug. Trastuzumab may cause cardiomyopathy. Incidence and severity was highest when used with anthracycline-containing chemotherapy regimens. If possible, avoid anthracycline-based therapy for 7 months after last trastuzumab/hyaluronidase dose. If anthracyclines are used, carefully monitor cardiac function."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, epirubicin.\nEither increases toxicity of the other by unknown mechanism. Avoid or Use Alternate Drug. Trastuzumab may cause cardiomyopathy. Incidence and severity was highest when used with anthracycline-containing chemotherapy regimens. If possible, avoid anthracycline-based therapy for 7 months after last trastuzumab/hyaluronidase dose. If anthracyclines are used, carefully monitor cardiac function."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib, epirubicin.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may increase risk of myelosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belatacept",
+            "description": {
+                "common": "belatacept and epirubicin both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bevacizumab",
+            "description": {
+                "common": "bevacizumab, epirubicin. Other (see comment). Use Caution/Monitor. \nComment: Potential for increased risk of cardiotoxicity (CHF). Caution is warranted."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "epirubicin, cholera vaccine. immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs and corticosteroids (used in greater than physiologic doses), may reduce the immune response to cholera vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine increases levels of epirubicin by decreasing metabolism. Use Caution/Monitor. Cimetidine increased the AUC of epirubicin by 50%. Cimetidine treatment should be stopped during treatment with epirubicin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "epirubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "denosumab",
+            "description": {
+                "common": "epirubicin, denosumab. Other (see comment). Use Caution/Monitor. \nComment: Caution should be taken in patients on concomitant immunosuppressants or with impaired immune systems because of increased risk for serious infections."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "epirubicin increases effects of fingolimod by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Concomitant therapy is expected to increase the risk of immunosuppression. Use caution when switching patients from long-acting therapies with immune effects. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyurea",
+            "description": {
+                "common": "epirubicin, hydroxyurea. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meningococcal group B vaccine",
+            "description": {
+                "common": "epirubicin decreases effects of meningococcal group B vaccine by pharmacodynamic antagonism. Use Caution/Monitor. Individuals with altered immunocompetence may have reduced immune responses to the vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC, epirubicin.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Consider the risk of additive immune system effects when coadministering immunosuppressive therapies with coadministration. When switching from therapies with immune effects, take into account the duration and mechanism of action of these therapies when initiating ofatumumab SC."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olaparib",
+            "description": {
+                "common": "epirubicin and olaparib both increase  pharmacodynamic synergism. Use Caution/Monitor. Coadministration with other other myelosuppressive anticancer agents, including DNA damaging agents,  may potentiate and prolongate the myelosuppressive toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and epirubicin both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sipuleucel-T",
+            "description": {
+                "common": "epirubicin decreases effects of sipuleucel-T by pharmacodynamic antagonism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, epirubicin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, epirubicin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Alopecia",
+            "percent": "96"
+        },
+        {
+            "name": "Nausea and vomiting",
+            "percent": "92"
+        },
+        {
+            "name": "Leukopenia or neutropenia",
+            "percent": "80"
+        },
+        {
+            "name": "Amenorrhea",
+            "percent": "72"
+        },
+        {
+            "name": "Anemia",
+            "percent": "72"
+        },
+        {
+            "name": "Mucositis",
+            "percent": "59"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "49"
+        },
+        {
+            "name": "Lethargy",
+            "percent": "46"
+        },
+        {
+            "name": "Hot flashes",
+            "percent": "39"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "25"
+        },
+        {
+            "name": "Conjunctivitis",
+            "percent": "15"
+        },
+        {
+            "name": "Rash",
+            "percent": "9"
+        },
+        {
+            "name": "Fever",
+            "percent": "5"
+        },
+        {
+            "name": "Skin changes",
+            "percent": "5"
+        },
+        {
+            "name": "Anorexia",
+            "percent": "3"
+        },
+        {
+            "name": "Acute lymphoid leukemia",
+            "percent": "1-2"
+        },
+        {
+            "name": "Acute myelogenous leukemia",
+            "percent": null
+        },
+        {
+            "name": "Atrioventricular block",
+            "percent": null
+        },
+        {
+            "name": "Esophagitis",
+            "percent": null
+        },
+        {
+            "name": "Hyperpigmentation",
+            "percent": null
+        },
+        {
+            "name": "Myelodysplastic syndrome",
+            "percent": null
+        },
+        {
+            "name": "Myocardial toxicity",
+            "percent": null
+        },
+        {
+            "name": "including CHF",
+            "percent": null
+        },
+        {
+            "name": "Severe myelosuppression",
+            "percent": null
+        },
+        {
+            "name": "Risk of secondary AML",
+            "percent": null
+        },
+        {
+            "name": "Infections and infestations",
+            "percent": null
+        },
+        {
+            "name": "Sepsis",
+            "percent": null
+        },
+        {
+            "name": "pneumonia",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Metabolism and nutrition disorders",
+            "percent": null
+        },
+        {
+            "name": "Dehydration",
+            "percent": null
+        },
+        {
+            "name": "hyperuricemia",
+            "percent": null
+        },
+        {
+            "name": "Vascular disorders",
+            "percent": null
+        },
+        {
+            "name": "Shock",
+            "percent": null
+        },
+        {
+            "name": "hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "embolism arterial",
+            "percent": null
+        },
+        {
+            "name": "thrombophlebitis",
+            "percent": null
+        },
+        {
+            "name": "phlebitis",
+            "percent": null
+        },
+        {
+            "name": "Respiratory",
+            "percent": null
+        },
+        {
+            "name": "thoracic and mediastinal disorders",
+            "percent": null
+        },
+        {
+            "name": "Pulmonary embolism",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal disorders",
+            "percent": null
+        },
+        {
+            "name": "Erosions",
+            "percent": null
+        },
+        {
+            "name": "ulcerations",
+            "percent": null
+        },
+        {
+            "name": "pain or burning sensation",
+            "percent": null
+        },
+        {
+            "name": "bleeding",
+            "percent": null
+        },
+        {
+            "name": "hyperpigmentation of the oral mucosa",
+            "percent": null
+        },
+        {
+            "name": "Skin and subcutaneous tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "Erythema",
+            "percent": null
+        },
+        {
+            "name": "flushes",
+            "percent": null
+        },
+        {
+            "name": "skin and nail hyperpigmentation",
+            "percent": null
+        },
+        {
+            "name": "photosensitivity",
+            "percent": null
+        },
+        {
+            "name": "hypersensitivity to irradiated skin",
+            "percent": null
+        },
+        {
+            "name": "radiation",
+            "percent": null
+        },
+        {
+            "name": "recall reaction",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "Renal and urinary disorders",
+            "percent": null
+        },
+        {
+            "name": "Red coloration of urine for",
+            "percent": null
+        },
+        {
+            "name": "days after administration",
+            "percent": null
+        },
+        {
+            "name": "General disorders and administration site conditions",
+            "percent": null
+        },
+        {
+            "name": "Fever",
+            "percent": null
+        },
+        {
+            "name": "chills",
+            "percent": null
+        },
+        {
+            "name": "Injury",
+            "percent": null
+        },
+        {
+            "name": "poisoning and procedural complications",
+            "percent": null
+        },
+        {
+            "name": "Chemical cystitis",
+            "percent": null
+        },
+        {
+            "name": "following intravesical administration",
+            "percent": null
+        }
+    ]
+}

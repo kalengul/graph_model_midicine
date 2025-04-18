@@ -1,0 +1,1829 @@
+{
+    "name": "glecaprevir/pibrentasvir",
+    "comment": "Rx",
+    "other_names": [
+        "Mavyret"
+    ],
+    "classes": [
+        "HCV NS5A Inhibitors",
+        "HCV NS3/4A Protease Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/mavyret-glecaprevir-pibrentasvir-1000151",
+    "pregnancy": {
+        "common": [
+            "No adequate human data are available to establish whether or not glecaprevir/pibrentasvir poses a risk to pregnancy outcomes"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "No adverse developmental effects were observed when glecaprevir and pibrentasvir were administered separately during organogenesis at exposures up to 53 times (rats; glecaprevir) or 51 and 1.5 times (mice and rabbits, respectively; pibrentasvir) the human exposures at the recommended dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "When administered to lactating rodents, glecaprevir and pibrentasvir were present in milk, without effect on growth and development observed in the nursing pups",
+            "Consider the developmental and health benefits of breastfeeding along with the mother’s clinical need for the drug, and any potential adverse effects on the breastfed infant from the drug or from the underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Risk of hepatitis B virus reactivation in patients coinfected with HCV and HBV",
+                    "description": [
+                        "Test for evidence of current or prior HBV infection by measuring HBsAg and anti-HBc before initiating treatment",
+                        "HBV reactivation has been reported in HCV/HBV-coinfected patients who were undergoing or had completed treatment with HCV direct-acting antivirals and were not receiving HBV antiviral therapy",
+                        "Some cases have resulted in fulminant hepatitis, hepatic failure, and death",
+                        "Monitor HCV/HBV-coinfected patients for hepatitis flare or HBV reactivation during HCV treatment and posttreatment follow up",
+                        "Initiate appropriate patient management for HBV infection as clinically indicated"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Moderate or severe hepatic impairment (Child-Pugh B or C) ",
+                "History of prior hepatic decompensation",
+                "Coadministration with atazanavir or rifampin"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hepatitis B virus reactivation in patients coinfected with HCV/HBV may occur ",
+                "Postmarketing cases of hepatic decompensation/failure, including those with fatal outcomes, have been reported",
+                "No dosage adjustment of required in people who inject drugs (PWID) or those who are on medication-assisted treatment (MAT) for opioid use disorder; safety and efficacy reported to be similar to those not reporting history of injection drug use"
+            ],
+            "specific": [
+                {
+                    "type": "Hepatitis B Virus reactivation in HCV and HBV coinfection",
+                    "description": [
+                        "In patients with resolved HBV infection reappearance of HBsAg can occur",
+                        "Reactivation of HBV replication may be accompanied by hepatitis, ie, increase in aminotransferase levels and, in severe cases, increases in bilirubin levels, liver failure, and death can occur",
+                        "Test all patients for evidence of current or prior HBV infection by measuring HBsAg and anti-HBc before initiating HCV treatment",
+                        "In patients with serologic evidence of HBV infection, monitor for clinical and laboratory signs of hepatitis flare or HBV reactivation during HCV treatment and during post-treatment follow-up; initiate appropriate patient management for HBV infection as clinically indicated"
+                    ]
+                },
+                {
+                    "type": "Hepatic decompensation",
+                    "description": [
+                        "Majority of patients with severe outcomes had evidence of advanced liver disease with moderate or severe hepatic impairment (Child-Pugh B or C) prior to initiating therapy, including some patients reported as having compensated cirrhosis with mild liver impairment (Child-Pugh A) at baseline but with a prior decompensation event (i.e., prior history of ascites, variceal bleeding, encephalopathy)",
+                        "Patients with compensated cirrhosis (Child Pugh A) or evidence of advanced liver disease such as portal hypertension, perform hepatic laboratory testing as clinically indicated; and monitor for signs and symptoms of hepatic decompensation such as presence of jaundice, ascites, hepatic encephalopathy, and variceal hemorrhage; discontinue in patients who develop evidence of hepatic decompensation/failure"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Effects of glecaprevir/pibrentasvir on other drugs",
+                        "Glecaprevir and pibrentasvir: Inhibit P-gp, BCRP, OATP1B1, and OATP1B3; coadministration of glecaprevir/pibrentasvir may increase plasma concentrations of substrates of these transporters",
+                        "Glecaprevir and pibrentasvir: Weak inhibitors of CYP3A, CYP1A2, and UGT1A1; significant interactions are not expected when glecaprevir/pibrentasvir is coadministered with substrates of CYP3A, CYP1A2, CYP2C9, CYP2C19, CYP2D6, UGT1A1, or UGT1A4",
+                        "Effects of other drugs on glecaprevir/pibrentasvir",
+                        "Glecaprevir and pibrentasvir: Substrates of P-gp and/or BCRP",
+                        "Glecaprevir: Substrate of OATP1B1, OATP1B3, and CYP3A (secondary)",
+                        "Coadministration of glecaprevir/pibrentasvir with drugs that inhibit hepatic P-gp, BCRP, or OATP1B1/3 may increase the plasma concentrations of glecaprevir and/or pibrentasvir",
+                        "Coadministration of glecaprevir/pibrentasvir with drugs that induce P-gp/CYP3A may significantly decrease glecaprevir and pibrentasvir plasma concentrations, leading to reduced therapeutic effect",
+                        "Coadministration is contraindicated with rifampin or atazanavir",
+                        "Coadministration is not recommended with carbamazepine, efavirenz, or St John’s wort"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of elagolix by  Other (see comment). Contraindicated. Concomitant use of elagolix and strong OATP1B1 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of glecaprevir/pibrentasvir by  increasing metabolism. Contraindicated. Coadministration of rifampin (a strong CYP3A4 and P-gp inducer) with glecaprevir/pibrentasvir significantly decreased glecaprevir/pibrentasvir plasma concentrations and AUC. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. In clinical trials, coadministration of atazanavir (an inhibitor of CYP3A4 and OATP1B1) with glecaprevir (a CYP3A4 and OATP1B1 substrate) increased risk for ALT elevations."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of atorvastatin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. Coadministration of glecaprevir/pibrentasvir with atorvastatin is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of glecaprevir/pibrentasvir by  increasing metabolism. Avoid or Use Alternate Drug. Coadministration of carbamazepine (a strong CYP3A4 and P-gp inducer) with glecaprevir/pibrentasvir may significantly decrease glecaprevir/pibrentasvir plasma concentrations and AUC. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of colchicine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Avoid use of colchicine with P-gp inhibitors. If coadministration is necessary, decrease colchicine dose or frequency as recommended in prescribing information. Use of any colchicine product in conjunction with P-gp inhibitors is contraindicated in patients with renal or hepatic impairment. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Avoid or Use Alternate Drug. Coadministration of cyclosporine (a moderate CYP3A4 inhibitor and P-gp inhibitor) with glecaprevir (CYP3A4 and P-gp substrate) and pibrentasvir (P-gp substrate) is not recommended if cyclosporine dose exceeds 100 mg/day."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration of glecaprevir/pibrentasvir with darunavir (P-gp and a strong CYP3A4 inhibitor). "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of efavirenz (a strong CYP3A4 inducer) with glecaprevir/pibrentasvir may significantly decrease glecaprevir/pibrentasvir plasma concentrations and AUC. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternate therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of glecaprevir/pibrentasvir by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "leniolisib will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Avoid or Use Alternate Drug. Leniolisib, an OATP1B1 and OATP1B3 inhibitor, may increase systemic exposure of these substrates "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration of glecaprevir/pibrentasvir with lopinavir (P-gp and a strong CYP3A4 inhibitor). "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of lovastatin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. Coadministration of glecaprevir/pibrentasvir with lovastatin is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nirmatrelvir",
+            "description": {
+                "common": "nirmatrelvir will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Glecaprevir/pibrentasvir serum concentrations may be increased owing to P-gp, BCRP and OATP1B inhibition by ritonavir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Glecaprevir/pibrentasvir serum concentrations may be increased owing to P-gp, BCRP and OATP1B inhibition by ritonavir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "revefenacin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of revefenacin by Other (see comment). Avoid or Use Alternate Drug. \nComment: OATP1B1 and OATP1B3 transport inhibitors may increase systemic exposure of revefenacin's active metabolite. Coadministration not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of rimegepant by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration of glecaprevir/pibrentasvir with ritonavir (P-gp and a strong CYP3A4 inhibitor). "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of simvastatin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. Coadministration of glecaprevir/pibrentasvir with simvastatin is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of glecaprevir/pibrentasvir by  increasing metabolism. Avoid or Use Alternate Drug. Coadministration of St John's wort (a strong CYP3A4 and P-gp inducer) with glecaprevir/pibrentasvir may significantly decrease glecaprevir/pibrentasvir plasma concentrations and AUC. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trofinetide",
+            "description": {
+                "common": "trofinetide will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Avoid or Use Alternate Drug. Trofinetide (an OATP131 and OATP13B inhibitor) may increase plasma levels of OATP131 or OATP13B substrates. Avoid coadministration with sensitive substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zavegepant intranasal",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of zavegepant intranasal by  Other (see comment). Avoid or Use Alternate Drug. OATP1B3 inhibitors may result in a significant increase in systemic exposure of zavegepant (an OATP1B3 substrate). "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abiraterone",
+            "description": {
+                "common": "abiraterone will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "afatinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of aliskiren by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alvimopan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of alvimopan by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ambrisentan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ambrisentan by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of amitriptyline by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of glecaprevir/pibrentasvir by  increasing elimination. Use Caution/Monitor. Apalutamide weakly induces OATP1B1 and may decrease systemic exposure of drugs that are OATP1B1 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of apixaban by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of atogepant by  Other (see comment). Modify Therapy/Monitor Closely. Recommended dosage of atogepant (an OATP1B1 substrate) with concomitant use of OATP inhibitors is 10 mg or 30 mg qDay."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendamustine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of bendamustine by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of budesonide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carfilzomib",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of carfilzomib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caspofungin",
+            "description": {
+                "common": "caspofungin will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cetirizine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of cetirizine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of cimetidine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ciprofloxacin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clotrimazole",
+            "description": {
+                "common": "clotrimazole will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of dabigatran by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasabuvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of dasabuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of daunorubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desloratadine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of desloratadine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Measure serum digoxin concentrations before initiating glecaprevir/pibrentasvir. To reduce digoxin concentrations, decrease the dose by ~50% or by modifying the dosing frequency and continue monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of diltiazem by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of docetaxel by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of doxorubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of duvelisib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elbasvir/grazoprevir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of elbasvir/grazoprevir by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of eletriptan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eltrombopag",
+            "description": {
+                "common": "eltrombopag will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Monitor for glecaprevir/pibrentasvir adverse effects if coadministered with drugs that are OATP1B1 and BCRP inhibitor"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "eluxadoline will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Use Caution/Monitor. Glecaprevir/pibrentasvir is an OATP1B1 inhibitor, BCRP substrate and inhibitor, and glecaprevir is a OAT1B1/3 substrate. Eluxadoline is an OATP1B1 substrate and BCRP inhibitor. Glecaprevir/pibrentasvir may decrease the therapeutic effects of eluxadoline. Eluxadoline may increase the plasma levels of glecaprevir/pibrentasvir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of enalapril by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, glecaprevir/pibrentasvir. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of estradiol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etoposide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of etoposide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of everolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ezetimibe",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ezetimibe by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of fentanyl by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fexofenadine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of fexofenadine by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "flibanserin will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of fluvastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis.  Use lowest approved dose of fluvastatin. If a higher dose is needed, use the lowest necessary statin dose based on a risk/benefit assessment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of glecaprevir/pibrentasvir by  increasing metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 and P-gp with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of P-gp/BCRP substrate drugs. Monitor for toxicities of P-gp/BCRP  substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "fostemsavir will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Modify Therapy/Monitor Closely. Fostemsavir inhibits OATP1B1/3 transporter. If possible, avoid coadministration or modify dose of OATP1B1/3 substrates coadministered with fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "gefitinib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemfibrozil",
+            "description": {
+                "common": "gemfibrozil will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "glyburide will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of hydrocortisone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idarubicin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of idarubicin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of irinotecan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of irinotecan liposomal by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "isavuconazonium sulfate will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Ivacaftor and its M1 metabolite has the potential to inhibit P-gp; may significantly increase systemic exposure to sensitive P-gp substrates with a narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivermectin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ivermectin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ledipasvir/sofosbuvir",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leflunomide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of leflunomide by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of lenvatinib by  Other (see comment). Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of P-gp and BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of letermovir by decreasing metabolism. Use Caution/Monitor. Coadminstration of letermovir, an OATP1B1/3 substrate, with OATP1B1/3 inhibitors may increase letermovir plasma concentrations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of lidocaine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "linagliptin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of linagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lomitapide will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Lonafarnib is a weak P-gp inhibitor. Monitor for adverse reactions if coadministered with P-gp substrates where minimal concentration changes may lead to serious or life-threatening toxicities. Reduce P-gp substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of loperamide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of lovastatin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of maraviroc by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "mefloquine will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of methotrexate by  Other (see comment). Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of OATP1B1/OATP1B3, P-gp and BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of methylprednisolone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metyrapone",
+            "description": {
+                "common": "metyrapone will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitomycin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of mitomycin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitoxantrone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of mitoxantrone by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of morphine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of naldemedine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "nilotinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nintedanib",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of nintedanib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitrofurantoin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of nitrofurantoin by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of olmesartan by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) by  Other (see comment). Use Caution/Monitor. Coadministration with glecaprevir/pibrentasvir may increase plasma concentration of drugs that are substrates of OATP1B1 or OATP1B3"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ondansetron by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "paclitaxel will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of paclitaxel protein bound by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "pazopanib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of glecaprevir/pibrentasvir by  increasing metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 and P-gp with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "pioglitazone will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of pitavastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. Use lowest approved dose of pitavastatin. If a higher dose is needed, use the lowest necessary statin dose based on a risk/benefit assessment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pomalidomide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of pomalidomide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of pravastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. If coadministered, reduce pravastatin dose by 50%."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of prazosin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will decrease the level or effect of prednisone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "progesterone, natural",
+            "description": {
+                "common": "progesterone, natural will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "propafenone will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "repaglinide will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifaximin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of riociguat by  Other (see comment). Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of P-gp and BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of risperidone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of ritonavir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rolapitant",
+            "description": {
+                "common": "rolapitant will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosiglitazone",
+            "description": {
+                "common": "rosiglitazone will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir increases levels of rosuvastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Increased statin concentrations resulting from OATP1B1 inhibition may increase risk of myopathy, including rhabdomyolysis. If coadministered, do not exceed 10 mg/day of rosuvastatin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of saxagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of drugs that induce CYP3A4 with glecaprevir/pibrentasvir may decrease glecaprevir/pibrentasvir plasma concentrations. Potential for loss of therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of selexipag by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of silodosin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of sirolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sitagliptin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of sitagliptin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, glecaprevir/pibrentasvir. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of sulfasalazine by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "suvorexant",
+            "description": {
+                "common": "suvorexant will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of talazoparib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Talazoparib is a P-glycoprotein (P-gp) substrate; coadministration with P-gp inhibitors may increase talazoparib systemic exposure."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "tamoxifen will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "telmisartan will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with OATP1B1/OATP1B3 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of temsirolimus by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teniposide",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of teniposide by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir AF",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of tenofovir AF by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of tenofovir DF by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "testosterone",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of testosterone by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of tolvaptan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of trabectedin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ulipristal",
+            "description": {
+                "common": "ulipristal will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "velpatasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of velpatasvir by  Other (see comment). Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of P-gp and BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with P-gp/BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "venetoclax will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of vinblastine by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of vincristine by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voxilaprevir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of voxilaprevir by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin will increase the level or effect of glecaprevir/pibrentasvir by  Other (see comment). Minor/Significance Unknown. Information suggests voclosporin (an OATP1B1 inhibitor) may increase in the concentration of OATP1B1 substrates is possible. Monitor for adverse reactions of OATP1B1 substrates when coadministered with voclosporin."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "9-17"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "11-14"
+        },
+        {
+            "name": "Nausea",
+            "percent": "6-12"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3-7"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "2"
+        },
+        {
+            "name": "x ULN",
+            "percent": "3.5"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "7"
+        },
+        {
+            "name": "Skin and SC tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "Hepatobiliary disorders",
+            "percent": null
+        },
+        {
+            "name": "Hepatic decompensation",
+            "percent": null
+        },
+        {
+            "name": "hepatic failure",
+            "percent": null
+        }
+    ]
+}

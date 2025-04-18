@@ -1,0 +1,895 @@
+{
+    "name": "lidocaine/prilocaine",
+    "comment": "Rx",
+    "other_names": [
+        "EMLA",
+        "Oraqix"
+    ],
+    "classes": [
+        "Anesthetics",
+        "Topical"
+    ],
+    "source": "https://reference.medscape.com/drug/emla-oraqix-lidocaine-prilocaine-343663",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: B",
+            "Lactation: Excreted in breast milk; use not recommended"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Excreted in breast milk; use not recommended"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to components, amide-type local anesthetics"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Do not apply on open wounds",
+                "Monitor child closely after administration; if child becomes very dizzy, excessively sleepy, or develops duskiness of the face or lips, remove cream immediately",
+                "Exercise caution when applying over large areas for >2 hours due to risk of systemic absorption and adverse effects",
+                "Monitor patients treated with class III anti-arrhythmic drugs (eg, amiodarone, bretylium, sotalol, dofetilide) due to additive cardiac effects; consider ECG monitoring",
+                "Use of cream is not recommended in any clinical situation when penetration or migration beyond tympanic membrane into middle ear is possible due to ototoxic effects observed in animal studies",
+                "Monitor acutely ill, debilitated, or elderly patients closely if administering repeated doses",
+                "Lidocaine and prilocaine have been shown to inhibit viral and bacterial growth",
+                "Instruct patient to avoid irritating or exposing treated area to extreme temperatures until complete sensation has returned",
+                "Allergic and anaphylactic reactions associated with lidocaine or prilocaine can occur; these reactions may be characterized by urticaria, angioedema, bronchospasm, and shock; if reactions occur, they should be managed by conventional means",
+                "Not to be used with standard dental syringes; only use with blunt‐tipped applicator and dispenser which is available from DENTSPLY Pharmaceutical",
+                "Drug coming in contact with the eye should be avoided; animal studies have demonstrated severe eye irritation; a loss of protective reflexes may allow corneal irritation and potential abrasion; if eye contact occurs, immediately rinse eye with water or saline and protect it until normal sensation returns. In addition, the patient should be evaluated by an ophthalmologist, as indicated",
+                "Patients with severe hepatic disease, because of their inability to metabolize local anesthetics normally, are at greater risk of developing toxic plasma concentrations of lidocaine and prilocaine"
+            ],
+            "specific": [
+                {
+                    "type": "Methemoglobinemia",
+                    "description": [
+                        "Cases of methemoglobinemia reported in association with local anesthetic use; although all patients are at risk for methemoglobinemia, patients with glucose‐6‐phosphate dehydrogenase deficiency, congenital or idiopathic methemoglobinemia, cardiac or pulmonary compromise, infants under 6 months of age, and concurrent exposure to oxidizing agents or their metabolites are more susceptible to developing clinical manifestations of the condition",
+                        "If local anesthetics must be used in these patients, close monitoring for symptoms and signs of methemoglobinemia is recommended; signs of methemoglobinemia may occur immediately or may be delayed some hours after exposure, and are characterized by a cyanotic skin discoloration and/or abnormal coloration of the blood",
+                        "Methemoglobin levels may continue to rise; therefore, immediate treatment required to avert more serious central nervous system and cardiovascular adverse effects, including seizures, coma, arrhythmias, and death",
+                        "Discontinue therapy and any other oxidizing agents; depending on severity of signs and symptoms, patients may respond to supportive care, ie, oxygen therapy, hydration; a more severe clinical presentation may require treatment with methylene blue, exchange transfusion, or hyperbaric oxygen."
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "bupivacaine liposome",
+            "description": {
+                "common": "lidocaine increases toxicity of bupivacaine liposome by Other (see comment). Contraindicated. \nComment: Do not admix with other local nonbupivacaine-based local anesthetics; admixing results in a rapid increase in free (unencapsulated) bupivacaine; may administer after waiting at least 20 minutes following local administration of lidocaine."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "lidocaine increases effects of dofetilide by pharmacodynamic synergism. Contraindicated. Additive cardiac effects."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "lidocaine increases levels of eliglustat by affecting hepatic enzyme CYP2D6 metabolism. Contraindicated. If coadministered with strong or moderate CYP2D6 inhibitors, reduce eliglustat dose from 84 mg BID to 84 mg once daily in extensive  and intermediate metabolizers;  eliglustat is contraindiated if strong or moderate CYP2D6 inhibitors are given concomitantly with strong or moderate CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "lidocaine will increase the level or effect of flibanserin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of flibanserin with moderate or strong CYP3A4 inhibitors is contraindicated. Severe hypotension or syncope can occur."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lidocaine increases levels of lomitapide by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Increases lomitapide levels several folds."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP1A2 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "axitinib",
+            "description": {
+                "common": "lidocaine increases levels of axitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid coadministration with moderate CYP3A4 inhibitors, monitor closely and reduce dose if necessary ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "lidocaine increases levels of bosutinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bupivacaine implant",
+            "description": {
+                "common": "prilocaine, bupivacaine implant.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid additional local anesthetic administration within 96 hr following bupivacaine implantation. If use of additional local anesthetics is unavoidable based on clinical need, monitor for neurologic and cardiovascular effects related to local anesthetic systemic toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobimetinib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone increases levels of lidocaine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Higher doses of amiodarone (ie, 600 mg BID) were shown to significantly increase lidocaine levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "lidocaine will increase the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of avapritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "bosutinib increases levels of lidocaine by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexpiprazole",
+            "description": {
+                "common": "lidocaine will increase the level or effect of brexpiprazole by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. Administer a quarter of brexpiprazole dose if coadministered with a moderate CYP2D6 inhibitor PLUS a strong/moderate CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cabozantinib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of cabozantinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cannabidiol",
+            "description": {
+                "common": "cannabidiol, lidocaine. affecting hepatic enzyme CYP1A2 metabolism. Modify Therapy/Monitor Closely. Owing to the potential for both CYP1A2 induction and inhibition  with the coadministration of CYP1A2  substrates and cannabidiol, consider reducing dosage adjustment of CYP1A2 substrates as clinically appropriate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cigarette smoking",
+            "description": {
+                "common": "cigarette smoking will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "ciprofloxacin will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor. Lidocaine plasma levels may be elevated, increasing the risk of toxicity. Monitor cardiac function and symptoms of toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir increases levels of lidocaine by decreasing metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "disopyramide, lidocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of arrhythmia, heart failure in predisposed pts."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with duvelisib increases AUC of a sensitive CYP3A4 substrate which may increase the risk of toxicities of these drugs. Consider reducing the dose of the sensitive CYP3A4 substrate and monitor for signs of toxicities of the coadministered sensitive CYP3A substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of lidocaine by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Monitor therapeutic drug concentrations, as indicated, or consider reducing the dosage of the P-gp substrate and titrate to clinical effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF increases levels of lidocaine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Cobicistat is a CYP3A4 inhibitor; contraindicated with CYP3A4 substrates for which elevated plasma concentrations are associated with serious and/or life-threatening events."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, lidocaine. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "lidocaine will increase the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Monitor serum potassium during initiation and dosage adjustment of either finererone or weak CYP3A4 inhibitors. Adjust finererone dosage as needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of lidocaine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of P-gp substrates. Monitor for toxicities of the P-gp substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of lidocaine by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hawthorn",
+            "description": {
+                "common": "hawthorn increases effects of lidocaine by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyaluronidase",
+            "description": {
+                "common": "hyaluronidase, lidocaine. Other (see comment). Use Caution/Monitor. \nComment: Hyaluronidase hastens the onset of local analgesia and reduces swelling, but increases systemic absorption of anesthetic. This decreases the duration of action and increases incidence of systemic reaction."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "lidocaine will increase the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor increases levels of lidocaine by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Ivacaftor and its M1 metabolite has the potential to inhibit P-gp; may significantly increase systemic exposure to sensitive P-gp substrates with a narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "lidocaine will increase the level or effect of lemborexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Lower nightly dose of lemborexant recommended if coadministered with weak CYP3A4 inhibitors. See drug monograph for specific dosage modification."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir increases levels of lidocaine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lomitapide increases levels of lidocaine by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Consider reducing dose when used concomitantly with lomitapide."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "lidocaine will increase the level or effect of mefloquine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mexiletine",
+            "description": {
+                "common": "mexiletine will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "lidocaine will increase the level or effect of midazolam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of mild CYP3A4 inhibitors with midazolam intranasal may cause higher midazolam systemic exposure, which may prolong sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "modafinil will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "nadolol, lidocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenazopyridine",
+            "description": {
+                "common": "phenazopyridine increases toxicity of prilocaine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Phenazopyridine may significantly increase risk of methemoglobinemia when coadministered with prilocaine. Monitor patients closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir",
+            "description": {
+                "common": "nirmatrelvir will increase the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Caution warranted. Monitor lidocaine therapeutic concentrations if available."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Caution warranted. Monitor lidocaine therapeutic concentrations if available."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oliceridine",
+            "description": {
+                "common": "lidocaine will increase the level or effect of oliceridine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. If concomitant use is necessary, may require less frequent oliceridine dosing. Closely monitor for respiratory depression and sedation and titrate subsequent doses accordingly. If inhibitor is discontinued, consider increase oliceridine dosage until stable drug effects are achieved. Monitor for signs of opioid withdrawal. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) will increase the level or effect of lidocaine by  decreasing metabolism. Modify Therapy/Monitor Closely. Caution is warranted and therapeutic concentration monitoring (if available) is recommended for antiarrhythmics when coadministered with Viekira Pak"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "palbociclib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of palbociclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2a",
+            "description": {
+                "common": "peginterferon alfa 2a will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "pindolol increases levels of lidocaine by decreasing elimination. Use Caution/Monitor. Risk of hypertension and bradycardia.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pipemidic acid",
+            "description": {
+                "common": "pipemidic acid will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol, prilocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Use extreme caution during concomitant use of bupivacaine and antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib increases levels of lidocaine by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "lidocaine, procainamide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Either suppresses myocardial conduction by increasing electrical stimulation threshold of the ventricle and His-Purkinje fibers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol, lidocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP1A2 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ruxolitinib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of ruxolitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ruxolitinib topical",
+            "description": {
+                "common": "lidocaine will increase the level or effect of ruxolitinib topical by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevelamer",
+            "description": {
+                "common": "sevelamer decreases levels of lidocaine by increasing elimination. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "smoking",
+            "description": {
+                "common": "smoking will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sonidegib",
+            "description": {
+                "common": "lidocaine will increase the level or effect of sonidegib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Avoid coadministration of sonidegib with moderate CYP3A4 inhibitors. If a moderate CYP3A inhibitor must be used, administer the moderate CYP3A inhibitor for <14 days and monitor closely for adverse reactions, particularly musculoskeletal adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, lidocaine. affecting hepatic enzyme CYP1A2 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP1A2 inhibitor and inducer. Monitor CYP1A2 substrates coadministered with stiripentol for increased or decreased effects. CYP1A2 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "suvorexant",
+            "description": {
+                "common": "lidocaine will increase the level or effect of suvorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Decrease suvorexant starting dose to 5 mg HS if coadministered with moderate CYP3A4 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tamsulosin",
+            "description": {
+                "common": "lidocaine increases levels of tamsulosin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dose reduction may be needed for coadministered drugs that are predominantly metabolized by CYP3A."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "lidocaine will increase the level or effect of tazemetostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "timolol, lidocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tinidazole",
+            "description": {
+                "common": "lidocaine will increase the level or effect of tinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobacco use",
+            "description": {
+                "common": "tobacco use will decrease the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tofacitinib",
+            "description": {
+                "common": "lidocaine increases levels of tofacitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. No specific dose adjustment recommended when tofacitinib coadministered with moderate CYP3A4 inhibitors; decrease tofacitinib dose if coadministered with both moderate CYP3A4 and potent CYP2C19 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zileuton",
+            "description": {
+                "common": "zileuton will increase the level or effect of lidocaine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "lidocaine increases toxicity of alfentanil by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "belladonna and opium",
+            "description": {
+                "common": "lidocaine increases toxicity of belladonna and opium by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "lidocaine increases toxicity of buprenorphine by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "lidocaine increases toxicity of buprenorphine buccal by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "butorphanol",
+            "description": {
+                "common": "lidocaine increases toxicity of butorphanol by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "lidocaine increases toxicity of codeine by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dextromoramide",
+            "description": {
+                "common": "lidocaine increases toxicity of dextromoramide by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diamorphine",
+            "description": {
+                "common": "lidocaine increases toxicity of diamorphine by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "difenoxin hcl",
+            "description": {
+                "common": "lidocaine increases toxicity of difenoxin hcl by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diphenoxylate hcl",
+            "description": {
+                "common": "lidocaine increases toxicity of diphenoxylate hcl by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dipipanone",
+            "description": {
+                "common": "lidocaine increases toxicity of dipipanone by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hyaluronidase",
+            "description": {
+                "common": "hyaluronidase, prilocaine. Other (see comment). Minor/Significance Unknown. \nComment: Hyaluronidase hastens the onset of local analgesia and reduces swelling, but increases systemic absorption of anesthetic. This decreases the duration of action and increases incidence of systemic reaction."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "lidocaine increases toxicity of hydromorphone by pharmacodynamic synergism. Minor/Significance Unknown. Risk of increased CNS depression."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Pallor",
+            "percent": "37"
+        },
+        {
+            "name": "blanching",
+            "percent": "30"
+        },
+        {
+            "name": "Application site erythema",
+            "percent": "17"
+        },
+        {
+            "name": "pain",
+            "percent": "15"
+        },
+        {
+            "name": "Genital mucous membrane burning sensation",
+            "percent": "7"
+        },
+        {
+            "name": "Oral cavity",
+            "percent": "6-10"
+        },
+        {
+            "name": "periodontal formulation",
+            "percent": "2"
+        },
+        {
+            "name": "Alterations in temperature sensations",
+            "percent": null
+        },
+        {
+            "name": "Application site edema",
+            "percent": null
+        },
+        {
+            "name": "Itching",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Myocardial dysfunction",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Methemoglobinemia",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Depression",
+            "percent": null
+        },
+        {
+            "name": "excitation",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Seizure",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Localized discrete purpuric or petechial reactions",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Localized hyperpigmentation",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Allergic reactions",
+            "percent": null
+        },
+        {
+            "name": "eg",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "angioedema",
+            "percent": null
+        },
+        {
+            "name": "bronchospasm",
+            "percent": null
+        },
+        {
+            "name": "shock",
+            "percent": null
+        }
+    ]
+}

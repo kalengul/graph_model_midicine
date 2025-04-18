@@ -1,0 +1,1251 @@
+{
+    "name": "brigatinib",
+    "comment": "Rx",
+    "other_names": [
+        "Alunbrig"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Anaplastic Lymphoma Kinase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/alunbrig-brigatinib-1000123",
+    "pregnancy": {
+        "common": [
+            "Based on its mechanism of action and findings in animals, can cause fetal harm when administered to pregnant women",
+            "Administration to pregnant rats during the period of organogenesis resulted in dose-related skeletal anomalies at doses as low as 12.5 mg/kg/day (~0.7 times the human exposure by AUC at 180 mg once daily), as well as increased postimplantation loss, malformations, and decreased fetal body weight at doses of 25 mg/kg/day (~1.26 times the human exposure at 180 mg once daily) or greater",
+            "Infertility: Based on findings in male reproductive organs in animals, may cause reduced fertility in males"
+        ],
+        "specific": [
+            {
+                "type": "Contraception ",
+                "description": [
+                    "Females: Advise females of reproductive potential to use effective nonhormonal contraception during treatment and for at least 4 months after the final dose",
+                    "Counsel patients to use a nonhormonal method of contraception since brigatinib can render some hormonal contraceptives ineffective",
+                    "Males: Because of the potential for genotoxicity, advise males with female partners of reproductive potential to use effective contraception during treatment and for at least 3 months after the final dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Because of the potential for adverse reactions in breastfed infants, advise lactating women not to breastfeed during treatment and for 1 week following the final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Severe, life-threatening, and fatal pulmonary adverse reactions consistent with interstitial lung disease (ILD)/pneumonitis have occurred with brigatinib; monitor for new or worsening respiratory symptoms (eg, dyspnea, cough), particularly during the first week of initiating (see Dosage Modifications)",
+                "Dose-related hypertension reported; control BP prior to treatment; monitor BP after 2 weeks and at least monthly thereafter (see Dosage Modifications)",
+                "Bradycardia (HR <50 bpm) reported; monitor HR and BP; monitor more frequently if concomitant use of drugs known to cause bradycardia cannot be avoided (see Dosage Modifications)",
+                "May cause visual disturbances; advise patients to report any visual symptoms (see Dosage Modifications)",
+                "Increased CPK reported; advise patients to report any unexplained muscle pain, tenderness, or weakness; monitor CPK during treatment (see Dosage Modifications)",
+                "Serum pancreatic enzyme elevation reported; monitor lipase and amylase during treatment (see Dosage Modifications)",
+                "May cause new or worsening hyperglycemia; assess fasting serum glucose before initiating drug and periodically thereafter; initiate or optimize antihyperglycemic medications as needed (see Dosage Modifications)",
+                "Monitor AST, ALT, and total bilirubin during treatment, especially during first 3 months; withhold therapy for Grade 3 or 4 hepatic enzyme elevation with bilirubin ≤2 × ULN; upon resolution or recovery to Grade 1 or less (≤ 3 × ULN) or to baseline, resume treatment at next lower dose; permanently discontinue treatment for Grade 2-4 hepatic enzyme elevation with concurrent total bilirubin elevation >2 times ULN in absence of cholestasis or hemolysis",
+                "May cause fetal harm (see Pregnancy)",
+                "AST/ALT elevations occurred; monitor AST, ALT, and total bilirubin during treatment, especially during first 3 months"
+            ],
+            "specific": [
+                {
+                    "type": "Photosensitivity",
+                    "description": [
+                        "Photosensitivity reported",
+                        "Advise patients to limit sun exposure while taking brigatinib, and for at least 5 days after discontinuation",
+                        "Advise patients, when outdoors to wear a hat and protective clothing, and use a broad-spectrum ultraviolet A (UVA)/ ultraviolet B (UVB) sunscreen and lip balm (SPF ≥30) to help protect against sunburn",
+                        "Based on severity, withhold drug, then resume at same dose, reduce the dose, or permanently discontinue as described under dosage modifications"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Substrate and inducer of CYP3A",
+                        "CYP3A inhibitors",
+                        "Strong or moderate inhibitors: Avoid coadministration; if use unavaoidable, reduce brigatinib dose (refer to Dosage Modifications)",
+                        "CYP3A4 inhibitors may increase brigatinib plasma concentrations and may increase adverse effects; avoid coadministration ",
+                        "CYP3A inducers ",
+                        "Strong or moderate inducers: Avoid coadministration; if use is unavoidable, increase brigatinib dose (refer Dosage Modifications)",
+                        "CYP3A inducers may decrease brigatinib plasma concentrations and result in decreased efficacy; avoid coadministration",
+                        "CYP3A substrates",
+                        "Brigatinib induces CYP3A in vitro and may decrease concentrations of CYP3A substrates",
+                        "Coadministration with CYP3A substrates, including hormonal contraceptives, can result in decreased concentrations and loss of efficacy"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "doravirine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of doravirine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of doravirine with a CYP3A inducer may decrease doravirine plasma concentrations and/or effects. Potential for loss of virologic response and possible resistance to doravirine. "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of lonafarnib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lonafarnib is a sensitive CYP3A4 substrate. Coadministration with strong or moderate CYP3A4 inducers is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of avapritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of clonidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of colchicine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of cyclosporine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of daridorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of dienogest/estradiol valerate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine inhaled",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of dihydroergotamine inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of dihydroergotamine intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of ethinylestradiol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etonogestrel",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of etonogestrel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of fedratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Effect of coadministering a moderate CYP3A4 inducer with fedratinib has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of fentanyl intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of fentanyl transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of fentanyl transmucosal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infigratinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of infigratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternate therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of lefamulin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lefamulin with strong or moderate CYP3A inducers unless the benefit outweighs risks. Monitor for reduced efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of lemborexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levonorgestrel oral",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of levonorgestrel oral by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of lorlatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid use of lorlatinib with moderate CYP3A inducers. If unable to avoid, monitor ALT, AST, and bilirubin as recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lurbinectedin",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of lurbinectedin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "medroxyprogesterone",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of medroxyprogesterone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mestranol",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of mestranol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of mobocertinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "neratinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of neratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of neratinib with strong/moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "norethindrone",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of norethindrone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of brigatinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of brigatinib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pemigatinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of pemigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod, brigatinib.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Consult cardiologist if considering treatment. Coadministration of ponesimod with drugs that decrease HR may have additive effects on decreasing HR and should generally not be initiated in these patients."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pretomanid",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of pretomanid by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug.  CYP3A4 substrate. Avoid coadministration of strong or moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of quinidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of rimegepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of selumetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of siponimod by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of siponimod with a drug that causes moderate CYP2C9 plus a moderate or strong CYP3A4 inducer is not recommended. Coadministration with moderate or strong CYP3A4 inducers alone is not recommended for patients with CYP2C9*1/*3 and*2/*3 genotype."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inducers may decrease brigatinib efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of tazemetostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Brigatinib induces CYP3A4 in vitro. Coadministration with CYP3A4 substrates, particularly those with a narrow therapeutic index, can result in decreased concentrations and loss of efficacy. If unable to avoid coadministration, monitor CYP3A4 substrate levels and adjust dose as needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of voclosporin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of voxelotor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor is primarily metabolized by CYP3A4. Avoid coadministration with moderate or strong CYP3A4 inducers. If unable to avoid coadministration, increase voxelotor dose (see Dosage Modifications)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zanubrutinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of zanubrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alpelisib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of alpelisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Recommended atogepant dosage with concomitant use of strong or moderate CYP3A4 inducers is 30 mg or 60 mg qDay."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belumosudil",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of belumosudil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam intranasal",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of diazepam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Strong or moderate CYP3A4 inducers may increase rate of diazepam elimination; therefore, efficacy of diazepam may be decreased."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. will increase the level or effect of"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of elagolix by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, brigatinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of erdafitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If a moderate CYP3A4 inducer must be coadministered, administer 8-mg/day dose initially, with potential to increase to 9 mg/day based on serum phosphate levels on Days 14-21 and tolerability. If a moderate CYP3A4 inducer must be coadministered after the initial dose increase period based on serum phosphate levels and tolerability, increase erdafitinib dose up to 9 mg. When a moderate inducer discontinued, continue erdafitinib at same dose, in absence of drug-related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "brigatinib increases toxicity of ifosfamide by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. CYP3A4 inducers may increase the metabolism of ifosfamide to its active alkylating metabolites. CYP3A4 inducers may increase the formation of the neurotoxic/nephrotoxic ifosfamide metabolite, chloroacetaldehyde. Closely monitor patients taking ifosfamide with CYP3A4 inducers for toxicities and consider dose adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levamlodipine",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of levamlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. No information is available on the quantitative effects of CYP3A4 inducers on amlodipine. Closely monitor blood pressure when amlodipine is coadministered with CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of levonorgestrel oral/ethinylestradiol/ferrous bisglycinate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Brigatinib induces CYP3A4 in vitro. Coadministration of hormonal contraceptives with brigatinib can result in decreased concentrations and loss of efficacy. Brigatinib can cause fetal harm. Women should use an effective nonhormonal method of contraception during treatment and for at least 4 months after the last brigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If concomitant use necessary, reduce dose of brigatinib by approximately 50% without breaking tablets (ie, from 180 mg to 90 mg; from 90 mg to 60 mg); after discontinuation of mifepristone, resume brigatinib dose that was tolerated prior to initiation of mifepristone"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ripretinib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of ripretinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration cannot be avoided, increase dosing frequency from recommended dose of 150 mg once daily to 150 mg twice daily during co-administration period; monitor for clinical response and tolerability"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and brigatinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, brigatinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil SL",
+            "description": {
+                "common": "brigatinib decreases effects of sufentanil SL by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of CYP3A4 inducers may decrease sufentanil levels and efficacy, possibly precipitating withdrawal syndrome in patients who have developed physical dependence to sufentanil. Discontinuation of  concomitantly used CYP3A4 inducers may  increase sufentanil plasma concentration."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tinidazole",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of tinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tivozanib",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of tivozanib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "brigatinib will decrease the level or effect of ubrogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Dose adjustment is recommended with concomitant use of ubrogepant and moderate and weak CYP3A4 inducers. (see Dosage Modifications)"
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Increased AST",
+            "percent": "38"
+        },
+        {
+            "name": "Hyperglycemia",
+            "percent": "38"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "34"
+        },
+        {
+            "name": "Nausea",
+            "percent": "33"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "29"
+        },
+        {
+            "name": "Headache",
+            "percent": "28"
+        },
+        {
+            "name": "Increased CPK",
+            "percent": "27"
+        },
+        {
+            "name": "Increased amylase",
+            "percent": "27"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "27"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "24"
+        },
+        {
+            "name": "Anemia",
+            "percent": "23"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "22"
+        },
+        {
+            "name": "Prolonged aPTT",
+            "percent": "22"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "21"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "19"
+        },
+        {
+            "name": "Constipation",
+            "percent": "19"
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": "19"
+        },
+        {
+            "name": "Cough",
+            "percent": "18"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "17"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased phosphorous",
+            "percent": "15"
+        },
+        {
+            "name": "Rash",
+            "percent": "15"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "14"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "14"
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": "13"
+        },
+        {
+            "name": "Muscle spasms",
+            "percent": "12"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "11"
+        },
+        {
+            "name": "Pain in extremity",
+            "percent": "11"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "11"
+        },
+        {
+            "name": "Back pain",
+            "percent": "10"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "9.2"
+        },
+        {
+            "name": "Visual disturbances",
+            "percent": "7.3"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "4.6"
+        },
+        {
+            "name": "Interstitial lung disease",
+            "percent": "3.7"
+        },
+        {
+            "name": "pneumonitis",
+            "percent": "0.9"
+        },
+        {
+            "name": "Hypoxia",
+            "percent": null
+        },
+        {
+            "name": "Photosensitivity",
+            "percent": null
+        },
+        {
+            "name": "Hepatotoxicity",
+            "percent": null
+        }
+    ]
+}

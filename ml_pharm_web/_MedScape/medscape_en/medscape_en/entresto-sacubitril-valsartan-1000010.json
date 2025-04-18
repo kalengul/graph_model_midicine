@@ -1,0 +1,1611 @@
+{
+    "name": "sacubitril/valsartan",
+    "comment": "Rx",
+    "other_names": [
+        "Entresto"
+    ],
+    "classes": [
+        "Angiotensin Receptor-Neprilysin Inhibitors (ARNi)",
+        "ARBs",
+        "Neprilysin Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/entresto-sacubitril-valsartan-1000010",
+    "pregnancy": {
+        "common": [
+            "Discontinue as soon as pregnancy detected; during the second and third trimesters of pregnancy, resulting oligohydramnios may cause fetal injury (eg, hypotension, neonatal skull hypoplasia, anuria, reversible and irreversible renal failure) and death",
+            "Neonates with a history of in utero exposure: Direct attention toward support of blood pressure and renal perfusion; exchange transfusions or dialysis may be required"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Treatment during organogenesis resulted in increased embryo-fetal lethality in rats at doses greater than or equal to 49 mg sacubitril/51 mg valsartan/kg/day (less than or equal to 0.06 [LBQ657, the active metabolite] and 0.72 [valsartan]-fold the maximum recommended human dose [MRHD] of 97/103 mg twice-daily on the basis of the area under the plasma drug concentration-time curve [AUC]) and rabbits at doses greater than or equal to 5 mg sacubitril/5 mg valsartan/kg/day (2-fold and 0.03-fold the MRHD on the basis of valsartan and LBQ657 AUC, respectively)",
+                    "Drug is teratogenic based on a low incidence of fetal hydrocephaly, associated with maternally toxic doses, which was observed in rabbits at a dose of greater than or equal to 5 mg sacubitril/5 mg valsartan/kg/day",
+                    "The adverse embryo-fetal effects are attributed to the angiotensin receptor antagonist activity;",
+                    "Pre- and postnatal development studies in rats at sacubitril doses up to 750 mg/kg/day (2.2-fold the MRHD on the basis of LBQ657 AUC) and valsartan at doses up to 600 mg/kg/day (0.86-fold the MRHD on the basis of AUC) indicate that treatment during organogenesis, gestation, and lactation may affect pup development and survival"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk; not recommended",
+            "Consider the developmental and health benefits of breastfeeding along with the mother’s clinical need for the drug and any potential adverse effects on the breastfed infant from the drug or from the underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Fetal toxicity",
+                    "description": [
+                        "Discontinue as soon as possible when pregnancy is detected",
+                        "Drug affects renin-angiotensin system, causing oligohydramnios, which may result in fetal injury or death"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to any component",
+                "History of angioedema related to previous ACE inhibitor or ARB therapy",
+                "Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan",
+                "Concomitant use with aliskiren in patients with diabetes"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Can cause fetal harm when administered to a pregnant woman; use of drugs that act on the renin-angiotensin system during the second and third trimesters of pregnancy reduces fetal renal function and increases fetal and neonatal morbidity and death (see Black Box Warnings)",
+                "Not for use in patients with hereditary angioedema; observe for signs and symptoms of angioedema; if angioedema occurs, discontinue drug immediately, provide appropriate therapy, and monitor for airway compromise",
+                "Sacubitril/valsartan lowers blood pressure and may cause symptomatic hypotension; patients who are volume-depleted or salt-depleted, or those taking diuretics, are at greater risk"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Dual blockade of the renin-angiotensin-aldosterone system",
+                        "Coadministration with an ACE inhibitor is contraindicated because of the increased risk of angioedema",
+                        "Avoid use with an ARB, because drug contains the angiotensin II receptor blocker valsartan",
+                        "Concomitant use with aliskiren is contraindicated in patients with diabetes ",
+                        "Potassium-sparing diuretics",
+                        "As with other drugs that block angiotensin II or its effects, concomitant use of potassium-sparing diuretics (eg, spironolactone, triamterene, amiloride), potassium supplements, or salt substitutes containing potassium may lead to increases in serum potassium",
+                        "Nonsteroidal anti-inflammatory drugs (NSAIDs) including selective cyclooxygenase-2 inhibitors (COX-2 inhibitors)",
+                        "In patients who are elderly, volume-depleted (including those on diuretic therapy), or with compromised renal function, concomitant use of NSAIDs, including COX-2 inhibitors, with sacubitril/valsartan may result in worsening of renal function, including possible acute renal failure",
+                        "Effects are usually reversible; monitor renal function periodically",
+                        "Lithium",
+                        "Increases in serum lithium concentrations and lithium toxicity have been reported during coadministration of lithium with angiotensin II receptor antagonists; monitor serum lithium levels",
+                        "Monitor renal function and potassium levels in susceptible patients (eg, diabetes, hypoaldosteronism, high-potassium diet, renal artery stenosis); dosage reduction or interruption may be required"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "sacubitril/valsartan decreases effects of aliskiren by Other (see comment). Contraindicated. \nComment: Aliskiren use contraindicated with ARBs in patients with diabetes; avoid coadministration with ARBs if GFR. In patients who are elderly, volume-depleted (including those on diuretic therapy), or with compromised renal function, coadministration of ARBS with drugs that affect RAAS may increase the risk of renal impairment (including acute renal failure) and cause loss of antihypertensive effect. Monitor renal function periodically."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "sacubitril/valsartan, benazepril.\nEither increases toxicity of the other by pharmacodynamic synergism. Contraindicated. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment. Increased risk of angioedema. Discontinue ACE Inhibitor therapy for at least 36 hours prior to sacubitril/valsartan administration."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "sacubitril/valsartan, captopril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "sacubitril/valsartan, enalapril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "sacubitril/valsartan, fosinopril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "sacubitril/valsartan, lisinopril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "sacubitril/valsartan, moexipril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "sacubitril/valsartan, perindopril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "sacubitril/valsartan, quinapril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "sacubitril/valsartan, ramipril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sparsentan",
+            "description": {
+                "common": "sparsentan, sacubitril/valsartan.\nEither increases toxicity of the other by pharmacodynamic synergism. Contraindicated. Coadministration of ARBs with sparsentan is associated with increased risks of hypotension, syncope, hyperkalemia, and changes in renal function (eg, acute renal failure)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "trandolapril",
+            "description": {
+                "common": "sacubitril/valsartan, trandolapril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "sacubitril/valsartan, captopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "sacubitril/valsartan increases levels of eluxadoline by decreasing metabolism. Avoid or Use Alternate Drug. Decrease eluxadoline dose to 75 mg PO BID if coadministered with OATP1B1 inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "sacubitril/valsartan, enalapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "sacubitril/valsartan, fosinopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "sacubitril/valsartan, lisinopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of lithium by decreasing renal clearance. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine, sacubitril/valsartan.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that decrease pulse or blood pressure to mitigate risk of excessive bradycardia and hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "sacubitril/valsartan, moexipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "sacubitril/valsartan, perindopril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "potassium phosphates, IV",
+            "description": {
+                "common": "sacubitril/valsartan and potassium phosphates, IV both increase  serum potassium. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "sacubitril/valsartan, quinapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "sacubitril/valsartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trandolapril",
+            "description": {
+                "common": "sacubitril/valsartan, trandolapril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trofinetide",
+            "description": {
+                "common": "trofinetide will increase the level or effect of sacubitril/valsartan by  Other (see comment). Avoid or Use Alternate Drug. Trofinetide (an OATP131 and OATP13B inhibitor) may increase plasma levels of OATP131 or OATP13B substrates. Avoid coadministration with sensitive substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "sacubitril/valsartan and acebutolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "sacubitril/valsartan and aceclofenac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albiglutide",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and albuterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aldesleukin",
+            "description": {
+                "common": "aldesleukin increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, sacubitril/valsartan.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiloride",
+            "description": {
+                "common": "sacubitril/valsartan and amiloride both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and arformoterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "sacubitril/valsartan and aspirin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "sacubitril/valsartan and aspirin rectal both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "sacubitril/valsartan and aspirin/citric acid/sodium bicarbonate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "sacubitril/valsartan and atenolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of atorvastatin by Other (see comment). Use Caution/Monitor. \nComment: OATP1B1 inhibitors may increase risk of myopathy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "sacubitril/valsartan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "sacubitril/valsartan and betaxolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "sacubitril/valsartan and bisoprolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bretylium",
+            "description": {
+                "common": "sacubitril/valsartan, bretylium.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Each drug may cause hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bumetanide",
+            "description": {
+                "common": "sacubitril/valsartan increases and bumetanide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "canagliflozin",
+            "description": {
+                "common": "sacubitril/valsartan and canagliflozin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "candesartan",
+            "description": {
+                "common": "candesartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbenoxolone",
+            "description": {
+                "common": "sacubitril/valsartan increases and carbenoxolone decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbidopa",
+            "description": {
+                "common": "carbidopa increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Consider decreasing dosage of antihypertensive agent."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "sacubitril/valsartan and carvedilol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caspofungin",
+            "description": {
+                "common": "caspofungin will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "sacubitril/valsartan and celecoxib both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "sacubitril/valsartan and celiprolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "sacubitril/valsartan increases and chlorothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "sacubitril/valsartan increases and chlorthalidone decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "sacubitril/valsartan and choline magnesium trisalicylate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "sacubitril/valsartan increases and cyclopenthiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine, sacubitril/valsartan.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: Coadministration may potentiate the hyperkalemic effects of cyclosporine or valsartan."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin increases toxicity of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "sacubitril/valsartan and diclofenac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "sacubitril/valsartan and diflunisal both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "sacubitril/valsartan and digoxin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "sacubitril/valsartan increases and dobutamine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "sacubitril/valsartan increases and dopexamine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "sacubitril/valsartan and drospirenone both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eltrombopag",
+            "description": {
+                "common": "eltrombopag will decrease the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin increases toxicity of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "sacubitril/valsartan increases and ephedrine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "sacubitril/valsartan increases and epinephrine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "sacubitril/valsartan increases and epinephrine racemic decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "sacubitril/valsartan, eplerenone. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eprosartan",
+            "description": {
+                "common": "eprosartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "sacubitril/valsartan and esmolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethacrynic acid",
+            "description": {
+                "common": "sacubitril/valsartan increases and ethacrynic acid decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "sacubitril/valsartan and etodolac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable solution",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of exenatide injectable solution by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable suspension",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of exenatide injectable suspension by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenbufen",
+            "description": {
+                "common": "sacubitril/valsartan and fenbufen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "sacubitril/valsartan and fenoprofen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "sacubitril/valsartan and flurbiprofen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of fluvastatin by Other (see comment). Use Caution/Monitor. \nComment: OATP1B1 inhibitors may increase risk of myopathy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and formoterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "sacubitril/valsartan increases and furosemide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemfibrozil",
+            "description": {
+                "common": "gemfibrozil will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gentamicin",
+            "description": {
+                "common": "sacubitril/valsartan increases and gentamicin decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "glyburide will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin increases toxicity of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Heparin may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "sacubitril/valsartan increases and hydrochlorothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "sacubitril/valsartan and ibuprofen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV decreases effects of sacubitril/valsartan by pharmacodynamic antagonism. Modify Therapy/Monitor Closely.  NSAIDs decrease synthesis of vasodilating renal prostaglandins, and thus affect fluid homeostasis and may diminish antihypertensive effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "sacubitril/valsartan increases and indapamide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "sacubitril/valsartan and indomethacin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin aspart by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart protamine/insulin aspart",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin aspart protamine/insulin aspart by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "sacubitril/valsartan, insulin degludec.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "sacubitril/valsartan, insulin degludec/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin detemir by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin glargine by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin glulisine by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "sacubitril/valsartan, insulin inhaled.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin isophane human/insulin regular human",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin isophane human/insulin regular human by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin lispro by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro protamine/insulin lispro",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin lispro protamine/insulin lispro by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin NPH by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of insulin regular human by unspecified interaction mechanism. Use Caution/Monitor. Concomitant use of insulin and ARBs may require insulin dosage adjustment and increased glucose monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "irbesartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "sacubitril/valsartan increases and isoproterenol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "sacubitril/valsartan and ketoprofen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "sacubitril/valsartan and ketorolac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "sacubitril/valsartan and ketorolac intranasal both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "sacubitril/valsartan and labetalol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and levalbuterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "levodopa increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Consider decreasing dosage of antihypertensive agent."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "liraglutide",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of liraglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "sacubitril/valsartan and lornoxicam both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "losartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "lovastatin will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone increases effects of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Potential  for increased risk of hypotension with concurrent use. Monitor blood pressure and adjust  dose of  antihypertensive agent as needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maitake",
+            "description": {
+                "common": "maitake increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc, sacubitril/valsartan.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate decreases effects of sacubitril/valsartan by pharmacodynamic antagonism. Modify Therapy/Monitor Closely.  NSAIDs decrease synthesis of vasodilating renal prostaglandins, and thus affect fluid homeostasis and may diminish antihypertensive effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "sacubitril/valsartan and mefenamic acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "sacubitril/valsartan and meloxicam both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "sacubitril/valsartan increases and metaproterenol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "sacubitril/valsartan increases and methyclothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate",
+            "description": {
+                "common": "methylphenidate will decrease the level or effect of sacubitril/valsartan by  pharmacodynamic antagonism. Use Caution/Monitor. Methylphenidate may diminish antihypertensive effects. Monitor BP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate transdermal",
+            "description": {
+                "common": "methylphenidate transdermal decreases effects of sacubitril/valsartan by anti-hypertensive channel blocking. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "sacubitril/valsartan increases and metolazone decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "sacubitril/valsartan and metoprolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metyrapone",
+            "description": {
+                "common": "metyrapone will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "sacubitril/valsartan and nabumetone both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "sacubitril/valsartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "sacubitril/valsartan and naproxen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "sacubitril/valsartan and nebivolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitroglycerin rectal",
+            "description": {
+                "common": "nitroglycerin rectal, sacubitril/valsartan.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Observe for possible additive hypotensive effects during concomitant use. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "sacubitril/valsartan increases and norepinephrine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "olmesartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "sacubitril/valsartan and oxaprozin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "paclitaxel will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "paclitaxel protein bound will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "sacubitril/valsartan and parecoxib both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "pazopanib will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "sacubitril/valsartan and penbutolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "sacubitril/valsartan and pindolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "pioglitazone will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and pirbuterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "sacubitril/valsartan and piroxicam both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of pitavastatin by Other (see comment). Use Caution/Monitor. \nComment: OATP1B1 inhibitors may increase risk of myopathy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium acid phosphate",
+            "description": {
+                "common": "sacubitril/valsartan and potassium acid phosphate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium chloride",
+            "description": {
+                "common": "sacubitril/valsartan and potassium chloride both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate",
+            "description": {
+                "common": "sacubitril/valsartan and potassium citrate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate/citric acid",
+            "description": {
+                "common": "sacubitril/valsartan and potassium citrate/citric acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium iodide",
+            "description": {
+                "common": "potassium iodide and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor. Potassium salts may increase the hyperkalemic effects of ARBs; the effect may be the result of aldosterone suppression in patients receiving ARBs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of pravastatin by Other (see comment). Use Caution/Monitor. \nComment: OATP1B1 inhibitors may increase risk of myopathy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "sacubitril/valsartan and propranolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "repaglinide will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosiglitazone",
+            "description": {
+                "common": "rosiglitazone will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "sacubitril/valsartan and salicylates (non-asa) both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "sacubitril/valsartan increases and salmeterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "sacubitril/valsartan and salsalate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "simvastatin will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of sacubitril/valsartan by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "sacubitril/valsartan and sotalol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "sacubitril/valsartan and spironolactone both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "succinylcholine",
+            "description": {
+                "common": "sacubitril/valsartan and succinylcholine both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sacubitril/valsartan and sulfasalazine both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sacubitril/valsartan and sulindac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "synthetic human angiotensin II",
+            "description": {
+                "common": "sacubitril/valsartan decreases effects of synthetic human angiotensin II by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus will increase the level or effect of sacubitril/valsartan by  Other (see comment). Use Caution/Monitor. The results from an in vitro study with human liver tissue indicate that valsartan is a substrate of the hepatic uptake transporter OATP1B1; coadministration with OATP1B1 inhibitors may increase valsartan systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "tadalafil increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "telmisartan and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "sacubitril/valsartan increases and terbutaline decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "sacubitril/valsartan and timolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tizanidine",
+            "description": {
+                "common": "tizanidine increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "sacubitril/valsartan and tolfenamic acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "sacubitril/valsartan and tolmetin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "sacubitril/valsartan and tolvaptan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "torsemide",
+            "description": {
+                "common": "sacubitril/valsartan increases and torsemide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "treprostinil",
+            "description": {
+                "common": "treprostinil increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamterene",
+            "description": {
+                "common": "sacubitril/valsartan and triamterene both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "sacubitril/valsartan and trimethoprim both increase  serum potassium. Use Caution/Monitor. Trimethoprim decreases urinary potassium excretion. May cause hyperkalemia, particularly with high doses, renal insufficiency, or when combined with other drugs that cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin and sacubitril/valsartan both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xipamide",
+            "description": {
+                "common": "xipamide increases effects of sacubitril/valsartan by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "agrimony",
+            "description": {
+                "common": "agrimony increases effects of sacubitril/valsartan by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cornsilk",
+            "description": {
+                "common": "cornsilk increases effects of sacubitril/valsartan by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "entecavir",
+            "description": {
+                "common": "sacubitril/valsartan, entecavir.\nEither increases effects of the other by decreasing renal clearance. Minor/Significance Unknown. Coadministration with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of either entecavir or the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "food",
+            "description": {
+                "common": "food decreases levels of sacubitril/valsartan by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of sacubitril/valsartan by  Other (see comment). Minor/Significance Unknown. Valsartan is a substrate of the hepatic uptake transporters OATP1B1 and MRP2.  Ritonavir inhibits these transporters. No dosage modification needed since induction reaches maximal effect after several days and the short duration of nirmatrelvir/ritonavir treatment."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "noni juice",
+            "description": {
+                "common": "sacubitril/valsartan and noni juice both increase  serum potassium. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "octacosanol",
+            "description": {
+                "common": "octacosanol increases effects of sacubitril/valsartan by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "patiromer",
+            "description": {
+                "common": "patiromer, sacubitril/valsartan. cation binding in GI tract. Minor/Significance Unknown. No observed clinically important interaction. No separation of dosing required."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "reishi",
+            "description": {
+                "common": "reishi increases effects of sacubitril/valsartan by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse, sacubitril/valsartan. Other (see comment). Minor/Significance Unknown. \nComment: Theoretically, shepherd's purse may interfere with BP control."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "sacubitril/valsartan increases toxicity of simvastatin by Other (see comment). Minor/Significance Unknown. \nComment: OATP1B1 inhibitors may increase risk of myopathy."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Hypotension",
+            "percent": "18"
+        },
+        {
+            "name": "Hyperkalemia",
+            "percent": "12"
+        },
+        {
+            "name": "Cough",
+            "percent": "9"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "6"
+        },
+        {
+            "name": "Orthostasis",
+            "percent": "2.1"
+        },
+        {
+            "name": "Falls",
+            "percent": "1.9"
+        },
+        {
+            "name": "Angioedema",
+            "percent": "0.5"
+        },
+        {
+            "name": "all patients",
+            "percent": "2.4"
+        },
+        {
+            "name": "in black patients",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity",
+            "percent": null
+        },
+        {
+            "name": "rash",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "anaphylaxis",
+            "percent": null
+        }
+    ]
+}

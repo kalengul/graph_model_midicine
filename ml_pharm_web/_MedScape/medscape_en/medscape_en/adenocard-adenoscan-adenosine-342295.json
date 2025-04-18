@@ -1,0 +1,387 @@
+{
+    "name": "adenosine",
+    "comment": "Rx",
+    "other_names": [
+        "Adenocard",
+        "Adenoscan"
+    ],
+    "classes": [
+        "Antidysrhythmics",
+        "V"
+    ],
+    "source": "https://reference.medscape.com/drug/adenocard-adenoscan-adenosine-342295",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Lactation: Potential for serious adverse reactions in nursing infants; decision to interrupt nursing after administration of adenosine or not should take into account importance of drug to mother"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Potential for serious adverse reactions in nursing infants; decision to interrupt nursing after administration of adenosine or not should take into account importance of drug to mother"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "2nd or 3rd degree AV block (except those on pacemakers)",
+                "Sinus node disease, such as sick sinus syndrome or symptomatic bradycardia (except in patients with a functioning artificial pacemaker)",
+                "Adenoscan: Contraindicated in bronchoconstrictive or bronchospastic lung disease (eg, asthma)"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Symptomatic bradycardia, cardiac arrest, heart block, heart transplant patients, HTN, hypotension, MI, proarrhythmic events, unstable angina",
+                "Adenocard: Caution with bronchoconstrictive or bronchospastic lung disease (eg, asthma)",
+                "Cerebrovascular accident hemorrhagic and ischemic cerebrovascular accidents reported; hemodynamic effects of adenosine including hypotension or hypertension possibly associated with these adverse reactions",
+                "Nucleoside transport inhibitors (eg, dipyridamole) and potentiate the vasoactive effects of adenosine; withhold for 5 half-lives before adenosine administration",
+                "Methylxanthines (eg, caffeine, theophylline) are adenosine receptor antagonists and inhibit adenosine’s vasoactive effects; withhold methylxanthines for 5 half-lives before adenosine administration",
+                "New-onset or recurrence of convulsive seizures reported following adenosine; some seizures are prolonged and require emergent anticonvulsive management; aminophylline may increase risk of seizures associated with adenosine; methylxanthine use not recommended in patients who experience seizures in association with adenosine administration",
+                "Dyspnea, throat tightness, flushing, erythema, rash, and chest discomfort reported that may require symptomatic treatment; resuscitative measures may be necessary if symptoms progress; have trained personnel and treatment available during treatment",
+                "Arrhythmia at time of cardioversion (Adenocard): Ventricular fibrillation reported following administration, including both resuscitated and fatal events; in most instances, these cases were associated with the concomitant use of digoxin and, less frequently with digoxin and verapamil"
+            ],
+            "specific": [
+                {
+                    "type": "Risk for myocardial infarction and death",
+                    "description": [
+                        "Avoid use for cardiac nuclear stress tests in patients with signs or symptoms of acute myocardial ischemia (eg, unstable angina, cardiovascular instability); use may increase risk of fatal MI",
+                        "Screen all nuclear stress test candidates for risks"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod, adenosine.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Consult cardiologist if considering treatment. Coadministration of ponesimod with drugs that decrease HR may have additive effects on decreasing HR and should generally not be initiated in these patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole increases levels of adenosine by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea decreases effects of adenosine by unspecified interaction mechanism. Use Caution/Monitor. (Theoretical interaction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hawthorn",
+            "description": {
+                "common": "hawthorn increases effects of adenosine by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicotine inhaled",
+            "description": {
+                "common": "nicotine inhaled increases effects of adenosine by unknown mechanism. Use Caution/Monitor. Adenosine associated tachycardia and chest pain."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicotine intranasal",
+            "description": {
+                "common": "nicotine intranasal increases effects of adenosine by unknown mechanism. Use Caution/Monitor. Adenosine associated tachycardia and chest pain."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevelamer",
+            "description": {
+                "common": "sevelamer decreases levels of adenosine by increasing elimination. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "theophylline decreases effects of adenosine by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "acebutolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "atenolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "betaxolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "bisoprolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "caffeine decreases effects of adenosine by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "celiprolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "esmolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "labetalol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lily of the valley",
+            "description": {
+                "common": "adenosine, lily of the valley.\nEither increases toxicity of the other by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "metoprolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "nadolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "nebivolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "penbutolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "pindolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "sotalol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "timolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Flushing",
+            "percent": "18"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "12"
+        },
+        {
+            "name": "Chest pressure",
+            "percent": "7"
+        },
+        {
+            "name": "HA",
+            "percent": "2"
+        },
+        {
+            "name": "Lightheadedness",
+            "percent": "2"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1"
+        },
+        {
+            "name": "Tingling in arms",
+            "percent": "1"
+        },
+        {
+            "name": "Numbness",
+            "percent": "1"
+        },
+        {
+            "name": "Nausea",
+            "percent": "3"
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        },
+        {
+            "name": "Palpitations",
+            "percent": null
+        },
+        {
+            "name": "Apprehension",
+            "percent": null
+        },
+        {
+            "name": "Head pressure",
+            "percent": null
+        },
+        {
+            "name": "Chest pain",
+            "percent": null
+        },
+        {
+            "name": "Hyperventilation",
+            "percent": null
+        },
+        {
+            "name": "Blurred vision",
+            "percent": null
+        },
+        {
+            "name": "Burning sensation",
+            "percent": null
+        },
+        {
+            "name": "Heaviness in arms",
+            "percent": null
+        },
+        {
+            "name": "neck and back pain",
+            "percent": null
+        },
+        {
+            "name": "Metallic taste",
+            "percent": null
+        },
+        {
+            "name": "Tightness in throat",
+            "percent": null
+        },
+        {
+            "name": "Pressure in groin",
+            "percent": null
+        },
+        {
+            "name": "Sweating",
+            "percent": null
+        },
+        {
+            "name": "Prolonged asystole",
+            "percent": null
+        },
+        {
+            "name": "Ventricular tachycardia",
+            "percent": null
+        },
+        {
+            "name": "Venricular fibrillation",
+            "percent": null
+        },
+        {
+            "name": "Transient increase in blood pressure",
+            "percent": null
+        },
+        {
+            "name": "Bradycardia",
+            "percent": null
+        },
+        {
+            "name": "Atrial fibrillation",
+            "percent": null
+        },
+        {
+            "name": "Cardiac failure",
+            "percent": null
+        },
+        {
+            "name": "Infusion site pain",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity",
+            "percent": null
+        },
+        {
+            "name": "Torsades de Pointes",
+            "percent": null
+        },
+        {
+            "name": "Seizure",
+            "percent": null
+        },
+        {
+            "name": "Bronchospasm",
+            "percent": null
+        }
+    ]
+}

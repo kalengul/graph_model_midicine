@@ -1,0 +1,1157 @@
+{
+    "name": "sofosbuvir/velpatasvir",
+    "comment": "Rx",
+    "other_names": [
+        "Epclusa"
+    ],
+    "classes": [
+        "HCV NS5A Inhibitors",
+        "HCV Polymerase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/epclusa-sofosbuvir-velpatasvir-1000076",
+    "pregnancy": {
+        "common": [
+            "Contraindicated if administered with ribavirin in pregnant women and in men whose female partners are pregnant",
+            "There are no adequate data available to establish pregnancy risk for sofosbuvir or velpatasvir"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Unknown if sofosbuvir, velpatasvir, or their metabolites are distributed in human breast milk",
+            "Consider the developmental and health benefits of breastfeeding along with the mother’s clinical need for the drug, and any potential adverse effects on the breastfed infant from the drug or from the underlying maternal condition",
+            "If regimen includes ribavirin, refer to ribavirin prescribing information"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Test all patients for evidence of current or prior hepatitis B virus (HBV) infection before initiating treatment with HCV direct acting antivirals (DDAs)",
+                "HBV reactivation has been reported in HCV/HBV coinfected patients who were undergoing or had completed treatment with DDAs and were not receiving HBV antiviral therapy",
+                "Some cases have resulted in fulminant hepatitis, hepatic failure, and death",
+                "Monitor HCV/HBV coinfected patients for hepatitis flare or HBV reactivation during HCV treatment and post-treatment follow-up",
+                "Initiate appropriate patient management for HBV infection as clinically indicated"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Sofosbuvir/velpatasvir plus ribavirin combination regimen is contraindicated in patients for whom ribavirin is contraindicated"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Hepatitis B virus reactivation",
+                    "description": [
+                        "Hepatitis B virus (HBV) reactivation reported in HCV/HBV coinfected patients undergoing or who completed treatment with HCV DDAs, and were not receiving HBV antiviral therapy",
+                        "HBV reactivation is characterized as an abrupt increase in HBV replication manifesting as a rapid increase in serum HBV DNA level (see Black Box Warnings and Dosing Considerations)",
+                        "HBV reactivation also reported in patients receiving certain immunosuppressants or chemotherapeutic agents",
+                        "Risk of HBV reactivation associated with treatment with HCV direct-acting antivirals may increase in these patients",
+                        "Reactivation of HBV replication may be accompanied by hepatitis, eg, increases in aminotransferase levels and, in severe cases, increases in bilirubin levels, liver failure, and death may occur",
+                        "In patients with serologic evidence of HBV infection, monitor for clinical and laboratory signs of hepatitis flare or HBV reactivation during HCV treatment and during post-treatment follow-up; initiate appropriate patient management for HBV infection as clinically indicated",
+                        "If administered with ribavirin, warnings and precautions for ribavirin apply to this combination; see ribavirin prescribing information"
+                    ]
+                },
+                {
+                    "type": "Bradycardia",
+                    "description": [
+                        "Coadministration with amiodarone is not recommended",
+                        "Postmarketing cases of symptomatic bradycardia and cases requiring pacemaker intervention reported when amiodarone coadministered with regimen",
+                        "Serious symptomatic bradycardia may occur if sofosbuvir is coadministered with amiodarone in combination with another direct-acting antiviral (eg, daclatasvir, simeprevir)",
+                        "Bradycardia has generally occurred within hours to days, but reports have been observed up to 2 weeks after initiating HCV treatment",
+                        "Patients also taking beta-blockers, or those with underlying cardiac comorbidities, and/or advanced liver disease may be at increased risk for symptomatic bradycardia with coadministration of amiodarone",
+                        "For patients taking amiodarone who have no other alternative viable treatment options and who will require coadministration, counsel patients about risk of symptomatic bradycardia and monitor cardiac activity in an in-patient setting for first 48 hours of coadministration, after which outpatient or self-monitoring of heart rate should occur on a daily basis through at least first 2 weeks of treatment",
+                        "Patients receiving therapy who need to start amiodarone therapy due to no other alternative viable treatment options should undergo similar cardiac monitoring as outlined above",
+                        "Because of amiodarone’s long half-life, patients discontinuing amiodarone just prior to starting therapy should also undergo similar cardiac monitoring"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Drugs affecting sofosbuvir/velpatasvir",
+                        "Sofosbuvir and velpatasvir are substrates of drug transporters P-gp and BCRP while GS-331007 (the predominant circulating metabolite of sofosbuvir) is not",
+                        "In vitro, slow metabolic turnover of velpatasvir by CYP2B6, CYP2C8, and CYP3A4 was observed",
+                        "Drugs that are potent P-gp inducers and/or moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 (eg, rifampin, carbamazepine, St. John’s wort) may significantly decrease sofosbuvir and/or velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect; avoid coadministration",
+                        "Drugs that increase gastric pH",
+                        "Coadministration with drugs that increase gastric pH are expected to decrease velpatasvir serum concentration",
+                        "See the Administration section for how long is needed between sofosbuvir/velpatasvir doses and drugs that increase gastric pH",
+                        "Sofosbuvir/velpatasvir effect on other drugs",
+                        "Velpatasvir inhibits drug transporters P-gp, BCRP, OATP1B1, OATP1B3, and OATP2B1",
+                        "Coadministration with drugs that are substrates of these transporters may increase the exposure of such drugs",
+                        "Frequent monitoring of relevant laboratory parameters (eg, International Normalized Ratio [INR] in patients taking warfarin, blood glucose levels in diabetic patients) or drug concentrations of concomitant medications such as cytochrome P450 substrates with a narrow therapeutic index (eg, certain immunosuppressants) recommended to ensure safe and effective use; dose adjustments of concomitant medications may be necessary"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases toxicity of amiodarone by unknown mechanism. Avoid or Use Alternate Drug. Postmarketing reports describe bradycardia resulting in death or pacemaker insertion when amiodarone was coadministered with sofosbuvir in combination with another direct acting antiviral. Patients also taking beta blockers (7 of 9 of the postmarketing reports), or those with underlying cardiac comorbidities and/or advanced liver disease may be at increased risk for symptomatic bradycardia with coadministration of amiodarone. If coadministration is required, cardiac monitoring in an inpatient setting for the first 48 hr of coadministration is recommended, after which outpatient or self-monitoring of the heart rate should occur on a daily basis through at least the first 2 weeks of treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of colchicine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Avoid use of colchicine with P-gp inhibitors. If coadministration is necessary, decrease colchicine dose or frequency as recommended in prescribing information. Use of any colchicine product in conjunction with P-gp inhibitors is contraindicated in patients with renal or hepatic impairment. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "dexlansoprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "esomeprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "lansoprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "neratinib",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of neratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of neratinib with strong/moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic enzyme CYP2B6 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "omeprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Avoid or Use Alternate Drug. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Coadministration of sofosbuvir/velpatasvir with omeprazole or other PPIs is not recommended. If considered medically necessary, give sofosbuvir/velpatasvir with food 4 hr before omeprazole 20 mg. Use with other PPIs has not been studied."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Velpatasvir is a substrate of CYP2B6, CYP2C8, and CYP3A4. Drugs that are moderate-to-potent inducers of CYP2B6, CYP2C8, or CYP3A4 may significantly decrease velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of rimegepant by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of topotecan by  Other (see comment). Avoid or Use Alternate Drug. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "vinblastine will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Sofosbuvir and velpatasvir are substrates of the drug transporter P-gp. Potent P-gp inducers may significantly decrease sofosbuvir and velpatasvir plasma concentrations, leading to potentially reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of acalabrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Decrease acalabrutinib dose to 100 mg once daily if coadministered with a moderate CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of alfentanil by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of alprazolam by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium trisilicate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium trisilicate will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ambrisentan",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of ambrisentan by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of armodafinil by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of atorvastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Velpatasvir is an inhibitor of OATP1B1, OATP1B3, and OATP2B1 transporters. Coadministration may increase systemic exposure of drugs that are substrates of these transporters. Coadministration may significantly increase atorvastatin serum concentration, which is associated with increased risk of myopathy, including rhabdomyolysis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of betrixaban by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Decrease betrixaban dose to 80 mg PO once, then 40 mg PO qDay if coadministered with a P-gp inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caspofungin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of caspofungin by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of chlorothiazide by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). H2 receptor antagonists may be administered simultaneously with or 12 hr apart from sofosbuvir/velpatasvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citric acid/sodium bicarbonate",
+            "description": {
+                "common": "citric acid/sodium bicarbonate will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of clonidine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of colchicine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of daunorubicin by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of deflazacort by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Decrease deflazacort dose to one-third of the recommended dose if coadministered with moderate or strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of diazepam by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Velpatasvir inhibits P-gp. Monitor digoxin levels if coadministered. Refer to digoxin prescribing information for monitoring and dose modification recommendations for digoxin concentration increases of <50%."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of dihydroergotamine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of dipyridamole by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of disopyramide by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of doxorubicin by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of sofosbuvir/velpatasvir by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elbasvir/grazoprevir",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of elbasvir/grazoprevir by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of eluxadoline by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of enalapril by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of ergotamine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of everolimus by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Velpatasvir inhibits P-gp. Closely monitor P-gp substrates, particularly those with a narrow therapeutic index. Modify dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ezetimibe",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of ezetimibe by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "famotidine",
+            "description": {
+                "common": "famotidine will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). H2 receptor antagonists may be administered simultaneously with or 12 hr apart from sofosbuvir/velpatasvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fexofenadine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of fexofenadine by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of fluvastatin by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic enzyme CYP2B6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of glyburide by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of guanfacine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong or moderate CYP3A4 inhibitors significantly increase guanfacine plasma concentrations. FDA-approved labeling for extended-release (ER) guanfacine recommends that, if coadministered, the guanfacine dosage should be decreased to half of the recommended dose. Specific recommendations for immediate-release (IR) guanfacine are not available."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen/famotidine",
+            "description": {
+                "common": "ibuprofen/famotidine will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). H2 receptor antagonists may be administered simultaneously with or 12 hr apart from sofosbuvir/velpatasvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of imatinib by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of irinotecan by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of lapatinib by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leflunomide",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of leflunomide by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "lemborexant will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic enzyme CYP2B6 metabolism. Modify Therapy/Monitor Closely. Monitor CYP2B6 substrate for adequate clinical response. Consider increasing the CYP2B6 substrate dose according to specific prescribing recommendations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of lenvatinib by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Lonafarnib is a weak P-gp inhibitor. Monitor for adverse reactions if coadministered with P-gp substrates where minimal concentration changes may lead to serious or life-threatening toxicities. Reduce P-gp substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). Separate administration of sofosbuvir/velpatasvir from antacids by at least 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of methotrexate by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of midazolam by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitoxantrone",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of mitoxantrone by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of modafinil by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of naldemedine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor naldemedine for potential adverse effects if coadministered with strong or moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir",
+            "description": {
+                "common": "nirmatrelvir will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitrofurantoin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of nitrofurantoin by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nizatidine",
+            "description": {
+                "common": "nizatidine will decrease the level or effect of sofosbuvir/velpatasvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Velpatasvir solubility decreases as gastric pH increases (practically insoluble at pH >5). H2 receptor antagonists may be administered simultaneously with or 12 hr apart from sofosbuvir/velpatasvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of olmesartan by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of pitavastatin by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Velpatasvir is an inhibitor of OATP1B1, OATP1B3, and OATP2B1 transporters. Coadministration may increase systemic exposure of drugs that are substrates of these transporters. Coadministration may significantly increase pitavastatin serum concentration, which is associated with increased risk of myopathy, including rhabdomyolysis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of quinidine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of sofosbuvir/velpatasvir by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of repaglinide by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of riociguat by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of rosuvastatin by  Other (see comment). Modify Therapy/Monitor Closely. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates. Coadministration may significantly increase rosuvastatin serum concentration, which is associated with increased risk of myopathy, including rhabdomyolysis. If coadministered, do not exceed rosuvastatin dose of 10 mg/day."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide will increase the level or effect of sofosbuvir/velpatasvir by  Other (see comment). Use Caution/Monitor. Safinamide and its major metabolite may inhibit intestinal BCRP. Monitor BCRP substrates for increased pharmacologic or adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of simvastatin by  Other (see comment). Modify Therapy/Monitor Closely. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates. Coadministration may significantly increase simvastatin serum concentration, which is associated with increased risk of myopathy, including rhabdomyolysis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of sirolimus by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Velpatasvir inhibits P-gp. Closely monitor P-gp substrates, particularly those with a narrow therapeutic index. Modify dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of sulfasalazine by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of temsirolimus by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Velpatasvir inhibits P-gp. Closely monitor P-gp substrates, particularly those with a narrow therapeutic index. Modify dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of tenofovir DF by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for tenofovir-associated adverse reactions in patients receiving EPCLUSA concomitantly with a regimen containing tenofovir DF"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of triazolam by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Velpatasvir inhibits CYP3A4. Caution if coadministered with drugs with narrow therapeutics indexes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valsartan",
+            "description": {
+                "common": "sofosbuvir/velpatasvir increases levels of valsartan by Other (see comment). Use Caution/Monitor. \nComment: Velpatasvir inhibits OATP1B1, OATP1B3, and OATP2B1 transporters. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will decrease the level or effect of sofosbuvir/velpatasvir by  affecting hepatic enzyme CYP2B6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "22"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "15"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "32"
+        },
+        {
+            "name": "Anemia",
+            "percent": "26"
+        },
+        {
+            "name": "Hemoglobin",
+            "percent": "10"
+        },
+        {
+            "name": "g",
+            "percent": "23"
+        },
+        {
+            "name": "dL",
+            "percent": "15"
+        },
+        {
+            "name": "Nausea",
+            "percent": "11"
+        },
+        {
+            "name": "Headache",
+            "percent": "11"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "9"
+        },
+        {
+            "name": "Nausea",
+            "percent": "5"
+        },
+        {
+            "name": "Asthenia",
+            "percent": "5"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "3"
+        },
+        {
+            "name": "Lipase increase",
+            "percent": "3"
+        },
+        {
+            "name": "x ULN",
+            "percent": "2"
+        },
+        {
+            "name": "Rash",
+            "percent": "1"
+        },
+        {
+            "name": "Depression",
+            "percent": "10"
+        },
+        {
+            "name": "Increased creatinine kinase",
+            "percent": "1"
+        },
+        {
+            "name": "x ULN",
+            "percent": "10"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3.5"
+        },
+        {
+            "name": "Hemoglobin",
+            "percent": "7"
+        },
+        {
+            "name": "g",
+            "percent": "5"
+        },
+        {
+            "name": "dL",
+            "percent": "10"
+        },
+        {
+            "name": "Rash",
+            "percent": "2"
+        },
+        {
+            "name": "Increased creatinine kinase",
+            "percent": null
+        },
+        {
+            "name": "x ULN",
+            "percent": null
+        }
+    ]
+}

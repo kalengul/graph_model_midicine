@@ -1,0 +1,886 @@
+{
+    "name": "albiglutide",
+    "comment": "Rx",
+    "other_names": [
+        "Tanzeum"
+    ],
+    "classes": [
+        "Antidiabetics",
+        "Glucagon-like Peptide-1 Agonists"
+    ],
+    "source": "https://reference.medscape.com/drug/tanzeum-albiglutide-999914",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Because of the long washout period for albiglutide, consider discontinuing at least 1 month before a planned pregnancy",
+            "Lactation: Unknown if distributed in human breast milk; a decision should be made whether to discontinue breastfeeding or to discontinue albiglutide, taking into account the importance of the drug to the mother and the potential risks to the infant",
+            "Since albiglutide is an albumin-based protein, it should be assumed that it is present in human milk; decreased body weight in offspring was observed in mice treated with albiglutide during gestation and lactation"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Unknown if distributed in human breast milk; a decision should be made whether to discontinue breastfeeding or to discontinue albiglutide, taking into account the importance of the drug to the mother and the potential risks to the infant"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Risk of thyroid C-cell tumors",
+                    "description": [
+                        "Causes thyroid C-cell tumors in rodents; human risk could not be determined",
+                        "Contraindicated in patients with personal or family history of medullary thyroid carcinoma (MTC) or in patients with multiple endocrine neoplasia syndrome type 2 (MEN-2)",
+                        "Routine monitoring of serum calcitonin or using thyroid ultrasound monitoring is of uncertain value for early detection of MTC in patients treated with albiglutide"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Personal or family history of medullary thyroid carcinoma",
+                "Multiple endocrine neoplasia type 2 (MEN-2)"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Carcinogenicity of albiglutide could not be assessed in rodents due to rapid development of drug-clearing, anti-drug antibodies; other GLP-1 receptor agonists have caused dose-related and treatment-duration-dependent thyroid C-cell tumors (adenomas or carcinomas) in rodents; human relevance of GLP-1 receptor agonist induced C-cell tumors in rodents not determined; cases of MTC in patients treated with liraglutide, another GLP-1 receptor agonist, reported in postmarketing period; data in these reports are insufficient to establish or exclude causal relationship between MTC and GLP-1 receptor agonist use in humans (see Black Box Warnings and Contraindications); routine serum calcitonin or thyroid ultrasound monitoring is of uncertain value for early detection of MTC in patients treated with albiglutide; significantly elevated serum calcitonin may indicate MTC; patients with MTC usually have values >50 ng/L; if serum calcitonin is measured and found to be elevated, evaluate patient further; patients with thyroid nodules noted on physical examination or neck imaging should also be further evaluated",
+                "Acute pancreatitis reported (rare); discontinue if pancreatitis suspected and do not restart if confirmed; consider other antidiabetic therapies in patients with a history of pancreatitis",
+                "Hypoglycemia may occur when used in combination with insulin secretagogues (eg, sulfonylureas) or insulin; consider lowering sulfonylurea or insulin dosage when starting albiglutide",
+                "Serious hypersensitivity reactions reported, including angioedema and generalized pruritus, rash, and dyspnea; discontinue albiglutide if such reactions occur",
+                "Anaphylaxis and angioedema reported with other GLP-1 receptor agonists; use caution in a patient with a history of anaphylaxis or angioedema with another GLP-1 receptor agonist because it is unknown whether such patients will be predisposed to these reactions with therapy",
+                "Acute renal failure and worsening of chronic renal failure (some requiring hemodialysis) reported with treatment with GLP-1 receptor agonists; monitor renal function in patients with renal impairment reporting severe adverse gastrointestinal reactions; use caution when initiating or escalating doses in patients with renal impairment and/or in those reporting severe gastrointestinal symptoms; advise patients of potential risk of dehydration in relation to gastrointestinal side effects and to take precautions to avoid fluid depletion",
+                "Clinical trials have not established conclusive evidence of macrovascular risk reduction with albiglutide or any other antidiabetic drug"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acarbose",
+            "description": {
+                "common": "albiglutide, acarbose.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "albiglutide will decrease the level or effect of atorvastatin by  Other (see comment). Use Caution/Monitor. Based on pharmacokinetic studies, atorvastatin Cmax decreased by 38% and median Tmax delayed from 1h to 3h and the AUC did not change."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azilsartan",
+            "description": {
+                "common": "azilsartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "bazedoxifene/conjugated estrogens decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estrogens may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "benazepril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betamethasone",
+            "description": {
+                "common": "betamethasone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "candesartan",
+            "description": {
+                "common": "candesartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "captopril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "chlorothiazide decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "albiglutide, chlorpropamide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "chlorthalidone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinnamon",
+            "description": {
+                "common": "cinnamon increases effects of albiglutide by pharmacodynamic synergism. Use Caution/Monitor. Potential for hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conjugated estrogens",
+            "description": {
+                "common": "conjugated estrogens decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estrogens may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conjugated estrogens, vaginal",
+            "description": {
+                "common": "conjugated estrogens, vaginal decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estrogens may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "cortisone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desogestrel",
+            "description": {
+                "common": "desogestrel decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "drospirenone decreases effects of albiglutide by passive renal tubular reabsorption due to increased pH. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enalapril",
+            "description": {
+                "common": "enalapril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eprosartan",
+            "description": {
+                "common": "eprosartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "estradiol decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estradiol may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol combos",
+            "description": {
+                "common": "estradiol combos decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens conjugated synthetic",
+            "description": {
+                "common": "estrogens conjugated synthetic decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estrogens may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens esterified",
+            "description": {
+                "common": "estrogens esterified decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estrogens may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estropipate",
+            "description": {
+                "common": "estropipate decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Estropipate may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "ethinylestradiol decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etonogestrel",
+            "description": {
+                "common": "etonogestrel decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Etonogestrel may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "fludrocortisone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosinopril",
+            "description": {
+                "common": "fosinopril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "albiglutide, glimepiride.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "albiglutide, glipizide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "albiglutide, glyburide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "hydrochlorothiazide decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "hydrocortisone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "indapamide decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "albiglutide, insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart protamine/insulin aspart",
+            "description": {
+                "common": "albiglutide, insulin aspart protamine/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "albiglutide, insulin degludec.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "albiglutide, insulin degludec/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "albiglutide, insulin detemir.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "albiglutide, insulin glargine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "albiglutide, insulin glulisine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "albiglutide, insulin inhaled.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin isophane human/insulin regular human",
+            "description": {
+                "common": "albiglutide, insulin isophane human/insulin regular human.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "albiglutide, insulin lispro.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro protamine/insulin lispro",
+            "description": {
+                "common": "albiglutide, insulin lispro protamine/insulin lispro.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "albiglutide, insulin NPH.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "albiglutide, insulin regular human.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "irbesartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral",
+            "description": {
+                "common": "levonorgestrel oral decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lisinopril",
+            "description": {
+                "common": "lisinopril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonapegsomatropin",
+            "description": {
+                "common": "lonapegsomatropin decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Closely monitor blood glucose when treated with antidiabetic agents. Lonapegsomatropin may decrease insulin sensitivity, particularly at higher doses. Patients with diabetes mellitus may require adjustment of their doses of insulin and/or other antihyperglycemic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "losartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "medroxyprogesterone",
+            "description": {
+                "common": "medroxyprogesterone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Medroxyprogesterone may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mestranol",
+            "description": {
+                "common": "mestranol decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "albiglutide, metformin.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "methyclothiazide decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "methylprednisolone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyltestosterone",
+            "description": {
+                "common": "methyltestosterone increases effects of albiglutide by pharmacodynamic synergism. Use Caution/Monitor. It is important to monitor all patients with type 2 diabetes on antidiabetic agents receiving androgens for changes in glycemic control. Potential for hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "metolazone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Thiazide diuretics can decrease insulin sensitivity thereby leading to glucose intolerance and hyperglycemia. Monitor glycemic control especially when initiating, discontinuing, or increasing thiazide diuretic dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "miglitol",
+            "description": {
+                "common": "albiglutide, miglitol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moexipril",
+            "description": {
+                "common": "moexipril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nateglinide",
+            "description": {
+                "common": "albiglutide, nateglinide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norethindrone acetate",
+            "description": {
+                "common": "norethindrone acetate decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norgestimate",
+            "description": {
+                "common": "norgestimate decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Oral contraceptives may decrease hypoglycemic effects of antidiabetics by impairing glucose tolerance. Monitor for glycemic control in diabetic patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "olmesartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pegvisomant",
+            "description": {
+                "common": "pegvisomant increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Pegvisomant may increase glucose tolerance. Dosage reductions of antidiabetic agents may be needed to avoid potential hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perindopril",
+            "description": {
+                "common": "perindopril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "albiglutide, pioglitazone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pramlintide",
+            "description": {
+                "common": "albiglutide, pramlintide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "prednisolone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "prednisone decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "promethazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "quetiapine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinapril",
+            "description": {
+                "common": "quinapril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ramipril",
+            "description": {
+                "common": "ramipril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "albiglutide, repaglinide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "risperidone, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosiglitazone",
+            "description": {
+                "common": "albiglutide, rosiglitazone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "sacubitril/valsartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "albiglutide, saxagliptin.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sitagliptin",
+            "description": {
+                "common": "albiglutide, sitagliptin.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Concurrent use may increase risk of hypoglycemia; monitor glucose levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "somapacitan",
+            "description": {
+                "common": "somapacitan decreases effects of albiglutide by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Growth hormone products may decrease insulin sensitivity, particularly at higher doses. Antidiabetic agents may require dose adjustment after initiating somapacitan. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "somatropin",
+            "description": {
+                "common": "somatropin decreases effects of albiglutide by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Somatropin may potentially  diminish hypoglycemic effects of  antidiabetic agent. May consider modifying therapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "telmisartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir decreases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Reports of hyperglycemia due to insulin resistance with protease inhibitors. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "albiglutide, tolazamide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "albiglutide, tolbutamide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Serious hypoglycemia may occur when insulin secretagogues and GLP-1 agonists are concurrently administered. Consider lowering the dose of insulin secretagogue to reduce the risk of hypoglycemia. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "triamcinolone acetonide injectable suspension decreases effects of albiglutide by pharmacodynamic antagonism. Use Caution/Monitor. Corticosteroids may diminish hypoglycemic effect of antidiabetic agents. Monitor blood glucose levels carefully. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "trifluoperazine, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Phenothiazines may increase or decrease glucose levels, monitor therapy closely when these agents are concurrently administered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valsartan",
+            "description": {
+                "common": "valsartan increases effects of albiglutide by Other (see comment). Use Caution/Monitor. \nComment: Angiotensin II receptor antagonists may enhance hypoglycemic effects of antidiabetic agents by improving insulin sensitivity. Monitor patients for changes in glycemic control."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "ziprasidone, albiglutide. Other (see comment). Use Caution/Monitor. \nComment: Atypical antipsychotics have been associated with hyperglycemia that may alter blood glucose control; monitor glucose levels closely."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetaminophen",
+            "description": {
+                "common": "albiglutide decreases levels of acetaminophen by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetaminophen IV",
+            "description": {
+                "common": "albiglutide decreases levels of acetaminophen IV by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "albiglutide decreases levels of digoxin by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": "13"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "10.5"
+        },
+        {
+            "name": "Nausea",
+            "percent": "9.6"
+        },
+        {
+            "name": "Injection site reaction",
+            "percent": "2.1"
+        }
+    ]
+}

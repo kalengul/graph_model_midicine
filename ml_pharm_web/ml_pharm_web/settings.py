@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -86,14 +86,25 @@ WSGI_APPLICATION = 'ml_pharm_web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',   # Используется PostgreSQL
-        'NAME': BASE_DIR/'pharm.db'               # Имя базы данных
-        # 'USER': 'postgres', # Имя пользователя
-        # 'PASSWORD': 'postgres', # Пароль пользователя
-        # 'HOST': 'pgdb', # Наименование контейнера для базы данных в Docker Compose
-        # 'PORT': '5432',  # Порт базы данных
+        'ENGINE': 'django.db.backends.postgresql',   # Используется PostgreSQL
+        'NAME': 'postgres',               # Имя базы данных
+        'USER': 'postgres', # Имя пользователя
+        'PASSWORD': 'postgres', # Пароль пользователя
+        'HOST': 'localhost', # Наименование контейнера для базы данных в Docker Compose
+        'PORT': '5432',  # Порт базы данных
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',   # Используется PostgreSQL
+#         'NAME': BASE_DIR/'pharm.db',               # Имя базы данных
+#         # 'USER': 'postgres', # Имя пользователя
+#         # 'PASSWORD': 'postgres', # Пароль пользователя
+#         # 'HOST': 'pgdb', # Наименование контейнера для базы данных в Docker Compose
+#         # 'PORT': '5432',  # Порт базы данных
+#     }
+# }
 
 
 # Password validation
