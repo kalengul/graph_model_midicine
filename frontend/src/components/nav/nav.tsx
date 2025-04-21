@@ -1,36 +1,28 @@
 import { useLocation  } from 'react-router-dom';
 import { useEffect } from 'react'
-import axios from 'axios'
 
-import { useDispatch, useSelector} from 'react-redux';
+import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import {fetchMenu} from '../../redux/MenuSlice'
 import {addValue, initStates} from '../../redux/MenuSlice'
-import { RootState } from '../../redux/store';
 
 import "./nav.scss"
 
 export const Nav = ()=>{
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const location = useLocation();
 
     useEffect(()=>{
-        dispatch(initStates())
-        axios({ 
-            method: "GET", 
-            url: "/api/getMenu/", 
-        }).then((res)=>{
-            // console.log(res.data)
-            dispatch(addValue({title: "links", value: res.data.data}));
+        dispatch(initStates())//Инициализация состояний
+        dispatch(fetchMenu()) //Получение меню с сервера
 
-            const locat: string = location.pathname
+        const locat: string = location.pathname
+        dispatch(addValue({title: "isActive", value: locat}));
 
-            dispatch(addValue({title: "isActive", value: locat}));
-
-        })
-     }, [])
+    }, [dispatch, location])
 
 
-    const menu = useSelector((state: RootState)=>state.menu.links)
-    const activeLink = useSelector((state: RootState)=>state.menu.isActive)
+    const menu = useAppSelector((state)=>state.menu.links)
+    const activeLink = useAppSelector((state)=>state.menu.isActive)
 
     return (
         <nav className='flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav'>
