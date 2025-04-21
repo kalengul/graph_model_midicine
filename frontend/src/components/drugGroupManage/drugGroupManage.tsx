@@ -40,7 +40,7 @@ export const DrugGroupManage = () =>{
             params: {
                 dg_id: id,
             }
-        }).then((res)=>{
+        }).then(()=>{
             //console.log(res.data)
             dispatch(addValue({title: "updateList", value: true}))
         })

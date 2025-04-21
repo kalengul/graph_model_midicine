@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import axios from 'axios'
 
 import { useSelector, useDispatch} from 'react-redux';
-import {addValue as addValueDrug, initStates as initSatesDrug} from '../../redux/DrugManageSlice'
-import {addValue as addValueSE, initStates as initSatesSE} from '../../redux/SideEffectManageSlice'
+import {addValue as addValueDrug} from '../../redux/DrugManageSlice'
+import {addValue as addValueSE} from '../../redux/SideEffectManageSlice'
 import { RootState } from '../../redux/store';
 
 import "./sideEffectsTable.scss"

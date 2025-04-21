@@ -7,7 +7,7 @@ import "./addDrugGroupForm.scss"
 
 import { useDispatch} from 'react-redux';
 import {addValue} from '../../redux/DrugGroupManageSlice'
-import { RootState } from '../../redux/store';
+// import { RootState } from '../../redux/store';
 
 interface ISendDrugData{
     dg_name: string,
