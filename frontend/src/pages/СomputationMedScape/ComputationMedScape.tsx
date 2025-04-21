@@ -7,7 +7,7 @@ export const ComputationMedScape = () =>{
         <Nav></Nav>
         <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по MedScape</h1>
-            <ComputationMedScapeForm/>
+            {/* <ComputationMedScapeForm/> */}
         </main>
     </div>
     )

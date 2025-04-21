@@ -38,6 +38,7 @@ class GetMenuAPI(APIView):
             }, status=error_status)
 
     def get(self, request):
+        print("Получение меню")
         response_data = {
             "result": {
                 "status": status.HTTP_200_OK,

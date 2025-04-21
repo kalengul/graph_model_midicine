@@ -7,6 +7,8 @@ import "./addDrugGroupForm.scss"
 
 import { useDispatch} from 'react-redux';
 import {addValue} from '../../redux/DrugGroupManageSlice'
+import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import { addDrugGroup } from '../../redux/DrugGroupManageSlice';
 // import { RootState } from '../../redux/store';
 
 interface ISendDrugData{
@@ -14,30 +16,29 @@ interface ISendDrugData{
 }
 
 export const AddDrugGroupForm = () =>{
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const SendHandler =async (values: ISendDrugData)=>{
         //window.alert(values.drug_name)
 
-        const data = new FormData();
-        data.append('dg_name', values.dg_name)
+        dispatch(addDrugGroup(values.dg_name))
 
-        try {
-            await axios({ 
-                method: "POST", 
-                url: "/api/addDrugGroup/", 
-                data,
-                headers: { 'Content-Type': 'multipart/form-data'},
-            }).then((res)=>{
-              //console.log(res)
-              alert(res.data.result.message)
+        // try {
+        //     await axios({ 
+        //         method: "POST", 
+        //         url: "/api/addDrugGroup/", 
+        //         data,
+        //         headers: { 'Content-Type': 'multipart/form-data'},
+        //     }).then((res)=>{
+        //       //console.log(res)
+        //       alert(res.data.result.message)
 
-              dispatch(addValue({title: "updateList", value: true}))
-            })
+        //       dispatch(addValue({title: "updateList", value: true}))
+        //     })
             
-          } catch (error) {
-            console.log(error)
-          }
+        //   } catch (error) {
+        //     console.log(error)
+        //   }
     }
 
     const ScrollInto = () =>{

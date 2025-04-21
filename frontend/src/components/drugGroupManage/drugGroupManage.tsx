@@ -6,44 +6,45 @@ import trash3 from "../../../public/trash3.svg"
 import { AddDrugGroupForm} from '../../components/addDrugGroupForm/addDrugGroupForm';
 import { ErrMessageCard } from '../messageCards/errMessageCard';
 
-import { useDispatch, useSelector} from 'react-redux';
+import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import { fetchDrugGroupList } from '../../redux/DrugGroupManageSlice';
 import {addValue, initStates} from '../../redux/DrugGroupManageSlice'
 import { RootState } from '../../redux/store';
 
 
 
 export const DrugGroupManage = () =>{
-    const isUpdate = useSelector((state: RootState)=>state.drugGroupManage.updateList)
-
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     useEffect(()=>{
         dispatch(initStates())
-        axios({ 
-            method: "GET", 
-            url: "/api/getDrugGroup/", 
-        }).then((res)=>{
-            //console.log(res.data)
-            dispatch(addValue({title: "drugGroups", value: res.data.data}))
+        dispatch(fetchDrugGroupList())
+        // axios({ 
+        //     method: "GET", 
+        //     url: "/api/getDrugGroup/", 
+        // }).then((res)=>{
+        //     //console.log(res.data)
+        //     dispatch(addValue({title: "drugGroups", value: res.data.data}))
 
-            if(isUpdate) dispatch(addValue({title: "updateList", value: false}))
-        })
-    }, [isUpdate])
+        //     if(isUpdate) dispatch(addValue({title: "updateList", value: false}))
+        // })
+    }, [dispatch])
 
-    const drugGroupList = useSelector((state: RootState)=>state.drugGroupManage.drugGroups)
+    const drugGroupList = useAppSelector((state)=>state.drugGroupManage.drugGroups)
     
     //console.log(drugGroupList)
 
     const deleteDrugGroupHendler = (id: string) =>{
-        axios({ 
-            method: "DELETE", 
-            url: `/api/delete/`, 
-            params: {
-                dg_id: id,
-            }
-        }).then(()=>{
-            //console.log(res.data)
-            dispatch(addValue({title: "updateList", value: true}))
-        })
+        console.log(`удалить ${id}`)
+        // axios({ 
+        //     method: "DELETE", 
+        //     url: `/api/delete/`, 
+        //     params: {
+        //         dg_id: id,
+        //     }
+        // }).then(()=>{
+        //     //console.log(res.data)
+        //     dispatch(addValue({title: "updateList", value: true}))
+        // })
     }
 
     return(
