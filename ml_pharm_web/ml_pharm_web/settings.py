@@ -11,21 +11,23 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(BASE_DIR / '.env')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ck_zidabau&12n*3khl(^mca!+la#666fl*30l52l_w&&j&ie!'
+SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-default-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '0.0.0.0']
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 
 # Application definition
@@ -39,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.postgres',
 
-    # 'pharm_web.apps.PharmWebConfig',
-    'test_drf',
     'accounts',
     'drugs',
     'ranker',
@@ -65,7 +65,7 @@ ROOT_URLCONF = 'ml_pharm_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'pharm_web', 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,51 +93,18 @@ if USE_SQLITE:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres',
-            'USER': 'postgres',
-            'PASSWORD': 'postgres',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'NAME': os.environ.get('POSTGRES_DB', 'ml_db'),
+            'USER': os.environ.get('POSTGRES_USER', 'ml_user'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'ml_pass'),
+            'HOST': os.environ.get('POSTGRES_HOST', 'db'),
+            'PORT': os.environ.get('POSTGRES_PORT', '5432'),
         }
     }
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',   # Используется PostgreSQL
-#         'NAME': 'postgres',               # Имя базы данных
-#         'USER': 'postgres', # Имя пользователя
-#         'PASSWORD': 'postgres', # Пароль пользователя
-#         'HOST': 'localhost', # Наименование контейнера для базы данных в Docker Compose
-#         'PORT': '5432',  # Порт базы данных
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',   # Используется PostgreSQL
-#         'NAME': BASE_DIR/'pharm.db',               # Имя базы данных
-#         # 'USER': 'postgres', # Имя пользователя
-#         # 'PASSWORD': 'postgres', # Пароль пользователя
-#         # 'HOST': 'pgdb', # Наименование контейнера для базы данных в Docker Compose
-#         # 'PORT': '5432',  # Порт базы данных
-#     }
-# }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',   # Используется PostgreSQL
-#         'NAME': BASE_DIR/'pharm.db',               # Имя базы данных
-#         # 'USER': 'postgres', # Имя пользователя
-#         # 'PASSWORD': 'postgres', # Пароль пользователя
-#         # 'HOST': 'pgdb', # Наименование контейнера для базы данных в Docker Compose
-#         # 'PORT': '5432',  # Порт базы данных
-#     }
-# }
 
 
 # Password validation
