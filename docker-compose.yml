@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+
+  db:
+    image: postgres:15
+    container_name: db
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    networks:
+      - backend
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: unless-stopped
+    volumes:
+      - ./backend:/app
+      - static_volume:/app/static
+    depends_on:
+      - db
+    env_file:
+      - .env
+    networks:
+      - backend
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    restart: unless-stopped
+    networks:
+      - backend
+
+  nginx:
+    build: ./frontend 
+    container_name: nginx
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - static_volume:/static
+    networks:
+      - backend
+
+volumes:
+  postgres_data:
+  static_volume:
+
+networks:
+  backend:

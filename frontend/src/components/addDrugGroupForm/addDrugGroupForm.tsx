@@ -1,43 +1,20 @@
-import axios from 'axios'
-
 import {Form} from 'react-final-form';
 import { Input } from "../form/input/input"
 import {AddDrugGroupValidator} from "./addDrugGroupValidator"
 import "./addDrugGroupForm.scss"
 
-import { useDispatch} from 'react-redux';
-import {addValue} from '../../redux/DrugGroupManageSlice'
-// import { RootState } from '../../redux/store';
+import { useAppDispatch} from '../../redux/hooks';
+import { addDrugGroup } from '../../redux/DrugGroupManageSlice';
 
 interface ISendDrugData{
     dg_name: string,
 }
 
 export const AddDrugGroupForm = () =>{
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const SendHandler =async (values: ISendDrugData)=>{
-        //window.alert(values.drug_name)
-
-        const data = new FormData();
-        data.append('dg_name', values.dg_name)
-
-        try {
-            await axios({ 
-                method: "POST", 
-                url: "/api/addDrugGroup/", 
-                data,
-                headers: { 'Content-Type': 'multipart/form-data'},
-            }).then((res)=>{
-              //console.log(res)
-              alert(res.data.result.message)
-
-              dispatch(addValue({title: "updateList", value: true}))
-            })
-            
-          } catch (error) {
-            console.log(error)
-          }
+        dispatch(addDrugGroup(values.dg_name))
     }
 
     const ScrollInto = () =>{

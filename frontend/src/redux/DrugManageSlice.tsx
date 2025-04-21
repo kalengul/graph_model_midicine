@@ -1,12 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { IDrug } from "../interfaces/Interfaces";
 
-interface IPayload{
-    id: string //ключ сохраняемого объекта
-    drug_name: string //значение для сохранения
-}
-
-interface IState {
-    drugs: IPayload[]; // Указываем тип элементов массива
+interface IStateDrugs {
+    drugs: IDrug[]; // Указываем тип элементов массива
     [key: string]: any; // Если state может содержать другие динамические поля
   }
 
@@ -14,7 +10,7 @@ const DrugManageSlice = createSlice({
     name: 'drugManage',
     initialState: {
         drugs: [],
-    } as IState,
+    } as IStateDrugs,
     reducers: {
         addValue(state, action){
             //console.log(action.payload)
