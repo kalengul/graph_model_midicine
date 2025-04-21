@@ -1,43 +1,24 @@
 import axios from 'axios'
 
 import {Form} from 'react-final-form';
-import { Input } from "../form/input/input"
-import {AddSideEffectValidator} from "./addSideEffectValidator"
-import "./addSideEffectForm.scss"
-
-import { useDispatch} from 'react-redux';
-import {addValue} from '../../redux/SideEffectManageSlice'
+import { Input } from '../form/input/input';
+import {ComputationMedScapeValidator, IComputationMedScapeData} from "./computationMedScapeValidator"
 
 
-interface ISendSideEffectData{
-    se_name: string,
-}
+import { FieldRenderProps } from 'react-final-form';
 
-export const AddDrugGroupForm = () =>{
-    const dispatch = useDispatch()
+interface Recipient {
+    id: string;
+    email: string;
+  }пш
 
-    const SendHandler =async (values: ISendSideEffectData)=>{
+type RecipientsInputProps = FieldRenderProps<string[]> & {
+    availableRecipients?: Recipient[];
+  };
+
+export const ComputationMedScapeForm = ()=>{
+    const SendHandler = async (values: IComputationMedScapeData)=>{
         //window.alert(values.drug_name)
-
-        const data = new FormData();
-        data.append('se_name', values.se_name)
-
-        try {
-            await axios({ 
-                method: "POST", 
-                url: "/api/addSideEffect/", 
-                data,
-                headers: { 'Content-Type': 'multipart/form-data'},
-            }).then((res)=>{
-              //console.log(res)
-              alert(res.data.result.message)
-
-              dispatch(addValue({title: "updateList_se", value: true}))
-            })
-            
-          } catch (error) {
-            console.log(error)
-          }
     }
 
     const ScrollInto = () =>{
@@ -48,13 +29,13 @@ export const AddDrugGroupForm = () =>{
                 block: 'nearest'
             });
         }
-      }
+    }
 
-    return (
+    return(
         <div>
             <Form 
                 onSubmit={SendHandler}
-                validate={(values)=>AddSideEffectValidator(values)}
+                validate={(values)=>ComputationMedScapeValidator(values)}
             >
             {({ handleSubmit, submitting}) => (
             <form onSubmit={handleSubmit}>

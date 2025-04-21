@@ -1,6 +1,7 @@
 import json
+import ast
+import traceback
 
-from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
@@ -8,6 +9,7 @@ from django.conf import settings
 from ranker.models import DrugCHF
 from ranker.utils.file_loader import FileLoader
 from ranker.utils.fortran_calculator import FortranCalculator
+from drugs.utils.custom_response import CustomResponse
 
 
 class CalculationAPI(APIView):
@@ -15,67 +17,49 @@ class CalculationAPI(APIView):
 
     def get(self, request):
         """Метод для GET-запроса."""
-        # Получаем параметры
-        # base_dir = settings.BASE_DIR
-        # drugs_param = request.GET.get('drugs', '')
-        # file_name = request.GET.get('file_upload', '')
-
         base_dir = settings.BASE_DIR
-        drug_indices = request.GET.get('drugs', '')
-        file_name = request.GET.get('humanData', '')
 
-        print('file_name =', file_name)
+        drugs_raw = request.query_params.get('drugs', [])
+        human_data_raw = request.query_params.get('humanData', {})
+        try:
+            drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
+        except (ValueError, SyntaxError):
+            drug_indices = []
 
-        drug_indices = json.loads(drug_indices)
-        file_name = json.loads(file_name)
+        try:
+            human_data = json.loads(human_data_raw)
+            file_name = human_data.get('age', ['rangbase.txt'])[0]
+        except (json.JSONDecodeError, TypeError, IndexError, KeyError):
+            file_name = 'rangbase.txt'
 
-        print('drugs_param =', drug_indices)
-        print('type(drugs_param) =', type(drug_indices))
-        print('type(drugs_param[0]) =', type(drug_indices[0]))
-
-        print('file_name =', file_name)
-        print('type(file_name) =', type(file_name['age']))
-        print('type(file_name[0]) =', type(file_name['age'][0]))
-
-        # Принудительная перезагрузка БД из файлов
         FileLoader.load_drugs_from_file(base_dir)
         FileLoader.load_disease_chf_from_file(base_dir)
 
         calculator = FortranCalculator()
 
+        drug_indices2 = drug_indices[:]
+
         while len(drug_indices) < calculator.n_k:
             drug_indices.append(0)
 
-        print('len(drug_indices) =', len(drug_indices))
+        print('base_dir =', base_dir)
+        print('file_name =', file_name)
+        print('drug_indices =', drug_indices)
+        print('drug_indices2 =', drug_indices2)
 
         try:
             context = calculator.load_data_in_file(base_dir,
                                                    file_name,
-                                                   drug_indices)
-            return Response(context, status=status.HTTP_200_OK)
-        except Exception as e:
-            return Response({'error': str(e)},
-                            status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-        # Поиск препаратов в БД
-        # drug_names = [name.strip().lower() for name in drugs_param.split(',')]
-
-        # print('drug_names =', drug_names)
-        # print('type(drug_names) =', type(drug_names))
-
-        # drugs = DrugCHF.objects.filter(name__in=drugs_param)
-        # drug_indices = list(drugs.values_list('index', flat=True))
-
-        # calculator = FortranCalculator()
-
-        # while len(drug_indices) < calculator.n_k:
-        #     drug_indices.append(0)
-
-        # try:
-        #     context = calculator.load_data_in_file(base_dir,
-        #                                            file_name,
-        #                                            drug_indices)
-        #     return Response(context, status=status.HTTP_200_OK)
-        # except Exception as e:
-        #     return Response({'error': str(e)},
+                                                   drug_indices,
+                                                   drug_indices2)
+            return CustomResponse.response(
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по Fortran успешно расcчитана',
+                http_status=status.HTTP_200_OK,
+                data=context)
+        except Exception:
+            print(traceback.format_exc())
+            return CustomResponse.response(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='Ошибка определения совместимости',
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)

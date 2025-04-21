@@ -1,3 +1,6 @@
+from ast import literal_eval
+import traceback
+
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -5,13 +8,15 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.db.models import Q
 from django.conf import settings
 
-from .models import (Drug,
+from medscape_api.models import (Drug,
                                  DrugGroup,
                                  DrugInteractionTable)
-from .interaction_retriever import (InteractionRetriever,
-                                   InteractionMedScape,
-                                   NameDrugsMedScape,)
-from .json_loader import JSONLoader
+from drugs.models import Drug as DD
+from medscape_api.interaction_retriever import (InteractionRetriever,
+                                                InteractionMedScape,
+                                                NameDrugsMedScape,)
+from medscape_api.json_loader import JSONLoader
+from drugs.utils.custom_response import CustomResponse
 
 
 NO_DRUG = 'Не найдены данных об указанном ЛС!'
@@ -27,24 +32,54 @@ class InteractionMedScapeView(APIView):
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
         try:
-            drugs = request.GET.get('drugs', '').lower()
-            # classification_type = request.GET.get('classification_type', '')
+            drugs = request.query_params.get('drugs')
+            drugs = literal_eval(drugs)
+
             interactions = []
-            # global word_count
-            # word_count = {}
             if drugs:
-                drugs_list = [drug.strip() for drug in drugs.split(',')]
-                interactions = InteractionRetriever.get_interactions(
+                drugs_list = [DD.objects.get(pk=drug).drug_name
+                              for drug in drugs]
+
+                interactions = InteractionRetriever().get_interactions(
                     drugs_list)
+            print('interactions =', interactions)
+            print('type(interactions) =', type(interactions))
+            print('interactions[0] =', interactions[0])
+            print('interactions[0][0] =', interactions[0][0])
+            if not any(interactions):
+                context = {
+                    'drugs': drugs_list,
+                    'description': 'Справка в MedScape отсутствует',
+                    'compatibility_medscape': (
+                        'Информация о совместимости в MedScape отсутствует')
+                }
+                return CustomResponse.response(
+                    data=context,
+                    status=status.HTTP_200_OK,
+                    message='Совместимость ЛС по MedScape успешно расcчитана',
+                    http_status=status.HTTP_200_OK)
             context = {
-                'drugs': drugs,
-                #        'classification_type': classification_type,
-                'interactions': interactions
+                'drugs': drugs_list,
+                'description': interactions[0][0]['description'],
+                'compatibility_medscape': interactions[0][0]['classification']
             }
-            return Response(data=context, status=status.HTTP_200_OK)
+            return CustomResponse.response(
+                data=context,
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по MedScape успешно расcчитана',
+                http_status=status.HTTP_200_OK)
         except ObjectDoesNotExist:
-            return Response({'error': NO_DRUG},
-                            status=status.HTTP_404_NOT_FOUND)
+            traceback.print_exc()
+            return CustomResponse.response(
+                status=status.HTTP_404_NOT_FOUND,
+                message='Ресурс не найден',
+                http_status=status.HTTP_404_NOT_FOUND)
+        except Exception:
+            traceback.print_exc()
+            return CustomResponse.response(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='Ошибка определения совместимости',
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 class MedscapeOutDateView(APIView):

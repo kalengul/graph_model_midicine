@@ -10,9 +10,11 @@ MAX_LENGTH = 255
 class DrugGroup(models.Model):
     """Класс группы ЛС."""
 
-    group_name = models.CharField(max_length=MAX_LENGTH,
-                                  verbose_name="Название группы")
+    dg_name = models.CharField(max_length=MAX_LENGTH,
+                               verbose_name="Название группы",
+                               unique=True)
     slug = models.SlugField(max_length=MAX_LENGTH,
+                            null=True,
                             unique=True,
                             db_index=True,
                             verbose_name="URL")
@@ -20,7 +22,7 @@ class DrugGroup(models.Model):
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""
         if not self.slug:
-            base_slug = slugify(self.name)
+            base_slug = slugify(self.dg_name)
             unique_slug = base_slug
             counter = 1
 
@@ -33,22 +35,24 @@ class DrugGroup(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.dg_name
 
     class Meta:
         """Настройка модели."""
 
         verbose_name = 'Группа ЛС'
         verbose_name_plural = 'Группы ЛС'
-        ordering = ['group_name']
+        ordering = ['dg_name']
 
 
 class Drug(models.Model):
     """Класс ЛС."""
 
-    name = models.CharField(max_length=MAX_LENGTH,
-                            verbose_name='Название ЛС')
+    drug_name = models.CharField(max_length=MAX_LENGTH,
+                                 verbose_name='Название ЛС',
+                                 unique=True)
     slug = models.SlugField(max_length=MAX_LENGTH,
+                            null=True,
                             unique=True,
                             db_index=True,
                             verbose_name="URL")
@@ -56,7 +60,8 @@ class Drug(models.Model):
                                    on_delete=models.CASCADE,
                                    related_name='drugs',
                                    verbose_name='Группа ЛС',
-                                   default=1)
+                                   default=1,
+                                   null=True)
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
                                           related_name='drugs')
@@ -64,7 +69,7 @@ class Drug(models.Model):
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""
         if not self.slug:
-            base_slug = slugify(self.name)
+            base_slug = slugify(self.drug_name)
             unique_slug = base_slug
             counter = 1
 
@@ -77,21 +82,22 @@ class Drug(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.drug_name
 
     class Meta:
         """Настройка модели."""
 
         verbose_name = 'ЛС'
         verbose_name_plural = 'ЛС'
-        ordering = ['name']
+        ordering = ['drug_name']
 
 
 class SideEffect(models.Model):
     """Класс ПД."""
 
-    name = models.CharField(max_length=MAX_LENGTH,
-                            verbose_name="Побочный эффект")
+    se_name = models.CharField(max_length=MAX_LENGTH,
+                               verbose_name="Побочный эффект",
+                               unique=True)
     weight = models.FloatField(default=0.0,
                                verbose_name='Вес побочки',
                                validators=[
@@ -101,7 +107,7 @@ class SideEffect(models.Model):
 
     def __str__(self):
         """Строковое представление."""
-        return self.name
+        return self.se_name
 
 
 class DrugSideEffect(models.Model):
@@ -157,18 +163,10 @@ class DrugSideEffect(models.Model):
                                     MinValueValidator(0.0),
                                     MaxValueValidator(2.0)
                                 ])
-    # в текущей версии веростностью
-    # комент потом наверное можно убрать)))
-    # rang_s = models.FloatField(
-    #     validators=[
-    #         MinValueValidator(0.0),
-    #         MaxValueValidator(1.0)
-    #     ]
-    # )
 
     def __str__(self):
         """Строковое представление."""
-        return (f"{self.drug.name} - {self.side_effect.name}:"
+        return (f"{self.drug.drug_name} - {self.side_effect.se_name}:"
                 f"{self.probability}")
 
     class Meta:

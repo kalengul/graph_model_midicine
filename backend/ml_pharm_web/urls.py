@@ -1,7 +1,7 @@
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
-from ml_pharm_web import settings
+from backend import settings
 
 
 urlpatterns = [
@@ -11,7 +11,7 @@ urlpatterns = [
     path('api/v1/', include('drugs.urls')),
     path('api/v1/', include('menu.urls')),
     path('api/v1/polifarmakoterapiya-fortran/', include('ranker.urls')),
-    path('api/v1/iteraction_medscape/', include('medscape_api.urls')),
+    path('api/v1/', include('medscape_api.urls')),
 ]
 
 
