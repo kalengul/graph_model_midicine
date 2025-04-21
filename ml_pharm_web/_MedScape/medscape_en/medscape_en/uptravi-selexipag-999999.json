@@ -1,0 +1,661 @@
+{
+    "name": "selexipag",
+    "comment": "Rx",
+    "other_names": [
+        "Uptravi"
+    ],
+    "classes": [
+        "PAH",
+        "Prostacyclin Agonists"
+    ],
+    "source": "https://reference.medscape.com/drug/uptravi-selexipag-999999",
+    "pregnancy": {
+        "common": [
+            "No adequate and well-controlled studies with selexipag exist in pregnant women"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies ",
+                "description": [
+                    "Reproduction studies performed with selexipag showed no clinically relevant effects on embryofetal development and survival",
+                    "A slight reduction in maternal as well as in fetal body weight was observed when pregnant rats were administered selexipag during organogenesis at a dose producing an exposure ~47 times that in humans at the maximum recommended human dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Selexipag or its metabolites were present in the milk of rats",
+            "Because many drugs are present in the human milk and because of the potential for serious adverse reactions in nursing infants, discontinue nursing or discontinue selexipag"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to the active substance or to any of the excipients",
+                "Concomitant use of strong CYP2C8 inhibitors (eg, gemfibrozil)"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "If signs of pulmonary edema occur, consider the possibility of associated pulmonary veno-occlusive disease (PVOD); if PVOD is confirmed, discontinue selexipag"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Contraindicated with strong CYP2C8 inhibitors; coadministration with strong CYP2C8 inhibitors may result in significant increased exposure to selexipag and its active metabolite",
+                        "Concomitant administration with an inducer of CYP2C8 and UGT 1A3 and 2B7 enzymes (rifampin) halved exposure to active metabolite; increase dose up to twice of the normal dose when coadministered with rifampin; reduce therapy dose when rifampin is stopped",
+                        "An increased selexipag dose (up to 2-fold) may be necessary if coadministered with strong CYP2C8 inducers"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "gemfibrozil",
+            "description": {
+                "common": "gemfibrozil will increase the level or effect of selexipag by  decreasing metabolism. Contraindicated. Coadministration of selexipag with strong CYP2C8 inhibitors doubled exposure to selexipag and increased exposure to the active metabolite by about 11-fold."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "darolutamide will increase the level or effect of selexipag by  Other (see comment). Avoid or Use Alternate Drug. Darolutamide is a BCRP inhibitor. Avoid coadministration with BCRP inhibitors. If use is unavoidable, closely monitor for adverse reactions and consider dose reduction of BCRP substrate drug (refer BCRP substrate prescribing information)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of selexipag by Other (see comment). Avoid or Use Alternate Drug. \nComment: Lasmiditan inhibits BCRP in vitro. Avoid coadministration of lasmiditan with BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "leniolisib will increase the level or effect of selexipag by  Other (see comment). Avoid or Use Alternate Drug. Leniolisib, a BCRP inhibitor, may increase systemic exposure of BCRP substrates"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abiraterone",
+            "description": {
+                "common": "abiraterone will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases effects of selexipag by Other (see comment). Use Caution/Monitor. \nComment: Acalabrutinib may increase exposure to coadministered BCRP substrates by inhibition of intestinal BCRP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of selexipag by  increasing elimination. Use Caution/Monitor. Apalutamide weakly induces BCRP and may decrease systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cannabidiol",
+            "description": {
+                "common": "cannabidiol will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capmatinib",
+            "description": {
+                "common": "capmatinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clopidogrel",
+            "description": {
+                "common": "clopidogrel will increase the level or effect of selexipag by  decreasing metabolism. Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "colchicine will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eltrombopag",
+            "description": {
+                "common": "eltrombopag will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "eluxadoline will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib will increase the level or effect of selexipag by  Other (see comment). Modify Therapy/Monitor Closely. Encorafenib (a BCRP inhibitor) may increase the concentration and toxicities of BCRP substrates. Closely monitor for signs and symptoms of increased exposure and consider adjusting the dose of these substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "felodipine",
+            "description": {
+                "common": "felodipine will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of selexipag by  decreasing metabolism. Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of BCRP substrate drugs. Monitor for toxicities of BCRP substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "fostemsavir will increase the level or effect of selexipag by  Other (see comment). Modify Therapy/Monitor Closely. Fostemsavir inhibits BCRP transporters. If possible, avoid coadministration or modify dose of BCRP substrate coadministered with fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "gefitinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of selexipag by  decreasing metabolism. Use Caution/Monitor. Glecaprevir/pibrentasvir may increase plasma concentration of BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "griseofulvin",
+            "description": {
+                "common": "griseofulvin will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "irbesartan will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "losartan will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "nilotinib will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "omaveloxolone will decrease the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Omaveloxolone may reduce systemic exposure of sensitive CYP2C8 substrates. Check prescribing information of substrate if dosage modification is needed.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oteseconazole",
+            "description": {
+                "common": "oteseconazole will increase the level or effect of selexipag by  Other (see comment). Modify Therapy/Monitor Closely. Otesezonale, a BCRP inhibitor, may increase the effects and risk of toxicities of BCRP substrates. Use lowest starting dose of BCRP substrate, or consider reducing BCRP substrate dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "pioglitazone will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Coadministration of selexipag with rifampin, an inducer of CYP2C8, UGT1A3, and 2B7 enzymes, decreased exposure to selexipag's active metabolite by 50%. Increase selexipag dose up to twice of the typical dose if coadministered with rifampin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rolapitant",
+            "description": {
+                "common": "rolapitant will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosiglitazone",
+            "description": {
+                "common": "rosiglitazone will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of selexipag by  increasing metabolism. Modify Therapy/Monitor Closely. Increase selexipag dose (up to 2-fold) if coadministered with strong CYP2C8 inducers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir/velpatasvir",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of selexipag by  Other (see comment). Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors. Stiripentol is also a BCRP transport inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis",
+            "description": {
+                "common": "tafamidis will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis meglumine",
+            "description": {
+                "common": "tafamidis meglumine will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "tamoxifen will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teriflunomide",
+            "description": {
+                "common": "teriflunomide will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "trimethoprim will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voxilaprevir",
+            "description": {
+                "common": "voxilaprevir will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of selexipag by  decreasing metabolism. Minor/Significance Unknown. Coadministration of selexipag with ritonavir may result in an increase in exposure to selexipag. Despite this pharmacokinetic change, this interaction is likely of little clinical significance."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of selexipag by  decreasing metabolism. Minor/Significance Unknown. Coadministration of selexipag with ritonavir may result in an increase in exposure to selexipag. Despite this pharmacokinetic change, this interaction is likely of little clinical significance"
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "65"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "42"
+        },
+        {
+            "name": "Jaw pain",
+            "percent": "26"
+        },
+        {
+            "name": "Nausea",
+            "percent": "33"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "18"
+        },
+        {
+            "name": "Pain in extremity",
+            "percent": "17"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "16"
+        },
+        {
+            "name": "Flushing",
+            "percent": "12"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "11"
+        },
+        {
+            "name": "Rash",
+            "percent": "11"
+        },
+        {
+            "name": "Hemoglobin decreased below",
+            "percent": "10"
+        },
+        {
+            "name": "g",
+            "percent": "8.6"
+        },
+        {
+            "name": "dL",
+            "percent": "8"
+        },
+        {
+            "name": "Anemia",
+            "percent": "6"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "0.3"
+        },
+        {
+            "name": "TSH reduced",
+            "percent": "2.5"
+        },
+        {
+            "name": "up to",
+            "percent": null
+        },
+        {
+            "name": "MU",
+            "percent": null
+        },
+        {
+            "name": "L from a baseline of",
+            "percent": null
+        },
+        {
+            "name": "MU",
+            "percent": null
+        },
+        {
+            "name": "L",
+            "percent": null
+        },
+        {
+            "name": "Vascular disorders",
+            "percent": null
+        },
+        {
+            "name": "Symptomatic hypotension",
+            "percent": null
+        }
+    ]
+}

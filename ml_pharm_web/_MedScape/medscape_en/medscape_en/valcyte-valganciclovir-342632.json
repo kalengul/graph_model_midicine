@@ -1,0 +1,859 @@
+{
+    "name": "valganciclovir",
+    "comment": "Rx",
+    "other_names": [
+        "Valcyte"
+    ],
+    "classes": [
+        "Antivirals",
+        "CMV",
+        "Antivirals",
+        "Other"
+    ],
+    "source": "https://reference.medscape.com/drug/valcyte-valganciclovir-342632",
+    "pregnancy": {
+        "common": [
+            "After oral administration, valganciclovir (prodrug) converts to ganciclovir (active drug) and, therefore, valganciclovir is expected to have reproductive toxicity"
+        ],
+        "specific": [
+            {
+                "type": "Clinical considerations",
+                "description": [
+                    "Most maternal CMV infections are asymptomatic or they may be associated with a self-limited mononucleosis-like syndrome; however, in immunocompromised patients (i.e., transplant patients or patients with AIDS)",
+                    "CMV infections may be symptomatic and may result in significant maternal morbidity and mortality; transmission of CMV to the fetus is a result of maternal viremia and transplacental infection; perinatal infection can also occur from exposure of the neonate to CMV shedding in the genital tract; approximately 10% of children with congenital CMV infection are symptomatic at birth; mortality in these infants is about 10% and approximately 50-90% of symptomatic surviving newborns experience significant morbidity, including mental retardation, sensorineural hearing loss, microcephaly, seizures, and other medical problems; risk of congenital CMV infection resulting from primary maternal CMV infection may be higher and of greater severity than that resulting from maternal reactivation of CMV infection",
+                    "Females of reproductive potential should undergo pregnancy testing before initiation of therapy"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females: Because of mutagenic and teratogenic potential, females of reproductive potential should be advised to use effective contraception during treatment and for at least 30 days following treatment",
+                    "Males: Because of its mutagenic potential, males should be advised to use condoms during and for at least 90 days following, treatment"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on animal data and limited human data, at recommended human doses the drug may cause temporary or permanent inhibition of spermatogenesis in males and may cause suppression of fertility in females; advise patients that fertility may be impaired with therapy"
+                ]
+            },
+            {
+                "type": "Animal data",
+                "description": [
+                    "When given to pregnant rabbits at dosages resulting in 2 times the human exposure (based on AUC), ganciclovir caused malformations in multiple organs of the fetuses; maternal and fetal toxicity also observed in pregnant mice and rabbits",
+                    "Therapy has the potential to cause birth defects; pregnancy should be avoided in female patients taking this drug and in females with male partners taking the drug; females of reproductive potential should be advised to use effective contraception during treatment and for at least 30 days following treatment because of the Impairment of infertility"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data available regarding presence of valganciclovir (prodrug) or ganciclovir (active drug) in human milk, effects on breastfed infant or on milk production; animal data indicate that ganciclovir is excreted in milk of lactating rats",
+            "The Centers for Disease Control and Prevention recommend that HIV-infected mothers not breastfeed their infants to avoid risking postnatal transmission of HIV; advise nursing mothers that breastfeeding is not recommended during treatment because of potential for serious adverse events in nursing infants and because of potential for transmission of HIV"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Hematologic toxicity: Severe leukopenia, neutropenia, anemia, thrombocytopenia, pancytopenia, and bone marrow failure including aplastic reported",
+                "Impaired fertility: Based on animal data and limited human data, valganciclovir may cause temporary or permanent inhibition of spermatogenesis in males and suppression of fertility in females",
+                "Fetal toxicity: Based on animal data, valganciclovir has the potential to cause birth defects in humans",
+                "Mutagenesis and carcinogenesis: Based on animal data, valganciclovir has the potential to cause cancers in humans"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "History of clinically significant hypersensitivity reaction (eg, anaphylaxis) to valganciclovir, ganciclovir, or excipients"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "May be teratogenic or embryotoxic, avoid pregnancy; male patients advised to use barrier method during and for 90 days after treatment (see Pregnancy)",
+                "Females of reproductive potential should be advised to use effective contraception during treatment and for at least 30 days following treatment because of potential risk to fetus; similarly, males should be advised to use condoms during and for at least 90 days following treatment",
+                "Acute renal failure may occur in elderly patients with or without reduced renal function; exercise caution when administering to geriatric patients; dosage reduction is recommended for those with impaired renal function, patients receiving potential nephrotoxic drugs, and patients without adequate hydration"
+            ],
+            "specific": [
+                {
+                    "type": "Hematologic toxicity",
+                    "description": [
+                        "Cytopenia may occur at any time during treatment and may worsen with continued dosing; cell counts usually begin to recover within 3 To 7 days after discontinuing the drug",
+                        "Severe leukopenia, neutropenia, anemia, thrombocytopenia, pancytopenia, and bone marrow failure including aplastic anemia reported; use with caution in patients with pre-existing cytopenias and in patients receiving myelosuppressive drugs or irradiation; in patients with severe leukopenia, neutropenia, anemia and/or thrombocytopenia, treatment with hematopoietic growth factors may be considered",
+                        "Complete blood counts with differential and platelet counts should be performed frequently, especially in patients with renal impairment and in patients in whom ganciclovir or other nucleoside analogs have previously resulted in leukopenia, or in whom neutrophil counts are < 1000 cells/μL at beginning of treatment",
+                        "Increased monitoring for cytopenias may be warranted if therapy with oral ganciclovir is changed to this drug because of increased plasma concentrations of ganciclovir after administering therapy"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Imipenem-cilastatin: Seizures were reported in patients receiving ganciclovir and imipenem-cilastatin; concomitant use is not recommended unless the potential benefits outweigh the risks",
+                        "Cyclosporine or amphotericin B: Coadministration may increase the risk of nephrotoxicity; monitor renal function",
+                        "Mycophenolate mofetil (MMF): Coadministration with valganciclovir may increase the risk of hematological and renal toxicity; monitor for ganciclovir and MMF toxicity",
+                        "Other drugs associated with myelosuppression or nephrotoxicity: Due to potential for increased toxicity, consider concomitant use with valganciclovir only if the potential benefits are judged to outweigh the risks",
+                        "Didanosine: Ganciclovir coadministered with didanosine may increase didanosine levels; monitor for didanosine toxicity (eg, pancreatitis)",
+                        "Probenecid: May increase ganciclovir levels; monitor for evidence of ganciclovir toxicity"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abacavir",
+            "description": {
+                "common": "valganciclovir, abacavir.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talimogene laherparepvec",
+            "description": {
+                "common": "valganciclovir decreases effects of talimogene laherparepvec by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Although no drug interactions studies have been performed, antiherpetic viral agents may interfere with the effectiveness of talimogene laherparepvec."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zidovudine",
+            "description": {
+                "common": "valganciclovir increases toxicity of zidovudine by pharmacodynamic synergism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dichlorphenamide",
+            "description": {
+                "common": "dichlorphenamide and valganciclovir both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "didanosine",
+            "description": {
+                "common": "valganciclovir, didanosine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available. Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "valganciclovir increases toxicity of doxorubicin by pharmacodynamic synergism. Use Caution/Monitor. Inreased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "valganciclovir increases toxicity of doxorubicin liposomal by pharmacodynamic synergism. Use Caution/Monitor. Inreased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "valganciclovir, elvitegravir/cobicistat/emtricitabine/tenofovir DF.\nEither increases toxicity of the other by decreasing renal clearance. Use Caution/Monitor. Toxicity may result from coadministration of emtricitabine and tenofovir with other drugs that are also primarily excreted by glomerular filtration and/or active tubular secretion ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "emtricitabine",
+            "description": {
+                "common": "valganciclovir, emtricitabine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available. Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lamivudine",
+            "description": {
+                "common": "valganciclovir, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available.  Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "mycophenolate will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pivmecillinam",
+            "description": {
+                "common": "pivmecillinam, valganciclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "probenecid will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temocillin",
+            "description": {
+                "common": "temocillin, valganciclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "valganciclovir increases levels of tenofovir DF by Other (see comment). Use Caution/Monitor. \nComment: Coadministration of tenofovir with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of tenofovir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "ticarcillin, valganciclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of valganciclovir by immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, valganciclovir.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Coadministration with drugs associated with nephrotoxicity may increase the risk for acute and/or chronic nephrotoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "aceclofenac will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acemetacin",
+            "description": {
+                "common": "acemetacin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acyclovir",
+            "description": {
+                "common": "acyclovir will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aminohippurate sodium",
+            "description": {
+                "common": "aminohippurate sodium will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amphotericin B deoxycholate",
+            "description": {
+                "common": "valganciclovir increases toxicity of amphotericin B deoxycholate by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "balsalazide",
+            "description": {
+                "common": "balsalazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefadroxil",
+            "description": {
+                "common": "cefadroxil will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefamandole",
+            "description": {
+                "common": "cefamandole will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefpirome",
+            "description": {
+                "common": "cefpirome will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ceftibuten",
+            "description": {
+                "common": "ceftibuten will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cephalexin",
+            "description": {
+                "common": "cephalexin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "chlorothiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "chlorpropamide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "chlorthalidone will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "cyclopenthiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dapsone",
+            "description": {
+                "common": "valganciclovir increases toxicity of dapsone by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "didanosine",
+            "description": {
+                "common": "valganciclovir increases levels of didanosine by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "entecavir",
+            "description": {
+                "common": "valganciclovir, entecavir.\nEither increases effects of the other by decreasing renal clearance. Minor/Significance Unknown. Coadministration with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of either entecavir or the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "flucytosine",
+            "description": {
+                "common": "valganciclovir increases toxicity of flucytosine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "ganciclovir will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "hydrochlorothiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "indapamide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ketorolac intranasal will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "lornoxicam will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mesalamine",
+            "description": {
+                "common": "mesalamine will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "methyclothiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "metolazone will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "oxaprozin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "parecoxib will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "valganciclovir increases toxicity of pentamidine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "rose hips will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "salicylates (non-asa) will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "valganciclovir increases toxicity of sulfamethoxazole by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "tolfenamic acid will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "valganciclovir increases toxicity of vinblastine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "valganciclovir increases toxicity of vincristine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "valganciclovir increases toxicity of vincristine liposomal by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "willow bark will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Retinal detachment",
+            "percent": null
+        },
+        {
+            "name": "eye pain",
+            "percent": null
+        },
+        {
+            "name": "Dyspepsia",
+            "percent": null
+        },
+        {
+            "name": "constipation",
+            "percent": null
+        },
+        {
+            "name": "abdominal distention",
+            "percent": null
+        },
+        {
+            "name": "mouth ulceration",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "pain",
+            "percent": null
+        },
+        {
+            "name": "malaise",
+            "percent": null
+        },
+        {
+            "name": "asthenia",
+            "percent": null
+        },
+        {
+            "name": "chills",
+            "percent": null
+        },
+        {
+            "name": "peripheral edema",
+            "percent": null
+        },
+        {
+            "name": "Abnormal hepatic function",
+            "percent": null
+        },
+        {
+            "name": "Candida infections including oral candidiasis",
+            "percent": null
+        },
+        {
+            "name": "upper respiratory tract infection",
+            "percent": null
+        },
+        {
+            "name": "influenza",
+            "percent": null
+        },
+        {
+            "name": "urinary tract infection",
+            "percent": null
+        },
+        {
+            "name": "pharyngitis",
+            "percent": null
+        },
+        {
+            "name": "nasopharyngitis",
+            "percent": null
+        },
+        {
+            "name": "postoperative wound infection",
+            "percent": null
+        },
+        {
+            "name": "Postoperative complications",
+            "percent": null
+        },
+        {
+            "name": "wound secretion",
+            "percent": null
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": null
+        },
+        {
+            "name": "hyperkalemia",
+            "percent": null
+        },
+        {
+            "name": "hypophosphatemia",
+            "percent": null
+        },
+        {
+            "name": "weight decreased",
+            "percent": null
+        },
+        {
+            "name": "Back pain",
+            "percent": null
+        },
+        {
+            "name": "myalgia",
+            "percent": null
+        },
+        {
+            "name": "arthralgia",
+            "percent": null
+        },
+        {
+            "name": "muscle spasms",
+            "percent": null
+        },
+        {
+            "name": "Insomnia",
+            "percent": null
+        },
+        {
+            "name": "neuropathy peripheral",
+            "percent": null
+        },
+        {
+            "name": "dizziness",
+            "percent": null
+        },
+        {
+            "name": "Depression",
+            "percent": null
+        },
+        {
+            "name": "anxiety",
+            "percent": null
+        },
+        {
+            "name": "Renal impairment",
+            "percent": null
+        },
+        {
+            "name": "creatinine clearance renal decreased",
+            "percent": null
+        },
+        {
+            "name": "blood creatinine increased",
+            "percent": null
+        },
+        {
+            "name": "hematuria",
+            "percent": null
+        },
+        {
+            "name": "Cough",
+            "percent": null
+        },
+        {
+            "name": "dyspnea",
+            "percent": null
+        },
+        {
+            "name": "Dermatitis",
+            "percent": null
+        },
+        {
+            "name": "night sweats",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        }
+    ]
+}

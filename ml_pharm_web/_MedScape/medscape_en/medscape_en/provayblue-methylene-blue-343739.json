@@ -1,0 +1,902 @@
+{
+    "name": "methylene blue",
+    "comment": "Rx",
+    "other_names": [
+        "Provayblue"
+    ],
+    "classes": [
+        "Antidotes",
+        "Other"
+    ],
+    "source": "https://reference.medscape.com/drug/provayblue-methylene-blue-343739",
+    "pregnancy": {
+        "common": [
+            "May cause fetal harm when administered to a pregnant woman",
+            "Intra-amniotic injection of pregnant women with a methylene blue class product during the second trimester was associated with neonatal intestinal atresia and fetal death"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "There is no information regarding the presence of methylene blue in human milk, the effects on the breastfed infant, or the effects on milk production",
+            "Because of the potential for serious adverse reactions, including genotoxicity discontinue breastfeeding during and for up to 8 days after treatment"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "May cause serious or fatal serotonergic syndrome when coadministered with serotonergic drugs",
+                "Avoid coadministration with SSRIs, SNRIs, and MAOIs"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Severe hypersensitivity reactions to methylene blue or any other thiazine dye",
+                "Patients with glucose-6-phosphate dehydrogenase deficiency (G6PD) due to the risk of hemolytic anemia"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hypersensitivity reactions (eg, anaphylaxis, angioedema, urticaria, bronchospasm) reported; monitor vital signs and ECG during treatment; if severe hypersensitivity occurs, discontinue drug and initiate supportive treatment (see Administration and Contraindications)",
+                "Methemoglobinemia may not resolve or may rebound after response to treatment due to aryl amines (eg, aniline, sulfa drugs [dapsone]); monitor response to therapy with through resolution of methemoglobinemia",
+                "Patients with G6PD deficiency may not reduce methylene blue to its active form in vivo and thereby be ineffective (see Contraindications)",
+                "The presence of methylene blue in the blood may result in an underestimation of the oxygen saturation reading by pulse oximetry",
+                "A fall in the Bispectral Index (BIS) has been reported following administration of methylene blue class products; if methylene blue is administered during surgery, alternative methods for assessing the depth of anesthesia should be employed",
+                "May cause confusion, dizziness, and disturbances in vision; patients should refrain from driving or engaging in hazardous occupations or activities",
+                "Methylene blue is a blue dye that passes freely into the urine and may interfere with the interpretation of any urine test which relies on a blue indicator (eg, dipstick test for leukocyte esterase)",
+                "Methylene blue is extensively metabolized in the liver; monitor patients with any hepatic impairment for toxicities and potential drug interactions for an extended period of time following treatment",
+                "Approximately 40% of methylene blue is excreted by the kidneys; patients with any renal impairment should be monitored for toxicities and potential drug interactions for an extended period of time following treatment"
+            ],
+            "specific": [
+                {
+                    "type": "Hemolysis",
+                    "description": [
+                        "Hemolysis can occur during treatment of methemoglobinemia with methylene blue; laboratory testing may show Heinz bodies, elevated indirect bilirubin, and low haptoglobin, but the Coombs test is negative; anemia may occur; hemolytic anemia may not be apparent until ≥1 day after; anemia may require red blood cell transfusions",
+                        "Use lowest effective number of doses to treat methemoglobinemia; discontinue and consider alternative treatments of methemoglobinemia if severe hemolysis occurs"
+                    ]
+                },
+                {
+                    "type": "Serotonin syndrome",
+                    "description": [
+                        "Patients treated should be monitored for emergence of serotonin syndrome; if symptoms of serotonin syndrome occur, discontinue use, and initiate supportive treatment; inform patients of the increased risk of serotonin syndrome and advise them not to take serotonergic drugs within 72 hours after last dose",
+                        "Symptoms associated with serotonin syndrome may include mental status changes (eg, agitation, hallucinations, delirium, and coma), autonomic instability (eg, tachycardia, labile blood pressure, dizziness, diaphoresis, flushing, and hyperthermia), neuromuscular symptoms (eg, tremor, rigidity, myoclonus, hyperreflexia, and incoordination), seizures, and/or gastrointestinal symptoms(eg, nausea, vomiting, diarrhea); avoid concomitant use with serotonergic drugs",
+                        "Avoid coadministration with serotonergic psychiatric drugs (eg, SSRIs, SNRIs, TCAs, MAOIs) due to increased risk of serotonin syndrome, unless indicated for life-threatening conditions or when urgent treatment is required such as emergency treatment of methemoglobinemia, ifosfamide-induced encephalopathy, or cyanide poisoning; methylene blue may increase serotonin CNS levels by MAO-A inhibition",
+                        "If methylene blue must be administered to a patient currently taking a serotonergic drug, stop serotonergic drug immediately and monitor for CNS toxicity; serotonergic therapy may be resumed 24 hours after the last dose of methylene blue, or after 2 weeks of monitoring (5 weeks if fluoxetine was taken), whichever comes first",
+                        "If possible, discontinue serotonergic psychiatric medication at least 2 weeks in advance of methylene blue treatment; fluoxetine should be stopped at least 5 weeks in advance due to longer half-life",
+                        "Also, see Black Box Warnings"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "cyproheptadine",
+            "description": {
+                "common": "methylene blue, cyproheptadine. Other (see comment). Contraindicated. \nComment: MAO inhibitors may prolong and intensify the anticholinergic effects of antihistamines. Cyproheptadine may diminish the serotonergic effect of MAO inhibitors."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "desvenlafaxine",
+            "description": {
+                "common": "methylene blue and desvenlafaxine both increase  serotonin levels. Contraindicated. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "methylene blue, deutetrabenazine.\nEither increases toxicity of the other by sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Contraindicated. Deutetrabenazine should not be used in combination with an MAOI, or within 14 days of discontinuing therapy with an MAOI. If methylene blue must be used emergently, discontinue deutetrabenazine and monitor for adverse effects. Deutetrabenazine may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "methylene blue and fluoxetine both increase  serotonin levels. Contraindicated. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue fluoxetine immediately and monitor for CNS toxicity. Fluoxetine may be resumed 24 hours after last methylene blue dose or after 5 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "vortioxetine",
+            "description": {
+                "common": "methylene blue increases toxicity of vortioxetine by serotonin levels. Contraindicated. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be urgently administered, discontinue vortioxetine immediately and monitor for serotonin syndrome.  Monitor for serotonin syndrome for 3 weeks or 24 hr after last methylene blue dose, whichever comes first. Vortioxetine may be resumed 24 hr after last methylene blue dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "5-HTP",
+            "description": {
+                "common": "methylene blue and 5-HTP both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last linezolid dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "methylene blue and alfentanil both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "almotriptan",
+            "description": {
+                "common": "almotriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "methylene blue and amitriptyline both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "amoxapine and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "belladonna alkaloids",
+            "description": {
+                "common": "methylene blue and belladonna alkaloids both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "belladonna and opium",
+            "description": {
+                "common": "methylene blue and belladonna and opium both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "benzhydrocodone/acetaminophen",
+            "description": {
+                "common": "methylene blue increases toxicity of benzhydrocodone/acetaminophen by serotonin levels. Avoid or Use Alternate Drug. MAOI interactions with opioids may manifest as serotonin syndrome or opioid toxicity (eg, respiratory depression, coma). Opioids are not recommended for patients taking MAOIs or within 14 days of stopping MAOIs. If urgent opioid treatment needed, use test doses and frequent titration of small doses to treat pain while closely monitoring blood pressure and signs and symptoms of CNS and respiratory depression. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "methylene blue and buprenorphine both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "bupropion and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buspirone",
+            "description": {
+                "common": "methylene blue and buspirone both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "methylene blue and butalbital both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butorphanol",
+            "description": {
+                "common": "methylene blue and butorphanol both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "methylene blue and citalopram both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "methylene blue and clomipramine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "methylene blue and cocaine topical both increase  serotonin levels. Avoid or Use Alternate Drug.  Methylene blue may increase serotonin as a result of MAO-A inhibition. Cocaine inhibits presynaptic reuptake of serotonin. Monitor for CNS toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "methylene blue and codeine both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclobenzaprine",
+            "description": {
+                "common": "methylene blue and cyclobenzaprine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "methylene blue and desipramine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexfenfluramine",
+            "description": {
+                "common": "methylene blue and dexfenfluramine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dextroamphetamine",
+            "description": {
+                "common": "methylene blue and dextroamphetamine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dextromethorphan",
+            "description": {
+                "common": "methylene blue and dextromethorphan both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "methylene blue and dihydroergotamine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "methylene blue and dihydroergotamine intranasal both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "methylene blue and doxepin both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxepin cream",
+            "description": {
+                "common": "methylene blue and doxepin cream both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxylamine",
+            "description": {
+                "common": "methylene blue and doxylamine both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "duloxetine",
+            "description": {
+                "common": "methylene blue and duloxetine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "eletriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "methylene blue and ergotamine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "methylene blue and escitalopram both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "methylene blue and fentanyl both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine increases toxicity of methylene blue by serotonin levels. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "frovatriptan",
+            "description": {
+                "common": "frovatriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydrocodone",
+            "description": {
+                "common": "methylene blue increases toxicity of hydrocodone by serotonin levels. Avoid or Use Alternate Drug. MAOI interactions with opioids may manifest as serotonin syndrome or opioid toxicity (eg, respiratory depression, coma). Opioids are not recommended for patients taking MAOIs or within 14 days of stopping MAOIs. If urgent opioid treatment needed, use test doses and frequent titration of small doses to treat pain while closely monitoring blood pressure and signs and symptoms of CNS and respiratory depression.  If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "methylene blue and hydromorphone both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "methylene blue and imipramine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "methylene blue and isocarboxazid both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "methylene blue and isoniazid both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue and isoniazid may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue isoniazid immediately and monitor for CNS toxicity. Isoniazid may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "L-tryptophan",
+            "description": {
+                "common": "methylene blue and L-tryptophan both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "methylene blue and levodopa both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levomilnacipran",
+            "description": {
+                "common": "methylene blue and levomilnacipran both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levorphanol",
+            "description": {
+                "common": "methylene blue and levorphanol both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "linezolid",
+            "description": {
+                "common": "methylene blue and linezolid both increase  serotonin levels. Avoid or Use Alternate Drug. Both drugs increase serotonin as a result of MAO-A inhibition. Avoid coadministration if possible. If coadministered, monitor for CNS toxicity. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lsd",
+            "description": {
+                "common": "methylene blue and lsd both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "methylene blue and maprotiline both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "meperidine",
+            "description": {
+                "common": "methylene blue and meperidine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "methylene blue will increase the level or effect of metformin by  unspecified interaction mechanism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "methylene blue and methadone both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "milnacipran",
+            "description": {
+                "common": "methylene blue and milnacipran both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "methylene blue and mirtazapine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "methylene blue and morphine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue morphine (if possible) and monitor for CNS toxicity. Morphine may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "naratriptan",
+            "description": {
+                "common": "naratriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "methylene blue and nefazodone both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "methylene blue and nortriptyline both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "methylene blue and oxycodone both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "methylene blue and paroxetine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentazocine",
+            "description": {
+                "common": "methylene blue and pentazocine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue pentazocine (if possible) and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "methylene blue and phenelzine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "procarbazine",
+            "description": {
+                "common": "methylene blue and procarbazine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "methylene blue and promethazine both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "methylene blue and protriptyline both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rasagiline",
+            "description": {
+                "common": "methylene blue and rasagiline both increase  serotonin levels. Avoid or Use Alternate Drug. Both methylene blue and rasagiline may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "remifentanil",
+            "description": {
+                "common": "methylene blue and remifentanil both increase  serotonin levels. Avoid or Use Alternate Drug. If drug combination must be administered, monitor for evidence of serotonergic  or opioid-related toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rizatriptan",
+            "description": {
+                "common": "rizatriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "methylene blue, safinamide.\nEither increases toxicity of the other by serotonin levels. Avoid or Use Alternate Drug. Both methylene blue and safinamide may increase serotonin as a result of MAO-A inhibition. If IV methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "SAMe",
+            "description": {
+                "common": "methylene blue and SAMe both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline",
+            "description": {
+                "common": "selegiline and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Both methylene blue and selegiline may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline transdermal",
+            "description": {
+                "common": "selegiline transdermal and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Both methylene blue  and selegiline may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "methylene blue and sertraline both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "methylene blue and St John's Wort both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sufentanil SL",
+            "description": {
+                "common": "methylene blue increases toxicity of sufentanil SL by serotonin levels. Avoid or Use Alternate Drug. MAOI interactions with opioids may manifest as serotonin syndrome or opioid toxicity (eg, respiratory depression, coma). Opioids are not recommended for patients taking MAOIs or within 14 days of stopping MAOIs. If urgent opioid treatment needed, use test doses and frequent titration of small doses to treat pain while closely monitoring blood pressure and signs and symptoms of CNS and respiratory depression. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sumatriptan",
+            "description": {
+                "common": "sumatriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sumatriptan intranasal",
+            "description": {
+                "common": "sumatriptan intranasal and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tedizolid",
+            "description": {
+                "common": "tedizolid, methylene blue.\nEither increases effects of the other by Mechanism: pharmacodynamic synergism. Avoid or Use Alternate Drug. both increase levels of serotonin; increased risk of serotonin syndrome."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tramadol",
+            "description": {
+                "common": "methylene blue and tramadol both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "methylene blue and tranylcypromine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "methylene blue and trazodone both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "methylene blue and trimipramine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "methylene blue, valbenazine. Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of valbenazine with MAOIs may increase monoamine neurotransmitter concentration in synapses, potentially increasing risk of serotonin syndrome or attenuating valbenazine effect."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "methylene blue and venlafaxine both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilazodone",
+            "description": {
+                "common": "methylene blue and vilazodone both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zolmitriptan",
+            "description": {
+                "common": "zolmitriptan and methylene blue both increase  serotonin levels. Avoid or Use Alternate Drug. Methylene blue may increase serotonin as a result of MAO-A inhibition. If methylene blue must be administered, discontinue serotonergic drug immediately and monitor for CNS toxicity. Serotonergic therapy may be resumed 24 hours after last methylene blue dose or after 2 weeks of monitoring, whichever comes first."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "methylene blue will increase the level or effect of artesunate by  decreasing metabolism. Use Caution/Monitor. Coadministration may increase active artesunate metabolite (DHA) by inhibiting UGT. Monitor for increased adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "methylene blue, buprenorphine subdermal implant.\nEither increases toxicity of the other by serotonin levels. Use Caution/Monitor. Concomitant use could result in life-threatening serotonin syndrome. If concomitant use is warranted, carefully observe the patient, particularly during treatment initiation, and during dose adjustment of the serotonergic drug. Discontinue buprenorphine if serotonin syndrome is suspected."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "methylene blue, buprenorphine, long-acting injection.\nEither increases toxicity of the other by serotonin levels. Modify Therapy/Monitor Closely. Concomitant use could result in life-threatening serotonin syndrome or opioid toxicity (eg, respiratory depression, coma). Buprenorphine long-acting injection is not recommended for patients taking MAOIs or within 14 days of stopping such treatment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "methylene blue increases effects of lasmiditan by serotonin levels. Use Caution/Monitor. Coadministration may increase risk of serotonin syndrome."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levodopa inhaled",
+            "description": {
+                "common": "levodopa inhaled increases effects of methylene blue by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methoxsalen",
+            "description": {
+                "common": "methoxsalen, methylene blue.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive photosensitizing effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oliceridine",
+            "description": {
+                "common": "methylene blue, oliceridine.\nEither increases effects of the other by serotonin levels. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tapentadol",
+            "description": {
+                "common": "methylene blue and tapentadol both increase  serotonin levels. Modify Therapy/Monitor Closely."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Pain in extremity",
+            "percent": "84"
+        },
+        {
+            "name": "Chromaturia",
+            "percent": "74"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "20"
+        },
+        {
+            "name": "Feeling hot",
+            "percent": "17"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "16"
+        },
+        {
+            "name": "Hyperhidrosis",
+            "percent": "13"
+        },
+        {
+            "name": "Nausea",
+            "percent": "13"
+        },
+        {
+            "name": "Skin discoloration",
+            "percent": "13"
+        },
+        {
+            "name": "Headache",
+            "percent": "10"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "9"
+        },
+        {
+            "name": "Paresthesia oral",
+            "percent": "9"
+        },
+        {
+            "name": "Paresthesia",
+            "percent": "9"
+        },
+        {
+            "name": "Infusion site pain",
+            "percent": "6"
+        },
+        {
+            "name": "Feeling cold",
+            "percent": "6"
+        },
+        {
+            "name": "Pallor",
+            "percent": "5"
+        },
+        {
+            "name": "Contact dermatitis",
+            "percent": "5"
+        },
+        {
+            "name": "Syncope",
+            "percent": "4"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "4"
+        },
+        {
+            "name": "Anxiety",
+            "percent": "4"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "4"
+        },
+        {
+            "name": "Chest discomfort",
+            "percent": "4"
+        },
+        {
+            "name": "Back pain",
+            "percent": "2"
+        },
+        {
+            "name": "Cold sweat",
+            "percent": "2"
+        },
+        {
+            "name": "Dizziness postural",
+            "percent": "2"
+        },
+        {
+            "name": "Muscle spasms",
+            "percent": "2"
+        },
+        {
+            "name": "Presyncope",
+            "percent": "2"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "2"
+        },
+        {
+            "name": "Chills",
+            "percent": "2"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "2"
+        },
+        {
+            "name": "Discomfort",
+            "percent": "2"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "2"
+        },
+        {
+            "name": "Erythema",
+            "percent": "2"
+        },
+        {
+            "name": "Hypoesthesia oral",
+            "percent": "2"
+        },
+        {
+            "name": "Infusion site discomfort",
+            "percent": "2"
+        },
+        {
+            "name": "Limb discomfort",
+            "percent": "2"
+        },
+        {
+            "name": "Oral discomfort",
+            "percent": "2"
+        },
+        {
+            "name": "Catheter site pain",
+            "percent": "2"
+        },
+        {
+            "name": "Ecchymosis",
+            "percent": "2"
+        }
+    ]
+}

@@ -1,0 +1,923 @@
+{
+    "name": "ivabradine",
+    "comment": "Rx",
+    "other_names": [
+        "Corlanor"
+    ],
+    "classes": [
+        "I(f) Current Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/corlanor-ivabradine-999983",
+    "pregnancy": {
+        "common": [
+            "May cause fetal toxicity when administered to a pregnant woman, based on findings in animal studies",
+            "There are no adequate and well-controlled studies in pregnant women to inform any drug-associated risks",
+            "Advise females of childbearing potential to use effective contraception"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies, embryo-fetal toxicity and teratogenic effects (eg, abnormal shape of the heart, interventricular septal defect, complex anomalies of primary arteries) were observed",
+                    "Increased postnatal mortality was associated with these teratogenic effects in rats",
+                    "In pregnant rabbits, increased postimplantation loss was noted at an exposure 5 times the human exposure at the MRHD; lower doses were not tested in rabbits"
+                ]
+            },
+            {
+                "type": "Clinical considerations",
+                "description": [
+                    "Stroke volume and heart rate increase during pregnancy, increasing cardiac output, especially during the first trimester",
+                    "Pregnant patients with LVEF <35% on maximally tolerated doses of beta-blockers may be particularly heart rate dependent for augmenting cardiac output",
+                    "Therefore, closely follow pregnant patients starting treatment, especially during the first trimester, for destabilization of their congestive heart failure; monitor pregnant women with chronic heart failure in 3rd trimester of pregnancy for preterm birth"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Animal studies have shown, however, that ivabradine is present in rat milk",
+            "Because of potential risk to breastfed infants, breastfeeding is not recommended"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Acute decompensated heart failure",
+                "Clinically significant hypotension",
+                "Sick sinus syndrome, sinoatrial block, or third-degree AV block (unless a functioning demand pacemaker is present)",
+                "Clinically significant bradycardia",
+                "Severe hepatic impairment",
+                "Pacemaker dependence (heart rate maintained exclusively by the pacemaker)",
+                "Concomitant use of strong CYP3A4 inhibitors"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Increases the risk of atrial fibrillation; regularly monitor cardiac rhythm and discontinue drug if atrial fibrillation develops",
+                "May cause fetal toxicity when administered to a pregnant woman; inform women of childbearing potential to use effective contraception"
+            ],
+            "specific": [
+                {
+                    "type": "Bradycardia and conduction disturbances ",
+                    "description": [
+                        "Bradycardia, sinus arrest, and heart block reported",
+                        "Bradycardia may increase risk of QT prolongation which may lead to severe ventricular arrhythmias, including torsade de pointes, especially in patients with risk factors",
+                        "Risk factors for bradycardia include sinus node dysfunction, conduction defects (eg, first or second degree AV block, bundle-branch block), ventricular dyssynchrony, and use of other negative chronotropes (eg, beta-blockers, clonidine, digoxin, diltiazem, verapamil, amiodarone)",
+                        "Bradycardia and first-degree heart block were observed in pediatric patients; bradycardia was managed through dose titration, but did not result in study drug discontinuation",
+                        "Avoid use in patients with second-degree AV block unless a functioning demand pacemaker is present"
+                    ]
+                },
+                {
+                    "type": "Pacemakers",
+                    "description": [
+                        "Dosing is based on heart rate reduction, targeting a heart rate of 50-60 bpm",
+                        "Patients with demand pacemakers set to a rate ≥60 bpm cannot achieve a target heart rate <60 bpm, and these patients were excluded from clinical trials",
+                        "Not recommended in patients with demand pacemakers set to rates ≥60 bpm"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Coadministration of verapamil or diltiazem with ivabradine increases ivabradine systemic exposure and should be avoided",
+                        "Concomitant use with negative chronotropes (eg, digoxin, amiodarone, beta-blockers) may increase the risk of bradycardia; monitor heart rate in patients taking ivabradine with other negative chronotropes",
+                        "Coadministration with CYP3A4 inhibitors and inducers",
+                        "Primarily metabolized by CYP3A4",
+                        "Coadministration of CYP3A4 inhibitors increases ivabradine plasma concentrations",
+                        "Increased plasma concentrations may exacerbate bradycardia and conduction disturbances",
+                        "Contraindicated with strong CYP3A4 inhibitors",
+                        "Avoid use with moderate CYP3A4 inhibitors",
+                        "Avoid use with CYP3A4 inducers; coadministration may decrease ivabradine plasma concentrations"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with itraconazole is contraindicated during and 2 weeks after of itraconazole treatment."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Nirmatrelvir/ritonavir is contraindicated with drugs that are highly dependent on CYP3A for clearance and for which elevated concentrations are associated with serious and/or life-threatening reactions. May increase risk of bradycardia or conduction disturbances associated with ivabradine. "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bicalutamide",
+            "description": {
+                "common": "bicalutamide will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "lidocaine will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "netupitant/palonosetron will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "schisandra",
+            "description": {
+                "common": "schisandra will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod, ivabradine.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Because of the potential additive effects on heart rate, siponimod should generally not be initiated in patients taking QT prolonging drugs with known arrhythmogenic properties, heart rate lowering calcium channel blockers, or other drugs that may decrease heart rate. If treatment considered, obtain cardiology consult regarding switching to non-heart-rate lowering drugs or appropriate monitoring for treatment initiation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zileuton",
+            "description": {
+                "common": "zileuton will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ivabradine with moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "ivabradine, acebutolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acetylcholine",
+            "description": {
+                "common": "ivabradine, acetylcholine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "ivabradine, amiodarone.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "ivabradine, atenolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "ivabradine, betaxolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "ivabradine, bisoprolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "ivabradine, carvedilol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "ivabradine, clonidine.\nEither decreases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "ivabradine, digoxin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "ivabradine, dronedarone.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of ivabradine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "ivabradine, esmolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "ivabradine, labetalol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "ivabradine, metoprolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "ivabradine, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "ivabradine, nebivolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "ivabradine, penbutolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "ivabradine, pindolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "ivabradine, propranolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "ivabradine, sotalol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "ivabradine, timolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil, ivabradine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Bradycardia",
+            "percent": "10"
+        },
+        {
+            "name": "Hypertension or increased blood pressure",
+            "percent": "8.9"
+        },
+        {
+            "name": "Atrial fibrillation",
+            "percent": "8.3"
+        },
+        {
+            "name": "Luminous phenomena",
+            "percent": "2.8"
+        },
+        {
+            "name": "phosphenes",
+            "percent": null
+        },
+        {
+            "name": "or visual brightness",
+            "percent": null
+        },
+        {
+            "name": "Syncope",
+            "percent": null
+        },
+        {
+            "name": "hypotension",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "erythema",
+            "percent": null
+        },
+        {
+            "name": "rash",
+            "percent": null
+        },
+        {
+            "name": "pruritus",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "Vertigo",
+            "percent": null
+        },
+        {
+            "name": "diplopia",
+            "percent": null
+        },
+        {
+            "name": "visual impairment",
+            "percent": null
+        },
+        {
+            "name": "Torsade de pointes",
+            "percent": null
+        },
+        {
+            "name": "ventricular fibrillation",
+            "percent": null
+        },
+        {
+            "name": "ventricular tachycardia",
+            "percent": null
+        }
+    ]
+}

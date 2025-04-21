@@ -1,0 +1,617 @@
+{
+    "name": "clofazimine",
+    "comment": "Rx",
+    "other_names": [
+        "Lamprene"
+    ],
+    "classes": [
+        "Antitubercular Agents"
+    ],
+    "source": "https://reference.medscape.com/drug/clofazimine-342661",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Crosses the human placenta; the skin of infants born to women who had received the drug during pregnancy was found to be deeply pigmented at birth",
+            "Lactation: Distributed in human breast milk; do not administer to breastfeeding women unless clearly indicated"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Distributed in human breast milk; do not administer to breastfeeding women unless clearly indicated"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                " Contraindicated in patients with known hypersensitivity to clofazimine or any of the excipients of clofazimine"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Skin dryness and ichthyosis may occur; apply oil to skin may relieve this effect"
+            ],
+            "specific": [
+                {
+                    "type": "Skin discoloration",
+                    "description": [
+                        "Causes orange-pink to brownish-black discoloration of skin, as well as discoloration of conjunctivae, tears, sweat, sputum, urine and feces in 75-100% of patients; advise patients that skin discoloration is likely to occur and may take several months or years to reverse after conclusion of therapy; other skin reactions associated with therapy include ichthyosis, dry skin and pruritus",
+                        "Advise patients regarding skin discoloration and monitor for depression or suicidal ideation during therapy (2 suicides reported)"
+                    ]
+                },
+                {
+                    "type": "Severe gastrointestinal symptoms",
+                    "description": [
+                        "Caution with GI problems (eg, abdominal pain and diarrhea)",
+                        "Dosages >100 mg daily should be given for as short a period as possible (<3 months) and only under close medical supervision",
+                        "Severe abdominal symptoms have necessitated exploratory laparotomies; rare reports have included splenic infarction, bowel obstruction, and GI bleeding; deaths reported with severe abdominal symptoms",
+                        "May accumulate in various organs as crystals, including mesenteric lymph nodes and histiocytes at lamina propria of intestinal mucosa, spleen and liver; deposition in intestinal mucosa may lead to intestinal obstruction that may necessitate exploratory laparotomy; splenic infarction, gastrointestinal bleeding, and death reported; ; doses > 100 mg daily should be given for as short period as possible < 3 months) and only under close medical supervision",
+                        "If patient complains of pain in abdomen, nausea, vomiting, or diarrhea, initiate appropriate medical assessment and reduce daily dose, increase dosing interval, or discontinue therapy"
+                    ]
+                },
+                {
+                    "type": "QT Prolongation",
+                    "description": [
+                        "Cases of Torsades de Pointes with QT prolongation reported in patients receiving dosage regimens containing > 100 mg daily or in combination with QT prolonging medications; for QT prolongation and Torsades de Pointes cases, patient must remain under medical surveillance; monitor electrocardiograms (ECGs) for QT prolongation and cardiac rhythm disturbances",
+                        "QT prolongation reported in patients receiving therapy in combination with bedaquiline at recommended dosage regimen for each drug; monitor ECGs if coadministered to patients receiving bedaquiline, and discontinue therapy if clinically significant ventricular arrhythmia noted or if QTcF interval is 500 ms or greater; if syncope occurs, obtain ECG to detect QT prolongation"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib and clofazimine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin and clofazimine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "adagrasib, clofazimine.\nEither increases effects of the other by QTc interval. Avoid or Use Alternate Drug. Each drug prolongs the QTc interval, which may increased the risk of Torsade de pointes, other serious arryhthmias, and sudden death. If coadministration unavoidable, more frequent monitoring is recommended for such patients."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "clofazimine and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels and/or prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "clofazimine and glasdegib both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxychloroquine sulfate and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of QTc prolonging drugs with ivosidenib or replace with alternate therapies. If coadministration of a QTc prolonging drug is unavoidable, monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "macimorelin and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug. Macimorelin causes an increase of ~11 msec in the corrected QT interval. Avoid coadministration with drugs that prolong QT interval, which could increase risk for developing torsade de pointes-type ventricular tachycardia. Allow sufficient washout time of drugs that are known to prolong the QT interval before administering macimorelin."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "mobocertinib and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, reduce mobocertinib dose and monitor QTc interval more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "clofazimine and pitolisant both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib and clofazimine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and clofazimine both increase  QTc interval. Use Caution/Monitor. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin increases toxicity of clofazimine by QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine increases toxicity of clofazimine by QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "dofetilide increases toxicity of clofazimine by QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "escitalopram increases toxicity of clofazimine by QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "clofazimine and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gadobenate",
+            "description": {
+                "common": "gadobenate and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "clofazimine and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "gilteritinib and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "clofazimine and lofexidine both increase  QTc interval. Use Caution/Monitor. ECG monitoring is recommended."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "mirtazapine and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "osilodrostat and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin will increase the level or effect of clofazimine by  Other (see comment). Use Caution/Monitor. Monitor for ECG changes if therapy is initiated in patients with drugs known to prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "ozanimod and clofazimine both increase  QTc interval. Modify Therapy/Monitor Closely. The potential additive effects on heart rate, treatment with ozanimod should generally not be initiated in patients who are concurrently treated with QT prolonging drugs with known arrhythmogenic properties."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "selpercatinib increases toxicity of clofazimine by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "clofazimine decreases effects of sodium picosulfate/magnesium oxide/anhydrous citric acid by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of clofazimine by QTc interval. Use Caution/Monitor. Consider predose and post-colonoscopy ECGs in patients at increased risk of serious cardiac arrhythmias. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of clofazimine by QTc interval. Use Caution/Monitor. Consider predose and post-colonoscopy ECGs in patients at increased risk of serious cardiac arrhythmias. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "triclabendazole and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, clofazimine.\nEither increases effects of the other by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "clofazimine decreases levels of rifampin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Skin discoloration",
+            "percent": "75-100"
+        },
+        {
+            "name": "Gastrointestinal",
+            "percent": "40"
+        },
+        {
+            "name": "Abdominal and epigastric pain",
+            "percent": "50"
+        },
+        {
+            "name": "diarrhea",
+            "percent": "8-28"
+        },
+        {
+            "name": "nausea",
+            "percent": "1-5"
+        },
+        {
+            "name": "vomiting",
+            "percent": "1"
+        },
+        {
+            "name": "GI intolerance",
+            "percent": "1"
+        },
+        {
+            "name": "Ichthyosis and dry skin",
+            "percent": "1"
+        },
+        {
+            "name": "Rash and pruritus",
+            "percent": "1"
+        },
+        {
+            "name": "Ocular",
+            "percent": null
+        },
+        {
+            "name": "Conjunctival and corneal pigmentation due to crystal deposits",
+            "percent": null
+        },
+        {
+            "name": "dryness",
+            "percent": null
+        },
+        {
+            "name": "burning",
+            "percent": null
+        },
+        {
+            "name": "itching",
+            "percent": null
+        },
+        {
+            "name": "irritation",
+            "percent": null
+        },
+        {
+            "name": "Discoloration of urine",
+            "percent": null
+        },
+        {
+            "name": "feces",
+            "percent": null
+        },
+        {
+            "name": "sputum",
+            "percent": null
+        },
+        {
+            "name": "sweat",
+            "percent": null
+        },
+        {
+            "name": "Increased blood glucose",
+            "percent": null
+        },
+        {
+            "name": "Increased ESR",
+            "percent": null
+        },
+        {
+            "name": "Skin",
+            "percent": null
+        },
+        {
+            "name": "Phototoxicity",
+            "percent": null
+        },
+        {
+            "name": "erythroderma",
+            "percent": null
+        },
+        {
+            "name": "acneiform eruptions",
+            "percent": null
+        },
+        {
+            "name": "monilial cheilosis",
+            "percent": null
+        },
+        {
+            "name": "Body fluid discoloration and other skin reactions",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal",
+            "percent": null
+        },
+        {
+            "name": "Bowel obstruction",
+            "percent": null
+        },
+        {
+            "name": "GI bleeding",
+            "percent": null
+        },
+        {
+            "name": "anorexia",
+            "percent": null
+        },
+        {
+            "name": "constipation",
+            "percent": null
+        },
+        {
+            "name": "weight loss",
+            "percent": null
+        },
+        {
+            "name": "hepatitis",
+            "percent": null
+        },
+        {
+            "name": "jaundice",
+            "percent": null
+        },
+        {
+            "name": "eosinophilic enteritis",
+            "percent": null
+        },
+        {
+            "name": "enlarged liver",
+            "percent": null
+        },
+        {
+            "name": "Ocular",
+            "percent": null
+        },
+        {
+            "name": "Diminished vision",
+            "percent": null
+        },
+        {
+            "name": "Nervous",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "drowsiness",
+            "percent": null
+        },
+        {
+            "name": "fatigue",
+            "percent": null
+        },
+        {
+            "name": "headache",
+            "percent": null
+        },
+        {
+            "name": "giddiness",
+            "percent": null
+        },
+        {
+            "name": "neuralgia",
+            "percent": null
+        },
+        {
+            "name": "taste disorder",
+            "percent": null
+        },
+        {
+            "name": "Psychiatric",
+            "percent": null
+        },
+        {
+            "name": "Depression secondary to skin discoloration",
+            "percent": null
+        },
+        {
+            "name": "Laboratory",
+            "percent": null
+        },
+        {
+            "name": "Elevated levels of albumin",
+            "percent": null
+        },
+        {
+            "name": "serum bilirubin",
+            "percent": null
+        },
+        {
+            "name": "and AST",
+            "percent": null
+        },
+        {
+            "name": "SGOT",
+            "percent": null
+        },
+        {
+            "name": "eosinophilia",
+            "percent": null
+        },
+        {
+            "name": "hypokalemia",
+            "percent": null
+        },
+        {
+            "name": "Ocular",
+            "percent": null
+        },
+        {
+            "name": "Addition of maculopathy",
+            "percent": null
+        },
+        {
+            "name": "bull",
+            "percent": null
+        },
+        {
+            "name": "s eye retinopathy",
+            "percent": null
+        },
+        {
+            "name": "Other",
+            "percent": null
+        },
+        {
+            "name": "Splenic infarction",
+            "percent": null
+        },
+        {
+            "name": "thromboembolism",
+            "percent": null
+        },
+        {
+            "name": "anemia",
+            "percent": null
+        },
+        {
+            "name": "cystitis",
+            "percent": null
+        },
+        {
+            "name": "bone pain",
+            "percent": null
+        },
+        {
+            "name": "edema",
+            "percent": null
+        },
+        {
+            "name": "fever",
+            "percent": null
+        },
+        {
+            "name": "lymphadenopathy",
+            "percent": null
+        },
+        {
+            "name": "vascular pain",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "name": "simeprevir",
+    "comment": "Discontinued",
+    "other_names": [
+        "Olysio"
+    ],
+    "classes": [
+        "Hepatitis B/Hepatitis C Agents",
+        "HCV Protease Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/olysio-simeprevir-999875",
+    "pregnancy": {
+        "common": [
+            "Simeprevir is coadministered with ribavirin and peginterferon alfa; extreme caution must be taken to avoid pregnancy in female patients and female partners of male patients while taking this combination (see Contraindications)",
+            "Significant teratogenic and/or embryocidal effects have been demonstrated in all animal species exposed to ribavirin; and therefore ribavirin is contraindicated",
+            "Women of childbearing potential and their male partners should not receive ribavirin unless they are using effective contraception (2 reliable forms) during treatment with ribavirin and for 6 months after treatment",
+            "Ribavirin may cause birth defects and fetal death; avoid pregnancy in female patients and female partners of male patients; patients must have a negative pregnancy test prior to therapy; use 2 or more forms of contraception, 1 of these forms of contraception can be a combined oral contraceptive product containing at least 1 mg of norethindrone (lower doses of norethindrone and other forms of hormonal contraception have not been studied or are contraindicated)"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk; because of the potential for adverse reaction, breastfeeding is not recommended"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Test all patients for evidence of current or prior hepatitis B virus (HBV) infection before initiating treatment with HCV direct acting antivirals (DDAs)",
+                "HBV reactivation has been reported in HCV/HBV coinfected patients who were undergoing or had completed treatment with DDAs and were not receiving HBV antiviral therapy",
+                "Some cases have resulted in fulminant hepatitis, hepatic failure, and death",
+                "Monitor HCV/HBV coinfected patients for hepatitis flare or HBV reactivation during HCV treatment and post-treatment follow-up",
+                "Initiate appropriate patient management for HBV infection as clinically indicated"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Also consider contraindications to peginterferon alfa and ribavirin",
+                "Because ribavirin may cause birth defects and fetal death, simeprevir in combination with peginterferon alfa and ribavirin is contraindicated in pregnant women and in men whose female partners are pregnant"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hepatitis B virus (HBV) reactivation has been reported in HCV/HBV coinfected patients who were undergoing or had completed treatment with HCV DDAs, and who were not receiving HBV antiviral therapy; HBV reactivation is characterized as an abrupt increase in HBV replication manifesting as a rapid increase in serum HBV DNA level (see Black Box Warnings and Dosing Considerations)",
+                "Serious symptomatic bradycardia in patients taking amiodarone with sofosbuvir in combination with simeprevir reported, especially in patients receiving beta blockers, or those with underlying cardiac comorbidities and/or advanced liver disease; coadministration of amiodarone with simeprever in combination with sofosbuvir not recommended; in patients without alternative treatment options, cardiac monitoring is recommended",
+                "Hepatic decompensation and hepatic failure, including fatal cases, reported when coadministered with peginterferon alfa and ribavirin or in combination with sofosbuvir; most cases were reported in patients with advanced and/or decompensated cirrhosis who are at increased risk for hepatic decompensation or hepatic failure; monitor liver chemistry tests before and during simeprevir combination therapy",
+                "Photosensitivity reported, including serious reactions which resulted in hospitalization",
+                "Rash may occur, most frequently within the first 4 weeks; mild-to-moderate rashes should be followed for possible progression of rash, including the development of mucosal signs (eg, oral lesions, conjunctivitis) or systemic symptoms; discontinue if rash becomes severe",
+                "Contains a sulfonamide moiety; in subjects with a history of sulfa allergy (n=16), no increased incidence of rash or photosensitivity reactions was observed; however, insufficient data exist",
+                "Must NOT be used as monotherapy"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Avoid coadministering with moderate or strong CYP3A inhibitors; simeprevir AUC increased >7-fold",
+                        "Avoid coadministering with moderate or strong CYP3A inducers; simeprevir trough levels decreased >90%"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of simeprevir by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "simeprevir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Rash",
+            "percent": "28"
+        },
+        {
+            "name": "including photosensitivity",
+            "percent": "1"
+        },
+        {
+            "name": "Hyperbilirubinemia",
+            "percent": "27"
+        },
+        {
+            "name": "grade",
+            "percent": "22"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "22"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2"
+        },
+        {
+            "name": "Hyperbilirubinemia",
+            "percent": "18"
+        },
+        {
+            "name": "grade",
+            "percent": "16"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "12"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "3"
+        },
+        {
+            "name": "Hyperbilirubinemia",
+            "percent": "4"
+        },
+        {
+            "name": "grade",
+            "percent": "1"
+        },
+        {
+            "name": "Alkaline phosphatase elevation",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "4"
+        },
+        {
+            "name": "Hyperbilirubinemia",
+            "percent": "2"
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Alkaline phosphatase elevation",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Serious symptomatic bradycardia",
+            "percent": null
+        },
+        {
+            "name": "patients taking amiodarone who initiate treatment with sofosbuvir in combination with another HCV direct acting antiviral",
+            "percent": null
+        },
+        {
+            "name": "including simeprevir",
+            "percent": null
+        },
+        {
+            "name": "Hepatic decompensation and hepatic failure",
+            "percent": null
+        },
+        {
+            "name": "including fatal cases reported in patients receiving therapy in combination with peginterferon alfa and ribavirin or in combination with sofosbuvir",
+            "percent": null
+        }
+    ]
+}

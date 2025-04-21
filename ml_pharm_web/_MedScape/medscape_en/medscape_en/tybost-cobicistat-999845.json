@@ -1,0 +1,3100 @@
+{
+    "name": "cobicistat",
+    "comment": "Rx",
+    "other_names": [
+        "Tybost"
+    ],
+    "classes": [
+        "CYP450 Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/tybost-cobicistat-999845",
+    "pregnancy": {
+        "common": [
+            "Coadministration with darunavir or atazanavir is not recommended during pregnancy",
+            "In a clinical trial of individuals taking cobicistat coadministered with darunavir, exposures of cobicistat and darunavir were substantially lower during the second and third trimesters of pregnancy",
+            "Refer to prescribing information of darunavir and atazanavir about pregnancy"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies in rats and rabbits, no evidence of fetal harm was observed with oral administration of cobicistat during organogenesis at doses that produced exposures up to 1.4x and 3.3x the maximal recommended human dose (MRHD) of 150 mg"
+                ]
+            },
+            {
+                "type": "ART pregnancy registry",
+                "description": [
+                    "Pregnancy exposure registry that monitors fetal outcomes in individuals exposed to drug during pregnancy",
+                    "Encourage to register patients by calling Antiretroviral Pregnancy Registry (APR) at 1-800-258-4263"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Cobicistat interacts with certain oral contraceptives"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There is no information regarding presence of cobicistat in human milk, the effects on the breastfed infant, or the effects on milk production",
+            "The Centers for Disease Control and Prevention do not recommend HIV-infected mothers breastfeed their infants due to potential risk for postnatal transmission of HIV"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Cobicistat may cause modest increases in serum creatinine and modest declines in CrCl without affecting renal glomerular function; serum creatinine >0.4 mg/dL from baseline should be closely monitored for renal safety; assess CrCl before administering",
+                "New-onset or worsening renal impairment reported when used with antiretroviral regimens containing tenofovir; do not use with tenofovir if CrCl <70 mL/min",
+                "Assess urine glucose and urine protein at baseline and monitor ClCr, urine glucose, and urine protein when using with tenofovir; monitor serum phosphorus in patients with or at risk for renal impairment",
+                "CYP inducers may lower systemic exposure of cobicistat and atazanavir or darunavir, resulting in loss of virologic response",
+                "Cobicistat is an inhibitor of CYP3A, CYP2D6, p-glycoprotein (P-gp), BCRP, OATP1B1, and OATP1B3; plasma concentration of drugs that are substrates of the aforementioned isoenzymes or transporters may be increased if coadministered with cobicistat"
+            ],
+            "specific": [
+                {
+                    "type": "Antiretrovirals that are not recommended",
+                    "description": [
+                        "The following are NOT recommended in combination with cobicistat because dosing recommendations for the combinations have not been established",
+                        "Coadministration may result in decreased plasma concentrations of the antiretroviral agents, leading to loss of therapeutic effect and development of resistance",
+                        "More than 1 antiretroviral that requires pharmacokinetic enhancement (ie, 2 protease inhibitors or a protease inhibitor in combination with elvitegravir)",
+                        "Darunavir in combination with efavirenz, nevirapine, or etravirine",
+                        "Atazanavir in combination with etravirine",
+                        "Atazanavir in combination with efavirenz in treatment-experienced patients",
+                        "Darunavir 600 mg BID",
+                        "Other HIV-1 protease inhibitors, including fosamprenavir, saquinavir, or tipranavir",
+                        "Stribild fixed-dose combination tablets (elvitegravir, cobicistat, emtricitabine, tenofovir) are not recommended because cobicistat is a component of Stribild",
+                        "Cobicistat in combination with lopinavir/ritonavir or regimens containing ritonavir are not recommended, owing to similar effects of cobicistat and ritonavir on CYP3A"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of alfuzosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for increased alfuzosin concentrations, which can result in serious or life threatening reactions such as hypotension"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of alprazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "astemizole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of astemizole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "cobimetinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of conivaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for serious and/or life-threatening reactions (eg, acute ergot toxicity characterized by peripheral vasospasm, ischemia of the extremities and other tissues)"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dronedarone by  Other (see comment). Contraindicated. Dronedarone is a CYP3A4 inhibitor/substrate and a CYP2D6 inhibitor; cobicistat is both an inhibitor and substrate of CYP3A4 and CYP2D6 "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of eletriptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of eliglustat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. If coadministered with strong or moderate CYP2D6 inhibitors, reduce eliglustat dose from 84 mg BID to 84 mg once daily in extensive and intermediate metabolizers; eliglustat is contraindicated if strong or moderate CYP2D6 inhibitors are given concomitantly with strong or moderate CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir",
+            "description": {
+                "common": "cobicistat, elvitegravir. Other (see comment). Contraindicated. \nComment: Coadministration with cobicistat (a strong CYP3A4 and BCRP inhibitor) increases duvelisib (a CYP3A4 and BCRP substrate) levels, which may increase the risk of duvelisib toxicities. Reduce duvelisib dose to 15 mg BID when coadministered with cobicistat."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "cobicistat will increase the level or effect of elvitegravir/cobicistat/emtricitabine/tenofovir DF by  pharmacodynamic synergism. Contraindicated. Duplicate therapy"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of eplerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ergonovine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ergonovine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for serious and/or life-threatening reactions (eg, acute ergot toxicity characterized by peripheral vasospasm, ischemia of the extremities and other tissues)"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of flibanserin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of flibanserin with moderate or strong CYP3A4 inhibitors is contraindicated. Severe hypotension or syncope can occur."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of indinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Contraindicated with cobicistat coadministered with atazanavir only; both atazanavir and indinavir are associated with indirect (unconjugated) hyperbilirubinemia"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of irinotecan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Contraindicated with cobicistat coadministered with atazanavir and irinotecan. Coadministration of atazanavir with irinotecan is contraindicated due to potential for increased irinotecan toxicity."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of irinotecan liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. UGT1A1 inhibitors decrease irinotecan metabolism"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "cobicistat will increase the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ivabradine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ivabradine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of ivabradine with strong CYP3A4 inhibitors is contraindicated"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lonafarnib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lonafarnib is a sensitive CYP3A4 substrate. Coadministration with strong or moderate CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lovastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for serious reactions such as myopathy including rhabdomyolysis"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lurasidone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for increased systemic exposure of lurasidone resulting in increased risk for QT prolongation."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mavacamten by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors may increase mavacamten systemic exposure, resulting in heart failure due to systolic dysfunction. "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "methylergonovine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of methylergonovine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for serious and/or life-threatening reactions (eg, acute ergot toxicity characterized by peripheral vasospasm, ischemia of the extremities and other tissues)"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Triazolam and midazolam (PO) are extensively metabolized by CYP3A. Coadministration of triazolam or midazolam (PO) may cause large increases in the concentrations of these benzodiazepines. Potential for serious and/or life-threatening events (eg, prolonged or increased sedation or respiratory depression)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "naloxegol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of naloxegol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pimozide by  affecting hepatic enzyme CYP2D6 metabolism. Contraindicated. Potential for increased systemic exposure of pimozide resulting in increased risk for QT prolongation"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ranolazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration with rifampin is contraindicated due to potential for loss of therapeutic effect and development of resistance. "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ritonavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sildenafil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sildenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. When used chronically for PAH, sildenafil is contraindicated for use with cobicistat; if used for erectile dysfunction, do not exceed sildenafil 25 mg q48hr"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of simvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Potential for serious reactions such as myopathy including rhabdomyolysis"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tipranavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Triazolam and midazolam (PO) are extensively metabolized by CYP3A. Coadministration of triazolam or midazolam (PO) may cause large increases in the concentrations of these benzodiazepines. Potential for serious and/or life-threatening events (eg, prolonged or increased sedation or respiratory depression)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ubrogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "cobicistat will increase the level or effect of venetoclax by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Use of strong CYP3A4 inhibitors is contraindicated with venetoclax during the initial ramp-up dosing phase. If a strong CYP3A inhibitor must be used after the ramp-up phase, reduce the venetoclax dose by at least 75%."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of voclosporin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of acalabrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of acalabrutinib with strong CYP3A inhibitors. If a strong CYP3A inhibitor must be used short-term (eg, up to 7 days), temporarily interrupt treatment with acalabrutinib."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of adagrasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of adagrasib, a CYP3A4 substrate, with strong CYP3A4 inhibitors until adagrasib concentrations have reached steady-state (after ~8 days). If steady state is not reached, concomitant use of strong CYP3A4 inhibitors will increase adagrasib concentrations and risk of its toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ado-trastuzumab emtansine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ado-trastuzumab emtansine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alpelisib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of alpelisib by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of alpelisib (BCRP substrate) with a BCRP inhibitor may increase alpelisib concentration, which may increase the risk of toxicities. If unable to avoid or use alternant drugs, closely monitor for increased adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of aprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of armodafinil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. May increase armotafinil concentration and decrease cobicistat as armodafinil is CYP3A4 inducer and cobicistat is CYP3A4 substrate"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of atazanavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of avanafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Not recommended; safe/effective dose for avanafil has not been established; coadministration may increase PDE-5 inhibitor adverse effects including hypotension, syncope, visual changes, and prolonged erection"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of avapritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of avapritinib with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "axitinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of axitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "cobicistat, azithromycin.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of bedaquiline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of bosentan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Bosentan dose reduction required"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of bosutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brigatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A inhibitor cannot be avoided, reduce the brigatinib once daily dose by about 50% (ie, from 180 mg to 90 mg, or from 90 mg to 60 mg). After discontinuation of a strong CYP3A inhibitor, resume the brigatinib dose that was tolerated prior to initiating the strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabozantinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cabozantinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of cabozantinib with strong CYP3A4 inhibitors.  If a strong CYP3A4 inhibitor is required, decrease cabozantinib dose by 40 mg/day (Cometriq) or by 20 mg/day (Cabometyx). Resume previous dose 2-3 days after strong CYP3A4 inhibitor discontinued."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration is necessary, monitor for lack or loss of virologic response from cobicistat"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "cobicistat, ceritinib.\nEither increases toxicity of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. May increase QT prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "cobicistat, clarithromycin.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "copanlisib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of copanlisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use with strong CYP3A inhibitors cannot be avoided, reduce copanlisib dose to 45 mg."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of crizotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Increase in crizotinib levels may result in QT prolongation; May reduce crizotinib dose to 250 mg PO qDay if concomitant administration cannot be avoided."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dabrafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of daridorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of darunavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with corticosteroids that induce CYP3A4 may result in loss of therapeutic effect and development of resistance to atazanavir or darunavir"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dihydroergotamine intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of doxorubicin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of doxorubicin liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "cobicistat will increase the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Dose adjustment may be required with strong P-gp inhibitors. DVT/PE treatment: Decrease dose to 30 mg PO once daily. NVAF: No dose reduction recommended"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with efavirenz may result in loss of therapeutic effect and development of resistance to cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elacestrant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of elacestrant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elbasvir/grazoprevir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of elbasvir/grazoprevir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of elbasvir/grazoprevir with certain strong CYP3A4 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of encorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A4 inhibitor is unavoidable, reduce encorafenib dose to one-third of the dose (eg, reduce from 450 mg/day to 150 mg/day). After discontinuing the inhibitor for 3-5 elimination half-lives, resume previous encorafenib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of enzalutamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of erdafitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid coadministration with strong CYP3A4 inhibitors, monitor closely for adverse reactions and consider decreasing dose accordingly. If strong CYP3A4 inhibitor is discontinued, consider increasing erdafitinib dose in the absence of any drug-related toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "cobicistat, erythromycin base.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "cobicistat, erythromycin ethylsuccinate.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "cobicistat, erythromycin lactobionate.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "cobicistat, erythromycin stearate.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative anticonvulsant or antiretroviral therapy to avoid potential changes in exposures. If coadministration is necessary, monitor for lack or loss of virologic response."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eszopiclone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of eszopiclone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with etravirine may result in loss of therapeutic effect and development of resistance to cobicistat."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "cobicistat will increase the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fedratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid fedratinib coadministration with strong CYP3A4 inhibitors, decrease fedratinib dose to 200 mg/day. If CYP3A4 inhibitor discontinued, increase fedratinib dose to 300 mg/day for 2 weeks, and then 400 mg/day thereafter as tolerated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "felbamate",
+            "description": {
+                "common": "cobicistat will increase the level or effect of felbamate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fentanyl transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration of CYP3A4  inhibitors with fentanyl is necessary, monitor patients for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fentanyl transmucosal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration of CYP3A4  inhibitors with fentanyl is necessary, monitor patients for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "cobicistat will decrease the level or effect of fexinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid coadministration, monitor fexinidazole for decreased efficacy owing to decreased plasma concentrations of active M1 and M2 metabolites. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fidaxomicin",
+            "description": {
+                "common": "cobicistat, fidaxomicin.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative antibiotics with concomitant use of cobicistat coadministered with atazanavir or darunavir. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flutamide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of flutamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fosaprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "futibatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of glasdegib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternate therapies that are not strong CYP3A inhibitors or monitor for increased risk of adverse effects, including QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of guanfacine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ibrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of idelalisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infigratinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of infigratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ivosidenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with ivosidenib or replace with alternate therapies. If coadministration of a strong CYP3A4 inhibitor is unavoidable, reduce ivosidenib dose to 250 mg qDay. If the strong inhibitor is discontinued, increase ivosidenib dose (after at least 5 half-lives of the strong CYP3A4 inhibitor) to the recommended dose of 500 mg qDay. Monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ixabepilone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ixabepilone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lapatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant administration cannot be avoided, administer 500 mg lapatinib once daily and increase lapatinib dose to indicated dose once cobicistat discontinued"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of larotrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lefamulin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lefamulin with strong CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lemborexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lemborexant with moderate or strong CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of leniolisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levomilnacipran",
+            "description": {
+                "common": "cobicistat will increase the level or effect of levomilnacipran by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Do not esceed 80 mg levominacipram dose once daily if coadministration necessary"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levonorgestrel intrauterine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of levonorgestrel intrauterine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lomitapide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lorlatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministering lorlatinib with strong CYP3A inhibitors. If unavoidable, reduce lorlatinib dose by 25 mg/day. If strong CYP3A inhibitor discontinued, increase to previous lorlatinib (dose after 3 plasma half-lives of strong CYP3A inhibitor). See monograph for further details. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lurbinectedin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lurbinectedin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mefloquine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity. Avoid coadministration during and for 15 weeks after discontinuing mefloquine. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of midazolam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of strong CYP3A4 inhibitors with midazolam intranasal causes higher midazolam systemic exposure, which may prolong sedation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of midostaurin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong CYP3A4 inhibitors cannot be avoided, monitor midostaurin for increased risk of adverse reactions, especially during the first week of treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mobocertinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of modafinil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "neratinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of neratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of neratinib with strong/moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with etravirine may result in loss of therapeutic effect and development of resistance to cobicistat. Contraindicated with cobicistat coadministered with atazanavir.only; nevirapine substantially decreases atazanavir exposure which may result in loss of therapeutic effect and development of resistance"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nicardipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nimodipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nimodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nisoldipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nisoldipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olaparib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of olaparib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong CYP3A inhibitors cannot be avoided, reduce olaparib dose to 150 mg (capsule) or 100 mg (tablet) PO BID. Do not substitute tablets with capsules."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of omaveloxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unavoidable, reduce omaveloxolone dose to 50 mg/day. Closely monitor and discontinue if adverse effects emerge."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ombitasvir/paritaprevir/ritonavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of osimertinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of osimertinib with strong CYP3A4 inhibitors. If no other alternative treatment exists, monitor patient more closely for adverse effects."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternative anticonvulsant or antiretroviral therapy to avoid potential changes in exposures. If coadministration is necessary, monitor for lack or loss of virologic response."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "cobicistat increases toxicity of ozanimod by Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of ozanimod (a BCRP substrate) with BCRP inhibitors increases the exposure of the minor (RP101988, RP101075) and major active metabolites (CC112273, CC1084037) of ozanimod, which may increase the risk of ozanimod adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palbociclib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of palbociclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of palbociclib with strong CYP3A inhibitors. If unable to avoid, reduce palbociclib dose to 75 mg/day."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pazopanib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pemigatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pemigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pemigatinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pemigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "perampanel",
+            "description": {
+                "common": "cobicistat will increase the level or effect of perampanel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pexidartinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration is necessary, monitor for lack or loss of virologic response from cobicistat"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration is necessary, monitor for lack or loss of virologic response from cobicistat"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pimavanserin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Decrease dose to 17 mg/day if pimavanserin is coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ponatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pralsetinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pralsetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "progesterone intravaginal gel",
+            "description": {
+                "common": "cobicistat will increase the level or effect of progesterone intravaginal gel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "progesterone micronized",
+            "description": {
+                "common": "cobicistat will increase the level or effect of progesterone micronized by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "progesterone, natural",
+            "description": {
+                "common": "cobicistat will increase the level or effect of progesterone, natural by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "cobicistat increases levels of quetiapine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with atazanavir and cobicistat in patients taking quetiapine. If coadministration is necessary, reduce quetiapine dose to one-sixth of the current dose and monitor for quetiapine-associated adverse reactions. Refer to quetiapine prescribing information for initial dosing and titration of quetiapine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ribociclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If a strong CYP3A inhibitor must be coadministered with ribociclib, reduce the ribociclib starting dose to 400 mg/day."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of rimegepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of riociguat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "cobicistat will increase the level or effect of rivaroxaban by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of cobicistat with rivaroxaban; may result in increased exposure of rivaroxaban and increased risk of bleeding"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ruxolitinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ruxolitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ruxolitinib topical",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ruxolitinib topical by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "cobicistat increases levels of salmeterol by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration not recommended; may result in increased cardiovascular effects associated with salmeterol, including QT prolongation, palpitations, and sinus tachycardia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of saquinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of saxagliptin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of selumetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors cannot be avoided, reduce selumetinib dosage (refer to selumetinib monograph for further information). After discontinuation of the strong or moderate CYP3A4 inhibitor for 3 elimination half-lives, resume selumetinib dose that was taken before initiating the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "cobicistat will increase the level or effect of siponimod by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of siponimod with a moderate or strong CYP3A4 inhibitor PLUS a moderate or strong CYP2C9 inhibitor is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of solifenacin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sonidegib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sonidegib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sonidegib with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sparsentan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sparsentan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unavoidable, interrupt treatment with sparsentan. When resuming sparsentan, consider dose titration. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sunitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "suvorexant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of suvorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tadalafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Adjust tadalafil dose for PAH; if on cobicistat, start tadalafil 20 mg/day and may increase up to 40 mg/day; avoid tadalafil when starting cobicistat; for ED, may take a single dose of tadalafil not exceeding 10 mg in 72 hr."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of talazoparib by  Other (see comment). Avoid or Use Alternate Drug. BCRP inhibitors may increase systemic exposure of talazoparib (a BCRP substrate). If coadministration cannot be avoided, monitor for potential adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "cobicistat decreases effects of tamoxifen by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Affecting hepatic/intestinal enzyme CYP3A4 metabolism. CYP3A4 inhibition decreases metabolism of tamoxifen to N-desmethyl tamoxifen (active metabolite with similar biologic activity)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tamsulosin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tazemetostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of tazemetostat with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "teniposide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of teniposide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ticagrelor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tofacitinib",
+            "description": {
+                "common": "cobicistat increases levels of tofacitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Reduce tofacitinib dose to 5 mg qDay when coadministered with potent CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolterodine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tolterodine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tolvaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Product labeling for PO topotecan recommends avoiding concomitant use of P-gp inhibitors; the interaction with IV topotecan may be less severe but is still likely of clinical significance"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "cobicistat will increase the level or effect of toremifene by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of trabectedin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If strong CYP3A inhibitor must be used, short-term (eg, less than 14 days), administer  strong CYP3A inhibitor 1 week after trabectedin infusion, and discontinue the day prior to next trabectedin infusion"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of trazodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vemurafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vilanterol/fluticasone furoate inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilazodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vilazodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vincristine liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vorapaxar",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vorapaxar by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zolpidem",
+            "description": {
+                "common": "cobicistat will increase the level or effect of zolpidem by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abemaciclib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a patient taking abemaciclib discontinues a strong CYP3A inhibitor, increase abemaciclib dose (after 3-5 half-lives of the inhibitor) to the dose that was used before starting the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of amiodarone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of amitriptyline by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amlodipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of amlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of amoxapine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of apalutamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of apalutamide with strong CYP3A4 or CYP2C8 inhibitors does not require initial dosage modification; however, dose reduction may be needed based on tolerability."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "cobicistat will increase the level or effect of apixaban by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of aripiprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce aripiprazole dose by 25% and by approximately 50% if administered with CYP3A4 inhibitor and CYP206 inhibitor"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "cobicistat, artemether. unknown mechanism. Use Caution/Monitor. Monitor for potential decrease of antimalarial efficacy or potential QT prolongation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "cobicistat will decrease the level or effect of artemether/lumefantrine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Recommended atogepant dosage is 10 mg PO qDay when coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of atorvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. For HMG-CoA reductase inhibitors that are not contraindicated with cobicistat, dose should not  exceed 20 mg/day."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avatrombopag",
+            "description": {
+                "common": "cobicistat will increase the level or effect of avatrombopag by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. When treating ITP, coadministration of avatrombopag with a moderate or strong dual CYP2C9/3A4 inhibitor requires a decreased avatrombopag starting dose. Refer to drug monograph for specific recommendations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benzhydrocodone/acetaminophen",
+            "description": {
+                "common": "cobicistat will increase the level or effect of benzhydrocodone/acetaminophen by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with strong CYP3A4 inhibitors may increase hydrocodone (benzhydrocodone is prodrug of hydrocodone) plasma concentrations and can result in potentially fatal respiratory depression"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "cobicistat increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "cobicistat increases levels of betrixaban by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Decrease betrixaban dose to 80 mg PO once, then 40 mg PO qDay if coadministered with a P-gp inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bortezomib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of bortezomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Bosentan dose reduction required. Refer to the prescribing information of bosentan and cobicistat for recommended dosage adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brentuximab vedotin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexpiprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of brexpiprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Administer half of the usual brexpiprazole dose when coadministered with strong CYP3A4 inhibitors. If also administered with a strong/moderate CYP2D6 inhibitor, administer a quarter of brexpiprazole dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bromocriptine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of bromocriptine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of budesonide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide inhaled",
+            "description": {
+                "common": "cobicistat increases levels of budesonide inhaled by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of buprenorphine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "cobicistat will increase the level or effect of buprenorphine subdermal implant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Monitor patients already on buprenorphine subdermal implant who require newly-initiated treatment with CYP3A4 inhibitors for signs and symptoms of overmedication. If the dose of the concomitant CYP3A4 inhibitor cannot be reduced or discontinued, implant removal may be necessary and the patient should then be treated with a buprenorphine dosage form that permits dose adjustments. If a CYP3A4 inhibitor is discontinued in a patient who has been stabilized on buprenorphine, monitor the patient for withdrawal."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of buprenorphine transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "cobicistat will increase the level or effect of buprenorphine, long-acting injection by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Patients who transfer to buprenorphine long-acting injection from transmucosal buprenorphine coadministered with CYP3A4 inhibitors should be monitored to ensure buprenorphine plasma levels are adequate. Within 2 weeks, if signs and symptoms of buprenorphine toxicity or overdose occur and the concomitant CYP3A4 inhibitor cannot be reduced or discontinued, transition the patient back to a buprenorphine formulation that permits dose adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buspirone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of buspirone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. A decreased dose of buspirone may be required"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcifediol",
+            "description": {
+                "common": "cobicistat, calcifediol. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. CYP450 inhibitors may inhibit enzymes involved in vitamin D metabolism (CYP24A1 and CYP27B1). This may alter serum levels of calcifediol and decrease the conversion of calcifediol to calcitriol. Dose adjustment of calcifediol may be required, and serum 25­hydroxyvitamin D, intact PTH, and serum calcium concentrations should be closely monitored when initiating or discontinuing a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cannabidiol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cannabidiol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Consider reducing the cannabidiol dose when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capmatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of capmatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of carbamazepine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cariprazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cariprazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with strong CYP3A4 inhibitors requires cariprazine dose reduction. See Dosage Modification section in drug monograph."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of carvedilol by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlordiazepoxide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of chlordiazepoxide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciclesonide inhaled",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ciclesonide inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cilostazol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cilostazol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce cilostazol dose to 50 mg twice daily when administered concomitantly; monitor for increase in cilostazole related adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "cobicistat will increase the level or effect of citalopram by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with SSRIs and cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of clomipramine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonazepam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of clonazepam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with anticonvulsants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clorazepate",
+            "description": {
+                "common": "cobicistat will increase the level or effect of clorazepate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dose of clorazepate if necessary"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of colchicine by  Other (see comment). Modify Therapy/Monitor Closely. Coadministration with colchicine is contraindicated in patients with renal and/or hepatic impairment due to potential for serious and/or life-threatening reactions. Dosage adjustment of colchicine may be necessary upon coadministration with cobicistat. Refer colchicine prescribing information for dosing instructions. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cyclosporine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dabigatran by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Atrial fibrillation: Avoid coadministering dabigatran with P-gp inhibitors if CrCl <30 mL/min.  DVT/PE treatment: Avoid coadministering dabigatran with P-gp inhibitors if CrCl <50 mL/min"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dapsone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dapsone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of darifenacin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Darifenacin daily dose should not exceed 7.5 mg PO when administered concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of darolutamide by  Other (see comment). Modify Therapy/Monitor Closely. Darolutamide is a P-gp and CYP3A4 substrate. Closely monitor for increased adverse reactions and modify dose of darolutamide as needed when coadministered with drugs that are both P-gp and strong or moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dasatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Dosage adjustment of dasatinib may be necessary upon coadministration with cobicistat coadministered with atazanavir or darunavir. Refer dasatinib prescribing information for dosing instructions. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "cobicistat will increase the level or effect of deflazacort by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Decrease deflazacort dose to one-third of the recommended dose if coadministered with moderate or strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "delavirdine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of delavirdine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of desipramine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dexlansoprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of diazepam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. A decreased dose of diazepam may be required"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam intranasal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of diazepam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Strong or moderate CYP3A4 inhibitors may decrease rate of diazepam elimination, thereby increasing adverse reactions to diazepam."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Measure serum digoxin concentrations before initiating concomitant drugs. Titrate the digoxin dose by ~30-50% or by modifying the dosing frequency and continue monitoring."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "cobicistat will increase the level or effect of diltiazem by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "cobicistat will increase the level or effect of docetaxel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. May consider reducing docetaxel dosing 50% if concomitant administration cannot be avoided"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doravirine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of doravirine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of doravirine and CYP3A4 inhibitors may increase plasma concentrations and toxicities of doravirine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of doxepin by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin cream",
+            "description": {
+                "common": "cobicistat will increase the level or effect of doxepin cream by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronabinol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of dronabinol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Dronabinol is a CYP3A4 substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "cobicistat will increase the level or effect of efavirenz by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "cobicistat will increase the level or effect of elagolix by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of elagolix 200 mg BID with strong CYP3A inhibitors for >1 month is not recommended. Limit elagolix dose to 150 mg qDay and CYP3A inhibitor duration of use to 6 months if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "cobicistat will increase the level or effect of elvitegravir/cobicistat/emtricitabine/tenofovir DF by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Cobicistat inhibits P-gp"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, cobicistat. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enfortumab vedotin",
+            "description": {
+                "common": "cobicistat increases toxicity of enfortumab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Enfortumab vedotin is an antibody-drug conjugate that releases monomethylauristatin E (MMAE) via proteolytic cleavage. MMAE is primarily metabolized by CYP3A4 in vitro. Coadministration with strong CYP3A4 inhibitors may increase free MMAE exposure, which may increase the incidence or severity of toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erlotinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of erlotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration cannot be avaoided, reduce erlotinib dose by 50 mg decrements and monitor for adverse effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "cobicistat will increase the level or effect of escitalopram by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with SSRIs and cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of esomeprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol vaginal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of estradiol vaginal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with CYP3A4 inhibitors may increase plasma concentrations of estrogens and toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "felodipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of felodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration of CYP3A4  inhibitors with fentanyl is necessary, monitor for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fentanyl intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration of CYP3A4  inhibitors with fentanyl is necessary, monitor for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of flecainide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fluoxetine by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with SSRIs and cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurazepam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of flurazepam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluticasone furoate",
+            "description": {
+                "common": "cobicistat increases levels of fluticasone furoate by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluticasone inhaled",
+            "description": {
+                "common": "cobicistat increases levels of fluticasone inhaled by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fluvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. For HMG-CoA reductase inhibitors that are not contraindicated with cobicistat, start with the lowest recommended dose and titrate while monitoring for safety."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "fluvoxamine will increase the level or effect of cobicistat by  Other (see comment). Use Caution/Monitor. Carfully titrate dose of antidepressant to desired effect, including using lowest feasible initial or maintenance dose , and monitor its response during coadministration with SSRIs and cobicistat"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of fostamatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors may increase exposure to R406 (fostamatinib major active metabolite). Monitor for toxicities that may require fostamatinib dose reduction."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "cobicistat increases levels of gefitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of strong CYP3A4 inhibitors may increase risk for gefitinib adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of glecaprevir/pibrentasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of haloperidol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of hydrocodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with CYP3A4 inhibitors may increase hydrocodone plasma concentrations and can result in potentially fatal respiratory depression"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "cobicistat will decrease the level or effect of ifosfamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of CYP3A4 inhibitors may decrease the metabolism of ifosfamide to its active alkylating metabolites and decrease the efficacy of ifosfamide."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of imatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of imipramine by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with TCAs and cobicistat.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isradipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of isradipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of istradefylline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Do not exceed istradefylline 20 mg/day if coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "cobicistat, itraconazole.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Specific dosage recommendations for itraconazole are not available when coadministered with cobicistat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ivacaftor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce ivacaftor dose if coadministered with strong CYP3A4 inhibitors. See specific ivacaftor-containing product for precise dosage modification."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "cobicistat, ketoconazole.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Specific dosage recommendations for ketoconazole are not available when coadministered with cobicistat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lansoprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir (a moderate CYP3A4 inhibitor) may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "cobicistat increases levels of letermovir by decreasing metabolism. Use Caution/Monitor. Coadminstration of letermovir, an OATP1B1/3 substrate, with OATP1B1/3 inhibitors may increase letermovir plasma concentrations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levamlodipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of levamlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with moderate and strong CYP3A inhibitors results in increased systemic exposure to amlodipine and may require dose reduction. Monitor for symptoms of hypotension and edema when amlodipine is coadministered with CYP3A inhibitors to determine the need for dose adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "cobicistat, levoketoconazole.\nEither increases levels of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Specific dosage recommendations for ketoconazole are not available when coadministered with cobicistat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "cobicistat will increase the level or effect of levonorgestrel oral/ethinylestradiol/ferrous bisglycinate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with CYP3A4 inhibitors may increase the plasma hormone concentrations. Use of a nonhormonal contraceptive is recommended."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lidocaine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "cobicistat will increase the level or effect of losartan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "cobicistat increases levels of lumacaftor/ivacaftor by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A inhibitors do not impact lumacaftor exposure, but increased ivacaftor exposure by 4.3-fold. Due to the induction effect of lumacaftor on CYP3A, at steady-state the net exposure of ivacaftor is not expected to exceed that when given in the absence of lumacaftor at a dose of 150 mg q12hr (the approved dose of ivacaftor monotherapy). Therefore, no dose adjustment is necessary when CYP3A inhibitors are initiated in patients currently taking lumacaftor/ivacaftor. However, when initiating lumacaftor/ivacaftor in patients taking strong CYP3A inhibitors, reduce the dose to 1 tablet daily (lumacaftor 200 mg/ivacaftor 125 mg total daily dose) for the first week of treatment to allow for the steady-state induction effect of lumacaftor. Following this period, continue with the recommended daily dose. No dose adjustment is required for moderate or weak CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumateperone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of lumateperone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce lumateperone dose to 10.5 mg/day if coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "cobicistat, lumefantrine. unknown mechanism. Use Caution/Monitor. Monitor for potential decrease of antimalarial efficacy or potential QT prolongation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "cobicistat will increase the level or effect of maraviroc by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Maraviroc is a CYP3A4 substrate. Decrease maraviroc dose to 150 mg BID when coadministered with strong CYP3A4 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of methadone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Methadone dose may require an adjustment"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of methylprednisolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of metoprolol by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mexiletine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mexiletine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mifepristone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration necessary, administer 300 mg mifepristone initially; not to exceed 600 mg; if cobicistat initiated in patient receiving 600 mg mifepristone, reduce mirepristone dose to 300 mg; if cobicistat initiated in patient receiving 900-1200 mg mifepristone, reduce mifepristone dose to 600 mg; if initiated in patient receiving 300 mg mifepristone, no change in dose necessary"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mirtazapine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirvetuximab soravtansine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mirvetuximab soravtansine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with strong CYP3A4 inhibitors may increase unconjugated DM4 (a CYP3A4 substrate and the cytotoxic component of the antibody drug conjugate for mirvetuximab soravtansine) exposure, which may increase the risk of adverse reactions. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mometasone inhaled",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mometasone inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Increases risk for systemic corticosteroid side effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mometasone, intranasal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of mometasone, intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "cobicistat increases levels of naldemedine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor naldemedine for potential adverse effects if coadministered with strong or moderate CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nefazodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "cobicistat will increase the level or effect of netupitant/palonosetron by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely.  Netupitant is mainly metabolized by CYP3A4; no dosage adjustment is required"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nifedipine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nifedipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nilotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Dosage adjustment of nilotinib may be necessary upon coadministration with cobicistat coadministered with atazanavir or darunavir. Refer nilotinib prescribing information for dosing instructions. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nintedanib",
+            "description": {
+                "common": "cobicistat increases levels of nintedanib by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. If nintedanib adverse effects occur, management may require interruption, dose reduction, or discontinuation of therapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of nortriptyline by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with TCAs and cobicistat.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oliceridine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of oliceridine by  affecting hepatic enzyme CYP2D6 metabolism. Modify Therapy/Monitor Closely. If concomitant use is necessary, may require less frequent oliceridine dosing. Closely monitor for respiratory depression and sedation and titrate subsequent doses accordingly. If inhibitor is discontinued, consider increase oliceridine dosage until stable drug effects are achieved. Monitor for signs of opioid withdrawal. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of omeprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ondansetron by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of osilodrostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce dose of osilodrostat, a CYP3A4 substrate, by half when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ospemifene",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ospemifene by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of oxycodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration of CYP3A4  inhibitors with fentanyl is necessary, monitor for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "cobicistat will increase the level or effect of paclitaxel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "cobicistat will increase the level or effect of paclitaxel protein bound by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "cobicistat increases levels of panobinostat by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce panobinostat starting dose to 10 mg if coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paricalcitol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of paricalcitol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of paroxetine by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with SSRIs and cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of perphenazine by  Other (see comment). Modify Therapy/Monitor Closely. A decrease in the dose of antipsychotics that are metabolized by CYP3A or CYP2D6 may be needed upon coadministration. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pitavastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. For HMG-CoA reductase inhibitors that are not contraindicated with cobicistat, start with the lowest recommended dose and titrate while monitoring for safety."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polatuzumab vedotin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of polatuzumab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Polatuzumab undergoes catabolism to small peptides, amino acids, monomethyl auristatin E (MMAE), and unconjugated MMAE-related catabolites. MMAE is a CYP3A4 substrate. Coadministration of polatuzumab vedotin with a strong CYP3A4 inhibitor may increase unconjugated MMAE AUC, which may increase polatuzumab vedotin toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of pravastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. For HMG-CoA reductase inhibitors that are not contraindicated with cobicistat, start with the lowest recommended dose and titrate while monitoring for safety."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "praziquantel",
+            "description": {
+                "common": "cobicistat will increase the level or effect of praziquantel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of propafenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Clinical monitoring is recommended upon coadministration with antiarrhythmics."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of protriptyline by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with TCAs and cobicistat.  "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quazepam",
+            "description": {
+                "common": "cobicistat will increase the level or effect of quazepam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of quinidine by  Other (see comment). Modify Therapy/Monitor Closely. Quinidine is a substrate of CYP3A4 and P-gp, and inhibits CYP2D6 and P-gp; cobicistat is a substrate and inhibitor of both isoenzymes and a P-gp inhibitor"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of rabeprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "cobicistat will increase the level or effect of repaglinide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of rifabutin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Decrease rifabutin dose to 150 mg PO every other day; monitor for rifabutin associated neutropenia and uveitis"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ripretinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ripretinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with a strong CYP3A inhibitor will increase systemic exposure to ripretinib and its active metabolite (DP-5439), which may increase risk of adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of risperidone by  Other (see comment). Modify Therapy/Monitor Closely. A decrease in the dose of antipsychotics that are metabolized by CYP3A or CYP2D6 may be needed upon coadministration. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "roflumilast",
+            "description": {
+                "common": "cobicistat will increase the level or effect of roflumilast by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of romidepsin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of rosuvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. For HMG-CoA reductase inhibitors that are not contraindicated with cobicistat, dose should not  exceed 20 mg/day."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "cobicistat will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of selpercatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration necessary, reduce dose of selpercatinib to 40 mg PO twice daily if original dose was 120 mg twice daily and to 80 mg PO twice daily if original dose was 160 mg twice daily; monitor for side effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sertraline by  Other (see comment). Use Caution/Monitor. Carefully titrate dose of the antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitor its response during coadministration with SSRIs and cobicistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, cobicistat. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sufentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil SL",
+            "description": {
+                "common": "cobicistat will increase the level or effect of sufentanil SL by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of sufentanil SL with any CYP3A4 inhibitor may increase sufentanil plasma concentration, and, thereby increase or prolonged adverse effects, including potentially fatal respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "cobicistat will increase the level or effect of temsirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration necessary, consider reducing temsirolimus dose to 12.5 mg per week; after discontinuing cobicistat, allow one week washout period before increaing cobicistat dose to its original level"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbinafine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of terbinafine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tezacaftor",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tezacaftor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust tezacaftor dosage regimen if coadministered with a strong CYP3A inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "cobicistat will increase the level or effect of theophylline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of thioridazine by  Other (see comment). Modify Therapy/Monitor Closely. A decrease in the dose of antipsychotics that are metabolized by CYP3A or CYP2D6 may be needed upon coadministration. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tiagabine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tiagabine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of timolol by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tinidazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tisotumab vedotin",
+            "description": {
+                "common": "cobicistat increases levels of tisotumab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tisotumab vedotin?s active metabolite (MMAE) is a CYP3A4 substrate. Coadministration with strong CYP3A4 inhibitors may increase unconjugated MMAE systemic exposure and increase risk of adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tramadol",
+            "description": {
+                "common": "cobicistat will increase the level or effect of tramadol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. A decreased dose of tramadol may be required"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "cobicistat will increase the level or effect of trazodone by  Other (see comment). Use Caution/Monitor. Trazodone is a substrate of CYP3A4 and CYP2D6; cobicistat inhibits CYP3A4 and CYP2D6 "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "cobicistat will increase the level or effect of triamcinolone acetonide injectable suspension by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of trimipramine by  affecting hepatic enzyme CYP2D6 metabolism. Use Caution/Monitor. Carefully titrate antidepressant to the desired effect, including using the lowest feasible initial or maintenance dose, and monitoring for antidepressant response"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ulipristal",
+            "description": {
+                "common": "cobicistat will increase the level or effect of ulipristal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "cobicistat will increase the level or effect of umeclidinium bromide/vilanterol inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "upadacitinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of upadacitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Caution if upadacitinib is coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of valbenazine by  affecting hepatic enzyme CYP2E1 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose to 40 mg once daily when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vardenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Limit vardenafil dose to 2.5 mg/72 hr"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "velpatasvir",
+            "description": {
+                "common": "cobicistat will increase the level or effect of velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of venlafaxine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "cobicistat will increase the level or effect of verapamil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vinblastine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Monitor for hematologic or GI adverse effects that may be associated with increased systemic exposure to vinblastine. Consider temporarily withholding antiretroviral regimen in patients who develop significant hematologic or gastrointestinal side effects. If the antiretroviral regimen must be withheld for a prolonged period, consider initiating a revised regimen that does not include a CYP3A or P-gp inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vincristine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Monitor for hematologic or GI adverse effects that may be associated with increased systemic exposure to vincristine. Consider temporarily withholding antiretroviral regimen in patients who develop significant hematologic or gastrointestinal side effects. If the antiretroviral regimen must be withheld for a prolonged period, consider initiating a revised regimen that does not include a CYP3A or P-gp inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinorelbine",
+            "description": {
+                "common": "cobicistat will increase the level or effect of vinorelbine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "cobicistat will increase the level or effect of voriconazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of cobicistat with voriconazole is not recommended unless the benefit/risk assessment justifies the use."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "cobicistat will increase the level or effect of warfarin by  Other (see comment). Use Caution/Monitor. Warfarin's less potent R-enantiomer is metabolized in part by CYP3A4 (and also CYP1A2 and CYP2C19). Monitor INR more frequently if coadministered with inhibitors of these isoenzymes and adjust warfarin dose if needed. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zanubrutinib",
+            "description": {
+                "common": "cobicistat will increase the level or effect of zanubrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce zanubrutinib (a CYP3A4 substrate) to 80 mg PO BID when coadministered with a moderate CYP3A4 inhibitor. Interrupt dose as recommended for adverse reactions. After discontinuing the CYP3A4 inhibitor, resume previous zanubrutinib dose. "
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "cobicistat, ganaxolone. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. Changes in ganaxolone exposures when coadministered with strong, moderate, or weak CYP3A4 inhibitors are not expected to be clinically significant."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ixazomib",
+            "description": {
+                "common": "cobicistat, ixazomib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. In clinical trials, coadministration of ixazomib with strong CYP3A inhibitors did not result in a clinically meaningful change in the systemic exposure of ixazomib."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Note",
+            "percent": "2.5"
+        },
+        {
+            "name": "Adverse effects listed below are for cobicistat coadministered with atazanavir",
+            "percent": "65"
+        },
+        {
+            "name": "Total bilirubin",
+            "percent": "15"
+        },
+        {
+            "name": "x ULN",
+            "percent": "13"
+        },
+        {
+            "name": "Ocular icterus",
+            "percent": "12"
+        },
+        {
+            "name": "all grades",
+            "percent": "10"
+        },
+        {
+            "name": "Jaundice",
+            "percent": "5"
+        },
+        {
+            "name": "all grades",
+            "percent": "2-4"
+        },
+        {
+            "name": "Nausea",
+            "percent": "5"
+        },
+        {
+            "name": "all grades",
+            "percent": "2-4"
+        },
+        {
+            "name": "Creatine kinase",
+            "percent": "5"
+        },
+        {
+            "name": "x ULN",
+            "percent": "2"
+        },
+        {
+            "name": "Jaundice",
+            "percent": "4"
+        },
+        {
+            "name": "Grades",
+            "percent": "5"
+        },
+        {
+            "name": "Rash",
+            "percent": "3"
+        },
+        {
+            "name": "Grades",
+            "percent": "1000"
+        },
+        {
+            "name": "Serum amylase",
+            "percent": "3"
+        },
+        {
+            "name": "x ULN",
+            "percent": "75"
+        },
+        {
+            "name": "ALT or AST",
+            "percent": "3"
+        },
+        {
+            "name": "x ULN",
+            "percent": "2-4"
+        },
+        {
+            "name": "Glycosuria",
+            "percent": "3"
+        },
+        {
+            "name": "mg",
+            "percent": "5"
+        },
+        {
+            "name": "dL",
+            "percent": "2"
+        },
+        {
+            "name": "Urine RBC",
+            "percent": "2-4"
+        },
+        {
+            "name": "RBC",
+            "percent": "2"
+        },
+        {
+            "name": "HPF",
+            "percent": "15"
+        },
+        {
+            "name": "Ocular icterus Grades",
+            "percent": "5"
+        },
+        {
+            "name": "GGT",
+            "percent": "4"
+        },
+        {
+            "name": "x ULN",
+            "percent": "3"
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Grades",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal disorders",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "vomiting",
+            "percent": null
+        },
+        {
+            "name": "upper abdominal pain",
+            "percent": null
+        },
+        {
+            "name": "General disorders and administration site conditions",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "Musculoskeletal and connective",
+            "percent": null
+        },
+        {
+            "name": "tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "Rhabdomyolysis",
+            "percent": null
+        },
+        {
+            "name": "Nervous system disorders",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Psychiatric disorders",
+            "percent": null
+        },
+        {
+            "name": "Depression",
+            "percent": null
+        },
+        {
+            "name": "abnormal dreams",
+            "percent": null
+        },
+        {
+            "name": "insomnia",
+            "percent": null
+        },
+        {
+            "name": "Renal and urinary disorders",
+            "percent": null
+        },
+        {
+            "name": "Nephropathy",
+            "percent": null
+        },
+        {
+            "name": "Fanconi syndrome acquired",
+            "percent": null
+        },
+        {
+            "name": "Increased triglycerides",
+            "percent": null
+        },
+        {
+            "name": "from baseline",
+            "percent": null
+        },
+        {
+            "name": "Increased LDL",
+            "percent": null
+        },
+        {
+            "name": "C",
+            "percent": null
+        },
+        {
+            "name": "from baseline",
+            "percent": null
+        },
+        {
+            "name": "Increased total cholesterol",
+            "percent": null
+        },
+        {
+            "name": "from baseline",
+            "percent": null
+        },
+        {
+            "name": "Increased HDL",
+            "percent": null
+        },
+        {
+            "name": "C",
+            "percent": null
+        },
+        {
+            "name": "from baseline",
+            "percent": null
+        }
+    ]
+}

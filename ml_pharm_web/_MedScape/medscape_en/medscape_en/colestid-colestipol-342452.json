@@ -1,0 +1,636 @@
+{
+    "name": "colestipol",
+    "comment": "Rx",
+    "other_names": [
+        "Colestid"
+    ],
+    "classes": [
+        "Bile Acid Sequestrants"
+    ],
+    "source": "https://reference.medscape.com/drug/colestid-colestipol-342452",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Lactation: use caution; may interfere with vitamin absorption in infants"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: use caution; may interfere with vitamin absorption in infants"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to colestipol",
+                "Bowel obstruction"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Increased risk of bleeding due to hypoprothrombinemia from vitamin K deficiency",
+                "May interfere with fat absorption, and decrease absorption of fat-soluble vitamins (A, D, E, K)",
+                "May worsen pre-existing constipation",
+                "Take other medications 1 hr before or 4 hr after colestipol",
+                "If significant increase in triglycerides, consider dose reduction, discontinuation or alternatives"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "colestipol will decrease the level or effect of mycophenolate by  inhibition of GI absorption. Applies only to oral form of both agents. Contraindicated. Colestipol binds bile acids and reduces mycophenolic acid exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholic acid",
+            "description": {
+                "common": "colestipol will decrease the level or effect of cholic acid by  drug binding in GI tract. Use Caution/Monitor. Take cholic acid at least 1 hr before or 4-6 hr (or as great an interval as possible) after a bile acid binding resin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "colestipol decreases levels of digoxin by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxercalciferol",
+            "description": {
+                "common": "colestipol decreases levels of doxercalciferol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. (Vitamin D analog)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "colestipol decreases levels of lomitapide by drug binding in GI tract. Use Caution/Monitor. Separate lomitapide and administration of bile acid sequestrants by at least 4 hours; bile acid sequestrants can interfere with the absorption of oral medications."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "obeticholic acid",
+            "description": {
+                "common": "colestipol will decrease the level or effect of obeticholic acid by  drug binding in GI tract. Modify Therapy/Monitor Closely. Administer obeticholic acid at least 4 hr before or 4 hr after taking a bile acid binding resins."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "odevixibat",
+            "description": {
+                "common": "colestipol will decrease the level or effect of odevixibat by  drug binding in GI tract. Modify Therapy/Monitor Closely. Administer bile acid sequestrants 4 hr before or after odevixibat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omadacycline",
+            "description": {
+                "common": "colestipol will decrease the level or effect of omadacycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Monitor for decreased effects of tetracyclines if coadministered with a bile acid sequestrant.  Separate doses 2 or more hours if these agents are used concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paricalcitol",
+            "description": {
+                "common": "colestipol decreases levels of paricalcitol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. (Vitamin D analog)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "colestipol will decrease the level or effect of sarecycline by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Monitor for decreased effects of tetracyclines if coadministered with a bile acid sequestrant.  Separate doses by 2 or more hours if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vitamin D",
+            "description": {
+                "common": "colestipol will decrease the level or effect of vitamin D by  Other (see comment). Use Caution/Monitor. Bile acid sequestrants may decrease the absorption of fat-soluble vitamins. Administer vitamin supplementation at least 4 hours prior to colestipol."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetaminophen",
+            "description": {
+                "common": "colestipol decreases levels of acetaminophen by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetaminophen IV",
+            "description": {
+                "common": "colestipol decreases levels of acetaminophen IV by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetaminophen rectal",
+            "description": {
+                "common": "colestipol decreases levels of acetaminophen rectal by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ampicillin",
+            "description": {
+                "common": "colestipol decreases levels of ampicillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "colestipol decreases levels of atorvastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "colestipol decreases levels of bendroflumethiazide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chenodiol",
+            "description": {
+                "common": "colestipol decreases levels of chenodiol by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "colestipol decreases levels of chlorothiazide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "colestipol decreases levels of chlorthalidone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "colestipol decreases levels of cortisone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyanocobalamin",
+            "description": {
+                "common": "colestipol decreases levels of cyanocobalamin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "colestipol decreases levels of deflazacort by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "demeclocycline",
+            "description": {
+                "common": "colestipol decreases levels of demeclocycline by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "colestipol decreases levels of dexamethasone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "colestipol decreases levels of diclofenac by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dicloxacillin",
+            "description": {
+                "common": "colestipol decreases levels of dicloxacillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "colestipol decreases levels of doxycycline by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenofibrate",
+            "description": {
+                "common": "colestipol decreases levels of fenofibrate by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenofibrate micronized",
+            "description": {
+                "common": "colestipol decreases levels of fenofibrate micronized by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenofibric acid",
+            "description": {
+                "common": "colestipol decreases levels of fenofibric acid by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "colestipol decreases levels of fludrocortisone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "colestipol decreases levels of fluvastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "folic acid",
+            "description": {
+                "common": "colestipol decreases levels of folic acid by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "colestipol decreases levels of furosemide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "gemfibrozil",
+            "description": {
+                "common": "colestipol decreases levels of gemfibrozil by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "colestipol decreases levels of hydrochlorothiazide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "colestipol decreases levels of hydrocortisone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "colestipol decreases levels of imipramine by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "colestipol decreases levels of indapamide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "L-methylfolate",
+            "description": {
+                "common": "colestipol decreases levels of L-methylfolate by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "levothyroxine",
+            "description": {
+                "common": "colestipol decreases levels of levothyroxine by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "liothyronine",
+            "description": {
+                "common": "colestipol decreases levels of liothyronine by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "colestipol decreases levels of lovastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "colestipol decreases levels of meloxicam by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "colestipol decreases levels of methotrexate by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown. Patients should take other drugs at least 1 hour before or 4 hours after colestipol to avoid impeding their absorption."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "colestipol decreases levels of methyclothiazide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "colestipol decreases levels of methylprednisolone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "colestipol decreases levels of metolazone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "minocycline",
+            "description": {
+                "common": "colestipol decreases levels of minocycline by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "niacin",
+            "description": {
+                "common": "colestipol decreases levels of niacin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxacillin",
+            "description": {
+                "common": "colestipol decreases levels of oxacillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxytetracycline",
+            "description": {
+                "common": "colestipol decreases levels of oxytetracycline by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "colestipol decreases levels of piroxicam by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "colestipol decreases levels of pitavastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pivmecillinam",
+            "description": {
+                "common": "colestipol decreases levels of pivmecillinam by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "colestipol decreases levels of pravastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "colestipol decreases levels of prednisolone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "colestipol decreases levels of prednisone by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "colestipol decreases levels of rosuvastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "colestipol decreases levels of simvastatin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "temocillin",
+            "description": {
+                "common": "colestipol decreases levels of temocillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "colestipol decreases levels of tetracycline by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "thyroid desiccated",
+            "description": {
+                "common": "colestipol decreases levels of thyroid desiccated by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "colestipol decreases levels of ticarcillin by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "colestipol decreases levels of triamcinolone acetonide injectable suspension by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ursodiol",
+            "description": {
+                "common": "colestipol decreases effects of ursodiol by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "valproic acid",
+            "description": {
+                "common": "colestipol decreases levels of valproic acid by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vitamin A",
+            "description": {
+                "common": "colestipol decreases levels of vitamin A by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown. (Vitamin A)."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vitamin K1 (phytonadione)",
+            "description": {
+                "common": "colestipol decreases levels of vitamin K1 (phytonadione) by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown. (Vitamin K)."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Gastrointestinal",
+            "percent": null
+        },
+        {
+            "name": "mostly",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        },
+        {
+            "name": "Stomach pain",
+            "percent": null
+        },
+        {
+            "name": "Belching",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "vomiting",
+            "percent": null
+        },
+        {
+            "name": "Flatulance",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Anxiety",
+            "percent": null
+        },
+        {
+            "name": "Vertigo",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "Drowsiness",
+            "percent": null
+        },
+        {
+            "name": "Heartburn",
+            "percent": null
+        },
+        {
+            "name": "Steatorrhea",
+            "percent": null
+        },
+        {
+            "name": "Malabsorption of fat",
+            "percent": null
+        },
+        {
+            "name": "soluble vitamins",
+            "percent": null
+        },
+        {
+            "name": "Gallstones",
+            "percent": null
+        },
+        {
+            "name": "Dysphagia",
+            "percent": null
+        },
+        {
+            "name": "GI bleeding",
+            "percent": null
+        },
+        {
+            "name": "Cholecystitis",
+            "percent": null
+        },
+        {
+            "name": "Peptic ulceration",
+            "percent": null
+        },
+        {
+            "name": "Transient esophageal obstruction",
+            "percent": null
+        }
+    ]
+}

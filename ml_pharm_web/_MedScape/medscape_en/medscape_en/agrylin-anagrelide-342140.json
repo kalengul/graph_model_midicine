@@ -1,0 +1,1812 @@
+{
+    "name": "anagrelide",
+    "comment": "Rx",
+    "other_names": [
+        "Agrylin"
+    ],
+    "classes": [
+        "Antiplatelet Agents",
+        "Hematologic",
+        "PDE-3 Inhibitors",
+        "Phospholipase A2 Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/agrylin-anagrelide-342140",
+    "pregnancy": {
+        "common": [
+            "Available data from case reports in pregnant women have not identified drug-associated risk of major birth defects, miscarriage, or adverse maternal or fetal outcomes; in animal embryo-fetal studies, delayed fetal development (delayed skeletal ossification and reduced body weight) was observed in rats administered anagrelide hydrochloride during organogenesis at doses approximately 97 times the maximum clinical dose (10 mg/day) based on body surface area; there are adverse effects on maternal and fetal outcomes associated with thrombocythemia in pregnancy",
+            "Thrombotic events, such as stroke, deep vein thrombosis, or myocardial infarction, can be complications of thrombocythemia; thrombocythemia in pregnancy is associated with an increased risk for miscarriage, stillbirth, and other maternal outcomes, such as preeclampsia"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In a pre- and post-natal study conducted in female rats, anagrelide hydrochloride administered at oral doses of 60 mg/kg/day (58 times the maximum clinical dose based on body surface area) or higher during organogenesis through lactation produced delay or blockage of parturition, deaths of non-delivering pregnant dams and their fully developed fetuses, and increased mortality in the pups born"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on findings from animal studies, therapy may impair female fertility"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There is no information regarding presence of drug in human milk, effect on breastfed child, or on milk production; the drug or its metabolites have been detected in milk of lactating rats; because of potential for serious adverse reactions, including thrombocytopenia, in a breastfed child, advise patients that breastfeeding is not recommended during treatment, and for one week following last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Severe hepatic impairment"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Cases of pulmonary hypertension reported; evaluate patients for signs and symptoms of underlying cardiopulmonary disease prior to initiating and during anagrelide therapy",
+                "Interstitial lung diseases (including allergic alveolitis, eosinophilic pneumonia and interstitial pneumonitis) reported to be associated with use of anagrelide in post-marketing reports; most cases presented with progressive dyspnea with lung infiltrations; time of onset ranged from 1 week to several years after initiating anagrelide; discontinue anagrelide if it occurs and evaluate; symptoms may improve after discontinuation",
+                "Monitor platelets, Hgb, WBC, LFTs, Cr, BUN for at least first 2 weeks",
+                "May induce high output heart failure by PDE4 inhibition (may be reversible upon discontinuation)"
+            ],
+            "specific": [
+                {
+                    "type": "Cardiovascular toxicity",
+                    "description": [
+                        "Caution in heart disease, renal impairment, mild-moderate hepatic impairment",
+                        "Torsades de pointes and ventricular tachycardia reported; obtain pretreatment cardiovascular exam, including EKG, in all patients",
+                        "Hepatic impairment increases anagrelide exposure and could increase risk of QTc prolongation; monitor patients with hepatic impairment for QTc prolongation and other cardiovascular adverse reactions",
+                        "Increases QTc interval and heart rate in healthy volunteers; should not be used in patients with known risk factors for QT interval prolongation, such as congenital long QT syndrome, a known history of acquired QTc prolongation, medicinal products that can prolong QTc interval and hypokalemia",
+                        "In patients with cardiac disease, use only when benefits outweigh risks",
+                        "In patients with heart failure, bradyarrhythmias, or electrolyte abnormalities, consider periodic ECG monitoring",
+                        "Orthostatic hypotension reported with higher doses; minimal BP changes observed following 2 mg/dose"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Use concomitantly with aspirin may increase risk of bleeding; assess potential risks and benefits for concomitant use with aspirin, since bleeding risks may be increased; monitor patients for bleeding, including those receiving concomitant therapy with other drugs known to cause bleeding (eg, anticoagulants, PDE3 inhibitors, NSAIDs, antiplatelet agents, selective serotonin reuptake inhibitors)",
+                        "Avoid use in patients taking medications that may prolong QT interval (including, but not limited to, chloroquine, clarithromycin, haloperidol, methadone, moxifloxacin, amiodarone, disopyramide, procainamide, and pimozide)",
+                        "Avoid use with PDE3 inhibitors such as inotropes and other PDE3 inhibitors (e.g., cilostazol, milrinone), which have similar characteristics as anagrelide",
+                        "This drug and its active metabolite are primarily metabolized by CYP1A2. Drugs that inhibit CYP1A2 (eg, fluvoxamine, ciprofloxacin) could increase exposure of anagrelide; monitor patients for cardiovascular events and titrate doses accordingly when CYP1A2 inhibitors are co-administered",
+                        "CYP1A2 inducers could decrease the exposure of this drug; patients taking concomitant CYP1A2 inducers (eg, omeprazole) may need to have their dose titrated to compensate for decrease in anagrelide exposure",
+                        "Anagrelide demonstrates limited inhibitory activity towards CYP1A2 in vitro and may alter exposure of concomitant CYP1A2 substrates (eg, theophylline, fluvoxamine, ondansetron)"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "abrocitinib and anagrelide both increase  anticoagulation. Contraindicated. Antiplatelet drugs, except for low-dose aspirin (=81 mg qDay), during the first 3 months of treatment are contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "anagrelide and dronedarone both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "goserelin increases toxicity of anagrelide by QTc interval. Contraindicated. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "histrelin increases toxicity of anagrelide by QTc interval. Contraindicated. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "leuprolide increases toxicity of anagrelide by QTc interval. Contraindicated. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "anagrelide and thioridazine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "triptorelin increases toxicity of anagrelide by QTc interval. Contraindicated. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "anagrelide and amiodarone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "anagrelide and amisulpride both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin alfa",
+            "description": {
+                "common": "antithrombin alfa, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin III",
+            "description": {
+                "common": "antithrombin III, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "anagrelide and apixaban both increase  anticoagulation. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "apomorphine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "argatroban, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "anagrelide and arsenic trioxide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "artemether and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "artemether/lumefantrine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "anagrelide and asenapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal increases effects of anagrelide by pharmacodynamic synergism. Avoid or Use Alternate Drug. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "anagrelide and azithromycin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "bedaquiline and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "bivalirudin, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "anagrelide and buprenorphine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "caplacizumab",
+            "description": {
+                "common": "caplacizumab, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "anagrelide and chlorpromazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "anagrelide and ciprofloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "dasatinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "anagrelide and disopyramide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "anagrelide and dofetilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "dolasetron and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "anagrelide and droperidol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "anagrelide and eliglustat both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug. Encorafenib is associated with dose-dependent QTc interval prolongation. Avoid with drugs known to prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "anagrelide and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "anagrelide and erythromycin base both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "anagrelide and erythromycin ethylsuccinate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "anagrelide and erythromycin lactobionate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "anagrelide and erythromycin stearate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels and/or prolong QT interval.  "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "anagrelide and flecainide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "anagrelide and fluconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "anagrelide and fluoxetine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "anagrelide and fluvoxamine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "fondaparinux, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "anagrelide and foscarnet both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "gilteritinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "anagrelide and glasdegib both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "granisetron and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "anagrelide and haloperidol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "anagrelide and hydroxychloroquine sulfate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "hydroxyzine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "anagrelide and ibutilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "anagrelide and iloperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "inotuzumab and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug. If unable to avoid concomitant use, obtain ECGs and electrolytes before and after initiation of any drug known to prolong QTc, and periodically monitor as clinically indicated during treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "isoflurane and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "anagrelide and ivosidenib both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "anagrelide and lapatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "anagrelide and levofloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "lithium and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "anagrelide and loperamide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "anagrelide and lopinavir both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "anagrelide and macimorelin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "anagrelide and maprotiline both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "anagrelide and mefloquine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "anagrelide and methadone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "anagrelide and midostaurin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "anagrelide and mifepristone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "mirtazapine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "anagrelide and mobocertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "anagrelide and moxifloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "anagrelide and nilotinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "anagrelide and octreotide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "anagrelide and ofloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "anagrelide and ondansetron both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "anagrelide and osimertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "anagrelide and oxaliplatin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "anagrelide and ozanimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "anagrelide and paliperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "anagrelide and panobinostat both increase  QTc interval. Avoid or Use Alternate Drug. Panobinostat is known to significantly prolong QT interval. Panobinostat prescribing information states use with drugs known to prolong QTc is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "anagrelide and pasireotide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "anagrelide and pazopanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "anagrelide and pentamidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "pimavanserin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug. Coadministration may increase the risk of QT prolongation and cardiac arrhythmia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "anagrelide and pimozide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "anagrelide and pitolisant both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "anagrelide and ponesimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "anagrelide and posaconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "primaquine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "anagrelide and procainamide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "anagrelide and promethazine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "anagrelide and propafenone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protamine",
+            "description": {
+                "common": "protamine, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "anagrelide and quetiapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "anagrelide and quinidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "anagrelide and ranolazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rilpivirine",
+            "description": {
+                "common": "anagrelide and rilpivirine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "anagrelide and risperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "anagrelide and romidepsin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "anagrelide and saquinavir both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "anagrelide and selpercatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "solifenacin and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorafenib",
+            "description": {
+                "common": "anagrelide and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "anagrelide and sotalol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "anagrelide and telavancin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "anagrelide and tetrabenazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "anagrelide and toremifene both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "anagrelide and trazodone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "anagrelide and vandetanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "anagrelide and vardenafil both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "anagrelide and vemurafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "anagrelide and venlafaxine both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "anagrelide and voclosporin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "anagrelide and voriconazole both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "anagrelide and vorinostat both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "anagrelide and ziprasidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "arformoterol and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, anagrelide.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; increases risk of bleeding; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate, anagrelide.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azficel-T",
+            "description": {
+                "common": "azficel-T, anagrelide. Other (see comment). Use Caution/Monitor. \nComment: Coadministration with anticoagulants or antiplatelets may increase bruising or bleeding at biopsy and/or injection sites; concomitant use not recommended. Decisions regarding continued use or cessation of anticoagulants or antiplatelets should be made by a physician."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "anagrelide, betrixaban.\nEither increases levels of the other by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cilostazol",
+            "description": {
+                "common": "anagrelide, cilostazol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram increases effects of anagrelide by pharmacodynamic synergism. Use Caution/Monitor. Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "anagrelide and clomipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "dabigatran, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs have the potential to cause bleeding. Concomitant use may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox, anagrelide. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "anagrelide and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "anagrelide and deutetrabenazine both increase  QTc interval. Use Caution/Monitor. At the maximum recommended dose, deutetrabenazine does not prolong QT interval to a clinically relevant extent. Certain circumstances may increase risk of torsade de pointes and/or sudden death in association with drugs that prolong the QTc interval (eg, bradycardia, hypokalemia or hypomagnesemia, coadministration with other drugs that prolong QTc interval, presence of congenital QT prolongation)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "anagrelide and escitalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil",
+            "description": {
+                "common": "fish oil, anagrelide. Other (see comment). Use Caution/Monitor. \nComment: Patients taking fish oil and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil triglycerides",
+            "description": {
+                "common": "fish oil triglycerides will increase the level or effect of anagrelide by  anticoagulation. Use Caution/Monitor. Prolonged bleeding reported in patients taking antiplatelet agents or anticoagulants and oral omega-3 fatty acids. Periodically monitor bleeding time in patients receiving fish oil triglycerides and concomitant antiplatelet agents or anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "anagrelide and fluphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "anagrelide and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "anagrelide and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea increases effects of anagrelide by pharmacodynamic synergism. Use Caution/Monitor. (Theoretical interaction).   Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of anagrelide by  anticoagulation. Use Caution/Monitor. Ibrutinib may increase the risk of hemorrhage in patients receiving antiplatelet or anticoagulant therapies and monitor for signs of bleeding. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "icosapent",
+            "description": {
+                "common": "icosapent, anagrelide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Icosapent may prolong bleeding time; monitor periodically if coadministered with other drugs that affect bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "anagrelide and imipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "inamrinone",
+            "description": {
+                "common": "anagrelide, inamrinone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "anagrelide and lenvatinib both increase  QTc interval. Use Caution/Monitor. Lenvatinib prescribing information recommends monitoring ECG closely when coadministered with QT prolonging drugs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "anagrelide and lofexidine both increase  QTc interval. Use Caution/Monitor. ECG monitoring is recommended."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone increases effects of anagrelide by Other (see comment). Use Caution/Monitor. \nComment: Potential  for increased risk of hypotension with concurrent use. Monitor blood pressure and adjust  dose of  antihypertensive agent as needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin increases effects of anagrelide by anticoagulation. Use Caution/Monitor. Melatonin may decrease prothrombin time."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "milrinone",
+            "description": {
+                "common": "anagrelide, milrinone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "anagrelide and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 carboxylic acids",
+            "description": {
+                "common": "omega 3 carboxylic acids, anagrelide. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3 acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 fatty acids",
+            "description": {
+                "common": "omega 3 fatty acids, anagrelide. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3-fatty acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "osilodrostat and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin will increase the level or effect of anagrelide by  Other (see comment). Use Caution/Monitor. Monitor for ECG changes if therapy is initiated in patients with drugs known to prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "anagrelide and paroxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "anagrelide and perphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "porfimer",
+            "description": {
+                "common": "anagrelide decreases effects of porfimer by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "anagrelide and prochlorperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "anagrelide and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "anagrelide and quinine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "rivaroxaban, anagrelide.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Avoid concurrent use of rivaroxaban with other anticoagulants due to increased bleeding risk other than during therapeutic transition periods where patients should be observed closely. Monitor for signs/symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "anagrelide and selumetinib both increase  anticoagulation. Modify Therapy/Monitor Closely. An increased risk of bleeding may occur in patients taking a vitamin-K antagonist or an antiplatelet agent with selumetinib. Monitor for bleeding and INR or PT in patients coadministered a vitamin-K antagonist or an antiplatelet agent with selumetinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of anagrelide by QTc interval. Use Caution/Monitor. Consider predose and post-colonoscopy ECGs in patients at increased risk of serious cardiac arrhythmias."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of anagrelide by QTc interval. Use Caution/Monitor. Consider predose and post-colonoscopy ECGs in patients at increased risk of serious cardiac arrhythmias."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor, anagrelide.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Increased risk of bleeding during concomitant use of medications that increase potential for bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "triclabendazole and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "anagrelide and trifluoperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "anagrelide and trimipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and anagrelide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorapaxar",
+            "description": {
+                "common": "anagrelide, vorapaxar.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Coadministration of anticoagulants, antiplatelets, or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vortioxetine",
+            "description": {
+                "common": "anagrelide, vortioxetine.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "anagrelide, warfarin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Drugs with antiplatelet properties may increase anticoagulation effect of warfarin."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "devil's claw",
+            "description": {
+                "common": "devil's claw, anagrelide. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "food",
+            "description": {
+                "common": "food decreases levels of anagrelide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginger",
+            "description": {
+                "common": "ginger, anagrelide. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginkgo biloba",
+            "description": {
+                "common": "ginkgo biloba, anagrelide. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence.ÿ Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "horse chestnut seed",
+            "description": {
+                "common": "horse chestnut seed, anagrelide. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Theoretical. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sucralfate",
+            "description": {
+                "common": "sucralfate decreases levels of anagrelide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verteporfin",
+            "description": {
+                "common": "anagrelide decreases effects of verteporfin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "44"
+        },
+        {
+            "name": "Palpitations",
+            "percent": "26"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "26"
+        },
+        {
+            "name": "Asthenia",
+            "percent": "23"
+        },
+        {
+            "name": "Edema",
+            "percent": "21"
+        },
+        {
+            "name": "Nausea",
+            "percent": "17"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "16"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "15"
+        },
+        {
+            "name": "General pain",
+            "percent": "15"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "12"
+        },
+        {
+            "name": "Flatulence",
+            "percent": "10"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "10"
+        },
+        {
+            "name": "Fever",
+            "percent": "9"
+        },
+        {
+            "name": "Edema",
+            "percent": "9"
+        },
+        {
+            "name": "Rash",
+            "percent": "8"
+        },
+        {
+            "name": "Chest pain",
+            "percent": "8"
+        },
+        {
+            "name": "Anorexia",
+            "percent": "8"
+        },
+        {
+            "name": "Tachycardia",
+            "percent": "8"
+        },
+        {
+            "name": "Pharyngitis",
+            "percent": "7"
+        },
+        {
+            "name": "Malaise",
+            "percent": "6"
+        },
+        {
+            "name": "Cough",
+            "percent": "6"
+        },
+        {
+            "name": "Paresthesia",
+            "percent": "6"
+        },
+        {
+            "name": "Back pain",
+            "percent": "6"
+        },
+        {
+            "name": "Pruritus",
+            "percent": "6"
+        },
+        {
+            "name": "Confusion",
+            "percent": "1-5"
+        },
+        {
+            "name": "Depression",
+            "percent": null
+        },
+        {
+            "name": "Migraine",
+            "percent": null
+        },
+        {
+            "name": "Myalgia",
+            "percent": null
+        },
+        {
+            "name": "Nervousness",
+            "percent": null
+        },
+        {
+            "name": "Photosensitivity",
+            "percent": null
+        },
+        {
+            "name": "Arthralgia",
+            "percent": null
+        },
+        {
+            "name": "Vision abnormalities",
+            "percent": null
+        },
+        {
+            "name": "Angina",
+            "percent": null
+        },
+        {
+            "name": "Arrhythmia",
+            "percent": null
+        },
+        {
+            "name": "Cardiovascular disease",
+            "percent": null
+        },
+        {
+            "name": "Heart failure",
+            "percent": null
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "Hypertension",
+            "percent": null
+        },
+        {
+            "name": "Postural hypotension",
+            "percent": null
+        },
+        {
+            "name": "Syncope",
+            "percent": null
+        },
+        {
+            "name": "Thrombosis",
+            "percent": null
+        },
+        {
+            "name": "Vasodilation",
+            "percent": null
+        },
+        {
+            "name": "Bronchitis",
+            "percent": null
+        },
+        {
+            "name": "Rhinitis",
+            "percent": null
+        },
+        {
+            "name": "Sinusitis",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        },
+        {
+            "name": "Dyspepsia",
+            "percent": null
+        },
+        {
+            "name": "Gastritis",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "Elevated liver enzymes",
+            "percent": null
+        },
+        {
+            "name": "Flu symptoms",
+            "percent": null
+        },
+        {
+            "name": "Leg cramps",
+            "percent": null
+        },
+        {
+            "name": "Dehydration",
+            "percent": null
+        },
+        {
+            "name": "Interstitial lung diseases",
+            "percent": null
+        },
+        {
+            "name": "including allergic alveolitis",
+            "percent": null
+        },
+        {
+            "name": "eosinophilic pneumonia and interstitial pneumonitis",
+            "percent": null
+        },
+        {
+            "name": "Hepatotoxicity",
+            "percent": null
+        },
+        {
+            "name": "Tubulointerstitial nephritis",
+            "percent": null
+        },
+        {
+            "name": "Supraventricular tachycardia",
+            "percent": null
+        },
+        {
+            "name": "SVT",
+            "percent": null
+        },
+        {
+            "name": "Hypoesthesia",
+            "percent": null
+        },
+        {
+            "name": "Torsades de pointes",
+            "percent": null
+        },
+        {
+            "name": "Cardiovascular toxicity",
+            "percent": null
+        },
+        {
+            "name": "Pulmonary hypertension",
+            "percent": null
+        },
+        {
+            "name": "Bleeding risk",
+            "percent": null
+        },
+        {
+            "name": "Pulmonary toxicity",
+            "percent": null
+        },
+        {
+            "name": "Cerebral infarction",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,725 @@
+{
+    "name": "dolutegravir/lamivudine",
+    "comment": "Rx",
+    "other_names": [
+        "Dovato"
+    ],
+    "classes": [
+        "HIV",
+        "ART Combos"
+    ],
+    "source": "https://reference.medscape.com/drug/dovato-dolutegravir-lamivudine-1000318",
+    "pregnancy": null,
+    "lactation": null,
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "All patients with HIV-1 infection should be tested for the presence of hepatitis B virus (HBV) before initiating dolutegravir/lamivudine",
+                "Emergence of lamivudine-resistant HBV variants associated with lamivudine-containing antiretroviral regimens reported",
+                "Severe acute exacerbations of HBV reported in patients who are coinfected with HIV-1 and HBV and have discontinued lamivudine; closely monitor hepatic function in these patients and, if appropriate, initiate anti-HBV treatment",
+                "Patients infected with both HIV and HBV should add additional treatment for their hepatitis B or consider a different drug regimen",
+                "Formulations of lamivudine used to treat HIV infection contain a higher dose than formulations indicated for chronic HBV infection"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to dolutegravir or lamivudine",
+                "Coadministration with dofetilide"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Safety and efficacy of lamivudine have not been established for treatment of chronic HBV in patients dually infected with HIV-1 and HBV; emergence of HBV variants associated with resistance to lamivudine reported",
+                "Severe acute HBV exacerbations reported in patients coinfected with HIV-1 and HBV who have discontinued lamivudine",
+                "Hypersensitivity reactions reported with dolutegravir; reactions characterized by rash, constitutional findings, and sometimes organ dysfunction, including liver injury",
+                "Hepatic adverse events reported with dolutegravir; patients with underlying hepatitis B or C may be at increased risk for worsening or development of transaminase elevations; in some cases, the elevated transaminases were consistent with immune reconstitution syndrome or HBV reactivation, particularly in the setting where antihepatitis therapy was withdrawn",
+                "Preliminary data from an observational study suggest dolutegravir is associated with increased risk of neural tube defects when administered at the time of conception and in early pregnancy",
+                "Lactic acidosis and severe hepatomegaly with steatosis, including fatal cases, reported with nucleoside analogues, including lamivudine; female sex and obesity may be risk factors"
+            ],
+            "specific": [
+                {
+                    "type": "Immune reconstitution syndrome",
+                    "description": [
+                        "Reported in patients treated with combination ARV therapy",
+                        "During initial phase of combination ARV treatment, patients whose immune systems respond may develop an inflammatory response to indolent or residual opportunistic infections (eg, Mycobacterium avium infection, CMV, Pneumocystis jirovecii pneumonia, or tuberculosis), which may necessitate further evaluation and treatment",
+                        "Autoimmune disorders (eg, Graves disease, polymyositis, and Guillain-Barré syndrome) also reported; however, the time to onset is more variable and can occur many months after initiation of treatment"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Also see Dosage Modifications",
+                        "Dolutegravir: Uridine diphosphate (UDP)-glucuronosyl-transferase (UGT)1A1 substrate (primary); CYP3A4 substrate (minor); also a substrate of UGT1A3, UGT1A9, breast cancer resistance protein (BCRP), and P-glycoprotein (P-gp) in vitro; renal organic cation transporters (OCT)2 inhibitor; multidrug and toxin extrusion transporter (MATE)1 inhibitor",
+                        "Lamivudine: P-gp and BCRP substrate",
+                        "Complete HIV-1 infection treatment regimen; therefore, coadministration with other ARVs not recommended",
+                        "Dolutegravir may increase plasma concentrations of drugs eliminated via OCT2 or MATE1 (eg, dofetilide [contraindicated], metformin)",
+                        "Drugs that inhibit UGT1A1 and CY3A4 my decrease dolutegravir levels, thereby leading to loss of therapeutic effects and possible development of resistance",
+                        "Coadministration of dolutegravir with polyvalent cation-containing products may decrease dolutegravir absorption",
+                        "Sorbitol decreases lamivudine peak plasma concentration and AUC"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "dolutegravir will increase the level or effect of dofetilide by  decreasing renal clearance. Contraindicated. Dolutegravir inhibits the renal organic cation transporter, OCT2; risk of life-threatening arrhythmias caused by increased systemic exposure to dofetilide"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "lamivudine, elvitegravir/cobicistat/emtricitabine/tenofovir DF. Other (see comment). Contraindicated. \nComment: Elvitegravir/cobicistat/emtricitabine/tenofovir is a complete regimen for HIV and should not be administered with other antiretrovirals."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "betibeglogene autotemcel",
+            "description": {
+                "common": "dolutegravir, betibeglogene autotemcel. Other (see comment). Avoid or Use Alternate Drug. \nComment: Do not take antiretroviral medications for at least 1 month before mobilization or expected duration for elimination of the medications, and until all cycles of apheresis are completed. Antiretroviral medications may interfere with manufacturing of apheresed cells."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabotegravir",
+            "description": {
+                "common": "dolutegravir, cabotegravir. Other (see comment). Avoid or Use Alternate Drug. \nComment: Cabotegravir plus rilpivirine is a complete regimen. Coadministration with other antiretroviral medications for treating HIV-1 infection is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elivaldogene autotemcel",
+            "description": {
+                "common": "elivaldogene autotemcel, lamivudine.\nEither decreases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Patients should not take antiretroviral medications for at least 1 month before initiating medications for stem cell mobilization, for the duration of the medications? elimination, and until all cycles of apheresis are completed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Increase dolutegravir dose to 50 mg BID when coadministered with strong UGT1A/CYP3A inducers"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elivaldogene autotemcel",
+            "description": {
+                "common": "elivaldogene autotemcel, dolutegravir.\nEither decreases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Patients should not take antiretroviral medications for at least 1 month before initiating medications for stem cell mobilization, for the duration of the medications? elimination, and until all cycles of apheresis are completed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Etravirine (a strong UGT1A/CYP3A inducer) significantly reduces dolutegravir plasma concentrations, but the effect of etravirine is mitigated by coadministration of lopinavir/ritonavir or darunavir/ritonavir, and is expected to be mitigated by atazanavir/ritonavir; do not use with etravirine without coadministration of atazanavir/ritonavir, darunavir/ritonavir, or lopinavir/ritonavir"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Increase dolutegravir dose to 50 mg BID when coadministered with strong UGT1A/CYP3A inducers (eg, fosamprenavir/ritonavir)"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magnesium citrate",
+            "description": {
+                "common": "magnesium citrate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magnesium gluconate",
+            "description": {
+                "common": "magnesium gluconate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "Prussian blue",
+            "description": {
+                "common": "Prussian blue will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Increase dolutegravir dose to 50 mg BID when coadministered with strong UGT1A/CYP3A inducers"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Avoid coadministration; insufficient data to recommend dosage adjustment"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorbitol",
+            "description": {
+                "common": "sorbitol will decrease the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Sorbitol-containing solution decreased systemic exposure of lamivudine oral solution in a pediatric study (ARROW trial). Results showed lower rates of virologic suppression, lower plasma lamivudine exposure, and development of viral resistance more frequently than children receiving lamivudine tablets."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sucralfate",
+            "description": {
+                "common": "sucralfate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Avoid or Use Alternate Drug. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tafenoquine",
+            "description": {
+                "common": "tafenoquine will increase the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Tafenoquine inhibits organic cation transporter-2 (OCT2) and multidrug and toxin extrusion (MATE) transporters in vitro. Avoid coadministration with OCT2 or MATE substrates. If coadministration cannot be avoided, monitor for substrate-related toxicities and consider dosage reduction if needed based on product labeling of the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will decrease the level or effect of dolutegravir by  increasing metabolism. Avoid or Use Alternate Drug. Increase dolutegravir dose to 50 mg BID when coadministered with strong UGT1A/CYP3A inducers (eg, tipranavir/ritonavir)"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trilaciclib",
+            "description": {
+                "common": "trilaciclib will decrease the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Avoid coadministration of trilaciclib (OCT2, MATE1, and MATE-2K inhibitor) with substrates where minimal increased concentration in kidney or blood may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abacavir",
+            "description": {
+                "common": "abacavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of dolutegravir by  cation binding in GI tract. Use Caution/Monitor. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations; use alternative therapy if available"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cabozantinib",
+            "description": {
+                "common": "lamivudine will increase the level or effect of cabozantinib by  Other (see comment). Use Caution/Monitor. MRP2 inhibitors increase cabozantinib toxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium acetate",
+            "description": {
+                "common": "calcium acetate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium citrate",
+            "description": {
+                "common": "calcium citrate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dalfampridine",
+            "description": {
+                "common": "dolutegravir will increase the level or effect of dalfampridine by  Other (see comment). Modify Therapy/Monitor Closely. dolutegravir inhibits OCT2 and multidrug and toxin extrusion transporter 1"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enfuvirtide",
+            "description": {
+                "common": "enfuvirtide and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "lamivudine increases levels of erdafitinib by decreasing renal clearance. Modify Therapy/Monitor Closely. Consider alternatives that are not OCT2 substrates or consider reducing the dose of OCT2 substrates based on tolerability."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of dolutegravir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dose of dolutegravir to 50 mg PO q12hr for treatment naïve or treatment experienced INSTI-naïve. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric maltol",
+            "description": {
+                "common": "ferric maltol will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous fumarate",
+            "description": {
+                "common": "ferrous fumarate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous gluconate",
+            "description": {
+                "common": "ferrous gluconate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous sulfate",
+            "description": {
+                "common": "ferrous sulfate will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "ganciclovir, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "interferon alfa 2b",
+            "description": {
+                "common": "interferon alfa 2b, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium hydroxide",
+            "description": {
+                "common": "magnesium hydroxide will decrease the level or effect of dolutegravir by  cation binding in GI tract. Use Caution/Monitor. Administer dolutegravir 2 hr before or 6 hr after taking medications containing polyvalent cations; use alternative therapy if available"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium supplement",
+            "description": {
+                "common": "magnesium supplement will decrease the level or effect of dolutegravir by  Other (see comment). Modify Therapy/Monitor Closely. Drug may form a chelate with polyvalent cations; may decrease absorption by the intestinal tract; applies to oral forms; may administer under fasting conditions 2 hr before administering polyvalent cation or 6 hr after"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "dolutegravir will increase the level or effect of metformin by  decreasing renal clearance. Modify Therapy/Monitor Closely. Dolutegravir inhibits the renal organic cation transporter, OCT2; when used with metformin, limit total daily dose of metformin to 1,000 mg either when starting metformin or dolutegravir; when stopping dolutegravir, adjustment of metformin dose may be necessary; monitor blood glucose when initiating concomitant use and after withdrawal of dolutegravir"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "multivitamins",
+            "description": {
+                "common": "multivitamins will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "multivitamins, vision",
+            "description": {
+                "common": "multivitamins, vision will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir 2 hr (dolutegravir or abacavir/dolutegravir/lamivudine) or 4 hr (dolutegravir/rilpivirine) before or 6 hr after taking medications containing polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "lamivudine and nevirapine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "orlistat",
+            "description": {
+                "common": "orlistat will decrease the level or effect of dolutegravir by  inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Loss of virological control reported in HIV-infected patients taking orlistat concomitantly. Exact mechanism is unclear, but may include a drug-drug interaction that inhibits systemic absorption of the antiretroviral drug. Monitor HIV RNA levels frequently and if increased HIV viral load confirmed, discontinue orlistat. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2a",
+            "description": {
+                "common": "peginterferon alfa 2a, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selenium",
+            "description": {
+                "common": "selenium will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir at least 2 h before or 6 h after polyvalent cations. Administer the dolutegravir/rilpivirine combination at least 4 h before or 6 h after polyvalent cations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2b",
+            "description": {
+                "common": "peginterferon alfa 2b, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribavirin",
+            "description": {
+                "common": "ribavirin increases toxicity of lamivudine by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available. Increased risk of lactic acidosis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride decreases levels of dolutegravir by inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Administer dolutegravir at least 2 hr before or 6 hr after each dose to avoid chelation with magnesium. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate decreases levels of dolutegravir by inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Administer dolutegravir at least 2 hr before or 6 hr after each dose to avoid chelation with magnesium. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stavudine",
+            "description": {
+                "common": "lamivudine and stavudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "lamivudine and tenofovir DF both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "trimethoprim increases effects of lamivudine by basic (cationic) drug competition for renal tubular clearance. Use Caution/Monitor. Potential for increased toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of dolutegravir by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "valganciclovir, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available.  Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zinc",
+            "description": {
+                "common": "zinc will decrease the level or effect of dolutegravir by  cation binding in GI tract. Modify Therapy/Monitor Closely. Administer dolutegravir at least 2 hr before or 6 hr after oral zinc salts."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "isavuconazonium sulfate will increase the level or effect of lamivudine by  Other (see comment). Minor/Significance Unknown. Isavuconazonium sulfate, an OCT2 inhibitor, may increase the effects or levels of OCT2 substrates."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "sulfamethoxazole increases levels of lamivudine by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "zidovudine",
+            "description": {
+                "common": "lamivudine increases effects of zidovudine by pharmacodynamic synergism. Minor/Significance Unknown. Beneficial synergism."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Blood and lymphatic systems disorders",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "neutropenia",
+            "percent": null
+        },
+        {
+            "name": "thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal disorders",
+            "percent": null
+        },
+        {
+            "name": "Abdominal discomfort",
+            "percent": null
+        },
+        {
+            "name": "abdominal pain",
+            "percent": null
+        },
+        {
+            "name": "flatulence",
+            "percent": null
+        },
+        {
+            "name": "upper abdominal pain",
+            "percent": null
+        },
+        {
+            "name": "vomiting",
+            "percent": null
+        },
+        {
+            "name": "General",
+            "percent": null
+        },
+        {
+            "name": "Fever",
+            "percent": null
+        },
+        {
+            "name": "Hepatobiliary disorders",
+            "percent": null
+        },
+        {
+            "name": "Hepatitis",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity",
+            "percent": null
+        },
+        {
+            "name": "immune reconstitution syndrome",
+            "percent": null
+        },
+        {
+            "name": "Musculoskeletal disorders",
+            "percent": null
+        },
+        {
+            "name": "Myositis",
+            "percent": null
+        },
+        {
+            "name": "Nervous system disorders",
+            "percent": null
+        },
+        {
+            "name": "Somnolence",
+            "percent": null
+        },
+        {
+            "name": "Psychiatric disorders",
+            "percent": null
+        },
+        {
+            "name": "Anxiety",
+            "percent": null
+        },
+        {
+            "name": "abnormal dreams",
+            "percent": null
+        },
+        {
+            "name": "depression",
+            "percent": null
+        },
+        {
+            "name": "suicidal ideation",
+            "percent": null
+        },
+        {
+            "name": "attempt",
+            "percent": null
+        },
+        {
+            "name": "behavior",
+            "percent": null
+        },
+        {
+            "name": "or completion",
+            "percent": null
+        },
+        {
+            "name": "these events were observed primarily with preexisting history of depression or other psychiatric illness",
+            "percent": null
+        },
+        {
+            "name": "Renal and urinary disorders",
+            "percent": null
+        },
+        {
+            "name": "Renal impairment",
+            "percent": null
+        },
+        {
+            "name": "Skin and subcutaneous tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "rash",
+            "percent": null
+        }
+    ]
+}

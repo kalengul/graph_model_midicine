@@ -1,0 +1,2178 @@
+{
+    "name": "sorafenib",
+    "comment": "Rx",
+    "other_names": [
+        "Nexavar"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors",
+        "Antineoplastics",
+        "VEGF Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/nexavar-sorafenib-342260",
+    "pregnancy": {
+        "common": [
+            "There are no available data in pregnant women to inform a drug associated risk"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Based on findings from animal studies and mechanism of action, therapy may cause fetal harm when administered to a pregnant woman; in animal reproduction studies, oral administration to pregnant rats and rabbits during period of organogenesis resulted in embryo-fetal toxicities at maternal exposures that were significantly lower than human exposures at recommended dose of 400 mg twice daily;  apprise pregnant women and females of reproductive potential of potential risk to fetus"
+                ]
+            },
+            {
+                "type": "Pregnancy testing",
+                "description": [
+                    "Verify pregnancy status of females of reproductive potential prior to initiation of therapy"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females: Therapy may cause fetal harm when administered to a pregnant woman; advise females of reproductive potential to use effective contraception during treatment and for 6 months following last dose of drug",
+                    "Males: Based on genotoxicity and findings in animal reproduction studies, advise male patients with female partners of reproductive potential and pregnant partners to use effective contraception during treatment and for 3 months after the last dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Males: Based on findings in animal studies, therapy may impair fertility in males of reproductive potential"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on presence of drug or its metabolites in human milk, or its effects on breast-fed child or on milk production; drug was present in milk of lactating rats; because of potential for serious adverse reactions in breastfed child from drug, advise lactating women not to breastfeed during treatment and for 2 weeks after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Coadministration with carboplatin and paclitaxel in patients with squamous cell lung cancer"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Osteonecrosis of jaw reported",
+                "Increased risk of cardiac ischemia/HTN/hemorrhage; consider temporary or permanent discontinuation of therapy in patients who develop cardiovascular events",
+                "Withhold therapy for at least 10 days prior to elective surgery; do not administer for at least 2 weeks following major surgery and until adequate wound healing; safety of resumption of therapy after resolution of wound healing complications has not been established",
+                "Hepatitis reported; characterized by a hepatocellular pattern of liver damage with significant increases of transaminases which may result in hepatic failure and death",
+                "QT Prolongation: Monitor for prolonged QT intervals with CHF, bradyarrhythmias, drugs known to prolong QT interval, and electrolyte abnormalities; avoid with congenital long QT syndrome",
+                "Congestive heart failure reported; temporary or permanent discontinuation of therapy should be considered in patients who develop cardiovascular events",
+                "Monitor blood pressure weekly during first 6 weeks and periodically thereafter; consider temporary or permanent discontinuation for severe or persistent hypertension despite antihypertensive therapy",
+                "Avoid pregnancy",
+                "High incidence of skin toxicity and rash",
+                "Dermatologic toxicities reported; management of dermatologic toxicities may include topical therapies for symptomatic relief, temporary treatment interruption and/or dose reduction of the drug; in severe or persistent cases, permanent discontinuation should be considered; there have been reports of severe dermatologic toxicities, including Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN); these cases may be life-threatening; discontinue therapy if SJS or TEN are suspected",
+                "Impairs exogenous thyroid suppression; for patients with impaired TSH suppression while receiving sorafenib, the median maximal TSH was 1.6 mU/L and 25% had TSH levels >4.4 mU/L; monitor TSH levels monthly and adjust thyroid replacement medication as needed in patients with disseminated thyroid cancer",
+                "Temporarily discontinue before surgery, resumption should be based on adequate wound healing",
+                "Monitor liver function tests regularly; discontinue for unexplained transaminase elevations",
+                "An increased risk of bleeding may occur; if any bleeding necessitates medical intervention, consider permanent discontinuation of therapy; due to potential risk of bleeding, treat tracheal, bronchial, and esophageal infiltration with local therapy prior to administering therapy in patients with DTC",
+                "Gastrointestinal perforation reported in less than 1% of patients receiving therapy; in some cases this was not associated with apparent intra-abdominal tumor; in the event of gastrointestinal perforation, permanently discontinue"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Infrequent bleeding or elevations in the International Normalized Ratio (INR) reported in some patients taking warfarin while on therapy; monitor patients taking concomitant warfarin regularly for changes in prothrombin time (PT), INR or clinical bleeding episodes",
+                        "Use of in combination with carboplatin/paclitaxel contraindicated in patients with squamous cell lung cancer; this drug in combination with gemcitabine/cisplatin not recommended in patients with squamous cell lung cancer; safety and effectiveness not established in patients with non-small cell lung cancer",
+                        "This drug can prolong QT/QTc interval; QT/QTc interval prolongation increases risk for ventricular arrhythmias; avoid therapy in patients with congenital long QT syndrome; monitor electrolytes and electrocardiograms in patients with congestive heart failure, bradyarrhythmias, drugs known to prolong QT interval, including Class Ia and III antiarrhythmics; correct electrolyte abnormalities (magnesium, potassium, calcium); Interrupt therapy if QTc interval is greater than 500 milliseconds or for an increase from baseline of 60 milliseconds or greater"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "sorafenib and dronedarone both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lefamulin is contraindicated with CYP3A substrates know to prolong the QT interval."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "sorafenib and pimozide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "sorafenib and thioridazine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "sorafenib and ziprasidone both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "adagrasib, sorafenib.\nEither increases effects of the other by QTc interval. Avoid or Use Alternate Drug. Each drug prolongs the QTc interval, which may increased the risk of Torsade de pointes, other serious arryhthmias, and sudden death. If coadministration unavoidable, more frequent monitoring is recommended for such patients."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "sorafenib and amiodarone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "anagrelide and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "artemether and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "buprenorphine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine decreases levels of sorafenib by increasing metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "sorafenib increases levels of dabrafenib by decreasing metabolism. Avoid or Use Alternate Drug. Strong CYP2C8 inhibitors may increase dabrafenib levels."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "dofetilide increases toxicity of sorafenib by QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "sorafenib and entrectinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "sorafenib will increase the level or effect of erdafitinib by  affecting hepatic enzyme CYP2C9/10 metabolism. Avoid or Use Alternate Drug. If coadministration of a strong CYP2C9 inhibitors is unavoidable, closely monitor adverse reactions and modify dose of erdafitinib accordingly. If strong CYP2C9 inhibitor is discontinued, consider increasing erdafitinib dose in the absence of any drug-related toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "escitalopram increases toxicity of sorafenib by QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels or prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "gilteritinib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "sorafenib and glasdegib both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "granisetron and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxychloroquine sulfate and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "hydroxyzine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Idelalisib is a strong CYP3A inhibitor; avoid coadministration with sensitive CYP3A substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "inotuzumab and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. If unable to avoid concomitant use, obtain ECGs and electrolytes before and after initiation of any drug known to prolong QTc, and periodically monitor as clinically indicated during treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "isoflurane and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of QTc prolonging drugs with ivosidenib or replace with alternate therapies. If coadministration of a QTc prolonging drug is unavoidable, monitor for increased risk of QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "lithium and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "macimorelin and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. Macimorelin causes an increase of ~11 msec in the corrected QT interval. Avoid coadministration with drugs that prolong QT interval, which could increase risk for developing torsade de pointes-type ventricular tachycardia. Allow sufficient washout time of drugs that are known to prolong the QT interval before administering macimorelin."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "mirtazapine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "mobocertinib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration unavoidable, reduce mobocertinib dose and monitor QTc interval more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of sorafenib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "sorafenib and panobinostat both increase  QTc interval. Avoid or Use Alternate Drug. Panobinostat is known to significantly prolong QT interval. Panobinostat prescribing information states use with drugs known to prolong QTc is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "sorafenib and pitolisant both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "primaquine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin decreases levels of sorafenib by increasing metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of sorafenib by increasing metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, sorafenib.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selinexor",
+            "description": {
+                "common": "selinexor, sorafenib. unspecified interaction mechanism. Avoid or Use Alternate Drug. Patients treated with selinexor may experience neurological toxicities. Avoid taking selinexor with other medications that may cause dizziness or confusion."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "sorafenib will increase the level or effect of siponimod by  affecting hepatic enzyme CYP2C9/10 metabolism. Avoid or Use Alternate Drug. Coadministration of siponimod with drugs that cause moderate CYP2C9 AND a moderate or strong CYP3A4 inhibition is not recommended. Caution if siponimod coadministered with moderate CYP2C9 inhibitors alone."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort decreases levels of sorafenib by increasing metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "tetrabenazine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "sorafenib and toremifene both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "sorafenib increases toxicity of umeclidinium bromide/vilanterol inhaled by QTc interval. Avoid or Use Alternate Drug. Exercise extreme caution when vilanterol coadministered with drugs that prolong QTc interval; adrenergic agonist effects on the cardiovascular system may be potentiated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "sorafenib increases toxicity of vilanterol/fluticasone furoate inhaled by QTc interval. Avoid or Use Alternate Drug. Exercise extreme caution when vilanterol coadministered with drugs that prolong QTc interval; adrenergic agonist effects on the cardiovascular system may be potentiated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "sorafenib and alfuzosin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "sorafenib and amitriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "sorafenib and amoxapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "sorafenib and apomorphine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "sorafenib and arformoterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "sorafenib and arsenic trioxide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "sorafenib and artemether/lumefantrine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "sorafenib will increase the level or effect of artesunate by  decreasing metabolism. Use Caution/Monitor. Coadministration may increase active artesunate metabolite (DHA) by inhibiting UGT. Monitor for increased adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "sorafenib and asenapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "sorafenib and azithromycin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "sorafenib and bedaquiline both increase  QTc interval. Modify Therapy/Monitor Closely. ECG should be monitored closely"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bevacizumab",
+            "description": {
+                "common": "bevacizumab, sorafenib. Other (see comment). Use Caution/Monitor. \nComment: Monitor for development of hand-foot skin reactions during combination therapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "budesonide decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bupropion",
+            "description": {
+                "common": "sorafenib, bupropion. decreasing metabolism. Use Caution/Monitor. Incr levels of bupropion, but decr levels of active metabolites. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "sorafenib and chlorpromazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "sorafenib and ciprofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "sorafenib and citalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "sorafenib and clarithromycin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "sorafenib and clomipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "sorafenib and clozapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "cortisone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "sorafenib and crizotinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "sorafenib will increase the level or effect of cyclophosphamide by  affecting hepatic enzyme CYP2B6 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "sorafenib and dasatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "deflazacort decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "sorafenib and degarelix both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "denosumab",
+            "description": {
+                "common": "sorafenib, denosumab. Other (see comment). Use Caution/Monitor. \nComment: Caution should be taken in patients on concomitant immunosuppressants or with impaired immune systems because of increased risk for serious infections."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "sorafenib and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "deutetrabenazine and sorafenib both increase  QTc interval. Use Caution/Monitor. At the maximum recommended dose, deutetrabenazine does not prolong QT interval to a clinically relevant extent. Certain circumstances may increase risk of torsade de pointes and/or sudden death in association with drugs that prolong the QTc interval (eg, bradycardia, hypokalemia or hypomagnesemia, coadministration with other drugs that prolong QTc interval, presence of congenital QT prolongation)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dichlorphenamide",
+            "description": {
+                "common": "dichlorphenamide and sorafenib both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "sorafenib and disopyramide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "sorafenib and dofetilide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "sorafenib and dolasetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "sorafenib, doxorubicin. unknown mechanism. Use Caution/Monitor. In clinical studies, an increase of 21% and 47% and no changes in the AUC of doxorubicin were observed with coadministration of sorafenib 400 mg twice daily. The clinical importance of these findings is unknown."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "sorafenib, doxorubicin liposomal. unknown mechanism. Use Caution/Monitor. In clinical studies, an increase of 21% and 47% and no changes in the AUC of doxorubicin were observed with coadministration of sorafenib 400 mg twice daily. The clinical importance of these findings is unknown."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "sorafenib and droperidol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of sorafenib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, sorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "sorafenib and erythromycin base both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "sorafenib and erythromycin ethylsuccinate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "sorafenib and erythromycin lactobionate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "sorafenib and erythromycin stearate both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "sorafenib and escitalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethotoin",
+            "description": {
+                "common": "ethotoin decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ezogabine",
+            "description": {
+                "common": "sorafenib and ezogabine both increase  QTc interval. Use Caution/Monitor. Slight and transient QT-prolongation observed, particularly when ezogabine dose titrated to 1200mg/day."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "sorafenib increases effects of fingolimod by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Concomitant therapy is expected to increase the risk of immunosuppression. Use caution when switching patients from long-acting therapies with immune effects. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "sorafenib and flecainide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "sorafenib and fluconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "fludrocortisone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "sorafenib and fluoxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "sorafenib and fluphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "sorafenib and formoterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "sorafenib and foscarnet both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "sorafenib and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "sorafenib and gemifloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "sorafenib and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "goserelin increases toxicity of sorafenib by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "griseofulvin",
+            "description": {
+                "common": "griseofulvin decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "sorafenib and haloperidol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "histrelin increases toxicity of sorafenib by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "hydrocortisone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "sorafenib and ibutilide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "sorafenib and iloperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "sorafenib and indapamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "sorafenib increases levels of irinotecan by Other (see comment). Use Caution/Monitor. \nComment: Competition for UGT1A1 pathway."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "sorafenib increases levels of irinotecan liposomal by Other (see comment). Use Caution/Monitor. \nComment: Competition for UGT1A1 pathway."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isradipine",
+            "description": {
+                "common": "sorafenib and isradipine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "sorafenib and lapatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "sorafenib and lenvatinib both increase  QTc interval. Use Caution/Monitor. Lenvatinib prescribing information recommends monitoring ECG closely when coadministered with QT prolonging drugs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir increases levels of sorafenib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "leuprolide increases toxicity of sorafenib by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "sorafenib and levofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "sorafenib and lopinavir both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "sorafenib and lumefantrine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "sorafenib and maprotiline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "sorafenib and mefloquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "sorafenib and methadone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "methylprednisolone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone, sorafenib. QTc interval. Modify Therapy/Monitor Closely. Use alternatives if available."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane decreases levels of sorafenib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Mitotane is a strong inducer of cytochrome P-4503A4; monitor when coadministered with CYP3A4 substrates for possible dosage adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "modafinil decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "sorafenib and moxifloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "neomycin PO",
+            "description": {
+                "common": "neomycin PO decreases levels of sorafenib by unknown mechanism. Use Caution/Monitor. AUC decreased by 54% in healthy volunteers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "sorafenib and nilotinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "sorafenib and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "sorafenib and octreotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC, sorafenib.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Consider the risk of additive immune system effects when coadministering immunosuppressive therapies with coadministration. When switching from therapies with immune effects, take into account the duration and mechanism of action of these therapies when initiating ofatumumab SC."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "sorafenib and ofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "sorafenib and olanzapine both increase  QTc interval. Use Caution/Monitor. Limited data, including some case reports, suggest that olanzapine may be associated with a significant prolongation of the QTc interval in rare instances"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "sorafenib and ondansetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "osilodrostat and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib and sorafenib both increase  QTc interval. Use Caution/Monitor. Conduct periodic monitoring with ECGs and electrolytes in patients taking drugs known to prolong the QTc interval."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin will increase the level or effect of sorafenib by  Other (see comment). Use Caution/Monitor. Monitor for ECG changes if therapy is initiated in patients with drugs known to prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "ozanimod and sorafenib both increase  QTc interval. Modify Therapy/Monitor Closely. The potential additive effects on heart rate, treatment with ozanimod should generally not be initiated in patients who are concurrently treated with QT prolonging drugs with known arrhythmogenic properties."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "sorafenib will increase the level or effect of paclitaxel by  Other (see comment). Modify Therapy/Monitor Closely. Paclitaxel levels/toxicity may increase when coadministered with CYP2C8 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "sorafenib will increase the level or effect of paclitaxel protein bound by  Other (see comment). Modify Therapy/Monitor Closely. Paclitaxel levels/toxicity may increase when coadministered with CYP2C8 inhibitors"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "sorafenib and paliperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "sorafenib and pasireotide both increase  QTc interval. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "sorafenib and pazopanib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "sorafenib and pentamidine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "sorafenib and perphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "sorafenib and posaconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "prednisolone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "prednisone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "sorafenib and procainamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "sorafenib and propafenone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "sorafenib and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "sorafenib and quetiapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "sorafenib and quinidine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "sorafenib and quinine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "sorafenib and ranolazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "sorafenib and risperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "sorafenib and romidepsin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "sorafenib and saquinavir both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "selpercatinib increases toxicity of sorafenib by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sorafenib and sertraline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and sorafenib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sipuleucel-T",
+            "description": {
+                "common": "sorafenib decreases effects of sipuleucel-T by pharmacodynamic antagonism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "sorafenib and solifenacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "sorafenib and sotalol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, sorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sorafenib and sunitinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "sorafenib and tacrolimus both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "sorafenib and telavancin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiothixene",
+            "description": {
+                "common": "sorafenib and thiothixene both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, sorafenib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, sorafenib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "triamcinolone acetonide injectable suspension decreases levels of sorafenib by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "triclabendazole and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "sorafenib and trimipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "triptorelin increases toxicity of sorafenib by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and sorafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "sorafenib and vandetanib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "sorafenib and vardenafil both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "sorafenib and vemurafenib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin, sorafenib.\nEither increases effects of the other by QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "sorafenib and voriconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "sorafenib and vorinostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "sorafenib will increase the level or effect of warfarin by  affecting hepatic enzyme CYP2C9/10 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine increases toxicity of sorafenib by QTc interval. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "sorafenib will increase the level or effect of cocaine topical by  affecting hepatic enzyme CYP2B6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of sorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Thrombocytopenia",
+            "percent": "12-46"
+        },
+        {
+            "name": "Anemia",
+            "percent": "44"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "43"
+        },
+        {
+            "name": "Rash",
+            "percent": "40"
+        },
+        {
+            "name": "desquamation",
+            "percent": "37"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "31"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "30"
+        },
+        {
+            "name": "Hand",
+            "percent": "30"
+        },
+        {
+            "name": "foot skin reaction",
+            "percent": "29"
+        },
+        {
+            "name": "Weight loss",
+            "percent": "27"
+        },
+        {
+            "name": "Anorexia",
+            "percent": "24"
+        },
+        {
+            "name": "Alopecia",
+            "percent": "23"
+        },
+        {
+            "name": "Nausea",
+            "percent": "18"
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": "15-18"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "9-17"
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": "16"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "15"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "13"
+        },
+        {
+            "name": "Constipation",
+            "percent": "11"
+        },
+        {
+            "name": "Neuropathy",
+            "percent": "10"
+        },
+        {
+            "name": "Dry skin",
+            "percent": "10"
+        },
+        {
+            "name": "Headache",
+            "percent": "1.9"
+        },
+        {
+            "name": "Joint pain",
+            "percent": null
+        },
+        {
+            "name": "Congestive heart failure",
+            "percent": null
+        },
+        {
+            "name": "MI",
+            "percent": null
+        },
+        {
+            "name": "QT prolonation",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Acute renal failure",
+            "percent": null
+        },
+        {
+            "name": "Angioedema and arrhythmia may occur",
+            "percent": null
+        },
+        {
+            "name": "Bone pain reported",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson Syndrome",
+            "percent": null
+        },
+        {
+            "name": "Hyperthyroidism",
+            "percent": null
+        },
+        {
+            "name": "Interstitial lung disease",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "anaphylactic reaction",
+            "percent": null
+        },
+        {
+            "name": "Hepatobiliary disorders",
+            "percent": null
+        },
+        {
+            "name": "Drug",
+            "percent": null
+        },
+        {
+            "name": "induced hepatitis",
+            "percent": null
+        },
+        {
+            "name": "including reports of hepatic failure and death",
+            "percent": null
+        },
+        {
+            "name": "Dermatologic",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome and toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "TEN",
+            "percent": null
+        },
+        {
+            "name": "Musculoskeletal",
+            "percent": null
+        },
+        {
+            "name": "Rhabdomyolysis",
+            "percent": null
+        },
+        {
+            "name": "osteonecrosis of the jaw",
+            "percent": null
+        },
+        {
+            "name": "Respiratory",
+            "percent": null
+        },
+        {
+            "name": "Interstitial lung disease",
+            "percent": null
+        },
+        {
+            "name": "like events",
+            "percent": null
+        },
+        {
+            "name": "Blood and lymphatic disorders",
+            "percent": null
+        },
+        {
+            "name": "Thrombotic microangiopathy",
+            "percent": null
+        },
+        {
+            "name": "TMA",
+            "percent": null
+        },
+        {
+            "name": "Vascular",
+            "percent": null
+        },
+        {
+            "name": "Arterial",
+            "percent": null
+        },
+        {
+            "name": "including aortic",
+            "percent": null
+        },
+        {
+            "name": "aneurysms",
+            "percent": null
+        },
+        {
+            "name": "dissections",
+            "percent": null
+        },
+        {
+            "name": "and rupture",
+            "percent": null
+        }
+    ]
+}

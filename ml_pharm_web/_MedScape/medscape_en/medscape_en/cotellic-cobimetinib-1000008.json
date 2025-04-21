@@ -1,0 +1,985 @@
+{
+    "name": "cobimetinib",
+    "comment": "Rx",
+    "other_names": [
+        "Cotellic"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "MEK Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/cotellic-cobimetinib-1000008",
+    "pregnancy": {
+        "common": [
+            "Based on findings from animal reproduction studies and its mechanism of action, cobimetinib can cause fetal harm when administered to a pregnant woman",
+            "In animal reproduction studies, oral administration of cobimetinib in pregnant rats during organogenesis was teratogenic and embryotoxic at exposures (AUC) that were 0.9- to 1.4-times those observed in humans at the recommended human dose of 60 mg",
+            "Advise pregnant women of the potential risk to a fetus",
+            "Contraception: Advise females of reproductive potential to use effective contraception during treatment with and for 2 weeks after the final dose",
+            "Infertility: Based on findings in animals, cobimetinib may reduce fertility in females and males of reproductive potential"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Because of the potential for serious adverse reactions in a breastfed infant, advise women not to breastfeed during treatment and for 2 weeks after the final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Refer to the Dosage Modification section for instructions on withholding, decreasing, or permanently discontinuing cobimetinib in the event of adverse reactions",
+                "New primary malignancies can occur; monitor for new malignancies prior to initiation of therapy, while on therapy, and for up to 6 months following the last dose (see Dosage Modifications)",
+                "May cause severe dermatologic reactions; monitor for severe rashes; interrupt, reduce dose, or discontinue therapy if it occurs (see Dosage Modifications)",
+                "Serous retinopathy and retinal vein occlusion reported; perform an ophthalmological evaluation at regular intervals and for any visual disturbances; if serous retinopathy diagnosed, interrupt therapy until visual symptoms improve (see Dosage Modifications)",
+                "Hepatotoxicity reported; monitor liver laboratory tests monthly during treatment and as clinically indicated; (see Dosage Modifications)",
+                "Monitor CPK periodically and as clinically indicated for signs and symptoms of rhabdomyolysis (see Dosage Modifications)",
+                "Severe photosensitivity may occur; advise patients to avoid sun exposure (see Dosage Modifications)",
+                "Can cause fetal harm; advise females of reproductive potential of the potential risk to a fetus and to use effective contraception"
+            ],
+            "specific": [
+                {
+                    "type": "Cardiomyopathy",
+                    "description": [
+                        "Risk of cardiomopathy is increased in patients receiving cobimetinib with vemurafenib compared with vemurafenib as a single agent; safety has not been established in patients with decreased LVEF; evaluate LVEF before treatment, after 1 month of treatment, then q3 months thereafter during treatment (see Dosage Modifications)",
+                        "Of the patients with decreased LVEF, all had dose interruption and/or reduction and none required permanent discontinuation",
+                        "Decreased LVEF resolved to above the LLN or within 10% of baseline in 60% of patients receiving this drug with a median time to resolution of 31 days (range: 13 days to 126 days)"
+                    ]
+                },
+                {
+                    "type": "Hemorrhage",
+                    "description": [
+                        "Major hemorrhagic events reported; monitor for signs and symptoms of bleeding (see Dosage Modifications)",
+                        "Gastrointestinal tract hemorrhage, reproductive system hemorrhage, and hematuria also occurred at a higher incidence in patients receiving the drug in combination with vemurafenib compared with patients receiving vemurafenib alone",
+                        "Withhold therapy for Grade 3 hemorrhagic events; if improved to Grade 0 or 1 within 4 weeks, resume therapy at a lower dose level"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Coadministration with itraconazole (a strong CYP3A4 inhibitor) increased cobimetinib systemic exposure by 6.7-fold",
+                        "Avoid coadministration with moderate or strong CYP3A4 inhibitors or inducers; if unable to avoid short-term use of moderate CYP3A4 inhibitors, reduce cobimetinib dose (see Dosage Modifications)",
+                        "Coadministration with a strong CYP3A inducer may decrease cobimetinib systemic exposure by more than 80% and reduce its efficacy",
+                        "Also see Dosage Modification"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "armodafinil will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "clobazam will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration. Strong or moderate CYP3A inducers may decrease cobimetinib systemic exposure by >80% and reduce its efficacy."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aminolevulinic acid oral",
+            "description": {
+                "common": "aminolevulinic acid oral, cobimetinib.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid administering other phototoxic drugs with aminolevulinic acid oral for 24 hr during perioperative period."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aminolevulinic acid topical",
+            "description": {
+                "common": "cobimetinib, aminolevulinic acid topical.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Each drug may increase the photosensitizing effect of the other."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "aprepitant will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bicalutamide",
+            "description": {
+                "common": "bicalutamide will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "ciprofloxacin will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (=14 days) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce cobimetinib dose to 20 mg. After discontinuing the moderate CYP3A inhibitor, resume cobimetinib 60 mg. In patients who are already receiving reduced cobimetinib doses due to adverse reactions, avoid moderate CYP3A4 and use alternative therapy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "doxycycline will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "fosaprepitant will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "haloperidol will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternate therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with strong CYP3A4 inhibitors with (increases cobimetinib systemic exposure by 6.7-fold)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "lidocaine will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of cobimetinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methyl aminolevulinate",
+            "description": {
+                "common": "cobimetinib, methyl aminolevulinate.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Each drug may increase the photosensitizing effect of the other."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metronidazole",
+            "description": {
+                "common": "metronidazole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "netupitant/palonosetron",
+            "description": {
+                "common": "netupitant/palonosetron will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of cobimetinib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "schisandra",
+            "description": {
+                "common": "schisandra will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "sertraline will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetracycline",
+            "description": {
+                "common": "tetracycline will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "zileuton",
+            "description": {
+                "common": "zileuton will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent short term (14 days or less) use of moderate CYP3A inhibitors is unavoidable for patients who are taking cobimetinib 60 mg, reduce the cobimetinib dose to 20 mg. After discontinuation of a moderate CYP3A inhibitor, resume cobimetinib 60 mg. Use an alternative to a moderate CYP3A inhibitor in patients who are taking a reduced dose of cobimetinib (40 or 20 mg daily)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "cobimetinib decreases effects of cholera vaccine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs and corticosteroids (used in greater than physiologic doses), may reduce the immune response to cholera vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "cobimetinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. will increase the level or effect of"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, cobimetinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir (a moderate CYP3A4 inhibitor) may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If short-term coadministration (14 days or less) of mifepristone necessary, reduce dose of cobimetinib to 20 mg once daily for patients normally taking 60 mg daily; after discontinuation of mifepristone, resume cobimetinib at previous dose; use alternative to mifepristone in patients who are already taking a reduced dose of cobimetinib (20-40 mg daily)"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod and cobimetinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and cobimetinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, cobimetinib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Increased GGT",
+            "percent": "21"
+        },
+        {
+            "name": "Increased CPK",
+            "percent": "14"
+        },
+        {
+            "name": "Hypophosphatemia",
+            "percent": "12"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "11"
+        },
+        {
+            "name": "Lymphopenia",
+            "percent": "10"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "8"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "7"
+        },
+        {
+            "name": "Hyponatremia",
+            "percent": "6"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "6"
+        },
+        {
+            "name": "Hypokalemia",
+            "percent": "4.5"
+        },
+        {
+            "name": "Hyperkalemia",
+            "percent": "2.9"
+        },
+        {
+            "name": "Photosensitivity",
+            "percent": "4"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "4"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "3.3"
+        },
+        {
+            "name": "Anemia",
+            "percent": "2.5"
+        },
+        {
+            "name": "Acneiform dermatitis",
+            "percent": "2"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "2"
+        },
+        {
+            "name": "Retinal detachment",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea",
+            "percent": "1"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "1"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "1"
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": "1"
+        },
+        {
+            "name": "Vision impaired",
+            "percent": null
+        },
+        {
+            "name": "Chorioretinopathy",
+            "percent": null
+        },
+        {
+            "name": "Hypoalbuminemia",
+            "percent": null
+        },
+        {
+            "name": "Hypocalcemia",
+            "percent": null
+        }
+    ]
+}

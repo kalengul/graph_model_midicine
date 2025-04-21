@@ -5,7 +5,7 @@ interface IPayload{
     se_name: string //значение для сохранения
 }
 
-interface IState {
+interface IStateSE {
     sideEffects: IPayload[]; // Указываем тип элементов массива
     updateList_se: boolean;
     [key: string]: any; // Если state может содержать другие динамические поля
@@ -16,16 +16,16 @@ const SideEffectManageSlice = createSlice({
     initialState: {
         sideEffects: [],
         updateList_se: false,
-    } as IState,
+    } as IStateSE,
     reducers: {
         addValue(state, action){
-            console.log(action.payload)
+            //console.log(action.payload)
             console.log(action.payload.title)
             
             for(const key in state){
                 console.log(key)
                 if (key === action.payload.title) {
-                    console.log(action.payload.title)
+                    //console.log(action.payload.title)
                     state[key] = action.payload.value 
                 }
             }

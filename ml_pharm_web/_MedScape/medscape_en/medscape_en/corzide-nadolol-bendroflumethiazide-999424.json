@@ -1,0 +1,3441 @@
+{
+    "name": "nadolol/bendroflumethiazide",
+    "comment": "Rx",
+    "other_names": [
+        "Corzide"
+    ],
+    "classes": [
+        "Thiazide Combos",
+        "Beta-Blocker/Thiazide Diuretic Combos"
+    ],
+    "source": "https://reference.medscape.com/drug/corzide-nadolol-bendroflumethiazide-999424",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category : C",
+            "Lactation: excreted in breast milk, use caution"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: excreted in breast milk, use caution"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Hypersensitivity to catecholamines has been observed during withdrawal",
+                "Exacerbation of angina and, in some cases, myocardial infarction occurrence after abrupt discontinuation",
+                "When discontinuing chronically administered beta-blockers (particularly with ischemic heart disease) gradually reduce dose over 1-2 wk and carefully monitor",
+                "If angina markedly worsens or acute coronary insufficiency develops, reinstate beta-blocker administration promptly, at least temporarily (in addition to other measures appropriate for unstable angina)",
+                "Warn patients against interruption or discontinuation of beta-blocker without physician advice",
+                "Because coronary artery disease is common and may be unrecognized, slowly discontinue beta-blocker therapy, even in patients treated only for hypertension"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Anuria",
+                "Cardiogenic shock",
+                "Heart block 2°/3°",
+                "Hypersensitivity to either component or sulfonamides",
+                "Overt cardiac failure",
+                "Sinus bradycardia",
+                "Uncompensated cardiac failure",
+                "Asthma"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Anesthesia/surgery (myocardial depression); chronically administered beta-blocking therapy should not be routinely withdrawn prior to major surgery, however the impaired ability of the heart to respond to reflex adrenergic stimuli may augment the risks of general anesthesia and surgical procedures",
+                "Bronchospastic disease",
+                "Cerebrovascular insufficiency",
+                "CHF, beta blockade carries the potential hazard of further depressing myocardial contractility and precipitating more severe failure",
+                "DM, fluid or electrolyte imbalance, hyperuricemia or gout, hypotension, SLE",
+                "Liver disease",
+                "May aggravate digitalis toxicity",
+                "Peripheral vascular disease",
+                "Renal impairment",
+                "Risk of male sexual dysfunction",
+                "Sensitivity reactions may occur with or without history of allergy or asthma",
+                "May interfere with phenolsulfonphthalein test; may produce false negatives in phentolamine and tyramine tests",
+                "Avoid abrupt withdrawal"
+            ],
+            "specific": [
+                {
+                    "type": "Acute angle-closure glaucoma",
+                    "description": [
+                        "Thiazide diuretics can cause an idiosyncratic reaction, resulting in acute angle-closure glaucoma and elevated intraocular pressure with or without a noticeable acute myopic shift and/or choroidal effusions",
+                        "Symptoms may include acute onset of decreased visual acuity or ocular pain and typically occur within hours to weeks of drug initiation",
+                        "Untreated, angle-closure glaucoma may result in permanent visual field loss",
+                        "The primary treatment is to discontinue thiazide diuretics as rapidly as possible",
+                        "Prompt medical or surgical treatments may need to be considered if the intraocular pressure remains uncontrolled",
+                        "Risk factors for developing acute angle-closure glaucoma may include a history of sulfonamide or penicillin allergy"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "acebutolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aminolevulinic acid oral",
+            "description": {
+                "common": "aminolevulinic acid oral, bendroflumethiazide.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid administering other phototoxic drugs with aminolevulinic acid oral for 24 hr during perioperative period."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aminolevulinic acid topical",
+            "description": {
+                "common": "bendroflumethiazide increases toxicity of aminolevulinic acid topical by pharmacodynamic synergism. Avoid or Use Alternate Drug. Coadministration of photosensitizing drugs may enhance the phototoxic reaction to photodynamic therapy with aminolevulinic acid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "atenolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "betaxolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "bisoprolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "celiprolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "clonidine, nadolol.\nEither increases toxicity of the other by unspecified interaction mechanism. Avoid or Use Alternate Drug. Can increase risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "digoxin, nadolol.\nEither increases toxicity of the other by unspecified interaction mechanism. Avoid or Use Alternate Drug. Can increase risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "diltiazem, nadolol.\nEither increases toxicity of the other by unspecified interaction mechanism. Avoid or Use Alternate Drug. Can increase risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "nadolol increases effects of epinephrine by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of hypertension and bradycardia.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "nadolol increases effects of epinephrine racemic by pharmacodynamic synergism. Avoid or Use Alternate Drug. Risk of hypertension and bradycardia.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "erdafitinib will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If coadministration unavoidable, separate administration by at least 6 hr before or after administration of P-gp substrates with narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "esmolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to induce bradycardia.  ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iobenguane I 131",
+            "description": {
+                "common": "nadolol will decrease the level or effect of iobenguane I 131 by  Other (see comment). Avoid or Use Alternate Drug. Based on the mechanism of action of iobenguane, drugs that reduce catecholamine uptake or that deplete catecholamine stores may interfere with iobenguane uptake into cells, and thus, reduce iobenguane efficacy. Discontinue interfering drugs for at least 5 half-lives before administration of either the dosimetry or an iobenguane dose. Do not administer these drugs until at least 7 days after each iobenguane dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "labetalol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine, bendroflumethiazide.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that decrease pulse or blood pressure to mitigate risk of excessive bradycardia and hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "nadolol, mavacamten.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Expect additive negative inotropic effects of mavacamten and other drugs that reduce cardiac contractility."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methyl aminolevulinate",
+            "description": {
+                "common": "bendroflumethiazide, methyl aminolevulinate.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Each drug may increase the photosensitizing effect of the other."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "metoprolol and nadolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "nadolol and nebivolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "nadolol and penbutolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "nadolol and pindolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "nadolol and propranolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rivastigmine",
+            "description": {
+                "common": "nadolol increases toxicity of rivastigmine by pharmacodynamic synergism. Avoid or Use Alternate Drug. Additive bradycardia effect may result in syncope."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "nadolol and sotalol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "squill",
+            "description": {
+                "common": "bendroflumethiazide increases toxicity of squill by Other (see comment). Avoid or Use Alternate Drug. \nComment: Potassium depletion may enhance toxicity of squill."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "nadolol and timolol both increase  anti-hypertensive channel blocking. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tretinoin topical",
+            "description": {
+                "common": "bendroflumethiazide, tretinoin topical. Mechanism: pharmacodynamic synergism. Avoid or Use Alternate Drug. Increased phototoxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trilaciclib",
+            "description": {
+                "common": "trilaciclib will decrease the level or effect of nadolol by  Other (see comment). Avoid or Use Alternate Drug. Avoid coadministration of trilaciclib (OCT2, MATE1, and MATE-2K inhibitor) with substrates where minimal increased concentration in kidney or blood may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "acebutolol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "aceclofenac increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acemetacin",
+            "description": {
+                "common": "acemetacin increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aldesleukin",
+            "description": {
+                "common": "aldesleukin increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, bendroflumethiazide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide decreases levels of nadolol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Separate by 2 hours."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiloride",
+            "description": {
+                "common": "nadolol and amiloride both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone, nadolol. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of cardiotoxicity with bradycardia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxicillin",
+            "description": {
+                "common": "amoxicillin, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amlodipine",
+            "description": {
+                "common": "nadolol and amlodipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of amobarbital. Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "arformoterol and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "articaine",
+            "description": {
+                "common": "nadolol, articaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "nadolol and aspirin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "nadolol and aspirin rectal both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of hypotension, bradycardia, AV block, and prolonged PR interval. Consider lowering beta blocker dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "atenolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "atenolol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benazepril",
+            "description": {
+                "common": "bendroflumethiazide, benazepril.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Thiazide-like diuretics may also enhance the nephrotoxic effects of ACE inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "nadolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "betaxolol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bismuth subsalicylate",
+            "description": {
+                "common": "bismuth subsalicylate, nadolol. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Blockage of renal prostaglandin synthesis; may cause severe hypertension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "bisoprolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "bisoprolol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "bosutinib increases levels of nadolol by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bretylium",
+            "description": {
+                "common": "bendroflumethiazide, bretylium.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Each drug may cause hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bumetanide",
+            "description": {
+                "common": "nadolol increases and bumetanide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bupivacaine",
+            "description": {
+                "common": "nadolol, bupivacaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Use extreme caution during concomitant use of bupivacaine and antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection decreases effects of bendroflumethiazide by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Opioids can reduce diuretic efficacy by inducing antidiuretic hormone release."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of butabarbital.  Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of butalbital.  Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcifediol",
+            "description": {
+                "common": "bendroflumethiazide increases toxicity of calcifediol by Other (see comment). Use Caution/Monitor. \nComment: Thiazide diuretics may increase serum calcium by decreasing urinary calcium excretion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium acetate",
+            "description": {
+                "common": "calcium acetate decreases effects of nadolol by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate decreases effects of nadolol by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium chloride",
+            "description": {
+                "common": "calcium chloride decreases effects of nadolol by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium citrate",
+            "description": {
+                "common": "calcium citrate decreases effects of nadolol by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium gluconate",
+            "description": {
+                "common": "calcium gluconate decreases effects of nadolol by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "candesartan",
+            "description": {
+                "common": "candesartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "captopril",
+            "description": {
+                "common": "bendroflumethiazide, captopril.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs lower blood pressure. Increased risk of nephrotoxicity. Monitor blood pressure and renal function."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbenoxolone",
+            "description": {
+                "common": "nadolol increases and carbenoxolone decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbenoxolone",
+            "description": {
+                "common": "bendroflumethiazide and carbenoxolone both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbidopa",
+            "description": {
+                "common": "carbidopa increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Therapy with carbidopa, given with or without levodopa or carbidopa-levodopa combination products, is started, dosage adjustment of the antihypertensive drug may be required."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib decreases effects of nadolol by pharmacodynamic antagonism. Use Caution/Monitor. Long term (>1 wk) NSAID use.  NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of celiprolol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloroprocaine",
+            "description": {
+                "common": "nadolol, chloroprocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "bendroflumethiazide and chlorothiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "nadolol increases and chlorothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "nadolol decreases effects of chlorpropamide by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "nadolol increases and chlorthalidone decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholestyramine",
+            "description": {
+                "common": "cholestyramine decreases levels of bendroflumethiazide by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "nadolol and choline magnesium trisalicylate both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clevidipine",
+            "description": {
+                "common": "nadolol and clevidipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "nadolol, clonidine. Mechanism: pharmacodynamic synergism. Modify Therapy/Monitor Closely. Non selective beta blocker administration during withdrawal from centrally acting alpha agonists may result in rebound hypertension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cornsilk",
+            "description": {
+                "common": "cornsilk increases effects of bendroflumethiazide by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of hypokalemia (theoretical interaction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "nadolol increases and cyclopenthiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasiglucagon",
+            "description": {
+                "common": "nadolol decreases effects of dasiglucagon by unknown mechanism. Use Caution/Monitor. Dasiglucagon may stimulate catecholamine release; whereas beta blockers may inhibit catecholamines released in response to dasiglucagon. Coadministration may also transiently increase pulse and BP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "nadolol and diclofenac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dicloxacillin",
+            "description": {
+                "common": "dicloxacillin, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "nadolol and digoxin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "nadolol and diltiazem both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "dobutamine and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "nadolol increases and dobutamine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "nadolol increases and dopexamine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxazosin",
+            "description": {
+                "common": "doxazosin and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "drospirenone increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "nadolol and drospirenone both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of nadolol by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Monitor therapeutic drug concentrations, as indicated, or consider reducing the dosage of the P-gp substrate and titrate to clinical effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "empagliflozin",
+            "description": {
+                "common": "empagliflozin, bendroflumethiazide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "nadolol increases and ephedrine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "epinephrine and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine inhaled",
+            "description": {
+                "common": "nadolol decreases effects of epinephrine inhaled by pharmacodynamic antagonism. Use Caution/Monitor. Beta2-adrenergic blockers may may inhibit bronchodilatory effects of epinephrine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "epinephrine racemic and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "nadolol increases and epinephrine racemic decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eprosartan",
+            "description": {
+                "common": "eprosartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "esmolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethacrynic acid",
+            "description": {
+                "common": "nadolol increases and ethacrynic acid decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ether",
+            "description": {
+                "common": "nadolol, ether.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both beta blockers and ether depress the myocardium; consider lowering beta blocker dose if ether used for anesthesia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "nadolol and etodolac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etomidate",
+            "description": {
+                "common": "etomidate, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "felodipine",
+            "description": {
+                "common": "nadolol and felodipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenbufen",
+            "description": {
+                "common": "nadolol and fenbufen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen decreases effects of nadolol by pharmacodynamic antagonism. Use Caution/Monitor. Long term (>1 wk) NSAID use.  NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "fentanyl decreases effects of bendroflumethiazide by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Fentanyl can reduce the efficacy of diuretics by inducing antidiuretic hormone release. Fentanyl may also lead to acute urinary retention by causing bladder sphincter spasm (particularly in men with enlarged prostates)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "nadolol increases effects of fingolimod by pharmacodynamic synergism. Use Caution/Monitor. Both medications decrease heart rate. Monitor patients on concomitant therapy, particularly in the first 6 hours after fingolimod is initiated or after a treatment interruption of at least two weeks,  for bradycardia and atrioventricular block. To identify underlying risk factors of bradycardia and AV block, obtain a new or recent ECG in patients using beta-blockers prior to starting fingolimod."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "fentanyl intranasal decreases effects of bendroflumethiazide by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Fentanyl can reduce the efficacy of diuretics by inducing antidiuretic hormone release. Fentanyl may also lead to acute urinary retention by causing bladder sphincter spasm (particularly in men with enlarged prostates)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "fentanyl transdermal decreases effects of bendroflumethiazide by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Fentanyl can reduce the efficacy of diuretics by inducing antidiuretic hormone release. Fentanyl may also lead to acute urinary retention by causing bladder sphincter spasm (particularly in men with enlarged prostates)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "fentanyl transmucosal decreases effects of bendroflumethiazide by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Fentanyl can reduce the efficacy of diuretics by inducing antidiuretic hormone release. Fentanyl may also lead to acute urinary retention by causing bladder sphincter spasm (particularly in men with enlarged prostates)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "nadolol decreases effects of formoterol by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of P-gp substrates. Monitor for toxicities of the P-gp substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "furosemide and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "nadolol increases and furosemide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gentamicin",
+            "description": {
+                "common": "bendroflumethiazide and gentamicin both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "bendroflumethiazide and hydrochlorothiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "nadolol decreases effects of glimepiride by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "nadolol decreases effects of glipizide by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glucagon",
+            "description": {
+                "common": "glucagon decreases toxicity of nadolol by sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor. Coadministration of glucagon with beta-blockers may have transiently increased pulse and blood pressure."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glucagon intranasal",
+            "description": {
+                "common": "glucagon intranasal decreases toxicity of nadolol by sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor. Coadministration of glucagon with beta-blockers may have transiently increased pulse and blood pressure."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "nadolol decreases effects of glyburide by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "nadolol, guanfacine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Non selective beta blocker administration during withdrawal from centrally acting alpha agonists may result in rebound hypertension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydralazine",
+            "description": {
+                "common": "hydralazine increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "nadolol increases and hydrochlorothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV decreases effects of nadolol by pharmacodynamic antagonism. Use Caution/Monitor. Long term (>1 wk) NSAID use.  NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indacaterol, inhaled",
+            "description": {
+                "common": "indacaterol, inhaled, nadolol. Other (see comment). Use Caution/Monitor. \nComment: Beta-blockers and indacaterol may interfere with the effect of each other when administered concurrently. Beta-blockers may produce severe bronchospasm in COPD patients. Therefore, patients with COPD should not normally be treated with beta-blockers. However, under certain circumstances, e.g. as prophylaxis after myocardial infarction, there may be no acceptable alternatives to the use of beta-blockers in patients with COPD. In this setting, cardioselective beta-blockers could be considered, although they should be administered with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "bendroflumethiazide and indapamide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "nadolol increases and indapamide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "nadolol, insulin aspart. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin degludec by Other (see comment). Use Caution/Monitor. \nComment: Diuretics may cause hyperglycemia and glycosuria in patients with diabetes mellitus, possibly by diuretic-induced hpokalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "nadolol, insulin degludec. Other (see comment). Modify Therapy/Monitor Closely. \nComment: Beta-blockers may either increase or decrease the blood glucose lowering effect of insulin; beta-blockers can prolong hypoglycemia (interference with glycogenolysis) or cause hyperglycemia (insulin secretion inhibited)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin degludec/insulin aspart by Other (see comment). Use Caution/Monitor. \nComment: Diuretics may cause hyperglycemia and glycosuria in patients with diabetes mellitus, possibly by diuretic-induced hpokalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "nadolol, insulin detemir. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin inhaled by Other (see comment). Use Caution/Monitor. \nComment: Diuretics may cause hyperglycemia and glycosuria in patients with diabetes mellitus, possibly by diuretic-induced hpokalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "nadolol, insulin glargine. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "nadolol, insulin glulisine. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "nadolol, insulin inhaled. Other (see comment). Modify Therapy/Monitor Closely. \nComment: Beta-blockers may either increase or decrease the blood glucose lowering effect of insulin; beta-blockers can prolong hypoglycemia (interference with glycogenolysis) or cause hyperglycemia (insulin secretion inhibited)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "nadolol, insulin lispro. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "nadolol, insulin NPH. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "nadolol, insulin regular human. Mechanism: pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers delay recovery of normoglycemia after insulin induced hypoglycemia; however, they also inhibit insulin secretion, so long term beta blocker Tx may result in reduced glucose tolerance.  Insulin induced hypoglycemia may induce hypertension during non selective beta blocker Tx."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "irbesartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "nadolol increases and isoproterenol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isradipine",
+            "description": {
+                "common": "nadolol and isradipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "juniper",
+            "description": {
+                "common": "juniper, bendroflumethiazide. Other (see comment). Use Caution/Monitor. \nComment: Juniper may potentiate or interfere with diuretic therapy. Juniper has diuretic effects, but may cause kidney damage at large doses."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of P-gp substrates in clinical trials. Consider dose reduction of sensitive P-gp substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivabradine",
+            "description": {
+                "common": "ivabradine, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Most patients receiving ivabradine will also be treated with a beta-blocker. The risk of bradycardia increases with  coadministration of drugs that slow heart rate (eg, digoxin, amiodarone, beta-blockers). Monitor heart rate in patients taking ivabradine with other negative chronotropes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketamine",
+            "description": {
+                "common": "ketamine, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ketorolac intranasal increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "labetalol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "nadolol increases effects of lasmiditan by pharmacodynamic synergism. Use Caution/Monitor. Lasmiditan has been associated with a lowering of heart rate (HR). In a drug interaction study, addition of a single 200-mg dose of lasmiditan to propranolol decreased HR by an additional 5 bpm compared to propranolol alone, for a mean maximum of 19 bpm."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "levalbuterol and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "nadolol increases and levalbuterol decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "levodopa increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Consider decreasing dosage of antihypertensive agent."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lidocaine",
+            "description": {
+                "common": "nadolol, lidocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Increased effects of epinephrine in anesthetic; risk of hypertension and bradycardia.  Do NOT D/C chronic beta blocker Tx prior to anesthetic administration.  Consider selective beta 1 blocker (e.g., metoprolol)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lily of the valley",
+            "description": {
+                "common": "bendroflumethiazide increases toxicity of lily of the valley by Other (see comment). Use Caution/Monitor. \nComment: Increased risk of cardiac toxicity due to K+ depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "bendroflumethiazide increases toxicity of lithium by decreasing elimination. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lomitapide increases levels of nadolol by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Consider reducing dose when used concomitantly with lomitapide."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Lonafarnib is a weak P-gp inhibitor. Monitor for adverse reactions if coadministered with P-gp substrates where minimal concentration changes may lead to serious or life-threatening toxicities. Reduce P-gp substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "nadolol and lornoxicam both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "losartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone increases effects of nadolol by Other (see comment). Use Caution/Monitor. \nComment: Potential  for increased risk of hypotension with concurrent use. Monitor blood pressure and adjust  dose of  antihypertensive agent as needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maitake",
+            "description": {
+                "common": "maitake increases effects of bendroflumethiazide by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of hypokalemia (theoretical interaction)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "mefloquine increases levels of nadolol by decreasing metabolism. Use Caution/Monitor. Risk of arrhythmia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "nadolol and meloxicam both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mepivacaine",
+            "description": {
+                "common": "nadolol, mepivacaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Use extreme caution during concomitant use of bupivacaine and antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "nadolol decreases effects of metaproterenol by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methoxsalen",
+            "description": {
+                "common": "methoxsalen, bendroflumethiazide.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive photosensitizing effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "nadolol increases and methyclothiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "bendroflumethiazide and methyclothiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyldopa",
+            "description": {
+                "common": "nadolol, methyldopa. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Non selective beta blocker administration during withdrawal from methyldopa may result in rebound hypertension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate",
+            "description": {
+                "common": "methylphenidate will decrease the level or effect of nadolol by  pharmacodynamic antagonism. Use Caution/Monitor. Methylphenidate may diminish antihypertensive effects. Monitor BP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "bendroflumethiazide and metolazone both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "metoprolol and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxisylyte",
+            "description": {
+                "common": "moxisylyte and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of mycophenolate by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "nadolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "nadolol and naproxen both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "nebivolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nadolol and nicardipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "norepinephrine and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nifedipine",
+            "description": {
+                "common": "nadolol and nifedipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nisoldipine",
+            "description": {
+                "common": "nadolol and nisoldipine both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitroglycerin rectal",
+            "description": {
+                "common": "nitroglycerin rectal, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Beta-blockers blunt the reflex tachycardia produced by nitroglycerin without preventing its hypotensive effects. If beta-blockers are used with nitroglycerin in patients with angina pectoris, additional hypotensive effects may occur."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "nadolol increases and norepinephrine decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "olmesartan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olodaterol inhaled",
+            "description": {
+                "common": "nadolol, olodaterol inhaled.\nEither decreases effects of the other by pharmacodynamic antagonism. Use Caution/Monitor. Beta-blockers and olodaterol may interfere with the effect of each other when administered concurrently. Beta-blockers may produce severe bronchospasm in COPD patients. Therefore, patients with COPD should not normally be treated with beta-blockers. However, under certain circumstances, e.g. as prophylaxis after myocardial infarction, there may be no acceptable alternatives to the use of beta-blockers in patients with COPD. In this setting, cardioselective beta-blockers could be considered, although they should be administered with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "nadolol and oxaprozin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymetazoline intranasal",
+            "description": {
+                "common": "nadolol increases effects of oxymetazoline intranasal by pharmacodynamic synergism. Use Caution/Monitor. When beta-2 receptors are antagonized by nonselective beta blockers, alpha1 vasoconstriction may be unopposed, thus increasing hypertensive effect. When oxymetazoline is combined with intranasal tetracaine for dental anesthesia, avoid or use an alternant anesthetic in patients taking nonselective beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "parecoxib increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymetazoline topical",
+            "description": {
+                "common": "oxymetazoline topical increases and nadolol decreases sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "nadolol and parecoxib both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "penbutolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "pindolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of phenobarbital.  Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenoxybenzamine",
+            "description": {
+                "common": "phenoxybenzamine and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phentolamine",
+            "description": {
+                "common": "phentolamine and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine",
+            "description": {
+                "common": "nadolol increases effects of phenylephrine by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine PO",
+            "description": {
+                "common": "nadolol increases effects of phenylephrine PO by pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypertensive episode (rare)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "nadolol and pindolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "nadolol decreases effects of pirbuterol by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pivmecillinam",
+            "description": {
+                "common": "pivmecillinam, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod and nadolol both increase  pharmacodynamic synergism. Use Caution/Monitor. Beta-blockers may have additive effects on lowering HR. Consider resting HR before initiating ponesimod in patients on stable dose of beta-blocker. Refer to the ponesimod prescribing information for more dosing information."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium acid phosphate",
+            "description": {
+                "common": "potassium acid phosphate increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium chloride",
+            "description": {
+                "common": "potassium chloride increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate",
+            "description": {
+                "common": "nadolol and potassium citrate both increase  serum potassium. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of probenecid by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "prazosin and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prilocaine",
+            "description": {
+                "common": "nadolol, prilocaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Use extreme caution during concomitant use of bupivacaine and antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of primidone.  Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propofol",
+            "description": {
+                "common": "propofol, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ropivacaine",
+            "description": {
+                "common": "nadolol, ropivacaine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Use extreme caution during concomitant use of bupivacaine and antihypertensive agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "sacubitril/valsartan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "sacubitril/valsartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "salicylates (non-asa) increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "salmeterol and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir, nadolol.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available. Increased risk of PR prolongation and cardiac arrhythmias."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "shark cartilage",
+            "description": {
+                "common": "bendroflumethiazide, shark cartilage. Other (see comment). Use Caution/Monitor. \nComment: May lead to hypercalcemia (theoretical)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital decreases levels of nadolol by increasing metabolism. Use Caution/Monitor. Consider a higher beta-blocker dose during coadministration of secobarbital.  Atenolol, sotalol, nadolol less likely to be affected than other beta blockers."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "silodosin and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod, nadolol.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Caution when siponimod is initiated in patients receiving beta-blocker treatment because of additive effects on lowering heart rate. Temporary interruption of beta-blocker may be needed before initiating siponimod. Beta-blocker treatment can be initiated in patients receiving stable doses of siponimod."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium bicarbonate",
+            "description": {
+                "common": "sodium bicarbonate decreases levels of nadolol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Separate by 2 hours."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium citrate/citric acid",
+            "description": {
+                "common": "sodium citrate/citric acid decreases levels of nadolol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Separate by 2 hours."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "nadolol and sotalol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "spironolactone increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Consider reducing the dose of P-glycoprotein (P-gp) substrates, if adverse reactions are experienced when administered concomitantly with stiripentol."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "succinylcholine",
+            "description": {
+                "common": "succinylcholine increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "succinylcholine",
+            "description": {
+                "common": "nadolol and succinylcholine both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "nadolol and sulindac both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "tadalafil increases effects of nadolol by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "telmisartan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "telmisartan and nadolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temocillin",
+            "description": {
+                "common": "temocillin, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terazosin",
+            "description": {
+                "common": "terazosin and nadolol both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "terbutaline and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "nadolol, theophylline. Other (see comment). Use Caution/Monitor. \nComment: Beta blockers (esp. non selective) antagonize theophylline effects, while at the same time increasing theophylline levels and toxicity (mechanism: decreased theophylline metabolism). Smoking increases risk of interaction."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "ticarcillin, bendroflumethiazide.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "nadolol and timolol both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "nadolol decreases effects of tolazamide by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "tolfenamic acid increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "nadolol decreases effects of tolbutamide by pharmacodynamic antagonism. Use Caution/Monitor. Non selective beta blockers may also mask the symptoms of hypoglycemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "nadolol and tolfenamic acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "tolvaptan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "torsemide",
+            "description": {
+                "common": "torsemide and bendroflumethiazide both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamterene",
+            "description": {
+                "common": "triamterene increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trientine",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of trientine by increasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valsartan",
+            "description": {
+                "common": "valsartan increases and bendroflumethiazide decreases serum potassium. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "nadolol and verapamil both increase  anti-hypertensive channel blocking. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xipamide",
+            "description": {
+                "common": "xipamide increases effects of bendroflumethiazide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acarbose",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of acarbose by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of aceclofenac by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acemetacin",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of acemetacin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acyclovir",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "adenosine",
+            "description": {
+                "common": "nadolol, adenosine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "agrimony",
+            "description": {
+                "common": "agrimony increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aminohippurate sodium",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of aminohippurate sodium by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ampicillin",
+            "description": {
+                "common": "bendroflumethiazide increases effects of ampicillin by decreasing renal clearance. Minor/Significance Unknown. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "arformoterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of aspirin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of aspirin rectal by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of aspirin/citric acid/sodium bicarbonate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "balsalazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of balsalazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "birch",
+            "description": {
+                "common": "birch increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bitter melon",
+            "description": {
+                "common": "bitter melon, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "budesonide, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcitriol topical",
+            "description": {
+                "common": "calcitriol topical, bendroflumethiazide.\nEither increases toxicity of the other by pharmacodynamic synergism. Minor/Significance Unknown. Potential additive hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcium acetate",
+            "description": {
+                "common": "bendroflumethiazide increases levels of calcium acetate by decreasing renal clearance. Minor/Significance Unknown. Risk of alkalosis, hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "bendroflumethiazide increases levels of calcium carbonate by decreasing renal clearance. Minor/Significance Unknown. Risk of alkalosis, hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcium chloride",
+            "description": {
+                "common": "bendroflumethiazide increases levels of calcium chloride by decreasing renal clearance. Minor/Significance Unknown. Risk of alkalosis, hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcium citrate",
+            "description": {
+                "common": "bendroflumethiazide increases levels of calcium citrate by decreasing renal clearance. Minor/Significance Unknown. Risk of alkalosis, hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "calcium gluconate",
+            "description": {
+                "common": "bendroflumethiazide increases levels of calcium gluconate by decreasing renal clearance. Minor/Significance Unknown. Risk of alkalosis, hypercalcemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "carbenoxolone",
+            "description": {
+                "common": "bendroflumethiazide, carbenoxolone. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Additive hypokalemic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefaclor",
+            "description": {
+                "common": "cefaclor will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefadroxil",
+            "description": {
+                "common": "cefadroxil will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefamandole",
+            "description": {
+                "common": "cefamandole will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefixime",
+            "description": {
+                "common": "cefixime will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefpirome",
+            "description": {
+                "common": "cefpirome will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefprozil",
+            "description": {
+                "common": "cefprozil will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ceftibuten",
+            "description": {
+                "common": "ceftibuten will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of celecoxib by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cephalexin",
+            "description": {
+                "common": "cephalexin will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cevimeline",
+            "description": {
+                "common": "cevimeline increases effects of nadolol by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of chlorothiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of chlorpropamide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of chlorthalidone by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of choline magnesium trisalicylate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "ciprofloxacin increases levels of nadolol by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "nadolol increases effects of cocaine topical by pharmacodynamic synergism. Minor/Significance Unknown. Risk of angina."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "colestipol",
+            "description": {
+                "common": "colestipol decreases levels of bendroflumethiazide by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cornsilk",
+            "description": {
+                "common": "cornsilk increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "corticotropin",
+            "description": {
+                "common": "corticotropin, bendroflumethiazide. pharmacodynamic synergism. Minor/Significance Unknown. Possible enhanced electrolyte loss."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "cortisone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cosyntropin",
+            "description": {
+                "common": "cosyntropin, bendroflumethiazide. pharmacodynamic synergism. Minor/Significance Unknown. Possible enhanced electrolyte loss."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of cyclopenthiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "deflazacort, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diazoxide",
+            "description": {
+                "common": "diazoxide, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hyperglycemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of diclofenac by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of diflunisal by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "dihydroergotamine, nadolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Additive vasospasm."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "dihydroergotamine intranasal, nadolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Additive vasospasm."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole, nadolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "dobutamine, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "dopexamine, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "ephedrine, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "epinephrine, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "epinephrine racemic, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "epoprostenol",
+            "description": {
+                "common": "epoprostenol increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown. Additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "escitalopram increases levels of nadolol by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of etodolac by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenbufen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of fenbufen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenoldopam",
+            "description": {
+                "common": "fenoldopam increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown. Additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of fenoprofen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "fludrocortisone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of flurbiprofen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fo-ti",
+            "description": {
+                "common": "fo-ti increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia (theoretical)."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "folic acid",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of folic acid by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "formoterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "forskolin",
+            "description": {
+                "common": "forskolin increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of ganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imaging agents (gadolinium)",
+            "description": {
+                "common": "nadolol, imaging agents (gadolinium). Mechanism: unknown. Minor/Significance Unknown. Increased risk of anaphylaxis from contrast media."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of glimepiride by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of glipizide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of glyburide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "goldenrod",
+            "description": {
+                "common": "goldenrod increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of hydrochlorothiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "hydrocortisone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of ibuprofen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of indapamide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of indomethacin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin aspart by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin detemir by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin glargine by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin glulisine by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin lispro by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin NPH by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of insulin regular human by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "isoproterenol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of ketoprofen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of ketorolac by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of ketorolac intranasal by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "L-methylfolate",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of L-methylfolate by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "levalbuterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "levobetaxolol",
+            "description": {
+                "common": "levobetaxolol increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of lornoxicam by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "magnesium chloride",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of magnesium chloride by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "magnesium citrate",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of magnesium citrate by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "magnesium hydroxide",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of magnesium hydroxide by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of magnesium oxide by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "magnesium sulfate",
+            "description": {
+                "common": "bendroflumethiazide decreases levels of magnesium sulfate by increasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "maitake",
+            "description": {
+                "common": "maitake increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of meclofenamate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of mefenamic acid by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin decreases toxicity of nadolol by pharmacodynamic antagonism. Minor/Significance Unknown. Melatonin may correct beta blocker induced sleep disturbances."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of meloxicam by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mesalamine",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of mesalamine by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "metaproterenol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of metformin by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of methyclothiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "methylprednisolone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metipranolol ophthalmic",
+            "description": {
+                "common": "metipranolol ophthalmic increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of metolazone by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "miglitol",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of miglitol by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "minoxidil",
+            "description": {
+                "common": "bendroflumethiazide increases effects of minoxidil by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of nabumetone by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of naproxen by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nateglinide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of nateglinide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "neostigmine",
+            "description": {
+                "common": "nadolol, neostigmine.\nEither increases effects of the other by pharmacodynamic synergism. Minor/Significance Unknown. Additive bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "noni juice",
+            "description": {
+                "common": "nadolol and noni juice both increase  serum potassium. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "norepinephrine, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "octacosanol",
+            "description": {
+                "common": "octacosanol increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "octacosanol",
+            "description": {
+                "common": "octacosanol increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of oxaprozin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of parecoxib by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "physostigmine",
+            "description": {
+                "common": "nadolol, physostigmine.\nEither increases effects of the other by pharmacodynamic synergism. Minor/Significance Unknown. Additive bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pilocarpine",
+            "description": {
+                "common": "pilocarpine increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of pioglitazone by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "pirbuterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of piroxicam by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "prednisolone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "prednisone, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "reishi",
+            "description": {
+                "common": "reishi increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of repaglinide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse, nadolol. Other (see comment). Minor/Significance Unknown. \nComment: Theoretically, shepherd's purse may interfere with BP control."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "rose hips will increase the level or effect of bendroflumethiazide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rosiglitazone",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of rosiglitazone by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of salicylates (non-asa) by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "salmeterol, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of salsalate by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of saxagliptin by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse, bendroflumethiazide. Other (see comment). Minor/Significance Unknown. \nComment: Theoretically, shepherd's purse may interfere with BP control."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sitagliptin",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of sitagliptin by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfadiazine",
+            "description": {
+                "common": "bendroflumethiazide increases levels of sulfadiazine by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "bendroflumethiazide increases levels of sulfamethoxazole by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of sulfasalazine by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfisoxazole",
+            "description": {
+                "common": "bendroflumethiazide increases levels of sulfisoxazole by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of sulindac by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "terbutaline, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Hypokalemia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tizanidine",
+            "description": {
+                "common": "tizanidine increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of tolazamide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "treprostinil",
+            "description": {
+                "common": "treprostinil increases effects of nadolol by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of tolbutamide by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of tolfenamic acid by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of tolmetin by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "treprostinil",
+            "description": {
+                "common": "treprostinil increases effects of bendroflumethiazide by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "triamcinolone acetonide injectable suspension, bendroflumethiazide. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypokalemia, especially with strong glucocorticoid activity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trilostane",
+            "description": {
+                "common": "trilostane, bendroflumethiazide. Other (see comment). Minor/Significance Unknown. \nComment: Trilostane reduces K+ loss while maintaining the natriuretic effect.  Mechanism:  inhibition of mineralocorticoid steroid synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "bendroflumethiazide, trimethoprim. Mechanism: unspecified interaction mechanism. Minor/Significance Unknown. Risk of hyponatremia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verteporfin",
+            "description": {
+                "common": "bendroflumethiazide, verteporfin. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Increased phototoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vildagliptin",
+            "description": {
+                "common": "bendroflumethiazide decreases effects of vildagliptin by pharmacodynamic antagonism. Minor/Significance Unknown. Thiazide dosage >50 mg/day may increase blood glucose."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of willow bark by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "yohimbe",
+            "description": {
+                "common": "nadolol decreases toxicity of yohimbe by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Abdominal discomfort",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "CHF",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Cough",
+            "percent": null
+        },
+        {
+            "name": "Nasal congestion",
+            "percent": null
+        },
+        {
+            "name": "Drowsiness",
+            "percent": null
+        },
+        {
+            "name": "Insomnia",
+            "percent": null
+        },
+        {
+            "name": "Palpitaion",
+            "percent": null
+        },
+        {
+            "name": "Decreased sexual ability",
+            "percent": null
+        },
+        {
+            "name": "Bradycardia",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        },
+        {
+            "name": "Anorexia",
+            "percent": null
+        },
+        {
+            "name": "epigastric distress",
+            "percent": null
+        },
+        {
+            "name": "Phototoxicity",
+            "percent": null
+        },
+        {
+            "name": "Hypercalcemia",
+            "percent": null
+        },
+        {
+            "name": "Hyperuricemia",
+            "percent": null
+        },
+        {
+            "name": "Hyperlipidemia",
+            "percent": null
+        },
+        {
+            "name": "Hypercholesterolemia",
+            "percent": null
+        },
+        {
+            "name": "Hypochloremia",
+            "percent": null
+        },
+        {
+            "name": "Hypokalemia",
+            "percent": null
+        },
+        {
+            "name": "common",
+            "percent": null
+        },
+        {
+            "name": "Hypomagnesemia",
+            "percent": null
+        },
+        {
+            "name": "Hyponatremia",
+            "percent": null
+        },
+        {
+            "name": "Glucose intolerance",
+            "percent": null
+        }
+    ]
+}

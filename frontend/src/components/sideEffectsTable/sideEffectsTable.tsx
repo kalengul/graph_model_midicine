@@ -2,8 +2,8 @@ import { useEffect } from 'react'
 import axios from 'axios'
 
 import { useSelector, useDispatch} from 'react-redux';
-import {addValue as addValueDrug} from '../../redux/DrugManageSlice'
-import {addValue as addValueSE} from '../../redux/SideEffectManageSlice'
+import {addValue as addValueDrug, initStates as initSatesDrug} from '../../redux/DrugManageSlice'
+import {addValue as addValueSE, initStates as initSatesSE} from '../../redux/SideEffectManageSlice'
 import { RootState } from '../../redux/store';
 
 import "./sideEffectsTable.scss"
@@ -15,7 +15,6 @@ export const SideEffectsTable = ()=>{
     const sideEffects = useSelector((state: RootState)=>state.sideEffectManage.sideEffects)
 
     useEffect(()=>{
-        console.log(drugs)
         console.log(sideEffects)
         if(!Array.isArray(drugs) || drugs.length==0){
             axios({ 
@@ -30,7 +29,8 @@ export const SideEffectsTable = ()=>{
                 method: "GET", 
                 url: "/api/getSideEffect/", 
             }).then((res)=>{
-                dispatch(addValueDrug({title: "sideEffects", value: res.data.data}))
+                //console.log( res.data.data)
+                dispatch(addValueSE({title: "sideEffects", value: res.data.data}))
             })
         }
        
@@ -42,28 +42,36 @@ export const SideEffectsTable = ()=>{
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">ПЭ/ЛС</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                { Array.isArray(drugs) && drugs.map((drug)=>
+                    <th scope="col" key={drug.id}>{drug.drug_name}</th>
+                )}
+                
             </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            {Array.isArray(sideEffects) && sideEffects.map((sideEffect, index)=>
+                <tr key={sideEffect.id}>
+                    <th scope="row">{index}</th>
+                    <th>{sideEffect.se_name}</th>
+                </tr>
+            )}
+            {/* <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
             </tr>
             <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
             </tr>
             <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-            </tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+            </tr> */}
         </tbody>
     </table>
     )

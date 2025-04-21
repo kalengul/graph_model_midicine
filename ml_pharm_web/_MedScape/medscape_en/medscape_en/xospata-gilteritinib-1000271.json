@@ -1,0 +1,1888 @@
+{
+    "name": "gilteritinib",
+    "comment": "Rx",
+    "other_names": [
+        "Xospata"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/xospata-gilteritinib-1000271",
+    "pregnancy": {
+        "common": [
+            "Based on findings from animal studies and its mechanism of action, fetal harm may occur when administered to pregnant women",
+            "No data available on use in pregnant women to inform a drug-associated risk of adverse developmental outcomes",
+            "Advise pregnant women of potential fetal risks",
+            "Pregnancy testing recommended for females of reproductive potential within 7 days before initiating treatment"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "In animal reproduction studies, administration to pregnant rats during organogenesis caused adverse developmental outcomes including embryo-fetal lethality, suppressed fetal growth, and teratogenicity at maternal exposures ~0.4 times the AUC in patients receiving the recommended dose"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females of reproductive potential: Use effective contraception during treatment and for ≥6 months after last dose",
+                    "Males: Males with partners of reproductive potential should use effective contraception during treatment and for ≥4 months"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data on presence of gilteritinib and/or its metabolites in human milk, effects on the breastfed child, or effects on milk production",
+            "Following administration to lactating rats, milk concentrations of radioactivity were higher than radioactivity in maternal plasma at 4 and 24 hr post-dose",
+            "In animal studies, gilteritinib and/or its metabolite(s) were distributed to tissues in infant rats via the milk",
+            "Advise lactating women not to breastfeed during treatment and for 2 months after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Differentiation syndrome",
+                    "description": [
+                        "Symptoms of differentiation syndrome may occur, which can be fatal or life-threatening",
+                        "Symptoms may include fever, dyspnea, hypoxia, pulmonary infiltrates, pleural or pericardial effusions, rapid weight gain or peripheral edema, hypotension, or renal dysfunction",
+                        "If differentiation syndrome suspected, initiate corticosteroid therapy and hemodynamic monitoring until symptom resolution"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to gilteritinib or any of the excipients"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Rare reports of posterior reversible encephalopathy syndrome (PRES) with symptoms including seizure and altered mental status; symptoms resolved after discontinuing treatment; a diagnosis of PRES requires confirmation by brain imaging, preferably magnetic resonance imaging (MRI); discontinue therapy in patients who develop PRES",
+                "Associated with prolonged QT interval cardiac ventricular repolarization; in clinical trials, 1% were found to have a QTc interval >500 msec and 7% of patients had an increase from baseline QTc >60 msec; interrupt and reduce dosage in patients who have a QTcF >500 msec",
+                "Hypokalemia or hypomagnesemia may increase QT prolongation risk; correct electrolyte abnormalities before initiating and during administration",
+                "In clinical trials, rare reports of pancreatitis noted; interrupt and reduce dose in patients who develop pancreatitis",
+                "Embryo-fetal harm may occur when administered to pregnant women (see Pregnancy)"
+            ],
+            "specific": [
+                {
+                    "type": "Differentiation syndrome",
+                    "description": [
+                        "Differentiation syndrome reported (see Black Box Warnings)",
+                        "Associated with rapid proliferation and differentiation of myeloid cells and may be life-threatening or fatal if not treated",
+                        "May occur as early as 1 day and up to 82 days after initiation of therapy and has been observed with or without concomitant leukocytosis",
+                        "If differentiation syndrome suspected, initiate dexamethasone 10 mg IV every 12 hours (or an equivalent dose of an alternative oral or IV corticosteroid) and hemodynamic monitoring until improvement",
+                        "Taper corticosteroids after resolution of symptoms and administer corticosteroids for a minimum of 3 days; symptoms of differentiation syndrome may recur with premature discontinuation of corticosteroid treatment",
+                        "If severe signs and/or symptoms persist for more than 48 hours after initiation of corticosteroids, interrupt therapy until signs and symptoms are no longer severe"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Gilteritinib is a CYP3A and P-gp substrate; it potentially inhibits breast cancer resistance protein (BCRP) and organic cation transporter 1 (OCT1) transporter",
+                        "Combined P-gp and strong CYP3A inducers",
+                        "Coadministration with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure which may decrease efficacy",
+                        "Avoid use with combined P-gp and strong CYP3A inducers",
+                        "Strong CYP3A inhibitors",
+                        "Coadministration with a strong CYP3A inhibitor increases gilteritinib exposure",
+                        "Consider alternative therapies that are not strong CYP3A inhibitors; if concomitant use is necessary, closely monitor for adverse reactions of gilteritinib",
+                        "Interrupt and reduce dose in patients with serious or life-threatening toxicity",
+                        "Drugs that target 5HT2B receptor or sigma nonspecific receptor",
+                        "Coadministration with drugs that target 5HT2B receptors or sigma nonspecific receptors (eg, escitalopram, fluoxetine, sertraline) may reduce effects of these drugs",
+                        "Avoid use of these drugs unless clinically necessary"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "gilteritinib and dronedarone both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "gilteritinib and saquinavir both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "gilteritinib and thioridazine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "gilteritinib and amiodarone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "gilteritinib and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "gilteritinib and arsenic trioxide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "artemether and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "artemether/lumefantrine and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "gilteritinib and asenapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "gilteritinib and azithromycin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "bedaquiline and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "gilteritinib and buprenorphine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "gilteritinib and chlorpromazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "gilteritinib will decrease the level or effect of citalopram by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of gilteritinib with drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "gilteritinib and disopyramide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "gilteritinib and dofetilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "gilteritinib and droperidol both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "entrectinib and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "erdafitinib will increase the level or effect of gilteritinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If coadministration unavoidable, separate administration by at least 6 hr before or after administration of P-gp substrates with narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "gilteritinib and erythromycin base both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "gilteritinib and erythromycin ethylsuccinate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "gilteritinib and erythromycin lactobionate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "gilteritinib and erythromycin stearate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "gilteritinib will decrease the level or effect of escitalopram by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of gilteritinib with drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels or prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "gilteritinib and flecainide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "gilteritinib and fluconazole both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "gilteritinib will decrease the level or effect of fluoxetine by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of gilteritinib with drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "gilteritinib will increase the level or effect of fluvoxamine by  Other (see comment). Avoid or Use Alternate Drug. Coadministrationwith drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "gilteritinib and glasdegib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "gilteritinib and hydroxychloroquine sulfate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "gilteritinib and ibutilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "gilteritinib and iloperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "gilteritinib and inotuzumab both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "gilteritinib and isoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "gilteritinib and ivosidenib both decrease  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "gilteritinib and lapatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin and gilteritinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "gilteritinib and lenvatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "gilteritinib and lofexidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "gilteritinib and macimorelin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "gilteritinib and methadone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "gilteritinib and midostaurin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "gilteritinib and mobocertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "gilteritinib and moxifloxacin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "gilteritinib and nilotinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "gilteritinib and ondansetron both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "gilteritinib and osimertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "gilteritinib and oxaliplatin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "gilteritinib and ozanimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "gilteritinib and paliperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "gilteritinib and panobinostat both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "gilteritinib will decrease the level or effect of paroxetine by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of gilteritinib with drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "gilteritinib and pazopanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "gilteritinib and pentamidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "gilteritinib and pimavanserin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "gilteritinib and pimozide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "gilteritinib and pitolisant both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "gilteritinib and ponesimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "gilteritinib and procainamide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "gilteritinib and propafenone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "gilteritinib and quetiapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "gilteritinib and quinidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "gilteritinib and quinine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "gilteritinib and ribociclib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "gilteritinib and selpercatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "gilteritinib will decrease the level or effect of sertraline by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of gilteritinib with drugs that inhibit 5HT2B or sigma nonspecific receptors. Avoid use of these drugs with gilteritinib unless coadministration is necessary."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "gilteritinib and sevoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "gilteritinib and siponimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorafenib",
+            "description": {
+                "common": "gilteritinib and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of gilteritinib by  Other (see comment). Avoid or Use Alternate Drug. Gilteritinib is a P-gp and CYP3A4 substrates. Coadministration of gilteritinib with a combined P-gp and strong CYP3A inducer decreases gilteritinib exposure and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "gilteritinib and tetrabenazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "gilteritinib and toremifene both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "gilteritinib and trazodone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "gilteritinib and vandetanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "gilteritinib and vemurafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "gilteritinib and ziprasidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "albuterol and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "gilteritinib and amitriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "apomorphine and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "gilteritinib and arformoterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "gilteritinib and bosutinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capecitabine",
+            "description": {
+                "common": "gilteritinib and capecitabine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "gilteritinib and ciprofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clofazimine",
+            "description": {
+                "common": "gilteritinib and clofazimine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "gilteritinib and clomipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "dasatinib and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "gilteritinib and desipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "deutetrabenazine and gilteritinib both increase  QTc interval. Use Caution/Monitor. At the maximum recommended dose, deutetrabenazine does not prolong QT interval to a clinically relevant extent. Certain circumstances may increase risk of torsade de pointes and/or sudden death in association with drugs that prolong the QTc interval (eg, bradycardia, hypokalemia or hypomagnesemia, coadministration with other drugs that prolong QTc interval, presence of congenital QT prolongation)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "dolasetron and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "doxepin and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "gilteritinib and eliglustat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "gilteritinib and fluphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "gilteritinib and formoterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "gilteritinib and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gadobenate",
+            "description": {
+                "common": "gadobenate and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "gilteritinib and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "gilteritinib and goserelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "gilteritinib and granisetron both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "gilteritinib and haloperidol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "gilteritinib and histrelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyzine",
+            "description": {
+                "common": "gilteritinib and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "gilteritinib and imipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indacaterol, inhaled",
+            "description": {
+                "common": "gilteritinib and indacaterol, inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "gilteritinib and leuprolide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "gilteritinib and levalbuterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "gilteritinib and levofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "gilteritinib and lithium both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "gilteritinib and loperamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "gilteritinib and maprotiline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "gilteritinib and mefloquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "gilteritinib and mirtazapine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "gilteritinib and nortriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "gilteritinib and octreotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "gilteritinib and ofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "gilteritinib and olanzapine both increase  QTc interval. Use Caution/Monitor. Limited data, including some case reports, suggest that olanzapine may be associated with a significant prolongation of the QTc interval in rare instances"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olodaterol inhaled",
+            "description": {
+                "common": "gilteritinib and olodaterol inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "gilteritinib and osilodrostat both increase  QTc interval. Use Caution/Monitor. Dose dependent QT prolongation - avoid drugs known to prolong the QT interval"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "gilteritinib and pasireotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "gilteritinib and perphenazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "gilteritinib and primaquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "gilteritinib and prochlorperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "gilteritinib and promethazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "gilteritinib and protriptyline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "gilteritinib and ranolazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rilpivirine",
+            "description": {
+                "common": "gilteritinib and rilpivirine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "gilteritinib and risperidone both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "gilteritinib and romidepsin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "gilteritinib and salmeterol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "gilteritinib and sertraline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and gilteritinib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "gilteritinib and solifenacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "gilteritinib and sotalol both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "gilteritinib and sunitinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "gilteritinib and tacrolimus both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "gilteritinib and telavancin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "gilteritinib and triclabendazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "gilteritinib and trifluoperazine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "gilteritinib and trimipramine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "gilteritinib and triptorelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "gilteritinib and umeclidinium bromide/vilanterol inhaled both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and gilteritinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "gilteritinib and vardenafil both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "gilteritinib and venlafaxine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "gilteritinib and vilanterol/fluticasone furoate inhaled both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "gilteritinib and voclosporin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "gilteritinib and vorinostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Myalgia",
+            "percent": "42"
+        },
+        {
+            "name": "arthralgia",
+            "percent": "41"
+        },
+        {
+            "name": "Increased transaminases",
+            "percent": "40"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "35"
+        },
+        {
+            "name": "malaise",
+            "percent": "34"
+        },
+        {
+            "name": "Fever",
+            "percent": "34"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "34"
+        },
+        {
+            "name": "Edema",
+            "percent": "30"
+        },
+        {
+            "name": "Noninfectious diarrhea",
+            "percent": "30"
+        },
+        {
+            "name": "Rash",
+            "percent": "27"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "27"
+        },
+        {
+            "name": "Constipation",
+            "percent": "26"
+        },
+        {
+            "name": "Nausea",
+            "percent": "25"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "3"
+        },
+        {
+            "name": "Cough",
+            "percent": "4"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "23"
+        },
+        {
+            "name": "Grade",
+            "percent": "21"
+        },
+        {
+            "name": "or",
+            "percent": "21"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "20"
+        },
+        {
+            "name": "Headache",
+            "percent": "20"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "19"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "17"
+        },
+        {
+            "name": "Renal impairment",
+            "percent": "3"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "4"
+        },
+        {
+            "name": "Increased transaminases",
+            "percent": "16"
+        },
+        {
+            "name": "Grade",
+            "percent": "15"
+        },
+        {
+            "name": "or",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "14"
+        },
+        {
+            "name": "Sepsis",
+            "percent": "3"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "4"
+        },
+        {
+            "name": "Sepsis",
+            "percent": "14"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "4"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "12"
+        },
+        {
+            "name": "Grade",
+            "percent": "11"
+        },
+        {
+            "name": "or",
+            "percent": "11"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "10"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "3"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "4"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "7"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "4"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "6"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "4"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "5"
+        },
+        {
+            "name": "arthralgia",
+            "percent": "3"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "5"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "3"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "5"
+        },
+        {
+            "name": "Fever",
+            "percent": "3"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "5"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "3"
+        },
+        {
+            "name": "malaise",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Renal impairment",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Noninfectious diarrhea",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Rash",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "2"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Edema",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "2"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "2"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "1"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Headache",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "1"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Nausea",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "4"
+        },
+        {
+            "name": "Constipation",
+            "percent": "3"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "or",
+            "percent": null
+        },
+        {
+            "name": "Dizziness",
+            "percent": null
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "or",
+            "percent": null
+        },
+        {
+            "name": "Cough",
+            "percent": null
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "or",
+            "percent": null
+        },
+        {
+            "name": "Differentiation syndrome",
+            "percent": null
+        }
+    ]
+}

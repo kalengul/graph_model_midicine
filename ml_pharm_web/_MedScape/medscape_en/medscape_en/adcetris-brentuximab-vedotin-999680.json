@@ -1,0 +1,754 @@
+{
+    "name": "brentuximab vedotin",
+    "comment": "Rx",
+    "other_names": [
+        "Adcetris"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Antimicrotubulars",
+        "Anti-Nectin-4 Monoclonal Antibodies",
+        "Antineoplastics",
+        "Anti-CD30 Monoclonal Antibodies"
+    ],
+    "source": "https://reference.medscape.com/drug/adcetris-brentuximab-vedotin-999680",
+    "pregnancy": {
+        "common": [
+            "Based on the findings from animal studies and mechanism of action, brentuximab may cause fetal harm",
+            "Available data from case reports in pregnant women are insufficient to inform a drug-associated risk of adverse developmental outcomes"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal reproduction studies, administration of brentuximab vedotin to pregnant rats during organogenesis at doses similar to the clinical dose (1.8 mg/kg q3weeks) caused embryo-fetal toxicities, including congenital malformation"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Verify pregnancy status of females of reproductive potential prior to initiation",
+                    "Advise females of reproductive potential to avoid pregnancy during treatment and for at least 6 months after final dose; immediately report pregnancy",
+                    "May damage spermatozoa and testicular tissue, resulting in possible genetic abnormalities",
+                    "Use effective contraception in males with female sexual partners of reproductive potential during treatment and for at least 6 months after final dose"
+                ]
+            },
+            {
+                "type": "Fertility",
+                "description": [
+                    "Based on findings in rats, male fertility may be compromised by brentuximab"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There is no information related to the presence of brentuximab vedotin in human milk, the effects on the breastfed child, or the effects on milk production",
+            "Owing to the potential for serious adverse reactions in a breastfed child from brentuximab, including cytopenias and neurologic or gastrointestinal toxicities, breastfeeding is not recommended during treatment"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Progressive multifocal leukoencephalopathy ",
+                    "description": [
+                        "JC virus infection resulting in PML and death can occur; cases of progressive multifocal leukoencephalopathy (PML) reported",
+                        "PML is a rare, but serious brain infection that can result in death",
+                        "Signs and symptoms of PML may develop over several weeks or months and may include mood changes, unusual behavior, confusion, thinking problems, memory loss, changes in vision, speech, or walking, and a unilateral decrease in strength or weakness"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Concomitant use of brentuximab with bleomycin because of pulmonary toxicity"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Peripheral neuropathy (predominately sensory neuropathy) and motor neuropathy reported; drug-induced peripheral neuropathy is cumulative; monitor for symptoms of neuropathy (eg, hypoesthesia, hyperesthesia, paresthesia, discomfort, a burning sensation, neuropathic pain, weakness)",
+                "Fatal and serious cases of febrile neutropenia reported; monitor complete blood counts (CBC) prior to each dose; start primary prophylaxis with G-CSF beginning with Cycle 1 for patients who receive drug with chemotherapy for previously untreated Stage III or IV cHL or previously untreated PTCL and pediatric patients who receive this medication in combination with chemotherapy for previously untreated high risk cHL",
+                "Grade 3 or 4 thrombocytopenia or anemia can occur",
+                "Frequency of Grade 3 adverse reactions and deaths reported to be greater in patients with severe renal or hepatic impairment compared to patients with normal renal/hepatic function",
+                "Serious cases of hepatotoxicity, including fatal outcomes reported after first dose or after rechallenge; serious cases of hepatotoxicity, including fatal outcomes; preexisting liver disease, elevated baseline liver enzymes, and concomitant medications may increase risk; monitor liver enzymes and bilirubin; patients experiencing new, worsening, or recurrent hepatotoxicity may require a delay, change in dose, or discontinuation of therapy",
+                "JC virus infection resulting in progressive multifocal leukoencephalopathy (PML) and death reported (see Black Box Warnings)",
+                "Closely monitor for emergence of bacterial, fungal or viral infections",
+                "Events of noninfectious pulmonary toxicity (eg, pneumonitis, interstitial lung disease, acute respiratory distress syndrome [ARDS]), some with fatal outcomes, reported",
+                "Fatal and serious cases of Stevens-Johnson syndrome (SJS) and toxic epidermal necrolysis (TEN) reported; if SJS or TEN occurs, discontinue treatment and administer appropriate medical therapy",
+                "Acute pancreatitis, including fatal outcomes, reported",
+                "Fatal and serious gastrointestinal (GI) complications (eg, perforation, hemorrhage, erosion, ulcer, intestinal obstruction, enterocolitis, neutropenic colitis, and ileus) reported; lymphoma with preexisting GI involvement may increase risk of perforation; promptly evaluate for any new or worsening GI symptoms, and treat appropriately",
+                "Fetal harm can occur (see Pregnancy)",
+                "Patients with rapidly proliferating tumor and high tumor burden are at risk of tumor lysis syndrome; closely monitor and treat appropriately",
+                "Serious events of hyperglycemia (eg, new-onset hyperglycemia), exacerbation ofpreexisting diabetes mellitus, and ketoacidosis (including fatal outcomes) have beenreported; occurred more frequently in patients with high body mass index or diabetes;monitor serum glucose and if hyperglycemia develops, administer antihyperglycemicmedications as clinically indicated"
+            ],
+            "specific": [
+                {
+                    "type": "Infusion-related reactions",
+                    "description": [
+                        "Infusion-related reactions (eg, anaphylaxis), may occur",
+                        "If anaphylaxis occurs, immediately and permanently discontinue treatment",
+                        "If an infusion-related reaction occurs, interrupt infusion",
+                        "After interrupting or discontinuing treatment, institute appropriate medical management",
+                        "Premedicate patients who previously experienced infusion-related reactions for subsequent infusions",
+                        "Premedication may include acetaminophen, an antihistamine, and a corticosteroid"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Strong CYP3A4 Inhibitors",
+                        "Coadministration with ketoconazole, a potent CYP3A4 inhibitor, increased exposure to MMAE which may increase the risk of adverse reaction",
+                        "Closely monitor adverse reactions when concomitantly used with strong CYP3A4 inhibitors"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "bleomycin",
+            "description": {
+                "common": "brentuximab vedotin and bleomycin both increase  Other (see comment). Contraindicated. Contraindicated because of increased risk of pulmonary toxicity. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "erdafitinib will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If coadministration unavoidable, separate administration by at least 6 hr before or after administration of P-gp substrates with narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Idelalisib is a strong CYP3A inhibitor; avoid coadministration with sensitive CYP3A substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternate therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of brentuximab vedotin by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of brentuximab vedotin by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selinexor",
+            "description": {
+                "common": "selinexor, brentuximab vedotin. unspecified interaction mechanism. Avoid or Use Alternate Drug. Patients treated with selinexor may experience neurological toxicities. Avoid taking selinexor with other medications that may cause dizziness or confusion."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "brentuximab vedotin decreases effects of cholera vaccine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs and corticosteroids (used in greater than physiologic doses), may reduce the immune response to cholera vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "brentuximab vedotin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efgartigimod alfa",
+            "description": {
+                "common": "efgartigimod alfa will decrease the level or effect of brentuximab vedotin by  receptor binding competition. Use Caution/Monitor. Coadministration of efgartigimod with medications that bind to the human neonatal Fc receptor may lower systemic exposures and effectiveness of such medications. Closely monitor for reduced effectiveness of medications that bind to the human neonatal Fc receptor. If long-term use of such medications is essential, consider discontinuing efgartigimod and using alternative therapies."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, brentuximab vedotin. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "brentuximab vedotin and isavuconazonium sulfate both decrease  immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Lencapavir (a moderate CYP3A4 inhibitor) may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Mitotane is a strong inducer of cytochrome P-4503A4; monitor when coadministered with CYP3A4 substrates for possible dosage adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC, brentuximab vedotin.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Consider the risk of additive immune system effects when coadministering immunosuppressive therapies with coadministration. When switching from therapies with immune effects, take into account the duration and mechanism of action of these therapies when initiating ofatumumab SC."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and brentuximab vedotin both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort decreases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, brentuximab vedotin. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, brentuximab vedotin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, brentuximab vedotin.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab and brentuximab vedotin both increase  immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Owing to potential additive immunosuppressive effects, consider duration of effect and mechanism of action of these therapies if coadministered"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole increases levels of brentuximab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Monitor patients for adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of brentuximab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Peripheral sensory neuropathy",
+            "percent": "10"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "3"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "3"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "3"
+        },
+        {
+            "name": "Constipation",
+            "percent": "2"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "2"
+        },
+        {
+            "name": "Peripheral motor neuropathy",
+            "percent": "2"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "1"
+        },
+        {
+            "name": "Peripheral sensory neuropathy",
+            "percent": "5"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "5"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "2-3"
+        },
+        {
+            "name": "Asthenia",
+            "percent": "2"
+        },
+        {
+            "name": "Maculopapular rash",
+            "percent": "2"
+        },
+        {
+            "name": "Generalized pruritus",
+            "percent": "2"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2"
+        },
+        {
+            "name": "Thrombocytopenia",
+            "percent": "2"
+        }
+    ]
+}

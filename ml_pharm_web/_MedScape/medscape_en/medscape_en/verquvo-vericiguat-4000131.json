@@ -1,0 +1,132 @@
+{
+    "name": "vericiguat",
+    "comment": "Rx",
+    "other_names": [
+        "Verquvo"
+    ],
+    "classes": [
+        "Soluble Guanylate Cyclase Stimulators"
+    ],
+    "source": "https://reference.medscape.com/drug/verquvo-vericiguat-4000131",
+    "pregnancy": {
+        "common": [
+            "Contraindicated; based on data from animal reproduction studies, may cause fetal harm when administered to pregnant females",
+            "There are no available data regarding use in pregnant females",
+            "Verify pregnancy status in females of reproductive potential before initiating ",
+            "If patient becomes pregnant during treatment, report drug exposure by calling 1-877-888-4231"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "Administration to pregnant rabbits during organogenesis at ≥4 times the human exposure (total AUC) with the maximum recommended human dose (MRHD) of 10 mg resulted in malformations of the heart and major vessels, as well as increased number of abortions and resorptions ",
+                    "In a prenatal/postnatal toxicity study, oral administration to rats during gestation through lactation caused maternal toxicity, resulting in decreased pup body weight gain (≥10 times the MRHD) and increased pup mortality (24 times the MRHD) during the preweaning period"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Advise females of reproductive potential to use effective contraception during treatment and for 1 month after final dose"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data are not available on the presence of vericiguat in human milk, effects on breastfed infants, or effects on milk production",
+            "Vericiguat is present in the milk of lactating rats and it is likely that vericiguat or its metabolites are present in human milk",
+            "Owing to the potential for serious adverse reactions in breastfed infants, advise women not to breastfeed during treatment"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Females of reproductive potential",
+                    "description": [
+                        "May cause fetal harm; do not administer to pregnant females",
+                        "Exclude pregnancy before starting treatment",
+                        "To prevent pregnancy, females of reproductive potential must use effective forms of contraception during treatment and for 1 month after stopping treatment"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Coadministration with other soluble guanylate cyclase (sGC) stimulators",
+                "Pregnancy"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Based on data from animal reproduction studies, may cause fetal harm when administered to pregnant females and its use is contraindicated"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Coadministration with other sGC stimulators is contraindicated",
+                        "Coadministration with PDE-5 inhibitors not recommended owing to potential for hypotension"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil, vericiguat.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Coadministration of vericiguat with PDE-5 inhibitors may result in additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "riociguat, vericiguat.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Vericiguat is contraindicated with use of other soluble guanylate cyclase (sGC) stimulators."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sildenafil",
+            "description": {
+                "common": "sildenafil, vericiguat.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Coadministration of vericiguat with PDE-5 inhibitors may result in additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "tadalafil, vericiguat.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Coadministration of vericiguat with PDE-5 inhibitors may result in additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "vardenafil, vericiguat.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Coadministration of vericiguat with PDE-5 inhibitors may result in additive hypotensive effects."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Hypotension",
+            "percent": "16"
+        },
+        {
+            "name": "placebo",
+            "percent": "15"
+        },
+        {
+            "name": "Anemia",
+            "percent": "10"
+        },
+        {
+            "name": "placebo",
+            "percent": "7"
+        }
+    ]
+}

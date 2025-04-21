@@ -1,0 +1,1561 @@
+{
+    "name": "dengue vaccine",
+    "comment": "Rx",
+    "other_names": [
+        "Dengvaxia"
+    ],
+    "classes": [
+        "Vaccines",
+        "Live",
+        "Viral"
+    ],
+    "source": "https://reference.medscape.com/drug/dengvaxia-dengue-vaccine-1000308",
+    "pregnancy": {
+        "common": [
+            "Available data in pregnant women are not sufficient to determine the effects of dengue vaccine on pregnancy, embryo-fetal development, parturition, and postnatal development",
+            "Pregnancy exposure registry: 1-800-VACCINE (1-800-822-2463)",
+            "Limited number of inadvertent exposures during pregnancy reported during clinical studies; isolated adverse pregnancy outcomes (eg, stillbirth, intrauterine death, spontaneous abortion, blighted ovum) observed for these exposed pregnancies, with similar frequency and nature in the vaccinated individuals compared with control group, and with risk factors identified for all cases"
+        ],
+        "specific": [
+            {
+                "type": "Clinical considerations",
+                "description": [
+                    "Pregnant women are at increased risk of complications associated with dengue infection compared with nonpregnant women",
+                    "Pregnant women with dengue may be at increased risk for adverse pregnancy outcomes, including preterm labor and delivery",
+                    "Vertical transmission of dengue virus from mothers with viremia at delivery to their infants reported"
+                ]
+            },
+            {
+                "type": "Fetal/neonatal adverse effects",
+                "description": [
+                    "Vaccine viremia can occur 7-14 days after vaccination with a duration of <7 days",
+                    "Potential for transmitting the vaccine virus from mother to infant is unknown"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Human data are not available to assess dengue vaccine impact on milk production, its presence in breast milk, or its effects on the breastfed child",
+            "Consider the developmental and health benefits of breastfeeding along with the mother’s clinical need for the vaccine and any potential adverse effects on the breastfed child from dengue vaccine or from the underlying maternal condition",
+            "Vertical transmission of dengue virus, including potentially through breastmilk, has been reported"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Individuals with severe immunodeficiency or immunosuppression due to disease or therapy"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "May cause hypersensitivity reactions, including anaphylaxis; appropriate medical treatment and supervision must be available following administration",
+                "Vaccination may not protect all individuals; continue personal protection measures against mosquito bites after vaccination",
+                "Syncope can occur following or before vaccination as a psychogenic response to injection with a needle; prevent injury from falling and manage syncopal reactions"
+            ],
+            "specific": [
+                {
+                    "type": "Uninfected individuals",
+                    "description": [
+                        "Evaluate individuals for prior dengue infection to avoid vaccinating individuals who have not been previously infected by dengue virus",
+                        "In unvaccinated individuals, first dengue infections rarely cause severe dengue, while second dengue infections with a different serotype are associated with an increased risk of severe dengue",
+                        "Administration to individuals not previously infected by dengue virus is associated with increased risk of severe dengue disease when the vaccinated individual is subsequently infected with any dengue virus serotype",
+                        "There is no FDA-cleared test available to determine previous dengue infection; available non-FDA-cleared tests may yield false-positive results owing to cross-reactivity with other flaviviruses"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Data unavailable to establish safety and immunogenicity of coadministration with recommended adolescent vaccines",
+                        "Immunosuppressive therapies, including irradiation, antimetabolites, alkylating agents, cytotoxic drugs, and corticosteroids (greater than physiologic doses), may reduce the immune response to dengue vaccine",
+                        "Dengue vaccine may cause temporary depression of tuberculin purified-protein derivative (PPD) test sensitivity, leading to false-negative results; perform tuberculin testing before immunization or at least 1 month following"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "onasemnogene abeparvovec",
+            "description": {
+                "common": "onasemnogene abeparvovec decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Contraindicated. Adjust vaccinations to accommodate concomitant corticosteroid administration prior to and following onasemnogene abeparvovec infusion. Avoid live vaccines for at least 1 month when initiating or after high-dose systemic corticosteroid therapy administered for =2 weeks."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "abrocitinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Administration of live vaccines is not recommended during abrocitinib treatment and immediately before or after treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anifrolumab",
+            "description": {
+                "common": "anifrolumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Before initiation, update immunization according to current guidelines."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atoltivimab/maftivimab/odesivimab",
+            "description": {
+                "common": "atoltivimab/maftivimab/odesivimab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Ebola monoclonal antibodies may interfere with immune response of live vaccines. Refer to vaccine guidelines for vaccination timing during and following treatment. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciltacabtagene autoleucel",
+            "description": {
+                "common": "ciltacabtagene autoleucel decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Vaccination with live virus vaccines is not recommended for at least 6 weeks before starting lymphodepleting chemotherapy, during CAR-T cell treatment, and until immune recovery following treatment. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine decreases effects of dengue vaccine by pharmacodynamic antagonism. Contraindicated. Avoid live vaccines in immunocompromised patients due to the risk of developing a clinical infection from the live vaccine. Inadequate immune response to the vaccine may also occur in the presence of immunosuppressants. Avoid live vaccines for at least 3 months after cessation of immunosuppressant therapy unless the benefit of vaccine administration outweighs the potential risk."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elivaldogene autotemcel",
+            "description": {
+                "common": "elivaldogene autotemcel, dengue vaccine.\nEither decreases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: The safety and effectiveness of vaccination during or following elivaldogene autotemcel treatment have not been studied. Vaccination is not recommended during the 6 weeks preceding myeloablative conditioning, and until hematological recovery following elivaldogene autotemcel treatment. Where feasible, administer childhood vaccinations before myeloablative conditioning. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idecabtagene vicleucel",
+            "description": {
+                "common": "idecabtagene vicleucel decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Vaccination with live virus vaccines is not recommended for at least 6 weeks before starting lymphodepleting chemotherapy, during CAR-T cell treatment, and until immune recovery following treatment. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Administer all immunizations according to immunization guidelines at least 4 weeks prior to initiation of ofatumumab SC for live or live-attenuated vaccines, and whenever possible."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "ozanimod decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Avoid use of live-attenuated vaccines with ozanimod during treatment and for up to 3 months after discontinuing ozanimod. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Avoid use of live attenuated vaccines at least 1 month before initiating, during, and for 1-2 weeks after treatment. Coadministration with live attenuated vaccines may increase infection risk."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "satralizumab",
+            "description": {
+                "common": "satralizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. ive vaccines are not recommended during treatment. Administer all immunizations according to immunization guidelines. At least 4 weeks before initiating for live or live-attenuated vaccines."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "teplizumab",
+            "description": {
+                "common": "teplizumab decreases effects of dengue vaccine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Administer all age-appropriate vaccinations before starting teplizumab. Live-attenuated vaccines are not recommended within 8 weeks before teplizumab treatment, during treatment, or up to 52 weeks after treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tisagenlecleucel",
+            "description": {
+                "common": "tisagenlecleucel decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Vaccination with live virus vaccines is not recommended for at least 6 weeks before starting lymphodepleting chemotherapy, during CAR-T cell treatment, and until immune recovery following treatment. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tralokinumab",
+            "description": {
+                "common": "tralokinumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Avoid use of live vaccines. Before starting tralokinumab, complete age appropriate immunizations."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tuberculin purified protein derivative",
+            "description": {
+                "common": "dengue vaccine decreases effects of tuberculin purified protein derivative by unspecified interaction mechanism. Avoid or Use Alternate Drug. Dengue vaccine may cause temporary depression of tuberculin purified protein derivative (PPD) test sensitivity, leading to false negative results. Perform PPD test before administering dengue vaccine or at least 1 month after vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "upadacitinib",
+            "description": {
+                "common": "upadacitinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Immunosuppressants also increase risk of infection with concomitant live vaccines. Avoid live vaccines for at least 3 months after immunosuppressants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abatacept",
+            "description": {
+                "common": "abatacept decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abemaciclib",
+            "description": {
+                "common": "abemaciclib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "adalimumab",
+            "description": {
+                "common": "adalimumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ado-trastuzumab emtansine",
+            "description": {
+                "common": "ado-trastuzumab emtansine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "afatinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alemtuzumab",
+            "description": {
+                "common": "alemtuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithymocyte globulin equine",
+            "description": {
+                "common": "antithymocyte globulin equine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithymocyte globulin rabbit",
+            "description": {
+                "common": "antithymocyte globulin rabbit decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apaziquone",
+            "description": {
+                "common": "apaziquone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azacitidine",
+            "description": {
+                "common": "azacitidine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azathioprine",
+            "description": {
+                "common": "azathioprine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "basiliximab",
+            "description": {
+                "common": "basiliximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belatacept",
+            "description": {
+                "common": "belatacept decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belinostat",
+            "description": {
+                "common": "belinostat decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendamustine",
+            "description": {
+                "common": "bendamustine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benralizumab",
+            "description": {
+                "common": "benralizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betamethasone",
+            "description": {
+                "common": "betamethasone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betibeglogene autotemcel",
+            "description": {
+                "common": "betibeglogene autotemcel, dengue vaccine. Other (see comment). Use Caution/Monitor. \nComment: Follow institutional guidelines for vaccine administration. Safety of live vaccines during or following treatment not studied. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bevacizumab",
+            "description": {
+                "common": "bevacizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "binimetinib",
+            "description": {
+                "common": "binimetinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bleomycin",
+            "description": {
+                "common": "bleomycin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brentuximab vedotin",
+            "description": {
+                "common": "brentuximab vedotin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brodalumab",
+            "description": {
+                "common": "brodalumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "busulfan",
+            "description": {
+                "common": "busulfan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cabazitaxel",
+            "description": {
+                "common": "cabazitaxel decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capecitabine",
+            "description": {
+                "common": "capecitabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carboplatin",
+            "description": {
+                "common": "carboplatin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carmustine",
+            "description": {
+                "common": "carmustine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "certolizumab pegol",
+            "description": {
+                "common": "certolizumab pegol decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cetuximab",
+            "description": {
+                "common": "cetuximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorambucil",
+            "description": {
+                "common": "chlorambucil decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisplatin",
+            "description": {
+                "common": "cisplatin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cladribine",
+            "description": {
+                "common": "cladribine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clofarabine",
+            "description": {
+                "common": "clofarabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobimetinib",
+            "description": {
+                "common": "cobimetinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "corticotropin",
+            "description": {
+                "common": "corticotropin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "cortisone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "custirsen",
+            "description": {
+                "common": "custirsen decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cytarabine",
+            "description": {
+                "common": "cytarabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dacarbazine",
+            "description": {
+                "common": "dacarbazine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dacomitinib",
+            "description": {
+                "common": "dacomitinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dactinomycin",
+            "description": {
+                "common": "dactinomycin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daratumumab",
+            "description": {
+                "common": "daratumumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "daunorubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "decitabine",
+            "description": {
+                "common": "decitabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "deflazacort decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "denosumab",
+            "description": {
+                "common": "denosumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dinutuximab",
+            "description": {
+                "common": "dinutuximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphtheria & tetanus toxoids",
+            "description": {
+                "common": "dengue vaccine, diphtheria & tetanus toxoids. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphtheria & tetanus toxoids/ acellular pertussis vaccine",
+            "description": {
+                "common": "dengue vaccine, diphtheria & tetanus toxoids/ acellular pertussis vaccine. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "docetaxel, dengue vaccine. immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "doxorubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "doxorubicin liposomal decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dupilumab",
+            "description": {
+                "common": "dupilumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elotuzumab",
+            "description": {
+                "common": "elotuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epirubicin",
+            "description": {
+                "common": "epirubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erlotinib",
+            "description": {
+                "common": "erlotinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etanercept",
+            "description": {
+                "common": "etanercept decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "everolimus decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exemestane",
+            "description": {
+                "common": "exemestane decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "floxuridine",
+            "description": {
+                "common": "floxuridine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fludarabine",
+            "description": {
+                "common": "fludarabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "fludrocortisone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluorouracil",
+            "description": {
+                "common": "fluorouracil decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "gefitinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemcitabine",
+            "description": {
+                "common": "gemcitabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "gemtuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "glasdegib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "golimumab",
+            "description": {
+                "common": "golimumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "goserelin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "guselkumab",
+            "description": {
+                "common": "guselkumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haemophilus influenzae type b vaccine",
+            "description": {
+                "common": "dengue vaccine, haemophilus influenzae type b vaccine. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hepatitis A vaccine inactivated",
+            "description": {
+                "common": "dengue vaccine, hepatitis A vaccine inactivated. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hepatitis b vaccine",
+            "description": {
+                "common": "dengue vaccine, hepatitis b vaccine. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "histrelin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "human papillomavirus vaccine, nonavalent",
+            "description": {
+                "common": "dengue vaccine, human papillomavirus vaccine, nonavalent. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "hydrocortisone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxychloroquine sulfate decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyurea",
+            "description": {
+                "common": "hydroxyurea decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibritumomab tiuxetan",
+            "description": {
+                "common": "ibritumomab tiuxetan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idarubicin",
+            "description": {
+                "common": "idarubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "infliximab",
+            "description": {
+                "common": "infliximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza virus vaccine quadrivalent",
+            "description": {
+                "common": "dengue vaccine, influenza virus vaccine quadrivalent. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza virus vaccine quadrivalent, cell-cultured",
+            "description": {
+                "common": "dengue vaccine, influenza virus vaccine quadrivalent, cell-cultured. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza virus vaccine quadrivalent, intranasal",
+            "description": {
+                "common": "dengue vaccine, influenza virus vaccine quadrivalent, intranasal. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "influenza virus vaccine trivalent",
+            "description": {
+                "common": "dengue vaccine, influenza virus vaccine trivalent. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ipilimumab",
+            "description": {
+                "common": "ipilimumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "irinotecan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "irinotecan liposomal decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ixabepilone",
+            "description": {
+                "common": "ixabepilone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ixekizumab",
+            "description": {
+                "common": "ixekizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leflunomide",
+            "description": {
+                "common": "leflunomide decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "leniolisib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Live, attenuated vaccinations may be less effective if administered during leniolisib treatment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letrozole",
+            "description": {
+                "common": "letrozole decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "leuprolide decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomustine",
+            "description": {
+                "common": "lomustine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "measles mumps and rubella vaccine, live",
+            "description": {
+                "common": "dengue vaccine, measles mumps and rubella vaccine, live. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mechlorethamine",
+            "description": {
+                "common": "mechlorethamine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mechlorethamine topical",
+            "description": {
+                "common": "mechlorethamine topical decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melphalan",
+            "description": {
+                "common": "melphalan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meningococcal A C Y and W-135 diphtheria conjugate vaccine",
+            "description": {
+                "common": "dengue vaccine, meningococcal A C Y and W-135 diphtheria conjugate vaccine. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meningococcal A C Y and W-135 polysaccharide vaccine combined",
+            "description": {
+                "common": "dengue vaccine, meningococcal A C Y and W-135 polysaccharide vaccine combined. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meningococcal group B vaccine",
+            "description": {
+                "common": "dengue vaccine, meningococcal group B vaccine. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mepolizumab",
+            "description": {
+                "common": "mepolizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mercaptopurine",
+            "description": {
+                "common": "mercaptopurine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "methotrexate decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "methylprednisolone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitomycin",
+            "description": {
+                "common": "mitomycin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitomycin pyelocalyceal",
+            "description": {
+                "common": "mitomycin pyelocalyceal decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mogamulizumab",
+            "description": {
+                "common": "mogamulizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mometasone sinus implant",
+            "description": {
+                "common": "mometasone sinus implant decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxetumomab pasudotox",
+            "description": {
+                "common": "moxetumomab pasudotox decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "muromonab CD3",
+            "description": {
+                "common": "muromonab CD3 decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "mycophenolate decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "necitumumab",
+            "description": {
+                "common": "necitumumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelarabine",
+            "description": {
+                "common": "nelarabine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "neratinib",
+            "description": {
+                "common": "neratinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nivolumab",
+            "description": {
+                "common": "nivolumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "obinutuzumab",
+            "description": {
+                "common": "obinutuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab",
+            "description": {
+                "common": "ofatumumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olaratumab",
+            "description": {
+                "common": "olaratumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "osimertinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "paclitaxel, dengue vaccine. immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "paclitaxel protein bound decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "palbociclib",
+            "description": {
+                "common": "palbociclib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "panitumumab",
+            "description": {
+                "common": "panitumumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "panobinostat decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pembrolizumab",
+            "description": {
+                "common": "pembrolizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pemetrexed",
+            "description": {
+                "common": "pemetrexed decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentostatin",
+            "description": {
+                "common": "pentostatin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pertuzumab",
+            "description": {
+                "common": "pertuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pneumococcal vaccine 13-valent",
+            "description": {
+                "common": "dengue vaccine, pneumococcal vaccine 13-valent. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pneumococcal vaccine polyvalent",
+            "description": {
+                "common": "dengue vaccine, pneumococcal vaccine polyvalent. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "poliovirus vaccine inactivated",
+            "description": {
+                "common": "dengue vaccine, poliovirus vaccine inactivated. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pralatrexate",
+            "description": {
+                "common": "pralatrexate decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisolone",
+            "description": {
+                "common": "prednisolone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "prednisone decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procarbazine",
+            "description": {
+                "common": "procarbazine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "reslizumab",
+            "description": {
+                "common": "reslizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risankizumab",
+            "description": {
+                "common": "risankizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rituximab",
+            "description": {
+                "common": "rituximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rituximab-hyaluronidase",
+            "description": {
+                "common": "rituximab-hyaluronidase decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "romidepsin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarilumab",
+            "description": {
+                "common": "sarilumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secukinumab",
+            "description": {
+                "common": "secukinumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siltuximab",
+            "description": {
+                "common": "siltuximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "sirolimus decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus intravitreal",
+            "description": {
+                "common": "sirolimus intravitreal decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirukumab",
+            "description": {
+                "common": "sirukumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sonidegib",
+            "description": {
+                "common": "sonidegib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "streptozocin",
+            "description": {
+                "common": "streptozocin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temozolomide",
+            "description": {
+                "common": "temozolomide decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "temsirolimus decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioguanine",
+            "description": {
+                "common": "thioguanine decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiotepa",
+            "description": {
+                "common": "thiotepa decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tildrakizumab",
+            "description": {
+                "common": "tildrakizumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "topotecan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tositumomab",
+            "description": {
+                "common": "tositumomab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "trabectedin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trametinib",
+            "description": {
+                "common": "trametinib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide extended-release injectable suspension",
+            "description": {
+                "common": "triamcinolone acetonide extended-release injectable suspension decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "triamcinolone acetonide injectable suspension decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "triptorelin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Administer all immunizations according to immunization guidelines at least 4 weeks before initiating ublituximab for live or live-attenuated vaccines and, whenever possible, at least 2 weeks before initiating for non-live vaccines. Vaccination with live virus vaccines is not recommended during treatment and until B-cell repletion. Do not administer live or live-attenuated vaccines to infants of mothers exposed to ublituximab during pregnancy, before confirming recovery of B-cell counts as measured by CD19+ B cells."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valrubicin",
+            "description": {
+                "common": "valrubicin decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "varicella virus vaccine live",
+            "description": {
+                "common": "dengue vaccine, varicella virus vaccine live. unspecified interaction mechanism. Use Caution/Monitor. Data are not available to establish safety and immunogenicity of coadministration of dengue vaccine with recommended adolescent vaccines."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "vorinostat decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "29.6-39.9"
+        },
+        {
+            "name": "Pain",
+            "percent": "22.5-32.4"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "20-29.2"
+        },
+        {
+            "name": "Asthenia",
+            "percent": "16.3-24.6"
+        },
+        {
+            "name": "Malaise",
+            "percent": "19.3-24.5"
+        },
+        {
+            "name": "Fever",
+            "percent": "5.9-7.3"
+        },
+        {
+            "name": "Swelling",
+            "percent": "1.6-3.5"
+        },
+        {
+            "name": "Erythema",
+            "percent": "1.5-4.1"
+        },
+        {
+            "name": "Headache",
+            "percent": "2.1-5.1"
+        },
+        {
+            "name": "Asthenia",
+            "percent": "1.3-2.7"
+        },
+        {
+            "name": "Malaise",
+            "percent": "1.3-2.4"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "1.5-2.2"
+        },
+        {
+            "name": "Fever",
+            "percent": "0.8-1.7"
+        },
+        {
+            "name": "Pain",
+            "percent": "0.8-0.9"
+        },
+        {
+            "name": "Erythema",
+            "percent": "0.1"
+        }
+    ]
+}

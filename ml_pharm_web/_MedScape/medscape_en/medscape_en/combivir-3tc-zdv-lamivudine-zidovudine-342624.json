@@ -1,0 +1,943 @@
+{
+    "name": "lamivudine/zidovudine",
+    "comment": "Rx",
+    "other_names": [
+        "Combivir",
+        "3tc/zdv"
+    ],
+    "classes": [
+        "HIV",
+        "ART Combos"
+    ],
+    "source": "https://reference.medscape.com/drug/combivir-3tc-zdv-lamivudine-zidovudine-342624",
+    "pregnancy": {
+        "common": [
+            "There is a pregnancy exposure registry that monitors pregnancy outcomes in women exposed to therapy during pregnancy; healthcare providers are encouraged to register patients by calling the Antiretroviral Pregnancy Registry (APR) at 1-800-258-4263",
+            "Available data from APR show no difference in overall risk of birth defects for lamivudine or zidovudine compared with background rate for birth defects of 2.7% in Metropolitan Atlanta Congenital Defects Program (MACDP) reference population",
+            "Hyperlactatemia, which may be due to mitochondrial dysfunction, reported in infants with in utero exposure to zidovudine-containing products; causal relationship between these events and exposure to zidovudine-containing products in utero or peri-partum not established"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "The Centers for Disease Control and Prevention recommend that HIV-1-infected mothers in the United States not breastfeed their infants to avoid risking postnatal transmission of HIV-1 infection; lamivudine and zidovudine are present in human milk; there is no information on effects of lamivudine or zidovudine on breastfed infant or effects of drugs on milk production; because of potential for (1) HIV-1 transmission (in HIV-negative infants), (2) developing viral resistance (in HIV-positive infants), and (3) serious adverse reactions in breast infant similar to those seen in adults, instruct mothers not to breastfeed if they are receiving therapy"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "lamivudine",
+                    "description": [
+                        "Lactic acidosis and severe hepatomegaly with steatosis, including fatal cases have been reported with the use of nucleoside analogues, including lamivudine and zidovudine (components of the combination product) alone or in combination with other antiretrovirals; discontinue therapy if clinical or laboratory findings suggestive of lactic acidosis or pronounced hepatotoxicity occur  alone or in combination with other antiretrovirals",
+                        "Not FDA approved for the treatment of chronic hepatitis B virus (HBV) infection and the safety and efficacy of this drug have not been established in patients coinfected with HBV and HIV",
+                        "Tablets and oral solution formulations used to treat HIV infection contain a higher dose of lamivudine than formulations indicated for chronic hepatitis B infection; HIV patients should receive only formulation specific for HIV",
+                        "Exacerbations of hepatitis reported after discontinuation of lamivudine; monitor patients closely with both clinical and laboratory follow-up for at least several months after stopping treatment; if appropriate, initiate anti-hepatitis B therapy"
+                    ]
+                },
+                {
+                    "type": "zidovudine",
+                    "description": [
+                        "Neutropenia and severe anemia reported, particularly in patients with advanced HIV disease",
+                        "Myopathy associated with prolonged use",
+                        "Lactic acidosis and severe hepatomegaly with steatosis (including fatal cases) reported with nucleoside analogues alone or in combination"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Patients requiring separate lamivudine or zidovudine dose reduction"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Risk of immune reconstitution syndrome",
+                "Zidovudine use has been associated with hematologic toxicity including neutropenia and anemia, particularly in patients with advanced HIV-1 disease; use with caution in patients who have bone marrow compromise evidenced by granulocyte count < 1,000 cells per mm³ or hemoglobin < 9.5 g/dL; frequent blood counts strongly recommended in patients with advanced HIV-1 disease; periodic blood counts recommended for other HIV-1-infected patients; if anemia or neutropenia develops, dosage interruption may be needed",
+                "Myopathy and myositis, with pathological changes similar to that produced by HIV-1 disease associated with prolonged use of zidovudine",
+                "Lactic acidosis and severe hepatomegaly with steatosis, including fatal cases, reported with use of nucleoside analogues, including lamivudine and zidovudine (components of the combination product) and other antiretrovirals reported; a majority of these cases have been in women; female sex and obesity may be risk factors for the development of lactic acidosis and severe hepatomegaly with steatosis in patients treated with antiretroviral nucleoside analogues; suspend treatment in patients who develop clinical or laboratory findings suggestive of lactic acidosis or pronounced hepatotoxicity (which may include hepatomegaly and steatosis even in the absence of marked transaminase elevations)",
+                "Clinical and laboratory evidence of exacerbations of hepatitis have occurred after discontinuation of lamivudine; monitor patients closely with both clinical and laboratory follow-up for at least several months after stopping treatment",
+                "Emergence of hepatitis B virus variants associated with resistance to lamivudine reported in HIV-1-infected subjects who received lamivudine-containing antiretroviral regimens in the presence of concurrent infection with hepatitis B virus",
+                "Concomitant administration with other products containing lamivudine or zidovudine not recommended",
+                "Closely monitor patients receiving interferon alfa with or without ribavirin for treatment-associated toxicities, especially hepatic decompensation, neutropenia, and anemia; consider discontinuation of therapy as medically appropriate; dose reduction or discontinuation of interferon alfa, ribavirin, or both should also be considered if worsening clinical toxicities are observed, including hepatic decompensation (e.g., Child-Pugh greater than 6)",
+                "Use with caution in patients with a history of pancreatitis or other significant risk factors for the development of pancreatitis; treatment should be stopped immediately if clinical signs, symptoms, or laboratory abnormalities suggestive of pancreatitis occur Immune reconstitution syndrome reported",
+                "During initial phase of combination antiretroviral treatment, patients whose immune systems respond may develop inflammatory response to indolent or residual opportunistic infections (such as Mycobacterium avium infection, cytomegalovirus, Pneumocystis jirovecii pneumonia [PCP], or tuberculosis), which may necessitate further evaluation and treatment",
+                "Autoimmune disorders (such as Graves’ disease, polymyositis, and Guillain-Barré syndrome) have been reported to occur in setting of immune reconstitution; however, time to onset is more variable, and can occur many months after initiation of treatment",
+                "Redistribution/accumulation of body fat including central obesity, dorsocervical fat enlargement (buffalo hump), peripheral wasting, facial wasting, breast enlargement, and “cushingoid appearance” have been observed in patients receiving antiretroviral therapy; mechanism and long-term consequences of these events are currently unknown; causal relationship not established",
+                "Treatment with zidovudine, a component of the combination product, has been associated with loss of subcutaneous fat; the incidence and severity of lipoatrophy are related to cumulative exposure; this fat loss, which is most evident in the face, limbs, and buttocks, may be only partially reversible and improvement may take months to years after switching to a non-zidovudine- containing regimen; patients should be regularly assessed for signs of lipoatrophy during therapy with zidovudine-containing products, and if feasible, therapy should be switched to an alternative regimen if there is suspicion of lipoatrophy",
+                "Not recommended for use in patients with hepatic or renal (CrCl< 50 mL/min) impairment"
+            ],
+            "specific": [
+                {
+                    "type": "See also individual monographs",
+                    "description": [
+                        "lamivudine",
+                        "zidovudine"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "zidovudine, elvitegravir/cobicistat/emtricitabine/tenofovir DF. Other (see comment). Contraindicated. \nComment: Elvitegravir/cobicistat/emtricitabine/tenofovir is a complete regimen for HIV and should not be administered with other antiretrovirals."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "emtricitabine",
+            "description": {
+                "common": "emtricitabine and lamivudine both increase  risk of immune reconstitution syndrome. Contraindicated. Coadministration of emtricitabine containing products and lamivudine containing products should be avoided. Combination will result in therapeutic duplication."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "betibeglogene autotemcel",
+            "description": {
+                "common": "zidovudine, betibeglogene autotemcel. Other (see comment). Avoid or Use Alternate Drug. \nComment: Do not take antiretroviral medications for at least 1 month before mobilization or expected duration for elimination of the medications, and until all cycles of apheresis are completed. Antiretroviral medications may interfere with manufacturing of apheresed cells."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabotegravir",
+            "description": {
+                "common": "zidovudine, cabotegravir. Other (see comment). Avoid or Use Alternate Drug. \nComment: Cabotegravir plus rilpivirine is a complete regimen. Coadministration with other antiretroviral medications for treating HIV-1 infection is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cidofovir",
+            "description": {
+                "common": "cidofovir, zidovudine.\nEither increases levels of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: When cidofovir is administered concurrently with probenecid, zidovudine clearance may be decreased. Reduce dose of zidovudine by 50% on days of cidofovir/probenecid administration. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elivaldogene autotemcel",
+            "description": {
+                "common": "elivaldogene autotemcel, lamivudine.\nEither decreases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Patients should not take antiretroviral medications for at least 1 month before initiating medications for stem cell mobilization, for the duration of the medications? elimination, and until all cycles of apheresis are completed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elivaldogene autotemcel",
+            "description": {
+                "common": "elivaldogene autotemcel, zidovudine.\nEither decreases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Patients should not take antiretroviral medications for at least 1 month before initiating medications for stem cell mobilization, for the duration of the medications? elimination, and until all cycles of apheresis are completed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "ganciclovir increases toxicity of zidovudine by pharmacodynamic synergism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pretomanid",
+            "description": {
+                "common": "pretomanid will increase the level or effect of zidovudine by  Other (see comment). Avoid or Use Alternate Drug. In vitro studies demonstrated that pretomanid significantly inhibits OAT3; monitor for increased adverse effects and consider dosage reduction for OAT3 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribavirin",
+            "description": {
+                "common": "ribavirin decreases effects of zidovudine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Mechanism: Competition for thymidine kinase for conversion to active form."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, zidovudine.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorbitol",
+            "description": {
+                "common": "sorbitol will decrease the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Sorbitol-containing solution decreased systemic exposure of lamivudine oral solution in a pediatric study (ARROW trial). Results showed lower rates of virologic suppression, lower plasma lamivudine exposure, and development of viral resistance more frequently than children receiving lamivudine tablets."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "stavudine",
+            "description": {
+                "common": "zidovudine decreases effects of stavudine by Other (see comment). Contraindicated. \nComment: Mechanism: Competition for thymidine kinase for conversion to active form."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tafenoquine",
+            "description": {
+                "common": "tafenoquine will increase the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Tafenoquine inhibits organic cation transporter-2 (OCT2) and multidrug and toxin extrusion (MATE) transporters in vitro. Avoid coadministration with OCT2 or MATE substrates. If coadministration cannot be avoided, monitor for substrate-related toxicities and consider dosage reduction if needed based on product labeling of the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trilaciclib",
+            "description": {
+                "common": "trilaciclib will decrease the level or effect of lamivudine by  Other (see comment). Avoid or Use Alternate Drug. Avoid coadministration of trilaciclib (OCT2, MATE1, and MATE-2K inhibitor) with substrates where minimal increased concentration in kidney or blood may lead to serious or life-threatening toxicities. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "valganciclovir increases toxicity of zidovudine by pharmacodynamic synergism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abacavir",
+            "description": {
+                "common": "abacavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may increase risk of myelosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azathioprine",
+            "description": {
+                "common": "azathioprine, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cabozantinib",
+            "description": {
+                "common": "lamivudine will increase the level or effect of cabozantinib by  Other (see comment). Use Caution/Monitor. MRP2 inhibitors increase cabozantinib toxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carboplatin",
+            "description": {
+                "common": "carboplatin, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cidofovir",
+            "description": {
+                "common": "cidofovir, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisplatin",
+            "description": {
+                "common": "cisplatin, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin increases toxicity of zidovudine by unknown mechanism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clofarabine",
+            "description": {
+                "common": "clofarabine, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan increases levels of zidovudine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "dasatinib, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexrazoxane",
+            "description": {
+                "common": "dexrazoxane, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "zidovudine increases toxicity of doxorubicin by pharmacodynamic synergism. Use Caution/Monitor. Inreased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "zidovudine increases toxicity of doxorubicin liposomal by pharmacodynamic synergism. Use Caution/Monitor. Inreased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "emtricitabine",
+            "description": {
+                "common": "emtricitabine and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enfuvirtide",
+            "description": {
+                "common": "enfuvirtide and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enfuvirtide",
+            "description": {
+                "common": "enfuvirtide and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "lamivudine increases levels of erdafitinib by decreasing renal clearance. Modify Therapy/Monitor Closely. Consider alternatives that are not OCT2 substrates or consider reducing the dose of OCT2 substrates based on tolerability."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "ganciclovir, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyurea",
+            "description": {
+                "common": "hydroxyurea, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibritumomab tiuxetan",
+            "description": {
+                "common": "ibritumomab tiuxetan, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Ifosfamide may enhance the toxicities of myelosuppressive agents. Monitor for increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "interferon alfa 2b",
+            "description": {
+                "common": "interferon alfa 2b, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "interferon alfa n3",
+            "description": {
+                "common": "interferon alfa n3 increases levels of zidovudine by decreasing metabolism. Use Caution/Monitor. Interferons may enhance potential for adverse effects. Patients should be monitored for signs and symptoms of increased myelosuppression and liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "interferon beta 1a",
+            "description": {
+                "common": "interferon beta 1a increases levels of zidovudine by decreasing renal clearance. Use Caution/Monitor. Interferons may enhance potential for adverse effects. Patients should be monitored for signs and symptoms of increased myelosuppression and liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "interferon beta 1b",
+            "description": {
+                "common": "interferon beta 1b increases levels of zidovudine by decreasing renal clearance. Use Caution/Monitor. Interferons may enhance potential for adverse effects. Patients should be monitored for signs and symptoms of increased myelosuppression and liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole increases levels of zidovudine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lamivudine",
+            "description": {
+                "common": "lamivudine and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenalidomide",
+            "description": {
+                "common": "lenalidomide, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of zidovudine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "methotrexate, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitomycin",
+            "description": {
+                "common": "mitomycin, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir",
+            "description": {
+                "common": "nirmatrelvir will decrease the level or effect of zidovudine by  unknown mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "orlistat",
+            "description": {
+                "common": "orlistat will decrease the level or effect of lamivudine by  inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Loss of virological control reported in HIV-infected patients taking orlistat concomitantly. Exact mechanism is unclear, but may include a drug-drug interaction that inhibits systemic absorption of the antiretroviral drug. Monitor HIV RNA levels frequently and if increased HIV viral load confirmed, discontinue orlistat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will decrease the level or effect of zidovudine by  unknown mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "orlistat",
+            "description": {
+                "common": "orlistat will decrease the level or effect of zidovudine by  inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Loss of virological control reported in HIV-infected patients taking orlistat concomitantly. Exact mechanism is unclear, but may include a drug-drug interaction that inhibits systemic absorption of the antiretroviral drug. Monitor HIV RNA levels frequently and if increased HIV viral load confirmed, discontinue orlistat."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "oxaliplatin, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2a",
+            "description": {
+                "common": "peginterferon alfa 2a, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peginterferon alfa 2b",
+            "description": {
+                "common": "peginterferon alfa 2b, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of liver decompensation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "primaquine, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribavirin",
+            "description": {
+                "common": "ribavirin increases toxicity of lamivudine by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available. Increased risk of lactic acidosis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "probenecid increases levels of zidovudine by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of zidovudine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of zidovudine by increasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stavudine",
+            "description": {
+                "common": "lamivudine and stavudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "lamivudine and tenofovir DF both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiotepa",
+            "description": {
+                "common": "thiotepa, zidovudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir and lamivudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir and zidovudine both increase  risk of immune reconstitution syndrome. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin inhaled",
+            "description": {
+                "common": "tobramycin inhaled and zidovudine both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Avoid concurrent or sequential use to decrease risk for ototoxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tocilizumab",
+            "description": {
+                "common": "tocilizumab decreases levels of zidovudine by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Interaction applies to inflammatory conditions, such as rheumatoid arthritis, associated with increased levels of IL-6."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "trimethoprim increases levels of zidovudine by decreasing renal clearance. Use Caution/Monitor. Potential for increased toxicity. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of zidovudine by immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "valganciclovir, lamivudine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Use alternatives if available.  Increased risk of hematologic toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valproic acid",
+            "description": {
+                "common": "valproic acid increases levels of zidovudine by decreasing metabolism. Use Caution/Monitor. Potential for increased toxicity. ."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amphotericin B deoxycholate",
+            "description": {
+                "common": "zidovudine increases toxicity of amphotericin B deoxycholate by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "black cohosh",
+            "description": {
+                "common": "black cohosh increases toxicity of zidovudine by pharmacodynamic synergism. Minor/Significance Unknown. Increased risk of hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyanocobalamin",
+            "description": {
+                "common": "zidovudine decreases levels of cyanocobalamin by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dapsone",
+            "description": {
+                "common": "zidovudine, dapsone.\nEither increases toxicity of the other by pharmacodynamic synergism. Minor/Significance Unknown. Increased bone marrow toxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "didanosine",
+            "description": {
+                "common": "zidovudine increases levels of didanosine by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "fluconazole increases levels of zidovudine by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "flucytosine",
+            "description": {
+                "common": "zidovudine increases toxicity of flucytosine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "food",
+            "description": {
+                "common": "food decreases levels of zidovudine by inhibition of GI absorption. Applies only to oral form of both agents. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "isavuconazonium sulfate will increase the level or effect of lamivudine by  Other (see comment). Minor/Significance Unknown. Isavuconazonium sulfate, an OCT2 inhibitor, may increase the effects or levels of OCT2 substrates."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "kava",
+            "description": {
+                "common": "kava increases toxicity of zidovudine by pharmacodynamic synergism. Minor/Significance Unknown. Increased risk of hepatoxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lamivudine",
+            "description": {
+                "common": "lamivudine increases effects of zidovudine by pharmacodynamic synergism. Minor/Significance Unknown. Beneficial synergism."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "methadone increases levels of zidovudine by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "zidovudine increases toxicity of pentamidine by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pyrimethamine",
+            "description": {
+                "common": "zidovudine, pyrimethamine. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Increased bone marrow toxicity."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfamethoxazole",
+            "description": {
+                "common": "sulfamethoxazole increases levels of zidovudine by decreasing renal clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "valacyclovir",
+            "description": {
+                "common": "valacyclovir increases effects of zidovudine by unknown mechanism. Minor/Significance Unknown. Monitor for lethargy and fatigue."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "zidovudine",
+            "description": {
+                "common": "lamivudine increases effects of zidovudine by pharmacodynamic synergism. Minor/Significance Unknown. Beneficial synergism."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Headache",
+            "percent": "35"
+        },
+        {
+            "name": "Nausea",
+            "percent": "33"
+        },
+        {
+            "name": "Malaise",
+            "percent": "27"
+        },
+        {
+            "name": "fatigue",
+            "percent": "18"
+        },
+        {
+            "name": "Cough",
+            "percent": "18"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "13"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "12"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "12"
+        },
+        {
+            "name": "Neuropathy",
+            "percent": "11"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "10"
+        },
+        {
+            "name": "other sleep disorders",
+            "percent": "10"
+        },
+        {
+            "name": "Anorexia",
+            "percent": "10"
+        },
+        {
+            "name": "or decreased appetite",
+            "percent": "9"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "9"
+        },
+        {
+            "name": "Fever or chills",
+            "percent": "9"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "8"
+        },
+        {
+            "name": "Depressive disorders",
+            "percent": "7.2"
+        },
+        {
+            "name": "Skin rashes",
+            "percent": "6"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "5"
+        },
+        {
+            "name": "Neutropenia",
+            "percent": "5"
+        },
+        {
+            "name": "Abdominal cramps",
+            "percent": "2.9"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": null
+        },
+        {
+            "name": "Dyspepsia",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "Erythema multiforme",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "Lactic acidosis",
+            "percent": null
+        },
+        {
+            "name": "Pancreatitis",
+            "percent": null
+        },
+        {
+            "name": "Hepatomegaly",
+            "percent": null
+        },
+        {
+            "name": "Severe",
+            "percent": null
+        },
+        {
+            "name": "Steatosis of liver",
+            "percent": null
+        },
+        {
+            "name": "Severe",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Immune hypersensitivity reaction",
+            "percent": null
+        },
+        {
+            "name": "Rhabdomyolysis",
+            "percent": null
+        },
+        {
+            "name": "Immune reconstitution syndrome and fat redistribution",
+            "percent": null
+        }
+    ]
+}

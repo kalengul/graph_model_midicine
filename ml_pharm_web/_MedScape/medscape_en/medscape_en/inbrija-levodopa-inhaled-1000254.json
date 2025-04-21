@@ -1,0 +1,422 @@
+{
+    "name": "levodopa inhaled",
+    "comment": "Rx",
+    "other_names": [
+        "Inbrija"
+    ],
+    "classes": [
+        "Antiparkinson Agents",
+        "Dopamine Precursors"
+    ],
+    "source": "https://reference.medscape.com/drug/inbrija-levodopa-inhaled-1000254",
+    "pregnancy": {
+        "common": [
+            "There are no available data regarding use in pregnant women"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Carbidopa/levodopa caused both visceral and skeletal malformations in rabbits when administered throughout organogenesis",
+                    "No teratogenic effects were observed when administered to pregnant mice throughout organogenesis",
+                    "Number of live pups decreased delivered by rats receiving carbidopa/levodopa during organogenesis"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Levodopa detected in human milk; no data are available on effects in the breastfed infant",
+            "The prolactin-lowering action of dopamine suggests that levodopa may interfere with lactation, although there are limited data on the effects of levodopa on milk production in lactating women",
+            "Consider the development and health benefits of breastfeeding along with the mother’s clinical need for the drug and any potential adverse effects on the breastfed child or from the underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Currently or recently (within 2 weeks) taking a nonselective monoamine oxidase (MAO) inhibitor (eg, phenelzine, tranylcypromine)"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Falling asleep while engaged in activities of daily living, including driving, reported; many patients report somnolence, while other had no warnings signs (sleep attack); some events reported >1 yr after initiating treatment",
+                "Rapid dose reduction, withdrawal of, or changes in dopaminergic therapy may result in a symptom complex that resembles neuroleptic malignant syndrome (eg, elevated temperature, muscular rigidity, altered consciousness, autonomic instability)",
+                "Hallucinations may occur, accompanied by confusion, insomnia, and excessive dreaming; abnormal thinking and behavior may also occur, including, paranoid ideation, delusion, confusion, psychotic-like behavior, disorientation, aggressive behavior, agitation, and delirium",
+                "Decreased impulse control and compulsive behaviors may emerge, including, gambling, sexual urges, spending money, binge eating, and/or other intense urges; patients may not recognize these as abnormal",
+                "May cause or exacerbate dyskinesias",
+                "Owing to bronchospasm risk, not recommended for patients with asthma, COPD, or other chronic lung disease",
+                "May increase intraocular pressure in patients with glaucoma"
+            ],
+            "specific": [
+                {
+                    "type": "Laboratory test abnormalities",
+                    "description": [
+                        "May elevate liver function tests, including alkaline phosphatase, AST, ALT, LDH, and bilirubin",
+                        "Patients taking levodopa or carbidopa/levodopa may have increased catecholamines levels and their metabolites in plasma and urine, giving false-positive results suggesting pheochromocytoma"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Nonselective MAO inhibitors are contraindicated during or within 2 weeks before initiating levodopa",
+                        "Selective MAO-B inhibitors may be associated with orthostatic hypotension",
+                        "Dopamine D2 receptor antagonists (eg, phenothiazine, butyrophenones, risperidone, metoclopramide) and isoniazid may reduce levodopa effect",
+                        "Iron salts can form chelates with levodopa and reduce bioavailability"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "levodopa inhaled increases effects of isocarboxazid by dopaminergic effects. Contraindicated. Levodopa may enhance risk for acute hypertensive episode if coadministered with nonselective MAOIs. Discontinue use of any nonselective MAO inhibitors at least 2 weeks before initiating levodopa inhaled."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "levodopa inhaled increases effects of phenelzine by dopaminergic effects. Contraindicated. Levodopa may enhance risk for acute hypertensive episode if coadministered with nonselective MAOIs. Discontinue use of any nonselective MAO inhibitors at least 2 weeks before initiating levodopa inhaled."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "levodopa inhaled increases effects of tranylcypromine by dopaminergic effects. Contraindicated. Levodopa may enhance risk for acute hypertensive episode if coadministered with nonselective MAOIs. Discontinue use of any nonselective MAO inhibitors at least 2 weeks before initiating levodopa inhaled."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride, levodopa inhaled.\nEither decreases effects of the other by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid use of amisulpride, a dopamine receptor antagonist, with dopamine agonists."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "aripiprazole decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cariprazine",
+            "description": {
+                "common": "cariprazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "clozapine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "droperidol decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of dopamine D2 receptor antagonists with levodopa inhaled."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "iloperidone decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metoclopramide",
+            "description": {
+                "common": "metoclopramide decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of dopamine D2 receptor antagonists with levodopa inhaled."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metoclopramide intranasal",
+            "description": {
+                "common": "metoclopramide intranasal, levodopa inhaled. dopaminergic effects. Avoid or Use Alternate Drug. Opposing effects of metoclopramide and the interacting drug on dopamine. Potential exacerbation of symptoms (eg, parkinsonian symptoms) or decreased therapeutic effects of metoclopramide."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "olanzapine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "pimavanserin decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "quetiapine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "risperidone decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline",
+            "description": {
+                "common": "levodopa inhaled increases effects of selegiline by dopaminergic effects. Avoid or Use Alternate Drug. Levodopa may enhance risk for acute hypertensive episode if coadministered with nonselective MAOIs. High dose PO selegiline (>10 mg/day tab/cap or >2.5 mg/day ODT) or transdermal selegiline exhibits nonselective MAOI activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selegiline transdermal",
+            "description": {
+                "common": "levodopa inhaled increases effects of selegiline transdermal by dopaminergic effects. Avoid or Use Alternate Drug. Levodopa may enhance risk for acute hypertensive episode if coadministered with nonselective MAOIs. High dose PO selegiline (>10 mg/day tab/cap or >2.5 mg/day ODT) or transdermal selegiline exhibits nonselective MAOI activity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "trifluoperazine decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Phenothiazine/1st generation antipsychotics inhibit dopamine D2 receptors in varying degrees."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "ziprasidone decreases effects of levodopa inhaled by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Atypical (2nd generation) antipsychotics inhibit dopamine D2 receptors in varying degrees (clozapine and quetiapine are lower risk). ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric pyrophosphate DIALYSATE",
+            "description": {
+                "common": "ferric pyrophosphate DIALYSATE will decrease the level or effect of levodopa inhaled by  Other (see comment). Use Caution/Monitor. Iron salts can form chelates with levodopa and consequently reduce levodopa bioavailability."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid decreases effects of levodopa inhaled by altering metabolism. Use Caution/Monitor. Isoniazid may inhibit dopa-decarboxylase in the brain; thereby, preventing conversion of levodopa to active dopamine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "linezolid",
+            "description": {
+                "common": "levodopa inhaled increases effects of linezolid by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylene blue",
+            "description": {
+                "common": "levodopa inhaled increases effects of methylene blue by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "procarbazine",
+            "description": {
+                "common": "levodopa inhaled increases effects of procarbazine by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rasagiline",
+            "description": {
+                "common": "levodopa inhaled increases effects of rasagiline by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "levodopa inhaled increases effects of safinamide by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solriamfetol",
+            "description": {
+                "common": "levodopa inhaled and solriamfetol both increase  sympathetic (adrenergic) effects, including increased blood pressure and heart rate. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tedizolid",
+            "description": {
+                "common": "levodopa inhaled increases effects of tedizolid by dopaminergic effects. Use Caution/Monitor. Coadministration of selective MAO-B inhibitors with levodopa may be associated with orthostatic hypotension."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Cough",
+            "percent": "15"
+        },
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": "6"
+        },
+        {
+            "name": "Discolored sputum",
+            "percent": "5"
+        },
+        {
+            "name": "Nausea",
+            "percent": "5"
+        },
+        {
+            "name": "Dyskinesia",
+            "percent": "4"
+        },
+        {
+            "name": "Fall",
+            "percent": "3"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "3"
+        },
+        {
+            "name": "Nasopharyngitis",
+            "percent": "3"
+        },
+        {
+            "name": "Chest discomfort",
+            "percent": "2"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "2"
+        },
+        {
+            "name": "Decreased RBC count",
+            "percent": "2"
+        },
+        {
+            "name": "Headache",
+            "percent": "2"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "2"
+        },
+        {
+            "name": "Orthostatic hypotension",
+            "percent": "2"
+        },
+        {
+            "name": "decreased blood pressure",
+            "percent": "2"
+        },
+        {
+            "name": "Laceration",
+            "percent": "2"
+        },
+        {
+            "name": "Skin abrasion",
+            "percent": "2"
+        },
+        {
+            "name": "Bronchitis",
+            "percent": "2"
+        },
+        {
+            "name": "pneumonia",
+            "percent": "2"
+        },
+        {
+            "name": "Discolored nasal discharge",
+            "percent": null
+        },
+        {
+            "name": "Oropharyngeal pain",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,2639 @@
+{
+    "name": "hydroxyzine",
+    "comment": "Rx",
+    "other_names": [
+        "Vistaril"
+    ],
+    "classes": [
+        "Antiemetic Agents",
+        "Antihistamines",
+        "1st Generation",
+        "Antihistamines",
+        "Piperazine Derivatives"
+    ],
+    "source": "https://reference.medscape.com/drug/atarax-vistaril-hydroxyzine-343395",
+    "pregnancy": {
+        "common": [
+            "Pregnancy category: Considered to be contraindicated in early (1st trimester) pregnancy until more human pregnancy data available; limited experience in human pregnancy, either for drug itself or drugs in same class or with similar mechanisms of action, including 1st trimester, current limited data suggests that the drug does not represent a significant risk of developmental toxicity including growth restriction, structural anomalies, functional/behavioral deficits, or death at any time in pregnancy",
+            "Lactation: Excretion in milk unknown; use with caution"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Excretion in milk unknown; use with caution"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Documented hypersensitivity or related product including cetirizine and levocetirizine and components of the formulation",
+                "Prolonged QT interval",
+                "SC, intra-arterial, or IV administration"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Nursing mothers",
+                "May cause CNS depression resulting in drowsiness; avoid driving or operating dangerous machinery",
+                "May cause oversedation and confusion in elderly patients; start on lower doses and monitor closely; avoid use",
+                "IM only for parenteral use; switch to PO ASAP",
+                "Use caution in patients with narrow-angle glaucoma, prostatic hyperplasia, or respiratory disease (asthma or COPD)",
+                "Hydroxyzine may rarely cause acute generalized exanthematous pustulosis (AGEP), a serious skin reaction characterized by fever and numerous small, superficial, non-follicular, sterile pustules, arising within large areas of edematous erythema; if signs or symptoms suggest AGEP, do not resume use of hydroxyzine and consider alternative therapy; avoid cetirizine or levocetirizine in patients who have experienced AGEP or other hypersensitivity reactions with hydroxyzine, due to risk of cross-sensitivity"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction interview",
+                    "description": [
+                        "Caution recommended during concomitant use of drugs known to prolong QT interval including Class 1A (e.g., quinidine, procainamide) or Class III (e.g., amiodarone, sotalol) antiarrhythmics, certain antipsychotics (e.g., ziprasidone, iloperidone, clozapine, quetiapine, chlorpromazine), certain antidepressants (e.g., citalopram, fluoxetine), certain antibiotics (e.g., azithromycin, erythromycin, clarithromycin, gatifloxacin, moxifloxacin); and others (e.g., pentamidine, methadone, ondansetron, droperidol)"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "hydroxyzine and dronedarone both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "hydroxyzine and thioridazine both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "hydroxyzine increases toxicity of amiodarone by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug. ECG monitoring is recommended if coadministered."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "hydroxyzine and anagrelide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "arsenic trioxide",
+            "description": {
+                "common": "hydroxyzine and arsenic trioxide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether",
+            "description": {
+                "common": "artemether and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "artemether/lumefantrine and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "hydroxyzine and asenapine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "bedaquiline and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "benzhydrocodone/acetaminophen",
+            "description": {
+                "common": "benzhydrocodone/acetaminophen and hydroxyzine both increase  sedation. Avoid or Use Alternate Drug. Limit use to patients for whom alternative treatment options are inadequate"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "buprenorphine buccal and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug. If coadministration necessary, consider consider dose reduction of one or both drugs due to potential for additive pharmacological effects"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "calcium/magnesium/potassium/sodium oxybates",
+            "description": {
+                "common": "hydroxyzine, calcium/magnesium/potassium/sodium oxybates.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Profound sedation, respiratory depression, coma, and death may result if coadministered. Reserve concomitant prescribing of these drugs in patients for whom other treatment options are inadequate. Limit dosages and durations to the minimum required. Monitor closely for signs of respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloroquine",
+            "description": {
+                "common": "chloroquine and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "hydroxyzine increases toxicity of citalopram by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of clozapine by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "hydroxyzine and disopyramide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dofetilide",
+            "description": {
+                "common": "hydroxyzine and dofetilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "hydroxyzine increases toxicity of droperidol by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "hydroxyzine, eluxadoline.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that cause constipation. Increases risk for constipation related serious adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "entrectinib and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eribulin",
+            "description": {
+                "common": "eribulin and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug. Avoid coadministration of fexinidazole with drugs known to block potassium channels or prolong QT interval."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flecainide",
+            "description": {
+                "common": "hydroxyzine and flecainide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluoxetine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of fluoxetine by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "hydroxyzine and foscarnet both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "hydroxyzine and glasdegib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydroxychloroquine sulfate",
+            "description": {
+                "common": "hydroxyzine and hydroxychloroquine sulfate both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibutilide",
+            "description": {
+                "common": "hydroxyzine and ibutilide both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "hydroxyzine increases toxicity of iloperidone by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isocarboxazid",
+            "description": {
+                "common": "isocarboxazid increases effects of hydroxyzine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Isocarboxazid should not be administered in combination with antihistamines because of potential additive CNS depressant effects.  MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "isoflurane",
+            "description": {
+                "common": "hydroxyzine and isoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "lefamulin and hydroxyzine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "hydroxyzine and lenvatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "hydroxyzine and lofexidine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "hydroxyzine and lopinavir both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "macimorelin",
+            "description": {
+                "common": "hydroxyzine and macimorelin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "metoclopramide intranasal",
+            "description": {
+                "common": "hydroxyzine, metoclopramide intranasal.\nEither increases effects of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Avoid use of metoclopramide intranasal or interacting drug, depending on importance of drug to patient."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "hydroxyzine and midostaurin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "hydroxyzine and mifepristone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "hydroxyzine and mobocertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "hydroxyzine and nilotinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olopatadine intranasal",
+            "description": {
+                "common": "hydroxyzine and olopatadine intranasal both increase  sedation. Avoid or Use Alternate Drug. Coadministration increases risk of CNS depression, which can lead to additive impairment of psychomotor performance and cause daytime impairment. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "hydroxyzine and osimertinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "hydroxyzine and oxaliplatin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "hydroxyzine and ozanimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "hydroxyzine and paliperidone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "panobinostat",
+            "description": {
+                "common": "hydroxyzine and panobinostat both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "hydroxyzine and pazopanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "hydroxyzine and pimavanserin both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "hydroxyzine and pimozide both increase  QTc interval. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pitolisant",
+            "description": {
+                "common": "hydroxyzine decreases effects of pitolisant by Other (see comment). Avoid or Use Alternate Drug. \nComment: Pitolisant increases histamine levels in the brain; therefore, H1 receptor antagonists that cross the blood-brain barrier may reduce the efficacy of pitolisant."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "hydroxyzine and ponesimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "procainamide",
+            "description": {
+                "common": "hydroxyzine increases toxicity of procainamide by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "hydroxyzine and propafenone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of quetiapine by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of quinidine by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "hydroxyzine and quinine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "hydroxyzine and ribociclib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "hydroxyzine and saquinavir both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "hydroxyzine and selpercatinib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "hydroxyzine and sevoflurane both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "hydroxyzine and siponimod both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sodium oxybate",
+            "description": {
+                "common": "hydroxyzine, sodium oxybate.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Profound sedation, respiratory depression, coma, and death may result if coadministered. Reserve concomitant prescribing of these drugs in patients for whom other treatment options are inadequate. Limit dosages and durations to the minimum required. Monitor closely for signs of respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sorafenib",
+            "description": {
+                "common": "hydroxyzine and sorafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "hydroxyzine increases toxicity of sotalol by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tetrabenazine",
+            "description": {
+                "common": "hydroxyzine and tetrabenazine both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "hydroxyzine and toremifene both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tranylcypromine",
+            "description": {
+                "common": "tranylcypromine increases effects of hydroxyzine by Other (see comment). Avoid or Use Alternate Drug. \nComment: Tranylcypromine should not be administered in combination with antihistamines because of potential additive CNS depressant effects. MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "hydroxyzine and trazodone both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "hydroxyzine and vandetanib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "hydroxyzine and vemurafenib both increase  QTc interval. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "hydroxyzine increases toxicity of ziprasidone by QTc interval. Avoid or Use Alternate Drug. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acrivastine",
+            "description": {
+                "common": "acrivastine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albuterol",
+            "description": {
+                "common": "hydroxyzine increases and albuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "hydroxyzine and alfentanil both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "alfuzosin and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "hydroxyzine and alprazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifampridine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of amifampridine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Amifampridine can cause seizures. Coadministration with drugs that lower seizure threshold may increase this risk."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amisulpride",
+            "description": {
+                "common": "amisulpride and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amitriptyline",
+            "description": {
+                "common": "hydroxyzine and amitriptyline both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "hydroxyzine and amobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxapine",
+            "description": {
+                "common": "hydroxyzine and amoxapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apomorphine",
+            "description": {
+                "common": "hydroxyzine and apomorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "arformoterol",
+            "description": {
+                "common": "hydroxyzine increases and arformoterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "hydroxyzine and aripiprazole both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "hydroxyzine increases and armodafinil decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "asenapine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine transdermal",
+            "description": {
+                "common": "asenapine transdermal and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atomoxetine",
+            "description": {
+                "common": "atomoxetine and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "avapritinib and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azelastine",
+            "description": {
+                "common": "azelastine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "hydroxyzine increases toxicity of azithromycin by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "baclofen",
+            "description": {
+                "common": "hydroxyzine and baclofen both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belladonna and opium",
+            "description": {
+                "common": "hydroxyzine and belladonna and opium both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benperidol",
+            "description": {
+                "common": "hydroxyzine and benperidol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "benzphetamine",
+            "description": {
+                "common": "hydroxyzine increases and benzphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexanolone",
+            "description": {
+                "common": "brexanolone, hydroxyzine.\nEither increases toxicity of the other by sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brexpiprazole",
+            "description": {
+                "common": "brexpiprazole and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "brompheniramine",
+            "description": {
+                "common": "brompheniramine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "hydroxyzine and buprenorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine buccal",
+            "description": {
+                "common": "hydroxyzine and buprenorphine buccal both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine subdermal implant",
+            "description": {
+                "common": "buprenorphine subdermal implant and hydroxyzine both increase  QTc interval. Modify Therapy/Monitor Closely. If coadministration necessary, consider consider dose reduction of one or both drugs due to potential for additive pharmacological effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "buprenorphine transdermal and hydroxyzine both increase  QTc interval. Modify Therapy/Monitor Closely. If coadministration necessary, consider consider dose reduction of one or both drugs due to potential for additive pharmacological effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buprenorphine, long-acting injection",
+            "description": {
+                "common": "buprenorphine, long-acting injection and hydroxyzine both increase  QTc interval. Modify Therapy/Monitor Closely. If coadministration necessary, consider consider dose reduction of one or both drugs due to potential for additive pharmacological effects"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "hydroxyzine and butabarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "hydroxyzine and butalbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "butorphanol",
+            "description": {
+                "common": "hydroxyzine and butorphanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "hydroxyzine increases and caffeine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbinoxamine",
+            "description": {
+                "common": "carbinoxamine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carisoprodol",
+            "description": {
+                "common": "hydroxyzine and carisoprodol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chloral hydrate",
+            "description": {
+                "common": "hydroxyzine and chloral hydrate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlordiazepoxide",
+            "description": {
+                "common": "hydroxyzine and chlordiazepoxide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpheniramine",
+            "description": {
+                "common": "chlorpheniramine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "hydroxyzine and chlorpromazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorzoxazone",
+            "description": {
+                "common": "hydroxyzine and chlorzoxazone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinnarizine",
+            "description": {
+                "common": "cinnarizine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "hydroxyzine and ciprofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "hydroxyzine increases toxicity of clarithromycin by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clemastine",
+            "description": {
+                "common": "clemastine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clobazam",
+            "description": {
+                "common": "hydroxyzine, clobazam. Other (see comment). Use Caution/Monitor. \nComment: Concomitant administration can increase the potential for CNS effects (e.g., increased sedation or respiratory depression)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "hydroxyzine and clomipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonazepam",
+            "description": {
+                "common": "hydroxyzine and clonazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "clonidine, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration enhances CNS depressant effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clorazepate",
+            "description": {
+                "common": "hydroxyzine and clorazepate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "hydroxyzine and clozapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "codeine",
+            "description": {
+                "common": "hydroxyzine and codeine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclizine",
+            "description": {
+                "common": "cyclizine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclobenzaprine",
+            "description": {
+                "common": "hydroxyzine and cyclobenzaprine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyproheptadine",
+            "description": {
+                "common": "cyproheptadine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dantrolene",
+            "description": {
+                "common": "hydroxyzine and dantrolene both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "hydroxyzine and daridorexant both increase  sedation. Modify Therapy/Monitor Closely. Coadministration increases risk of CNS depression, which can lead to additive impairment of psychomotor performance and cause daytime impairment. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "dasatinib and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "degarelix",
+            "description": {
+                "common": "degarelix and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desflurane",
+            "description": {
+                "common": "desflurane and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "desipramine",
+            "description": {
+                "common": "hydroxyzine and desipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deutetrabenazine",
+            "description": {
+                "common": "hydroxyzine and deutetrabenazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexchlorpheniramine",
+            "description": {
+                "common": "dexchlorpheniramine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexfenfluramine",
+            "description": {
+                "common": "hydroxyzine increases and dexfenfluramine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmedetomidine",
+            "description": {
+                "common": "hydroxyzine and dexmedetomidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexmethylphenidate",
+            "description": {
+                "common": "hydroxyzine increases and dexmethylphenidate decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextroamphetamine",
+            "description": {
+                "common": "hydroxyzine increases and dextroamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dextromoramide",
+            "description": {
+                "common": "hydroxyzine and dextromoramide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diamorphine",
+            "description": {
+                "common": "hydroxyzine and diamorphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam",
+            "description": {
+                "common": "hydroxyzine and diazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam intranasal",
+            "description": {
+                "common": "diazepam intranasal, hydroxyzine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration may potentiate the CNS-depressant effects of each drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diethylpropion",
+            "description": {
+                "common": "hydroxyzine increases and diethylpropion decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "difelikefalin",
+            "description": {
+                "common": "difelikefalin and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "difenoxin hcl",
+            "description": {
+                "common": "hydroxyzine and difenoxin hcl both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dimenhydrinate",
+            "description": {
+                "common": "dimenhydrinate and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenhydramine",
+            "description": {
+                "common": "diphenhydramine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diphenoxylate hcl",
+            "description": {
+                "common": "hydroxyzine and diphenoxylate hcl both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipipanone",
+            "description": {
+                "common": "hydroxyzine and dipipanone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dobutamine",
+            "description": {
+                "common": "hydroxyzine increases and dobutamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dolasetron",
+            "description": {
+                "common": "dolasetron and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "donepezil and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "donepezil transdermal",
+            "description": {
+                "common": "donepezil transdermal, hydroxyzine.\nEither decreases effects of the other by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopamine",
+            "description": {
+                "common": "hydroxyzine increases and dopamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dopexamine",
+            "description": {
+                "common": "hydroxyzine increases and dopexamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dosulepin",
+            "description": {
+                "common": "hydroxyzine and dosulepin both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxepin",
+            "description": {
+                "common": "hydroxyzine and doxepin both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxylamine",
+            "description": {
+                "common": "hydroxyzine and doxylamine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "droperidol",
+            "description": {
+                "common": "hydroxyzine and droperidol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "hydroxyzine and eliglustat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ephedrine",
+            "description": {
+                "common": "hydroxyzine increases and ephedrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine",
+            "description": {
+                "common": "hydroxyzine increases and epinephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "epinephrine racemic",
+            "description": {
+                "common": "hydroxyzine increases and epinephrine racemic decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "hydroxyzine increases toxicity of erythromycin base by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "hydroxyzine increases toxicity of erythromycin ethylsuccinate by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "hydroxyzine increases toxicity of erythromycin lactobionate by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "hydroxyzine increases toxicity of erythromycin stearate by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "hydroxyzine and escitalopram both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esketamine intranasal",
+            "description": {
+                "common": "esketamine intranasal, hydroxyzine.\nEither increases toxicity of the other by sedation. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estazolam",
+            "description": {
+                "common": "hydroxyzine and estazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethanol",
+            "description": {
+                "common": "hydroxyzine and ethanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etomidate",
+            "description": {
+                "common": "etomidate and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ezogabine",
+            "description": {
+                "common": "hydroxyzine and ezogabine both increase  QTc interval. Use Caution/Monitor. Slight and transient QT-prolongation observed, particularly when dose titrated to 1200mg/day. QT interval should be monitored when ezogabine is prescribed with agents known to increase QT interval."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenfluramine",
+            "description": {
+                "common": "hydroxyzine increases and fenfluramine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "fentanyl, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "fentanyl intranasal, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "fentanyl transdermal, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "fentanyl transmucosal, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of fentanyl with anticholinergics may increase risk for urinary retention and/or severe constipation, which may lead to paralytic ileus."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fingolimod",
+            "description": {
+                "common": "fingolimod and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "hydroxyzine and flibanserin both increase  sedation. Modify Therapy/Monitor Closely. Risk for sedation increased if flibanserin is coadministration with other CNS depressants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluconazole",
+            "description": {
+                "common": "hydroxyzine and fluconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "hydroxyzine and fluphenazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurazepam",
+            "description": {
+                "common": "hydroxyzine and flurazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "hydroxyzine and fluvoxamine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "formoterol",
+            "description": {
+                "common": "hydroxyzine increases and formoterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "hydroxyzine and fostemsavir both increase  QTc interval. Use Caution/Monitor. QTc prolongation reported with higher than recommended doses of fostemsavir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gabapentin",
+            "description": {
+                "common": "gabapentin, hydroxyzine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gabapentin enacarbil",
+            "description": {
+                "common": "gabapentin enacarbil, hydroxyzine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "hydroxyzine and ganaxolone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemifloxacin",
+            "description": {
+                "common": "gemifloxacin and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gemtuzumab",
+            "description": {
+                "common": "hydroxyzine and gemtuzumab both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "gilteritinib and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glycopyrronium tosylate topical",
+            "description": {
+                "common": "glycopyrronium tosylate topical, hydroxyzine.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of glycopyrronium tosylate topical with other anticholinergic medications may result in additive anticholinergic adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "goserelin",
+            "description": {
+                "common": "hydroxyzine and goserelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gotu kola",
+            "description": {
+                "common": "gotu kola increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "granisetron",
+            "description": {
+                "common": "granisetron and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "hydroxyzine and haloperidol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hawthorn",
+            "description": {
+                "common": "hawthorn increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "histrelin",
+            "description": {
+                "common": "hydroxyzine and histrelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hops",
+            "description": {
+                "common": "hops increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyaluronidase",
+            "description": {
+                "common": "hydroxyzine decreases effects of hyaluronidase by Other (see comment). Use Caution/Monitor. \nComment: Antihistamines, when given in large systemic doses, may render tissues partially resistant to the action of hyaluronidase. Patients may require larger amounts of hyaluronidase for equivalent dispersing effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydromorphone",
+            "description": {
+                "common": "hydroxyzine and hydromorphone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyoscyamine",
+            "description": {
+                "common": "hydroxyzine and hyoscyamine both decrease  cholinergic effects/transmission. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hyoscyamine spray",
+            "description": {
+                "common": "hydroxyzine and hyoscyamine spray both decrease  cholinergic effects/transmission. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iloperidone",
+            "description": {
+                "common": "hydroxyzine and iloperidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "hydroxyzine and imipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "inotuzumab",
+            "description": {
+                "common": "hydroxyzine and inotuzumab both increase  QTc interval. Modify Therapy/Monitor Closely. If coadministration necessary, obtain baseline ECG to assess initial QT interval and determine frequency of subsequent monitoring; avoid non-essential QT prolonging drug and correct electrolyte imbalances"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoproterenol",
+            "description": {
+                "common": "hydroxyzine increases and isoproterenol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "hydroxyzine and itraconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "hydroxyzine and ivosidenib both decrease  QTc interval. Modify Therapy/Monitor Closely. If coadministration necessary, obtain baseline ECG to assess initial QT interval and determine frequency of subsequent monitoring; avoid non-essential QT prolonging drug and correct electrolyte imbalances"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "kava",
+            "description": {
+                "common": "kava increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketamine",
+            "description": {
+                "common": "ketamine and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketotifen, ophthalmic",
+            "description": {
+                "common": "hydroxyzine and ketotifen, ophthalmic both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "hydroxyzine and lapatinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan, hydroxyzine.\nEither increases effects of the other by sedation. Use Caution/Monitor. Coadministration of lasmiditan and other CNS depressant drugs, including alcohol have not been evaluated in clinical studies. Lasmiditan may cause sedation, as well as other cognitive and/or neuropsychiatric adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "lemborexant, hydroxyzine.\nEither increases effects of the other by sedation. Modify Therapy/Monitor Closely. Dosage adjustment may be necessary if lemborexant is coadministered with other CNS depressants because of potentially additive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leuprolide",
+            "description": {
+                "common": "hydroxyzine and leuprolide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levalbuterol",
+            "description": {
+                "common": "hydroxyzine increases and levalbuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levofloxacin",
+            "description": {
+                "common": "hydroxyzine and levofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levorphanol",
+            "description": {
+                "common": "hydroxyzine and levorphanol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lisdexamfetamine",
+            "description": {
+                "common": "hydroxyzine increases and lisdexamfetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "hydroxyzine and lithium both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofepramine",
+            "description": {
+                "common": "hydroxyzine and lofepramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "hydroxyzine and lofexidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "hydroxyzine and loperamide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loprazolam",
+            "description": {
+                "common": "hydroxyzine and loprazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorazepam",
+            "description": {
+                "common": "hydroxyzine and lorazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lormetazepam",
+            "description": {
+                "common": "hydroxyzine and lormetazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine",
+            "description": {
+                "common": "hydroxyzine and loxapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loxapine inhaled",
+            "description": {
+                "common": "hydroxyzine and loxapine inhaled both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone, hydroxyzine.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: Potential for increased CNS depressant effects when used concurrently; monitor for increased adverse effects and toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maprotiline",
+            "description": {
+                "common": "hydroxyzine and maprotiline both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "marijuana",
+            "description": {
+                "common": "hydroxyzine and marijuana both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "hydroxyzine and mefloquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "hydroxyzine and melatonin both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meperidine",
+            "description": {
+                "common": "hydroxyzine and meperidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meprobamate",
+            "description": {
+                "common": "hydroxyzine and meprobamate both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaproterenol",
+            "description": {
+                "common": "hydroxyzine increases and metaproterenol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metaxalone",
+            "description": {
+                "common": "hydroxyzine and metaxalone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "hydroxyzine and methadone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methamphetamine",
+            "description": {
+                "common": "hydroxyzine increases and methamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methocarbamol",
+            "description": {
+                "common": "hydroxyzine and methocarbamol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylenedioxymethamphetamine",
+            "description": {
+                "common": "hydroxyzine increases and methylenedioxymethamphetamine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "hydroxyzine and midazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "midazolam intranasal, hydroxyzine.\nEither increases toxicity of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Concomitant use of barbiturates, alcohol, or other CNS depressants may increase the risk of hypoventilation, airway obstruction, desaturation, or apnea and may contribute to profound and/or prolonged drug effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midodrine",
+            "description": {
+                "common": "hydroxyzine increases and midodrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "hydroxyzine and mirtazapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "modafinil",
+            "description": {
+                "common": "hydroxyzine increases and modafinil decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "hydroxyzine and morphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "motherwort",
+            "description": {
+                "common": "hydroxyzine and motherwort both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxifloxacin",
+            "description": {
+                "common": "hydroxyzine increases toxicity of moxifloxacin by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxonidine",
+            "description": {
+                "common": "hydroxyzine and moxonidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabilone",
+            "description": {
+                "common": "hydroxyzine and nabilone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nalbuphine",
+            "description": {
+                "common": "hydroxyzine and nalbuphine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "norepinephrine",
+            "description": {
+                "common": "hydroxyzine increases and norepinephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nortriptyline",
+            "description": {
+                "common": "hydroxyzine and nortriptyline both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "octreotide",
+            "description": {
+                "common": "hydroxyzine and octreotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofloxacin",
+            "description": {
+                "common": "hydroxyzine and ofloxacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "hydroxyzine and olanzapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "hydroxyzine increases toxicity of ondansetron by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "opium tincture",
+            "description": {
+                "common": "hydroxyzine and opium tincture both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "orphenadrine",
+            "description": {
+                "common": "hydroxyzine and orphenadrine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "osilodrostat and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxazepam",
+            "description": {
+                "common": "hydroxyzine and oxazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "hydroxyzine and oxycodone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxymorphone",
+            "description": {
+                "common": "hydroxyzine and oxymorphone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "hydroxyzine and paliperidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "papaveretum",
+            "description": {
+                "common": "hydroxyzine and papaveretum both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "papaverine",
+            "description": {
+                "common": "hydroxyzine and papaverine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paroxetine",
+            "description": {
+                "common": "hydroxyzine and paroxetine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pasireotide",
+            "description": {
+                "common": "hydroxyzine and pasireotide both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "passion flower",
+            "description": {
+                "common": "passion flower increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "hydroxyzine increases toxicity of pentamidine by QTc interval. Use Caution/Monitor. Increases risk of torsades de pointes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentazocine",
+            "description": {
+                "common": "hydroxyzine and pentazocine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "hydroxyzine and pentobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perampanel",
+            "description": {
+                "common": "perampanel and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "hydroxyzine and perphenazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phendimetrazine",
+            "description": {
+                "common": "hydroxyzine increases and phendimetrazine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenelzine",
+            "description": {
+                "common": "phenelzine increases effects of hydroxyzine by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Coadministration of phenelzine and antihistamines may result in additive CNS depressant effects. MAO inhibitors also prolong and intensify anticholinergic effects of antihistamines. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "hydroxyzine and phenobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phentermine",
+            "description": {
+                "common": "hydroxyzine increases and phentermine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine",
+            "description": {
+                "common": "hydroxyzine increases and phenylephrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenylephrine PO",
+            "description": {
+                "common": "hydroxyzine increases and phenylephrine PO decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor.  ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pholcodine",
+            "description": {
+                "common": "hydroxyzine and pholcodine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "hydroxyzine and pimozide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pirbuterol",
+            "description": {
+                "common": "hydroxyzine increases and pirbuterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "hydroxyzine and posaconazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pregabalin",
+            "description": {
+                "common": "pregabalin, hydroxyzine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration of CNS depressants can result in serious, life-threatening, and fatal respiratory depression. Use lowest dose possible and monitor for respiratory depression and sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primaquine",
+            "description": {
+                "common": "hydroxyzine and primaquine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "hydroxyzine and primidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "hydroxyzine and prochlorperazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "hydroxyzine and promethazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propofol",
+            "description": {
+                "common": "propofol and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propylhexedrine",
+            "description": {
+                "common": "hydroxyzine increases and propylhexedrine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "protriptyline",
+            "description": {
+                "common": "hydroxyzine and protriptyline both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quazepam",
+            "description": {
+                "common": "hydroxyzine and quazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "hydroxyzine and quetiapine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ramelteon",
+            "description": {
+                "common": "hydroxyzine and ramelteon both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "hydroxyzine and ranolazine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rilpivirine",
+            "description": {
+                "common": "hydroxyzine and rilpivirine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "hydroxyzine and risperidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "hydroxyzine and romidepsin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salmeterol",
+            "description": {
+                "common": "hydroxyzine increases and salmeterol decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "scullcap",
+            "description": {
+                "common": "hydroxyzine and scullcap both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "hydroxyzine and secobarbital both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sertraline",
+            "description": {
+                "common": "hydroxyzine and sertraline both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sevoflurane",
+            "description": {
+                "common": "sevoflurane and hydroxyzine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "hydroxyzine and shepherd's purse both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "solifenacin",
+            "description": {
+                "common": "hydroxyzine and solifenacin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, hydroxyzine.\nEither increases effects of the other by sedation. Use Caution/Monitor. Concomitant use stiripentol with other CNS depressants, including alcohol, may increase the risk of sedation and somnolence."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "hydroxyzine and sufentanil both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "hydroxyzine and sunitinib both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "hydroxyzine and tacrolimus both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tapentadol",
+            "description": {
+                "common": "hydroxyzine and tapentadol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "telavancin",
+            "description": {
+                "common": "hydroxyzine and telavancin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temazepam",
+            "description": {
+                "common": "hydroxyzine and temazepam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbutaline",
+            "description": {
+                "common": "hydroxyzine increases and terbutaline decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "hydroxyzine and thioridazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "thiothixene",
+            "description": {
+                "common": "hydroxyzine and thiothixene both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topiramate",
+            "description": {
+                "common": "hydroxyzine and topiramate both increase  sedation. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tramadol",
+            "description": {
+                "common": "hydroxyzine and tramadol both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "hydroxyzine and trazodone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "hydroxyzine and triazolam both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclabendazole",
+            "description": {
+                "common": "hydroxyzine and triclabendazole both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triclofos",
+            "description": {
+                "common": "hydroxyzine and triclofos both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "hydroxyzine and trifluoperazine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimipramine",
+            "description": {
+                "common": "hydroxyzine and trimipramine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triprolidine",
+            "description": {
+                "common": "hydroxyzine and triprolidine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triptorelin",
+            "description": {
+                "common": "hydroxyzine and triptorelin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "valbenazine and hydroxyzine both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valerian",
+            "description": {
+                "common": "valerian increases effects of hydroxyzine by pharmacodynamic synergism. Use Caution/Monitor. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "hydroxyzine and vardenafil both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "hydroxyzine and venlafaxine both decrease  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "hydroxyzine and voclosporin both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorinostat",
+            "description": {
+                "common": "hydroxyzine and vorinostat both increase  QTc interval. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xylometazoline",
+            "description": {
+                "common": "hydroxyzine increases and xylometazoline decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "yohimbine",
+            "description": {
+                "common": "hydroxyzine increases and yohimbine decreases sedation. Effect of interaction is not clear, use caution. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziconotide",
+            "description": {
+                "common": "hydroxyzine and ziconotide both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ziprasidone",
+            "description": {
+                "common": "hydroxyzine and ziprasidone both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zotepine",
+            "description": {
+                "common": "hydroxyzine and zotepine both increase  sedation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ashwagandha",
+            "description": {
+                "common": "ashwagandha increases effects of hydroxyzine by pharmacodynamic synergism. Minor/Significance Unknown. May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of hydroxyzine by pharmacodynamic synergism. Minor/Significance Unknown. Increased CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "eucalyptus",
+            "description": {
+                "common": "hydroxyzine and eucalyptus both increase  sedation. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nettle",
+            "description": {
+                "common": "nettle increases effects of hydroxyzine by pharmacodynamic synergism. Minor/Significance Unknown. (High dose nettle; theoretical interaction) May enhance CNS depression."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sage",
+            "description": {
+                "common": "hydroxyzine and sage both increase  sedation. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "Siberian ginseng",
+            "description": {
+                "common": "Siberian ginseng increases effects of hydroxyzine by pharmacodynamic synergism. Minor/Significance Unknown. May enhance CNS depression."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Anticholinergic",
+            "percent": null
+        },
+        {
+            "name": "Dry mouth",
+            "percent": null
+        },
+        {
+            "name": "Central nervous system",
+            "percent": null
+        },
+        {
+            "name": "Drowsiness",
+            "percent": null
+        },
+        {
+            "name": "usually transitory and may disappear in a few days of continued therapy or upon reduction of the dose",
+            "percent": null
+        },
+        {
+            "name": "involuntary motor activity",
+            "percent": null
+        },
+        {
+            "name": "tremor",
+            "percent": null
+        },
+        {
+            "name": "convulsions",
+            "percent": null
+        },
+        {
+            "name": "usually with doses considerably higher than those recommended",
+            "percent": null
+        },
+        {
+            "name": "Clinically significant respiratory depression has not been reported at recommended doses",
+            "percent": null
+        },
+        {
+            "name": "Body as a whole",
+            "percent": null
+        },
+        {
+            "name": "Allergic reaction",
+            "percent": null
+        },
+        {
+            "name": "Nervous system",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Psychiatric",
+            "percent": null
+        },
+        {
+            "name": "Hallucination",
+            "percent": null
+        },
+        {
+            "name": "Skin and appendages",
+            "percent": null
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "rash",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "fixed drug eruptions",
+            "percent": null
+        }
+    ]
+}

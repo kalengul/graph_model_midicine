@@ -1,0 +1,274 @@
+{
+    "name": "emapalumab",
+    "comment": "Rx",
+    "other_names": [
+        "Gamifant",
+        "emapalumab-lzsg"
+    ],
+    "classes": [
+        "Immunomodulators"
+    ],
+    "source": "https://reference.medscape.com/drug/gamifant-emapalumab-1000291",
+    "pregnancy": {
+        "common": [
+            "Data are not available regarding human use during pregnancy"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In an animal reproduction study, a murine surrogate antimouse IFN-gamma antibody administered to pregnant mice throughout gestation crossed the placental barrier, and no fetal harm was observed"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data are not available regarding presence of emapalumab in human milk, effects on breastfed children, or effects on milk production",
+            "Published data suggest that only limited amounts of therapeutic antibodies are found in breast milk and they do not enter the neonatal and infant circulations in substantial amounts"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Infections",
+                    "description": [
+                        "May increase risk of fatal and serious infections to include specific pathogens favored by IFN-gamma neutralization, including mycobacteria, herpes zoster virus, and Histoplasma capsulatum; do not administer in patients with infections caused by these pathogens until appropriate treatment initiated",
+                        "Evaluate patients for TB risk factors and test for latent infection; administer TB prophylaxis to those testing positive",
+                        "Administer prophylaxis for herpes zoster, Pneumocystis jirovecii infection, and fungal infection to mitigate the risk to patients while receiving emapalumab"
+                    ]
+                },
+                {
+                    "type": "Infusion-related reactions",
+                    "description": [
+                        "Mild-to-moderate infusion-related reactions reported, including drug eruption, pyrexia, rash, erythema, and hyperhidrosis",
+                        "One third of infusion-related reactions occurred during the first infusion",
+                        "Interrupt infusion if reaction occurs and institute appropriate medical management before continuing infusion at slower rate"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Normalization of CYP450 activity",
+                        "Formation of CYP450 enzymes may be suppressed by increased levels of cytokines (eg, INF-gamma) during chronic inflammation",
+                        "By neutralizing IFN-gamma, emapalumab may normalize CYP450 activities and reduce the efficacy of drugs that are CYP450 substrates, owing to increased metabolism",
+                        "Upon initiation or discontinuation of concomitant emapalumab, monitor for reduced efficacy and adjust dosage of CYP450 substrates as needed",
+                        "Live vaccines",
+                        "Do not administer live or live-attenuated vaccines while receiving emapalumab and for at least 4 wk after the last dose",
+                        "Safety of immunization with live vaccines during or following emapalumab therapy has not been studied"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "upadacitinib",
+            "description": {
+                "common": "emapalumab, upadacitinib.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "axicabtagene ciloleucel",
+            "description": {
+                "common": "emapalumab, axicabtagene ciloleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brexucabtagene autoleucel",
+            "description": {
+                "common": "emapalumab, brexucabtagene autoleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciltacabtagene autoleucel",
+            "description": {
+                "common": "emapalumab, ciltacabtagene autoleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idecabtagene vicleucel",
+            "description": {
+                "common": "emapalumab, idecabtagene vicleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lisocabtagene maraleucel",
+            "description": {
+                "common": "emapalumab, lisocabtagene maraleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tisagenlecleucel",
+            "description": {
+                "common": "emapalumab, tisagenlecleucel.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "emapalumab and isavuconazonium sulfate both decrease  immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "ozanimod, emapalumab.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Coadministration with immunosuppressive therapies may increase the risk of additive immune effects during therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs in order to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponesimod",
+            "description": {
+                "common": "ponesimod and emapalumab both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and emapalumab both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, emapalumab.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, emapalumab.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab and emapalumab both increase  immunosuppressive effects; risk of infection. Modify Therapy/Monitor Closely. Owing to potential additive immunosuppressive effects, consider duration of effect and mechanism of action of these therapies if coadministered"
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Infection",
+            "percent": "56"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "41"
+        },
+        {
+            "name": "Infusion",
+            "percent": "27"
+        },
+        {
+            "name": "related reactions",
+            "percent": "24"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "15"
+        },
+        {
+            "name": "Hypokalemia",
+            "percent": "15"
+        },
+        {
+            "name": "Constipation",
+            "percent": "12"
+        },
+        {
+            "name": "Rash",
+            "percent": "12"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "12"
+        },
+        {
+            "name": "CMV infection",
+            "percent": "12"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "12"
+        },
+        {
+            "name": "Lymphocytosis",
+            "percent": "12"
+        },
+        {
+            "name": "Cough",
+            "percent": "12"
+        },
+        {
+            "name": "Irritability",
+            "percent": "12"
+        },
+        {
+            "name": "Tachycardia",
+            "percent": "12"
+        },
+        {
+            "name": "Tachypnea",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Acute kidney injury",
+            "percent": null
+        },
+        {
+            "name": "Asthenia",
+            "percent": null
+        },
+        {
+            "name": "Bradycardia",
+            "percent": null
+        },
+        {
+            "name": "Dyspnea",
+            "percent": null
+        },
+        {
+            "name": "GI hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "Epistaxis",
+            "percent": null
+        },
+        {
+            "name": "Peripheral edema",
+            "percent": null
+        }
+    ]
+}

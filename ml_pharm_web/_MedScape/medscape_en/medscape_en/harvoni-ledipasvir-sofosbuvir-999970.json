@@ -1,0 +1,661 @@
+{
+    "name": "ledipasvir/sofosbuvir",
+    "comment": "Rx",
+    "other_names": [
+        "Harvoni"
+    ],
+    "classes": [
+        "HCV NS5A Inhibitors",
+        "HCV Polymerase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/harvoni-ledipasvir-sofosbuvir-999970",
+    "pregnancy": {
+        "common": [
+            "If the drug combination is administered with ribavirin, the combination regimen is contraindicated in pregnant women and in men whose female partners are pregnant; refer to ribavirin prescribing information for more information on ribavirin-associated risks of use during pregnancy",
+            "No adequate human data are available to establish whether or not the drug combination poses a risk to pregnancy outcomes; in animal reproduction studies, no evidence of adverse developmental outcomes was observed with the drug combination ledipasvir or sofosbuvir at exposures greater than those in humans at the recommended human dose (RHD)"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "It is not known whether ledipasvir or sofosbuvir, the drug combination, or their metabolites are present in human breast milk, affect human milk production or have effects on the breastfed infant.",
+            "The development and health benefits of breastfeeding should be considered along with the mother’s clinical need for the drug combination and any potential adverse effects on the breastfed child from the drug combination or from the underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Test all patients for evidence of current or prior hepatitis B virus (HBV) infection before initiating treatment with HCV direct acting antivirals (DDAs)",
+                "HBV reactivation has been reported in HCV/HBV coinfected patients who were undergoing or had completed treatment with DDAs and were not receiving HBV antiviral therapy",
+                "Some cases have resulted in fulminant hepatitis, hepatic failure, and death",
+                "Monitor HCV/HBV coinfected patients for hepatitis flare or HBV reactivation during HCV treatment and post-treatment follow-up",
+                "Initiate appropriate patient management for HBV infection as clinically indicated"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "If coadministered with ribavirin, the contraindications to ribavirin also apply to this combination regimen"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "HCV and HBV Coinfection",
+                    "description": [
+                        "Hepatitis B virus (HBV) reactivation reported in HCV/HBV coinfected patients undergoing or had completed treatment with HCV direct-acting antivirals, and who were not receiving HBV antiviral therapy",
+                        "Some cases have resulted in fulminant hepatitis, hepatic failure, and death; cases have been reported in patients who are HBsAg positive and also in patients with serologic evidence of resolved HBV infection (eg, HBsAg negative and anti-HBc positive)",
+                        "HBV reactivation also reported in patients receiving certain immunosuppressants or chemotherapeutic agents",
+                        "Risk of HBV reactivation associated with treatment with HCV direct-acting antivirals may be increased in these patients",
+                        "HBV reactivation is characterized as abrupt increase in HBV replication manifesting as a rapid increase in serum HBV DNA level; in patients with resolved HBV infection, reappearance of HBsAg can occur",
+                        "Reactivation of HBV replication may be accompanied by hepatitis, eg, increases in aminotransferase levels and, in severe cases, increases in bilirubin levels, liver failure, and death can occur",
+                        "Test all patients for evidence of current or prior HBV infection by measuring HBsAg and anti-HBc before initiating HCV therapy",
+                        "In patients with serologic evidence of HBV infection, monitor for clinical and laboratory signs of hepatitis flare or HBV reactivation during HCV treatment and during post-treatment follow-up; initiate appropriate patient management for HBV infection as clinically indicated"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "The concomitant use of drug combination and P- gp inducers may significantly decrease ledipasvir and sofosbuvir plasma concentrations and may lead to a reduced therapeutic effect; use of drug combination with P- gp inducers (eg, rifampin, St. John’s wort) not recommended",
+                        "If drug combination administered with ribavirin, the warnings and precautions for ribavirin, in particular, the pregnancy avoidance warning, apply to this combination regimen; refer to ribavirin prescribing information for a full list of warnings and precautions for ribavirin",
+                        "Ledipasvir and sofosbuvir are substrates of P-gp and BCRP; coadministration with P-gp inducers (eg, rifampin, St. John’s wort) is not recommended; may significantly decrease ledipasvir and sofosbuvir plasma concentrations and reduce therapeutic effect",
+                        "Ledipasvir is an inhibitor of P-gp and BCRP; may increase intestinal absorption of coadministered substrates for these transporters",
+                        "Coadministration of ledipasvir with acid-reducing agents may decrease ledipasvir solubility, resulting in decreased serum concentrations",
+                        "Frequent monitoring of relevant laboratory parameters (eg, International Normalized Ratio [INR] in patients taking warfarin, blood glucose levels in diabetic patients) or drug concentrations of concomitant medications such as cytochrome P450 substrates with a narrow therapeutic index (eg, certain immunosuppressants) is recommended to ensure safe and effective use; dose adjustments of concomitant medications may be necessary",
+                        "Bradycardia with amiodarone coadministration",
+                        "Postmarketing cases of symptomatic bradycardia, as well as fatal cardiac arrest and cases requiring pacemaker intervention, reported when the drug combination is administered with amiodarone",
+                        "Bradycardia has generally occurred within hours to days, but cases reported up to 2 weeks after initiating HCV treatment; patients also taking beta-blockers, or those with underlying cardiac comorbidities and/or advanced liver disease, may be at increased risk for symptomatic bradycardia with coadministration of amiodarone",
+                        "Bradycardia generally resolved after discontinuation of HCV treatment; the mechanism for this effect is unknown",
+                        "Coadministration of amiodarone not recommended; for patients taking amiodarone with no other alternative, viable treatment options should counsel patients about risk of serious symptomatic bradycardia; cardiac monitoring in an in-patient setting for first 48 hours of coadministration is recommended, after which outpatient or self-monitoring of heart rate should occur on a daily basis through at least first 2 weeks of treatment; patients on the drug combination who need to take amiodarone should use the same approach as described above",
+                        "Due to amiodarone’s long half-life, patients discontinuing amiodarone should undergo cardiac monitoring prior to starting therapy; patients who develop signs or symptoms of bradycardia, including near-fainting or fainting, dizziness or lightheadedness, malaise, weakness, excessive tiredness, shortness of breath, chest pains, confusion or memory problems should seek medical evaluation immediately"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Contraindicated. P-gp inducers decrease sofosbuvir levels, and therefore decrease conversion to sofosbuvir's active metabolite (GS-331007) responsible for 90% of pharmacologic effect"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of colchicine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Avoid use of colchicine with P-gp inhibitors. If coadministration is necessary, decrease colchicine dose or frequency as recommended in prescribing information. Use of any colchicine product in conjunction with P-gp inhibitors is contraindicated in patients with renal or hepatic impairment. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "darolutamide will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Avoid or Use Alternate Drug. Darolutamide is a BCRP inhibitor. Avoid coadministration with BCRP inhibitors. If use is unavoidable, closely monitor for adverse reactions and consider dose reduction of BCRP substrate drug (refer BCRP substrate prescribing information)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Dose adjustment may be required with strong P-gp inhibitors. DVT/PE treatment: Decrease dose to 30 mg PO once daily. NVAF: No dose reduction recommended"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "erdafitinib will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If coadministration unavoidable, separate administration by at least 6 hr before or after administration of P-gp substrates with narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of ledipasvir/sofosbuvir by Other (see comment). Avoid or Use Alternate Drug. \nComment: Lasmiditan inhibits BCRP in vitro. Avoid coadministration of lasmiditan with BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "leniolisib will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Avoid or Use Alternate Drug. Leniolisib, a BCRP inhibitor, may increase systemic exposure of BCRP substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of rimegepant by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Product labeling for PO topotecan recommends avoiding concomitant use of P-gp inhibitors; the interaction with IV topotecan may be less severe but is still likely of clinical significance"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of venetoclax by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If a P-gp inhibitor must be used, reduce the venetoclax dose by at least 50%. Monitor more closely for signs of venetoclax toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Acalabrutinib may increase exposure to coadministered BCRP substrates by inhibition of intestinal BCRP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide/magnesium trisilicate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium trisilicate decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases toxicity of amiodarone by unknown mechanism. Modify Therapy/Monitor Closely. Postmarketing reports describe bradycardia resulting in death or pacemaker insertion when amiodarone was coadministered with sofosbuvir in combination with another direct acting antiviral. Patients also taking beta blockers (7 of 9 of the postmarketing reports), or those with underlying cardiac comorbidities and/or advanced liver disease may be at increased risk for symptomatic bradycardia with coadministration of amiodarone. Cardiac monitoring in an inpatient setting for the first 48 hr of coadministration is recommended, after which outpatient or self-monitoring of the heart rate should occur on a daily basis through at least the first 2 weeks of treatment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of ledipasvir/sofosbuvir by  increasing elimination. Use Caution/Monitor. Apalutamide weakly induces BCRP and may decrease systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of atorvastatin by  unspecified interaction mechanism. Modify Therapy/Monitor Closely. Coadministration of ledipasvir/sofosbuvir with atorvastatin may be associated withincreased risk of myopathy,including rhabdomyolysis. Monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases levels of berotralstat by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Reduced berotralstat dose to 110 mg/day when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases levels of betrixaban by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Decrease betrixaban dose to 80 mg PO once, then 40 mg PO qDay if coadministered with a P-gp inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; H2-receptor antagonists may be administered simultaneously with or 12 hr apart from ledipasvir/sofosbuvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citric acid/sodium bicarbonate",
+            "description": {
+                "common": "citric acid/sodium bicarbonate decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of dabigatran by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Atrial fibrillation: Avoid coadministering dabigatran with P-gp inhibitors if CrCl <30 mL/min.  DVT/PE treatment: Avoid coadministering dabigatran with P-gp inhibitors if CrCl <50 mL/min"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "dexlansoprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of duvelisib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of elvitegravir/cobicistat/emtricitabine/tenofovir DF by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Tenofovir levels increased; alteration of dose regimen may be necessary"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Encorafenib (a BCRP inhibitor) may increase the concentration and toxicities of BCRP substrates. Closely monitor for signs and symptoms of increased exposure and consider adjusting the dose of these substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "esomeprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "famotidine",
+            "description": {
+                "common": "famotidine decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; H2-receptor antagonists may be administered simultaneously with or 12 hr apart from ledipasvir/sofosbuvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of P-gp/BCRP substrate drugs. Monitor for toxicities of P-gp/BCRP  substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "fostemsavir will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Fostemsavir inhibits BCRP transporters. If possible, avoid coadministration or modify dose of BCRP substrate coadministered with fostemsavir."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen/famotidine",
+            "description": {
+                "common": "ibuprofen/famotidine decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; H2-receptor antagonists may be administered simultaneously with or 12 hr apart from ledipasvir/sofosbuvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of P-gp substrates in clinical trials. Consider dose reduction of sensitive P-gp substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "lansoprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Lonafarnib is a weak P-gp inhibitor. Monitor for adverse reactions if coadministered with P-gp substrates where minimal concentration changes may lead to serious or life-threatening toxicities. Reduce P-gp substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; separate antacid and ledipasivr/sofosbuvir administration by 4 hr."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases levels of naldemedine by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor naldemedine for potential adverse effects if coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nintedanib",
+            "description": {
+                "common": "ledipasvir/sofosbuvir increases levels of nintedanib by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. If nintedanib adverse effects occur, management may require interruption, dose reduction, or discontinuation of therapy ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nizatidine",
+            "description": {
+                "common": "nizatidine decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; H2-receptor antagonists may be administered simultaneously with or 12 hr apart from ledipasvir/sofosbuvir at a dose that does not exceed doses comparable to famotidine 40 mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "omeprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oteseconazole",
+            "description": {
+                "common": "oteseconazole will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Otesezonale, a BCRP inhibitor, may increase the effects and risk of toxicities of BCRP substrates. Use lowest starting dose of BCRP substrate, or consider reducing BCRP substrate dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole decreases levels of ledipasvir/sofosbuvir by Other (see comment). Use Caution/Monitor. \nComment: Ledipasvir solubility decreases as pH increases; drugs that increase gastric pH are expected to decrease levels of ledipasvir; proton-pump inhibitor doses comparable to omeprazole <20 mg can be administered simultaneously with ledipasvir/sofosbuvir under fasted conditions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of rosuvastatin by  unspecified interaction mechanism. Modify Therapy/Monitor Closely. Coadministration of ledipasvir/sofosbuvir with rosuvastatin may be associated withincreased risk of myopathy,including rhabdomyolysis. Monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Use Caution/Monitor. Safinamide and its major metabolite may inhibit intestinal BCRP. Monitor BCRP substrates for increased pharmacologic or adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium zirconium cyclosilicate",
+            "description": {
+                "common": "sodium zirconium cyclosilicate will decrease the level or effect of ledipasvir/sofosbuvir by  increasing gastric pH. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Check specific recommendations for drugs that exhibit pH-dependent solubility that may affect their systemic exposure and efficacy. In general, administer drugs at least 2 hr before or after sodium zirconium cyclosilicate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Consider reducing the dose of P-glycoprotein (P-gp) substrates, if adverse reactions are experienced when administered concomitantly with stiripentol."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis",
+            "description": {
+                "common": "tafamidis will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis meglumine",
+            "description": {
+                "common": "tafamidis meglumine will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of talazoparib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Talazoparib is a P-glycoprotein (P-gp) substrate; coadministration with P-gp inhibitors may increase talazoparib systemic exposure."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "ledipasvir/sofosbuvir will increase the level or effect of tenofovir DF by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Asthenia",
+            "percent": "31-36"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "4-18"
+        },
+        {
+            "name": "Headache",
+            "percent": "13-29"
+        },
+        {
+            "name": "Cough",
+            "percent": "5-11"
+        },
+        {
+            "name": "Nausea",
+            "percent": "6-9"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3-7"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "1-5"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "3-9"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "3-6"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "1.5"
+        },
+        {
+            "name": "x ULN",
+            "percent": "1"
+        },
+        {
+            "name": "to",
+            "percent": "3"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "3"
+        },
+        {
+            "name": "x ULN",
+            "percent": "1"
+        },
+        {
+            "name": "to",
+            "percent": "3"
+        },
+        {
+            "name": "Myalgia",
+            "percent": "4-9"
+        },
+        {
+            "name": "Irritability",
+            "percent": "7-8"
+        },
+        {
+            "name": "Asymptomatic creatine kinase elevation",
+            "percent": "3"
+        },
+        {
+            "name": "Grades",
+            "percent": "4"
+        },
+        {
+            "name": "Bradycardia in patients taking amiodarone who initiate ledipasvir",
+            "percent": null
+        },
+        {
+            "name": "sofosbuvir therapy",
+            "percent": null
+        },
+        {
+            "name": "Skin rash",
+            "percent": null
+        },
+        {
+            "name": "sometimes with blisters or angioedema",
+            "percent": null
+        },
+        {
+            "name": "like swelling",
+            "percent": null
+        }
+    ]
+}

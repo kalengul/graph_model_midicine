@@ -1,0 +1,973 @@
+{
+    "name": "regorafenib",
+    "comment": "Rx",
+    "other_names": [
+        "Stivarga"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "Tyrosine Kinase Inhibitors",
+        "Antineoplastics",
+        "Angiogenesis Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/stivarga-regorafenib-999774",
+    "pregnancy": {
+        "common": [
+            "Based on animal studies and mechanism of action, fetal harm may occur when administered to a pregnant woman",
+            "There are no available data on use in pregnant women",
+            "Advise pregnant women of the potential hazard to a fetus"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Administration of regorafenib was embryolethal and teratogenic in rats and rabbits at exposures lower than human exposures at the recommended dose, with increased incidences of cardiovascular, genitourinary, and skeletal malformations"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females: Use effective contraception during treatment and for 2 months following the final dose",
+                    "Males: Advise male patients with female partners of reproductive potential to use effective contraception during treatment and for 2 months following final dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "There are no data on the effect on human fertility",
+                    "Results from animal studies indicate that regorafenib can impair male and female fertility"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on the presence of regorafenib or its metabolites in human milk, the effects of regorafenib on the breastfed infant, or on milk production In rats, regorafenib and its metabolites are excreted in milk",
+            "Because of the potential for serious adverse reactions in breastfed infants from regorafenib, do not breastfeed during treatment and for 2 weeks after the final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Hepatotoxicity",
+                    "description": [
+                        "Severe and sometimes fatal hepatotoxicity observed in clinical trials",
+                        "Monitor hepatic function prior to and during treatment",
+                        "Interrupt and then reduce or discontinue for hepatotoxicity as manifested by elevated liver function tests or hepatocellular necrosis, depending upon severity and persistence",
+                        "Also see Dosage Modifications and Cautions"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Also see Dosage Modifications",
+                "May cause severe drug-induced liver injury with fatal outcome (see Black Box Warnings); obtain liver function tests (ALT, AST, and bilirubin) before initiation of therapy and monitor at least every 2 weeks during first 2 months of treatment; thereafter, monitor monthly or more frequently as clinically indicated; monitor liver function tests weekly in patients experiencing elevated liver function tests until improvement to less than 3 times the ULN or baseline; temporarily hold and then reduce or permanently discontinue therapy depending on severity and persistence of hepatotoxicity as manifested by elevated liver function tests or hepatocellular necrosis",
+                "Increases risk for hemorrhage; discontinue therapy for severe or life-threatening hemorrhage",
+                "Increased risk of infections reported; most common infections include urinary tract infections, nasopharyngitis, mucocutaneous and systemic fungal infections and pneumonia",
+                "Increases risk for HFSR/PPES and rash; a higher incidence of HFSR reported in Asian patients; interrupt and then reduce or discontinue regorafenib depending on severity and persistence of dermatologic toxicity",
+                "Hypertension may occur, typically during the first treatment cycle; do not initiate therapy unless blood pressure is adequately controlled; monitor blood pressure weekly for first 6 weeks of treatment and then every cycle, or more frequently, as clinically indicated; temporarily or permanently withhold therapy for severe or uncontrolled hypertension",
+                "Myocardial ischemia and infarction observed in clinical trials; withhold regorafenib for new or acute cardiac ischemia/infarction and resume only after resolution of acute ischemic events",
+                "One case report of reversible posterior leukoencephalopathy syndrome (RPLS) reported (1 of 1100 treated patients); discontinue therapy if RPLS occurs",
+                "Discontinue therapy if gastrointestinal perforation or fistula occur",
+                "May impair wound healing (class effect of VEGFR inhibitors); complications can occur in patients who receive drugs that inhibit the VEGF signaling pathway; discontinue at least 2 weeks before scheduled surgery; do not administer for at least 2 weeks following major surgery and until adequate wound healing; safety of resumption of drug after resolution of wound healing complications not established; discontinue therapy in patients with wound dehiscence",
+                "Embryo-fetal toxicity likely if taken while pregnant (see Pregnancy & Lactation)"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Strong CYP3A4 inhibitors",
+                        "Coadministration with strong CYP3A4 inhibitors increases regorafenib plasma concentrations, decreased active metabolite (M-2 and M-5) plasma concentrations, and may increase toxicity",
+                        "Avoid concomitant use of regorafenib with strong CYP3A4 inhibitors (eg, clarithromycin, grapefruit juice, itraconazole, ketoconazole, nefazodone, posaconazole, telithromycin, and voriconazole)",
+                        "Breast cancer resistance protein (BCRP) substrates",
+                        "Coadministration with a BCRP substrate increases the BCRP substrate plasma concentrations",
+                        "Closely monitor for signs and symptoms of exposure-related toxicity of the BCRP substrate (eg, methotrexate, fluvastatin, atorvastatin)",
+                        "Consult the concomitant BCRP substrate product information when considering administration of regorafenib",
+                        "UGT substrates",
+                        "Regorafenib competitively inhibits UGT1A9 and UGT1A1 substrates"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5"
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alpelisib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of alpelisib by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of alpelisib (BCRP substrate) with a BCRP inhibitor may increase alpelisib concentration, which may increase the risk of toxicities. If unable to avoid or use alternant drugs, closely monitor for increased adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inducers decrease regorafenib levels and increase exposure of the active metabolite M-5"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Idelalisib is a strong CYP3A inhibitor; avoid coadministration with sensitive CYP3A substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5. Not recommended during and 2 weeks after itraconazole treatment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternative therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inhibitors increase regorafenib levels and decrease exposure of the active metabolites M-2 and M-5"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "regorafenib increases toxicity of ozanimod by Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of ozanimod (a BCRP substrate) with BCRP inhibitors increases the exposure of the minor (RP101988, RP101075) and major active metabolites (CC112273, CC1084037) of ozanimod, which may increase the risk of ozanimod adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of regorafenib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "regorafenib will increase the level or effect of rimegepant by  Other (see comment). Avoid or Use Alternate Drug. Avoid coadministration of rimegepant (a BCRP substrate) with inhibitors of BCRP."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of talazoparib by  Other (see comment). Avoid or Use Alternate Drug. BCRP inhibitors may increase systemic exposure of talazoparib (a BCRP substrate). If coadministration cannot be avoided, monitor for potential adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid concomitant use of tucatinib with CYP3A substrates, where minimal concentration changes may lead to serious or life-threatening toxicities. If unavoidable, reduce CYP3A substrate dose according to product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "regorafenib will increase the level or effect of artesunate by  decreasing metabolism. Use Caution/Monitor. Coadministration may increase active artesunate metabolite (DHA) by inhibiting UGT. Monitor for increased adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of atorvastatin by  Other (see comment). Use Caution/Monitor. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "regorafenib increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "regorafenib will increase the level or effect of chlorothiazide by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "regorafenib will increase the level or effect of cimetidine by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of daunorubicin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dichlorphenamide",
+            "description": {
+                "common": "dichlorphenamide and regorafenib both decrease  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "regorafenib will decrease the level or effect of digoxin by  inhibition of GI absorption. Applies only to oral form of both agents. Modify Therapy/Monitor Closely. Chemotherapy may decrease absorption of digoxin; monitor levels and adjust digoxin dose accordingly"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "regorafenib will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of doxorubicin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "regorafenib will increase the level or effect of doxorubicin liposomal by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with duvelisib increases AUC of a sensitive CYP3A4 substrate which may increase the risk of toxicities of these drugs. Consider reducing the dose of the sensitive CYP3A4 substrate and monitor for signs of toxicities of the coadministered sensitive CYP3A substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix decreases levels of regorafenib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvastatin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of fluvastatin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "regorafenib will increase the level or effect of glecaprevir/pibrentasvir by  decreasing metabolism. Use Caution/Monitor. Caution when coadministering glecaprevir/pibrentasvir with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "regorafenib will increase the level or effect of glyburide by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of imatinib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "regorafenib will increase the level or effect of irinotecan by  decreasing metabolism. Use Caution/Monitor. Regorafenib may inhibit UGT1A1-mediated metabolism of irinotican and its metabolite"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "regorafenib will increase the level or effect of irinotecan liposomal by  decreasing metabolism. Use Caution/Monitor. Regorafenib may inhibit UGT1A1-mediated metabolism of irinotican and its metabolite"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of lapatinib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ledipasvir/sofosbuvir",
+            "description": {
+                "common": "regorafenib will increase the level or effect of ledipasvir/sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "leflunomide",
+            "description": {
+                "common": "regorafenib will increase the level or effect of leflunomide by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of lenvatinib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "regorafenib will increase the level or effect of methotrexate by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane decreases levels of regorafenib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Mitotane is a strong inducer of cytochrome P-4503A4; monitor when coadministered with CYP3A4 substrates for possible dosage adjustments."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mitoxantrone",
+            "description": {
+                "common": "regorafenib will increase the level or effect of mitoxantrone by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitrofurantoin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of nitrofurantoin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of osimertinib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "regorafenib will increase the level or effect of pantoprazole by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of pazopanib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pitavastatin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of pitavastatin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "regorafenib will increase the level or effect of riociguat by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rosuvastatin",
+            "description": {
+                "common": "regorafenib will increase the level or effect of rosuvastatin by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "regorafenib will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and regorafenib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir",
+            "description": {
+                "common": "regorafenib will increase the level or effect of sofosbuvir by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir/velpatasvir",
+            "description": {
+                "common": "regorafenib will increase the level or effect of sofosbuvir/velpatasvir by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, regorafenib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "regorafenib will increase the level or effect of sulfasalazine by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir AF",
+            "description": {
+                "common": "regorafenib will increase the level or effect of tenofovir AF by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "regorafenib will increase the level or effect of tenofovir DF by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "regorafenib will increase the level or effect of topotecan by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of vemurafenib by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "regorafenib increases effects of warfarin by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Decreased appetite and food intake",
+            "percent": "3"
+        },
+        {
+            "name": "Grade",
+            "percent": "4"
+        },
+        {
+            "name": "or",
+            "percent": "3"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "4"
+        },
+        {
+            "name": "Grade",
+            "percent": "3"
+        },
+        {
+            "name": "or",
+            "percent": "4"
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Increased INR",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Grade",
+            "percent": null
+        },
+        {
+            "name": "or",
+            "percent": null
+        }
+    ]
+}

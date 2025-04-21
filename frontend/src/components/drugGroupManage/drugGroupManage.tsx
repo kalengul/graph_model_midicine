@@ -31,7 +31,7 @@ export const DrugGroupManage = () =>{
 
     const drugGroupList = useSelector((state: RootState)=>state.drugGroupManage.drugGroups)
     
-    console.log(drugGroupList)
+    //console.log(drugGroupList)
 
     const deleteDrugGroupHendler = (id: string) =>{
         axios({ 
@@ -40,8 +40,8 @@ export const DrugGroupManage = () =>{
             params: {
                 dg_id: id,
             }
-        }).then((res)=>{
-            console.log(res.data)
+        }).then(()=>{
+            //console.log(res.data)
             dispatch(addValue({title: "updateList", value: true}))
         })
     }

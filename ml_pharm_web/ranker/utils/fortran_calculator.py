@@ -6,6 +6,7 @@ import numpy as np
 
 from ranker.models import (DrugCHF,
                            DiseaseCHF)
+from medscape_api.interaction_retriever import InteractionRetriever
 
 
 class FortranCalculator:
@@ -139,13 +140,12 @@ class FortranCalculator:
                 else:
                     drugs_class_3.append(j)
 
-        idx2сompatibility = {3: 'compatible',
-                             2: 'caution',
-                             1: 'incompatible'}
-
         def fetch_drugs(indices, c):
+            idx2compatibility = {3: 'compatible',
+                                 2: 'caution',
+                                 1: 'incompatible'}
             return [{'drugs': DrugCHF.objects.get(index=i).name,
-                     'сompatibility': idx2сompatibility(c)}
+                     'сompatibility': idx2compatibility[c]}
                     for i in indices]
 
         context['combinations'] = [
@@ -167,9 +167,21 @@ class FortranCalculator:
         #     'arr_drugs_class_3': fetch_drugs(drugs_class_3, 3),
         # })
 
+        drugs = [DrugCHF.objects.get(index=i).name
+                 for i in drug_indices2]
         context['compatibility_medscape'] = ''
         context['description'] = 'Справка из MedScape'
-        context['drugs'] = [DrugCHF.objects.get(index=i).name
-                            for i in drug_indices2]
+        context['drugs'] = drugs
+        interactions = InteractionRetriever().get_interactions(drugs)
+        if not any(interactions):
+            context['drugs'] = drugs
+            context['description'] = 'Справка в MedScape отсутствует',
+            context['compatibility_medscape'] = (
+                'Информация о совместимости в MedScape отсутствует')
+        else:
+            context['drugs'] = drugs
+            context['description'] = interactions[0][0]['description'],
+            context['compatibility_medscape'] = (
+                interactions[0][0]['classification'])
 
         return context

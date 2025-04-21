@@ -1,0 +1,502 @@
+{
+    "name": "futibatinib",
+    "comment": "Rx",
+    "other_names": [
+        "Lytgobi"
+    ],
+    "classes": [
+        "FGFR Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/lytgobi-futibatinib-4000292",
+    "pregnancy": {
+        "common": [
+            "Based on an animal study and its mechanism of action, fetal harm or loss of pregnancy may occur when administered to pregnant females",
+            "There are no available data on use of futibatinib in pregnant females",
+            "Verify pregnancy status of females of reproductive potential before initiating"
+        ],
+        "specific": [
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females of reproductive potential: Use effective contraception during treatment and for 1 week after last dose",
+                    "Males with female partners of reproductive potential or who are pregnant: Use effective contraception during treatment and for 1 week after last dose"
+                ]
+            },
+            {
+                "type": "Animal data",
+                "description": [
+                    "Oral futibatinib administered to pregnant rats during organogenesis at maternal plasma exposures below human exposure at clinical dose of 20 mg resulted in fetal malformations, fetal growth retardation, and embryofetal death",
+                    "Advise pregnant females of potential risk to fetus"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on the presence of futibatinib or its metabolites in human milk or their effects on either breastfed infants or milk production",
+            "Advise women not to breastfeed during treatment and for 1 week after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Based on animal findings and its mechanism of action, fetal harm may occur in pregnant females"
+            ],
+            "specific": [
+                {
+                    "type": "Hyperphosphatemia",
+                    "description": [
+                        "May cause hyperphosphatemia leading to soft tissue mineralization, calcinosis, nonuremic calciphylaxis, and vascular calcification",
+                        "Increased phosphate levels are a pharmacodynamic effect of futibatinib",
+                        "Monitor for hyperphosphatemia throughout treatment",
+                        "Initiate low phosphate diet and phosphate lowering therapy when serum phosphate level is ≥5.5 mg/dL",
+                        "For serum phosphate levels is >7 mg/dL, initiate or intensify phosphate lowering therapy and reduce dose, withhold, or permanently discontinue based on duration and severity of hyperphosphatemia"
+                    ]
+                },
+                {
+                    "type": "Retinal pigment epithelial detachment (RPED)",
+                    "description": [
+                        "May cause RPED; symptoms include blurred vision",
+                        "Perform comprehensive ophthalmologic examination, including optical coherence tomography (OCT) of macula, before initiating, every 2 months for first 6 months, and every 3 months thereafter",
+                        "For onset of visual symptoms, refer for ophthalmologic evaluation urgently, with follow-up every 3 weeks until it resolves or therapy",
+                        "Dry eye also occurred; treat with ocular demulcents as needed"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview ",
+                    "description": [
+                        "Substrate of CYP3A and P-glycoprotein (P-gp)",
+                        "Inhibitor of P-gp and breast cancer resistance protein (BCRP)",
+                        "Dual P-gp and strong CYP3A inhibitors ",
+                        "Avoid coadministration",
+                        "Drugs that are dual P-gp and strong CYP3A inhibitors may increase futibatinib exposure and increase risk of adverse reactions",
+                        "Dual P-gp and strong CYP3A inducers",
+                        "Avoid coadministration",
+                        "Dual P-gp and strong CYP3A inducers may decrease futibatinib exposure and efficacy",
+                        "P-gp or BCRP substrates",
+                        "Consider more frequent monitoring for adverse reactions associated with sensitive P-gp or BCRP substrates and reduce dose of these drugs per their prescribing information",
+                        "Futibatinib may increase exposure of drugs that are substrates of P-gp or BCRP"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inducers may decrease futibatinib efficacy. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inducers may decrease futibatinib efficacy. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inducers may decrease futibatinib efficacy. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inducers may decrease futibatinib efficacy. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inducers may decrease futibatinib efficacy. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of futibatinib with drugs that are dual P-gp and strong CYP3A inhibitors may increase incidence/severity of futibatinib toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of futibatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Increased phosphate",
+            "percent": "97"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "58"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "52"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "52"
+        },
+        {
+            "name": "Increased calcium",
+            "percent": "51"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "51"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "50"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "50"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "47"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "46"
+        },
+        {
+            "name": "Nail toxicity",
+            "percent": "47"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "46"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "43"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "42"
+        },
+        {
+            "name": "Constipation",
+            "percent": "39"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "39"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "37"
+        },
+        {
+            "name": "Increased activated partial thromboplastin time",
+            "percent": "36"
+        },
+        {
+            "name": "Dry mouth",
+            "percent": "35"
+        },
+        {
+            "name": "Alopecia",
+            "percent": "34"
+        },
+        {
+            "name": "Decreased leukocytes",
+            "percent": "33"
+        },
+        {
+            "name": "Decreased neutrophils",
+            "percent": "31"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "31"
+        },
+        {
+            "name": "Increased creatine kinase",
+            "percent": "31"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "30"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "30"
+        },
+        {
+            "name": "Dry skin",
+            "percent": "29"
+        },
+        {
+            "name": "Increased bilirubin",
+            "percent": "28"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "25"
+        },
+        {
+            "name": "Dry eye",
+            "percent": "25"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "25"
+        },
+        {
+            "name": "Decreased glucose",
+            "percent": "25"
+        },
+        {
+            "name": "Increased prothrombin international normalized ratio",
+            "percent": "25"
+        },
+        {
+            "name": "Decreased glucose",
+            "percent": "25"
+        },
+        {
+            "name": "Nausea",
+            "percent": "24"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "23"
+        },
+        {
+            "name": "Urinary tract infection",
+            "percent": "23"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "22"
+        },
+        {
+            "name": "Palmoplantar erythrodysesthesia syndrome",
+            "percent": "21"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "20"
+        },
+        {
+            "name": "Weight decreased",
+            "percent": "18"
+        },
+        {
+            "name": "Increased potassium",
+            "percent": "16"
+        },
+        {
+            "name": "Increased phosphate",
+            "percent": "39"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "20"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "15"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "13"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "10"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "8"
+        },
+        {
+            "name": "Increased activated partial thromboplastin time",
+            "percent": "8"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "7"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "6"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "6"
+        },
+        {
+            "name": "Increased creatine kinase",
+            "percent": "5"
+        },
+        {
+            "name": "Palmoplantar erythrodysesthesia syndrome",
+            "percent": "4.9"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "4.9"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "4.9"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "3.9"
+        },
+        {
+            "name": "Weight decreased",
+            "percent": "3.9"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "2.9"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "2.9"
+        },
+        {
+            "name": "Urinary tract infection",
+            "percent": "2.9"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "2.4"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "2.1"
+        },
+        {
+            "name": "Increased potassium",
+            "percent": "2"
+        },
+        {
+            "name": "Nail toxicity",
+            "percent": "1.9"
+        },
+        {
+            "name": "Nausea",
+            "percent": "1.9"
+        },
+        {
+            "name": "Decreased neutrophils",
+            "percent": "1.6"
+        },
+        {
+            "name": "Increased calcium",
+            "percent": "1.2"
+        },
+        {
+            "name": "Decreased leukocytes",
+            "percent": "1.1"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "1"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "1"
+        },
+        {
+            "name": "Dry eye",
+            "percent": "1"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "1"
+        }
+    ]
+}

@@ -1,0 +1,867 @@
+{
+    "name": "dipyridamole",
+    "comment": "Rx",
+    "other_names": [
+        "Persantine"
+    ],
+    "classes": [
+        "Antiplatelet Agents",
+        "Cardiovascular",
+        "Antiplatelet Agents",
+        "Hematologic"
+    ],
+    "source": "https://reference.medscape.com/drug/persantine-dipyridamole-342147",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: B",
+            "Lactation: enters breast milk; use with caution"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: enters breast milk; use with caution"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "FDA approval for chronic angina withdrawn (not useful according to most experts)",
+                "Dipyridamole has a vasodilatory effect and should be used with caution in patients with severe coronary artery disease (eg, unstable angina or recently sustained myocardial infarction); chest pain may be aggravated in patients with underlying coronary artery disease who are receiving drug",
+                "Elevations of hepatic enzymes and hepatic failure reported in association with therapy administration",
+                "Drug should be used with caution in patients with hypotension since it can produce peripheral vasodilation"
+            ],
+            "specific": [
+                {
+                    "type": "Stress Testing",
+                    "description": [
+                        "Clinical experience suggests that patients being treated who also require pharmacological stress testing with intravenous dipyridamole or other adenosinergic agents (e.g. adenosine, regadenoson) should interrupt therapy for 48 hours prior to stress testing",
+                        "Intake of drug within 48 hours prior to stress testing with intravenous dipyridamole or other adenosinergic agents may increase risk for cardiovascular side effects of these agents and may impair the sensitivity of test"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "abrocitinib and dipyridamole both increase  anticoagulation. Contraindicated. Antiplatelet drugs, except for low-dose aspirin (=81 mg qDay), during the first 3 months of treatment are contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "dipyridamole, riociguat.\nEither increases effects of the other by additive vasodilation. Contraindicated. Coadministration of nonspecific PDE-5 inhibitors (eg, dipyridamole, theophylline) and guanylate cyclase stimulators (eg, riociguat) is contraindicated due to risk of additive hypotension."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "theophylline decreases effects of dipyridamole by pharmacodynamic antagonism. Contraindicated. May produce false negative results in dipyridamole thallium imaging tests.  Separate by 24 hr."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "dipyridamole increases levels of afatinib by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Reduce afatinib daily dose by 10 mg if not tolerated when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alpelisib",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of alpelisib by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of alpelisib (BCRP substrate) with a BCRP inhibitor may increase alpelisib concentration, which may increase the risk of toxicities. If unable to avoid or use alternant drugs, closely monitor for increased adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin alfa",
+            "description": {
+                "common": "antithrombin alfa, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "antithrombin III",
+            "description": {
+                "common": "antithrombin III, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "dipyridamole and apixaban both increase  anticoagulation. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "argatroban, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal increases effects of dipyridamole by pharmacodynamic synergism. Avoid or Use Alternate Drug. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "bivalirudin, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosutinib",
+            "description": {
+                "common": "dipyridamole increases levels of bosutinib by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital decreases levels of dipyridamole by increasing metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "caffeine decreases effects of dipyridamole by pharmacodynamic antagonism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "caplacizumab",
+            "description": {
+                "common": "caplacizumab, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "darolutamide will increase the level or effect of dipyridamole by  Other (see comment). Avoid or Use Alternate Drug. Darolutamide is a BCRP inhibitor. Avoid coadministration with BCRP inhibitors. If use is unavoidable, closely monitor for adverse reactions and consider dose reduction of BCRP substrate drug (refer BCRP substrate prescribing information)."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Dose adjustment may be required with strong P-gp inhibitors. DVT/PE treatment: Decrease dose to 30 mg PO once daily. NVAF: No dose reduction recommended"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "fondaparinux, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of dipyridamole by Other (see comment). Avoid or Use Alternate Drug. \nComment: Lasmiditan inhibits BCRP in vitro. Avoid coadministration of lasmiditan with BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "leniolisib will increase the level or effect of dipyridamole by  Other (see comment). Avoid or Use Alternate Drug. Leniolisib, a BCRP inhibitor, may increase systemic exposure of BCRP substrates"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ozanimod",
+            "description": {
+                "common": "dipyridamole increases toxicity of ozanimod by Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration of ozanimod (a BCRP substrate) with BCRP inhibitors increases the exposure of the minor (RP101988, RP101075) and major active metabolites (CC112273, CC1084037) of ozanimod, which may increase the risk of ozanimod adverse reactions. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pomalidomide",
+            "description": {
+                "common": "dipyridamole increases levels of pomalidomide by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "protamine",
+            "description": {
+                "common": "protamine, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Contraindicated. Enhanced risk of hemorrhage."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "regadenoson",
+            "description": {
+                "common": "dipyridamole, regadenoson. Mechanism: unspecified interaction mechanism. Contraindicated. Regadenoson's effects may be changed; mfr. recommends avoiding dipyridamole for 2 days prior to administration."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of rimegepant by  Other (see comment). Avoid or Use Alternate Drug. Avoid coadministration of rimegepant (a BCRP substrate) with inhibitors of BCRP."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of riociguat by  decreasing metabolism. Avoid or Use Alternate Drug. Coadministration of riociguat (substrate of CYP isoenzymes 1A1, 2C8, 3A, 2J2) with strong CYP inhibitors may require a decreased initial dose of 0.5 mg PO TID; monitor for signs of hypotension and reduce dose if needed"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of talazoparib by  Other (see comment). Avoid or Use Alternate Drug. BCRP inhibitors may increase systemic exposure of talazoparib (a BCRP substrate). If coadministration cannot be avoided, monitor for potential adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. Product labeling for PO topotecan recommends avoiding concomitant use of P-gp inhibitors; the interaction with IV topotecan may be less severe but is still likely of clinical significance"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of venetoclax by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If a P-gp inhibitor must be used, reduce the venetoclax dose by at least 50%. Monitor more closely for signs of venetoclax toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "acalabrutinib increases effects of dipyridamole by anticoagulation. Modify Therapy/Monitor Closely. Coadministration of acalabrutinib with antiplatelets or anticoagulants may further increase risk of hemorrhage. Monitor for signs of bleeding and consider the benefit-risk of withholding acalabrutinib for 3-7 days presurgery and postsurgery depending upon the type of surgery and the risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "adenosine",
+            "description": {
+                "common": "dipyridamole increases levels of adenosine by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of dipyridamole by  increasing elimination. Use Caution/Monitor. Apalutamide weakly induces BCRP and may decrease systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, dipyridamole.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate, dipyridamole.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. The need for simultaneous use of low-dose aspirin and anticoagulant or antiplatelet agents are common for patients with cardiovascular disease; monitor closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azficel-T",
+            "description": {
+                "common": "azficel-T, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Coadministration with anticoagulants or antiplatelets may increase bruising or bleeding at biopsy and/or injection sites; concomitant use not recommended. Decisions regarding continued use or cessation of anticoagulants or antiplatelets should be made by a physician."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "dipyridamole increases levels of berotralstat by Other (see comment). Modify Therapy/Monitor Closely. \nComment: Reduced dose of berotralstat (a BCRP substrate) to 110 mg/day when coadministered with BCRP inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "dipyridamole increases levels of betrixaban by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Decrease betrixaban dose to 80 mg PO once, then 40 mg PO qDay if coadministered with a P-gp inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "dipyridamole increases levels of ceritinib by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholic acid",
+            "description": {
+                "common": "dipyridamole increases toxicity of cholic acid by decreasing elimination. Modify Therapy/Monitor Closely. Avoid concomitant use of inhibitors of the bile salt efflux pump (BSEP). May exacerbate accumulation of conjugated bile salts in the liver and result in clinical symptoms. If concomitant use is necessary, monitor serum transaminases and bilirubin."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "citalopram increases effects of dipyridamole by pharmacodynamic synergism. Use Caution/Monitor. Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "dabigatran, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs have the potential to cause bleeding. Concomitant use may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "deferasirox",
+            "description": {
+                "common": "deferasirox, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of duvelisib by  Other (see comment). Use Caution/Monitor. Coadministration of duvelisib (a BCRP substrate) with a BCRP transport inhibitor may increase levels or effects of duvelisib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "edoxaban, dipyridamole.\nEither increases toxicity of the other by anticoagulation. Modify Therapy/Monitor Closely. Both drugs have the potential to cause bleeding. The need for simultaneous use of platelet aggregation inhibitors with anticoagulants is common for patients with cardiovascular disease, but may result in increased bleeding; monitor closely. Promptly evaluate any signs or symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "eluxadoline increases levels of dipyridamole by decreasing metabolism. Use Caution/Monitor. Eluxadoline may increase the systemic exposure of coadministered BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Encorafenib (a BCRP inhibitor) may increase the concentration and toxicities of BCRP substrates. Closely monitor for signs and symptoms of increased exposure and consider adjusting the dose of these substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil",
+            "description": {
+                "common": "fish oil, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Patients taking fish oil and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fish oil triglycerides",
+            "description": {
+                "common": "fish oil triglycerides will increase the level or effect of dipyridamole by  anticoagulation. Use Caution/Monitor. Prolonged bleeding reported in patients taking antiplatelet agents or anticoagulants and oral omega-3 fatty acids. Periodically monitor bleeding time in patients receiving fish oil triglycerides and concomitant antiplatelet agents or anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostemsavir",
+            "description": {
+                "common": "fostemsavir will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Fostemsavir inhibits BCRP transporters. If possible, avoid coadministration or modify dose of BCRP substrate coadministered with fostemsavir. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea increases effects of dipyridamole by pharmacodynamic synergism. Use Caution/Monitor. (Theoretical interaction).  Dipyridamole is a platelet inhibitor and green tea has demonstrated antiplatelet effects in animals, it may be prudent to avoid the concomitant use of green tea with chronic dipyridamole therapy as the risk of bleeding may be increased."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "ibrutinib will increase the level or effect of dipyridamole by  anticoagulation. Use Caution/Monitor. Ibrutinib may increase the risk of hemorrhage in patients receiving antiplatelet or anticoagulant therapies and monitor for signs of bleeding. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "icosapent",
+            "description": {
+                "common": "icosapent, dipyridamole.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Icosapent may prolong bleeding time; monitor periodically if coadministered with other drugs that affect bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "melatonin",
+            "description": {
+                "common": "melatonin increases effects of dipyridamole by anticoagulation. Use Caution/Monitor. Melatonin may decrease prothrombin time."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "dipyridamole increases levels of naldemedine by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor naldemedine for potential adverse effects if coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nintedanib",
+            "description": {
+                "common": "dipyridamole increases levels of nintedanib by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. If nintedanib adverse effects occur, management may require interruption, dose reduction, or discontinuation of therapy ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 carboxylic acids",
+            "description": {
+                "common": "omega 3 carboxylic acids, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3 acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omega 3 fatty acids",
+            "description": {
+                "common": "omega 3 fatty acids, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Patients taking omega-3-fatty acids and an anticoagulant or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oteseconazole",
+            "description": {
+                "common": "oteseconazole will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Otesezonale, a BCRP inhibitor, may increase the effects and risk of toxicities of BCRP substrates. Use lowest starting dose of BCRP substrate, or consider reducing BCRP substrate dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piracetam",
+            "description": {
+                "common": "piracetam increases effects of dipyridamole by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib increases levels of dipyridamole by Other (see comment). Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "porfimer",
+            "description": {
+                "common": "dipyridamole decreases effects of porfimer by pharmacodynamic antagonism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "regorafenib will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Regorafenib likely inhibits BCRP (ABCG2) transport. Coadministration with a BCRP substrate may increase systemic exposure to the substrate and related toxicity. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifaximin",
+            "description": {
+                "common": "dipyridamole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "rivaroxaban, dipyridamole.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Avoid concurrent use of rivaroxaban with other anticoagulants due to increased bleeding risk other than during therapeutic transition periods where patients should be observed closely. Monitor for signs/symptoms of blood loss."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "safinamide",
+            "description": {
+                "common": "safinamide will increase the level or effect of dipyridamole by  Other (see comment). Use Caution/Monitor. Safinamide and its major metabolite may inhibit intestinal BCRP. Monitor BCRP substrates for increased pharmacologic or adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "dipyridamole will increase the level or effect of selexipag by  Other (see comment). Use Caution/Monitor. Selexipag is a ABCG2 (BCRP) substrate. Monitor selexipag for increased pharmacologic or adverse effects when coadministered with ABCG2 (BCRP) inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "dipyridamole and selumetinib both increase  anticoagulation. Modify Therapy/Monitor Closely. An increased risk of bleeding may occur in patients taking a vitamin-K antagonist or an antiplatelet agent with selumetinib. Monitor for bleeding and INR or PT in patients coadministered a vitamin-K antagonist or an antiplatelet agent with selumetinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir/velpatasvir",
+            "description": {
+                "common": "sofosbuvir/velpatasvir will increase the level or effect of dipyridamole by  Other (see comment). Use Caution/Monitor. Velpatasvir is an inhibitor of the drug transporter BCRP. Coadministration may increase systemic exposure of drugs that are BCRP substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of dipyridamole by  Other (see comment). Modify Therapy/Monitor Closely. Stiripentol is a BCRP transport inhibitor. Consider dosage reduction for BCRP substrates if adverse effects are experienced when coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis",
+            "description": {
+                "common": "tafamidis will increase the level or effect of dipyridamole by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tafamidis meglumine",
+            "description": {
+                "common": "tafamidis meglumine will increase the level or effect of dipyridamole by  Other (see comment). Use Caution/Monitor. Tafamidis inhibits breast cancer resistant protein (BCRP) in vitro and may increase exposure of BCRP substrates following tafamidis or tafamidis meglumine administration. Dosage adjustment of these BCRP substrates may be necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor, dipyridamole.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Increased risk of bleeding during concomitant use of medications that increase potential for bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vorapaxar",
+            "description": {
+                "common": "dipyridamole, vorapaxar.\nEither increases effects of the other by anticoagulation. Use Caution/Monitor. Coadministration of anticoagulants, antiplatelets, or other drug affecting coagulation should be monitored periodically due to potential increased risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vortioxetine",
+            "description": {
+                "common": "dipyridamole increases effects of vortioxetine by anticoagulation. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "dipyridamole, warfarin.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Drugs with antiplatelet properties may increase anticoagulation effect of warfarin."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acebutolol",
+            "description": {
+                "common": "dipyridamole, acebutolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atenolol",
+            "description": {
+                "common": "dipyridamole, atenolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "betaxolol",
+            "description": {
+                "common": "dipyridamole, betaxolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bisoprolol",
+            "description": {
+                "common": "dipyridamole, bisoprolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "dipyridamole, carvedilol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celiprolol",
+            "description": {
+                "common": "dipyridamole, celiprolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "devil's claw",
+            "description": {
+                "common": "devil's claw, dipyridamole. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence.ÿ Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "esmolol",
+            "description": {
+                "common": "dipyridamole, esmolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginger",
+            "description": {
+                "common": "ginger, dipyridamole. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ginkgo biloba",
+            "description": {
+                "common": "ginkgo biloba, dipyridamole. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Conflicting evidence.ÿ Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "horse chestnut seed",
+            "description": {
+                "common": "horse chestnut seed, dipyridamole. pharmacodynamic synergism. Minor/Significance Unknown. May prolong bleeding time.  Theoretical. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "labetalol",
+            "description": {
+                "common": "dipyridamole, labetalol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metoprolol",
+            "description": {
+                "common": "dipyridamole, metoprolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "dipyridamole, nadolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nebivolol",
+            "description": {
+                "common": "dipyridamole, nebivolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "penbutolol",
+            "description": {
+                "common": "dipyridamole, penbutolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pindolol",
+            "description": {
+                "common": "dipyridamole, pindolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "dipyridamole, propranolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sotalol",
+            "description": {
+                "common": "dipyridamole, sotalol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "timolol",
+            "description": {
+                "common": "dipyridamole, timolol. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Risk of bradycardia."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "verteporfin",
+            "description": {
+                "common": "dipyridamole decreases effects of verteporfin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Chest pain",
+            "percent": "20"
+        },
+        {
+            "name": "Angina exacerbation",
+            "percent": "19.7"
+        },
+        {
+            "name": "IV",
+            "percent": "15.9"
+        },
+        {
+            "name": "Abnormal ECG",
+            "percent": "12.2"
+        },
+        {
+            "name": "Headache",
+            "percent": "12"
+        },
+        {
+            "name": "IV",
+            "percent": "7.5"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "6.1"
+        },
+        {
+            "name": "ST",
+            "percent": "5"
+        },
+        {
+            "name": "T changes",
+            "percent": "4.6"
+        },
+        {
+            "name": "Abdominal discomfort",
+            "percent": "4.6"
+        },
+        {
+            "name": "oral",
+            "percent": "3.4"
+        },
+        {
+            "name": "Extrasystole",
+            "percent": "2.6"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2.3"
+        },
+        {
+            "name": "IV",
+            "percent": null
+        },
+        {
+            "name": "Hypotension",
+            "percent": null
+        },
+        {
+            "name": "IV",
+            "percent": null
+        },
+        {
+            "name": "Flushing",
+            "percent": null
+        },
+        {
+            "name": "Generalized pain",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "oral",
+            "percent": null
+        },
+        {
+            "name": "Myocardial infarction",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Ventricular arrhythmia",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Bronchospasm",
+            "percent": null
+        },
+        {
+            "name": "rare",
+            "percent": null
+        },
+        {
+            "name": "Dyspnea",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,2026 @@
+{
+    "name": "deferasirox",
+    "comment": "Rx",
+    "other_names": [
+        "Exjade",
+        "Jadenu",
+        "Jadenu Sprinkle"
+    ],
+    "classes": [
+        "Chelators"
+    ],
+    "source": "https://reference.medscape.com/drug/exjade-jadenu-deferasirox-343724",
+    "pregnancy": {
+        "common": [
+            "There are no studies with use in pregnant women to inform drug-associated risks; administration of deferasirox to rats during pregnancy resulted in decreased offspring viability and an increase in renal anomalies in male offspring at doses that were about or less than recommended human dose on a mg/ m² basis; no fetal effects were noted in pregnant rabbits at doses equivalent to human recommended dose on a mg/ m² basis; drug should be used during pregnancy only if potential benefit justifies potential risk to fetus"
+        ],
+        "specific": [
+            {
+                "type": "Contraception",
+                "description": [
+                    "Counsel patients to use non-hormonal method(s) of contraception since drug can render hormonal contraceptives ineffective"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "No data are available regarding presence of drug or its metabolites in human milk, effects on breastfed infant, or on milk production; drug and its metabolites is excreted in rat milk; because many drugs are excreted in human milk and because of potential for serious adverse reactions in nursing infants, a decision should be made whether to discontinue breastfeeding or to discontinue drug, taking into account importance of drug to mother"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": [
+                {
+                    "type": "Renal failure",
+                    "description": [
+                        "Can cause acute renal failure and death, especially with comorbidities and advanced stages of hematologic disorders",
+                        "Evaluate baseline renal function prior to starting or increasing dosing in all patients; therapy is contraindicated in adult and pediatric patients with eGFR <40 mL/min/1.73 m²",
+                        "Measure serum creatinine and determine creatinine clearance in duplicate prior to treatment initiation; monitor renal function at least monthly thereafter",
+                        "If baseline renal impairment or increased risk of acute renal failure exist, monitor renal function weekly for the first month, then at least monthly",
+                        "Reduce starting dose in patients with pre-existing renal disease; during therapy, increase frequency of monitoring and modify dose for patients with an increased risk of renal impairment, including use of concomitant nephrotoxic drugs, and pediatric patients with volume depletion or overchelation",
+                        "Consider dose reduction, interruption, or discontinuation based on increases in serum creatinine"
+                    ]
+                },
+                {
+                    "type": "Hepatic failure",
+                    "description": [
+                        "Can cause hepatic injury including hepatic failure and death",
+                        "Obtain serum transaminases and bilirubin in all patients prior to initiating treatment, every 2 weeks during the first month, and at least monthly thereafter",
+                        "Avoid with severe (Child-Pugh C) hepatic impairment and reduce the dose with moderate (Child Pugh B) hepatic impairment"
+                    ]
+                },
+                {
+                    "type": "Gastrointestinal hemorrhage",
+                    "description": [
+                        "Can cause gastrointestinal (GI) hemorrhages, which may be fatal, especially in elderly patients who have advanced hematologic malignancies and/or low platelet counts",
+                        "Monitor and discontinue for suspected GI ulceration or hemorrhage"
+                    ]
+                }
+            ]
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Estimated GFR <40 ml/min/1.73 m² or serum creatinine >2 x ULN",
+                "Poor performance status and high-risk myelodysplastic syndromes or advanced malignancies",
+                "Platelet counts <50 x10^9/L"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Coadministration with aluminum-containing antacids decreases absorption",
+                "Concomitant cholestyramine (see Dosage Modifications)",
+                "Risk of hepatic failure, some with fatal outcome; most occurred with age >55 yr and with comorbid conditions (eg, liver cirrhosis, multiorgan failure); (see Black Box Warnings)",
+                "Consider dose reduction or closer monitoring of renal and hepatic function, and serum ferritin levels during periods when patients are receiving doses >25 mg/kg/day while their serum ferritin values were <1,000 mcg/L; use minimum effective dose to maintain low iron burden",
+                "Frequency of auditory adverse events irrespective of causality may increase among pediatric patients who receive doses >25 mg/kg/day when serum ferritin is <1,000 mcg/L",
+                "Acute liver injury and failure, including fatal outcomes, have occurred in pediatric; liver failure have occurred in association with acute kidney injury in pediatric patients at risk for overchelation during a volume depleting event; interrupt therapy when acute liver injury or acute kidney injury is suspected and during volume depletion; monitor liver and renal function more frequently in pediatric patients who are receiving doses in the 20-40 mg/kg/day range and when iron burden is approaching normal; use minimum effective dose to achieve and maintain a low iron burden",
+                "Avoid use with severe (Child-Pugh C) hepatic impairment; closely monitor with mild or moderate hepatic impairment and decrease initial dose by 50%",
+                "Consider discontinuation if auditory/ocular disturbances occur",
+                "GI perforation and hemorrhage, including deaths reported, especially in elderly patients who had advanced hematologic malignancies and/or low platelet counts; nonfatal upper GI irritation, ulceration and hemorrhage reported; monitor for signs and symptoms of GI ulceration and hemorrhage during therapy and promptly initiate evaluation and treatment if serious GI adverse event is suspected; risk of gastrointestinal hemorrhage may be increased when administering in combination with drugs that have ulcerogenic or hemorrhagic potential, such as nonsteroidal anti-inflammatory drugs (NSAIDs), corticosteroids, oral bisphosphonates, or anticoagulants; there have been reports of ulcers complicated with gastrointestinal perforation (including fatal outcome; see Black Box Warnings)",
+                "Neutropenia, agranulocytosis, and thrombocytopenia, including fatal events, reported; preexisting hematologic disorders may increase this risk",
+                "Elderly: Monitor closely for toxicity due to the greater frequency of decreased hepatic, renal, and/or cardiac function",
+                "Serious hypersensitivity reactions (eg, anaphylaxis, angioedema) and erythema multiforme reported",
+                "Rashes may occur during treatment; for rashes of mild to moderate severity, therapy may be continued without dose adjustment; rash often resolves spontaneously; in severe cases, interrupt treatment; may consider reintroduction at lower dose after resolution of rash",
+                "Should not reintroduce patients that have experienced previous hypersensitivity reactions on deferasirox products; may cause anaphylactic shock",
+                "Severe cutaneous adverse reactions (SCARs), including Stevens-Johnson syndrome (SJS), toxic epidermal necrolysis (TEN) and drug reaction with eosinophilia and systemic symptoms (DRESS) which could be life- threatening or fatal reported during therapy; cases of multiforme observed; advise patients of signs and symptoms of severe skin reactions, and closely monitor; if any severe skin reactions suspected, discontinue drug immediately and do not reintroduce therapy",
+                "Auditory disturbances (eg, high frequency hearing loss, decreased hearing) and ocular disturbances (lens opacities, cataracts, increased IOP, retinal disorders) reported",
+                "Minimize risk of overchelation of iron by monitoring serum ferritin levels monthly to assess the patient’s response to therapy; when used for nontransfusion-dependent thalassemia, also measure LIC q6Months"
+            ],
+            "specific": [
+                {
+                    "type": "Renal failure (see Black Box Warnings)",
+                    "description": [
+                        "Evaluate renal glomerular and tubular function before initiating therapy or increasing dose; use prediction equations validated for use in adult and pediatric patients to estimate GFR; obtain serum electrolytes and urinalysis in all patients to evaluate renal tubular function",
+                        "Risk of acute renal failure, fatal in some patients and requiring dialysis in others",
+                        "Dose reduction or interruption may be considered if abnormalities occur in levels of markers of renal tubular function and/or as clinically indicated",
+                        "Exercise caution in pediatric patients with eGFR of 40-60 mL/minute/1.73 m²; if treatment is needed use minimum effective dose and monitor renal function frequently; individualize dose titration based on improvement in renal injury; for patients with renal impairment (eGFR 40–60 mL/min/1.73 m²) reduce starting dose by 50%",
+                        "Therapy can cause acute kidney injury including renal failure requiring dialysis that has resulted in fatal outcomes; renal tubular toxicity, including acquired Fanconi Syndrome, reported in patients receiving therapy, most commonly in pediatric patients with beta-thalassemia and serum ferritin levels <1,500 mcg/L",
+                        "In pediatric patients, interrupt therapy during acute illnesses which can cause volume depletion, such as vomiting, diarrhea, or prolonged decreased oral intake, and monitor renal function more frequently; promptly correct fluid deficits to prevent renal injury; resume therapy as appropriate, based on assessments of renal function, when oral intake and volume status are normal",
+                        "Most fatalities reported with advanced stage hematologic disorder",
+                        "Monitor serum Cr level and CBC",
+                        "Closely monitor renal function if CrCl 40-60 mL/min, particularly in cases where there are additional risk factors that may impair renal function (eg, concomitant medications, dehydration, severe infections)",
+                        "Renal tubulopathy reported; majority of reports were in children and adolescents with beta-thalassemia and serum ferritin levels <1500 mcg/L"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "betibeglogene autotemcel",
+            "description": {
+                "common": "betibeglogene autotemcel increases effects of deferasirox by immunosuppressive effects; risk of infection. Avoid or Use Alternate Drug. Discontinue iron chelators at least 7 days before starting conditioning.  Some iron chelators are myelosuppressive. After infusion, avoid use of these iron chelators for 6 months. If iron chelation is needed, consider administration of nonmyelosuppressive iron chelators. Phlebotomy can be used in lieu of iron chelation, when appropriate."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "deferasirox will increase the level or effect of tucatinib by  Other (see comment). Avoid or Use Alternate Drug. Coadministration of tucatinib (a CYP2C8 substrate) with a strong or moderate CYP2C8 inhibitors increases tucatinib plasma concentrations and risk of toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abciximab",
+            "description": {
+                "common": "deferasirox, abciximab. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alendronate",
+            "description": {
+                "common": "deferasirox, alendronate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of alfuzosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "almotriptan",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of almotriptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alosetron",
+            "description": {
+                "common": "deferasirox increases levels of alosetron by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of alprazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of deferasirox by  Other (see comment). Use Caution/Monitor. Avoid combination. Although deferasirox has a lower affinity for aluminum than for iron, do not administer deferasirox with aluminum-containing antacid preparations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amikacin",
+            "description": {
+                "common": "deferasirox, amikacin. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of amiodarone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amlodipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of amlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "anagrelide",
+            "description": {
+                "common": "deferasirox, anagrelide. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithrombin alfa",
+            "description": {
+                "common": "deferasirox, antithrombin alfa. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "antithrombin III",
+            "description": {
+                "common": "deferasirox, antithrombin III. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of aprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "argatroban",
+            "description": {
+                "common": "deferasirox, argatroban. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of aripiprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "armodafinil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of armodafinil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "deferasirox will increase the level or effect of artesunate by  decreasing metabolism. Use Caution/Monitor. Coadministration may increase active artesunate metabolite (DHA) by inhibiting UGT. Monitor for increased adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ascorbic acid",
+            "description": {
+                "common": "deferasirox, ascorbic acid. unknown mechanism. Use Caution/Monitor. Coadministration of deferasirox and ascorbic acid has not been formally studied. Doses up to ascorbic acid 200 mg per day have not been associated with adverse consequences."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "deferasirox increases levels of asenapine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "deferasirox, aspirin. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "deferasirox, aspirin/citric acid/sodium bicarbonate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of atazanavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of atorvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of avanafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "axitinib",
+            "description": {
+                "common": "deferasirox decreases levels of axitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of bazedoxifene/conjugated estrogens by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "beclomethasone, inhaled",
+            "description": {
+                "common": "beclomethasone, inhaled increases toxicity of deferasirox by unspecified interaction mechanism. Use Caution/Monitor. Increases risk for GI ulceration/irritation or GI bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "betamethasone",
+            "description": {
+                "common": "betamethasone, deferasirox. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including corticosteroids."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bivalirudin",
+            "description": {
+                "common": "deferasirox, bivalirudin. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bortezomib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of bortezomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of bosentan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of budesonide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including corticosteroids."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "buspirone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of buspirone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "busulfan",
+            "description": {
+                "common": "deferasirox increases toxicity of busulfan by unspecified interaction mechanism. Modify Therapy/Monitor Closely. Discontinue iron chelating agents well in advance of administration of busulfan to avoid increased exposure to busulfan."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "caffeine",
+            "description": {
+                "common": "deferasirox increases levels of caffeine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of carbamazepine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Caution is advised. Combination use may lead to increased or decreased carbamazepine levels."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbonyl iron",
+            "description": {
+                "common": "deferasirox decreases levels of carbonyl iron by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cholestyramine",
+            "description": {
+                "common": "cholestyramine decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of cholestyramine with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor serum ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cilostazol",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of cilostazol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cinacalcet",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of cinacalcet by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of clarithromycin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clomipramine",
+            "description": {
+                "common": "deferasirox increases levels of clomipramine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clopidogrel",
+            "description": {
+                "common": "deferasirox, clopidogrel. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clozapine",
+            "description": {
+                "common": "deferasirox increases levels of clozapine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of colchicine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of conivaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conjugated estrogens",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of conjugated estrogens by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conjugated estrogens, vaginal",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of conjugated estrogens, vaginal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cortisone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of cortisone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclobenzaprine",
+            "description": {
+                "common": "deferasirox will increase the level or effect of cyclobenzaprine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of cyclosporine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "deferasirox, dabigatran. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dacarbazine",
+            "description": {
+                "common": "deferasirox increases levels of dacarbazine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "deferasirox, dalteparin. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dapsone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dapsone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of darifenacin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of darunavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dasatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dexamethasone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of diazepam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "deferasirox, diclofenac. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac topical",
+            "description": {
+                "common": "deferasirox, diclofenac topical. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dienogest/estradiol valerate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dienogest/estradiol valerate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "deferasirox, diflunisal. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Use ergot alkaloids with caution with less potent CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dihydroergotamine intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Use ergot alkaloids with caution with less potent CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of diltiazem by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "deferasirox, dipyridamole. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dronedarone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duloxetine",
+            "description": {
+                "common": "deferasirox increases levels of duloxetine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of efavirenz by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of eletriptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "deferasirox, enoxaparin. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of eplerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eptifibatide",
+            "description": {
+                "common": "deferasirox, eptifibatide. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Use ergot alkaloids with caution with less potent CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erlotinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of erlotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of erythromycin base by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of erythromycin ethylsuccinate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of erythromycin lactobionate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of erythromycin stearate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of estradiol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens conjugated synthetic",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of estrogens conjugated synthetic by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens esterified",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of estrogens esterified by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estropipate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of estropipate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ethinylestradiol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etidronate",
+            "description": {
+                "common": "deferasirox, etidronate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "deferasirox, etodolac. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etonogestrel",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of etonogestrel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etoposide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of etoposide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of etravirine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exemestane",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of exemestane by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "felodipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of felodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "deferasirox, fenoprofen. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferric maltol",
+            "description": {
+                "common": "deferasirox decreases levels of ferric maltol by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous fumarate",
+            "description": {
+                "common": "deferasirox decreases levels of ferrous fumarate by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous gluconate",
+            "description": {
+                "common": "deferasirox decreases levels of ferrous gluconate by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ferrous sulfate",
+            "description": {
+                "common": "deferasirox decreases levels of ferrous sulfate by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fesoterodine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of fesoterodine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fludrocortisone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of fludrocortisone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "deferasirox, flurbiprofen. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluvoxamine",
+            "description": {
+                "common": "deferasirox will increase the level or effect of fluvoxamine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fondaparinux",
+            "description": {
+                "common": "deferasirox, fondaparinux. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of fosamprenavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of fosaprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of potent UGT inducers with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gentamicin",
+            "description": {
+                "common": "deferasirox, gentamicin. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "green tea",
+            "description": {
+                "common": "green tea, deferasirox. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase risk of bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "deferasirox will increase the level or effect of haloperidol by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "deferasirox, heparin. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of hydrocortisone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydroxyprogesterone caproate (DSC)",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of hydroxyprogesterone caproate (DSC) by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibandronate",
+            "description": {
+                "common": "deferasirox, ibandronate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "deferasirox, ibuprofen. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "deferasirox, ibuprofen IV. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of imatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of indinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "deferasirox, indomethacin. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iron dextran complex",
+            "description": {
+                "common": "deferasirox decreases levels of iron dextran complex by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "iron sucrose",
+            "description": {
+                "common": "deferasirox decreases levels of iron sucrose by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isradipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of isradipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of itraconazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ixabepilone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ixabepilone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ketoconazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "deferasirox, ketoprofen. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "deferasirox, ketorolac. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of lapatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of levoketoconazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "linagliptin",
+            "description": {
+                "common": "deferasirox will increase the level or effect of linagliptin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Use of alternative treatments is strongly recommended when linagliptin is to be administered with a CYP3A4 inducer"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of lopinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "loratadine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of loratadine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of lovastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of maraviroc by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "deferasirox, meclofenamate. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "deferasirox, mefenamic acid. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "deferasirox, meloxicam. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mestranol",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of mestranol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methadone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of methadone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylprednisolone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of methylprednisolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mexiletine",
+            "description": {
+                "common": "deferasirox will increase the level or effect of mexiletine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirtazapine",
+            "description": {
+                "common": "deferasirox increases levels of mirtazapine by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mometasone inhaled",
+            "description": {
+                "common": "mometasone inhaled increases toxicity of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Corticosteroids increase risk of gastrointestinal ulceration/irritation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mometasone topical",
+            "description": {
+                "common": "mometasone topical decreases effects of deferasirox by unspecified interaction mechanism. Use Caution/Monitor. Due to the risk for GI bleeding and irritation/ulceration associated with deferasirox, exercise caution when using with corticosteroids, that can also cause gastrointestinal ulceration and/or bleeding."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "montelukast",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of montelukast by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "deferasirox, nabumetone. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "deferasirox, naproxen. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nelfinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nicardipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nifedipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nifedipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nilotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nimodipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nimodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nisoldipine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of nisoldipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "olanzapine",
+            "description": {
+                "common": "deferasirox will increase the level or effect of olanzapine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ondansetron by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "deferasirox, oxaprozin. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of paclitaxel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of paclitaxel protein bound by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of pazopanib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of potent UGT inducers with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of potent UGT inducers with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "deferasirox, piroxicam. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polysaccharide iron",
+            "description": {
+                "common": "deferasirox decreases levels of polysaccharide iron by inhibition of GI absorption. Applies only to oral form of both agents. Use Caution/Monitor. Deferasirox chelates iron."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prasugrel",
+            "description": {
+                "common": "deferasirox, prasugrel. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of prednisone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of propafenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "deferasirox increases levels of propranolol by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of quetiapine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of quinidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ramelteon",
+            "description": {
+                "common": "deferasirox increases levels of ramelteon by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ranolazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rasagiline",
+            "description": {
+                "common": "deferasirox increases levels of rasagiline by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of repaglinide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Consider repaglinide dose reduction and carefully monitor blood glucose levels when repaglinide is used concomitantly with deferasirox."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of potent UGT inducers with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "risedronate",
+            "description": {
+                "common": "deferasirox, risedronate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir decreases levels of deferasirox by Other (see comment). Use Caution/Monitor. \nComment: Avoid concomitant use of potent UGT inducers with deferasirox. If co-administration is required then consider increasing initial dose of deferasirox to 30 mg/kg and monitor ferritin levels and clinical response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of romidepsin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ropinirole",
+            "description": {
+                "common": "deferasirox increases levels of ropinirole by affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of saquinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selexipag",
+            "description": {
+                "common": "deferasirox will increase the level or effect of selexipag by  decreasing metabolism. Modify Therapy/Monitor Closely. Reduce selexipag dose to once daily if coadministered with moderate CYP2C8 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sildenafil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of sildenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of silodosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "simvastatin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of simvastatin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "streptomycin",
+            "description": {
+                "common": "deferasirox, streptomycin. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of sufentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "deferasirox, sulindac. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of sunitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of deferasirox with potentially nephrotoxic drugs, including tacrolimus, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tadalafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tamoxifen by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tazemetostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of temsirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "theophylline",
+            "description": {
+                "common": "deferasirox will increase the level or effect of theophylline by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor. Avoid the concomitant use of theophylline with deferasirox. If you must co-administer theophylline and deferasirox, monitor theophylline concentration and consider theophylline dose modification."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticlopidine",
+            "description": {
+                "common": "deferasirox, ticlopidine. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tiludronate",
+            "description": {
+                "common": "deferasirox, tiludronate. Other (see comment). Use Caution/Monitor. \nComment:  Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tinidazole",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tipranavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tirofiban",
+            "description": {
+                "common": "deferasirox, tirofiban. Other (see comment). Use Caution/Monitor. \nComment: Gastric ulceration and GI bleeding have been reported in patients taking deferasirox, use caution when coadministering with other drugs known to increase the risk of peptic ulcers or gastric hemorrhage including anticoagulants."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tizanidine",
+            "description": {
+                "common": "deferasirox will increase the level or effect of tizanidine by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin",
+            "description": {
+                "common": "deferasirox, tobramycin. Other (see comment). Use Caution/Monitor. \nComment:  Acute renal failure has been reported during treatment with deferasirox. Coadministration of deferasirox with other potentially nephrotoxic drugs, including aminoglycosides, may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients who are receiving deferasirox and nephrotoxic drugs concomitantly."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin inhaled",
+            "description": {
+                "common": "tobramycin inhaled and deferasirox both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely. Avoid concurrent or sequential use to decrease risk for ototoxicity"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "deferasirox, tolmetin. Other (see comment). Use Caution/Monitor. \nComment: Combination may increase GI bleeding, ulceration and irritation. Use with caution."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolterodine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tolterodine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of tolvaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of trazodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamcinolone acetonide injectable suspension",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of triamcinolone acetonide injectable suspension by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of ubrogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Dose adjustment is recommended with concomitant use of ubrogepant and moderate and weak CYP3A4 inducers. (see Dosage Modifications)"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vancomycin",
+            "description": {
+                "common": "deferasirox, vancomycin. Other (see comment). Use Caution/Monitor. \nComment: Coadministration of deferasirox with potentially nephrotoxic drugs, including vancomycin may increase the risk of this toxicity. Monitor serum creatinine and/or creatinine clearance in patients."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of vardenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of verapamil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of vinblastine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of vincristine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of vincristine liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinorelbine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of vinorelbine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zileuton",
+            "description": {
+                "common": "deferasirox will increase the level or effect of zileuton by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zolmitriptan",
+            "description": {
+                "common": "deferasirox will increase the level or effect of zolmitriptan by  affecting hepatic enzyme CYP1A2 metabolism. Use Caution/Monitor. Avoid concomitant use, but if necessary consider decreasing zolmitriptan dose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zolpidem",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of zolpidem by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zonisamide",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of zonisamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cevimeline",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of cevimeline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of docetaxel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "donepezil",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of donepezil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "doxorubicin liposomal",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of doxorubicin liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dutasteride",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of dutasteride by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "galantamine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of galantamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "imipramine",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of imipramine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxybutynin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of oxybutynin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pioglitazone",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of pioglitazone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "deferasirox will decrease the level or effect of saxagliptin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Serum creatinine increase",
+            "percent": "7-38"
+        },
+        {
+            "name": "dose related",
+            "percent": "21-28"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "11-23"
+        },
+        {
+            "name": "Nausea",
+            "percent": "10-21"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "12-20"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "19"
+        },
+        {
+            "name": "Proteinuria",
+            "percent": "19"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "16"
+        },
+        {
+            "name": "Headache",
+            "percent": "14"
+        },
+        {
+            "name": "Cough",
+            "percent": "13"
+        },
+        {
+            "name": "Nasopharyngitis",
+            "percent": "11"
+        },
+        {
+            "name": "Pharyngolaryngeal pain",
+            "percent": "11"
+        },
+        {
+            "name": "Influenza",
+            "percent": "8-11"
+        },
+        {
+            "name": "Rash",
+            "percent": "10"
+        },
+        {
+            "name": "Respiratory tract infection",
+            "percent": "9"
+        },
+        {
+            "name": "Bronchitis",
+            "percent": "2-8"
+        },
+        {
+            "name": "ALT increased",
+            "percent": "6-7"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "6"
+        },
+        {
+            "name": "back pain",
+            "percent": "6"
+        },
+        {
+            "name": "Acute tonsillitis",
+            "percent": "6"
+        },
+        {
+            "name": "Rhinitis",
+            "percent": "5"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "4"
+        },
+        {
+            "name": "Ear infection",
+            "percent": "4"
+        },
+        {
+            "name": "Transaminitis",
+            "percent": null
+        },
+        {
+            "name": "Urticaria",
+            "percent": null
+        },
+        {
+            "name": "Anaphylaxis",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "Cytopenias",
+            "percent": null
+        },
+        {
+            "name": "including agranulocytosis",
+            "percent": null
+        },
+        {
+            "name": "neutropenia and thrombocytopenia",
+            "percent": null
+        },
+        {
+            "name": "leukocytoclastic vasculitis",
+            "percent": null
+        },
+        {
+            "name": "Skin and subcutaneous tissue disorders",
+            "percent": null
+        },
+        {
+            "name": "Leukocytoclastic vasculitis",
+            "percent": null
+        },
+        {
+            "name": "urticaria",
+            "percent": null
+        },
+        {
+            "name": "alopecia",
+            "percent": null
+        },
+        {
+            "name": "Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "Immune system disorders",
+            "percent": null
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": null
+        },
+        {
+            "name": "including anaphylaxis and angioedema",
+            "percent": null
+        },
+        {
+            "name": "Renal and urinary disorders",
+            "percent": null
+        },
+        {
+            "name": "Acute kidney injury",
+            "percent": null
+        },
+        {
+            "name": "including acute renal failure requiring dialysis",
+            "percent": null
+        },
+        {
+            "name": "and renal tubular toxicity including Fanconi syndrome",
+            "percent": null
+        },
+        {
+            "name": "renal tubular necrosis",
+            "percent": null
+        },
+        {
+            "name": "tubulointerstitial nephritis",
+            "percent": null
+        },
+        {
+            "name": "Hepatobiliary disorders",
+            "percent": null
+        },
+        {
+            "name": "Hepatic failure",
+            "percent": null
+        },
+        {
+            "name": "acute pancreatitis with and without underlying biliary conditions",
+            "percent": null
+        },
+        {
+            "name": "Gastrointestinal disorders",
+            "percent": null
+        },
+        {
+            "name": "GI perforation and hemorrhage",
+            "percent": null
+        },
+        {
+            "name": "Hematology",
+            "percent": null
+        },
+        {
+            "name": "Hematuria",
+            "percent": null
+        },
+        {
+            "name": "Endocrine",
+            "percent": null
+        },
+        {
+            "name": "Hypokalemia",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,2080 @@
+{
+    "name": "chloramphenicol",
+    "comment": "Rx",
+    "other_names": [
+        "Chloramphenicol IV",
+        "Chloromycetin"
+    ],
+    "classes": [
+        "Antibiotics",
+        "Other"
+    ],
+    "source": "https://reference.medscape.com/drug/chloramphenicol-iv-chloromycetin-342554",
+    "pregnancy": {
+        "common": [
+            "Pregnancy Category: C",
+            "Lactation: enters breast milk; discontinue drug or do not nurse"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: enters breast milk; discontinue drug or do not nurse"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Serious and fatal blood dyscrasias, including aplastic anemia, hypoplastic anemia, thrombocytopenia, and granulocytopenia, have occurred after short-term and prolonged therapy",
+                "Monitor CBC frequently in all patients. Use only in serious infections"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity",
+                "Oral or topical use",
+                "Bacterial prophylaxis",
+                "Viral infections"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Avoid, if possible, repeated courses of chloramphenicol treatment",
+                "Do not continue treatment longer than required to cure the disease with little or no risk of relapse of the disease",
+                "Impaired liver or kidney function may cause excessive blood levels of the drug at recommended dose; adjust dosage accordingly; preferably determine blood concentration at appropriate intervals",
+                "The use of antibiotics may result in overgrowth of nonsusceptible organisms, including fungi; take appropriate measures if nonsusceptible organisms appear during therapy",
+                "Gray syndrome reported in premature and neonate; characterized by abdominal distension with or without emesis, progressive pallid cyanosis, vasomotor collapse that is frequently accompanied by irregular respiration, death within a few hours of onset of these symptoms; may be associated with serum levels >50 mcg/mL after repeated doses"
+            ],
+            "specific": [
+                {
+                    "type": "Blood dyscrasias",
+                    "description": [
+                        "Serious and fatal blood dyscrasias (aplastic anemia, thrombocytopenia, and granulocytopenia known to occur after administration of chloramphenicol",
+                        "Irreversible type of marrow depression leading to aplastic anemia with a high rate of mortality is characterized by appearance weeks or months after therapy of bone marrow aplastic or hypoplasia",
+                        "Peripherally, pancytopenia is most often observed but in small number of cases only one or two of the three major cell types (erythrocytes, leukocytes, platelets) may be depressed",
+                        "A reversible type of bone marrow depression, which is dose-related, may occur; this type of marrow depression is characterized by vacuolization of erythroid cells, reduction of reticulocytes and leukopenia, and responds promptly to withdrawal of therapy",
+                        "Exact determination of risk of serious and fatal blood dyscrasias not possible because of lack of accurate information regarding size of population at risk, total number of drug-associated dyscrasias, and total number of non-drug associated dyscrasias"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of alfuzosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "aprepitant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of aprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of avanafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "bromocriptine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of bromocriptine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of conivaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of eletriptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of eplerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "fosaprepitant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fosaprepitant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lonafarnib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Lonafarnib is a sensitive CYP3A4 substrate. Coadministration with strong or moderate CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "chloramphenicol increases levels of lurasidone by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Coadministration of lurasidone and strong CYP3A4 inhibitors is contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of mavacamten by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated. Strong CYP3A4 inhibitors may increase mavacamten systemic exposure, resulting in heart failure due to systolic dysfunction. "
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "naloxegol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of naloxegol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ubrogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of voclosporin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abemaciclib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with chloramphenicol necessary, reduce dose of abemaciclib to 100 mg PO BID in patients on either of recommended starting doses whether 200 mg or 150 mg BID; In patients who have had already had a dose reduction to 100 mg BID due to adverse reactions, further reduce dose of abemaciclib to 50 mg PO BID;  discontinue abemaciclib if patient unable to tolerate 50 mg BID; if chloramphenicol discontinued, increase dose of abemaciclib to original dose after 3-5 half-lives of chloramphenicol"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "acalabrutinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of acalabrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "adagrasib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of adagrasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of adagrasib, a CYP3A4 substrate, with strong CYP3A4 inhibitors until adagrasib concentrations have reached steady-state (after ~8 days). If steady state is not reached, concomitant use of strong CYP3A4 inhibitors will increase adagrasib concentrations and risk of its toxicities"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ado-trastuzumab emtansine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ado-trastuzumab emtansine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alprazolam",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of alprazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amlodipine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of amlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aripiprazole",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of aripiprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of atazanavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "avapritinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of avapritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of avapritinib with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "BCG vaccine live",
+            "description": {
+                "common": "chloramphenicol decreases effects of BCG vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bedaquiline",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of bedaquiline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "benzhydrocodone/acetaminophen",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of benzhydrocodone/acetaminophen by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with strong CYP3A4 inhibitors may increase hydrocodone (benzhydrocodone is prodrug of hydrocodone) plasma concentrations and can result in potentially fatal respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brexpiprazole",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of brexpiprazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brigatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of brigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of buprenorphine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "buprenorphine transdermal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of buprenorphine transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cabozantinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cabozantinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cariprazine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cariprazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cefoxitin",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefoxitin by pharmacodynamic antagonism. Avoid or Use Alternate Drug. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "chloramphenicol, ceritinib.\nEither increases toxicity of the other by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration necessary, reduce dose of crizotinib to 250 mg once daily; resume original crizotinib dose after discontinuing ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "chloramphenicol, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cobicistat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cobimetinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cobimetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of colchicine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "copanlisib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of copanlisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of crizotinib by  aldehyde dehydrogenase inhibition. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cyclosporine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daclatasvir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of daclatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of daridorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darifenacin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of darifenacin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of darunavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dasatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of dasatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, chloramphenicol.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deflazacort",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of deflazacort by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Decrease dose by one third if combination cannot be avoided"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of docetaxel by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of doxorubicin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of dronedarone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elacestrant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of elacestrant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elbasvir/grazoprevir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of elbasvir/grazoprevir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of eliglustat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of encorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concomitant use of a strong CYP3A4 inhibitor is unavoidable, reduce encorafenib dose to one-third of the dose (eg, reduce from 450 mg/day to 150 mg/day). After discontinuing the inhibitor for 3-5 elimination half-lives, resume previous encorafenib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "entrectinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of entrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of strong CYP3A4 inhibitors with entrectinib, a CYP3A4 substrate. If coadministration unavoidable, reduce entrectinib dose to 100 mg/day for patients aged 12 y or older with BSA >1.50m2. Resume previous entrectinib dose after discontinuing strong CYP3A inhibitor for 3-5 elimination half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of erdafitinib by  affecting hepatic enzyme CYP2E1 metabolism. Avoid or Use Alternate Drug. If unable to avoid coadministration with strong CYP3A4 inhibitors, monitor closely for adverse reactions and consider decreasing dose accordingly. If strong CYP3A4 inhibitor is discontinued, consider increasing erdafitinib dose in the absence of any drug-related toxicities."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erlotinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of erlotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eszopiclone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of eszopiclone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fedratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid fedratinib coadministration with strong CYP3A4 inhibitors, decrease fedratinib dose to 200 mg/day. If CYP3A4 inhibitor discontinued, increase fedratinib dose to 300 mg/day for 2 weeks, and then 400 mg/day thereafter as tolerated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "chloramphenicol will decrease the level or effect of fexinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unable to avoid coadministration, monitor fexinidazole for decreased efficacy owing to decreased plasma concentrations of active M1 and M2 metabolites. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fluticasone inhaled",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fluticasone inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "gilteritinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of gilteritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternatives to any strong CYP3A4 inhibitor when coadministered with gilteritinib. If such a combination cannot be avoided, closely monitor for gilteritinib-related adverse effects. Interrupt and reduce gilteritinib dosage in patients with serious or life-threatening toxicity."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glasdegib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of glasdegib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Consider alternate therapies that are not strong CYP3A inhibitors or monitor for increased risk of adverse effects, including QTc interval prolongation."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "guanfacine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of guanfacine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "haloperidol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of haloperidol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibrutinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ibrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infigratinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of infigratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of irinotecan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "irinotecan liposomal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of irinotecan liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. UGT1A1 inhibitors decrease irinotecan metabolism"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ivosidenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ixabepilone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ixabepilone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lapatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of larotrectinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration of larotrectinib with strong CYP3A4 inhibitors is unavoidable, reduce larotrectinib dose by 50%. Resume prior larotrectinib dose once CYP3A4 inhibitor discontinued for 3-5 half-lives."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lefamulin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lefamulin with strong CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lemborexant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lemborexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lemborexant with moderate or strong CYP3A inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of leniolisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levomilnacipran",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of levomilnacipran by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lorlatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministering lorlatinib with strong CYP3A inhibitors. If unavoidable, reduce lorlatinib dose by 25 mg/day. If strong CYP3A inhibitor discontinued, increase to previous lorlatinib (dose after 3 plasma half-lives of strong CYP3A inhibitor). See monograph for further details. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lumacaftor/ivacaftor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lurbinectedin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lurbinectedin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of mefloquine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Potential for increased toxicity. Avoid coadministration during and for 15 weeks after discontinuing mefloquine. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "chloramphenicol decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midostaurin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of midostaurin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of mifepristone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mobocertinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of mobocertinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of nilotinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nisoldipine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of nisoldipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olaparib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of olaparib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of omaveloxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unavoidable, reduce omaveloxolone dose to 50 mg/day. Closely monitor and discontinue if adverse effects emerge."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ombitasvir/paritaprevir/ritonavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palbociclib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of palbociclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pazopanib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pemigatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pemigatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pemigatinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pemigatinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pexidartinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pexidartinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors is unavoidable, reduce pexidartinib dose (refer to drug monograph dosage modifications). After discontinuing the CYP3A4 inhibitor for 3 elimination half-lives, may resume previous pexidartinib dose."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimavanserin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pimavanserin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ponatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If concurrent use cannot be avoided, reduce ponatinib dose to next lower dose level (45 mg to 30 mg; 30 mg to 15 mg; 15 mg to 10 mg); if  patient is taking ponatinib 10 mg once daily prior to concurrent use, avoid use of chloramphenicol and consider alternative therapy; after chloramphenicol discontinued for 3 to 5 half-lives, resume dose of ponatinib tolerated prior to starting chloramphenicol"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pralsetinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of pralsetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quetiapine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of quetiapine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ranolazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "red yeast rice",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of red yeast rice by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. May increase creatine kinase levels and increase risk of myopathy or rhabdomyolysis; red yeast rice contains monocolin K (reportedly identical to lovastatin)"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "regorafenib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of regorafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ribociclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If a strong CYP3A inhibitor must be coadministered with ribociclib, reduce the ribociclib starting dose to 400 mg/day."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of rimegepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ritonavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, chloramphenicol.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ruxolitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ruxolitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Reduce ruxolitinib dosage during coadministration with chloramphenicol in patients with myelofibrosis (MF) or polycythemia vera (PV); no dose adjustments necessary for patients with graft-versus-host disease"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ruxolitinib topical",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ruxolitinib topical by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Reduce ruxolitinib dosage during coadministration with chloramphenicol in patients with myelofibrosis (MF) or polycythemia vera (PV); no dose adjustments necessary for patients with graft-versus-host disease"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of saxagliptin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "selumetinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of selumetinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with strong or moderate CYP3A4 inhibitors cannot be avoided, reduce selumetinib dosage (refer to selumetinib monograph for further information). After discontinuation of the strong or moderate CYP3A4 inhibitor for 3 elimination half-lives, resume selumetinib dose that was taken before initiating the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sildenafil",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sildenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of siponimod by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of siponimod with a moderate or strong CYP3A4 inhibitor PLUS a moderate or strong CYP2C9 inhibitor is not recommended."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sonidegib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sonidegib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sparsentan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sparsentan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If unavoidable, interrupt treatment with sparsentan. When resuming sparsentan, consider dose titration. "
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sufentanil",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sufentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sunitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "suvorexant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of suvorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tamsulosin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tamsulosin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tazemetostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of tazemetostat with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of temsirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tezacaftor",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tezacaftor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tofacitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tofacitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolterodine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tolterodine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tolvaptan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "toremifene",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of toremifene by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of trabectedin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trazodone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of trazodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "typhoid vaccine live",
+            "description": {
+                "common": "chloramphenicol decreases effects of typhoid vaccine live by pharmacodynamic antagonism. Contraindicated. Wait until Abx Tx complete to administer live bacterial vaccine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "umeclidinium bromide/vilanterol inhaled",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of umeclidinium bromide/vilanterol inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vemurafenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of venetoclax by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration with a strong CYP3A inhibitor at initiation and during the ramp-up phase in patients with CLL/SLL is contraindicated. In CLL/SLL patients taking a steady daily dosage (after ramp-up phase), consider an alternant or adjust venetoclax dosage and closely monitor for adverse reactions. In AML patients, adjust venetoclax dosage and closely monitor for adverse reactions. Resume venetoclax dosage that was used before initiating the strong CYP3A inhibitor 2-3 days after discontinuing of the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilanterol/fluticasone furoate inhaled",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vilanterol/fluticasone furoate inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vilazodone",
+            "description": {
+                "common": "chloramphenicol increases levels of vilazodone by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inhibitors may increase vilazodone plasma levels by 50% - Reduce daily dose  to 20 mg."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vinblastine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vincristine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vincristine liposomal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vorapaxar",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vorapaxar by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abrocitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of abrocitinib by  affecting hepatic enzyme CYP2C19 metabolism. Modify Therapy/Monitor Closely. Start abrocitinib 50 mg qDay when coadministered with CYP2C19 inhibitors. If adequate response not achieved after 12 weeks, may increase to 100 mg qDay. Discontinue if inadequate response after dosage increase."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of apalutamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. No initial dose adjustment"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "artemether/lumefantrine",
+            "description": {
+                "common": "chloramphenicol will decrease the level or effect of artemether/lumefantrine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Recommended atogepant dosage is 10 mg PO qDay when coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "axitinib",
+            "description": {
+                "common": "chloramphenicol increases levels of axitinib by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bazedoxifene/conjugated estrogens",
+            "description": {
+                "common": "chloramphenicol will decrease the level or effect of bazedoxifene/conjugated estrogens by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of belzutifan by  affecting hepatic enzyme CYP2C19 metabolism. Modify Therapy/Monitor Closely. Belzutifan is a CYP2C19 substrate. Coadministration with CYP2C19 inhibitors may increase incidence or severity of adverse effects. Monitor for anemia and hypoxia and reduce belzutifan dose as recommended. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bortezomib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of bortezomib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of bosentan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cannabidiol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cannabidiol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Consider reducing the cannabidiol dose when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capmatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of capmatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ceftriaxone",
+            "description": {
+                "common": "chloramphenicol decreases effects of ceftriaxone by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "citalopram",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of citalopram by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cocaine topical by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conjugated estrogens, vaginal",
+            "description": {
+                "common": "chloramphenicol increases levels of conjugated estrogens, vaginal by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diazepam intranasal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of diazepam intranasal by  affecting hepatic enzyme CYP2C19 metabolism. Use Caution/Monitor. Strong or moderate CYP2C19 inhibitors may decrease rate of diazepam elimination, thereby increasing adverse reactions to diazepam."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doravirine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of doravirine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of doravirine and CYP3A4 inhibitors may increase plasma concentrations and toxicities of doravirine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronabinol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of dronabinol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of duvelisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with a strong CYP3A4 inhibitor increases duvelisib AUC, which may increase the risk of duvelisib toxicities. Reduce duvelisib dose to 15 mg BID when coadministered with a strong CYP3A4 inhibitor. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of elagolix by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration of elagolix 200 mg BID with strong CYP3A inhibitors for >1 month is not recommended. Limit elagolix dose to 150 mg qDay and CYP3A inhibitor duration of use to 6 months if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eluxadoline",
+            "description": {
+                "common": "chloramphenicol increases levels of eluxadoline by affecting hepatic enzyme CYP2C19 metabolism. Use Caution/Monitor. As a precautionary measure due to incomplete information on the metabolism of eluxadoline, use caution when coadministered with strong CYP2C19 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enfortumab vedotin",
+            "description": {
+                "common": "chloramphenicol increases toxicity of enfortumab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Enfortumab vedotin is an antibody-drug conjugate that releases monomethylauristatin E (MMAE) via proteolytic cleavage. MMAE is primarily metabolized by CYP3A4 in vitro. Coadministration with strong CYP3A4 inhibitors may increase free MMAE exposure, which may increase the incidence or severity of toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "escitalopram",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of escitalopram by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estradiol",
+            "description": {
+                "common": "chloramphenicol increases levels of estradiol by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens conjugated synthetic",
+            "description": {
+                "common": "chloramphenicol increases levels of estrogens conjugated synthetic by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estrogens esterified",
+            "description": {
+                "common": "chloramphenicol increases levels of estrogens esterified by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "estropipate",
+            "description": {
+                "common": "chloramphenicol increases levels of estropipate by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. May increase side effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethinylestradiol",
+            "description": {
+                "common": "chloramphenicol will decrease the level or effect of ethinylestradiol by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fentanyl intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. If coadministration of CYP3A4 inhibitors with fentanyl is necessary, monitor patients for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fentanyl transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. If coadministration of CYP3A4 inhibitors with fentanyl is necessary, monitor patients for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fentanyl transmucosal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. If coadministration of CYP3A4 inhibitors with fentanyl is necessary, monitor patients for respiratory depression and sedation at frequent intervals and consider fentanyl dose adjustments until stable drug effects are achieved"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flibanserin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of flibanserin by  affecting hepatic enzyme CYP2C19 metabolism. Modify Therapy/Monitor Closely. Coadministration of flibanserin with strong CYP2C19 inhibitors may increase flibanserin exposure and increase the risk of hypotension, syncope, and CNS depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fluticasone furoate",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fluticasone furoate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Strong CYP3A4 inhibitors may increase fluticasone systemic exposure"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "chloramphenicol increases levels of fosphenytoin by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of fostamatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gefitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of gefitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrocodone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of hydrocodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of idelalisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ifosfamide",
+            "description": {
+                "common": "ifosfamide, chloramphenicol.\nEither increases toxicity of the other by pharmacodynamic synergism. Use Caution/Monitor. Ifosfamide may enhance the toxicities of myelosuppressive agents. Monitor for increased risk of myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of istradefylline by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Do not exceed istradefylline 20 mg/day if coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ivacaftor by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce ivacaftor dose if coadministered with strong CYP3A4 inhibitors. See specific ivacaftor-containing product for precise dosage modification."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levamlodipine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of levamlodipine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with moderate and strong CYP3A inhibitors results in increased systemic exposure to amlodipine and may require dose reduction. Monitor for symptoms of hypotension and edema when amlodipine is coadministered with CYP3A inhibitors to determine the need for dose adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levonorgestrel oral/ethinylestradiol/ferrous bisglycinate",
+            "description": {
+                "common": "chloramphenicol will decrease the level or effect of levonorgestrel oral/ethinylestradiol/ferrous bisglycinate by  altering intestinal flora. Applies only to oral forms of hormone. Low risk of contraceptive failure. Use Caution/Monitor. Antibiotics may decrease hormonal contraceptive efficacy."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "chloramphenicol increases levels of lomitapide by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lomitapide dose should not exceed 30 mg/day."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumateperone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lumateperone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce lumateperone dose to 10.5 mg/day if coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lumefantrine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of lumefantrine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "chloramphenicol increases levels of maraviroc by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Potential for increased toxicity. Adjust maraviroc dose to 150mg BID."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of strong CYP3A4 inhibitors with midazolam intranasal causes higher midazolam systemic exposure, which may prolong sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of midazolam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of strong CYP3A4 inhibitors with midazolam intranasal causes higher midazolam systemic exposure, which may prolong sedation."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mirvetuximab soravtansine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of mirvetuximab soravtansine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with strong CYP3A4 inhibitors may increase unconjugated DM4 (a CYP3A4 substrate and the cytotoxic component of the antibody drug conjugate for mirvetuximab soravtansine) exposure, which may increase the risk of adverse reactions. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "montelukast",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of montelukast by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of nafcillin by pharmacodynamic antagonism. Use Caution/Monitor. Bacteriostatic antibiotics may interfere with the bactericidal actions of penicillins."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of naldemedine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oliceridine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of oliceridine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If concomitant use is necessary, may require less frequent oliceridine dosing. Closely monitor for respiratory depression and sedation and titrate subsequent doses accordingly. If inhibitor is discontinued, consider increase oliceridine dosage until stable drug effects are achieved. Monitor for signs of opioid withdrawal. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "osilodrostat",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of osilodrostat by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce dose of osilodrostat, a CYP3A4 substrate, by half when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxacillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of oxacillin by pharmacodynamic antagonism. Use Caution/Monitor. Bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxycodone",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of oxycodone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of paclitaxel protein bound by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paricalcitol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of paricalcitol by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "chloramphenicol increases levels of pentobarbital by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "chloramphenicol increases levels of phenobarbital by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "chloramphenicol increases levels of phenytoin by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piperacillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of piperacillin by pharmacodynamic antagonism. Use Caution/Monitor. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polatuzumab vedotin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of polatuzumab vedotin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Polatuzumab undergoes catabolism to small peptides, amino acids, monomethyl auristatin E (MMAE), and unconjugated MMAE-related catabolites. MMAE is a CYP3A4 substrate. Coadministration of polatuzumab vedotin with a strong CYP3A4 inhibitor may increase unconjugated MMAE AUC, which may increase polatuzumab vedotin toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "chloramphenicol increases levels of primidone by decreasing metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "progesterone, natural",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of progesterone, natural by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of repaglinide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ripretinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ripretinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration with a strong CYP3A inhibitor will increase systemic exposure to ripretinib and its active metabolite (DP-5439), which may increase risk of adverse reactions."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rivaroxaban",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of rivaroxaban by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of romidepsin by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of saquinavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "selpercatinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of selpercatinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate/magnesium oxide/anhydrous citric acid",
+            "description": {
+                "common": "chloramphenicol decreases effects of sodium picosulfate/magnesium oxide/anhydrous citric acid by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sofosbuvir/velpatasvir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sofosbuvir/velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sufentanil SL",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of sufentanil SL by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Coadministration of sufentanil SL with any CYP3A4 inhibitor may increase sufentanil plasma concentration, and, thereby increase or prolonged adverse effects, including potentially fatal respiratory depression."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus ointment",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tacrolimus ointment by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tasimelteon",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tasimelteon by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terbinafine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of terbinafine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tinidazole",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of tinidazole by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tisotumab vedotin",
+            "description": {
+                "common": "chloramphenicol increases levels of tisotumab vedotin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tisotumab vedotin?s active metabolite (MMAE) is a CYP3A4 substrate. Coadministration with strong CYP3A4 inhibitors may increase unconjugated MMAE systemic exposure and increase risk of adverse effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ulipristal",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of ulipristal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "upadacitinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of upadacitinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Caution if upadacitinib is coadministered with strong CYP3A4 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "valbenazine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of valbenazine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce valbenazine dose when coadministered with a strong CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vardenafil",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vardenafil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Vardenafil dose may need to be reduced if coadministered with moderate or strong CYP3A4 inhibitors "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "velpatasvir",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of velpatasvir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "venlafaxine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of venlafaxine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of verapamil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vinorelbine",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of vinorelbine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of warfarin by  Other (see comment). Use Caution/Monitor. Warfarin's less potent R-enantiomer is metabolized in part by CYP3A4 (and also CYP1A2 and CYP2C19). Monitor INR more frequently if coadministered with inhibitors of these isoenzymes and adjust warfarin dose if needed. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zanubrutinib",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of zanubrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce zanubrutinib (a CYP3A4 substrate) to 80 mg PO BID when coadministered with a moderate CYP3A4 inhibitor. Interrupt dose as recommended for adverse reactions. After discontinuing the CYP3A4 inhibitor, resume previous zanubrutinib dose. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zolpidem",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of zolpidem by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Consider reducing the zolpidem dose when zolpidem is given with a CYP3A4 inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zonisamide",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of zonisamide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "chloramphenicol increases levels of amobarbital by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "amoxicillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of amoxicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ampicillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of ampicillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aztreonam",
+            "description": {
+                "common": "chloramphenicol decreases effects of aztreonam by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "chloramphenicol increases levels of butabarbital by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "chloramphenicol increases levels of butalbital by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefaclor",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefaclor by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefadroxil",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefadroxil by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefamandole",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefamandole by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefazolin",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefazolin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefdinir",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefdinir by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefditoren",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefditoren by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefixime",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefixime by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefotaxime",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefotaxime by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefotetan",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefotetan by pharmacodynamic antagonism. Minor/Significance Unknown. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefpirome",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefpirome by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefprozil",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefprozil by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ceftazidime",
+            "description": {
+                "common": "chloramphenicol decreases effects of ceftazidime by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ceftibuten",
+            "description": {
+                "common": "chloramphenicol decreases effects of ceftibuten by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefuroxime",
+            "description": {
+                "common": "chloramphenicol decreases effects of cefuroxime by pharmacodynamic antagonism. Minor/Significance Unknown. bacteriostatic agents may inhibit the effects of bactericidal agents."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cephalexin",
+            "description": {
+                "common": "chloramphenicol decreases effects of cephalexin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "chloramphenicol increases levels of chlorpropamide by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cocaine topical",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of cocaine topical by  affecting hepatic enzyme CYP2B6 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyanocobalamin",
+            "description": {
+                "common": "chloramphenicol decreases effects of cyanocobalamin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "dicloxacillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of dicloxacillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ethotoin",
+            "description": {
+                "common": "chloramphenicol increases levels of ethotoin by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "folic acid",
+            "description": {
+                "common": "chloramphenicol decreases effects of folic acid by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "chloramphenicol, ganaxolone. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. Changes in ganaxolone exposures when coadministered with strong, moderate, or weak CYP3A4 inhibitors are not expected to be clinically significant."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "chloramphenicol increases levels of glimepiride by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "chloramphenicol increases levels of glipizide by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "chloramphenicol increases levels of glyburide by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ospemifene",
+            "description": {
+                "common": "chloramphenicol increases levels of ospemifene by affecting hepatic enzyme CYP2C19 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "penicillin G aqueous",
+            "description": {
+                "common": "chloramphenicol decreases effects of penicillin G aqueous by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "penicillin VK",
+            "description": {
+                "common": "chloramphenicol decreases effects of penicillin VK by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital decreases levels of chloramphenicol by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital decreases levels of chloramphenicol by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone decreases levels of chloramphenicol by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of chloramphenicol by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "chloramphenicol increases levels of secobarbital by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "chloramphenicol decreases effects of ticarcillin by pharmacodynamic antagonism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "chloramphenicol increases levels of tolazamide by decreasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "chloramphenicol increases levels of tolbutamide by decreasing metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Nightmares",
+            "percent": null
+        },
+        {
+            "name": "Headache",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "Stomatitis",
+            "percent": null
+        },
+        {
+            "name": "Enterocolitis",
+            "percent": null
+        },
+        {
+            "name": "Nausea",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "Bone marrow suppression",
+            "percent": null
+        },
+        {
+            "name": "Aplastic anemia",
+            "percent": null
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": null
+        },
+        {
+            "name": "Optic neuritis",
+            "percent": null
+        },
+        {
+            "name": "Gray syndrome",
+            "percent": null
+        }
+    ]
+}

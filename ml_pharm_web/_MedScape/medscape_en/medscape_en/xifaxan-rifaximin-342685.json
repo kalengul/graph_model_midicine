@@ -1,0 +1,618 @@
+{
+    "name": "rifaximin",
+    "comment": "Rx",
+    "other_names": [
+        "Xifaxan"
+    ],
+    "classes": [
+        "Antibiotics",
+        "Other",
+        "Antidiarrheals"
+    ],
+    "source": "https://reference.medscape.com/drug/xifaxan-rifaximin-342685",
+    "pregnancy": {
+        "common": [
+            "Pregnancy category: C",
+            "Lactation: Do not use if nursing or do not nurse"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Do not use if nursing or do not nurse"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to rifamycin antibiotics"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Not effective in diarrhea complicated by fever, hematochezia, or diarrhea due to pathogens other than Escherichia coli",
+                "Not effective against traveler's diarrhea due to Campylobacter jejuni",
+                "Clostridium difficile-associated diarrhea has been reported",
+                "Efficacy against traveler's diarrhea due to Shigella spp and Salmonella spp not proven",
+                "Discontinue if symptoms worsen or persist >24-48 hr",
+                "Possibility of pseudomembranous colitis",
+                "Monitor patients with severe hepatic impairment for increased systemic exposure",
+                "Coadministration with P-gp inhibitors substantially increases systemic exposure to rifaximin; coadministration of cyclosporine with rifaximin resulted in 83-fold and 124-fold increases in rifaximin mean Cmax and AUC in healthy subjects"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "BCG intravesical live",
+            "description": {
+                "common": "rifaximin decreases effects of BCG intravesical live by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Suspend BCG intravesical live therapy during antibiotic therapy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cholera vaccine",
+            "description": {
+                "common": "rifaximin, cholera vaccine. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Avoid coadministration of cholera vaccine with systemic antibiotics since these agents may be active against the vaccine strain. Do not administer cholera vaccine to patients who have received oral or parenteral antibiotics within 14 days prior to vaccination."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lasmiditan",
+            "description": {
+                "common": "lasmiditan increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "microbiota oral",
+            "description": {
+                "common": "rifaximin decreases effects of microbiota oral by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Microbiota oral contains bacterial spores. Antibacterial agents may decrease efficacy if coadministered. Complete antibiotic regimens 2-4 days before initiating microbiota oral. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tepotinib",
+            "description": {
+                "common": "tepotinib will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If concomitant use unavoidable, reduce the P-gp substrate dosage if recommended in its approved product labeling."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "abiraterone",
+            "description": {
+                "common": "abiraterone increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "afatinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "amiodarone increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azithromycin",
+            "description": {
+                "common": "azithromycin increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "carvedilol increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "crizotinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "cyclosporine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Coadministration of cyclosporine with rifaximin resulted in 83-fold and 124-fold increases in rifaximin mean Cmax and AUC in healthy subjects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dipyridamole",
+            "description": {
+                "common": "dipyridamole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dronedarone",
+            "description": {
+                "common": "dronedarone increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eliglustat",
+            "description": {
+                "common": "eliglustat increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Monitor therapeutic drug concentrations, as indicated, or consider reducing the dosage of the P-gp substrate and titrate to clinical effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "erythromycin base increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "erythromycin ethylsuccinate increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "erythromycin lactobionate increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "erythromycin stearate increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fostamatinib",
+            "description": {
+                "common": "fostamatinib will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Concomitant use of fostamatinib may increase concentrations of P-gp substrates. Monitor for toxicities of the P-gp substrate drug that may require dosage reduction when given concurrently with fostamatinib."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "glecaprevir/pibrentasvir will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of P-gp substrates in clinical trials. Consider dose reduction of sensitive P-gp substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ivacaftor",
+            "description": {
+                "common": "ivacaftor increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Ivacaftor and its M1 metabolite has the potential to inhibit P-gp; may significantly increase systemic exposure to sensitive P-gp substrates with a narrow therapeutic index."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "lapatinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir increases levels of rifaximin by affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lomitapide",
+            "description": {
+                "common": "lomitapide increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Lonafarnib is a weak P-gp inhibitor. Monitor for adverse reactions if coadministered with P-gp substrates where minimal concentration changes may lead to serious or life-threatening toxicities. Reduce P-gp substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefloquine",
+            "description": {
+                "common": "mefloquine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metoclopramide intranasal",
+            "description": {
+                "common": "rifaximin will decrease the level or effect of metoclopramide intranasal by  Other (see comment). Use Caution/Monitor. Coadministration of metoclopramide intranasal with drugs that impair GI motility may decrease systemic absorption of metoclopramide. Monitor for reduced therapeutic effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nifedipine",
+            "description": {
+                "common": "nifedipine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nilotinib",
+            "description": {
+                "common": "nilotinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "paliperidone increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ponatinib",
+            "description": {
+                "common": "ponatinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "progesterone micronized",
+            "description": {
+                "common": "progesterone micronized increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propafenone",
+            "description": {
+                "common": "propafenone increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "propranolol",
+            "description": {
+                "common": "propranolol increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "quinidine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "quinine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "ranolazine increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium picosulfate",
+            "description": {
+                "common": "rifaximin decreases effects of sodium picosulfate by altering metabolism. Use Caution/Monitor. Coadministration with antibiotics decreases efficacy by altering colonic bacterial flora needed to convert sodium picosulfate to active drug."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Modify Therapy/Monitor Closely. Consider reducing the dose of P-glycoprotein (P-gp) substrates, if adverse reactions are experienced when administered concomitantly with stiripentol."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sunitinib",
+            "description": {
+                "common": "sunitinib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "tacrolimus increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tamoxifen",
+            "description": {
+                "common": "tamoxifen increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "ticagrelor increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ulipristal",
+            "description": {
+                "common": "ulipristal increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vandetanib",
+            "description": {
+                "common": "vandetanib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "vemurafenib increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "verapamil increases levels of rifaximin by P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Flatulence",
+            "percent": "11"
+        },
+        {
+            "name": "Headache",
+            "percent": "10"
+        },
+        {
+            "name": "Rectal tenesmus",
+            "percent": "7"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "7"
+        },
+        {
+            "name": "Defecation urgency",
+            "percent": "6"
+        },
+        {
+            "name": "Nausea",
+            "percent": "5"
+        },
+        {
+            "name": "Constipation",
+            "percent": "4"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "3"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2"
+        },
+        {
+            "name": "Hypersensitivity reactions",
+            "percent": null
+        },
+        {
+            "name": "including allergic dermatitis",
+            "percent": null
+        },
+        {
+            "name": "Pruritus",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        },
+        {
+            "name": "Rhabdomyolysis",
+            "percent": null
+        },
+        {
+            "name": "patients with cirrhosis",
+            "percent": null
+        },
+        {
+            "name": "Severe cutaneous adverse reactions",
+            "percent": null
+        },
+        {
+            "name": "including Stevens",
+            "percent": null
+        },
+        {
+            "name": "Johnson syndrome",
+            "percent": null
+        },
+        {
+            "name": "SJS",
+            "percent": null
+        },
+        {
+            "name": "and toxic epidermal necrolysis",
+            "percent": null
+        },
+        {
+            "name": "TEN",
+            "percent": null
+        },
+        {
+            "name": "in patients with cirrhosis",
+            "percent": null
+        }
+    ]
+}

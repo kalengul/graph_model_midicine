@@ -1,10 +1,21 @@
+import { useEffect } from "react"
 import {AddDrugGroupForm} from "../addSideEffectForm/addSideEffectForm"
 import { SideEffectsTable } from '../sideEffectsTable/sideEffectsTable'
 
 import chevronRight from "../../../public/chevron-right.svg"
 import "./sideEffectManage.scss"
 
+import { useDispatch, useSelector} from 'react-redux';
+import {addValue, initStates} from '../../redux/SideEffectManageSlice'
+import { RootState } from '../../redux/store';
+
+
 export const SideEffectManage = () =>{
+    const dispatch = useDispatch()
+    useEffect(()=>{
+        dispatch(initStates())
+    },[])
+
     return (
         <>
          <div className="w-100 mt-4 drugManage">

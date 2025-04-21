@@ -1,0 +1,532 @@
+{
+    "name": "empagliflozin",
+    "comment": "Rx",
+    "other_names": [
+        "Jardiance"
+    ],
+    "classes": [
+        "Antidiabetics",
+        "SGLT2 Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/jardiance-empagliflozin-999907",
+    "pregnancy": {
+        "common": [
+            "Based on animal data showing adverse renal effects, use not recommended during the second and third trimesters of pregnancy",
+            "Limited data available in pregnant women are insufficient to determine a drug-associated risk for major birth defects and miscarriage",
+            "There are risks to the mother and fetus associated with poorly controlled diabetes in pregnancy"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In animal studies, adverse renal changes were observed in rats when empagliflozin was administered during period of renal development corresponding to the late second and third trimesters of human pregnancy",
+                    "Doses ~13-times the maximum clinical dose caused renal pelvic and tubule dilatations were reversible",
+                    "Not teratogenic in rats and rabbits up to 300 mg/kg/day, which approximates 48-times and 128-times, respectively, the maximum clinical dose of 25 mg when administered during organogenesis"
+                ]
+            },
+            {
+                "type": "Clinical considerations",
+                "description": [
+                    "Poorly controlled diabetes in pregnancy increases maternal risk for diabetic ketoacidosis, pre-eclampsia, spontaneous abortions, preterm delivery, stillbirth, and delivery complications; poorly controlled diabetes increases fetal risk for major birth defects, still birth, and macrosomia related morbidity"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There is no information regarding presence in human milk, the effects on breastfed infant or on milk production",
+            "Empagliflozin is present in the milk of lactating rats",
+            "Because of potential for serious adverse reactions in a breastfed infant, advise women that it is not recommended while breastfeeding"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Serious hypersensitivity to empagliflozin (eg, anaphylaxis, angioedema)",
+                "Patients on dialysis"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Increases serum creatinine and decreases eGFR; risk increased in elderly or those with moderate renal impairment",
+                "Increased incidence of bone fractures reported; American Diabetes Association recommends avoiding sodium glucose cotransporter-2 inhibitors in patients with fracture risk factors",
+                "Genital mycotic infections may occur; patients with history of genital mycotic infections and uncircumcised males are more susceptible",
+                "Increases risk of urinary tract infections (UTIs), including life-threatening urosepsis and pyelonephritis that started as UTIs",
+                "Dose-related increases in LDL-C reported",
+                "No conclusive evidence of macrovascular risk reduction with antidiabetic agent",
+                "Serious hypersensitivity reactions (eg, angioedema) reported; if a hypersensitivity reaction occurs, discontinue treatment; treat promptly per standard of care, and monitor until signs and symptoms resolve"
+            ],
+            "specific": [
+                {
+                    "type": "Volume depletion",
+                    "description": [
+                        "Intravascular volume depletion, which may manifest as symptomatic hypotension or acute changes in creatinine, occurred",
+                        "Acute kidney injury, some requiring hospitalization and dialysis, in patients with T2DM receiving SGLT2 inhibitors reported ",
+                        "Patients with impaired renal function (eGFR <60 mL/min/1.73 m2), elderly patients, or patients on loop diuretics may be at increased risk for volume depletion or hypotension",
+                        "Before initiating therapy in patients with one or more of these characteristics, assess volume status and renal function; in patients with volume depletion, correct this condition before initiating treatment; monitor for signs and symptoms of volume depletion, and renal function after initiating therapy"
+                    ]
+                },
+                {
+                    "type": "Renal function",
+                    "description": [
+                        "Acute kidney injury reported",
+                        "Consider risk factors, including hypovolemia, heart failure, and chronic renal insufficiency or use of medications, including diuretics, ACE inhibitors, NSAIDs, or angiotensin receptor blockers",
+                        "Correct volume status before initiating if needed and monitor renal function periodically thereafter"
+                    ]
+                },
+                {
+                    "type": "Necrotizing fasciitis ",
+                    "description": [
+                        "Necrotizing fasciitis of the perineum (Fournier gangrene) reported with SGLT2 inhibitors",
+                        "Signs and symptoms include pain or tenderness, erythema, or swelling in genital or perineal area, along with fever or malaise",
+                        "If suspected, discontinue SGLT2 inhibitor and start treatment immediately with broad-spectrum antibiotics and surgical debridement if necessary"
+                    ]
+                },
+                {
+                    "type": "Ketoacidosis",
+                    "description": [
+                        "Ketoacidosis, including fatal cases, reported in patients treated with SGLT2 inhibitors ",
+                        "Not indicated for treatment of type 1 diabetes mellitus",
+                        "Before initiating therapy, consider factors in patient history that may predispose to ketoacidosis, including pancreatic insulin deficiency from any cause, caloric restriction, and alcohol abuse",
+                        "Consider temporarily discontinuing therapy for at least 3 days for patients who undergo scheduled surgery",
+                        "Consider monitoring for ketoacidosis and temporarily discontinuing therapy in other clinical situations known to predispose to ketoacidosis (eg, prolonged fasting due to acute illness or post-surgery); ensure risk factors for ketoacidosis are resolved prior to restarting therapy",
+                        "Restart once the patient’s oral intake is back to baseline and any other risk factors for ketoacidosis (blood acid buildup) are resolved"
+                    ]
+                },
+                {
+                    "type": "Drug interactions overview",
+                    "description": [
+                        "Hypoglycemia risk increased with insulin and insulin secretagogues (eg, sulfonylureas); a lower dose of insulin or insulin secretagogue may be required",
+                        "Laboratory testing",
+                        "Urine glucose tests is not recommended in patients taking SGLT2 inhibitors, as SGLT2 inhibitors, increase urinary glucose excretion and lead to positive urine glucose tests; use alternative methods to monitor glycemic control",
+                        "1,5-AG assay is not recommended, as measurements of 1,5-AG are unreliable in assessing glycemic control in patients taking SGLT2 inhibitors; use alternative methods to monitor glycemic control"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiloride",
+            "description": {
+                "common": "empagliflozin, amiloride.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "empagliflozin, bendroflumethiazide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bumetanide",
+            "description": {
+                "common": "empagliflozin, bumetanide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "empagliflozin, chlorothiazide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "empagliflozin, chlorpropamide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "empagliflozin, chlorthalidone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dulaglutide",
+            "description": {
+                "common": "dulaglutide, empagliflozin.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethacrynic acid",
+            "description": {
+                "common": "empagliflozin, ethacrynic acid.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "empagliflozin, furosemide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "empagliflozin, glimepiride.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "empagliflozin, glipizide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "empagliflozin, glyburide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "empagliflozin, hydrochlorothiazide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "empagliflozin, indapamide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "empagliflozin, insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart protamine/insulin aspart",
+            "description": {
+                "common": "empagliflozin, insulin aspart protamine/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "empagliflozin, insulin degludec.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "empagliflozin, insulin degludec/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "empagliflozin, insulin detemir.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "empagliflozin, insulin glargine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "empagliflozin, insulin glulisine.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "empagliflozin, insulin inhaled.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin isophane human/insulin regular human",
+            "description": {
+                "common": "empagliflozin, insulin isophane human/insulin regular human.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "empagliflozin, insulin lispro.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro protamine/insulin lispro",
+            "description": {
+                "common": "empagliflozin, insulin lispro protamine/insulin lispro.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Antidiabetic agents are often used in combination; dosage adjustments may be required when initiating or discontinuing antidiabetic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "empagliflozin, insulin NPH.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "empagliflozin, insulin regular human.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "letermovir will increase the level or effect of empagliflozin by  unspecified interaction mechanism. Use Caution/Monitor. Monitor glucose concentrations."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "empagliflozin decreases levels of lithium by Other (see comment). Use Caution/Monitor. \nComment: Concomitant use of an SGLT2 inhibitor with lithium may decrease serum lithium concentrations; monitor serum lithium concentration more frequently during therapy initiation and dosage changes."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lonapegsomatropin",
+            "description": {
+                "common": "lonapegsomatropin decreases effects of empagliflozin by Other (see comment). Use Caution/Monitor. \nComment: Closely monitor blood glucose when treated with antidiabetic agents. Lonapegsomatropin may decrease insulin sensitivity, particularly at higher doses. Patients with diabetes mellitus may require adjustment of their doses of insulin and/or other antihyperglycemic agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "empagliflozin, methyclothiazide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "empagliflozin, metolazone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nateglinide",
+            "description": {
+                "common": "empagliflozin, nateglinide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "repaglinide",
+            "description": {
+                "common": "empagliflozin, repaglinide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "somapacitan",
+            "description": {
+                "common": "somapacitan decreases effects of empagliflozin by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. Growth hormone products may decrease insulin sensitivity, particularly at higher doses. Antidiabetic agents may require dose adjustment after initiating somapacitan. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "empagliflozin, spironolactone.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "empagliflozin, tolazamide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "empagliflozin, tolbutamide.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Consider a lower dose of insulin or insulin secretagogue to avoid hypoglycemia when coadministered with SGLT2 inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "torsemide",
+            "description": {
+                "common": "empagliflozin, torsemide.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamterene",
+            "description": {
+                "common": "empagliflozin, triamterene.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Coadministration of empagliflozin with diuretics results in increased urine volume and frequency of voids, which might enhance the potential for volume depletion."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "patiromer",
+            "description": {
+                "common": "patiromer, empagliflozin. cation binding in GI tract. Minor/Significance Unknown. No observed clinically important interaction. No separation of dosing required."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Urinary tract infection",
+            "percent": "7.6-9.3"
+        },
+        {
+            "name": "Female genital mycotic infections",
+            "percent": "5.4-6.4"
+        },
+        {
+            "name": "Upper respiratory tract infection",
+            "percent": "3.1-4"
+        },
+        {
+            "name": "Increased urination",
+            "percent": "3.2-3.4"
+        },
+        {
+            "name": "Dyslipidemia",
+            "percent": "2.9-3.9"
+        },
+        {
+            "name": "Male genital mycotic infections",
+            "percent": "1.6-3.1"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "2.3-2.4"
+        },
+        {
+            "name": "Nausea",
+            "percent": "1.1-2.3"
+        },
+        {
+            "name": "Polydipsia",
+            "percent": "1.5-1.7"
+        },
+        {
+            "name": "Adverse reactions related to volume depletion",
+            "percent": null
+        },
+        {
+            "name": "eg",
+            "percent": null
+        },
+        {
+            "name": "blood pressure",
+            "percent": null
+        },
+        {
+            "name": "ambulatory",
+            "percent": null
+        },
+        {
+            "name": "decreased",
+            "percent": null
+        },
+        {
+            "name": "blood pressure systolic decreased",
+            "percent": null
+        },
+        {
+            "name": "dehydration",
+            "percent": null
+        },
+        {
+            "name": "hypotension",
+            "percent": null
+        },
+        {
+            "name": "hypovolemia",
+            "percent": null
+        },
+        {
+            "name": "orthostatic hypotension",
+            "percent": null
+        },
+        {
+            "name": "and syncope",
+            "percent": null
+        },
+        {
+            "name": "Increased urination",
+            "percent": null
+        },
+        {
+            "name": "eg",
+            "percent": null
+        },
+        {
+            "name": "nocturia",
+            "percent": null
+        },
+        {
+            "name": "Ketoacidosis",
+            "percent": null
+        },
+        {
+            "name": "Urosepsis and pyelonephritis",
+            "percent": null
+        },
+        {
+            "name": "Necrotizing fasciitis of the perineum",
+            "percent": null
+        },
+        {
+            "name": "Fournier",
+            "percent": null
+        },
+        {
+            "name": "s gangrene",
+            "percent": null
+        },
+        {
+            "name": "Angioedema",
+            "percent": null
+        },
+        {
+            "name": "Skin reactions",
+            "percent": null
+        },
+        {
+            "name": "Acute kidney injury",
+            "percent": null
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        }
+    ]
+}

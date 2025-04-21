@@ -1,0 +1,117 @@
+{
+    "name": "sucroferric oxyhydroxide",
+    "comment": "Rx",
+    "other_names": [
+        "Velphoro"
+    ],
+    "classes": [
+        "PO4 Scavengers"
+    ],
+    "source": "https://reference.medscape.com/drug/velphoro-sucroferric-oxyhydroxide-999889",
+    "pregnancy": {
+        "common": [
+            "The drug is not systemically absorbed following oral administration; maternal use is not expected to result in fetal exposure to the drug"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In pregnant rats given up to 800 mg/kg/day by oral gavage from days 6 to 17 post-mating (16 times maximum recommended clinical dose), no embryo-fetal development toxicity observed.",
+                    "In pregnant rabbits given 50, 100, or 200 mg/kg/day (corresponding to 4 times the recommended maximum clinical dose) by oral gavage, from days 6 to 19 post-mating, the number of fetuses with incomplete/unossified epiphyses and metacarpals/phalanges was increased at highest dose; litter parameters were not adversely affected",
+                    "In pregnant rats given Velphoro at 100, 280, or 800 mg/kg/day (16 times the maximum recommended clinical dose) by oral gavage from day 6 post-mating to lactation day 20, offspring body weight gain was lower at age 5-13 weeks and neuromuscular function was delayed at dose of 800 mg/kg/day"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "This drug is not absorbed systemically following oral administration and breastfeeding is not expected to result in exposure of the child to the drug"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Monitor effect and iron homeostasis with patients with peritonitis during peritoneal dialysis, significant gastric or hepatic disorders, following major gastrointestinal surgery, or with a history of hemochromatosis or other diseases with iron accumulation; clinical studies not performed in these groups of patients",
+                "Do not prescribe with oral levothyroxine",
+                "Do not administer alendronate or doxycycline at the same time; alendronate or doxycycline must be given at least 1 hr before sucroferric oxyhydroxide"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "levothyroxine",
+            "description": {
+                "common": "sucroferric oxyhydroxide decreases levels of levothyroxine by inhibition of GI absorption. Applies only to oral form of both agents. Contraindicated. No interaction anticipated with parenteral levothyroxine."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erdafitinib",
+            "description": {
+                "common": "sucroferric oxyhydroxide, erdafitinib. Other (see comment). Avoid or Use Alternate Drug. \nComment: Avoid coadministration during initial dosing adjustment period (ie, first 21 days). Increases in serum phosphate levels are a pharmacodynamic effect of FGFR inhibition. Serum phosphate binders may obscure decisions regarding initial dosage increase."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alendronate",
+            "description": {
+                "common": "sucroferric oxyhydroxide decreases levels of alendronate by drug binding in GI tract. Use Caution/Monitor. Do not administer at the same time; take alendronate at least 1 hr before sucroferric oxyhydroxide."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxycycline",
+            "description": {
+                "common": "sucroferric oxyhydroxide decreases levels of doxycycline by drug binding in GI tract. Use Caution/Monitor. Do not administer at the same time; take doxycycline at least 1 hr before sucroferric oxyhydroxide."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of sucroferric oxyhydroxide by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of sucroferric oxyhydroxide by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Diarrhea",
+            "percent": "6-24"
+        },
+        {
+            "name": "Discolored feces",
+            "percent": "12-16"
+        },
+        {
+            "name": "Nausea",
+            "percent": "10"
+        },
+        {
+            "name": "Tooth discoloration",
+            "percent": null
+        },
+        {
+            "name": "Rash",
+            "percent": null
+        }
+    ]
+}

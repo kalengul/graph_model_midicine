@@ -1,0 +1,1663 @@
+{
+    "name": "sotorasib",
+    "comment": "Rx",
+    "other_names": [
+        "Lumakras"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "KRAS Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/lumakras-sotorasib-4000155",
+    "pregnancy": {
+        "common": [
+            "No data are available on use in pregnant females"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "In a rabbit embryofetal development study, oral administration of sotorasib during organogenesis resulted in lower fetal body weights and a reduction in the number of ossified metacarpals in fetuses at the 100-mg/kg dose level (~2.6x the human exposure based on AUC at the clinical dose of 960 mg), which was associated with maternal toxicity, including decreased body weight gain and food consumption during dosing phase"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "There are no data on drug presence or its metabolites in human milk, effects on the breastfed children, or effects on milk production",
+            "Advise women not to breastfeed during treatment and for 1 week after final dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Hepatotoxicity reported, which may lead to drug-induced liver injury and hepatitis; monitor liver function tests (ALT, AST, and TB) before initiation, every 3 weeks for first 3 months, then monthly or as clinically indicated, and more frequently in patients who develop transaminase and/or bilirubin elevations",
+                "May cause ILD/pneumonitis that can be fatal; median time to first onset was 2 weeks; monitor for new or worsening pulmonary symptoms indicative of ILD/pneumonitis (eg, dyspnea, cough, fever)"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "CYP3A4 substrate and inducer",
+                        "May induce CYP2C8, CYP2C9, and CYP2B6",
+                        "P-glycoprotein (P-gp) and BCRP inhibitor",
+                        "Acid-reducing agents",
+                        "Avoid coadministration",
+                        "Proton pump inhibitors (PPIs), H2-receptor antagonists, and locally acting antacids decreased sotorasib concentrations and its efficacy",
+                        "If unavoidable, administer sotorasib 4 hr before or 10 hr after administration of locally acting antacids",
+                        "Strong CYP3A4 inducers",
+                        "Avoid coadministration",
+                        "Strong CYP3A4 inducers decreased sotorasib concentrations and its efficacy",
+                        "CYP3A4 substrates",
+                        "Avoid coadministration with CYP3A4 sensitive substrates, for which minimal concentration changes may lead to therapeutic failures of the substrate",
+                        "CYP3A4 substrates decreased its plasma concentrations and its efficacy",
+                        "If unavoidable, increase sensitive CYP3A4 substrate dosage in accordance with its prescribing information",
+                        "P-gp substrates",
+                        "Avoid coadministration with P-gp substrates for which minimal concentration changes may lead to serious toxicities",
+                        "Sotorasib (P-gp inhibitor) increased digoxin (P-gp substrate) plasma concentrations and adverse reactions",
+                        "If unavoidable, decrease P-gp substrate dosage in accordance with its prescribing information"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "mavacamten",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of mavacamten by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "pacritinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pacritinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Contraindicated."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abemaciclib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "afatinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of afatinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "alfentanil",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of alfentanil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of aliskiren by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aluminum hydroxide/magnesium carbonate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium carbonate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aluminum hydroxide/magnesium trisilicate",
+            "description": {
+                "common": "aluminum hydroxide/magnesium trisilicate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ambrisentan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ambrisentan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amiodarone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of amiodarone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apixaban",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of apixaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "artesunate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of artesunate by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of atazanavir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "atorvastatin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of atorvastatin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "avatrombopag",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of avatrombopag by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bendamustine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of bendamustine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "betrixaban",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of betrixaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "brentuximab vedotin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of brentuximab vedotin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "budesonide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of budesonide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carfilzomib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of carfilzomib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carvedilol",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of carvedilol by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ceritinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cetirizine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of cetirizine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cimetidine",
+            "description": {
+                "common": "cimetidine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ciprofloxacin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ciprofloxacin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "citric acid/sodium bicarbonate",
+            "description": {
+                "common": "citric acid/sodium bicarbonate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "clonidine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of clonidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "colchicine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of colchicine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "crizotinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of crizotinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of cyclosporine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabigatran",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dabigatran by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daridorexant",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of daridorexant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "darolutamide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of darolutamide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dasabuvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dasabuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daunorubicin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of daunorubicin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "daunorubicin liposomal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of daunorubicin liposomal by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "desloratadine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of desloratadine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dexamethasone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexlansoprazole",
+            "description": {
+                "common": "dexlansoprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of digoxin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dihydroergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine inhaled",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dihydroergotamine inhaled by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dihydroergotamine intranasal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of dihydroergotamine intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diltiazem",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of diltiazem by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "disopyramide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of disopyramide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "docetaxel",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of docetaxel by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "doxorubicin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of doxorubicin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of duvelisib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "edoxaban",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of edoxaban by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "elacestrant",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of elacestrant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eletriptan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of eletriptan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ergotamine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ergotamine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin base",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of erythromycin base by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin ethylsuccinate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of erythromycin ethylsuccinate by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin lactobionate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of erythromycin lactobionate by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "erythromycin stearate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of erythromycin stearate by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "esomeprazole",
+            "description": {
+                "common": "esomeprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ethosuximide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ethosuximide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etoposide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of etoposide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of everolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "famotidine",
+            "description": {
+                "common": "famotidine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fentanyl by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl intranasal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fentanyl intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl iontophoretic transdermal system",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fentanyl iontophoretic transdermal system by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transdermal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fentanyl transdermal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fentanyl transmucosal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fentanyl transmucosal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexofenadine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of fexofenadine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of finerenone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ganaxolone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ganaxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of ganaxolone with moderate or strong CYP3A4 inducers. If coadministration unavoidable, consider increasing ganaxolone dose; however, do not exceed maximum daily dose for weight."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "glecaprevir/pibrentasvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of glecaprevir/pibrentasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "hydrocortisone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of hydrocortisone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "idarubicin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of idarubicin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of imatinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of indinavir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "infigratinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of infigratinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "irinotecan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of irinotecan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivermectin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ivermectin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lansoprazole",
+            "description": {
+                "common": "lansoprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lapatinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lapatinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of larotrectinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ledipasvir/sofosbuvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ledipasvir/sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lefamulin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lefamulin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lenacapavir by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of lenacapavir with moderate CYP3A4 inducers."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "leniolisib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of leniolisib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lenvatinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lenvatinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "letermovir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of letermovir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "linagliptin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of linagliptin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "loperamide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of loperamide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "loratadine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of loratadine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lovastatin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lovastatin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumateperone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of lumateperone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magaldrate",
+            "description": {
+                "common": "magaldrate will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magnesium hydroxide",
+            "description": {
+                "common": "magnesium hydroxide will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "magnesium oxide",
+            "description": {
+                "common": "magnesium oxide will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of maraviroc by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methotrexate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of methotrexate by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of midazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "midazolam intranasal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of midazolam intranasal by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitomycin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of mitomycin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "morphine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of morphine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nadolol",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of nadolol by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "naldemedine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of naldemedine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of nelfinavir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nizatidine",
+            "description": {
+                "common": "nizatidine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olutasidenib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of olutasidenib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong or moderate CYP3A inducers decrease olutasidenib (a CYP3A4 substrate) plasma concentrations and efficacy."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of omaveloxolone by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC)",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ombitasvir/paritaprevir/ritonavir & dasabuvir (DSC) by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "omeprazole",
+            "description": {
+                "common": "omeprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ondansetron",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ondansetron by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "osimertinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of osimertinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paclitaxel",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of paclitaxel by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paclitaxel protein bound",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of paclitaxel protein bound by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "paliperidone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of paliperidone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pantoprazole",
+            "description": {
+                "common": "pantoprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pazopanib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pazopanib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pimozide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pimozide by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pomalidomide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pomalidomide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of posaconazole by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pralsetinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pralsetinib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pravastatin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of pravastatin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "prednisone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of prednisone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinidine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of quinidine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "quinine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of quinine by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rabeprazole",
+            "description": {
+                "common": "rabeprazole will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ranitidine",
+            "description": {
+                "common": "ranitidine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ranolazine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ranolazine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifaximin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of rifaximin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rimegepant",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of rimegepant by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "riociguat",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of riociguat by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "risperidone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of risperidone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ritonavir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "romidepsin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of romidepsin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of saquinavir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "saxagliptin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of saxagliptin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of silodosin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "simethicone",
+            "description": {
+                "common": "simethicone will decrease the level or effect of sotorasib by  inhibition of GI absorption. Applies only to oral form of both agents. Avoid or Use Alternate Drug. If use with an acid-reducing agent cannot be avoided, administer sotorasib 4 hr before or 10 hr after administration of a locally-acting antacid."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of sirolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sitagliptin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of sitagliptin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sofosbuvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of sofosbuvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sofosbuvir/velpatasvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of sofosbuvir/velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of sotorasib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of tacrolimus by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talazoparib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of talazoparib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of tazemetostat by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of temsirolimus by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "teniposide",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of teniposide by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tenofovir AF",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of tenofovir AF by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of tenofovir DF by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of testosterone by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone buccal system",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of testosterone buccal system by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone intranasal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of testosterone intranasal by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "testosterone topical",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of testosterone topical by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ticagrelor",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ticagrelor by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolvaptan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of tolvaptan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "topotecan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of topotecan by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "trabectedin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of trabectedin by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "triazolam",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of triazolam by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the CYP3A4 substrate for dosage modifications"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ubrogepant",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ubrogepant by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "velpatasvir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of velpatasvir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vemurafenib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of vemurafenib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "venetoclax",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of venetoclax by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "verapamil",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of verapamil by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vinblastine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of vinblastine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vincristine",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of vincristine by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vincristine liposomal",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of vincristine liposomal by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "vonoprazan",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of vonoprazan by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxilaprevir",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of voxilaprevir by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belumosudil",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of belumosudil by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isavuconazonium sulfate",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of isavuconazonium sulfate by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ripretinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of ripretinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If coadministration cannot be avoided, increase dosing frequency from recommended dose of 150 mg once daily to 150 mg twice daily during co-administration period; monitor for clinical response and tolerability"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "warfarin",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of warfarin by  affecting hepatic enzyme CYP2C9/10 metabolism. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zanubrutinib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of zanubrutinib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Avoid coadministration of zanubrutinib (a CYP3A4 substrate) with moderate CYP3A4 inhibitors. If unavoidable, increase zanubrutinib dose to 320 mg PO BID. After discontinuing the CYP3A4 inhibitor, resume previous dose of zanubrutinib. "
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "atogepant",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of atogepant by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown. Recommended atogepant dosage with concomitant use of strong or moderate CYP3A4 inducers is 30 mg or 60 mg qDay."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "48"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "43"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "42"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "39"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "28"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "35"
+        },
+        {
+            "name": "Decreased calcium",
+            "percent": "35"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "33"
+        },
+        {
+            "name": "Increased urine protein",
+            "percent": "29"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "28"
+        },
+        {
+            "name": "Nausea",
+            "percent": "26"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "26"
+        },
+        {
+            "name": "Hepatoxicity",
+            "percent": "25"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "23"
+        },
+        {
+            "name": "Increased activated partial thromboplastin time",
+            "percent": "23"
+        },
+        {
+            "name": "aPTT",
+            "percent": "20"
+        },
+        {
+            "name": "Cough",
+            "percent": "17"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "16"
+        },
+        {
+            "name": "Constipation",
+            "percent": "16"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "15"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "15"
+        },
+        {
+            "name": "Edema",
+            "percent": "13"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "12"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "12"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "12"
+        },
+        {
+            "name": "Rash",
+            "percent": "12"
+        },
+        {
+            "name": "Hepatoxicity",
+            "percent": "11"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "9"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "8"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "7"
+        },
+        {
+            "name": "Pneumonia",
+            "percent": "5"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "3.9"
+        },
+        {
+            "name": "Increased urine protein",
+            "percent": "2.9"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "2.5"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "2"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "2"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "1.5"
+        },
+        {
+            "name": "Increased aPTT",
+            "percent": "1.5"
+        },
+        {
+            "name": "Cough",
+            "percent": "1.5"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "1"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "1"
+        },
+        {
+            "name": "Decreased appetite",
+            "percent": "1"
+        },
+        {
+            "name": "Arthralgia",
+            "percent": "1"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "1"
+        },
+        {
+            "name": "Nausea",
+            "percent": "0.5"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "0.5"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "0.5"
+        },
+        {
+            "name": "Constipation",
+            "percent": null
+        }
+    ]
+}

@@ -1,0 +1,761 @@
+{
+    "name": "acyclovir",
+    "comment": "Rx",
+    "other_names": [
+        "Zovirax"
+    ],
+    "classes": [
+        "Antivirals",
+        "Other",
+        "Antivirals",
+        "HSV",
+        "Antivirals",
+        "VZV"
+    ],
+    "source": "https://reference.medscape.com/drug/zovirax-acyclovir-342601",
+    "pregnancy": {
+        "common": [
+            "Drug is minimally absorbed systemically following topical route of administration, and maternal use is not expected to result in fetal exposure to drug; experience with topical acyclovir use in pregnant women over several decades, based on published literature including observational studies, has not identified a drug-associated risk of major birth defects, miscarriage or adverse maternal or fetal outcomes"
+        ],
+        "specific": [
+            {
+                "type": "Animal data",
+                "description": [
+                    "Animal reproduction studies with systemic exposure of acyclovir have been conducted; refer to acyclovir prescribing information for additional details"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Drug is minimally absorbed systemically following topical route of administration, and breastfeeding is not expected to result in exposure of child to drug; there are no data on effects of drug on breastfed infant or on milk production; Developmental and health benefits of breastfeeding should be considered along with mother’s clinical need for therapy and any potential adverse effects on breastfed child from drug or from underlying maternal condition"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Avoid rapid infusion because of risk of renal damage",
+                "Renal failure, resulting in death, has occurred",
+                "Use with caution in immunocompromised patients (potential risk of thrombotic thrombocytopenic purpura [TTP]/hemolytic uremic syndrome [HUS])",
+                "Use with caution in patients with renal impairment",
+                "Treatment should begin within 24 hours of appearance of rash",
+                "Use with caution in patients receiving nephrotoxic drugs",
+                "Maintain adequate hydration during PO or IV therapy",
+                "Thrombocytopenic purpura/hemolytic uremic syndrome reported"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amphotericin B deoxycholate",
+            "description": {
+                "common": "acyclovir and amphotericin B deoxycholate both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bacitracin",
+            "description": {
+                "common": "acyclovir and bacitracin both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug. Avoid concurrent use of bacitracin with other nephrotoxic drugs"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "cidofovir",
+            "description": {
+                "common": "acyclovir and cidofovir both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "neomycin PO",
+            "description": {
+                "common": "acyclovir and neomycin PO both increase  nephrotoxicity and/or ototoxicity. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "talimogene laherparepvec",
+            "description": {
+                "common": "acyclovir decreases effects of talimogene laherparepvec by pharmacodynamic antagonism. Avoid or Use Alternate Drug. Although no drug interactions studies have been performed, antiherpetic viral agents may interfere with the effectiveness of talimogene laherparepvec."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amikacin",
+            "description": {
+                "common": "acyclovir and amikacin both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amoxicillin",
+            "description": {
+                "common": "amoxicillin, acyclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "capreomycin",
+            "description": {
+                "common": "acyclovir and capreomycin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carboplatin",
+            "description": {
+                "common": "acyclovir and carboplatin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cephaloridine",
+            "description": {
+                "common": "acyclovir and cephaloridine both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cisplatin",
+            "description": {
+                "common": "acyclovir and cisplatin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "colistin",
+            "description": {
+                "common": "acyclovir and colistin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "contrast media (iodinated)",
+            "description": {
+                "common": "acyclovir and contrast media (iodinated) both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "acyclovir and cyclosporine both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "acyclovir, elvitegravir/cobicistat/emtricitabine/tenofovir DF.\nEither increases toxicity of the other by decreasing renal clearance. Use Caution/Monitor. Toxicity may result from coadministration of emtricitabine and tenofovir with other drugs that are also primarily excreted by glomerular filtration and/or active tubular secretion ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "emtricitabine",
+            "description": {
+                "common": "acyclovir increases levels of emtricitabine by Other (see comment). Use Caution/Monitor. \nComment: Coadministration of emtricitabine with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of emtricitabine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gentamicin",
+            "description": {
+                "common": "acyclovir and gentamicin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ioversol",
+            "description": {
+                "common": "acyclovir and ioversol both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mycophenolate",
+            "description": {
+                "common": "acyclovir will increase the level or effect of mycophenolate by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaliplatin",
+            "description": {
+                "common": "acyclovir and oxaliplatin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "peramivir",
+            "description": {
+                "common": "acyclovir increases levels of peramivir by decreasing renal clearance. Use Caution/Monitor. Caution when peramivir coadministered with nephrotoxic drugs."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "pivmecillinam",
+            "description": {
+                "common": "pivmecillinam, acyclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "polymyxin B",
+            "description": {
+                "common": "acyclovir and polymyxin B both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "acyclovir will increase the level or effect of probenecid by  acidic (anionic) drug competition for renal tubular clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "streptozocin",
+            "description": {
+                "common": "acyclovir and streptozocin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tacrolimus",
+            "description": {
+                "common": "acyclovir and tacrolimus both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "teicoplanin",
+            "description": {
+                "common": "acyclovir and teicoplanin both increase  nephrotoxicity and/or ototoxicity. Modify Therapy/Monitor Closely."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temocillin",
+            "description": {
+                "common": "temocillin, acyclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tenofovir DF",
+            "description": {
+                "common": "acyclovir and tenofovir DF both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ticarcillin",
+            "description": {
+                "common": "ticarcillin, acyclovir.\nEither increases levels of the other by decreasing renal clearance. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tobramycin",
+            "description": {
+                "common": "acyclovir and tobramycin both increase  nephrotoxicity and/or ototoxicity. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ublituximab",
+            "description": {
+                "common": "ublituximab decreases effects of acyclovir by immunosuppressive effects; risk of infection. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "aceclofenac will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acemetacin",
+            "description": {
+                "common": "acemetacin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "adefovir",
+            "description": {
+                "common": "acyclovir and adefovir both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aminohippurate sodium",
+            "description": {
+                "common": "acyclovir will increase the level or effect of aminohippurate sodium by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "astragalus",
+            "description": {
+                "common": "astragalus increases effects of acyclovir by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "balsalazide",
+            "description": {
+                "common": "balsalazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "bendroflumethiazide",
+            "description": {
+                "common": "bendroflumethiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefadroxil",
+            "description": {
+                "common": "cefadroxil will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefamandole",
+            "description": {
+                "common": "cefamandole will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cefpirome",
+            "description": {
+                "common": "cefpirome will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ceftazidime",
+            "description": {
+                "common": "ceftazidime will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cephalexin",
+            "description": {
+                "common": "cephalexin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorothiazide",
+            "description": {
+                "common": "chlorothiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "acyclovir will increase the level or effect of chlorpropamide by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorthalidone",
+            "description": {
+                "common": "chlorthalidone will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclopenthiazide",
+            "description": {
+                "common": "cyclopenthiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "foscarnet",
+            "description": {
+                "common": "acyclovir and foscarnet both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ganciclovir",
+            "description": {
+                "common": "acyclovir will increase the level or effect of ganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "hydrochlorothiazide",
+            "description": {
+                "common": "hydrochlorothiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indapamide",
+            "description": {
+                "common": "indapamide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ketorolac intranasal will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "lornoxicam will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "mesalamine",
+            "description": {
+                "common": "mesalamine will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methoxyflurane",
+            "description": {
+                "common": "acyclovir and methoxyflurane both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "methyclothiazide",
+            "description": {
+                "common": "methyclothiazide will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "metolazone",
+            "description": {
+                "common": "metolazone will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "oxaprozin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "parecoxib will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "paromomycin",
+            "description": {
+                "common": "acyclovir and paromomycin both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "pentamidine",
+            "description": {
+                "common": "acyclovir and pentamidine both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rose hips",
+            "description": {
+                "common": "rose hips will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "salicylates (non-asa) will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "streptomycin",
+            "description": {
+                "common": "acyclovir and streptomycin both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "tolfenamic acid will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "valganciclovir",
+            "description": {
+                "common": "acyclovir will increase the level or effect of valganciclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "vancomycin",
+            "description": {
+                "common": "acyclovir and vancomycin both increase  nephrotoxicity and/or ototoxicity. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "willow bark",
+            "description": {
+                "common": "willow bark will increase the level or effect of acyclovir by  acidic (anionic) drug competition for renal tubular clearance. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Malaise",
+            "percent": "12"
+        },
+        {
+            "name": "Inflammation or phlebitis at injection site",
+            "percent": "9"
+        },
+        {
+            "name": "Nausea",
+            "percent": "7"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "7"
+        },
+        {
+            "name": "Rash or hives",
+            "percent": "2"
+        },
+        {
+            "name": "Elevated transaminase levels",
+            "percent": "1-2"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2-5"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "3"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "2-3"
+        },
+        {
+            "name": "Headache",
+            "percent": "2"
+        }
+    ]
+}

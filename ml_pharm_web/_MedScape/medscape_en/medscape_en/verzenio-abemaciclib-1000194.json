@@ -1,0 +1,881 @@
+{
+    "name": "abemaciclib",
+    "comment": "Rx",
+    "other_names": [
+        "Verzenio"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "CDK Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/verzenio-abemaciclib-1000194",
+    "pregnancy": {
+        "common": [
+            "There are no available human data informing the drug-associated risk",
+            "Based on findings from animal studies and the mechanism of action, can cause fetal harm when administered to a pregnant woman; advise pregnant women of potential risk to a fetus",
+            "In animal data, administration of abemaciclib during organogenesis was teratogenic and caused decreased fetal weight at maternal exposures that were similar to human clinical exposure based on AUC at the maximum recommended human dose",
+            "Verify pregnancy status in females of reproductive potential prior to initiating treatment",
+            "Advise females of reproductive potential to use effective contraception during treatment and for at least 3 weeks after the last dose",
+            "Based on findings in animals, abemaciclib may impair fertility in males of reproductive potential"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Unknown if distributed in human breast milk",
+            "Because of the potential for serious adverse reactions in breastfed infants, advise lactating women not to breastfeed while taking abemaciclib and for at least 3 weeks after the last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "May cause fetal harm; advise women of reproductive potential to use effective contraception (see Pregnancy)"
+            ],
+            "specific": [
+                {
+                    "type": "Interstitial lung disease",
+                    "description": [
+                        "Severe, life-threatening, or fatal ILD and/or pneumonitis can occur; additional cases of ILD/pneumonitis have been observed in the postmarketing setting, with fatalities reported; monitor for pulmonary symptoms indicative of ILD/pneumonitis which may include hypoxia, cough, and dyspnea ",
+                        "Dose interruption or dose reduction recommended for patients who develop persistent or recurrent Grade 2 ILD/pneumonitis; permanently discontinue therapy in all patients with Grade 3 or 4 ILD or pneumonitis"
+                    ]
+                },
+                {
+                    "type": "Venous thromboembolism",
+                    "description": [
+                        "In clinical trials, venous thromboembolic events (VTE) reported in patients treated with abemaciclib plus an aromatase inhibitor (5%) and in patients treated with abemaciclib plus fulvestrant (5%)",
+                        "VTE (eg, deep vein thrombosis, pulmonary embolism, cerebral venous sinus thrombosis, pelvic venous thrombosis, subclavian and axillary vein thrombosis, inferior vena cava thrombosis) reported in patients receiving abemaciclib and fulvestrant",
+                        "Therapy has not been studied in patients with early breast cancer with history of venous thromboembolism",
+                        "Monitor patients for signs and symptoms of venous thrombosis and pulmonary embolism and treat as medically appropriate",
+                        "Dose interruption is recommended for early breast cancer patients with any grade venous thromboembolic event and for advanced or metastatic breast cancer patients with a Grade 3 or 4 venous thromboembolic event"
+                    ]
+                },
+                {
+                    "type": "Hepatotoxicity",
+                    "description": [
+                        "Increased transaminases were observed in clinical trials",
+                        "In patients who had grade ≥3 ALT elevation, median time-to-onset was 57 days; whereas, grade <3 was 14 days",
+                        "In patients who had grade ≥3 AST elevation, median time-to-onset was 185 days; whereas, grade <3 was 13 days",
+                        "Monitor liver function tests (LFTs) prior to start of therapy, every 2 weeks for first 2 months, monthly for next 2 months, and as clinically indicated; dose interruption, dose reduction, dose discontinuation, or delay in starting treatment cycles is recommended for patients who develop persistent or recurrent Grade 2, or Grade 3 or 4, hepatic transaminase elevation"
+                    ]
+                },
+                {
+                    "type": "Neutropenia",
+                    "description": [
+                        "Neutropenia observed in clinical trials; in patients with grade >3 neutropenia, median time time-to-onset was 29 days and median duration was 15 days",
+                        "Febrile neutropenia reported in <1% of patients exposed to abemaciclib in the MONARCH studies; 2 deaths due to neutropenic sepsis were observed in MONARCH 2",
+                        "Monitor complete blood counts prior to start of therapy, every 2 weeks for first 2 months, monthly for next 2 months, and as clinically indicated; dose interruption, dose reduction, or delay in starting treatment cycles is recommended for patients who develop Grade 3 or 4 neutropenia; inform patients to promptly report any episodes of fever to their healthcare provider"
+                    ]
+                },
+                {
+                    "type": "Diarrhea",
+                    "description": [
+                        "Diarrhea incidence reported to be greatest during first month of dosing",
+                        "Diarrhea occurred in 81% of patients receiving abemaciclib plus an aromatase inhibitor in MONARCH 3, 86% of patients receiving abemaciclib plus fulvestrant in MONARCH 2, and 90% of patients receiving abemaciclib alone in MONARCH 1",
+                        "Episodes of diarrhea have been associated with dehydration and infection; diarrhea incidence was greatest during the first month of dosing",
+                        "Instruct patients that at the first sign of loose stools, they should start antidiarrheal therapy such as loperamide, increase oral fluids, and notify healthcare provider for further instructions and appropriate follow up; for Grade 3 or 4 diarrhea, or diarrhea that requires hospitalization, discontinue treatment until toxicity resolves to ≤Grade 1, and then resume treatment at next lower dose"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Abemaciclib is metabolized to several metabolites primarily by CYP3A4",
+                        "Strong CYP3A4 inhibitors increased the exposure of abemaciclib plus its active metabolites to a clinically meaningful extent and may lead to increased toxicity",
+                        "Ketoconazole: Avoid coadministration",
+                        "Other strong CYP3A inhibitors: Decrease recommended starting dose (see Dosage Modifications)",
+                        "Strong CYP3A inducers: Avoid coadministration"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Serious",
+            "interaction_with": "abametapir",
+            "description": {
+                "common": "abametapir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. For 2 weeks after abametapir application, avoid taking drugs that are CYP3A4 substrates. If not feasible, avoid use of abametapir."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "amobarbital",
+            "description": {
+                "common": "amobarbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "apalutamide",
+            "description": {
+                "common": "apalutamide will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of apalutamide, a strong CYP3A4 inducer, with drugs that are CYP3A4 substrates can result in lower exposure to these medications. Avoid or substitute another drug for these medications when possible. Evaluate for loss of therapeutic effect if medication must be coadministered. Adjust dose according to prescribing information if needed."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "bosentan",
+            "description": {
+                "common": "bosentan will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butabarbital",
+            "description": {
+                "common": "butabarbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "butalbital",
+            "description": {
+                "common": "butalbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "carbamazepine",
+            "description": {
+                "common": "carbamazepine will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ceritinib",
+            "description": {
+                "common": "ceritinib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "chloramphenicol",
+            "description": {
+                "common": "chloramphenicol will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. If coadministration with chloramphenicol necessary, reduce dose of abemaciclib to 100 mg PO BID in patients on either of recommended starting doses whether 200 mg or 150 mg BID; In patients who have had already had a dose reduction to 100 mg BID due to adverse reactions, further reduce dose of abemaciclib to 50 mg PO BID;  discontinue abemaciclib if patient unable to tolerate 50 mg BID; if chloramphenicol discontinued, increase dose of abemaciclib to original dose after 3-5 half-lives of chloramphenicol"
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dabrafenib",
+            "description": {
+                "common": "dabrafenib will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "deferiprone",
+            "description": {
+                "common": "deferiprone, abemaciclib.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid use of deferiprone with other drugs known to be associated with neutropenia or agranulocytosis; if an alternative is not possible, monitor absolute neutrophil count more frequently."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dexamethasone",
+            "description": {
+                "common": "dexamethasone will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "efavirenz",
+            "description": {
+                "common": "efavirenz will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "enzalutamide",
+            "description": {
+                "common": "enzalutamide will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eslicarbazepine acetate",
+            "description": {
+                "common": "eslicarbazepine acetate will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etravirine",
+            "description": {
+                "common": "etravirine will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fexinidazole",
+            "description": {
+                "common": "fexinidazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Fexinidazole inhibits CYP3A4. Coadministration may increase risk for adverse effects of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fosphenytoin",
+            "description": {
+                "common": "fosphenytoin will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "grapefruit",
+            "description": {
+                "common": "grapefruit will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Patient should avoid grapefruit products."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ivosidenib",
+            "description": {
+                "common": "ivosidenib will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration of sensitive CYP3A4 substrates with ivosidenib or replace with alternate therapies. If coadministration is unavoidable, monitor patients for loss of therapeutic effect of these drugs."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoconazole",
+            "description": {
+                "common": "ketoconazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Ketoconazole increases abemaciclib AUC by up to 16-fold."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "levoketoconazole",
+            "description": {
+                "common": "levoketoconazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Ketoconazole increases abemaciclib AUC by up to 16-fold."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lonafarnib",
+            "description": {
+                "common": "lonafarnib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Avoid coadministration with sensitive CYP3A substrates. If coadministration unavoidable, monitor for adverse reactions and reduce CYP3A substrate dose in accordance with product labeling."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lorlatinib",
+            "description": {
+                "common": "lorlatinib will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lumacaftor/ivacaftor",
+            "description": {
+                "common": "lumacaftor/ivacaftor will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "methohexital",
+            "description": {
+                "common": "methohexital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mitotane",
+            "description": {
+                "common": "mitotane will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nafcillin",
+            "description": {
+                "common": "nafcillin will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nevirapine",
+            "description": {
+                "common": "nevirapine will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxcarbazepine",
+            "description": {
+                "common": "oxcarbazepine will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites.Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "palifermin",
+            "description": {
+                "common": "palifermin increases toxicity of abemaciclib by Other (see comment). Avoid or Use Alternate Drug. \nComment: Palifermin should not be administered within 24 hr before, during infusion of, or within 24 hr after administration of antineoplastic agents. Coadministration of palifermin within 24 hr of chemotherapy resulted in increased severity and duration of oral mucositis."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pentobarbital",
+            "description": {
+                "common": "pentobarbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenobarbital",
+            "description": {
+                "common": "phenobarbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "phenytoin",
+            "description": {
+                "common": "phenytoin will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "primidone",
+            "description": {
+                "common": "primidone will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifabutin",
+            "description": {
+                "common": "rifabutin will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "rifapentine",
+            "description": {
+                "common": "rifapentine will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ropeginterferon alfa 2b",
+            "description": {
+                "common": "ropeginterferon alfa 2b, abemaciclib.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Myelosuppressive agents can produce additive myelosuppression. Avoid use and monitor patients receiving the combination for effects of excessive myelosuppression."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "secobarbital",
+            "description": {
+                "common": "secobarbital will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sotorasib",
+            "description": {
+                "common": "sotorasib will decrease the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Avoid or Use Alternate Drug. If use is unavoidable, refer to the prescribing information of the P-gp substrate for dosage modifications."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "St John's Wort",
+            "description": {
+                "common": "St John's Wort will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Coadministration of abemaciclib with strong CYP3A4 inducers reduces plasma concentration of abemaciclib and its metabolites."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "voxelotor",
+            "description": {
+                "common": "voxelotor will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Avoid or Use Alternate Drug. Voxelotor increases systemic exposure of sensitive CYP3A4 substrates. Avoid coadministration with sensitive CYP3A4 substrates with a narrow therapeutic index. Consider dose reduction of the sensitive CYP3A4 substrate(s) if unable to avoid."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "atazanavir",
+            "description": {
+                "common": "atazanavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "belzutifan",
+            "description": {
+                "common": "belzutifan will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. If unable to avoid coadministration of belzutifan with sensitive CYP3A4 substrates, consider increasing the sensitive CYP3A4 substrate dose in accordance with its prescribing information. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "berotralstat",
+            "description": {
+                "common": "berotralstat will increase the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor or titrate P-gp substrate dose if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cenobamate",
+            "description": {
+                "common": "cenobamate will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Increase dose of CYP3A4 substrate, as needed, when coadministered with cenobamate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "clarithromycin",
+            "description": {
+                "common": "clarithromycin will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cobicistat",
+            "description": {
+                "common": "cobicistat will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a patient taking abemaciclib discontinues a strong CYP3A inhibitor, increase abemaciclib dose (after 3-5 half-lives of the inhibitor) to the dose that was used before starting the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "conivaptan",
+            "description": {
+                "common": "conivaptan will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "darunavir",
+            "description": {
+                "common": "darunavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "dengue vaccine",
+            "description": {
+                "common": "abemaciclib decreases effects of dengue vaccine by immunosuppressive effects; risk of infection. Use Caution/Monitor. Immunosuppressive therapies (eg, irradiation, antimetabolites, alkylating agents, cytotoxic drugs, corticosteroids [greater than physiologic doses]) may reduce immune response to dengue vaccine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "duvelisib",
+            "description": {
+                "common": "duvelisib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Coadministration with duvelisib increases AUC of a sensitive CYP3A4 substrate which may increase the risk of toxicities of these drugs. Consider reducing the dose of the sensitive CYP3A4 substrate and monitor for signs of toxicities of the coadministered sensitive CYP3A substrate."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elagolix",
+            "description": {
+                "common": "elagolix will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Elagolix is a weak-to-moderate CYP3A4 inducer. Monitor CYP3A substrates if coadministered. Consider increasing CYP3A substrate dose if needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "elvitegravir/cobicistat/emtricitabine/tenofovir DF",
+            "description": {
+                "common": "elvitegravir/cobicistat/emtricitabine/tenofovir DF will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "encorafenib",
+            "description": {
+                "common": "encorafenib, abemaciclib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Encorafenib both inhibits and induces CYP3A4 at clinically relevant plasma concentrations. Coadministration of encorafenib with sensitive CYP3A4 substrates may result in increased toxicity or decreased efficacy of these agents."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fedratinib",
+            "description": {
+                "common": "fedratinib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Adjust dose of drugs that are CYP3A4 substrates as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fosamprenavir",
+            "description": {
+                "common": "fosamprenavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "idelalisib",
+            "description": {
+                "common": "idelalisib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "imatinib",
+            "description": {
+                "common": "imatinib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indinavir",
+            "description": {
+                "common": "indinavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "isoniazid",
+            "description": {
+                "common": "isoniazid will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "istradefylline",
+            "description": {
+                "common": "istradefylline will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Istradefylline 40 mg/day increased peak levels and AUC of CYP3A4 substrates in clinical trials. This effect was not observed with istradefylline 20 mg/day. Consider dose reduction of sensitive CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "itraconazole",
+            "description": {
+                "common": "itraconazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. In patients with starting doses of 150 or 200 mg BID, reduce abemaciclib dose to 100 mg BID when coadminister with strong CYP3A inhibitors. In patients who reduced dose to 100 mg BID due to adverse reactions, further reduce abemaciclib dose to 50 mg BID when coadministered with strong CYP3A inhibitors. If the strong CYP3A inhibitoris discontinued, increase abemaciclib dose (after 3-5 half-lives of the inhibitor) to the dose that was used before starting the inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lenacapavir",
+            "description": {
+                "common": "lenacapavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Lencapavir may increase CYP3A4 substrates initiated within 9 months after last SC dose of lenacapavir, which may increase potential risk of adverse reactions of CYP3A4 substrates."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lopinavir",
+            "description": {
+                "common": "lopinavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mifepristone",
+            "description": {
+                "common": "mifepristone will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Patients who have had dose reduction to 100 mg twice daily due to adverse reactions, may further reduce dose of abemaciclib to 50 mg PO twice daily; discontinue abemaciclib for patients unable to tolerate 50 mg twice daily; if mifepristone is discontinued, increase dose of abemaciclib to original dose after 3 to 5 half-lives of mifepristone"
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nefazodone",
+            "description": {
+                "common": "nefazodone will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nelfinavir",
+            "description": {
+                "common": "nelfinavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nicardipine",
+            "description": {
+                "common": "nicardipine will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir",
+            "description": {
+                "common": "nirmatrelvir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce abemaciclib dose if coadministered with strong or moderate CYP3A4 inhibitors. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nirmatrelvir/ritonavir",
+            "description": {
+                "common": "nirmatrelvir/ritonavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Reduce abemaciclib dose if coadministered with strong or moderate CYP3A4 inhibitors. "
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ofatumumab SC",
+            "description": {
+                "common": "ofatumumab SC, abemaciclib.\nEither increases effects of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor. Consider the risk of additive immune system effects when coadministering immunosuppressive therapies with coadministration. When switching from therapies with immune effects, take into account the duration and mechanism of action of these therapies when initiating ofatumumab SC."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "posaconazole",
+            "description": {
+                "common": "posaconazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ribociclib",
+            "description": {
+                "common": "ribociclib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ritonavir",
+            "description": {
+                "common": "ritonavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "rucaparib",
+            "description": {
+                "common": "rucaparib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Adjust dosage of CYP3A4 substrates, if clinically indicated."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "saquinavir",
+            "description": {
+                "common": "saquinavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sarecycline",
+            "description": {
+                "common": "sarecycline will increase the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Monitor for toxicities of P-gp substrates that may require dosage reduction when coadministered with P-gp inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "siponimod",
+            "description": {
+                "common": "siponimod and abemaciclib both increase  immunosuppressive effects; risk of infection. Use Caution/Monitor. Caution if coadministered because of additive immunosuppressive effects during such therapy and in the weeks following administration. When switching from drugs with prolonged immune effects, consider the half-life and mode of action of these drugs to avoid unintended additive immunosuppressive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "stiripentol",
+            "description": {
+                "common": "stiripentol, abemaciclib. affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Stiripentol is a CYP3A4 inhibitor and inducer. Monitor CYP3A4 substrates coadministered with stiripentol for increased or decreased effects. CYP3A4 substrates may require dosage adjustment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tazemetostat",
+            "description": {
+                "common": "tazemetostat will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tecovirimat",
+            "description": {
+                "common": "tecovirimat will decrease the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Tecovirimat is a weak CYP3A4 inducer. Monitor sensitive CYP3A4 substrates for effectiveness if coadministered."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tipranavir",
+            "description": {
+                "common": "tipranavir will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab",
+            "description": {
+                "common": "trastuzumab, abemaciclib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trastuzumab deruxtecan",
+            "description": {
+                "common": "trastuzumab deruxtecan, abemaciclib.\nEither increases toxicity of the other by immunosuppressive effects; risk of infection. Use Caution/Monitor.  Neutropenia or febrile neutropenia incidence were increased when trastuzumab was coadministered with myelosuppressive chemotherapy. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tucatinib",
+            "description": {
+                "common": "tucatinib will increase the level or effect of abemaciclib by  P-glycoprotein (MDR1) efflux transporter. Use Caution/Monitor. Consider reducing the dosage of P-gp substrates, where minimal concentration changes may lead to serious or life-threatening toxicities."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voriconazole",
+            "description": {
+                "common": "voriconazole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Modify Therapy/Monitor Closely. Strong CYP3A4 inhibitors increase plasma levels of abemaciclib and its metabolites. Abemaciclib dose reduction required. If a strong CYP3A4 inhibitor is discontinued, increase abemaciclib to the dose prior to initiating the strong inhibitor."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acetazolamide",
+            "description": {
+                "common": "acetazolamide will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "anastrozole",
+            "description": {
+                "common": "anastrozole will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cyclophosphamide",
+            "description": {
+                "common": "cyclophosphamide will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "larotrectinib",
+            "description": {
+                "common": "larotrectinib will increase the level or effect of abemaciclib by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Increased creatinine",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "4"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "4"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Leukopenia",
+            "percent": "4"
+        },
+        {
+            "name": "grade",
+            "percent": "4"
+        },
+        {
+            "name": "Constipation",
+            "percent": "4"
+        },
+        {
+            "name": "grade",
+            "percent": "4"
+        },
+        {
+            "name": "Increased WBC",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "4"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "4"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Increase ALT",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": "3"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "3"
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Decreased weight",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Pyrexia",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "or",
+            "percent": null
+        },
+        {
+            "name": "Anemia",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Leukopenia",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Infections",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Stomatitis",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        },
+        {
+            "name": "Vomiting",
+            "percent": null
+        },
+        {
+            "name": "grade",
+            "percent": null
+        }
+    ]
+}

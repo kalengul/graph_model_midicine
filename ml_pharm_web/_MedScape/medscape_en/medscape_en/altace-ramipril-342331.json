@@ -1,0 +1,1359 @@
+{
+    "name": "ramipril",
+    "comment": "Rx",
+    "other_names": [
+        "Altace"
+    ],
+    "classes": [
+        "ACE Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/altace-ramipril-342331",
+    "pregnancy": {
+        "common": [
+            "Pregnancy category: D",
+            "Discontinue as soon as pregnancy detected; during the second and third trimesters of pregnancy, therapy can result in fetal injury (eg, hypotension, neonatal skull hypoplasia, anuria, reversible and irreversible renal failure) and death",
+            "Lactation: Possibly excreted in breast milk; nursing not recommended"
+        ],
+        "specific": []
+    },
+    "lactation": {
+        "common": [
+            "Lactation: Possibly excreted in breast milk; nursing not recommended"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [
+                "Discontinue as soon as possible when pregnancy is detected; affects renin-angiotensin system, causing oligohydramnios, which may result in fetal injury and/or death"
+            ],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "Hypersensitivity to drug or other ACE inhibitors",
+                "Do not coadminister with aliskiren in patients with diabetes mellitus or with renal impairment (ie, GFR <60 mL/min/1.73 m²)",
+                "Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Anaphylactoid and related reactions (head and neck/intestinal angioedema, anaphylaxis during desensitizing treatment with Hymenoptera venom, anaphylaxis during membrane exposure with high-flux membrane dialysis, and low-density lipoprotein apheresis with dextran sulfate absorption)",
+                "(Rare) risk of hepatic failure, which starts as cholestatic jaundice and progresses to sometimes fatal fulminant hepatic necrosis; discontinue if patient develops jaundice or marked elevations of hepatic enzymes",
+                "Excessive hypotension if on concomitant diuretics, hypovolemia, hyponatremia; increased risk in CHF patients; treat by placing patient in supine position and treating with IV infusion of physiologic saline if necessary",
+                "Increased hypotension risk in patients undergoing surgery or during anesthesia with agents that produce hypotension; correct by volume expansion in such situations",
+                "Coadministration with mTOR inhibitors (eg, temsirolimus) may increased risk for angioedema",
+                "African American patients may have a smaller average reduction in BP than other populations",
+                "Changes in renal function due to blockage of renin-angiotensin-aldosterone system; severe CHF patients are at increased risk for oliguria or progressive azotemia and (rarely) for acute renal failure or death; increase in BUN/SCr may occur in patients with unilateral or bilateral renal artery stenosis; monitor closely",
+                "Reduction in RBC and hemoglobin content with rare cases of agranulocytosis, pancytopenia and bone marrow depression reported; collagen-vascular disease (SLE, scleroderma) patients with impaired renal function are at increased risk; monitor closely",
+                "Dual blockade of the renin angiotensin system with ARBs, ACE inhibitors, or aliskiren associated with increased risk for hypotension, hyperkalemia, and renal function changes (including acute renal failure) compared to monotherapy",
+                "Risk of hyperkalemia, especially in patients with renal impairment, DM, concomitant use of K+-elevating drugs",
+                "Reversible, persistent, nonproductive cough thought to be due to inhibition of degradation of endogenous bradykinin",
+                "Patients receiving coadministration of ACE inhibitor and mTOR (mammalian target of rapamycin) inhibitor (e.g. temsirolimus, sirolimus, everolimus) therapy or a neprilysin inhibitor may be at increased risk for angioedema"
+            ],
+            "specific": []
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "aliskiren",
+            "description": {
+                "common": "ramipril decreases effects of aliskiren by Other (see comment). Contraindicated. \nComment: Aliskiren use contraindicated with ACE-inhibitors in patients with diabetes; avoid coadministration with ACE-inhibitors if GFR. In patients who are elderly, volume-depleted (including those on diuretic therapy), or with compromised renal function, coadministration of ACE-inhibitors with drugs that affect RAAS may increase the risk of renal impairment (including acute renal failure) and cause loss of antihypertensive effect. Monitor renal function periodically."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "protein a column",
+            "description": {
+                "common": "ramipril, protein a column. Other (see comment). Contraindicated. \nComment: Risk of anaphylactic reaction.  Mechanism: buildup of bradykinin d/t deactivation of kininase by ACE inhibitors.  D/C ACE inhibitor 72h prior to use of protein A column."
+            }
+        },
+        {
+            "classification_type": "Contraindicated",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "sacubitril/valsartan, ramipril.\nEither increases toxicity of the other by Other (see comment). Contraindicated. \nComment: Coadministration of neprilysin inhibitors (eg, sacubitril) with ACE inhibitors may increase angioedema risk; do not administer ACE inhibitors within 36 hr of switching to or from sacubitril/valsartan."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "aspirin, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "aspirin rectal",
+            "description": {
+                "common": "aspirin rectal, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "azilsartan",
+            "description": {
+                "common": "azilsartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "candesartan",
+            "description": {
+                "common": "candesartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "celecoxib, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "choline magnesium trisalicylate, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "dalteparin",
+            "description": {
+                "common": "dalteparin increases toxicity of ramipril by Other (see comment). Avoid or Use Alternate Drug. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "diclofenac, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "diflunisal, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "eprosartan",
+            "description": {
+                "common": "eprosartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "etodolac, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "fenoprofen, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "flurbiprofen, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ibuprofen, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ibuprofen IV, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "indomethacin, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "irbesartan",
+            "description": {
+                "common": "irbesartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ketoprofen, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ketorolac, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ketorolac intranasal, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "lofexidine",
+            "description": {
+                "common": "lofexidine, ramipril.\nEither increases effects of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Avoid coadministration with other drugs that decrease pulse or blood pressure to mitigate risk of excessive bradycardia and hypotension."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "losartan",
+            "description": {
+                "common": "losartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "meclofenamate, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "mefenamic acid, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "meloxicam, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "nabumetone, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "naproxen, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "olmesartan",
+            "description": {
+                "common": "olmesartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "oxaprozin, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "piroxicam, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "potassium phosphates, IV",
+            "description": {
+                "common": "ramipril and potassium phosphates, IV both increase  serum potassium. Avoid or Use Alternate Drug."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "pregabalin",
+            "description": {
+                "common": "ramipril, pregabalin.\nEither increases toxicity of the other by Other (see comment). Avoid or Use Alternate Drug. \nComment: Coadministration results in additive risk of developing angioedema of face, mouth, and neck. Angioedema may result in respiratory compromise."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sacubitril/valsartan",
+            "description": {
+                "common": "sacubitril/valsartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "salsalate, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "sulindac, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "telmisartan",
+            "description": {
+                "common": "ramipril, telmisartan. Mechanism: unspecified interaction mechanism. Contraindicated. Increased incidence of clinically important renal dysfunction (death, doubling of serum creatinine, dialysis) compared with groups receiving either drug alone. ."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "tolmetin, ramipril. pharmacodynamic antagonism. Avoid or Use Alternate Drug. Coadministration may result in a significant decrease in renal function. NSAIDs may diminish the antihypertensive effect of ACE inhibitors. The mechanism of these interactions is likely related to the ability of NSAIDs to reduce the synthesis of vasodilating renal prostaglandins."
+            }
+        },
+        {
+            "classification_type": "Serious",
+            "interaction_with": "valsartan",
+            "description": {
+                "common": "valsartan, ramipril.\nEither increases toxicity of the other by pharmacodynamic synergism. Avoid or Use Alternate Drug. Dual blockade of renin-angiotensin system increases risks of hypotension, hyperkalemia, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "albiglutide",
+            "description": {
+                "common": "ramipril increases effects of albiglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aldesleukin",
+            "description": {
+                "common": "aldesleukin increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "alfuzosin",
+            "description": {
+                "common": "ramipril, alfuzosin. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aluminum hydroxide",
+            "description": {
+                "common": "aluminum hydroxide decreases effects of ramipril by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amifostine",
+            "description": {
+                "common": "amifostine, ramipril.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Coadministration with blood pressure lowering agents may increase the risk and severity of hypotension associated with amifostine. When amifostine is used at chemotherapeutic doses, withhold blood pressure lowering medications for 24 hr prior to amifostine; if blood pressure lowering medication cannot be withheld, do not administer amifostine."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "amiloride",
+            "description": {
+                "common": "ramipril, amiloride. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "asenapine",
+            "description": {
+                "common": "ramipril, asenapine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin",
+            "description": {
+                "common": "ramipril, aspirin.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly with high doses of aspirin, in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "aspirin/citric acid/sodium bicarbonate",
+            "description": {
+                "common": "aspirin/citric acid/sodium bicarbonate decreases effects of ramipril by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. NSAIDs decrease synthesis of vasodilating renal prostaglandins, and thus affect fluid homeostasis and may diminish antihypertensive effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "avanafil",
+            "description": {
+                "common": "avanafil increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "azathioprine",
+            "description": {
+                "common": "ramipril, azathioprine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of neutropenia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bretylium",
+            "description": {
+                "common": "ramipril, bretylium.\nEither increases effects of the other by pharmacodynamic synergism. Modify Therapy/Monitor Closely. Each drug may cause hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "bumetanide",
+            "description": {
+                "common": "ramipril, bumetanide. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypotension, renal insufficiency."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "calcium carbonate",
+            "description": {
+                "common": "calcium carbonate decreases effects of ramipril by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "canagliflozin",
+            "description": {
+                "common": "ramipril and canagliflozin both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "carbidopa",
+            "description": {
+                "common": "carbidopa increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor. Therapy with carbidopa, given with or without levodopa or carbidopa-levodopa combination products, is started, dosage adjustment of the antihypertensive drug may be required."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "celecoxib",
+            "description": {
+                "common": "ramipril, celecoxib.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "chlorpropamide",
+            "description": {
+                "common": "ramipril increases effects of chlorpropamide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "choline magnesium trisalicylate",
+            "description": {
+                "common": "ramipril, choline magnesium trisalicylate.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "cyclosporine",
+            "description": {
+                "common": "ramipril, cyclosporine.\nEither increases toxicity of the other by nephrotoxicity and/or ototoxicity. Use Caution/Monitor. Risk of acute renal failure."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diclofenac",
+            "description": {
+                "common": "ramipril, diclofenac.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "diflunisal",
+            "description": {
+                "common": "ramipril, diflunisal.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "digoxin",
+            "description": {
+                "common": "ramipril increases levels of digoxin by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "doxazosin",
+            "description": {
+                "common": "ramipril, doxazosin. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "drospirenone",
+            "description": {
+                "common": "ramipril, drospirenone. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "enoxaparin",
+            "description": {
+                "common": "enoxaparin increases toxicity of ramipril by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "eplerenone",
+            "description": {
+                "common": "ramipril, eplerenone. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ethacrynic acid",
+            "description": {
+                "common": "ramipril, ethacrynic acid. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypotension, renal insufficiency."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "etodolac",
+            "description": {
+                "common": "ramipril, etodolac.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "everolimus",
+            "description": {
+                "common": "ramipril, everolimus.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: Coadministration increases risk of angioedema."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable solution",
+            "description": {
+                "common": "ramipril increases effects of exenatide injectable solution by Other (see comment). Use Caution/Monitor. \nComment: ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "exenatide injectable suspension",
+            "description": {
+                "common": "ramipril increases effects of exenatide injectable suspension by Other (see comment). Use Caution/Monitor. \nComment: ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "fenoprofen",
+            "description": {
+                "common": "ramipril, fenoprofen.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "finerenone",
+            "description": {
+                "common": "ramipril and finerenone both increase  serum potassium. Modify Therapy/Monitor Closely. Finerenone dose adjustment based on current serum potassium concentration. Monitor serum potassium and adjust finerenone dose as described in the prescribing information as necessary."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "flurbiprofen",
+            "description": {
+                "common": "ramipril, flurbiprofen.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "furosemide",
+            "description": {
+                "common": "ramipril, furosemide. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypotension, renal insufficiency."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glimepiride",
+            "description": {
+                "common": "ramipril increases effects of glimepiride by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glipizide",
+            "description": {
+                "common": "ramipril increases effects of glipizide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "glyburide",
+            "description": {
+                "common": "ramipril increases effects of glyburide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gold sodium thiomalate",
+            "description": {
+                "common": "ramipril, gold sodium thiomalate. Mechanism: unspecified interaction mechanism. Use Caution/Monitor. Combo of ACE inhibitors and injectable gold has caused rare cases of nitritoid reaction (flushing, N/V, hypot'n)."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "heparin",
+            "description": {
+                "common": "heparin increases toxicity of ramipril by Other (see comment). Use Caution/Monitor. \nComment: Low molecular weight heparins may suppress adrenal aldosterone secretion, which can potentially cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen",
+            "description": {
+                "common": "ramipril, ibuprofen.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ibuprofen IV",
+            "description": {
+                "common": "ramipril, ibuprofen IV.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "icatibant",
+            "description": {
+                "common": "icatibant decreases effects of ramipril by pharmacodynamic antagonism. Use Caution/Monitor. Icatibant has potential to have a pharmacodynamic interaction with ACE inhibitors where it may attenuate the antihypertensive effect of ACE inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "indomethacin",
+            "description": {
+                "common": "ramipril, indomethacin.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin aspart",
+            "description": {
+                "common": "ramipril increases effects of insulin aspart by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec",
+            "description": {
+                "common": "ramipril, insulin degludec.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin degludec/insulin aspart",
+            "description": {
+                "common": "ramipril, insulin degludec/insulin aspart.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin detemir",
+            "description": {
+                "common": "ramipril increases effects of insulin detemir by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glargine",
+            "description": {
+                "common": "ramipril increases effects of insulin glargine by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin glulisine",
+            "description": {
+                "common": "ramipril increases effects of insulin glulisine by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin inhaled",
+            "description": {
+                "common": "ramipril, insulin inhaled.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Both drugs decrease blood glucose."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin lispro",
+            "description": {
+                "common": "ramipril increases effects of insulin lispro by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin NPH",
+            "description": {
+                "common": "ramipril increases effects of insulin NPH by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "insulin regular human",
+            "description": {
+                "common": "ramipril increases effects of insulin regular human by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketoprofen",
+            "description": {
+                "common": "ramipril, ketoprofen.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac",
+            "description": {
+                "common": "ramipril, ketorolac.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "ketorolac intranasal",
+            "description": {
+                "common": "ramipril, ketorolac intranasal.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lanthanum carbonate",
+            "description": {
+                "common": "lanthanum carbonate decreases levels of ramipril by cation binding in GI tract. Use Caution/Monitor. Administer ACE inhibitor at least 2 hr before or after lanthanum."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "levodopa",
+            "description": {
+                "common": "levodopa increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor. Consider decreasing dosage of antihypertensive agent."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "liraglutide",
+            "description": {
+                "common": "ramipril increases effects of liraglutide by unknown mechanism. Use Caution/Monitor. ACE inhibitors may increase hypoglycemic effect. Monitor glycemic control especially during the first month of treatment with an ACE inhibitor. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lithium",
+            "description": {
+                "common": "ramipril increases toxicity of lithium by unknown mechanism. Use Caution/Monitor. ACE inhibitor induced Na+ depletion may increase reabsorption of lithium from renal tubule."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "lurasidone",
+            "description": {
+                "common": "lurasidone increases effects of ramipril by Other (see comment). Use Caution/Monitor. \nComment: Potential  for increased risk of hypotension with concurrent use. Monitor blood pressure and adjust  dose of  antihypertensive agent as needed."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "maraviroc",
+            "description": {
+                "common": "maraviroc, ramipril.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Increased risk of orthostatic hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meclofenamate",
+            "description": {
+                "common": "ramipril, meclofenamate.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "mefenamic acid",
+            "description": {
+                "common": "ramipril, mefenamic acid.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "meloxicam",
+            "description": {
+                "common": "ramipril, meloxicam.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "metformin",
+            "description": {
+                "common": "ramipril increases toxicity of metformin by unspecified interaction mechanism. Use Caution/Monitor. Increases risk for hypoglycemia and lactic acidosis."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate",
+            "description": {
+                "common": "methylphenidate will decrease the level or effect of ramipril by  pharmacodynamic antagonism. Use Caution/Monitor. Methylphenidate may diminish antihypertensive effects. Monitor BP."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "methylphenidate transdermal",
+            "description": {
+                "common": "methylphenidate transdermal decreases effects of ramipril by anti-hypertensive channel blocking. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "moxisylyte",
+            "description": {
+                "common": "ramipril, moxisylyte. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nabumetone",
+            "description": {
+                "common": "ramipril, nabumetone.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "naproxen",
+            "description": {
+                "common": "ramipril, naproxen.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nesiritide",
+            "description": {
+                "common": "nesiritide, ramipril.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Additive hypotensive effects."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "nitroglycerin rectal",
+            "description": {
+                "common": "nitroglycerin rectal, ramipril.\nEither increases effects of the other by pharmacodynamic synergism. Use Caution/Monitor. Observe for possible additive hypotensive effects during concomitant use. ."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "oxaprozin",
+            "description": {
+                "common": "ramipril, oxaprozin.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phenoxybenzamine",
+            "description": {
+                "common": "ramipril, phenoxybenzamine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "phentolamine",
+            "description": {
+                "common": "ramipril, phentolamine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "piroxicam",
+            "description": {
+                "common": "ramipril, piroxicam.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium acid phosphate",
+            "description": {
+                "common": "ramipril increases levels of potassium acid phosphate by decreasing elimination. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium chloride",
+            "description": {
+                "common": "ramipril increases levels of potassium chloride by decreasing elimination. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate",
+            "description": {
+                "common": "ramipril increases levels of potassium citrate by decreasing elimination. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium citrate/citric acid",
+            "description": {
+                "common": "ramipril and potassium citrate/citric acid both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "potassium iodide",
+            "description": {
+                "common": "potassium iodide and ramipril both increase  serum potassium. Use Caution/Monitor. Potassium salts may increase the hyperkalemic effects of ACE inhibitors; the effect may be the result of aldosterone suppression in patients receiving ACE inhibitors."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "prazosin",
+            "description": {
+                "common": "ramipril, prazosin. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "salsalate",
+            "description": {
+                "common": "ramipril, salsalate.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "silodosin",
+            "description": {
+                "common": "ramipril, silodosin. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sirolimus",
+            "description": {
+                "common": "ramipril, sirolimus.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: Coadministration increases risk of angioedema."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium bicarbonate",
+            "description": {
+                "common": "sodium bicarbonate decreases effects of ramipril by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium citrate/citric acid",
+            "description": {
+                "common": "sodium citrate/citric acid decreases effects of ramipril by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/?magnesium sulfate/potassium chloride",
+            "description": {
+                "common": "sodium sulfate/?magnesium sulfate/potassium chloride increases toxicity of ramipril by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sodium sulfate/potassium sulfate/magnesium sulfate",
+            "description": {
+                "common": "sodium sulfate/potassium sulfate/magnesium sulfate increases toxicity of ramipril by Other (see comment). Use Caution/Monitor. \nComment: Coadministration with medications that cause fluid and electrolyte abnormalities may increase the risk of adverse events of seizure, arrhythmias, and renal impairment."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "spironolactone",
+            "description": {
+                "common": "ramipril, spironolactone. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulfasalazine",
+            "description": {
+                "common": "sulfasalazine decreases effects of ramipril by pharmacodynamic antagonism. Modify Therapy/Monitor Closely. NSAIDs decrease synthesis of vasodilating renal prostaglandins, and thus affect fluid homeostasis and may diminish antihypertensive effect."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "sulindac",
+            "description": {
+                "common": "ramipril, sulindac.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "synthetic human angiotensin II",
+            "description": {
+                "common": "ramipril increases effects of synthetic human angiotensin II by unspecified interaction mechanism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tadalafil",
+            "description": {
+                "common": "tadalafil increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "temsirolimus",
+            "description": {
+                "common": "ramipril, temsirolimus.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: Coadministration increases risk of angioedema."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "terazosin",
+            "description": {
+                "common": "ramipril, terazosin. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolazamide",
+            "description": {
+                "common": "ramipril increases effects of tolazamide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolbutamide",
+            "description": {
+                "common": "ramipril increases effects of tolbutamide by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "tolmetin",
+            "description": {
+                "common": "ramipril, tolmetin.\nEither increases toxicity of the other by Other (see comment). Use Caution/Monitor. \nComment: May result in renal function deterioration, particularly in elderly or volume depleted individuals."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "torsemide",
+            "description": {
+                "common": "ramipril, torsemide. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of acute hypotension, renal insufficiency."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "triamterene",
+            "description": {
+                "common": "ramipril, triamterene. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Risk of hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "trimethoprim",
+            "description": {
+                "common": "trimethoprim and ramipril both increase  serum potassium. Use Caution/Monitor. Trimethoprim decreases urinary potassium excretion. May cause hyperkalemia, particularly with high doses, renal insufficiency, or when combined with other drugs that cause hyperkalemia."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "voclosporin",
+            "description": {
+                "common": "voclosporin and ramipril both increase  serum potassium. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "xipamide",
+            "description": {
+                "common": "xipamide increases effects of ramipril by pharmacodynamic synergism. Use Caution/Monitor."
+            }
+        },
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "zotepine",
+            "description": {
+                "common": "ramipril, zotepine. Mechanism: pharmacodynamic synergism. Use Caution/Monitor. Exaggerated first dose hypotensive response."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "aceclofenac",
+            "description": {
+                "common": "aceclofenac decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "acemetacin",
+            "description": {
+                "common": "acemetacin decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "agrimony",
+            "description": {
+                "common": "agrimony increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "brimonidine",
+            "description": {
+                "common": "brimonidine increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "capsicum",
+            "description": {
+                "common": "capsicum, ramipril. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. Increase ACE inhibitor induced cough."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "chlorpromazine",
+            "description": {
+                "common": "chlorpromazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "cornsilk",
+            "description": {
+                "common": "cornsilk increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "creatine",
+            "description": {
+                "common": "creatine, ramipril. Mechanism: pharmacodynamic synergism. Minor/Significance Unknown. (Theoretical interaction) Combination may have additive nephrotoxic effects."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "entecavir",
+            "description": {
+                "common": "ramipril, entecavir.\nEither increases effects of the other by decreasing renal clearance. Minor/Significance Unknown. Coadministration with drugs that reduce renal function or compete for active tubular secretion may increase serum concentrations of either entecavir or the coadministered drug."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "fluphenazine",
+            "description": {
+                "common": "fluphenazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "lornoxicam",
+            "description": {
+                "common": "lornoxicam decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "maitake",
+            "description": {
+                "common": "maitake increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "octacosanol",
+            "description": {
+                "common": "octacosanol increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "parecoxib",
+            "description": {
+                "common": "parecoxib decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "patiromer",
+            "description": {
+                "common": "patiromer, ramipril. cation binding in GI tract. Minor/Significance Unknown. No observed clinically important interaction. No separation of dosing required."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "perphenazine",
+            "description": {
+                "common": "perphenazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "probenecid",
+            "description": {
+                "common": "probenecid increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "prochlorperazine",
+            "description": {
+                "common": "prochlorperazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "promazine",
+            "description": {
+                "common": "promazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "promethazine",
+            "description": {
+                "common": "promethazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "reishi",
+            "description": {
+                "common": "reishi increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "rifampin",
+            "description": {
+                "common": "rifampin decreases levels of ramipril by increasing metabolism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "salicylates (non-asa)",
+            "description": {
+                "common": "salicylates (non-asa) decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "shepherd's purse",
+            "description": {
+                "common": "shepherd's purse, ramipril. Other (see comment). Minor/Significance Unknown. \nComment: Theoretically, shepherd's purse may interfere with BP control."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "thioridazine",
+            "description": {
+                "common": "thioridazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tizanidine",
+            "description": {
+                "common": "tizanidine increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown. Risk of hypotension."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "tolfenamic acid",
+            "description": {
+                "common": "tolfenamic acid decreases effects of ramipril by pharmacodynamic antagonism. Minor/Significance Unknown. NSAIDs decrease prostaglandin synthesis."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "treprostinil",
+            "description": {
+                "common": "treprostinil increases effects of ramipril by pharmacodynamic synergism. Minor/Significance Unknown."
+            }
+        },
+        {
+            "classification_type": "Minor",
+            "interaction_with": "trifluoperazine",
+            "description": {
+                "common": "trifluoperazine increases effects of ramipril by unspecified interaction mechanism. Minor/Significance Unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Cough",
+            "percent": "7-8"
+        },
+        {
+            "name": "Hypotension",
+            "percent": "2-11"
+        },
+        {
+            "name": "Headache",
+            "percent": "1-5"
+        },
+        {
+            "name": "Angina pectoris",
+            "percent": "3"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "2-4"
+        },
+        {
+            "name": "Nausea",
+            "percent": "2"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2"
+        },
+        {
+            "name": "Postural hypotension",
+            "percent": "2"
+        },
+        {
+            "name": "Syncope",
+            "percent": "2"
+        },
+        {
+            "name": "Vertigo",
+            "percent": "2"
+        },
+        {
+            "name": "Abnormal kidney function",
+            "percent": "1"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "1"
+        },
+        {
+            "name": "Angioedema",
+            "percent": "0.3"
+        }
+    ]
+}

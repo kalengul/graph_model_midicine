@@ -1,0 +1,194 @@
+{
+    "name": "relugolix",
+    "comment": "Rx",
+    "other_names": [
+        "Orgovyx"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "GNRH Antagonists"
+    ],
+    "source": "https://reference.medscape.com/drug/orgovyx-relugolix-4000119",
+    "pregnancy": {
+        "common": [
+            "Based on findings in animals and mechanism of action, can cause fetal harm and loss of pregnancy when administered to pregnant females",
+            "Human data are unavailable"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "Administration to pregnant rabbits during organogenesis caused embryofetal lethality at maternal exposures that were 0.3 times the human exposure at the recommended dose of 120 mg daily based on AUC"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Males with female partners of reproductive potential: Use effective contraception during treatment and for 2 weeks after last dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on findings in animals and mechanism of action, may impair fertility in males of reproductive potential"
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data are unavailable on presence in human milk, effects on breastfed children, or effects on milk production",
+            "Relugolix and/or its metabolites were present in milk of lactating rats at concentrations up to 10-fold higher than in plasma at 2 hr post dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "None"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "Based animal studies and mechanism of action, fetal harm may occur ",
+                "Therapy suppresses pituitary gonadal system; results of diagnostic tests conducted during and after treatment may be affected; monitor therapeutic effect of relugolix by measuring serum concentrations of prostate specific antigen (PSA) periodically; if PSA increases, measure serum testosterone concentrations",
+                "Hypersensitivity reactions, including pharyngeal edema and other serious cases of angioedema, reported; advise patients who experience any symptoms of hypersensitivity to temporarily discontinue therapy and promptly seek medical care; discontinue therapy for severe hypersensitivity reactions and manage as clinically indicated"
+            ],
+            "specific": [
+                {
+                    "type": "QT/QTc interval prolongation",
+                    "description": [
+                        "Androgen deprivation therapy may prolong QT/QTc interval",
+                        "Consider benefits and risks in patients with congenital long QT syndrome, congestive heart failure, or frequent electrolyte abnormalities, and those taking drugs known to prolong QT interval ",
+                        "Correct electrolyte abnormalities",
+                        "Consider periodic ECG and electrolyte monitoring"
+                    ]
+                },
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "CYP enzymes: Substrate of CYP3A (primarily) and CYP2C8 (minor)",
+                        "Transporter systems: Substrate of P-gp; inhibitor of BCRP and P-gp",
+                        "P-gp inhibitors",
+                        "Avoid coadministration",
+                        "Coadministration increases relugolix AUC and peak plasma concentration; if unable to avoid, adjust time between dosing relugolix and the P-gp inhibitor ",
+                        "Combined P-gp and strong CYP3A inducers",
+                        "Avoid coadministration",
+                        "Coadministration decreases relugolix AUC and peak plasma concentration; if unable to avoid, adjust relugolix dose "
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "gallium Ga 68 PSMA-11",
+            "description": {
+                "common": "relugolix will decrease the level or effect of gallium Ga 68 PSMA-11 by  unspecified interaction mechanism. Modify Therapy/Monitor Closely. Androgen deprivation therapy and other therapies targeting the androgen pathway may result in changes in the uptake of gallium Ga 68 PSMA-11 in prostate cancer. The effect of ADT on the performance of gallium Ga 68 PSMA-11 is unknown."
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Hot flush",
+            "percent": "54"
+        },
+        {
+            "name": "Glucose increased",
+            "percent": "44"
+        },
+        {
+            "name": "Triglycerides increased",
+            "percent": "35"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "30"
+        },
+        {
+            "name": "Hemoglobin decreased",
+            "percent": "28"
+        },
+        {
+            "name": "ALT increased",
+            "percent": "27"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "26"
+        },
+        {
+            "name": "AST increased",
+            "percent": "18"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "12"
+        },
+        {
+            "name": "Constipation",
+            "percent": "12"
+        },
+        {
+            "name": "Increased weight",
+            "percent": "10"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "10"
+        },
+        {
+            "name": "Gynecomastia",
+            "percent": "10"
+        },
+        {
+            "name": "Hyperhidrosis",
+            "percent": "10"
+        },
+        {
+            "name": "Depression",
+            "percent": "10"
+        },
+        {
+            "name": "Decreased libido",
+            "percent": "10"
+        },
+        {
+            "name": "Glucose increased",
+            "percent": "2.9"
+        },
+        {
+            "name": "Triglycerides increased",
+            "percent": "2"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "1.1"
+        },
+        {
+            "name": "Hot flush",
+            "percent": null
+        },
+        {
+            "name": "Fatigue",
+            "percent": null
+        },
+        {
+            "name": "Diarrhea",
+            "percent": null
+        },
+        {
+            "name": "ALT increased",
+            "percent": null
+        },
+        {
+            "name": "Hemoglobin increased",
+            "percent": null
+        }
+    ]
+}

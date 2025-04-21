@@ -1,0 +1,399 @@
+{
+    "name": "sirolimus protein bound",
+    "comment": "Rx",
+    "other_names": [
+        "Fyarro"
+    ],
+    "classes": [
+        "Antineoplastics",
+        "mTOr Kinase Inhibitors"
+    ],
+    "source": "https://reference.medscape.com/drug/fyarro-sirolimus-protein-bound-4000258",
+    "pregnancy": {
+        "common": [
+            "Based on animal studies and the mechanism of action, can cause fetal harm when administered to pregnant females",
+            "Verify pregnancy status of females of reproductive potential before initiating"
+        ],
+        "specific": [
+            {
+                "type": "Animal studies",
+                "description": [
+                    "Studies with oral sirolimus formulation have shown that it crosses the placenta and is toxic to the conceptus at subtherapeutic doses"
+                ]
+            },
+            {
+                "type": "Contraception",
+                "description": [
+                    "Females or males with female partners of reproductive potential: Use effective contraception during treatment and for 12 weeks after last dose"
+                ]
+            },
+            {
+                "type": "Infertility",
+                "description": [
+                    "Based on available clinical findings with oral sirolimus and findings in animals, male and female fertility may be compromised",
+                    "Ovarian cysts and menstrual disorders (including amenorrhea and menorrhagia) reported in females with the use of oral sirolimus",
+                    "Azoospermia reported in males with the use of oral sirolimus and has been reversible upon discontinuation in most cases "
+                ]
+            }
+        ]
+    },
+    "lactation": {
+        "common": [
+            "Data are not available on presence in human milk or its effects on breastfed children or milk production",
+            "Unknown if present in human milk",
+            "Advise females not to breastfeed during treatment and for 2 weeks after last dose"
+        ]
+    },
+    "warnings": {
+        "black_box_warning": {
+            "common": [],
+            "specific": []
+        },
+        "contraindicators": {
+            "common": [
+                "History of severe hypersensitivity to sirolimus, other rapamycin derivatives, or albumin"
+            ],
+            "specific": []
+        },
+        "cautions": {
+            "common": [
+                "See dosage modifications for recommendations to withhold treatment, reduce dose, or permanently discontinue",
+                "Stomatitis, including mouth ulcers and oral mucositis, reported most often within 8 weeks of treatment",
+                "May cause myelosuppression, including anemia, thrombocytopenia, and neutropenia",
+                "Can cause infections; common infections reported in clinical trials included urinary tract infections, upper respiratory tract infections, and sinusitis",
+                "Can cause hypokalemia; potassium supplementation may be indicated",
+                "Hyperglycemia may occur in nondiabetic or diabetic patients",
+                "Interstitial lung disease/noninfectious pneumonitis reported",
+                "Can cause serious and sometimes fatal hemorrhage",
+                "Hypersensitivity reactions (to sirolimus or albumin) reported (eg, anaphylaxis, angioedema, exfoliative dermatitis, hypersensitivity vasculitis)",
+                "Based on animal studies and mechanism of action, can cause fetal harm when administered to pregnant females",
+                "Sirolimus is an antiproliferative drug and affects rapidly dividing cells (eg, as germ cells); azoospermia or oligospermia may be observed in males"
+            ],
+            "specific": [
+                {
+                    "type": "Drug interaction overview",
+                    "description": [
+                        "Substrate of both CYP3A4 and p-gp",
+                        "CYP3A4 and/or P-gp inhibitors ",
+                        "Strong CYP3A4 and/or P-gp inhibitors: Avoid coadministration",
+                        "Moderate or weak CYP3A4 inhibitors: Reduce sirolimus dose",
+                        "CYP3A4 and/or P-gp inducers",
+                        "Strong CYP3A4 and/or P-gp inducers: Avoid coadministration",
+                        "Moderate or weak CYP3A4 inducers: Coadministration may decrease sirolimus efficacy",
+                        "Vaccines",
+                        "No studies in conjunction with immunization conducted",
+                        "Immunization during treatment may be ineffective",
+                        "Update immunizations according to immunization guidelines before initiating siroliumus, if possible",
+                        "Live vaccines: Immunization with live vaccines is not recommended during treatment and avoid close contact with those who have received live vaccines while taking sirolimus",
+                        "Interval between live vaccinations and initiating sirolimus should be in accordance with current ",
+                        "vaccination guidelines",
+                        " for patients on immunosuppressive therapies"
+                    ]
+                }
+            ]
+        }
+    },
+    "interactions": [
+        {
+            "classification_type": "Monitor Closely",
+            "interaction_with": "omaveloxolone",
+            "description": {
+                "common": "omaveloxolone will decrease the level or effect of sirolimus protein bound by  affecting hepatic/intestinal enzyme CYP3A4 metabolism. Use Caution/Monitor. Omaveloxolone may reduce systemic exposure of sensitive CYP3A4 substrates. Check prescribing information of substrate if dosage modification is needed.  "
+            }
+        }
+    ],
+    "adverse effects": [
+        {
+            "name": "Stomatitis",
+            "percent": "79"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "68"
+        },
+        {
+            "name": "Infections",
+            "percent": "59"
+        },
+        {
+            "name": "Edema",
+            "percent": "50"
+        },
+        {
+            "name": "Nausea",
+            "percent": "50"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "47"
+        },
+        {
+            "name": "Weight decreased",
+            "percent": "47"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "47"
+        },
+        {
+            "name": "Decrease appetite",
+            "percent": "44"
+        },
+        {
+            "name": "Cough",
+            "percent": "35"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "32"
+        },
+        {
+            "name": "Dysgeusia",
+            "percent": "32"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "29"
+        },
+        {
+            "name": "Headache",
+            "percent": "29"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "29"
+        },
+        {
+            "name": "Constipation",
+            "percent": "24"
+        },
+        {
+            "name": "Pyrexia",
+            "percent": "24"
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": "24"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "21"
+        },
+        {
+            "name": "Pneumonitis",
+            "percent": "18"
+        },
+        {
+            "name": "Dry mouth",
+            "percent": "15"
+        },
+        {
+            "name": "Dehydration",
+            "percent": "15"
+        },
+        {
+            "name": "Peripheral neuropathy",
+            "percent": "15"
+        },
+        {
+            "name": "Hemorrhoids",
+            "percent": "12"
+        },
+        {
+            "name": "Dry skin",
+            "percent": "12"
+        },
+        {
+            "name": "Nail disorder",
+            "percent": "12"
+        },
+        {
+            "name": "Dizziness",
+            "percent": "12"
+        },
+        {
+            "name": "Dyspnea",
+            "percent": "12"
+        },
+        {
+            "name": "Vision blurred",
+            "percent": "12"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "82"
+        },
+        {
+            "name": "Increased creatinine",
+            "percent": "82"
+        },
+        {
+            "name": "Decreased hemoglobin",
+            "percent": "68"
+        },
+        {
+            "name": "Increased triglycerides",
+            "percent": "52"
+        },
+        {
+            "name": "Increased cholesterol",
+            "percent": "48"
+        },
+        {
+            "name": "Increased ALT",
+            "percent": "47"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "44"
+        },
+        {
+            "name": "Decreased magnesium",
+            "percent": "42"
+        },
+        {
+            "name": "Decreased leukocytes",
+            "percent": "41"
+        },
+        {
+            "name": "Decreased neutrophils",
+            "percent": "35"
+        },
+        {
+            "name": "Decreased platelets",
+            "percent": "35"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "35"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "32"
+        },
+        {
+            "name": "Increased alkaline phosphatase",
+            "percent": "29"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": "24"
+        },
+        {
+            "name": "Decreased calcium",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased glucose",
+            "percent": "15"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "15"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "12"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "12"
+        },
+        {
+            "name": "Increased sodium",
+            "percent": "12"
+        },
+        {
+            "name": "Stomatitis",
+            "percent": "18"
+        },
+        {
+            "name": "Infections",
+            "percent": "12"
+        },
+        {
+            "name": "Decreased lymphocytes",
+            "percent": "21"
+        },
+        {
+            "name": "Decreased potassium",
+            "percent": "12"
+        },
+        {
+            "name": "Increased glucose",
+            "percent": "12"
+        },
+        {
+            "name": "Abdominal pain",
+            "percent": "6"
+        },
+        {
+            "name": "Dehydration",
+            "percent": "6"
+        },
+        {
+            "name": "Diarrhea",
+            "percent": "2.9"
+        },
+        {
+            "name": "Vomiting",
+            "percent": "2.9"
+        },
+        {
+            "name": "Constipation",
+            "percent": "2.9"
+        },
+        {
+            "name": "Fatigue",
+            "percent": "2.9"
+        },
+        {
+            "name": "Edema",
+            "percent": "2.9"
+        },
+        {
+            "name": "Musculoskeletal pain",
+            "percent": "2.9"
+        },
+        {
+            "name": "Hypertension",
+            "percent": "2.9"
+        },
+        {
+            "name": "Hemorrhage",
+            "percent": "2.9"
+        },
+        {
+            "name": "Insomnia",
+            "percent": "2.9"
+        },
+        {
+            "name": "Decreased phosphate",
+            "percent": "9"
+        },
+        {
+            "name": "Increased lipase",
+            "percent": "6"
+        },
+        {
+            "name": "Increased cholesterol",
+            "percent": "3"
+        },
+        {
+            "name": "Decreased albumin",
+            "percent": "2.9"
+        },
+        {
+            "name": "Increased AST",
+            "percent": "2.9"
+        },
+        {
+            "name": "ALT",
+            "percent": "2.9"
+        },
+        {
+            "name": "Decreased sodium",
+            "percent": null
+        }
+    ]
+}

@@ -8,14 +8,16 @@ from .views import (InteractionMedScapeView,
 
 
 urlpatterns = [
-    path('', InteractionMedScapeView.as_view(), name='interaction_medscape'),
+    path('iteraction_medscape/',
+         InteractionMedScapeView.as_view(),
+         name='interaction_medscape'),
     path('medscape_out_date/',
          MedscapeOutDateView.as_view(),
          name='medscape_out_date'),
     path('interaction_medscape_out/',
          InteractionMedscapeOutView.as_view(),
          name='interaction_medscape_out'),
-    path('alternative_medscape_out',
+    path('alternative_medscape_out/',
          AlternativeMedscapeOutView.as_view(),
          name='alternative_medscape_out'),
     path('all_drug_table', AllDrugTableView.as_view(), name='all_drug_table'),

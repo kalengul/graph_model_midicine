@@ -19,13 +19,13 @@ const DrugGroupManageSlice = createSlice({
     } as IState,
     reducers: {
         addValue(state, action){
-            console.log(action.payload)
-            console.log(action.payload.title)
+            //console.log(action.payload)
+            //console.log(action.payload.title)
             
             for(const key in state){
-                console.log(key)
+                //console.log(key)
                 if (key === action.payload.title) {
-                    console.log(action.payload.title)
+                    //console.log(action.payload.title)
                     state[key] = action.payload.value 
                 }
             }
