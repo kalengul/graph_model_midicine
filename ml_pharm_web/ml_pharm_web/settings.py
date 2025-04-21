@@ -84,17 +84,6 @@ WSGI_APPLICATION = 'ml_pharm_web.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-<<<<<<< HEAD
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',   # Используется PostgreSQL
-        'NAME': 'postgres',               # Имя базы данных
-        'USER': 'postgres', # Имя пользователя
-        'PASSWORD': 'postgres', # Пароль пользователя
-        'HOST': 'localhost', # Наименование контейнера для базы данных в Docker Compose
-        'PORT': '5432',  # Порт базы данных
-=======
-
 USE_SQLITE = os.environ.get('USE_SQLITE', 'False') == 'True'
 
 if USE_SQLITE:
@@ -103,7 +92,6 @@ if USE_SQLITE:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
->>>>>>> 960f7f5bb16db56a09fd3fd2eb5c8142ddc3a287
     }
 else:
     DATABASES = {
