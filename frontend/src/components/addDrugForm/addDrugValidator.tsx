@@ -8,6 +8,6 @@ interface IErrors{
 
 export const AddDrugValidator = (values: IAddDrugValidator) =>{
     const errors: IErrors={}
-    if (!values.drug_name) errors.drug_name = "Пожалуйста введите название лекарственного средсва";
+    if (!values.drug_name) errors.drug_name = "Пожалуйста введите название лекарственного средства";
     return errors
 }

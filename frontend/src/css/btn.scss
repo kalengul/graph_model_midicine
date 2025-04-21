@@ -1,5 +1,9 @@
 .send-btn{
+    padding: 1% 5%;
     background-color: var(--btn-send);
+    box-shadow: 
+    -3px -3px 5px rgba(255, 255, 255, 0.8),   
+    3px 3px 5px rgba(0, 0, 0, 0.2);       
 
     &:hover{
         background-color: var(--btn-send-hover);
