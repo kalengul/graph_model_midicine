@@ -13,4 +13,4 @@ class Command(BaseCommand):
         """Загрузка данных из json-файлов в БД."""
         JSONLoader().load_json_medscape()
         self.stdout.write(self.style.SUCCESS(
-            'Данные MedScape загружены успшно!'))
+            'Данные MedScape загружены успешно!'))
