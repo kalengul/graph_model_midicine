@@ -38,17 +38,30 @@ class Command(BaseCommand):
                     'medscape_api_drugsinformationmedscape',
                     'medscape_api_druginteractiontable',
                 ]
+<<<<<<< HEAD
         model_classes = [Drug,
                          DrugGroup,
+=======
+        model_classes = [DrugInteractionTable,
+                         DrugsInformationMedScape,
+                         InteractionMedScape,
+                         PregnancyAndLactationMedScape,
+                         AdverseEffectsMedScape,
+>>>>>>> 960f7f5bb16db56a09fd3fd2eb5c8142ddc3a287
                          NameDrugsMedScape,
                          TypeDrugsMedScape,
                          SourceDrugsMedScape,
                          WarningsMedScape,
+<<<<<<< HEAD
                          AdverseEffectsMedScape,
                          PregnancyAndLactationMedScape,
                          InteractionMedScape,
                          DrugsInformationMedScape,
                          DrugInteractionTable]
+=======
+                         Drug,
+                         DrugGroup,]
+>>>>>>> 960f7f5bb16db56a09fd3fd2eb5c8142ddc3a287
 
         @abstractmethod
         def clear_table(self):
