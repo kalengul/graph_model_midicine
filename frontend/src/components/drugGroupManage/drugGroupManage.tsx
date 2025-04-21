@@ -6,7 +6,7 @@ import { AddDrugGroupForm} from '../../components/addDrugGroupForm/addDrugGroupF
 import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import { fetchDrugGroupList } from '../../redux/DrugGroupManageSlice';
+import { fetchDrugGroupList , deleteDrugGroup} from '../../redux/DrugGroupManageSlice';
 import {initStates} from '../../redux/DrugGroupManageSlice'
 
 
@@ -16,33 +16,12 @@ export const DrugGroupManage = () =>{
     useEffect(()=>{
         dispatch(initStates())
         dispatch(fetchDrugGroupList())
-        // axios({ 
-        //     method: "GET", 
-        //     url: "/api/getDrugGroup/", 
-        // }).then((res)=>{
-        //     //console.log(res.data)
-        //     dispatch(addValue({title: "drugGroups", value: res.data.data}))
-
-        //     if(isUpdate) dispatch(addValue({title: "updateList", value: false}))
-        // })
     }, [dispatch])
 
     const drugGroupList = useAppSelector((state)=>state.drugGroupManage.drugGroups)
-    
-    //console.log(drugGroupList)
 
     const deleteDrugGroupHendler = (id: string) =>{
-        console.log(`удалить ${id}`)
-        // axios({ 
-        //     method: "DELETE", 
-        //     url: `/api/delete/`, 
-        //     params: {
-        //         dg_id: id,
-        //     }
-        // }).then(()=>{
-        //     //console.log(res.data)
-        //     dispatch(addValue({title: "updateList", value: true}))
-        // })
+        dispatch(deleteDrugGroup(id))
     }
 
     return(

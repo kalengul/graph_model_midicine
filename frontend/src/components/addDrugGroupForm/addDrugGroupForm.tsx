@@ -5,7 +5,6 @@ import "./addDrugGroupForm.scss"
 
 import { useAppDispatch} from '../../redux/hooks';
 import { addDrugGroup } from '../../redux/DrugGroupManageSlice';
-// import { RootState } from '../../redux/store';
 
 interface ISendDrugData{
     dg_name: string,
@@ -15,26 +14,7 @@ export const AddDrugGroupForm = () =>{
     const dispatch = useAppDispatch()
 
     const SendHandler =async (values: ISendDrugData)=>{
-        //window.alert(values.drug_name)
-
         dispatch(addDrugGroup(values.dg_name))
-
-        // try {
-        //     await axios({ 
-        //         method: "POST", 
-        //         url: "/api/addDrugGroup/", 
-        //         data,
-        //         headers: { 'Content-Type': 'multipart/form-data'},
-        //     }).then((res)=>{
-        //       //console.log(res)
-        //       alert(res.data.result.message)
-
-        //       dispatch(addValue({title: "updateList", value: true}))
-        //     })
-            
-        //   } catch (error) {
-        //     console.log(error)
-        //   }
     }
 
     const ScrollInto = () =>{

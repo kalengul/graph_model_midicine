@@ -43,6 +43,15 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
     }
 });
 
+export const deleteDrugGroup = createAsyncThunk('drugGroupManage/deleteDrugGroup', async (id: string)=>{
+    try {
+        const response = await axios.delete(`/api/delete/`,  { params: { dg_id: id } })
+        if(response.data.result.status===200) return id
+    } catch (error) {
+        console.error(`Ошибка при удалении группы:\n`, error)
+        return `Ошибка при добавлении группы`;
+    }
+})
 
 
 const DrugGroupManageSlice = createSlice({
@@ -76,7 +85,11 @@ const DrugGroupManageSlice = createSlice({
             })
             .addCase(addDrugGroup.fulfilled, (state, action) => {
                 state.drugGroups.push(action.payload); // Добавляем новый todo в список
+            })
+            .addCase(deleteDrugGroup.fulfilled, (state, action)=>{
+                state.drugGroups = state.drugGroups.filter(group => group.id!=action.payload)
             });
+
     },
 })
 
