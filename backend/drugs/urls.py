@@ -3,10 +3,7 @@ from .views import (
     DrugGroupAPI,
     DrugAPI,
     SideEffectAPI,
-    DrugSideEffectView,
-    DataImportView,
-    DatabaseCleanView,
-)
+    DrugSideEffectView,)
 
 
 urlpatterns = [
@@ -20,12 +17,9 @@ urlpatterns = [
 
     path('addSideEffect/', SideEffectAPI.as_view(), name='add_side_effect'),
     path('getSideEffect/', SideEffectAPI.as_view(), name='get_side_effect'),
-    path('deleteSideEffect/', SideEffectAPI.as_view(), name='delete_drug_group'),
+    path('deleteSideEffect/', SideEffectAPI.as_view(),
+         name='delete_drug_group'),
 
     path('getRanks/', DrugSideEffectView.as_view(), name='get_ranks'),
     path('updateRanks/', DrugSideEffectView.as_view(), name='update_ranks'),
-
-    # Манипуляции с БД.
-    path('load_to_db/', DataImportView.as_view(), name='load_to_db'),
-    path('clean_db/', DatabaseCleanView.as_view(), name='clean_db'),
 ]

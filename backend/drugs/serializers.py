@@ -56,7 +56,7 @@ class DrugSerializer(serializers.ModelSerializer):
         """Настройка сериализатора."""
 
         model = Drug
-        fields = ['drug_name', 'dg_id', 'side_effects']
+        fields = ['id', 'drug_name', 'dg_id', 'side_effects']
 
 
 class DrugListRetrieveSerializer(serializers.ModelSerializer):

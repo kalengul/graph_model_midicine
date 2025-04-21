@@ -15,7 +15,6 @@ from .serializers import (
     SideEffectSerializer,
     DrugSideEffectSerializer
 )
-from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_response import CustomResponse
 
 
@@ -131,6 +130,10 @@ class DrugAPI(APIView):
     Если drug_id не указан — вернуть список всех ЛС.
     Если указан — вернуть одно ЛС.
     """
+
+    ID = 'id'
+    DRUG_NAME = 'drug_name'
+
     def post(self, request):
         """Метод для запросов POST."""
         serializer = DrugSerializer(data=request.data)
@@ -138,7 +141,10 @@ class DrugAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
-                    data=serializer.data,
+                    data={
+                            self.ID: serializer.data[self.ID],
+                            self.DRUG_NAME: serializer.data[self.DRUG_NAME]
+                        },
                     status=status.HTTP_200_OK,
                     message=f"ЛС {request.data.get('drug_name')} добавлен",
                     http_status=status.HTTP_200_OK)
@@ -164,7 +170,6 @@ class DrugAPI(APIView):
                         http_status=status.HTTP_400_BAD_REQUEST)
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
-            # message=INCORRECT_DATA,
             message=(f"ЛС {request.data.get('drug_name')}"
                      " уже существует"),
             http_status=status.HTTP_400_BAD_REQUEST)
@@ -239,6 +244,9 @@ class SideEffectAPI(APIView):
     Если указан — вернуть один.
     """
 
+    ID = 'id'
+    SE_NAME = 'se_name'
+
     def post(self, request):
         """Метод для запросов POST."""
         serializer = SideEffectSerializer(data=request.data)
@@ -246,7 +254,10 @@ class SideEffectAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
-                    data=serializer.data,
+                    data={
+                        self.ID: serializer.data[self.ID],
+                        self.SE_NAME: serializer.data[self.SE_NAME]
+                    },
                     status=status.HTTP_200_OK,
                     message=(f'Побочный эффект {request.data.get("se_name")}'
                              ' добавлен'),
@@ -273,7 +284,6 @@ class SideEffectAPI(APIView):
                         http_status=status.HTTP_400_BAD_REQUEST)
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
-            # message=INCORRECT_DATA,
             message=(f'Побочный эффект {request.data.get("se_name")}'
                      'уже существует'),
             http_status=status.HTTP_400_BAD_REQUEST)
@@ -427,116 +437,3 @@ class DrugSideEffectView(APIView):
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message="Неизвестная ошибка сервера",
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
-class MultiDeleteView(APIView):
-    """Вью-класс для множественного удаления."""
-
-    def delete(self, request):
-        """Метод одновременного удаления ЛС, ПД, ГЛС."""
-        # drug_id = request.query_params.get("drug_id")
-        # se_id = request.query_params.get("se_id")
-        # dg_id = request.query_params.get("dg_id")
-
-        # deleted = {}
-        message = []
-
-        try:
-            drug_group = DrugGroup.objects.get(
-                pk=request.query_params.get('dg_id'))
-            # side_effect.delete()
-            # return CustomResponse.response(
-            #     status=status.HTTP_200_OK,
-            message.append(f'Побочное действие "{drug_group.dg_name}" удалено')
-            #     http_status=status.HTTP_200_OK)
-        except DrugGroup.DoesNotExist:
-            return CustomResponse.response(
-                status=status.HTTP_400_BAD_REQUEST,
-                message='Ошибка определения удаляемого побочного действия',
-                http_status=status.HTTP_400_BAD_REQUEST)
-        except Exception:
-            return CustomResponse.response(
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=SERVER_ERROR,
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        try:
-            drug = Drug.objects.get(
-                pk=request.query_params.get('drug_id'))
-            message.append(f'Побочное действие "{drug.drug_name}" удалено')
-        except Drug.DoesNotExist:
-            return CustomResponse.response(
-                status=status.HTTP_400_BAD_REQUEST,
-                message='Ошибка определения удаляемого ЛС',
-                http_status=status.HTTP_400_BAD_REQUEST)
-        except Exception:
-            return CustomResponse.response(
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=SERVER_ERROR,
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        try:
-            side_effect = SideEffect.objects.get(
-                pk=request.query_params.get('se_id'))
-            # side_effect.delete()
-            # return CustomResponse.response(
-            #     status=status.HTTP_200_OK,
-            message.append((f'Побочное действие "{side_effect.se_name}"'
-                            'удалено'))
-            #     http_status=status.HTTP_200_OK)
-        except SideEffect.DoesNotExist:
-            return CustomResponse.response(
-                status=status.HTTP_400_BAD_REQUEST,
-                message='Ошибка определения удаляемого побочного действия',
-                http_status=status.HTTP_400_BAD_REQUEST)
-        except Exception:
-            return CustomResponse.response(
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=SERVER_ERROR,
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-        drug_group.delete()
-        drug.delete()
-        side_effect.delete()
-
-        return CustomResponse.response(
-            status=status.HTTP_200_OK,
-            message=' '.join(message),
-            http_status=status.HTTP_200_OK)
-
-
-class DataImportView(APIView):
-    """Вью-класс для импорта данных в БД из файлов."""
-
-    def post(self, request):
-        """Импорт данных из файлов в БД."""
-        try:
-            rangs_count = DBManipulator().load_to_db()
-            return Response({
-                'message': ('Данные из файлов импортированы успешно!'
-                            f'Рангов {rangs_count}')},
-                            status=status.HTTP_200_OK)
-        except Exception as error:
-            return Response({
-                'message': ('При импортировании данных возника ошибка:'
-                            f'{error}')},
-                            status=status.HTTP_400_BAD_REQUEST)
-
-
-class DatabaseCleanView(APIView):
-    """Вью-класс для отчистки таблиц БД.
-
-    Очищаются таблицы:
-        - Drug;
-        - SifeEffect;
-        - DrugSifeEffect.
-    """
-
-    def post(self, request):
-        """Очистка таблиц БД."""
-        try:
-            DBManipulator().clean_db()
-            return Response({'message': 'Очистка таблиц прошла успешно!'},
-                            status=status.HTTP_200_OK)
-        except Exception as error:
-            return Response({'message': ('При очистке БД возника ошибка:'
-                                         f'{error}')},
-                            status=status.HTTP_400_BAD_REQUEST)
