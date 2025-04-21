@@ -33,6 +33,7 @@ class DrugGroupAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
+                    data=serializer.data,
                     status=status.HTTP_200_OK,
                     message=(f'Группа ЛС {request.data.get("dg_name")}'
                              ' добавлена'),
