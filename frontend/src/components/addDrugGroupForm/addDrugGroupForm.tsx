@@ -33,6 +33,8 @@ export const AddDrugGroupForm = () =>{
               alert(res.data.result.message)
 
               dispatch(addValue({title: "updateList", value: true}))
+            }).catch(()=>{
+                console.error(`Ошибка при получении ЛС`)
             })
             
           } catch (error) {

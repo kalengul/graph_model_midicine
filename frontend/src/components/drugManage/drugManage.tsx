@@ -20,6 +20,8 @@ export const DrugManage = () =>{
         }).then((res)=>{
             //console.log(res.data)
             dispatch(addValue({title: "drugs", value: res.data.data}))
+        }).catch(()=>{
+            console.error(`Ошибка получения данных с сервера`)
         })
     }, [])
 

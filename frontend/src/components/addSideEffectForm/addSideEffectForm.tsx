@@ -33,6 +33,9 @@ export const AddDrugGroupForm = () =>{
               alert(res.data.result.message)
 
               dispatch(addValue({title: "updateList_se", value: true}))
+            }).catch(()=>{
+                dispatch(addValue({title: "updateList_se", value: false}))
+                console.log(`Не удалось получить список ЛС`)
             })
             
           } catch (error) {
