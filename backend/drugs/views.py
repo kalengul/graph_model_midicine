@@ -34,6 +34,7 @@ class DrugGroupAPI(APIView):
                 serializer.save()
 
                 return CustomResponse.response(
+                    data=serializer.data,
                     status=status.HTTP_200_OK,
                     message=(f'Группа ЛС {request.data.get("dg_name")}'
                              ' добавлена'),
@@ -137,6 +138,7 @@ class DrugAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
+                    data=serializer.data,
                     status=status.HTTP_200_OK,
                     message=f"ЛС {request.data.get('drug_name')} добавлен",
                     http_status=status.HTTP_200_OK)
@@ -244,6 +246,7 @@ class SideEffectAPI(APIView):
             try:
                 serializer.save()
                 return CustomResponse.response(
+                    data=serializer.data,
                     status=status.HTTP_200_OK,
                     message=(f'Побочный эффект {request.data.get("se_name")}'
                              ' добавлен'),
