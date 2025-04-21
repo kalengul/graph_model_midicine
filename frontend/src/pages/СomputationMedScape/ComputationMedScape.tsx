@@ -1,4 +1,4 @@
-import { ComputationMedScapeForm } from "../../components/computationMedScapeForm/computationMedScapeForm"
+// import { ComputationMedScapeForm } from "../../components/computationMedScapeForm/computationMedScapeForm"
 import { Nav } from "../../components/nav/nav"
 
 export const ComputationMedScape = () =>{

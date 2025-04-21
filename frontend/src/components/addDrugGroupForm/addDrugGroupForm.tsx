@@ -1,13 +1,9 @@
-import axios from 'axios'
-
 import {Form} from 'react-final-form';
 import { Input } from "../form/input/input"
 import {AddDrugGroupValidator} from "./addDrugGroupValidator"
 import "./addDrugGroupForm.scss"
 
-import { useDispatch} from 'react-redux';
-import {addValue} from '../../redux/DrugGroupManageSlice'
-import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import { useAppDispatch} from '../../redux/hooks';
 import { addDrugGroup } from '../../redux/DrugGroupManageSlice';
 // import { RootState } from '../../redux/store';
 

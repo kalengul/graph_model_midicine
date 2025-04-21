@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import axios from 'axios'
 
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
@@ -8,8 +7,7 @@ import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import { fetchDrugGroupList } from '../../redux/DrugGroupManageSlice';
-import {addValue, initStates} from '../../redux/DrugGroupManageSlice'
-import { RootState } from '../../redux/store';
+import {initStates} from '../../redux/DrugGroupManageSlice'
 
 
 

@@ -36,7 +36,7 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
                 'Content-Type': 'multipart/form-data'
             }
         });
-        if(response.data.result.status===200) return dg_name;
+        if(response.data.result.status===200) return response.data.data;
     } catch (error) {
         console.error(`Ошибка при добавлении группы ${dg_name}:\n`, error);
         return `Ошибка при добавлении группы ${dg_name}`; // Возвращаем пустой массив при ошибке

@@ -9,6 +9,6 @@ interface IErrors{
 
 export const ComputationMedScapeValidator = (values: IComputationMedScapeData)=>{
     const errors: IErrors = {}
-
+    console.log(values)
     return errors
 }
