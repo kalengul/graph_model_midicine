@@ -1,29 +1,26 @@
 import { useEffect } from 'react'
-import axios from 'axios'
 
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
 
-import { useDispatch, useSelector} from 'react-redux';
-import {addValue, initStates} from '../../redux/DrugManageSlice'
-import { RootState } from '../../redux/store';
+import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import {fetchDrugsList, deleteDrug} from '../../redux/DrugManageSlice'
+import {initStates} from '../../redux/DrugManageSlice'
 
 export const DrugManage = () =>{
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     useEffect(()=>{
         dispatch(initStates())
-        axios({ 
-            method: "GET", 
-            url: "/api/getDrug/", 
-        }).then((res)=>{
-            //console.log(res.data)
-            dispatch(addValue({title: "drugs", value: res.data.data}))
-        })
-    }, [])
+        dispatch(fetchDrugsList())
+    }, [dispatch])
 
-    const drugList = useSelector((state: RootState)=>state.drugManage.drugs)
+    const drugList = useAppSelector((state)=>state.drugManage.drugs)
+
+    const deleteDrugHendler = (id: string) =>{
+        dispatch(deleteDrug(id))
+    }
 
     return (
         <>
@@ -57,7 +54,7 @@ export const DrugManage = () =>{
                                 <span className='me-3'>{index+1}.</span> 
                                 <span>{drug.drug_name}</span>
                             </div>
-                            <img src={trash3}/>
+                            <img src={trash3} onClick={()=>{deleteDrugHendler(drug.id)}}/>
                         </div>
                         <hr/>
                     </>
