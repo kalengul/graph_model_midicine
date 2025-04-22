@@ -1,3 +1,5 @@
+import traceback
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -219,6 +221,7 @@ class DrugAPI(APIView):
                 message=f'Лекарственное средство {instance.drug_name} удалено',
                 http_status=status.HTTP_200_OK)
         except Drug.DoesNotExist:
+            traceback.print_exc()
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Ошибка определения удаляемого ЛС',

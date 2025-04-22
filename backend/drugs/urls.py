@@ -9,7 +9,7 @@ from .views import (
 urlpatterns = [
     path('addDrugGroup/', DrugGroupAPI.as_view(), name='add_drug_group'),
     path('getDrugGroup/', DrugGroupAPI.as_view(), name='get_drug_group'),
-    path('delete/', DrugGroupAPI.as_view(), name='delete_drug_group'),
+    path('deleteDrugGroup/', DrugGroupAPI.as_view(), name='delete_drug_group'),
 
     path('addDrug/', DrugAPI.as_view(), name='add_drug'),
     path('getDrug/', DrugAPI.as_view(), name='get_drug'),
