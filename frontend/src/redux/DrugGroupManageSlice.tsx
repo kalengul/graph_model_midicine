@@ -45,7 +45,7 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
 
 export const deleteDrugGroup = createAsyncThunk('drugGroupManage/deleteDrugGroup', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/delete/`,  { params: { dg_id: id } })
+        const response = await axios.delete(`/api/deleteDrugGroup/`,  { params: { dg_id: id } })
         if(response.data.result.status===200) return id
     } catch (error) {
         console.error(`Ошибка при удалении группы:\n`, error)

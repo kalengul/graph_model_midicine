@@ -1,3 +1,60 @@
-table.SE-table{
-    max-height: 68vh;
+div.SE-table.scroll {
+    max-height: 90vh;
+    max-width: 73vw;
+    overflow: auto;
+    position: relative; /* Добавляем для корректного позиционирования */
 }
+
+/* Фиксированная шапка */
+.sticky-header-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Исправлено: убрал var() */
+    z-index: 20;
+    box-shadow: inset 0 -1px #c3c6ca;
+}
+
+/* Фиксация первого столбца (и в шапке, и в теле) */
+.sticky-header-table th:first-child,
+.sticky-header-table td:first-child {
+    position: sticky;
+    left: 0;
+    background-color: #fff;
+    z-index: 15;
+}
+
+/* Фиксация второго столбца (и в шапке, и в теле) */
+.sticky-header-table th:nth-child(2),
+.sticky-header-table td:nth-child(2) {
+    position: sticky;
+    left: 33px; /* Примерная ширина первого столбца */
+    background-color: #fff;
+    z-index: 15;
+}
+
+/* Особые стили для фиксированных заголовков (чтобы были поверх) */
+.sticky-header-table thead th:first-child,
+.sticky-header-table thead th:nth-child(2) {
+    z-index: 25; /* Больше, чем у обычных фиксированных ячеек */
+}
+
+/* Границы для визуального разделения */
+.sticky-header-table th:first-child,
+.sticky-header-table td:first-child {
+    box-shadow: 1px 0 #c3c6ca;
+}
+.sticky-header-table th:nth-child(2),
+.sticky-header-table td:nth-child(2) {
+    box-shadow: 1px 0 #c3c6ca;
+}
+
+/* Установка ширины для всех колонок, кроме первых двух */
+// .sticky-header-table th:not(:first-child):not(:nth-child(2)),
+// .sticky-header-table td:not(:first-child):not(:nth-child(2)) {
+//     width: 150px; /* или любая другая фиксированная ширина */
+//     min-width: 150px;
+//     max-width: 150px;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+// }

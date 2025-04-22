@@ -50,7 +50,7 @@ export const addDrug = createAsyncThunk('drugManage/addDrug', async (formData: I
 
 export const deleteDrug = createAsyncThunk('drugManage/deleteDrug', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/delete/`,  { params: { drug_id: id } })
+        const response = await axios.delete(`/api/deleteDrug/`,  { params: { drug_id: id } })
         if(response.data.result.status===200) return id
     } catch (error) {
         console.error(`Ошибка при удалении лекарственного средства:\n`, error)
@@ -86,11 +86,10 @@ const DrugManageSlice = createSlice({
                 state.drugs = action.payload;
             })
             .addCase(addDrug.fulfilled, (state, action) => {
-                console.log(action.payload)
                 state.drugs.push(action.payload); // Добавляем новый todo в список
             })
             .addCase(deleteDrug.fulfilled, (state, action)=>{
-                state.drugs = state.drugs.filter(drug => drug.id!=action.payload)
+                state.drugs = state.drugs.filter(drug => drug.id != action.payload)
             });
     }
 })
