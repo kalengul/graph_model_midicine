@@ -11,22 +11,27 @@ class InteractionRetriever:
     def __get_two_interactions(cls, name, second_drug_name=None):
         """Метод взаимодействия двух ЛС."""
         drugs_info = DrugsInformationMedScape.objects.filter(
-            Q(name_drug__name_ru__iexact=name) | Q(
-                name_drug__name_en__iexact=name)
+            Q(name_drug__name_ru__iexact=name.casefold()) | Q(
+                name_drug__name_en__iexact=name.casefold())
         )
+
+        print('drugs_info.count() =', drugs_info.count())
 
         interactions = InteractionMedScape.objects.filter(
             drugsinformationmedscape__in=drugs_info,
         )
 
+        print('interactions =', interactions)
+
         if second_drug_name:
             second_drug_info = NameDrugsMedScape.objects.filter(
-                Q(name_ru__iexact=second_drug_name) | Q(
-                    name_en__iexact=second_drug_name)
+                Q(name_ru__iexact=second_drug_name.casefold()) | Q(
+                    name_en__iexact=second_drug_name.casefold())
             )
             second_interactions = interactions.filter(
                 interaction_with__in=second_drug_info)
         results = []
+        print('second_interactions =', second_interactions)
         for interaction in second_interactions:
             result = {'name': name,
                       'classification': interaction.classification_type_ru,

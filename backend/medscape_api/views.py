@@ -39,13 +39,14 @@ class InteractionMedScapeView(APIView):
             if drugs:
                 drugs_list = [DD.objects.get(pk=drug).drug_name
                               for drug in drugs]
-
+                print('drugs_list =', drugs_list)
                 interactions = InteractionRetriever().get_interactions(
                     drugs_list)
             print('interactions =', interactions)
             print('type(interactions) =', type(interactions))
             print('interactions[0] =', interactions[0])
-            print('interactions[0][0] =', interactions[0][0])
+            if len(interactions[0]) > 0:
+                print('interactions[0][0] =', interactions[0][0])
             if not any(interactions):
                 context = {
                     'drugs': drugs_list,

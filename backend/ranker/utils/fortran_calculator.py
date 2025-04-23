@@ -98,6 +98,8 @@ class FortranCalculator:
              'effects': []},
         ]})
 
+        # side_effect = sorted(side_effect, key=lambda x: x['rank'], reverse=True)
+
         for side_effect in side_effects:
             if side_effect['class'] == 1:
                 del side_effect['class']
@@ -131,21 +133,32 @@ class FortranCalculator:
                 else:
                     drugs_class_3.append(j)
 
-        def fetch_drugs(indices, c):
-            idx2compatibility = {3: 'compatible',
-                                 2: 'caution',
-                                 1: 'incompatible'}
-            return [{'drugs': DrugCHF.objects.get(index=i).name,
-                     'сompatibility': idx2compatibility[c]}
-                    for i in indices]
+        # def fetch_drugs(indices, c):
+        #     idx2compatibility = {3: 'compatible',
+        #                          2: 'caution',
+        #                          1: 'incompatible'}
+        #     return [{'drugs': DrugCHF.objects.get(index=i).name,
+        #              'сompatibility': idx2compatibility[c]}
+        #             for i in indices]
 
+        # context['combinations'] = [
+        #     {"сompatibility": "compatible",
+        #      "drugs": fetch_drugs(drugs_class_3, 3)},
+        #     {"сompatibility": "caution",
+        #      "drugs": fetch_drugs(drugs_class_2, 2)},
+        #     {"сompatibility": "incompatible",
+        #      "drugs": fetch_drugs(drugs_class_1, 1)},
+        # ]
+
+        drugs = [DrugCHF.objects.get(index=i).name
+                 for i in drug_indices2]
         context['combinations'] = [
             {"сompatibility": "compatible",
-             "drugs": fetch_drugs(drugs_class_3, 3)},
+             "drugs": drugs},
             {"сompatibility": "caution",
-             "drugs": fetch_drugs(drugs_class_2, 2)},
+             "drugs": []},
             {"сompatibility": "incompatible",
-             "drugs": fetch_drugs(drugs_class_1, 1)},
+             "drugs": []},
         ]
 
         drugs = [DrugCHF.objects.get(index=i).name
