@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'menu',
 
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -162,7 +163,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         # Убираем аутентификацию
         # 'rest_framework.authentication.SessionAuthentication',
-        # 'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ],
     # Во время разработки удобно оставить browsable API:
     # 'DEFAULT_RENDERER_CLASSES': (
