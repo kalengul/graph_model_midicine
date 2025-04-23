@@ -1,34 +1,51 @@
-from django.shortcuts import redirect
-from django.contrib.auth import logout
-from django.contrib.auth.views import LoginView
-from django.urls import reverse_lazy
-from django.views.generic import CreateView
-
-from .forms import LoginUserForm, RegisterUserForm
+from rest_framework.views import APIView
+from rest_framework import status, permissions
+from rest_framework.authtoken.models import Token
+from django.contrib.auth import authenticate
+from drugs.utils.custom_response import CustomResponse
 
 
-class RegisterUser(CreateView):
-    form_class = RegisterUserForm
-    template_name = 'accounts/register.html'
-    success_url = reverse_lazy('login')
+class LoginUser(APIView):
+    permission_classes = [permissions.AllowAny]
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return dict(list(context.items()))
+    def post(self, request):
+        username = request.data.get('username')
+        password = request.data.get('password')
+
+        if not username or not password:
+            return CustomResponse.response(
+                status=400,
+                message="Логин и пароль обязательны",
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+
+        user = authenticate(username=username, password=password)
+        if user is None:
+            return CustomResponse.response(
+                status=401,
+                message="Неверные учетные данные",
+                http_status=status.HTTP_401_UNAUTHORIZED
+            )
+
+        token, created = Token.objects.get_or_create(user=user)
+        return CustomResponse.response(
+            data={"token": token.key},
+            status=200,
+            message="Авторизация прошла успешно",
+            http_status=status.HTTP_200_OK
+        )
 
 
-class LoginUser(LoginView):
-    form_class = LoginUserForm
-    template_name = 'accounts/login.html'
+class LogoutUser(APIView):
+    permission_classes = [permissions.IsAuthenticated]
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return dict(list(context.items()))
+    def post(self, request):
+        try:
+            request.user.auth_token.delete()
+        except Token.DoesNotExist:
+            pass  
 
-    def get_success_url(self):
-        return reverse_lazy('home')
-
-
-def logout_user(request):
-    logout(request)
-    return redirect('login')
+        return CustomResponse.response(
+            message="Выход выполнен успешно",
+            http_status=status.HTTP_200_OK
+        )
