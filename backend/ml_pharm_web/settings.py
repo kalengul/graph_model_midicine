@@ -165,6 +165,7 @@ REST_FRAMEWORK = {
         # 'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'EXCEPTION_HANDLER': 'drugs.utils.custom_exception.custom_exception_handler',
     # Во время разработки удобно оставить browsable API:
     # 'DEFAULT_RENDERER_CLASSES': (
     #     'rest_framework.renderers.JSONRenderer',
