@@ -6,12 +6,14 @@ import MenuSlice from './MenuSlice.tsx'
 import DrugManageSlice from './DrugManageSlice.tsx'
 import DrugGroupManageSlice from './DrugGroupManageSlice.tsx'
 import SideEffectManageSlice from './SideEffectManageSlice.tsx';
+import ComputationSlice from "./ComputationSlice.tsx"
 
 const reducers = combineReducers({
     menu: MenuSlice,
     drugManage: DrugManageSlice,
     drugGroupManage: DrugGroupManageSlice,
     sideEffectManage: SideEffectManageSlice,
+    computation: ComputationSlice
 
 });
 

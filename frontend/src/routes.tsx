@@ -12,7 +12,7 @@ export const useRoutes = () =>{
             <Route path="/drugManage" element={<DataManagePage/>}/>
             <Route path="/computationMedScape" element={<ComputationMedScape/>}/>
             <Route path="/computationFortran" element={<ComputationFortran/>}/>
-            <Route path="*" element={<Navigate to="/dataManage" replace />}/>                       
+            <Route path="*" element={<Navigate to="/computationMedScape" replace />}/>                       
         </Routes>
     )
 }

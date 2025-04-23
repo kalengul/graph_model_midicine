@@ -14,9 +14,11 @@ export const SideEffectsTable = ()=>{
 
     const ranksMap = useMemo(() => {
         const map = new Map<string, string>();
-        ranks.forEach(rank => {
-          map.set(`${rank.drug_id}-${rank.se_id}`, rank.rank);
-        });
+        if(Array.isArray(ranks)){
+            ranks.forEach(rank => {
+                map.set(`${rank.drug_id}-${rank.se_id}`, rank.rank);
+            });
+        } 
         return map;
       }, [ranks]);
 

@@ -1,79 +1,39 @@
-// import { Form as FinalForm, Field } from 'react-final-form';
-// import { Form, Button } from 'react-bootstrap';
-// import { RecipientsField } from './RecipientsField';
 
-// import { IDrug } from '../../interfaces/Interfaces';
-// import { ComputationMedScapeValidator } from './computationMedScapeValidator';
+import { useAppDispatch, useAppSelector} from '../../redux/hooks';
+import {Form} from 'react-final-form';
+import { ComputationInputForm } from "../form/computationInputForm/computationInputForm"
 
+import {ComputationMedScapeValidator} from "./computationMedScapeValidator"
 
-// const TestDrug: IDrug[] = [
-//   { id: '1', drug_name: 'Амиодарон' },
-//   { id: '2', drug_name: 'Лоротадин' },
-//   { id: '3', drug_name: 'Гликолиевая кислота' },
-// ];
+import { iteractionMedscape } from '../../redux/ComputationSlice';
+
 
 export const ComputationMedScapeForm = () => {
-    // const SendHandler =async (values: ISendDrugData)=>{
-    //     //window.alert(values.drug_name)
-    // }
+  const dispatch = useAppDispatch()
+  const computationList = useAppSelector(state=>state.computation.computationList)
+
+  const SendHandler = () =>{
+    dispatch(iteractionMedscape(computationList))
+  }
 
   return (
-    // <FinalForm<FormValues>
-    //   onSubmit={onSubmit}
-    //   validate={(values)=>ComputationMedScapeValidator(values)}
-    //   initialValues={{ recipients: [] }}
-    //   render={({ handleSubmit, submitting }) => (
-    //     <form onSubmit={handleSubmit}>
-    //       <Field<string[]>
-    //         name="recipients"
-    //         component={RecipientsField}
-    //         availableRecipients={mockRecipients}
-    //       />
-          
-    //       <Field name="subject">
-    //         {({ input, meta }) => (
-    //           <Form.Group className="mb-3">
-    //             <Form.Label>Тема</Form.Label>
-    //             <Form.Control
-    //               {...input}
-    //               type="text"
-    //               placeholder="Введите тему"
-    //               isInvalid={meta.touched && meta.error}
-    //             />
-    //             {meta.error && meta.touched && (
-    //               <Form.Control.Feedback type="invalid">
-    //                 {meta.error}
-    //               </Form.Control.Feedback>
-    //             )}
-    //           </Form.Group>
-    //         )}
-    //       </Field>
+    <div className='mt-4'>
+      <Form 
+          onSubmit={SendHandler}
+          validate={(values)=>ComputationMedScapeValidator(values)}
+      >
+      {({ handleSubmit, submitting}) => (
+      <form onSubmit={handleSubmit}>
+          <ComputationInputForm
+              label = "Лекартсвеннные средства для расчета взаимодействия"
+              name = "drug_list"
+              placeholder = "Введите лекарственные средства"
+          ></ComputationInputForm>
 
-    //       <Field name="message">
-    //         {({ input, meta }) => (
-    //           <Form.Group className="mb-3">
-    //             <Form.Label>Сообщение</Form.Label>
-    //             <Form.Control
-    //               {...input}
-    //               as="textarea"
-    //               rows={5}
-    //               isInvalid={meta.touched && meta.error}
-    //             />
-    //           </Form.Group>
-    //         )}
-    //       </Field>
-
-    //       <Button 
-    //         variant="primary" 
-    //         type="submit" 
-    //         disabled={submitting}
-    //       >
-    //         Отправить
-    //       </Button>
-    //     </form>
-    //   )}
-    // />
-
-    <></>
+          <button className='btn send-btn' disabled={submitting} >Расчитать взаимодействие</button>
+      </form>
+      )}
+      </Form>
+    </div>
   );
 };
