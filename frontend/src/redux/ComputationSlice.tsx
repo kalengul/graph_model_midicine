@@ -25,13 +25,11 @@ export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionM
   try {
       const sendData: sendFormMedScape = {drugs:[]}
       data.forEach(e=>sendData.drugs.push(e.id))
-      console.log(sendData)
 
       const response = await axios.get('/api/iteraction_medscape/', {
         headers:{'Content-Type': 'application/json'},
         params: {drugs: sendData.drugs.join(", ")} 
       });
-      // console.log(response.data)
       if(response.data.result.status===200) return response.data.data;
   } catch (error) {
       console.error(`Ошибка при расчете совместимости medScape:\n`, error);
@@ -71,9 +69,7 @@ const ComputationSlice = createSlice({
     extraReducers: (builder) => {
         builder
         .addCase(iteractionMedscape.fulfilled, (state, action) => {
-          state.resultMedscape.compatibility_medscape = action.payload.compatibility_medscape
-          state.resultMedscape.description = action.payload.description
-          state.resultMedscape.drugs = action.payload.drugs
+          state.resultMedscape = action.payload
         })
           
     },
