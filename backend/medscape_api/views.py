@@ -29,46 +29,69 @@ class InteractionMedScapeView(APIView):
     Информация получена из MedScape.
     """
 
+    # def get(self, request):
+    #     """Метод отвечающий на GET-запрос."""
+    #     try:
+    #         drugs = request.query_params.get('drugs')
+    #         drugs = literal_eval(drugs)
+
+    #         interactions = []
+    #         if drugs:
+    #             drugs_list = [DD.objects.get(pk=drug).drug_name
+    #                           for drug in drugs]
+    #             print('drugs_list =', drugs_list)
+    #             interactions = InteractionRetriever().get_interactions(
+    #                 drugs_list)
+    #         print('interactions =', interactions)
+    #         print('type(interactions) =', type(interactions))
+    #         print('interactions[0] =', interactions[0])
+    #         if len(interactions[0]) > 0:
+    #             print('interactions[0][0] =', interactions[0][0])
+    #         if not any(interactions):
+    #             context = {
+    #                 'drugs': drugs_list,
+    #                 'description': 'Справка в MedScape отсутствует',
+    #                 'compatibility_medscape': (
+    #                     'Информация о совместимости в MedScape отсутствует')
+    #             }
+    #             return CustomResponse.response(
+    #                 data=context,
+    #                 status=status.HTTP_200_OK,
+    #                 message='Совместимость ЛС по MedScape успешно расcчитана',
+    #                 http_status=status.HTTP_200_OK)
+    #         context = {
+    #             'drugs': drugs_list,
+    #             'description': interactions[0][0]['description'],
+    #             'compatibility_medscape': interactions[0][0]['classification']
+    #         }
+    #         return CustomResponse.response(
+    #                 data=context,
+    #                 status=status.HTTP_200_OK,
+    #                 message='Совместимость ЛС по MedScape успешно расcчитана',
+    #                 http_status=status.HTTP_200_OK)
+    #     except ObjectDoesNotExist:
+    #         traceback.print_exc()
+    #         return CustomResponse.response(
+    #             status=status.HTTP_404_NOT_FOUND,
+    #             message='Ресурс не найден',
+    #             http_status=status.HTTP_404_NOT_FOUND)
+    #     except Exception:
+    #         traceback.print_exc()
+    #         return CustomResponse.response(
+    #             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #             message='Ошибка определения совместимости',
+    #             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
         try:
             drugs = request.query_params.get('drugs')
             drugs = literal_eval(drugs)
 
-            # interactions = []
             if drugs:
                 drugs_list = [DD.objects.get(pk=drug).drug_name
                               for drug in drugs]
                 print('drugs_list =', drugs_list)
-            #     interactions = InteractionRetriever().get_interactions(
-            #         drugs_list)
-            # print('interactions =', interactions)
-            # print('type(interactions) =', type(interactions))
-            # print('interactions[0] =', interactions[0])
-            # if len(interactions[0]) > 0:
-            #     print('interactions[0][0] =', interactions[0][0])
-            # if not any(interactions):
-            #     context = {
-            #         'drugs': drugs_list,
-            #         'description': 'Справка в MedScape отсутствует',
-            #         'compatibility_medscape': (
-            #             'Информация о совместимости в MedScape отсутствует')
-            #     }
-            #     return CustomResponse.response(
-            #         data=context,
-            #         status=status.HTTP_200_OK,
-            #         message='Совместимость ЛС по MedScape успешно расcчитана',
-            #         http_status=status.HTTP_200_OK)
-            # context = {
-            #     'drugs': drugs_list,
-            #     'description': interactions[0][0]['description'],
-            #     'compatibility_medscape': interactions[0][0]['classification']
-            # }
-            # return CustomResponse.response(
-            #         data=context,
-            #         status=status.HTTP_200_OK,
-            #         message='Совместимость ЛС по MedScape успешно расcчитана',
-            #         http_status=status.HTTP_200_OK)
             if drugs == [1, 4]:
                 context =  {
                         "drugs": [
