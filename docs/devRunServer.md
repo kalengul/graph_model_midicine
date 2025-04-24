@@ -111,6 +111,7 @@
 ### Вход
 ```api/v1/polifarmakoterapiya-fortran/?drugs=[1, 4]&humanData={'age': ['rangbase.txt']}```
 ### Выход
+<details>
 ```
 {
     "result": {
@@ -477,10 +478,12 @@
     }
 }
 ```
+</details>
 ### Для Амиодарон и Бисопролол:
 ### Вход
 ```api/v1/polifarmakoterapiya-fortran/?drugs=[1, 6]&humanData={'age': ['rangbase.txt']}```
 ### Выход
+<details>
 ```
 {
     "result": {
@@ -846,10 +849,12 @@
     }
 }
 ```
+</details>
 ### Для Амиодарон и Гидрохлоротиазид:
 ### Вход
 ```api/v1/polifarmakoterapiya-fortran/?drugs=[1, 9]&humanData={'age': ['rangbase.txt']}```
 ### Выход
+<details>
 ```
 {
     "result": {
@@ -1216,10 +1221,12 @@
     }
 }
 ```
+</details>
 ### Для Амиодарон и Дигоксин:
 ### Вход
 ```api/v1/polifarmakoterapiya-fortran/?drugs=[1, 12]&humanData={'age': ['rangbase.txt']}```
 ### Выход
+</details>
 ```
 {
     "result": {
@@ -1586,3 +1593,4 @@
     }
 }
 ```
+</details>
