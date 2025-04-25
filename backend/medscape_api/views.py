@@ -106,7 +106,7 @@ class InteractionMedScapeView(APIView):
                             "Ацетазоламид"
                         ],
                         "description": "ацетазоламид будет увеличивать уровень или эффект амиодарона, влияя на метаболизм печеночного/кишечного фермента CYP3A4. Незначительное/значение неизвестно.",
-                        "compatibility_medscape": "незначительный"
+                        "compatibility_medscape": "compatible"
                     }
                 return CustomResponse.response(
                     data=context,
@@ -120,7 +120,7 @@ class InteractionMedScapeView(APIView):
                                 "Бисопролол"
                             ],
                             "description": "амиодарон, бисопролол. Механизм: фармакодинамический синергизм. Используйте осторожность/монитор. Риск кардиотоксичности с брадикардией.",
-                            "compatibility_medscape": "внимательно следите"
+                            "compatibility_medscape": "caution"
                         }
                 return CustomResponse.response(
                     data=context,
@@ -134,7 +134,7 @@ class InteractionMedScapeView(APIView):
                                 "Гидрохлоротиазид"
                             ],
                             "description": "амиодарон будет увеличивать уровень или эффект гидрохлоротиазида за счет конкуренции основных (катионных) препаратов за почечный канальцевый клиренс. Используйте осторожность/монитор.",
-                            "compatibility_medscape": "внимательно следите"
+                            "compatibility_medscape": "caution"
                         }
                 return CustomResponse.response(
                     data=context,
@@ -148,21 +148,7 @@ class InteractionMedScapeView(APIView):
                                 "Дигоксин"
                             ],
                             "description": "амиодарон будет увеличивать уровень или эффект дигоксина с помощью переносчика оттока P-гликопротеина (MDR1). Избегайте или используйте альтернативный препарат. Амиодарон повышает концентрацию дигоксина в сыворотке перорально на ~70% и дигоксина внутривенно на ~17%; измерить уровень дигоксина до начала приема амиодарона и снизить пероральную дозу дигоксина на 30-50%; уменьшить внутривенную дозу дигоксина на 15-30%",
-                            "compatibility_medscape": "серьезный"
-                }
-                return CustomResponse.response(
-                    data=context,
-                    status=status.HTTP_200_OK,
-                    message='Совместимость ЛС по MedScape успешно расcчитана',
-                    http_status=status.HTTP_200_OK)
-            if drugs == [1, 54]:
-                context =  {
-                        "drugs": [
-                            "Амиодарон",
-                            "Эсциталопрам"
-                        ],
-                        "description": "эсциталопрам увеличивает токсичность амиодарона на интервал QTc. Избегайте или используйте альтернативный препарат.",
-                        "compatibility_medscape": "серьезный"
+                            "compatibility_medscape": "incompatible"
                 }
                 return CustomResponse.response(
                     data=context,
