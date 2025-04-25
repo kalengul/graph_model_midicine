@@ -20,10 +20,10 @@
 # Проверенные комбинации расчётов Fortran
 |**Первое ЛС**|**Второе ЛС**|**ID первого ЛС**|**ID второго ЛС**|**URL-запроса**|
 |--------|--------|:----------:|:----------:|----------------------|
-|Амиодарон|Ацетазоламид|1|4|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 4]&humanData={'age': ['rangbase.txt']}`|
-|Амиодарон|Бисопролол|1|6|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 6]&humanData={'age': ['rangbase.txt']}`|
-|Амиодарон|Гидрохлоротиазид|1|9|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 9]&humanData={'age': ['rangbase.txt']}`|
-|Амиодарон|Дигоксин|1|12|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 12]&humanData={'age': ['rangbase.txt']}`|
+|Амиодарон|Ацетазоламид|1|4|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 4]&humanData={"age": ["rangbase.txt"]}`|
+|Амиодарон|Бисопролол|1|6|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 6]&humanData={"age": ["rangbase.txt"]}`|
+|Амиодарон|Гидрохлоротиазид|1|9|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 9]&humanData={"age": ["rangbase.txt"]}`|
+|Амиодарон|Дигоксин|1|12|`/api/v1/polifarmakoterapiya-fortran/?drugs=[1, 12]&humanData={"age": ["rangbase.txt"]}`|
 
 ## Входные и выходные данные расчётов Medscape
 ### Для Амиодарон и Ацетазоламид:
