@@ -10,6 +10,7 @@ from ranker.models import DrugCHF
 from ranker.utils.file_loader import FileLoader
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
+from ranker.serializers import QueryParamsSerializer
 
 from drugs.models import Drug
 
@@ -69,12 +70,12 @@ class CalculationAPI(APIView):
         """Метод для GET-запроса."""
         base_dir = settings.BASE_DIR
 
-        drugs_raw = request.query_params.get('drugs', [])
-        human_data_raw = request.query_params.get('humanData', {})
-        try:
-            drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
-        except (ValueError, SyntaxError):
-            drug_indices = []
+        serializer = QueryParamsSerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+        
+        drug_indices = data['drugs']
+        human_data_raw = data['humanData']
 
         if drug_indices == [1, 4]:
             context = {

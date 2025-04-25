@@ -1,4 +1,5 @@
 from ast import literal_eval
+import json
 import traceback
 
 from rest_framework.response import Response
@@ -17,6 +18,7 @@ from medscape_api.interaction_retriever import (InteractionRetriever,
                                                 NameDrugsMedScape,)
 from medscape_api.json_loader import JSONLoader
 from drugs.utils.custom_response import CustomResponse
+from medscape_api.serializers import QueryParamsSerializer
 
 
 NO_DRUG = 'Не найдены данных об указанном ЛС!'
@@ -32,8 +34,12 @@ class InteractionMedScapeView(APIView):
     # def get(self, request):
     #     """Метод отвечающий на GET-запрос."""
     #     try:
-    #         drugs = request.query_params.get('drugs')
-    #         drugs = literal_eval(drugs)
+            # serialiazer = QueryParamsSerializer(data=request.query_params)
+            # serialiazer.is_valid(raise_exception=True)
+            # data = serialiazer.validated_data
+            # drugs = data['drugs']
+    #       #  drugs = request.query_params.get('drugs')
+    #       #  drugs = literal_eval(drugs)
 
     #         interactions = []
     #         if drugs:
@@ -85,8 +91,9 @@ class InteractionMedScapeView(APIView):
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
         try:
-            drugs = request.query_params.get('drugs')
-            drugs = literal_eval(drugs)
+            serialiazer = QueryParamsSerializer(data=request.query_params)
+            serialiazer.is_valid(raise_exception=True)
+            drugs = serialiazer.validated_data['drugs']
 
             if drugs:
                 drugs_list = [DD.objects.get(pk=drug).drug_name
