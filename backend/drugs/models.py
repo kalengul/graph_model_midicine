@@ -64,7 +64,8 @@ class Drug(models.Model):
                                    null=True)
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
-                                          related_name='drugs')
+                                          related_name='drugs',
+                                          null=True)
 
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""

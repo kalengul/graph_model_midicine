@@ -104,6 +104,13 @@ else:
             'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'ml_pass'),
             'HOST': os.environ.get('POSTGRES_HOST', 'db'),
             'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+            'TEST': {
+                'NAME': 'your_test_db',
+                'USER': 'your_db_user',
+                'PASSWORD': 'your_db_password',
+                'HOST': 'localhost',
+                'PORT': '5432',
+            },
         }
     }
 
