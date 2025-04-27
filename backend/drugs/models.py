@@ -64,8 +64,7 @@ class Drug(models.Model):
                                    null=True)
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
-                                          related_name='drugs',
-                                          null=True)
+                                          related_name='drugs')
 
     def save(self, *args, **kwargs):
         """Сохранение группы ЛС."""
@@ -121,7 +120,6 @@ class DrugSideEffect(models.Model):
 
     drug = models.ForeignKey(Drug, on_delete=models.CASCADE)
     side_effect = models.ForeignKey(SideEffect, on_delete=models.CASCADE)
-    # rang_s
     probability = models.FloatField(default=0.0,
                                     verbose_name="Коэффициент появления",
                                     validators=[
