@@ -166,7 +166,7 @@ class InteractionMedScapeView(APIView):
                 return CustomResponse.response(
                     data=context,
                     status=status.HTTP_204_NO_CONTENT,
-                    message='Совместимость ЛС по MedScape успешно расcчитана',
+                    message='Совместимость ЛС по MedScape не найдена',
                     http_status=status.HTTP_204_NO_CONTENT)
             
         except ObjectDoesNotExist:
