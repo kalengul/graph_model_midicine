@@ -24,9 +24,14 @@ class ParamsParser:
             result = ast.literal_eval(value)
             if isinstance(result, expected_type):
                 return result
-
         except Exception:
             pass
+
+        if expected_type is list:
+            try:
+                return [int(x.strip()) for x in value.split(',') if x.strip()]
+            except Exception:
+                pass
 
         raise serializers.ValidationError({
             field_name: f'Невозможно распарсить поле {field_name}. Неверный формат.'
