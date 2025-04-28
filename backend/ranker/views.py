@@ -1,6 +1,7 @@
 import json
 import ast
 import traceback
+import logging
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -15,19 +16,34 @@ from ranker.serializers import QueryParamsSerializer
 from drugs.models import Drug
 
 
+logger = logging.getLogger('fortran')
+
+
 class CalculationAPI(APIView):
     """Вычисление рангов."""
 
     # def get(self, request):
-    #     """Метод для GET-запроса."""
+    #     """Временный метод для просмотра изначальной структуры выхода."""
+        # logger.debug(f'входная строка {request.build_absolute_uri()}')
     #     base_dir = settings.BASE_DIR
-
-    #     drugs_raw = request.query_params.get('drugs', [])
-    #     human_data_raw = request.query_params.get('humanData', {})
-    #     try:
-    #         drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
-    #     except (ValueError, SyntaxError):
-    #         drug_indices = []
+    #     serializer = QueryParamsSerializer(data=request.query_params)
+    #     serializer.is_valid(raise_exception=True)
+    #     data = serializer.validated_data
+    #     drugs = data['drugs']
+    #     human_data_raw = data['humanData']
+    #     if not drugs:
+    #         logger.error("Обязательный параметр drugs отсутствует или некорректный.")
+    #         return CustomResponse.response(
+    #             status=status.HTTP_400_BAD_REQUEST,
+    #             message="Обязательный параметр drugs отсутствует или некорректный.",
+    #             http_status=status.HTTP_400_BAD_REQUEST)
+        # human_data_raw = data['humanData']
+        # if not human_data_raw:
+        #     logger.error("Обязательный параметр human_data_raw отсутствует или некорректный.")
+        #     return CustomResponse.response(
+        #         status=status.HTTP_400_BAD_REQUEST,
+        #         message="Обязательный параметр human_data_raw отсутствует или некорректный.",
+        #         http_status=status.HTTP_400_BAD_REQUEST)
     #     try:
     #         human_data = json.loads(human_data_raw)
     #         file_name = human_data.get('age', ['rangbase.txt'])[0]
@@ -39,20 +55,20 @@ class CalculationAPI(APIView):
 
     #     calculator = FortranCalculator()
 
-    #     drug_indices2 = drug_indices[:]
+    #     drug_indices2 = drugs[:]
 
-    #     while len(drug_indices) < calculator.n_k:
-    #         drug_indices.append(0)
+    #     while len(drugs) < calculator.n_k:
+    #         drugs.append(0)
 
     #     print('base_dir =', base_dir)
     #     print('file_name =', file_name)
-    #     print('drug_indices =', drug_indices)
+    #     print('drug_indices =', drugs)
     #     print('drug_indices2 =', drug_indices2)
 
     #     try:
-    #         context = calculator.load_data_in_file(base_dir,
+    #         context = calculator.calculate(base_dir,
     #                                                file_name,
-    #                                                drug_indices,
+    #                                                drugs,
     #                                                drug_indices2)
     #         return CustomResponse.response(
     #             status=status.HTTP_200_OK,
@@ -66,24 +82,39 @@ class CalculationAPI(APIView):
     #             message='Ошибка определения совместимости',
     #             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
     def get(self, request):
         """Метод для GET-запроса."""
+        logger.debug(f'входная строка {request.build_absolute_uri()}')
+
         base_dir = settings.BASE_DIR
 
         serializer = QueryParamsSerializer(data=request.query_params)
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
-        
-        drug_indices = data['drugs']
-        human_data_raw = data['humanData']
+        drugs = data['drugs']
+        if not drugs:
+            logger.error("Обязательный параметр drugs отсутствует или некорректный.")
+            return CustomResponse.response(
+                status=status.HTTP_400_BAD_REQUEST,
+                message="Обязательный параметр drugs отсутствует или некорректный.",
+                http_status=status.HTTP_400_BAD_REQUEST)
 
-        if drug_indices == [1, 4]:
+        human_data_raw = data['humanData']
+        if not human_data_raw:
+            logger.error("Обязательный параметр human_data_raw отсутствует или некорректный.")
+            return CustomResponse.response(
+                status=status.HTTP_400_BAD_REQUEST,
+                message="Обязательный параметр human_data_raw отсутствует или некорректный.",
+                http_status=status.HTTP_400_BAD_REQUEST)
+
+        if drugs == [1, 4]:
             context = {
         "rank_iteractions": 1.4,
         "сompatibility_fortran": "incompatible",
         "side_effects": [
             {
-                "сompatibility": "incompatible",
+                "сompatibility": "compatible",
                 "effects": [
                     {
                         "se_name": "отек Квинке",
@@ -401,7 +432,7 @@ class CalculationAPI(APIView):
                 ]
             },
             {
-                "сompatibility": "compatible",
+                "сompatibility": "incompatible",
                 "effects": [
                     {
                         "se_name": "гепатит",
@@ -412,19 +443,11 @@ class CalculationAPI(APIView):
         ],
         "combinations": [
             {
-                "сompatibility": "compatible",
+                "сompatibility": "incompatible",
                 "drugs": [
                     "Амиодарон",
                     "Ацетазоламид"
                 ]
-            },
-            {
-                "сompatibility": "caution",
-                "drugs": []
-            },
-            {
-                "сompatibility": "incompatible",
-                "drugs": []
             }
         ],
         "compatibility_medscape": "compatible",
@@ -441,13 +464,13 @@ class CalculationAPI(APIView):
             message='Совместимость ЛС по Fortran успешно расcчитана',
             http_status=status.HTTP_200_OK,
             data=context)
-        if drug_indices == [1, 6]:
+        if drugs == [1, 6]:
             context = {
         "rank_iteractions": 0.94,
         "сompatibility_fortran": "caution",
         "side_effects": [
             {
-                "сompatibility": "incompatible",
+                "сompatibility": "compatible",
                 "effects": [
                     {
                         "se_name": "отек Квинке",
@@ -769,25 +792,17 @@ class CalculationAPI(APIView):
                 ]
             },
             {
-                "сompatibility": "compatible",
+                "сompatibility": "incompatible",
                 "effects": []
             }
         ],
         "combinations": [
             {
-                "сompatibility": "compatible",
+                "сompatibility": "caution",
                 "drugs": [
                     "Амиодарон",
                     "Бисопролол"
                 ]
-            },
-            {
-                "сompatibility": "caution",
-                "drugs": []
-            },
-            {
-                "сompatibility": "incompatible",
-                "drugs": []
             }
         ],
         "compatibility_medscape": "caution",
@@ -804,12 +819,12 @@ class CalculationAPI(APIView):
             message='Совместимость ЛС по Fortran успешно расcчитана',
             http_status=status.HTTP_200_OK,
             data=context)
-        if drug_indices == [1, 9]:
+        if drugs == [1, 9]:
             context = {  "rank_iteractions": 1.68,
             "сompatibility_fortran": "incompatible",
             "side_effects": [
                 {
-                    "сompatibility": "incompatible",
+                    "сompatibility": "compatible",
                     "effects": [
                         {
                             "se_name": "отек Квинке",
@@ -1123,7 +1138,7 @@ class CalculationAPI(APIView):
                     ]
                 },
                 {
-                    "сompatibility": "compatible",
+                    "сompatibility": "incompatible",
                     "effects": [
                         {
                             "se_name": "анафилактический шок",
@@ -1138,19 +1153,11 @@ class CalculationAPI(APIView):
             ],
             "combinations": [
                 {
-                    "сompatibility": "compatible",
+                    "сompatibility": "incompatible",
                     "drugs": [
                         "Амиодарон",
                         "Гидрохлоротиазид"
                     ]
-                },
-                {
-                    "сompatibility": "caution",
-                    "drugs": []
-                },
-                {
-                    "сompatibility": "incompatible",
-                    "drugs": []
                 }
             ],
             "compatibility_medscape": "caution",
@@ -1167,13 +1174,13 @@ class CalculationAPI(APIView):
             message='Совместимость ЛС по Fortran успешно расcчитана',
             http_status=status.HTTP_200_OK,
             data=context)
-        if drug_indices == [1, 12]:
+        if drugs == [1, 12]:
             context = {
         "rank_iteractions": 1.2,
         "сompatibility_fortran": "incompatible",
         "side_effects": [
             {
-                "сompatibility": "incompatible",
+                "сompatibility": "compatible",
                 "effects": [
                     {
                         "se_name": "отек Квинке",
@@ -1491,7 +1498,7 @@ class CalculationAPI(APIView):
                 ]
             },
             {
-                "сompatibility": "compatible",
+                "сompatibility": "incompatible",
                 "effects": [
                     {
                         "se_name": "брадикардия",
@@ -1502,19 +1509,11 @@ class CalculationAPI(APIView):
         ],
         "combinations": [
             {
-                "сompatibility": "compatible",
+                "сompatibility": "incompatible",
                 "drugs": [
                     "Амиодарон",
                     "Дигоксин"
                 ]
-            },
-            {
-                "сompatibility": "caution",
-                "drugs": []
-            },
-            {
-                "сompatibility": "incompatible",
-                "drugs": []
             }
         ],
         "compatibility_medscape": "incompatible",
@@ -1533,9 +1532,9 @@ class CalculationAPI(APIView):
             data=context)
         try:
             drugs_list = [Drug.objects.get(pk=drug).drug_name
-                              for drug in drug_indices]
-            if (Drug.objects.filter(id=drug_indices[0]).exists()
-                    and Drug.objects.filter(id=drug_indices[1]).exists()):
+                              for drug in drugs]
+            if (Drug.objects.filter(id=drugs[0]).exists()
+                    and Drug.objects.filter(id=drugs[1]).exists()):
                     context = {
                         'drugs': drugs_list,
                         'description': 'Справка в MedScape отсутствует',

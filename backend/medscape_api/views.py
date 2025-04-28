@@ -1,6 +1,7 @@
 from ast import literal_eval
 import json
 import traceback
+import logging
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -21,6 +22,8 @@ from drugs.utils.custom_response import CustomResponse
 from medscape_api.serializers import QueryParamsSerializer
 
 
+logger = logging.getLogger('medscape')
+
 NO_DRUG = 'Не найдены данных об указанном ЛС!'
 
 
@@ -33,13 +36,19 @@ class InteractionMedScapeView(APIView):
 
     # def get(self, request):
     #     """Метод отвечающий на GET-запрос."""
+        # logger.debug(f'входная строка {request.build_absolute_uri()}')
     #     try:
-            # serialiazer = QueryParamsSerializer(data=request.query_params)
-            # serialiazer.is_valid(raise_exception=True)
-            # data = serialiazer.validated_data
-            # drugs = data['drugs']
-    #       #  drugs = request.query_params.get('drugs')
-    #       #  drugs = literal_eval(drugs)
+    #         serialiazer = QueryParamsSerializer(data=request.query_params)
+    #         serialiazer.is_valid(raise_exception=True)
+    #         data = serialiazer.validated_data
+    #         drugs = data['drugs']
+
+    #         if not drugs:
+                # logger.error("Обязательный параметр drugs отсутствует или некорректный.")
+    #             return CustomResponse.response(
+    #                 status=status.HTTP_400_BAD_REQUEST,
+    #                 message="Обязательный параметр drugs отсутствует или некорректный.",
+    #                 http_status=status.HTTP_400_BAD_REQUEST)
 
     #         interactions = []
     #         if drugs:
@@ -90,12 +99,14 @@ class InteractionMedScapeView(APIView):
 
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
+        logger.debug(f'входная строка {request.build_absolute_uri()}')
         try:
             serialiazer = QueryParamsSerializer(data=request.query_params)
             serialiazer.is_valid(raise_exception=True)
             drugs = serialiazer.validated_data.get('drugs')
 
             if not drugs:
+                logger.error("Обязательный параметр drugs отсутствует или некорректный.")
                 return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message="Обязательный параметр drugs отсутствует или некорректный.",
@@ -190,7 +201,7 @@ class InteractionMedScapeView(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class MedscapeOutDateView(APIView):
+class MedScapeOutDateView(APIView):
     """Получение списка взаимодействии ЛС."""
 
     def get(self, request):
@@ -205,7 +216,7 @@ class MedscapeOutDateView(APIView):
                             status=status.HTTP_404_NOT_FOUND)
 
 
-class InteractionMedscapeOutView(APIView):
+class InteractionMedScapeOutView(APIView):
     """Получение списка ЛС."""
 
     def interaction_medscape_out(self, request):
@@ -218,7 +229,7 @@ class InteractionMedscapeOutView(APIView):
                             status=status.HTTP_404_NOT_FOUND)
 
 
-class AlternativeMedscapeOutView(APIView):
+class AlternativeMedScapeOutView(APIView):
     """Получение альтернативного списка ЛС."""
 
     @classmethod

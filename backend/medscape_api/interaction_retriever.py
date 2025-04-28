@@ -1,7 +1,9 @@
 from django.db.models import Q
-from .models import (NameDrugsMedScape,
+
+from medscape_api.models import (NameDrugsMedScape,
                      InteractionMedScape,
                      DrugsInformationMedScape,)
+from medscape_api.utils.term_replacer import TermReplace
 
 
 class InteractionRetriever:
@@ -34,7 +36,8 @@ class InteractionRetriever:
         print('second_interactions =', second_interactions)
         for interaction in second_interactions:
             result = {'name': name,
-                      'classification': interaction.classification_type_ru,
+                      'classification': TermReplace().replace(
+                          interaction.classification_type_ru),
                       'description': interaction.description_ru}
             if second_drug_name:
                 result['interaction_with'] = (
