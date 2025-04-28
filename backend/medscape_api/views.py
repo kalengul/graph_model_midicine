@@ -93,7 +93,14 @@ class InteractionMedScapeView(APIView):
         try:
             serialiazer = QueryParamsSerializer(data=request.query_params)
             serialiazer.is_valid(raise_exception=True)
-            drugs = serialiazer.validated_data['drugs']
+            drugs = serialiazer.validated_data.get('drugs')
+
+            if not drugs:
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message="Обязательный параметр drugs отсутствует или некорректный.",
+                    http_status=status.HTTP_400_BAD_REQUEST
+                )
 
             if drugs:
                 drugs_list = [DD.objects.get(pk=drug).drug_name
