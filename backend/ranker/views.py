@@ -10,6 +10,7 @@ from ranker.models import DrugCHF
 from ranker.utils.file_loader import FileLoader
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
+from ranker.serializers import QueryParamsSerializer
 
 from drugs.models import Drug
 
@@ -17,16 +18,64 @@ from drugs.models import Drug
 class CalculationAPI(APIView):
     """Вычисление рангов."""
 
+    # def get(self, request):
+    #     """Метод для GET-запроса."""
+    #     base_dir = settings.BASE_DIR
+
+    #     drugs_raw = request.query_params.get('drugs', [])
+    #     human_data_raw = request.query_params.get('humanData', {})
+    #     try:
+    #         drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
+    #     except (ValueError, SyntaxError):
+    #         drug_indices = []
+    #     try:
+    #         human_data = json.loads(human_data_raw)
+    #         file_name = human_data.get('age', ['rangbase.txt'])[0]
+    #     except (json.JSONDecodeError, TypeError, IndexError, KeyError):
+    #         file_name = 'rangbase.txt'
+
+    #     FileLoader.load_drugs_from_file(base_dir)
+    #     FileLoader.load_disease_chf_from_file(base_dir)
+
+    #     calculator = FortranCalculator()
+
+    #     drug_indices2 = drug_indices[:]
+
+    #     while len(drug_indices) < calculator.n_k:
+    #         drug_indices.append(0)
+
+    #     print('base_dir =', base_dir)
+    #     print('file_name =', file_name)
+    #     print('drug_indices =', drug_indices)
+    #     print('drug_indices2 =', drug_indices2)
+
+    #     try:
+    #         context = calculator.load_data_in_file(base_dir,
+    #                                                file_name,
+    #                                                drug_indices,
+    #                                                drug_indices2)
+    #         return CustomResponse.response(
+    #             status=status.HTTP_200_OK,
+    #             message='Совместимость ЛС по Fortran успешно расcчитана',
+    #             http_status=status.HTTP_200_OK,
+    #             data=context)
+    #     except Exception:
+    #         print(traceback.format_exc())
+    #         return CustomResponse.response(
+    #             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #             message='Ошибка определения совместимости',
+    #             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     def get(self, request):
         """Метод для GET-запроса."""
         base_dir = settings.BASE_DIR
 
-        drugs_raw = request.query_params.get('drugs', [])
-        human_data_raw = request.query_params.get('humanData', {})
-        try:
-            drug_indices = list(map(int, ast.literal_eval(drugs_raw)))
-        except (ValueError, SyntaxError):
-            drug_indices = []
+        serializer = QueryParamsSerializer(data=request.query_params)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+        
+        drug_indices = data['drugs']
+        human_data_raw = data['humanData']
 
         if drug_indices == [1, 4]:
             context = {
@@ -378,7 +427,7 @@ class CalculationAPI(APIView):
                 "drugs": []
             }
         ],
-        "compatibility_medscape": "незначительный",
+        "compatibility_medscape": "compatible",
         "description": [
             "ацетазоламид будет увеличивать уровень или эффект амиодарона, влияя на метаболизм печеночного/кишечного фермента CYP3A4. Незначительное/значение неизвестно."
         ],
@@ -741,7 +790,7 @@ class CalculationAPI(APIView):
                 "drugs": []
             }
         ],
-        "compatibility_medscape": "внимательно следите",
+        "compatibility_medscape": "caution",
         "description": [
             "амиодарон, бисопролол. Механизм: фармакодинамический синергизм. Используйте осторожность/монитор. Риск кардиотоксичности с брадикардией."
         ],
@@ -1104,7 +1153,7 @@ class CalculationAPI(APIView):
                     "drugs": []
                 }
             ],
-            "compatibility_medscape": "внимательно следите",
+            "compatibility_medscape": "caution",
             "description": [
                 "амиодарон будет увеличивать уровень или эффект гидрохлоротиазида за счет конкуренции основных (катионных) препаратов за почечный канальцевый клиренс. Используйте осторожность/монитор."
             ],
@@ -1468,7 +1517,7 @@ class CalculationAPI(APIView):
                 "drugs": []
             }
         ],
-        "compatibility_medscape": "серьезный",
+        "compatibility_medscape": "incompatible",
         "description": [
             "амиодарон будет увеличивать уровень или эффект дигоксина с помощью переносчика оттока P-гликопротеина (MDR1). Избегайте или используйте альтернативный препарат. Амиодарон повышает концентрацию дигоксина в сыворотке перорально на ~70% и дигоксина внутривенно на ~17%; измерить уровень дигоксина до начала приема амиодарона и снизить пероральную дозу дигоксина на 30-50%; уменьшить внутривенную дозу дигоксина на 15-30%"
         ],
@@ -1503,40 +1552,3 @@ class CalculationAPI(APIView):
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             message='Ошибка определения совместимости',
             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-        # try:
-        #     human_data = json.loads(human_data_raw)
-        #     file_name = human_data.get('age', ['rangbase.txt'])[0]
-        # except (json.JSONDecodeError, TypeError, IndexError, KeyError):
-        #     file_name = 'rangbase.txt'
-
-        # FileLoader.load_drugs_from_file(base_dir)
-        # FileLoader.load_disease_chf_from_file(base_dir)
-
-        # calculator = FortranCalculator()
-
-        # drug_indices2 = drug_indices[:]
-
-        # while len(drug_indices) < calculator.n_k:
-        #     drug_indices.append(0)
-
-        # print('base_dir =', base_dir)
-        # print('file_name =', file_name)
-        # print('drug_indices =', drug_indices)
-        # print('drug_indices2 =', drug_indices2)
-
-        # try:
-        #     context = calculator.load_data_in_file(base_dir,
-        #                                            file_name,
-        #                                            drug_indices,
-        #                                            drug_indices2)
-        #     return CustomResponse.response(
-        #         status=status.HTTP_200_OK,
-        #         message='Совместимость ЛС по Fortran успешно расcчитана',
-        #         http_status=status.HTTP_200_OK,
-        #         data=context)
-        # except Exception:
-        #     print(traceback.format_exc())
-        #     return CustomResponse.response(
-        #         status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-        #         message='Ошибка определения совместимости',
-        #         http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)

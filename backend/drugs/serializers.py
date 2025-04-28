@@ -40,6 +40,9 @@ class DrugSerializer(serializers.ModelSerializer):
             se_id = se.get('se_id')
             rank = se.get('rank')
 
+            print('se_id =', se_id)
+            print('rank =', rank)
+
             try:
                 DrugSideEffect.objects.create(
                     drug=drug,

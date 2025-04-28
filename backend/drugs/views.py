@@ -72,12 +72,9 @@ class DrugGroupAPI(APIView):
     def get(self, request):
         """Пример вью, которая возвращает группу/список групп."""
         pk = request.query_params.get('dg_id')
-        print('pk =', pk)
         if not pk:
             queryset = DrugGroup.objects.all()
             serializer = DrugGroupSerializer(queryset, many=True)
-            print('Список групп ЛС!')
-            print('serializer.data =', serializer.data)
             return CustomResponse.response(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
@@ -86,8 +83,6 @@ class DrugGroupAPI(APIView):
         try:
             group = DrugGroup.objects.get(pk=pk)
             serializer = DrugGroupSerializer(group)
-            print('Группа ЛС по id!')
-            print('serializer.data =', serializer.data)
             return CustomResponse.response(
                 data=serializer.data,
                 status=status.HTTP_200_OK,

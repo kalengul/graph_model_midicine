@@ -120,7 +120,6 @@ class DrugSideEffect(models.Model):
 
     drug = models.ForeignKey(Drug, on_delete=models.CASCADE)
     side_effect = models.ForeignKey(SideEffect, on_delete=models.CASCADE)
-    # rang_s
     probability = models.FloatField(default=0.0,
                                     verbose_name="Коэффициент появления",
                                     validators=[
