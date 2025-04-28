@@ -7,14 +7,11 @@ import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import { fetchDrugGroupList , deleteDrugGroup} from '../../redux/DrugGroupManageSlice';
-import {initStates} from '../../redux/DrugGroupManageSlice'
-
 
 
 export const DrugGroupManage = () =>{
     const dispatch = useAppDispatch()
     useEffect(()=>{
-        dispatch(initStates())
         dispatch(fetchDrugGroupList())
     }, [dispatch])
 

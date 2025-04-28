@@ -5,7 +5,7 @@ import { ComputationInputForm } from "../form/computationInputForm/computationIn
 
 import {ComputationMedScapeValidator} from "./computationMedScapeValidator"
 
-import { iteractionMedscape } from '../../redux/ComputationSlice';
+import { iteractionMedscape, initResultMedscape} from '../../redux/ComputationSlice';
 
 
 export const ComputationMedScapeForm = () => {
@@ -13,7 +13,11 @@ export const ComputationMedScapeForm = () => {
   const computationList = useAppSelector(state=>state.computation.computationList)
 
   const SendHandler = () =>{
-    dispatch(iteractionMedscape(computationList))
+    if(computationList.length>0){
+      dispatch(iteractionMedscape(computationList))
+    } else {
+      dispatch(initResultMedscape())
+    }
   }
 
   return (
