@@ -4,12 +4,16 @@ import {useRoutes}  from './routes';
 import { useAppDispatch } from './redux/hooks';
 import { Nav } from './components/nav/nav';
 import {fetchDrugsList} from './redux/DrugManageSlice'
+import { initStates } from './redux/ComputationSlice';
 
 function App() {
   const routes = useRoutes()
   const dispatch = useAppDispatch()
   useEffect(()=>{
-    dispatch(fetchDrugsList())
+    Promise.all([
+      dispatch(fetchDrugsList()),
+      dispatch(initStates())
+    ])
   }, [dispatch])
 
   return (

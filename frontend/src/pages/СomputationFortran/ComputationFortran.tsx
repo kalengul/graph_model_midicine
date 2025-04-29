@@ -1,12 +1,22 @@
+import { useEffect } from "react"
 import { ComputationFortranForm } from "../../components/computationFortranForm/computationFortranForm"
 
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 
-import { useAppSelector } from "../../redux/hooks"
+import { useAppDispatch, useAppSelector } from "../../redux/hooks"
+import { initResultFortran } from "../../redux/ComputationSlice"
 
 export const ComputationFortran = () =>{
+    const dispatch = useAppDispatch()
+
+    useEffect(()=>{
+        dispatch(initResultFortran())
+    }, [dispatch])
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const resultFortran = useAppSelector(state=>state.computation.resultFortran)
+    
+    console.log(resultFortran)
+
     return(
         <>
             <h1>Взаимодействие по Fortran</h1>
@@ -22,7 +32,7 @@ export const ComputationFortran = () =>{
 
                     <h5 className="mt-3">Риски побочных эффектов: </h5>
                     
-                    {   resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
+                    {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
                         
                         <div className="ComputationResults incompatible">
                             {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects?.map((e, index)=>
@@ -38,7 +48,7 @@ export const ComputationFortran = () =>{
                         
                     }
 
-                    {   resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
+                    { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
                         
                         <div className="ComputationResults caution mt-2">
                             {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects?.map((e, index)=>
@@ -54,7 +64,7 @@ export const ComputationFortran = () =>{
                         
                     }
 
-                    {   resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
+                    { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
                         
                         <div className="ComputationResults compatible mt-2">
                             {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects?.map((e, index)=>
@@ -72,7 +82,7 @@ export const ComputationFortran = () =>{
 
                     <h5 className="mt-3">Комбинации лекарсвтенных средств: </h5>
                     
-                    {   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
+                    {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
                         
                         <div className="ComputationResults incompatible">
                             {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs?.map((d, index)=>
@@ -87,7 +97,7 @@ export const ComputationFortran = () =>{
                         
                     }
 
-                    {   resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
+                    { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
                         
                         <div className="ComputationResults caution mt-2">
                             {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs?.map((d, index)=>
@@ -102,7 +112,7 @@ export const ComputationFortran = () =>{
                         
                     }
 
-                    {   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
+                    { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
                         <div className="ComputationResults compatible mt-2">
                             {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs?.map((d, index)=>
                                 <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>

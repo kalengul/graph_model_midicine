@@ -8,18 +8,23 @@ import DrugGroupManageSlice from './DrugGroupManageSlice.tsx'
 import SideEffectManageSlice from './SideEffectManageSlice.tsx';
 import ComputationSlice from "./ComputationSlice.tsx"
 
+import AuthSlice from "./AuthSlice.ts"
+
 const reducers = combineReducers({
     menu: MenuSlice,
     drugManage: DrugManageSlice,
     drugGroupManage: DrugGroupManageSlice,
     sideEffectManage: SideEffectManageSlice,
-    computation: ComputationSlice
+    computation: ComputationSlice,
+
+    auth: AuthSlice,
 
 });
 
 const persistConfig = {
     key: "root",
     storage,
+    version: 1,
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

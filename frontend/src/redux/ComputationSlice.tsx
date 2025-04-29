@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
 import axios from "axios";
 
 export interface IComputationElem {
@@ -55,7 +55,14 @@ export interface IComputationFortran{
   humanData: string,
 }
 
-export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionMedscape', async (data: IComputationElem[]) => {
+interface TrunkResult<T = any> {
+  status: number | "err";
+  data: T;
+  message: string
+}
+
+
+export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionMedscape', async (data: IComputationElem[]): Promise<TrunkResult<IResultMedscape>> => {
   try {
     
       const sendData: sendForm = {drugs:[]}
@@ -65,14 +72,15 @@ export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionM
         headers:{'Content-Type': 'application/json'},
         params: {drugs: `[${sendData.drugs.join(", ")}]`}
       });
-      if(response.data.result.status===200) return response.data.data;
+      if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
+      return { status: "err", data: {compatibility_medscape: "", description: "", drugs: [],}, message:`Ошибка при добавлении совместимости medScape`}
   } catch (error) {
       console.error(`Ошибка при расчете совместимости medScape:\n`, error);
-      return `Ошибка при добавлении совместимости medScape`; // Возвращаем пустой массив при ошибке
+      return { status: "err", data: {compatibility_medscape: "", description: "", drugs: [],}, message:`Ошибка при добавлении совместимости medScape`}; // Возвращаем пустой массив при ошибке
   }
 });
 
-export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFortran', async (data: IComputationFortran) => {
+export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFortran', async (data: IComputationFortran): Promise<TrunkResult<IResultFortran>> => {
   try {
     
       const sendData: sendForm = {drugs:[]}
@@ -81,12 +89,29 @@ export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFo
 
       const response = await axios.get('/api/polifarmakoterapiya-fortran/', {
         headers:{'Content-Type': 'application/json'},
-        params: {drugs: `[${sendData.drugs.join(", ")}]`, humanData: {age: `[${sendData.humanData}]`}}
+        params: {drugs: `[${sendData.drugs.join(", ")}]`, humanData: JSON.stringify({age: `[${sendData.humanData}]`})}
       });
-      if(response.data.result.status===200) return response.data.data;
+      if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
+      return { status: "err", data:{
+        compatibility_medscape: "",
+        сompatibility_fortran: "",
+        rank_iteractions: 0,
+        side_effects: [],
+        combinations: [],
+        description: "",
+        drugs: [],
+      }, message:`Ошибка при добавлении совместимости Fortran`}
   } catch (error) {
-      console.error(`Ошибка при расчете совместимости medScape:\n`, error);
-      return `Ошибка при добавлении совместимости medScape`; // Возвращаем пустой массив при ошибке
+      console.error(`Ошибка при расчете совместимости Fortran:\n`, error);
+      return { status: "err", data:{
+        compatibility_medscape: "",
+        сompatibility_fortran: "",
+        rank_iteractions: 0,
+        side_effects: [],
+        combinations: [],
+        description: "",
+        drugs: [],
+      }, message:`Ошибка при добавлении совместимости Fortran`}; // Возвращаем пустой массив при ошибке
   }
 });
 
@@ -128,6 +153,26 @@ const ComputationSlice = createSlice({
         state.computationList = state.computationList.filter(c=>c.id!==action.payload)
       },
 
+      initStates(state){
+        state.computationList = []
+        state.resultMedscape = {
+          compatibility_medscape: "",
+          description: "",
+          drugs: [],
+        }
+        state.isresultMedscape = false
+        state.resultFortran = {
+          compatibility_medscape: "",
+          сompatibility_fortran: "",
+          rank_iteractions: 0,
+          side_effects: [],
+          combinations: [],
+          description: "",
+          drugs: [],
+        }
+        state.isresultFortran = false
+      },
+
       initResultMedscape(state){
         state.resultMedscape = {
           compatibility_medscape: "",
@@ -138,33 +183,42 @@ const ComputationSlice = createSlice({
       },
 
       initResultFortran(state){
-        state.isresultFortran = false
-        state.resultFortran = {
-          compatibility_medscape: "",
-          сompatibility_fortran: "",
-          rank_iteractions: 0,
-          side_effects: [],
-          combinations: [],
-          description: "",
-          drugs: [],
-        }
+        // if(state.computationList.length===0){
+          state.resultFortran = {
+            compatibility_medscape: "",
+            сompatibility_fortran: "",
+            rank_iteractions: 0,
+            side_effects: [],
+            combinations: [],
+            description: "",
+            drugs: [],
+          }
+          state.isresultFortran = false
+          state.computationList = []
+        // }
       }
     },
 
     extraReducers: (builder) => {
         builder
-        .addCase(iteractionMedscape.fulfilled, (state, action) => {
-          state.isresultMedscape = true
-          state.resultMedscape = action.payload
-          // state.computationList = []
+        .addCase(iteractionMedscape.fulfilled, (state, action: PayloadAction<TrunkResult<IResultMedscape>>) => {
+          if(action.payload.status === 200) 
+          {
+            state.isresultMedscape = true
+            state.resultMedscape = action.payload.data
+          }
+          else if (action.payload.status === "err") state.isresultMedscape = false
         })  
-        .addCase(iteractionFortran.fulfilled, (state, action)=>{
-          state.isresultFortran = true
-          state.resultFortran = action.payload
-          // state.computationList = []
+        .addCase(iteractionFortran.fulfilled, (state, action: PayloadAction<TrunkResult<IResultFortran>>)=>{
+          if( action.payload.status === 200) 
+          {
+            state.isresultFortran = true
+            state.resultFortran =  action.payload.data
+          }
+          else if ( action.payload.status === "err") state.isresultFortran = false
         })  
     },
 })
 
-export const {addValue, removeComputationElem, initResultMedscape, initResultFortran} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
+export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationSlice.reducer; //Формирование reduser из набора методов из redusers

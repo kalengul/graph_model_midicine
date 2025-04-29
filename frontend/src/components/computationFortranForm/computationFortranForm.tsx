@@ -29,8 +29,6 @@ export const ComputationFortranForm = () =>{
     const computationList = useAppSelector(state=>state.computation.computationList)
 
     const SendHandler = (value: IComputationFortran) =>{
-        // console.log(value)
-        // console.log(computationList)
         if(computationList.length!=0){
           const data: IComputationFortran = {drugs: computationList, humanData: value.humanData}
           dispatch(iteractionFortran(data))
