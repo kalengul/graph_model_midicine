@@ -1,21 +1,13 @@
-import { useEffect } from 'react'
-
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import {fetchDrugsList, deleteDrug} from '../../redux/DrugManageSlice'
-import {initStates} from '../../redux/DrugManageSlice'
+import {deleteDrug} from '../../redux/DrugManageSlice'
 
 export const DrugManage = () =>{
     const dispatch = useAppDispatch()
-    useEffect(()=>{
-        dispatch(initStates())
-        dispatch(fetchDrugsList())
-    }, [dispatch])
-
     const drugList = useAppSelector((state)=>state.drugManage.drugs)
 
     const deleteDrugHendler = (id: string) =>{

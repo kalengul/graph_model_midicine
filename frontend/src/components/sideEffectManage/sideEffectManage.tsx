@@ -8,21 +8,23 @@ import { ErrMessageCard } from '../messageCards/errMessageCard';
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import { initStates, fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList} from '../../redux/SideEffectManageSlice'
+import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList} from '../../redux/SideEffectManageSlice'
 
 
 export const SideEffectManage = () =>{
     const dispatch = useAppDispatch()
 
     useEffect(()=>{
-        dispatch(initStates())
-        dispatch(fetchSideEffectList())
-        dispatch(fetchSideEffectRankList())
+        Promise.all([
+            dispatch(fetchSideEffectList()),
+            dispatch(fetchSideEffectRankList())
+        ]);
     }, [dispatch])
 
     const SideEffectList = useAppSelector((state)=>state.sideEffectManage.sideEffects)
 
     const updateRangs = useAppSelector((state)=>state.sideEffectManage.updateRanksList)
+    
     const saveSideEffectChanges=()=>{
         dispatch(updateSideEffectRankList(updateRangs))
     }

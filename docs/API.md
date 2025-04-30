@@ -111,8 +111,6 @@
 |rank_iteractions|Integer|да|Ранг совместимости по Fortran|
 |side_effects|Array[Object]|да|Список побочек с рангами|
 |combinations|Array[Object]|да|Применимость комбинации с другими лекарственными средствами|
-|compatibility_medscape|String|да|Код результата оценки совместимости|
-|description|String|да|Описание из инструкции|
 |drugs|Array(String)|да|Список названий проверяемых ЛС|
 
 #### Объект side_effects
@@ -133,13 +131,13 @@
 |сompatibility|String|да|Код результата оценки совместимости по фортран|
 |drugs|Array(String)|да|Список названий ЛС с данным кодом совместимости|
 
-Допустимые значения `compatibility_medscape`, `сompatibility_fortran`, `сompatibility`<br/>
+Допустимые значения `сompatibility_fortran`, `сompatibility`<br/>
 `compatible` - Совместимы, <br/>
 `incompatible` - Несовместимы,  <br/>
 `caution` - С осторожностью <br/>
 
 ### Статусы ответа
-200 - Совместимость ЛС по MedScape успешно расcчитана<br/>
+200 - Совместимость ЛС по Fortran успешно расcчитана<br/>
 204 - Нет сведений о совместимости<br/>
 400 - Лекарственное средство – [название лс] не найдено<br/>
 404 - Ресурс не найден<br/>
@@ -170,29 +168,11 @@
                 "drugs": ["амиодарон", "амлодипин"]
 
             }],
-        "compatibility_medscape": "compatible",
-        "description": "Справка из MedScape",
         "drugs": ["амиодарон", "амлодипин"]
     },    
 }
 ```
-### Пример выходных данных, если есть данные о ЛС, но нет данных о совместимости
-```json
-{
-    "result": {
-        "status": 204, 
-        "message": "Нет сведений о совместимости"
-    },
-    "data":{
-        "drugs": [
-            "Амиодарон",
-            "Амлодипин"
-        ],
-        "description": "Справка в MedScape отсутствует",
-        "compatibility_medscape": "Информация о совместимости в MedScape отсутствует"
-    },    
-}
-```
+
 ### Пример выходных данных при не успешном ответе
 ```json
 {
