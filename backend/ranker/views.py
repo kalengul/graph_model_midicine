@@ -12,6 +12,7 @@ from ranker.utils.file_loader import FileLoader
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
+from ranker.utils.params_parser import ParamsParser
 
 from drugs.models import Drug
 
@@ -29,20 +30,25 @@ class CalculationAPI(APIView):
         serializer = QueryParamsSerializer(data=request.query_params)
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
-        drugs = data['drugs']
-        human_data_raw = data['humanData']
+
+        drugs = data.get('drugs')
+        human_data_raw =data.get('humanData')
         if not drugs:
             logger.error("Обязательный параметр drugs отсутствует или некорректный.")
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
                 message="Обязательный параметр drugs отсутствует или некорректный.",
                 http_status=status.HTTP_400_BAD_REQUEST)
-        human_data_raw = data['humanData']
+        human_data_raw = data.get('humanData')
         if not human_data_raw:
-            logger.error("Обязательный параметр human_data_raw отсутствует или некорректный.")
+            human_data_raw = ParamsParser().parse_non_canonical(
+                request.query_params)
+            print('human_data_raw после парсинга =', human_data_raw)
+        if not human_data_raw:
+            logger.error("Обязательный параметр humanData отсутствует или некорректный.")
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
-                message="Обязательный параметр human_data_raw отсутствует или некорректный.",
+                message="Обязательный параметр humanData отсутствует или некорректный.",
                 http_status=status.HTTP_400_BAD_REQUEST)
         try:
             human_data = json.loads(human_data_raw)

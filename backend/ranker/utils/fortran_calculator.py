@@ -20,7 +20,7 @@ class FortranCalculator:
 
     def __init__(self):
         """Конструктор."""
-        self.n_j = DrugCHF.objects.count()
+        self.n_j = DrugCHF.objects.count() + 1
         self.n_k = DiseaseCHF.objects.count()
 
 
@@ -38,6 +38,12 @@ class FortranCalculator:
                 - rangm2.txt – Мужчины после 65;
                 - rangf2.txt – Женщины после 65.
             """
+            print('DrugCHF.objects.count() =', DrugCHF.objects.count())
+            print('DiseaseCHF.objects.count() =', DiseaseCHF.objects.count())
+
+            print('self.n_j =', self.n_j)
+            print('self.n_k =', self.n_k)
+
             # Вычисление рангов взаимодействий и эффектов
             rang1 = np.zeros((self.n_j, self.n_k))
             rangsum = np.zeros(self.n_k)
@@ -68,7 +74,7 @@ class FortranCalculator:
 
             # Максимальный ранг по совокупности эффектов
             ramax[0] = rangsum[0]
-            for k in range(2, self.n_k):
+            for k in range(1, self.n_k):
                 ramax[k] = max(ramax[k - 1], rangsum[k])
 
             ram = ramax[self.n_k - 1]
@@ -159,27 +165,30 @@ class FortranCalculator:
 
             drugs = [DrugCHF.objects.get(index=i).name
                      for i in drug_indices2]
-            context['combinations'] = [
-                {"сompatibility": classification,
-                 "drugs": drugs}]
 
-            drug_array = []
-            for k in range(0, len(drugs_class_1)):
-                drug = DrugCHF.objects.get(index=drugs_class_1[k])
-                drug_array.append({'name': drug.name, 'class': 1})
+            # drug_array = []
+            # for k in range(0, len(drugs_class_1)):
+            #     drug = DrugCHF.objects.get(index=drugs_class_1[k])
+            #     drug_array.append({'name': drug.name, 'class': 1})
             # context.update({'arr_drugs_class_1': drug_array})
 
-            drug_array = []
+            drug_array2 = []
             for k in range(1, len(drugs_class_2)):
                 drug = DrugCHF.objects.get(index=drugs_class_2[k])
-                drug_array.append({'name': drug.name, 'class': 2})        
-            # context.update({'arr_drugs_class_2': drug_array})
+                drug_array2.append({'name': drug.name, 'class': 2})        
+            # context.update({'cause': drug_array2})
 
-            drug_array = []
+            drug_array3 = []
             for k in range(1, len(drugs_class_3)):
                 drug = DrugCHF.objects.get(index=drugs_class_3[k])
-                drug_array.append({'name': drug.name, 'class': 3})
-            # context.update({'arr_drugs_class_3': drug_array})
+                drug_array3.append({'name': drug.name, 'class': 3})
+            # context.update({'incompatible': drug_array3})
+
+            context['combinations'] = [
+                {"сompatibility": 'cause',
+                 "drugs": [item['name'] for item in drug_array2]},
+                {"сompatibility": 'incompatible',
+                 "drugs": [item['name'] for item in drug_array3]},]
 
             drugs = [DrugCHF.objects.get(index=i).name
                     for i in drug_indices2]

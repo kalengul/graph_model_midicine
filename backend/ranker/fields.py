@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from medscape_api.utils.params_parser import ParamsParser
+from ranker.utils.params_parser import ParamsParser
 
 
 class ParsedDictField(serializers.Field):
@@ -12,7 +12,8 @@ class ParsedDictField(serializers.Field):
         super().__init__(**kwargs)
 
     def to_internal_value(self, data):
-        return ParamsParser().parse(data, self.expected_type, self.field_name)
+        parsed = ParamsParser().parse(data, self.expected_type, self.field_name)
+        return parsed
 
     def to_representation(self, value):
         return value
