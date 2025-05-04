@@ -109,6 +109,7 @@ class InteractionMedScapeView(APIView):
                 message='Ошибка определения совместимости',
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+
 class MedScapeOutDateView(APIView):
     """Получение списка взаимодействии ЛС."""
 

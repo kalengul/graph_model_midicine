@@ -17,13 +17,9 @@ class InteractionRetriever:
                 name_drug__name_en__iexact=name.casefold())
         )
 
-        print('drugs_info.count() =', drugs_info.count())
-
         interactions = InteractionMedScape.objects.filter(
             drugsinformationmedscape__in=drugs_info,
         )
-
-        print('interactions =', interactions)
 
         if second_drug_name:
             second_drug_info = NameDrugsMedScape.objects.filter(
@@ -32,8 +28,8 @@ class InteractionRetriever:
             )
             second_interactions = interactions.filter(
                 interaction_with__in=second_drug_info)
+
         results = []
-        print('second_interactions =', second_interactions)
         for interaction in second_interactions:
             result = {'name': name,
                       'classification': TermReplace().replace(

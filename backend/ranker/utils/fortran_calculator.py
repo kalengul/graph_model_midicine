@@ -23,188 +23,166 @@ class FortranCalculator:
         self.n_j = DrugCHF.objects.count() + 1
         self.n_k = DiseaseCHF.objects.count()
 
+    def calculate(self, base_dir, file_name, nj):
+        """
+        Метод непосредственного вычисления рангов.
 
-    def calculate(self, base_dir, file_name, nj, drug_indices2):
-            """
-            Метод непосредственного вычисления рангов.
+        Для вычисления загружаются данные из выбранного
+        файла file_name, которой соотвествует выбранной
+        группе случаев с пациентами:
+            - rangbase.txt - Общий;
+            - rangm1.txt – Мужчины до 65;
+            - rangf1.txt – Женщины до 65;
+            - rangfreq.txt – Нормальный;
+            - rangm2.txt – Мужчины после 65;
+            - rangf2.txt – Женщины после 65.
+        """
+        print('DrugCHF.objects.count() =', DrugCHF.objects.count())
+        print('DiseaseCHF.objects.count() =', DiseaseCHF.objects.count())
 
-            Для вычисления загружаются данные из выбранного
-            файла file_name, которой соотвествует выбранной
-            группе случаев с пациентами:
-                - rangbase.txt - Общий;
-                - rangm1.txt – Мужчины до 65;
-                - rangf1.txt – Женщины до 65;
-                - rangfreq.txt – Нормальный;
-                - rangm2.txt – Мужчины после 65;
-                - rangf2.txt – Женщины после 65.
-            """
-            print('DrugCHF.objects.count() =', DrugCHF.objects.count())
-            print('DiseaseCHF.objects.count() =', DiseaseCHF.objects.count())
+        print('self.n_j =', self.n_j)
+        print('self.n_k =', self.n_k)
 
-            print('self.n_j =', self.n_j)
-            print('self.n_k =', self.n_k)
+        # Вычисление рангов взаимодействий и эффектов
+        rang1 = np.zeros((self.n_j, self.n_k))
+        rangsum = np.zeros(self.n_k)
+        new_rangsum = np.zeros(self.n_k)
+        ramax = np.zeros(self.n_k)
+        num = np.zeros(self.n_k)
+        nom = np.zeros(self.n_k)
 
-            # Вычисление рангов взаимодействий и эффектов
-            rang1 = np.zeros((self.n_j, self.n_k))
-            rangsum = np.zeros(self.n_k)
-            new_rangsum = np.zeros(self.n_k)
-            ramax = np.zeros(self.n_k)
-            num = np.zeros(self.n_k)
-            nom = np.zeros(self.n_k)
+        if file_name == '':
+            file_name = 'rangbase.txt'
+        file_path = os.path.join(base_dir, 'txt_files_db', file_name)
 
-            if file_name == '':
-                file_name = 'rangbase.txt'
-            file_path = os.path.join(base_dir, 'txt_files_db', file_name)
+        with open(file_path, 'r') as file:
+            rangs = np.array([float(line.strip())
+                            for line in file.readlines()])
 
-            with open(file_path, 'r') as file:
-                rangs = np.array([float(line.strip())
-                                for line in file.readlines()])
+        # Составление таблицы рангов и эффектов для отдельных ЛС
+        for j in range(1, self.n_j):
+            for k in range(1, self.n_k):
+                rang1[j, k] = rangs[self.n_k * (j - 1) + (k - 1)]
 
-            # Составление таблицы рангов и эффектов для отдельных ЛС
-            for j in range(1, self.n_j):
+        for k in range(1, self.n_k):
+            rang1[0, k] = 0.0
+
+        # Вычисление максимального ранга по эффектам для заданного набора ЛС
+        for k in range(1, self.n_k):
+            rangsum[k] = sum(rang1[int(nj[m]), k] for m in range(self.n_j))
+
+        # Максимальный ранг по совокупности эффектов
+        ramax[0] = rangsum[0]
+        for k in range(1, self.n_k):
+            ramax[k] = max(ramax[k - 1], rangsum[k])
+
+        ram = ramax[self.n_k - 1]
+
+        for k in range(1, self.n_k):
+            if rangsum[k] >= 1.0:
+                num[k] = k
+
+        # Классификация суммарных рангов воздействий
+        if ram >= 1.0:
+            classification = 'incompatible'         # 'Запрещено'
+        elif ram >= 0.5 and ram < 1.0:
+            classification = 'caution'              # 'Под наблюдением врача'
+        else:
+            classification = 'compatible'           # 'Разрешено'
+
+        # Добавляем описание в контекст
+        context = {
+            'rank_iteractions': round(float(ram), 2),
+            'сompatibility_fortran': classification
+        }
+
+        # Распределение рангов по всей совокупности эффектов
+        side_effects = []
+        for k in range(1, self.n_k):
+            if rangsum[k] >= 1.0:
+                nom[k] = 3
+            elif 0.5 <= rangsum[k] < 1.0:
+                nom[k] = 2
+            else:
+                nom[k] = 1
+
+            # Получение значения name из базы данных по индексу k
+            disease = DiseaseCHF.objects.get(index=k)
+
+            # Сохранение названия и значения в контексте
+            side_effects.append({
+                'se_name': disease.name,
+                'class': int(nom[k]),
+                'rank': round(float(rangsum[k]), 2)
+            })
+
+        # Фильтрация по классам
+        context.update({'side_effects': [
+            {"сompatibility": "compatible",
+            'effects': []},
+            {"сompatibility": "caution",
+            'effects': []},
+            {"сompatibility": "incompatible",
+            'effects': []},
+        ]})
+
+        side_effects = sorted(side_effects, key=lambda x: x['rank'], reverse=True)
+
+        for side_effect in side_effects:
+            if side_effect['class'] == 1:
+                del side_effect['class']
+                context['side_effects'][0]['effects'].append(side_effect)
+            elif side_effect['class'] == 2:
+                del side_effect['class']
+                context['side_effects'][1]['effects'].append(side_effect)
+            elif side_effect['class'] == 3:
+                del side_effect['class']
+                context['side_effects'][2]['effects'].append(side_effect)
+
+        # Анализ потенциальных ЛС
+        drugs_class_1, drugs_class_2, drugs_class_3 = [], [], []
+        for j in range(1, self.n_j):
+            if j not in nj:
                 for k in range(1, self.n_k):
-                    rang1[j, k] = rangs[self.n_k * (j - 1) + (k - 1)]
+                    new_rangsum[k] = rangsum[k] + rang1[j, k]
 
-            for k in range(1, self.n_k):
-                rang1[0, k] = 0.0
+                drugs_class = 0
+                for k in range(1, self.n_k):
+                    if new_rangsum[k] >= 1.0 and drugs_class < 3:
+                        drugs_class = 3
+                    elif 0.5 <= new_rangsum[k] < 1.0 and drugs_class < 2:
+                        drugs_class = 2
+                    elif drugs_class < 1:
+                        drugs_class = 1
 
-            # Вычисление максимального ранга по эффектам для заданного набора ЛС
-            for k in range(1, self.n_k):
-                rangsum[k] = sum(rang1[int(nj[m]), k] for m in range(self.n_j))
-
-            # Максимальный ранг по совокупности эффектов
-            ramax[0] = rangsum[0]
-            for k in range(1, self.n_k):
-                ramax[k] = max(ramax[k - 1], rangsum[k])
-
-            ram = ramax[self.n_k - 1]
-
-            for k in range(1, self.n_k):
-                if rangsum[k] >= 1.0:
-                    num[k] = k
-
-            # Классификация суммарных рангов воздействий
-            if ram >= 1.0:
-                classification = 'incompatible'         # 'Запрещено'
-            elif ram >= 0.5 and ram < 1.0:
-                classification = 'caution'              # 'Под наблюдением врача'
-            else:
-                classification = 'compatible'           # 'Разрешено'
-
-            # Добавляем описание в контекст
-            context = {
-                'rank_iteractions': round(float(ram), 2),
-                'сompatibility_fortran': classification
-            }
-
-            # Распределение рангов по всей совокупности эффектов
-            side_effects = []
-            for k in range(1, self.n_k):
-                if rangsum[k] >= 1.0:
-                    nom[k] = 3
-                elif 0.5 <= rangsum[k] < 1.0:
-                    nom[k] = 2
+                if drugs_class == 1:
+                    drugs_class_1.append(j)
+                elif drugs_class == 2:
+                    drugs_class_2.append(j)
                 else:
-                    nom[k] = 1
+                    drugs_class_3.append(j)
 
-                # Получение значения name из базы данных по индексу k
-                disease = DiseaseCHF.objects.get(index=k)
+        # drug_array = []
+        # for k in range(0, len(drugs_class_1)):
+        #     drug = DrugCHF.objects.get(index=drugs_class_1[k])
+        #     drug_array.append({'name': drug.name, 'class': 1})
+        # context.update({'arr_drugs_class_1': drug_array})
 
-                # Сохранение названия и значения в контексте
-                side_effects.append({
-                    'se_name': disease.name,
-                    'class': int(nom[k]),
-                    'rank': round(float(rangsum[k]), 2)
-                })
+        drug_array2 = []
+        for k in range(1, len(drugs_class_2)):
+            drug = DrugCHF.objects.get(index=drugs_class_2[k])
+            drug_array2.append({'name': drug.name, 'class': 2})        
+        # context.update({'cause': drug_array2})
 
-            # Фильтрация по классам
-            context.update({'side_effects': [
-                {"сompatibility": "compatible",
-                'effects': []},
-                {"сompatibility": "caution",
-                'effects': []},
-                {"сompatibility": "incompatible",
-                'effects': []},
-            ]})
+        drug_array3 = []
+        for k in range(1, len(drugs_class_3)):
+            drug = DrugCHF.objects.get(index=drugs_class_3[k])
+            drug_array3.append({'name': drug.name, 'class': 3})
+        # context.update({'incompatible': drug_array3})
 
-            side_effects = sorted(side_effects, key=lambda x: x['rank'], reverse=True)
-
-            for side_effect in side_effects:
-                if side_effect['class'] == 1:
-                    del side_effect['class']
-                    context['side_effects'][0]['effects'].append(side_effect)
-                elif side_effect['class'] == 2:
-                    del side_effect['class']
-                    context['side_effects'][1]['effects'].append(side_effect)
-                elif side_effect['class'] == 3:
-                    del side_effect['class']
-                    context['side_effects'][2]['effects'].append(side_effect)
-
-            # Анализ потенциальных ЛС
-            drugs_class_1, drugs_class_2, drugs_class_3 = [], [], []
-            for j in range(1, self.n_j):
-                if j not in nj:
-                    for k in range(1, self.n_k):
-                        new_rangsum[k] = rangsum[k] + rang1[j, k]
-
-                    drugs_class = 0
-                    for k in range(1, self.n_k):
-                        if new_rangsum[k] >= 1.0 and drugs_class < 3:
-                            drugs_class = 3
-                        elif 0.5 <= new_rangsum[k] < 1.0 and drugs_class < 2:
-                            drugs_class = 2
-                        elif drugs_class < 1:
-                            drugs_class = 1
-
-                    if drugs_class == 1:
-                        drugs_class_1.append(j)
-                    elif drugs_class == 2:
-                        drugs_class_2.append(j)
-                    else:
-                        drugs_class_3.append(j)
-
-            drugs = [DrugCHF.objects.get(index=i).name
-                     for i in drug_indices2]
-
-            # drug_array = []
-            # for k in range(0, len(drugs_class_1)):
-            #     drug = DrugCHF.objects.get(index=drugs_class_1[k])
-            #     drug_array.append({'name': drug.name, 'class': 1})
-            # context.update({'arr_drugs_class_1': drug_array})
-
-            drug_array2 = []
-            for k in range(1, len(drugs_class_2)):
-                drug = DrugCHF.objects.get(index=drugs_class_2[k])
-                drug_array2.append({'name': drug.name, 'class': 2})        
-            # context.update({'cause': drug_array2})
-
-            drug_array3 = []
-            for k in range(1, len(drugs_class_3)):
-                drug = DrugCHF.objects.get(index=drugs_class_3[k])
-                drug_array3.append({'name': drug.name, 'class': 3})
-            # context.update({'incompatible': drug_array3})
-
-            context['combinations'] = [
-                {"сompatibility": 'cause',
-                 "drugs": [item['name'] for item in drug_array2]},
-                {"сompatibility": 'incompatible',
-                 "drugs": [item['name'] for item in drug_array3]},]
-
-            drugs = [DrugCHF.objects.get(index=i).name
-                    for i in drug_indices2]
-            context['compatibility_medscape'] = ''
-            context['description'] = 'Справка из MedScape'
-            context['drugs'] = drugs
-            interactions = InteractionRetriever().get_interactions(drugs)
-            if not any(interactions):
-                context['drugs'] = drugs
-                context['description'] = 'Справка в MedScape отсутствует',
-                context['compatibility_medscape'] = (
-                    'Информация о совместимости в MedScape отсутствует')
-            else:
-                context['drugs'] = drugs
-                context['description'] = interactions[0][0]['description'],
-                context['compatibility_medscape'] = (
-                    interactions[0][0]['classification'])
-
-            return context
+        context['combinations'] = [
+            {"сompatibility": 'cause',
+                "drugs": [item['name'] for item in drug_array2]},
+            {"сompatibility": 'incompatible',
+                "drugs": [item['name'] for item in drug_array3]},]
+        return context
