@@ -41,7 +41,7 @@ class Bayesian:
     #       "0 1 0": P(i+1), - порядок 0 и 1 соответствует порядку родилелей ноды в графу. Последний столбец для появления или не появления побочки
     #   }
     # }
-    def __GenerateTables(self):
+    def __GeenrateTables(self):
         tables = []
         idNullLevel = "" #Id нулевого уровня
         for node in self.graph["nodes"]:
