@@ -106,7 +106,7 @@ export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFo
 
       const response = await axios.get('/api/polifarmakoterapiya-fortran/', {
         headers:{'Content-Type': 'application/json'},
-        params: {drugs: `[${sendData.drugs.join(", ")}]`, humanData: JSON.stringify({age: `[${sendData.humanData}]`})}
+        params: {drugs: `[${sendData.drugs.join(", ")}]`, humanData: sendData.humanData}
       });
       if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
       return { status: "err", data: initStateFortran, message:`Ошибка при добавлении совместимости Fortran`}
