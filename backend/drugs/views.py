@@ -20,6 +20,8 @@ from .serializers import (
 )
 from drugs.utils.custom_response import CustomResponse
 
+from accounts.auth import bearer_token_required
+
 
 INCORRECT_DATA = 'Указаны некорректные данные'
 SERVER_ERROR = 'Неизвестная ошибка сервера'
@@ -28,11 +30,11 @@ SERVER_ERROR = 'Неизвестная ошибка сервера'
 class DrugGroupAPI(APIView):
     """Вью-класс для работы с группами ЛС."""
 
-    authentication_classes = [BearerTokenAuthentication]
-    permission_classes = [IsAuthenticated]
-
+    @bearer_token_required
     def post(self, request):
         """Метод для запросов POST."""
+        self.check_permissions(request)
+    
         serializer = DrugGroupSerializer(data=request.data)
         if serializer.is_valid():
             try:
@@ -57,16 +59,7 @@ class DrugGroupAPI(APIView):
                     message=SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                     )
-
-        print('serializer.errors =', serializer.errors)
-        if "dg_name" in serializer.errors:
-            for error in serializer.errors["dg_name"]:
-                if "уже существует" in error.lower():
-                    return CustomResponse.response(
-                        status=status.HTTP_400_BAD_REQUEST,
-                        message=((f'Группа {request.data.get("dg_name")}'
-                                  ' уже существует')),
-                        http_status=status.HTTP_400_BAD_REQUEST)
+            
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
             message=((f'Группа {request.data.get("dg_name")}'
@@ -98,6 +91,7 @@ class DrugGroupAPI(APIView):
                 message='Группа ЛС не найдена',
                 http_status=status.HTTP_404_NOT_FOUND)
 
+    @bearer_token_required
     def delete(self, request):
         """Метод для запроса DELETE."""
         try:
@@ -135,6 +129,7 @@ class DrugAPI(APIView):
     ID = 'id'
     DRUG_NAME = 'drug_name'
 
+    @bearer_token_required
     def post(self, request):
         """Метод для запросов POST."""
         serializer = DrugSerializer(data=request.data)
@@ -209,6 +204,7 @@ class DrugAPI(APIView):
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+    @bearer_token_required
     def delete(self, request):
         """Метод для DELETE-запросов."""
         try:
@@ -249,6 +245,7 @@ class SideEffectAPI(APIView):
     ID = 'id'
     SE_NAME = 'se_name'
 
+    @bearer_token_required
     def post(self, request):
         """Метод для запросов POST."""
         serializer = SideEffectSerializer(data=request.data)
@@ -323,6 +320,7 @@ class SideEffectAPI(APIView):
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
+    @bearer_token_required
     def delete(self, request):
         """Метод для DELETE-запросы."""
         try:
@@ -348,6 +346,7 @@ class SideEffectAPI(APIView):
 class DrugSideEffectView(APIView):
     """Вью для работы с рангами."""
 
+    @bearer_token_required
     def put(self, request):
         """Метод для запроса PUT."""
         update_data = request.data.get('update_rsgs')
