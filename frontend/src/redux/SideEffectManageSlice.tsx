@@ -20,6 +20,14 @@ interface IStateSE {
     [key: string]: any; // Если state может содержать другие динамические поля
 }
 
+export interface ISendSideEffectData{
+    se_name: string,
+}
+
+export interface ISendSideEffectDataError{
+    se_name?: string,
+}
+
 // Асинхронный Thunk для загрузки списка побочных эффектов с сервера
 export const fetchSideEffectList = createAsyncThunk('sideEffectManage/fetchSideEffectList', async () => {
     try {

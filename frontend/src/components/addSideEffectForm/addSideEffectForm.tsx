@@ -6,12 +6,10 @@ import {AddSideEffectValidator} from "./addSideEffectValidator"
 import "./addSideEffectForm.scss"
 
 import { useDispatch} from 'react-redux';
-import {addValue} from '../../redux/SideEffectManageSlice'
+import {addValue, ISendSideEffectData} from '../../redux/SideEffectManageSlice'
 
 
-interface ISendSideEffectData{
-    se_name: string,
-}
+
 
 export const AddDrugGroupForm = () =>{
     const dispatch = useDispatch()

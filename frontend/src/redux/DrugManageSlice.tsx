@@ -7,8 +7,12 @@ interface IDrugElem {
     drug_name: string,
 }
 
-interface ISendDrugData{
+export interface ISendDrugData{
     drug_name: string,
+}
+
+export interface ISendDrugDataError{
+    drug_name?: string,
 }
 
 interface IDrugsState {

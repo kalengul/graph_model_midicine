@@ -12,6 +12,14 @@ interface IDrugGroupManageState {
     [key: string]: any; // Если state может содержать другие динамические поля
 }
 
+export interface ISendDrugGroupData{
+    dg_name: string,
+}
+
+export interface ISendDrugGroupDataError{
+    dg_name?: string,
+}
+
 // Асинхронный Thunk для загрузки списка групп ЛС с сервера
 export const fetchDrugGroupList = createAsyncThunk('drugGroupManage/fetchDrugGroupList', async () => {
     try {
