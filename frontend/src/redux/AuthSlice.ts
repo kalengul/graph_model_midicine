@@ -18,7 +18,7 @@ export interface ILoginFormDataError {
 
 export const login = createAsyncThunk('authSlice/login', async (data: ILoginFormData) => {
   try {
-      const response = await axios.post('/api/accounts/login/',data, {
+      const response = await axios.post('/api/login/',data, {
         headers:{'Content-Type': 'application/json'},
       });
       if(response.data.result.status===200) {
@@ -34,7 +34,7 @@ export const login = createAsyncThunk('authSlice/login', async (data: ILoginForm
 
 export const logout = createAsyncThunk('authSlice/logout', async () => {
   try {
-    const response = await axios.post('/api/accounts/logout/', null, {
+    const response = await axios.post('/api/logout/', null, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`,
           'Content-Type': 'application/json'
