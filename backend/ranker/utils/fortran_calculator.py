@@ -43,6 +43,8 @@ class FortranCalculator:
         print('self.n_j =', self.n_j)
         print('self.n_k =', self.n_k)
 
+        print('nj =', nj)
+
         # Вычисление рангов взаимодействий и эффектов
         rang1 = np.zeros((self.n_j, self.n_k))
         rangsum = np.zeros(self.n_k)

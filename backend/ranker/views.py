@@ -7,6 +7,7 @@ from rest_framework import status
 from django.conf import settings
 
 from ranker.utils.file_loader import FileLoader
+from drugs.utils.db_manipulator import DBManipulator
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
@@ -56,6 +57,7 @@ class CalculationAPI(APIView):
 
         FileLoader.load_drugs_from_file(base_dir)
         FileLoader.load_disease_chf_from_file(base_dir)
+        # DBManipulator().export_from_db()
 
         calculator = FortranCalculator()
 

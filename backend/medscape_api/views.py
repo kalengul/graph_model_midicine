@@ -22,6 +22,7 @@ from drugs.utils.custom_response import CustomResponse
 from medscape_api.serializers import QueryParamsSerializer
 from medscape_api.utils.medscape_exceptions import (WrongDrugNumberError,
                                                     WrongInputDataError)
+from medscape_api.utils.term_replacer import TermReplace
 
 
 logger = logging.getLogger('medscape')
@@ -72,7 +73,8 @@ class InteractionMedScapeView(APIView):
             context = {
                 'drugs': drugs_list,
                 'description': interactions[0][0]['description'],
-                'compatibility_medscape': interactions[0][0]['classification']
+                'compatibility_medscape': TermReplace().replace(
+                    interactions[0][0]['classification'])
             }
             return CustomResponse.response(
                     data=context,
