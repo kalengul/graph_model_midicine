@@ -42,6 +42,7 @@ export const addDrug = createAsyncThunk('drugManage/addDrug', async (formData: I
         data.append('drug_name', formData.drug_name)
         const response = await axios.post('/api/addDrug/', data, {
             headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'multipart/form-data'
             }
         });
@@ -54,7 +55,12 @@ export const addDrug = createAsyncThunk('drugManage/addDrug', async (formData: I
 
 export const deleteDrug = createAsyncThunk('drugManage/deleteDrug', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/deleteDrug/`,  { params: { drug_id: id } })
+        const response = await axios.delete(`/api/deleteDrug/`,  {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                },
+                params: { drug_id: id } 
+            })
         if(response.data.result.status===200) return id
     } catch (error) {
         console.error(`Ошибка при удалении лекарственного средства:\n`, error)

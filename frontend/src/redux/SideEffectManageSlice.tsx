@@ -62,6 +62,7 @@ export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updat
         console.log(data)
         const response = await axios.put('/api/updateRanks/', data , {
             headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
             }
         });
