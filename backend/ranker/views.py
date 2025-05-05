@@ -14,11 +14,11 @@ from ranker.serializers import QueryParamsSerializer
 TXT_FILENAMES = [
     'rangbase.txt', 
     'rangm1.txt', 
-    'rangf1.txt'
+    'rangf1.txt',
     'rangfreq.txt', 
     'rangm2.txt', 
     'rangf2.txt', 
-
+    
     # 'side_effects.txt', 
     # 'drugs_xcn.txt', 
     # 'rangs.txt', 
@@ -40,18 +40,20 @@ class CalculationAPI(APIView):
         drugs = data.get('drugs')
         file_index = data.get('humanData')
         
-        if not drugs:
-            logger.error("Обязательный параметр drugs отсутствует или некорректный.")
+        if drugs is None:
+            message = "Обязательный параметр drugs отсутствует или некорректный."
+            logger.error(message)
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
-                message="Обязательный параметр drugs отсутствует или некорректный.",
+                message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if not file_index or file_index >= len(TXT_FILENAMES):
-            logger.error("Обязательный параметр file_index отсутствует или некорректный.")
+        if file_index is None or file_index >= len(TXT_FILENAMES):
+            message = "Обязательный параметр humanData отсутствует или некорректный."
+            logger.error(message)
             return CustomResponse.response(
                 status=status.HTTP_400_BAD_REQUEST,
-                message="Обязательный параметр file_index отсутствует или некорректный.",
+                message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
         FileLoader.load_drugs_from_file(base_dir)
@@ -65,11 +67,13 @@ class CalculationAPI(APIView):
             drugs.append(0)
 
         try:
+            filename = TXT_FILENAMES[file_index]
+
             context = calculator.calculate(
-                base_dir,
-                TXT_FILENAMES[file_index],
-                drugs,
-                drug_indices2
+                base_dir=base_dir,
+                file_name=filename,
+                nj=drugs,
+                drug_indices2=drug_indices2,
             )
             
             return CustomResponse.response(
