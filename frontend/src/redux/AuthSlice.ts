@@ -1,9 +1,16 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from "axios";
 
+
+interface IAuthData {
+  token: string;
+  username: string;
+  role: string;
+}
+
 interface ITrunkResult{
   status: number
-  data: string
+  data: IAuthData | string
 }
 
 export interface ILoginFormData {
@@ -23,7 +30,9 @@ export const login = createAsyncThunk('authSlice/login', async (data: ILoginForm
       });
       if(response.data.result.status===200) {
         localStorage.setItem('token', response.data.data.token); //Сохраняем токен в localStorage
-        return {status: 200, data: response.data.data.token};
+        localStorage.setItem('username', response.data.data.username);
+        localStorage.setItem('role', response.data.data.role);
+        return {status: 200, data: response.data.data};
       }
       return {status: response.data.result.status, data: response.data.result.message}
   } catch (error) {
@@ -43,6 +52,8 @@ export const logout = createAsyncThunk('authSlice/logout', async () => {
     );
     if(response.data.result.status == 200){
       localStorage.removeItem('token'); // Удаляем токен из localStorage при выходе
+      localStorage.removeItem('username');
+      localStorage.removeItem('role');
       return { status: 200, data: 'Выход из системы успешен' };
     }
     return {status: response.data.result.status, data: response.data.result.message}
@@ -54,16 +65,22 @@ export const logout = createAsyncThunk('authSlice/logout', async () => {
 });
 
 interface AuthState {
-  user: null | { username: string; password: string };
   token: string | null;
+  user: {
+    username: string | null;
+    role: string | null;
+  }
   isAuthenticated: boolean;
   loading: boolean;
   error: string | null;
 }
 
 const initialState: AuthState = {
-  user: null,
   token: localStorage.getItem('token'),
+  user: {
+    username:  localStorage.getItem('username'),
+    role: localStorage.getItem('role'),
+  },
   isAuthenticated: false,
   loading: false,
   error: null,
@@ -92,11 +109,13 @@ const AuthSlice = createSlice({
     extraReducers: (builder) => {
       builder
       .addCase(login.fulfilled, (state, action: PayloadAction<ITrunkResult>) => {
-        if(action.payload.status === 200) {
+        if(action.payload.status === 200 && typeof action.payload.data !== 'string') {
           state.isAuthenticated = true
-          state.token = action.payload.data
+          state.token = action.payload.data.token
+          state.user.username = action.payload.data.username
+          state.user.role = action.payload.data.role
           state.error = null;
-        } else {
+        } else if(typeof action.payload.data == 'string') {
           state.error = action.payload.data
           state.isAuthenticated = false
         }
@@ -104,8 +123,9 @@ const AuthSlice = createSlice({
       .addCase(logout.fulfilled, (state) => {
         state.loading = false;
         state.isAuthenticated = false;
+        state.user.role = null;
+        state.user.username = null;
         state.token = null;
-        state.user = null;
         state.error = null;
       })
     },  

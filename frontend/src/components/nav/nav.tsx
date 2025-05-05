@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import {fetchMenu, addValue} from '../../redux/MenuSlice'
 
 import list from "../../../public/list.svg"
+import person from "../../../public/person-circle.svg"
 
 import "./nav.scss"
 import { logout } from '../../redux/AuthSlice';
@@ -13,6 +14,8 @@ export const Nav = ()=>{
     const dispatch = useAppDispatch()
 
     const isAuth = useAppSelector(state=>state.auth.isAuthenticated)
+    const user = useAppSelector(state=>state.auth.user)
+
     
 
     const menu = useAppSelector((state)=>state.menu.links)
@@ -37,7 +40,6 @@ export const Nav = ()=>{
 
     return (
         <>
-           
             <nav className={`flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav ${isMenuOpen ? "mobilePosition" : ""}`}>
                 <div className="burger-menu" onClick={toggleMenu}>
                     <div className='w-100 flex jc-end'>
@@ -48,6 +50,15 @@ export const Nav = ()=>{
                 <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>                
                     <h1>ТОШ</h1>
                     <hr />
+
+                    {isAuth &&
+                        <div className='userinfo mb-5 flex ai-center fd-column'>
+                            <img src={person} alt="person"/>
+                            <p className='mb-0 username'>{user.username?.toLocaleUpperCase()}</p>
+                            <p className='mb-0 userrole'>{user.role}</p>
+                        </div>
+                    }
+
                     <ul className="nav nav-pills flex-column mb-auto">
                         {Array.isArray(menu) && menu.map((elem, index)=>
                             (elem.slug === "/dataManage") ?

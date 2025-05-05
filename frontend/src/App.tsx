@@ -20,20 +20,20 @@ function App() {
   useEffect(()=>{
     dispatch(checkAuth());
   }, [dispatch])
+  
 
   return (
     <>
-      
-        <BrowserRouter>
-          <div className="flex">
-            <Nav></Nav>
-            <main className="ms-2 p-3 w-100">
-              {routes}
-            </main>
-          </div>
-        </BrowserRouter>
-      </>
-  )
+      <BrowserRouter>
+        <div className="flex">
+          <Nav></Nav>
+          <main className="ms-2 p-3 w-100">
+            {routes}
+          </main>
+        </div>
+      </BrowserRouter>
+    </>
+)
 }
 
 export default App
