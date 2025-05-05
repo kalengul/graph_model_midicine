@@ -6,4 +6,4 @@ class QueryParamsSerializer(serializers.Serializer):
     """Сериализватор параметров URL-строк."""
 
     drugs = ParsedListField(required=False, field_name='drugs')
-    file_index = serializers.IntegerField()
+    humanData = serializers.IntegerField()

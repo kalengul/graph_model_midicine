@@ -77,17 +77,17 @@
 ## Назначение
 Расчет совместимости ЛС по Fortran
 ## URL
-```GET api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&?file_index={номер файла}```
+```GET api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&?humanData={номер файла}```
 ## Аутентификация
 Не требуется
 ## Вход
 |**параметр**|**Тип данных**|**Обязательность**|**Описание**|
 |:-----:|:--------|:--------|:------|
 |druds|Array(integer)|да|массив id ЛС|
-|file_index|integer|нет|Номер файла для расчетов|
+|humanData|integer|нет|Номер файла для расчетов|
 
 ### Пример входных данных
-```GET api/v1/polifarmakoterapiya-fortran/?drugs=[1, 2]&file_index=1```
+```GET api/v1/polifarmakoterapiya-fortran/?drugs=[1, 2]&humanData=1```
 
 ## Выход
 |**параметр**|**Тип данных**|**Обязательность**|**Описание**|

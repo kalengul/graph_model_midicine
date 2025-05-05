@@ -38,7 +38,7 @@ class CalculationAPI(APIView):
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
         drugs = data.get('drugs')
-        file_index = data.get('file_index')
+        file_index = data.get('humanData')
         
         if not drugs:
             logger.error("Обязательный параметр drugs отсутствует или некорректный.")
