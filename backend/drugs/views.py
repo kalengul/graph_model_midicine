@@ -1,7 +1,8 @@
 import traceback
 
 from rest_framework.views import APIView
-from rest_framework.response import Response
+from accounts.auth import BearerTokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
@@ -26,6 +27,9 @@ SERVER_ERROR = 'Неизвестная ошибка сервера'
 
 class DrugGroupAPI(APIView):
     """Вью-класс для работы с группами ЛС."""
+
+    authentication_classes = [BearerTokenAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def post(self, request):
         """Метод для запросов POST."""
