@@ -5,6 +5,7 @@ interface IComputationResultsProps{
 }
 
 export const ComputationResults = (props: IComputationResultsProps) =>{
+    if(props.compatibility){
     switch (props.compatibility.trim()) {
         case "compatible":
             return(
@@ -30,5 +31,6 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
                     <p >Статус совместимости лекарственных средств неизвестен</p>
                 </div>
             )
+    }
     }
 }

@@ -14,6 +14,9 @@ export const ComputationFortran = () =>{
     }, [dispatch])
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const resultFortran = useAppSelector(state=>state.computation.resultFortran)
+
+    const isresultMedscape = useAppSelector(state=>state.computation.isresultMedscape)
+    const resultMedscape = useAppSelector(state=>state.computation.resultMedscape)
     
     console.log(resultFortran)
 
@@ -128,16 +131,20 @@ export const ComputationFortran = () =>{
                     
                     <hr/>
                     <h4>Результаты оценки совместимости по MedScape</h4>
-                    <div>
-                    
-                        <h5>Проверяемые лекарственные средства: { Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
-                        <h5 className="mt-3">Результаты: </h5>
+                    {isresultMedscape && 
+                        <div>
+                        
+                            
+                            
+                            <h5>Проверяемые лекарственные средства: { Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
+                            <h5 className="mt-3">Результаты: </h5>
 
-                        <ComputationResults compatibility={resultFortran.compatibility_medscape} />
+                            <ComputationResults compatibility={resultMedscape.compatibility_medscape} />
 
-                        <h5 className="mt-3">Примечание:</h5>
-                        <p>{resultFortran.description}</p>
-                    </div>
+                            <h5 className="mt-3">Примечание:</h5>
+                            <p>{resultMedscape.description}</p>
+                        </div>
+                    }
                     {/* 
                     
 

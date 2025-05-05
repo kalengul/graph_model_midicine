@@ -3,7 +3,7 @@ import {Form, Field} from 'react-final-form';
 import { ComputationInputForm } from "../form/computationInputForm/computationInputForm"
 
 import {ComputationFortranValidator} from "./computationFortranValidator"
-import { iteractionFortran, IComputationFortran } from '../../redux/ComputationSlice';
+import { iteractionFortran, IComputationFortran, iteractionMedscape } from '../../redux/ComputationSlice';
 
 interface IHumanData{
   label: string,
@@ -32,6 +32,7 @@ export const ComputationFortranForm = () =>{
         if(computationList.length!=0){
           const data: IComputationFortran = {drugs: computationList, humanData: value.humanData}
           dispatch(iteractionFortran(data))
+          dispatch(iteractionMedscape(computationList))
         }
       }
     return (

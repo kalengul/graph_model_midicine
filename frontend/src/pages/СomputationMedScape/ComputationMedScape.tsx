@@ -12,21 +12,6 @@ export const ComputationMedScape = () =>{
     return(
         <>
             <h1>Взаимодействие по MedScape</h1>
-            {/* <div className="w-75 mt-4 drugManage">
-                <a className='link-dark' data-bs-toggle="collapse" href="#collapseComputationMedScape" role="button" aria-expanded="false" aria-controls="collapseComputationMedScape">
-                    <div className="flex ai-center">
-                        <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
-                        <h4>Ввести данные для расчета взаимодействия</h4>
-                    </div>
-                </a>
-                <div className="collapse mt-4" id="collapseComputationMedScape">
-                    <ComputationMedScapeForm/>
-                </div>
-            </div>
-            <hr/> */}
-
-            
-            {/* <h4>Ввести данные для расчета взаимодействия</h4> */}
             <ComputationMedScapeForm/>
             <hr/>
             <h4>Результаты оценки совместимости</h4>

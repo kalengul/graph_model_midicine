@@ -5,6 +5,7 @@ import { useAppDispatch } from './redux/hooks';
 import { Nav } from './components/nav/nav';
 import {fetchDrugsList} from './redux/DrugManageSlice'
 import { initStates } from './redux/ComputationSlice';
+import { checkAuth } from './redux/AuthSlice';
 
 function App() {
   const routes = useRoutes()
@@ -14,6 +15,10 @@ function App() {
       dispatch(fetchDrugsList()),
       dispatch(initStates())
     ])
+  }, [dispatch])
+
+  useEffect(()=>{
+    dispatch(checkAuth());
   }, [dispatch])
 
   return (

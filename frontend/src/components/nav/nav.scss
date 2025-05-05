@@ -4,7 +4,36 @@ nav.mainNav{
 
     box-shadow: 
     -2px -2px 5px rgba(255, 255, 255, 0.8),   
-    2px 2px 5px rgba(0, 0, 0, 0.2);       
+    2px 2px 5px rgba(0, 0, 0, 0.2);  
+         
+}
+
+.mobilePosition{
+    @media (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+    }
+}
+
+.mobile-nav{
+    @media (max-width: 768px) {
+        display: none;
+        
+        &.mobile-open {
+            display: block;
+        }
+    }
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    
+    @media (max-width: 768px) {
+        display: block;
+    }
 }
 
 nav.mainNav li.nav-main a.nav-link {
@@ -47,4 +76,15 @@ nav.mainNav li.nav-sub a.nav-link {
         background-color: var(--nav-link-hover);
         transition: background-color 0.5s ease;
     }
+}
+
+div.nav-footer{
+    box-sizing: border-box;
+    width: calc(100% - 2rem);
+    position: absolute;
+    bottom: 0;
+}
+
+div.nav-footer a.link-login{
+    background-color: #adb9cb;
 }
