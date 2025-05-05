@@ -36,6 +36,7 @@ export const AddDrugGroupForm = () =>{
                     id = "dg_name"
                     type = "text"
                     placeholder = "Введите название группы лекарственных средств"
+                    className='mb-4'
                 ></Input>
 
                 <button className='btn send-btn' onClick={ScrollInto} disabled={submitting} >Добавить</button>

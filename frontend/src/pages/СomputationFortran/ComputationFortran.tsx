@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { ComputationFortranForm } from "../../components/computationFortranForm/computationFortranForm"
 
+import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
@@ -21,7 +22,9 @@ export const ComputationFortran = () =>{
     console.log(resultFortran)
 
     return(
-        <>
+        <div className="flex">
+        <Nav></Nav>
+        <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по Fortran</h1>
 
             <ComputationFortranForm/>
@@ -155,6 +158,7 @@ export const ComputationFortran = () =>{
                 </div>
             }
 
-        </>
+        </main>
+        </div>
     )
 }

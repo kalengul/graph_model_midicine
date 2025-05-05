@@ -9,15 +9,26 @@ import "./loginPage.scss"
 export const LoginPage = () =>{
     const navigate = useNavigate()
     const isAuth = useAppSelector(state=>state.auth.isAuthenticated)
+
     useEffect(()=>{
         if(isAuth) navigate("/")
     }, [isAuth, navigate])
+
     return(
-    <div className="flex ai-center jc-center h-100 w-100">
-        <div className="login-main w-50"> 
-            <h3>Вход в систему</h3>
-            <LoginForm ></LoginForm>
+    <main className='loginPage flex jc-sb'>
+        <div className="flex ai-center jc-center h-100 w-50">
+            <div className="login-main w-75"> 
+                <h2>Вход в систему</h2>
+                <LoginForm ></LoginForm>
+            </div>
         </div>
-    </div>
+
+        <div className='loginContent flex jc-center w-50'>
+            <div>
+                <p className='m-0'>Добро пожаловать в систему оценки рисков </p>
+                <p className='m-0 logo'>ТОШ</p>
+            </div>
+        </div>
+    </main>
     )
 }

@@ -61,6 +61,7 @@ export const AddDrugGroupForm = () =>{
                     id = "se_name"
                     type = "text"
                     placeholder = "Введите название побочного эффекта"
+                    className='mb-4'
                 ></Input>
 
                 <button className='btn send-btn' onClick={ScrollInto} disabled={submitting} >Добавить</button>

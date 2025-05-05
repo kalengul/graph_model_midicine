@@ -42,15 +42,17 @@ export const LoginForm = (props: LoginFormProps) =>{
                             id = "username"
                             type = "text"
                             placeholder = "Введите ваш логин"
+                            className='mb-1'
                         ></Input>
                         <Input label="Пароль" 
                             name = "password"
                             id = "password"
                             type = "password"
                             placeholder = "Введите ваш пароль"
+                            className='mb-4'
                         ></Input>
 
-                        <button className='btn send-btn' onClick={ScrollInto} disabled={submitting} >Войти</button>
+                        <button className='btn send-btn border-send-btn w-100' onClick={ScrollInto} disabled={submitting} >Войти</button>
                     </form>
                  )}
             </Form>

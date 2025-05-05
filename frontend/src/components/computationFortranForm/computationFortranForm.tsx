@@ -7,7 +7,7 @@ import { iteractionFortran, IComputationFortran, iteractionMedscape } from '../.
 
 interface IHumanData{
   label: string,
-  value: string,
+  value: string | number,
 }
 
 // interface FormDataFortran{
@@ -17,12 +17,12 @@ interface IHumanData{
 export const ComputationFortranForm = () =>{
 
     const HumanData: IHumanData[] = [
-      {label: "Общий", value: "rangbase.txt"},
-      {label: "Мужчины до 65", value: "rangm1.txt"},
-      {label: "Женщины до 65", value: "rangf1.txt"},
-      {label: "Нормальный", value: "rangfreq.txt"},
-      {label: "Мужчины после 65", value: "rangm2.txt"},
-      {label: "Женщины после 65", value: "rangf2.txt"},
+      {label: "Общий", value: 0}, //"rangbase.txt"},
+      {label: "Мужчины до 65", value: 1 }, //"rangm1.txt"},
+      {label: "Женщины до 65", value: 2 }, //"rangf1.txt"},
+      {label: "Нормальный", value: 3 }, //"rangfreq.txt"},
+      {label: "Мужчины после 65", value: 4}, // "rangm2.txt"},
+      {label: "Женщины после 65", value: 5 }, //"rangf2.txt"},
     ]
 
     const dispatch = useAppDispatch()
