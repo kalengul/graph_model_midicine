@@ -3,7 +3,7 @@
 Получение токена доступа для API-запросов
 
 ## URL
-```POST api/v1/accounts/login/```
+```POST api/v1/login/```
 
 ## Аутентификация
 Не требуется
@@ -63,7 +63,7 @@
 Удаление токена доступа текущего пользователя
 
 ## URL
-```POST api/v1/accounts/logout/```
+```POST api/v1/logout/```
 
 ## Аутентификация
 Требуется (Bearer Token)
