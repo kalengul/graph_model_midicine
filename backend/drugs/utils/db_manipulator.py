@@ -1,13 +1,18 @@
 """Модуль загрузки лекарств."""
 
 import os
+import logging
 
+from tqdm import tqdm
 from django.conf import settings
 
 from ..models import (DrugGroup,
                       Drug,
                       DrugSideEffect,
                       SideEffect)
+
+
+logger = logging.getLogger('drugs')
 
 
 class DBManipulator:
@@ -79,7 +84,7 @@ class DBManipulator:
 
         print('Загрузка рангов началась')
         idx = 0
-        for drug in drugs:
+        for drug in tqdm(drugs, ncols=80):
             for effect in effects:
                 DrugSideEffect.objects.create(
                     drug=drug,
@@ -125,9 +130,11 @@ class DBManipulator:
                 for i, drug in enumerate(
                     Drug.objects.order_by('id').iterator(),
                         start=1):
-                    file.write(f'{i}\t{drug.name}\n')
+                    file.write(f'{i}\t{drug.drug_name}\n')
         except Exception as error:
-            raise Exception(f'Проблема при экспорте ЛС в файл: {error}')
+            message = f'Проблема при экспорте ЛС в файл: {error}'
+            logger.error(message)
+            raise Exception(message)
 
     @classmethod
     def __export_side_effects(cls):
@@ -137,9 +144,11 @@ class DBManipulator:
                 for i, effect in enumerate(
                     SideEffect.objects.order_by('id').iterator(),
                         start=1):
-                    file.write(f'{i}\t{effect.name};\t{effect.weight}\n')
+                    file.write(f'{i}\t{effect.se_name};\t{effect.weight}\n')
         except Exception as error:
-            raise Exception(f'Проблема при экспорте ПД в файл: {error}')
+            message = f'Проблема при экспорте ПД в файл: {error}'
+            logging.error(message)
+            raise Exception(message)
 
     @classmethod
     def __clean_file(cls, path):
@@ -150,13 +159,13 @@ class DBManipulator:
     @classmethod
     def __clean_rang_files(cls):
         """Метод очистки всех файлов с рагнами."""
-        cls.__clean_file(cls, cls.RANGS_PATH)
-        cls.__clean_file(cls, cls.RANGSBASE_PATH)
-        cls.__clean_file(cls, cls.RANGSFREQ_PATH)
-        cls.__clean_file(cls, cls.RANGSM1_PATH)
-        cls.__clean_file(cls, cls.RANGSM2_PATH)
-        cls.__clean_file(cls, cls.RANGSF1_PATH)
-        cls.__clean_file(cls, cls.RANGSF2_PATH)
+        cls.__clean_file(cls.RANGS_PATH)
+        cls.__clean_file(cls.RANGSBASE_PATH)
+        cls.__clean_file(cls.RANGSFREQ_PATH)
+        cls.__clean_file(cls.RANGSM1_PATH)
+        cls.__clean_file(cls.RANGSM2_PATH)
+        cls.__clean_file(cls.RANGSF1_PATH)
+        cls.__clean_file(cls.RANGSF2_PATH)
 
     @classmethod
     def __write_to_file(cls, path, rang):
@@ -189,7 +198,9 @@ class DBManipulator:
                     cls.__write_to_file(cls.RANGSM2_PATH,
                                         drug_effect.rang_m2)
         except Exception as error:
-            raise Exception(f'Проблема при экспорте рангов в файл: {error}')
+            message = f'Проблема при экспорте рангов в файл: {error}'
+            logger.error(message)
+            raise Exception(message)
 
     def export_from_db(self):
         """Метод экспорта из БД."""

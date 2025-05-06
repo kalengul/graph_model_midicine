@@ -17,25 +17,36 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs', 'medscape.log'),
             'formatter': 'detailed',
-            'encoding': 'utf-8',
+            'encoding': 'utf-8'
         },
         'fortran_file': {
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs', 'fortran.log'),
             'formatter': 'detailed',
-            'encoding': 'utf-8',
+            'encoding': 'utf-8'
         },
+        'drugs_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'drugs.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
+        }
     },
     'loggers': {
         'medscape': {
             'handlers': ['medscape_file'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': False
         },
         'fortran': {
             'handlers': ['fortran_file'],
             'level': 'DEBUG',
-            'propagate': False,
+            'propagate': False
         },
+        'drugs': {
+            'handlers': ['drugs_file'],
+            'level': 'DEBUG',
+            'propagate': False
+        }
     },
 }

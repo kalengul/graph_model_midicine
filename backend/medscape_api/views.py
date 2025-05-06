@@ -1,5 +1,3 @@
-from ast import literal_eval
-import json
 import traceback
 import logging
 
@@ -39,6 +37,7 @@ class InteractionMedScapeView(APIView):
 
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
+        logger.debug(f'входная строка {request.build_absolute_uri()}')
         try:
             serialiazer = QueryParamsSerializer(data=request.query_params)
             serialiazer.is_valid(raise_exception=True)
@@ -63,7 +62,7 @@ class InteractionMedScapeView(APIView):
                     'compatibility_medscape': (
                         'Информация о совместимости в MedScape отсутствует')
                 }
-
+                logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
                 return CustomResponse.response(
                     data=context,
                     status=status.HTTP_200_OK,
@@ -76,6 +75,7 @@ class InteractionMedScapeView(APIView):
                 'compatibility_medscape': TermReplace().replace(
                     interactions[0][0]['classification'])
             }
+            logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
             return CustomResponse.response(
                     data=context,
                     status=status.HTTP_200_OK,
@@ -84,6 +84,7 @@ class InteractionMedScapeView(APIView):
             )
         except ObjectDoesNotExist:
             traceback.print_exc()
+            logger.debug('Ресурс не найден')
             return CustomResponse.response(
                 status=status.HTTP_404_NOT_FOUND,
                 message='Ресурс не найден',
@@ -91,6 +92,7 @@ class InteractionMedScapeView(APIView):
             )
         
         except WrongInputDataError:
+            logger.debug('Обязательный параметр drugs отсутствует или некорректный')
             return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Обязательный параметр drugs отсутствует или некорректный',
@@ -98,6 +100,7 @@ class InteractionMedScapeView(APIView):
             )
         
         except WrongDrugNumberError:
+            logger.debug('Укажите два препарата')
             return CustomResponse.response(
                         status=status.HTTP_400_BAD_REQUEST,
                         message='Укажите два препарата',

@@ -2,9 +2,11 @@
 
 import os
 import json
+import logging
 
 import django
 from django.conf import settings
+from tqdm import tqdm
 
 from medscape_api.models import (WarningsMedScape,
                                  TypeDrugsMedScape,
@@ -16,6 +18,7 @@ from medscape_api.models import (WarningsMedScape,
                                  )
 
 
+logger = logging.getLogger('medscape')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ml_pharm_web.settings')
 django.setup()
 
@@ -67,7 +70,8 @@ class JSONLoader:
         json_folder_medscape_ru = os.path.join(settings.BASE_DIR,
                                                'testmedscape_ru')
         s = 'START'
-        for file_name in os.listdir(json_folder_medscape_en):  # проходим по всем файлам в папке
+        # проходим по всем файлам в папке
+        for file_name in tqdm(os.listdir(json_folder_medscape_en), ncols=80):
             s = s + file_name
             # print(file_name)
             if file_name.endswith('.json'):  # если файл имеет расширение .json
@@ -78,7 +82,8 @@ class JSONLoader:
                 with open(os.path.join(json_folder_medscape_en, file_name),
                           'r',
                           encoding='utf-8') as f:  # открываем файл для чтения
-                    data = json.load(f)  # загружаем данные из файла в переменную data
+                    # загружаем данные из файла в переменную data
+                    data = json.load(f)
                     data_ru = json.load(f_ru)
 
                     # Создаем объекты Type_Drugs_MedScape
