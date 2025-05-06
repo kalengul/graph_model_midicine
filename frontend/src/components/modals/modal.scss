@@ -33,3 +33,53 @@ div.modalPortal{
         width: 50%;
     }
 }
+
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1% 2%;
+    border-radius: 7px;
+    box-shadow: 
+        -3px -3px 5px rgba(255, 255, 255, 0.8),   
+        3px 3px 5px rgba(0, 0, 0, 0.2);      
+    z-index: 1000;
+    animation: slideIn 0.5s forwards;
+  
+    &.success {
+        background-color: #dcf5d6;
+        color: #329939;
+    }
+  
+    &.error {
+        background-color: #fba785;
+        color: #b3441f;
+    }
+  
+    .notification-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .notif-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: 15px;
+      }
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}

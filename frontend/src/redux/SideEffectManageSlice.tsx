@@ -16,6 +16,7 @@ interface IStateSE {
     sideEffects: ISideEffectElem[]; // Указываем тип элементов массива
     ranks: IRankElem[];
     updateRanksList: IRankElem[];
+    updateRankStatus: string;
     loadStatus: string;
     [key: string]: any; // Если state может содержать другие динамические поля
 }
@@ -57,16 +58,17 @@ export const fetchSideEffectRankList = createAsyncThunk('sideEffectManage/fetchS
 
 export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updateSideEffectRankList', async (updateData: IRankElem[]) => {
     try {
-        console.log(updateData)
+        // console.log(updateData)
         const data = {update_rsgs: updateData}
-        console.log(data)
+        // console.log(data)
         const response = await axios.put('/api/updateRanks/', data , {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
             }
         });
-        if(response.data.result.status===200) return response.data.data;
+        // if(response.data.result.status===200) 
+        return response.data.result.message;
     } catch (error) {
         console.error(`Ошибка при обновлении рангов:\n`, error);
         return `Ошибка при обновлении рангов`; // Возвращаем пустой массив при ошибке
@@ -109,6 +111,7 @@ const SideEffectManageSlice = createSlice({
         sideEffects: [],
         ranks: [],
         updateRanksList: [],
+        updateRankStatus: "",
         loadStatus: "",
     } as IStateSE,
     reducers: {
@@ -163,6 +166,9 @@ const SideEffectManageSlice = createSlice({
             .addCase(fetchSideEffectRankList.fulfilled, (state, action) => {
                 state.loadStatus = 'succeeded';
                 state.ranks = action.payload;
+            })
+            .addCase(updateSideEffectRankList.fulfilled, (state, action)=>{
+                state.updateRankStatus = action.payload;
             })
             .addCase(addSideEffect.fulfilled, (state, action) => {
                 // console.log(action.payload)

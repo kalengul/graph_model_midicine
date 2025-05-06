@@ -6,10 +6,12 @@ import trash3 from "../../../public/trash3.svg"
 import chevronRight from "../../../public/chevron-right.svg"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
 import { Modal } from '../modals/modal';
+import { ModalNotification } from "../modals/modalNotification"
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList, deleteSideEffect} from '../../redux/SideEffectManageSlice'
+
 
 
 export const SideEffectManage = () =>{
@@ -23,11 +25,18 @@ export const SideEffectManage = () =>{
     }, [dispatch])
 
     const SideEffectList = useAppSelector((state)=>state.sideEffectManage.sideEffects)
-
     const updateRangs = useAppSelector((state)=>state.sideEffectManage.updateRanksList)
-    
-    const saveSideEffectChanges=()=>{
-        dispatch(updateSideEffectRankList(updateRangs))
+
+
+    const [UpdateNotification, setUpdateNotification] = useState({
+        isVisible: false, type: "", message: ""
+    })
+    const saveSideEffectChanges = async ()=>{
+        const resultAction = await dispatch(updateSideEffectRankList(updateRangs))
+        if (updateSideEffectRankList.fulfilled.match(resultAction)) {
+            setUpdateNotification({isVisible: true, type: "success", message: "Ранги онбновлены"})
+        }
+        else setUpdateNotification({isVisible: true, type: "error", message: "Ошибка при обновлении рангов"})
     }
 
     const deleteSideEffectHendler=(id: string) =>{
@@ -47,8 +56,15 @@ export const SideEffectManage = () =>{
                 </div>
             </a>
             <div className="collapse mt-4" id="collapseSETable">
-              <SideEffectsTable/>
-              <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
+                <SideEffectsTable/>
+                <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
+                {UpdateNotification.isVisible && 
+                    <ModalNotification 
+                        type={UpdateNotification.type} 
+                        message={UpdateNotification.message}
+                        onClose={() => setUpdateNotification({...UpdateNotification, isVisible: false})}
+                    />
+                }
             </div>
         </div>
         <hr/>
