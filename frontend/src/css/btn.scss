@@ -16,3 +16,18 @@
 .border-send-btn{
     border: 1px solid var(--login-borde);
 }
+
+.close-btn{
+    padding: 1% 5%;
+    background-color:#ced3d7;
+    box-shadow: 
+    -3px -3px 5px rgba(255, 255, 255, 0.8),   
+    3px 3px 5px rgba(0, 0, 0, 0.2);       
+
+    &:hover{
+        background-color: var(--btn-send-hover);
+    }
+    &:active{
+        background-color: var(--btn-send-active);
+    }
+}

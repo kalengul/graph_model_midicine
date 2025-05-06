@@ -1,10 +1,11 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import {AddSideEffectForm} from "../addSideEffectForm/addSideEffectForm"
 import { SideEffectsTable } from '../sideEffectsTable/sideEffectsTable'
 
 import trash3 from "../../../public/trash3.svg"
 import chevronRight from "../../../public/chevron-right.svg"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
+import { Modal } from '../modals/modal';
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
@@ -32,6 +33,8 @@ export const SideEffectManage = () =>{
     const deleteSideEffectHendler=(id: string) =>{
         dispatch(deleteSideEffect(id))
     }
+
+    const [isVisible, setIsVisible] = useState<string | null>(null)
 
     return (
         <>
@@ -78,7 +81,14 @@ export const SideEffectManage = () =>{
                             <span className='me-3'>{index+1}.</span> 
                             <span>{sideEffect.se_name}</span>
                         </div>
-                        <img src={trash3} onClick={()=>{deleteSideEffectHendler(sideEffect.id)}}/>
+                        <img src={trash3} onClick={()=>{setIsVisible(`se-${sideEffect.id}`)}}/>
+                        <Modal 
+                            id = {`se-${sideEffect.id}`} 
+                            isVisible={isVisible===`se-${sideEffect.id}`} 
+                            onClose={()=>setIsVisible(null)}
+                            handler={()=>{deleteSideEffectHendler(sideEffect.id)}}
+                            message={`Вы хотите удалить лекарственное средство ${sideEffect.se_name}?`}
+                        ></Modal>
                     </div>
                     <hr/>
                 </>

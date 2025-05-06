@@ -1,0 +1,35 @@
+div.modalPortal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1021;
+
+    background-color: rgba(0, 0, 0, 0.3); // Лучше использовать rgba для прозрачности
+    backdrop-filter: blur(2px); // Дополнительный эффект размытия
+}
+
+.modal-body{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; // На мобильных устройствах
+    max-width: 500px; // Максимальная ширина
+    background-color: #fff;
+    z-index: 1022;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+
+    // Адаптивные стили
+    @media (min-width: 768px) {
+        width: 70%;
+    }
+    
+    @media (min-width: 992px) {
+        width: 50%;
+    }
+}

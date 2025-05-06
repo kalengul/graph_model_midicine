@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
@@ -7,6 +7,7 @@ import { ErrMessageCard } from '../messageCards/errMessageCard';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import { fetchDrugGroupList , deleteDrugGroup} from '../../redux/DrugGroupManageSlice';
+import { Modal } from '../modals/modal';
 
 
 export const DrugGroupManage = () =>{
@@ -20,6 +21,8 @@ export const DrugGroupManage = () =>{
     const deleteDrugGroupHendler = (id: string) =>{
         dispatch(deleteDrugGroup(id))
     }
+
+    const [isVisible, setIsVisible] = useState<string | null>(null)
 
     return(
         <>
@@ -52,7 +55,14 @@ export const DrugGroupManage = () =>{
                                 <span className='me-3'>{index+1}.</span> 
                                 <span>{drugGroup.dg_name}</span>
                             </div>
-                            <img src={trash3} onClick={()=>{deleteDrugGroupHendler(drugGroup.id)}}/>
+                            <img src={trash3} onClick={()=>setIsVisible(`dg-${drugGroup.id}`)}/>
+                            <Modal 
+                                id = {`dg-${drugGroup.id}`} 
+                                isVisible={isVisible===`dg-${drugGroup.id}`} 
+                                onClose={()=>setIsVisible(null)}
+                                handler={()=>{deleteDrugGroupHendler(drugGroup.id)}}
+                                message={`Вы хотите удалить группу ${drugGroup.dg_name}?`}
+                            ></Modal>
                         </div>
                         <hr/>
                     </>
