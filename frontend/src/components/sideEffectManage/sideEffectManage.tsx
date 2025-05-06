@@ -1,5 +1,5 @@
 import { useEffect } from "react"
-import {AddDrugGroupForm} from "../addSideEffectForm/addSideEffectForm"
+import {AddSideEffectForm} from "../addSideEffectForm/addSideEffectForm"
 import { SideEffectsTable } from '../sideEffectsTable/sideEffectsTable'
 
 import trash3 from "../../../public/trash3.svg"
@@ -8,7 +8,7 @@ import { ErrMessageCard } from '../messageCards/errMessageCard';
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList} from '../../redux/SideEffectManageSlice'
+import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList, deleteSideEffect} from '../../redux/SideEffectManageSlice'
 
 
 export const SideEffectManage = () =>{
@@ -27,6 +27,10 @@ export const SideEffectManage = () =>{
     
     const saveSideEffectChanges=()=>{
         dispatch(updateSideEffectRankList(updateRangs))
+    }
+
+    const deleteSideEffectHendler=(id: string) =>{
+        dispatch(deleteSideEffect(id))
     }
 
     return (
@@ -54,7 +58,7 @@ export const SideEffectManage = () =>{
                 </div>
             </a>
             <div className="collapse mt-4" id="collapseSideEffect">
-                <AddDrugGroupForm/>
+                <AddSideEffectForm/>
             </div>
         </div>
         
@@ -74,7 +78,7 @@ export const SideEffectManage = () =>{
                             <span className='me-3'>{index+1}.</span> 
                             <span>{sideEffect.se_name}</span>
                         </div>
-                        <img src={trash3}/>
+                        <img src={trash3} onClick={()=>{deleteSideEffectHendler(sideEffect.id)}}/>
                     </div>
                     <hr/>
                 </>

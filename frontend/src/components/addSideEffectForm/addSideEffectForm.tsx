@@ -1,41 +1,16 @@
-import axios from 'axios'
-
 import {Form} from 'react-final-form';
 import { Input } from "../form/input/input"
 import {AddSideEffectValidator} from "./addSideEffectValidator"
 import "./addSideEffectForm.scss"
 
-import { useDispatch} from 'react-redux';
-import {addValue, ISendSideEffectData} from '../../redux/SideEffectManageSlice'
+import { useAppDispatch } from '../../redux/hooks';
+import {ISendSideEffectData, addSideEffect} from '../../redux/SideEffectManageSlice'
 
-
-
-
-export const AddDrugGroupForm = () =>{
-    const dispatch = useDispatch()
+export const AddSideEffectForm = () =>{
+    const dispatch = useAppDispatch()
 
     const SendHandler =async (values: ISendSideEffectData)=>{
-        //window.alert(values.drug_name)
-
-        const data = new FormData();
-        data.append('se_name', values.se_name)
-
-        try {
-            await axios({ 
-                method: "POST", 
-                url: "/api/addSideEffect/", 
-                data,
-                headers: { 'Content-Type': 'multipart/form-data'},
-            }).then((res)=>{
-              //console.log(res)
-              alert(res.data.result.message)
-
-              dispatch(addValue({title: "updateList_se", value: true}))
-            })
-            
-          } catch (error) {
-            console.log(error)
-          }
+        dispatch(addSideEffect(values))
     }
 
     const ScrollInto = () =>{
@@ -46,7 +21,7 @@ export const AddDrugGroupForm = () =>{
                 block: 'nearest'
             });
         }
-      }
+    }
 
     return (
         <div>

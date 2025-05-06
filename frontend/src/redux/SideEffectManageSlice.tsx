@@ -73,6 +73,36 @@ export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updat
     }
 });
 
+export const addSideEffect = createAsyncThunk('sideEffectManage/addSideEffect', async (data: ISendSideEffectData)=>{
+    try {
+        const response = await axios.post("/api/addSideEffect/", data, {
+            headers: { 
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            },
+        })
+        if(response.data.result.status===200) return response.data.data;
+    } catch (error) {
+        console.error(`Ошибка при добавлении побочного эффекта  ${data.se_name}:\n`, error);
+        return `Ошибка при добавлении побочного эффекта ${data.se_name}`;
+    }
+})
+
+export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEffect', async (id: string)=>{
+    try {
+        const response = await axios.delete(`/api/deleteSideEffect/`,  {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
+            params: { se_id: id } 
+        })
+    if(response.data.result.status===200) return id
+    } catch (error) {
+        console.error(`Ошибка при удалении побочного эффекта:\n`, error)
+        return `Ошибка при удалении побочного эффекта`;
+    }
+})
+
 const SideEffectManageSlice = createSlice({
     name: 'sideEffectManage',
     initialState: {
@@ -134,13 +164,13 @@ const SideEffectManageSlice = createSlice({
                 state.loadStatus = 'succeeded';
                 state.ranks = action.payload;
             })
-            // .addCase(addDrug.fulfilled, (state, action) => {
-            //     console.log(action.payload)
-            //     state.drugs.push(action.payload); // Добавляем новый todo в список
-            // })
-            // .addCase(deleteDrug.fulfilled, (state, action)=>{
-            //     state.drugs = state.drugs.filter(drug => drug.id!=action.payload)
-            // });
+            .addCase(addSideEffect.fulfilled, (state, action) => {
+                // console.log(action.payload)
+                state.sideEffects.push(action.payload); // Добавляем новый todo в список
+            })
+            .addCase(deleteSideEffect.fulfilled, (state, action)=>{
+                state.sideEffects = state.sideEffects.filter(se => se.id!=action.payload)
+            });
     }
 })
 
