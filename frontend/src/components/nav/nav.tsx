@@ -1,4 +1,4 @@
-import { useLocation  } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {useState, useEffect, useMemo} from 'react'
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
@@ -12,11 +12,10 @@ import { logout } from '../../redux/AuthSlice';
 
 export const Nav = ()=>{
     const dispatch = useAppDispatch()
+    const navigate = useNavigate();
 
     const isAuth = useAppSelector(state=>state.auth.isAuthenticated)
     const user = useAppSelector(state=>state.auth.user)
-
-    
 
     const menu = useAppSelector((state)=>state.menu.links)
     const activeLink = useAppSelector((state)=>state.menu.isActive)
@@ -48,7 +47,7 @@ export const Nav = ()=>{
                 </div>
 
                 <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>                
-                    <h1>ТОШ</h1>
+                    <h1 className='logo' onClick={()=>navigate("/")}>ТОШ</h1>
                     <hr />
 
                     {isAuth &&
