@@ -44,7 +44,7 @@ export const ComputationFortranForm = () =>{
           {({ handleSubmit, submitting}) => (
           <form onSubmit={handleSubmit}>
               <ComputationInputForm
-                  label = "Лекартсвеннные средства для расчета взаимодействия"
+                  label = "Лекарственнные средства для расчета взаимодействия"
                   name = "drugs"
                   placeholder = "Введите лекарственные средства"
               ></ComputationInputForm>
