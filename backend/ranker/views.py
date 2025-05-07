@@ -1,6 +1,6 @@
-import json
 import traceback
 import logging
+import time
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -57,7 +57,9 @@ class CalculationAPI(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
-        
+
+        start_time = time.time()
+
         DBManipulator().export_from_db()
         FileLoader.load_all(base_dir)
 
@@ -73,6 +75,10 @@ class CalculationAPI(APIView):
                 base_dir=base_dir,
                 file_name=filename,
                 nj=drugs)
+
+            elapsed_time = time.time() - start_time
+            print('elapsed_time =', elapsed_time)
+            logger.info(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
 
             return CustomResponse.response(
                 status=status.HTTP_200_OK,
