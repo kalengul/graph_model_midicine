@@ -1,5 +1,3 @@
-from ast import literal_eval
-import json
 import traceback
 import logging
 
@@ -22,6 +20,7 @@ from drugs.utils.custom_response import CustomResponse
 from medscape_api.serializers import QueryParamsSerializer
 from medscape_api.utils.medscape_exceptions import (WrongDrugNumberError,
                                                     WrongInputDataError)
+from medscape_api.utils.term_replacer import TermReplace
 
 
 logger = logging.getLogger('medscape')
@@ -38,12 +37,12 @@ class InteractionMedScapeView(APIView):
 
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
+        logger.debug(f'входная строка {request.build_absolute_uri()}')
         try:
             serialiazer = QueryParamsSerializer(data=request.query_params)
             serialiazer.is_valid(raise_exception=True)
             data = serialiazer.validated_data
             drugs = data.get('drugs')
-
             interactions = []
 
             if not drugs:
@@ -63,29 +62,29 @@ class InteractionMedScapeView(APIView):
                     'compatibility_medscape': (
                         'Информация о совместимости в MedScape отсутствует')
                 }
-
+                logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
                 return CustomResponse.response(
                     data=context,
                     status=status.HTTP_200_OK,
                     message='Совместимость ЛС по MedScape успешно расcчитана',
                     http_status=status.HTTP_200_OK
                 )
-            
             context = {
                 'drugs': drugs_list,
                 'description': interactions[0][0]['description'],
-                'compatibility_medscape': interactions[0][0]['classification']
+                'compatibility_medscape': TermReplace().replace(
+                    interactions[0][0]['classification'])
             }
-
+            logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
             return CustomResponse.response(
                     data=context,
                     status=status.HTTP_200_OK,
                     message='Совместимость ЛС по MedScape успешно расcчитана',
                     http_status=status.HTTP_200_OK
             )
-        
         except ObjectDoesNotExist:
             traceback.print_exc()
+            logger.debug('Ресурс не найден')
             return CustomResponse.response(
                 status=status.HTTP_404_NOT_FOUND,
                 message='Ресурс не найден',
@@ -93,6 +92,7 @@ class InteractionMedScapeView(APIView):
             )
         
         except WrongInputDataError:
+            logger.debug('Обязательный параметр drugs отсутствует или некорректный')
             return CustomResponse.response(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Обязательный параметр drugs отсутствует или некорректный',
@@ -100,6 +100,7 @@ class InteractionMedScapeView(APIView):
             )
         
         except WrongDrugNumberError:
+            logger.debug('Укажите два препарата')
             return CustomResponse.response(
                         status=status.HTTP_400_BAD_REQUEST,
                         message='Укажите два препарата',
@@ -111,8 +112,8 @@ class InteractionMedScapeView(APIView):
             return CustomResponse.response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
 
 class MedScapeOutDateView(APIView):
     """Получение списка взаимодействии ЛС."""

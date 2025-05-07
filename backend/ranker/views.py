@@ -1,3 +1,4 @@
+import json
 import traceback
 import logging
 
@@ -6,6 +7,7 @@ from rest_framework import status
 from django.conf import settings
 
 from ranker.utils.file_loader import FileLoader
+from drugs.utils.db_manipulator import DBManipulator
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
@@ -18,10 +20,6 @@ TXT_FILENAMES = [
     'rangfreq.txt', 
     'rangm2.txt', 
     'rangf2.txt', 
-    
-    # 'side_effects.txt', 
-    # 'drugs_xcn.txt', 
-    # 'rangs.txt', 
     ]
 
 logger = logging.getLogger('fortran')
@@ -34,12 +32,16 @@ class CalculationAPI(APIView):
         """Временный метод для просмотра изначальной структуры выхода."""
         logger.debug(f'входная строка {request.build_absolute_uri()}')
         base_dir = settings.BASE_DIR
+
+        logger.debug(f'request.query_params = {request.query_params}')
         serializer = QueryParamsSerializer(data=request.query_params)
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
+
         drugs = data.get('drugs')
+        logger.debug(f'data = {data}')
         file_index = data.get('humanData')
-        
+
         if drugs is None:
             message = "Обязательный параметр drugs отсутствует или некорректный."
             logger.error(message)
@@ -55,13 +57,11 @@ class CalculationAPI(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
-
-        FileLoader.load_drugs_from_file(base_dir)
-        FileLoader.load_disease_chf_from_file(base_dir)
+        
+        DBManipulator().export_from_db()
+        FileLoader.load_all(base_dir)
 
         calculator = FortranCalculator()
-
-        drug_indices2 = drugs[:]
 
         while len(drugs) < calculator.n_k:
             drugs.append(0)
@@ -72,10 +72,8 @@ class CalculationAPI(APIView):
             context = calculator.calculate(
                 base_dir=base_dir,
                 file_name=filename,
-                nj=drugs,
-                drug_indices2=drug_indices2,
-            )
-            
+                nj=drugs)
+
             return CustomResponse.response(
                 status=status.HTTP_200_OK,
                 message='Совместимость ЛС по Fortran успешно расcчитана',
@@ -83,7 +81,8 @@ class CalculationAPI(APIView):
                 data=context)
         
         except Exception:
-            print(traceback.format_exc())
+            logger.critical(traceback.format_exc())
+
             return CustomResponse.response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',

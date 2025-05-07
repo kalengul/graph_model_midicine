@@ -1,8 +1,6 @@
 import traceback
 
 from rest_framework.views import APIView
-from accounts.auth import BearerTokenAuthentication
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
@@ -34,8 +32,8 @@ class DrugGroupAPI(APIView):
     def post(self, request):
         """Метод для запросов POST."""
         self.check_permissions(request)
-    
         serializer = DrugGroupSerializer(data=request.data)
+
         if serializer.is_valid():
             try:
                 serializer.save()
@@ -59,7 +57,7 @@ class DrugGroupAPI(APIView):
                     message=SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                     )
-            
+
         return CustomResponse.response(
             status=status.HTTP_400_BAD_REQUEST,
             message=((f'Группа {request.data.get("dg_name")}'

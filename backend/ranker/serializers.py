@@ -7,3 +7,4 @@ class QueryParamsSerializer(serializers.Serializer):
 
     drugs = ParsedListField(required=False, field_name='drugs')
     humanData = serializers.IntegerField()
+    
