@@ -9,7 +9,7 @@ from ranker.models import (DrugCHF,
                            DiseaseCHF)
 
 
-logger = logging.getLogger('ranker')
+logger = logging.getLogger('fortran')
 
 
 class FortranCalculator:
@@ -47,7 +47,6 @@ class FortranCalculator:
         logger.debug(f'self.n_k = {self.n_k}')
 
         logger.debug(f'nj = {nj}')
-        print(f'nj = {nj}')
 
         non_zero = list(filter(lambda x: x != 0, nj))
 
@@ -170,23 +169,15 @@ class FortranCalculator:
                 else:
                     drugs_class_3.append(j)
 
-        # drug_array = []
-        # for k in range(0, len(drugs_class_1)):
-        #     drug = DrugCHF.objects.get(index=drugs_class_1[k])
-        #     drug_array.append({'name': drug.name, 'class': 1})
-        # context.update({'arr_drugs_class_1': drug_array})
-
         drug_array2 = []
         for k in range(1, len(drugs_class_2)):
             drug = DrugCHF.objects.get(index=drugs_class_2[k])
             drug_array2.append({'name': drug.name, 'class': 2})        
-        # context.update({'cause': drug_array2})
 
         drug_array3 = []
         for k in range(1, len(drugs_class_3)):
             drug = DrugCHF.objects.get(index=drugs_class_3[k])
             drug_array3.append({'name': drug.name, 'class': 3})
-        # context.update({'incompatible': drug_array3})
 
         context['combinations'] = [
             {"сompatibility": 'cause',

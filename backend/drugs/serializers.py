@@ -1,8 +1,13 @@
+import logging
+
 from rest_framework import serializers
 from .models import (DrugGroup,
                      Drug,
                      SideEffect,
                      DrugSideEffect)
+
+
+logger = logging.getLogger('drugs')
 
 
 class DrugGroupSerializer(serializers.ModelSerializer):
@@ -42,7 +47,7 @@ class DrugSerializer(serializers.ModelSerializer):
         side_effects_data = validated_data.pop('side_effects', [])
         drug = Drug.objects.create(**validated_data)
 
-        print('side_effects_data =', side_effects_data)
+        logger.debug(f'side_effects_data = {side_effects_data}')
         if side_effects_data:
             passed_ids = set()
 
@@ -51,8 +56,8 @@ class DrugSerializer(serializers.ModelSerializer):
                 rank = se.get('rank')
                 passed_ids.add(se_id)
 
-                print('se_id =', se_id)
-                print('rank =', rank)
+                logger.debug(f'se_id = {se_id}')
+                logger.debug(f'rank = {rank}')
 
                 try:
                     DrugSideEffect.objects.create(
@@ -119,9 +124,9 @@ class SideEffectSerializer(serializers.ModelSerializer):
         side_effects_data = validated_data.pop('side_effects', [])
         side_effect = SideEffect.objects.create(**validated_data)
 
-        print('side_effects_data =', side_effects_data)
+        logger.debug(f'side_effects_data = {side_effects_data}')
         if side_effects_data:
-            print('есть side_effects_data')
+            logger.debug('есть side_effects_data')
             passed_ids = set()
 
             for se in side_effects_data:
@@ -129,8 +134,8 @@ class SideEffectSerializer(serializers.ModelSerializer):
                 rank = se.get('rank')
                 passed_ids.add(drug_id)
 
-                print('drug_id =', drug_id)
-                print('rank =', rank)
+                logger.debug(f'drug_id = {drug_id}')
+                logger.debug('rank = {rank}')
                 try:
                     DrugSideEffect.objects.create(
                         drug=Drug.objects.get(id=drug_id),

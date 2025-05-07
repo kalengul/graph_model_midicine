@@ -53,8 +53,13 @@ class InteractionMedScapeView(APIView):
 
             drugs_list = [DD.objects.get(pk=drug).drug_name for drug in drugs]
 
-            # if len(drugs_list) != 2:
-            #     raise WrongDrugNumberError
+            if len(drugs_list) == 1:
+                return CustomResponse.response(
+                    data={},
+                    status=status.HTTP_204_NO_CONTENT,
+                    message='Лекарственное средство с самим собой не взаимодействует',
+                    http_status=status.HTTP_204_NO_CONTENT
+            )
 
             context = []
 
@@ -70,12 +75,6 @@ class InteractionMedScapeView(APIView):
                             'Информация о совместимости в MedScape отсутствует')
                     })
                     logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
-                    # return CustomResponse.response(
-                    #     data=context,
-                    #     status=status.HTTP_200_OK,
-                    #     message='Совместимость ЛС по MedScape успешно расcчитана',
-                    #     http_status=status.HTTP_200_OK
-                    # )
                 else:
                     context.append({
                         'drugs': pair,
@@ -83,7 +82,6 @@ class InteractionMedScapeView(APIView):
                         'compatibility_medscape': TermReplace().replace(
                             interactions[0][0]['classification'])
                     })
-            print('len(context) =', len(context))
             logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
             return CustomResponse.response(
                     data=context,

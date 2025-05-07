@@ -255,3 +255,43 @@
 2025-05-07 14:48:30,302 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
 2025-05-07 14:48:30,302 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
 2025-05-07 14:48:31,550 INFO fortran Время выполнения экспорда данных и рассчёта: 1.25 сек.
+2025-05-07 15:32:13,197 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 15:32:13,197 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 15:32:13,198 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 15:32:14,729 INFO fortran Время выполнения экспорда данных и рассчёта: 1.53 сек.
+2025-05-07 15:34:57,127 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 15:34:57,128 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 15:34:57,128 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 15:34:58,454 DEBUG fortran DrugCHF.objects.count() = 56
+2025-05-07 15:34:58,455 DEBUG fortran DiseaseCHF.objects.count() = 81
+2025-05-07 15:34:58,455 DEBUG fortran self.n_j = 57
+2025-05-07 15:34:58,455 DEBUG fortran self.n_k = 81
+2025-05-07 15:34:58,455 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-07 15:34:58,506 INFO fortran Время выполнения экспорда данных и рассчёта: 1.38 сек.
+2025-05-07 16:23:11,666 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202,%203,%204]&humanData=1
+2025-05-07 16:23:11,666 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2, 3, 4]'], 'humanData': ['1']}>
+2025-05-07 16:23:11,667 DEBUG fortran data = {'drugs': [1, 2, 3, 4], 'humanData': 1}
+2025-05-07 16:23:12,970 DEBUG fortran DrugCHF.objects.count() = 56
+2025-05-07 16:23:12,970 DEBUG fortran DiseaseCHF.objects.count() = 81
+2025-05-07 16:23:12,970 DEBUG fortran self.n_j = 57
+2025-05-07 16:23:12,970 DEBUG fortran self.n_k = 81
+2025-05-07 16:23:12,970 DEBUG fortran nj = [1, 2, 3, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-07 16:23:13,022 DEBUG fortran Время выполнения экспорда данных и рассчёта: 1.35 сек.
+2025-05-07 16:23:24,013 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 16:23:24,013 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 16:23:24,013 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 16:23:25,303 DEBUG fortran DrugCHF.objects.count() = 56
+2025-05-07 16:23:25,304 DEBUG fortran DiseaseCHF.objects.count() = 81
+2025-05-07 16:23:25,304 DEBUG fortran self.n_j = 57
+2025-05-07 16:23:25,304 DEBUG fortran self.n_k = 81
+2025-05-07 16:23:25,304 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-07 16:23:25,352 DEBUG fortran Время выполнения экспорда данных и рассчёта: 1.34 сек.
+2025-05-07 16:23:33,710 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1]&humanData=1
+2025-05-07 16:23:33,710 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1]'], 'humanData': ['1']}>
+2025-05-07 16:23:33,710 DEBUG fortran data = {'drugs': [1], 'humanData': 1}
+2025-05-07 16:23:35,050 DEBUG fortran DrugCHF.objects.count() = 56
+2025-05-07 16:23:35,050 DEBUG fortran DiseaseCHF.objects.count() = 81
+2025-05-07 16:23:35,051 DEBUG fortran self.n_j = 57
+2025-05-07 16:23:35,051 DEBUG fortran self.n_k = 81
+2025-05-07 16:23:35,051 DEBUG fortran nj = [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-07 16:23:35,095 DEBUG fortran Время выполнения экспорда данных и рассчёта: 1.39 сек.

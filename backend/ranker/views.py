@@ -77,8 +77,7 @@ class CalculationAPI(APIView):
                 nj=drugs)
 
             elapsed_time = time.time() - start_time
-            print('elapsed_time =', elapsed_time)
-            logger.info(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
+            logger.debug(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
 
             return CustomResponse.response(
                 status=status.HTTP_200_OK,

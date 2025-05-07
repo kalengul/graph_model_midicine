@@ -31,7 +31,7 @@ class DBManipulator:
     def __load_drugs(cls):
         """Метод загрузки ЛС."""
         try:
-            print('Загрузка ЛС началась')
+            logger.info('Загрузка ЛС началась')
             group, _ = DrugGroup.objects.get_or_create(
                 id=1,
                 defaults={'dg_name': 'Общая группа'})
@@ -39,7 +39,7 @@ class DBManipulator:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
                     Drug.objects.create(drug_name=drug.split('\t')[1].strip(),
                                         drug_group=group)
-            print('Загружено ЛС:', Drug.objects.count())
+            logger.info('Загружено ЛС:', Drug.objects.count())
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
@@ -47,14 +47,14 @@ class DBManipulator:
     def __load_side_effects(cls):
         """Метод загрузки ПД."""
         try:
-            print('Загрузка побочных действий началась')
+            logger.info('Загрузка побочных действий началась')
             with open(cls.SIDE_EFFECTS_PATH, 'r', encoding='utf-8') as file:
                 for s_e in [s_e.strip() for s_e in file if s_e != '\n']:
                     SideEffect.objects.create(
                         se_name=s_e.split('\t')[1].replace(';', '').strip(),
                         weight=float(
                             s_e.split('\t')[2].replace(',', '.').strip()))
-            print('Загружено побочных действий:', SideEffect.objects.count())
+            logger.info('Загружено побочных действий:', SideEffect.objects.count())
         except Exception as error:
             raise Exception(f'Проблема с загрузкой {error}')
 
@@ -209,41 +209,6 @@ class DBManipulator:
             message = f'Проблема при экспорте рангов в файл: {error}'
             logger.error(message)
             raise Exception(message)
-
-    # @classmethod
-    # def __write_to_file(cls, path, rang):
-    #     """Метод дозаписи в файл значения."""
-    #     with open(path, 'a', encoding='utf-8') as file:
-    #         file.write(f'{rang}\n')
-
-    # @classmethod
-    # def __export_rangs(cls):
-    #     """Метод экспорта рангов из БД в файл."""
-    #     try:
-    #         cls.__clean_rang_files()
-    #         for drug in Drug.objects.order_by('id').iterator():
-    #             for effect in SideEffect.objects.order_by('id').iterator():
-    #                 drug_effect = DrugSideEffect.objects.get(
-    #                     drug=drug,
-    #                     side_effect=effect)
-    #                 cls.__write_to_file(cls.RANGS_PATH,
-    #                                     drug_effect.probability)
-    #                 cls.__write_to_file(cls.RANGSBASE_PATH,
-    #                                     drug_effect.rang_base)
-    #                 cls.__write_to_file(cls.RANGSFREQ_PATH,
-    #                                     drug_effect.rang_freq)
-    #                 cls.__write_to_file(cls.RANGSF1_PATH,
-    #                                     drug_effect.rang_f1)
-    #                 cls.__write_to_file(cls.RANGSF2_PATH,
-    #                                     drug_effect.rang_f2)
-    #                 cls.__write_to_file(cls.RANGSM1_PATH,
-    #                                     drug_effect.rang_m1)
-    #                 cls.__write_to_file(cls.RANGSM2_PATH,
-    #                                     drug_effect.rang_m2)
-    #     except Exception as error:
-    #         message = f'Проблема при экспорте рангов в файл: {error}'
-    #         logger.error(message)
-    #         raise Exception(message)
 
     def export_from_db(self):
         """Метод экспорта из БД."""
