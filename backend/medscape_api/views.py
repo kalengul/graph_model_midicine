@@ -1,5 +1,6 @@
 import traceback
 import logging
+from itertools import combinations
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -35,6 +36,8 @@ class InteractionMedScapeView(APIView):
     Информация получена из MedScape.
     """
 
+    COMBINATION_LONG = 2
+
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
         logger.debug(f'входная строка {request.build_absolute_uri()}')
@@ -50,31 +53,37 @@ class InteractionMedScapeView(APIView):
 
             drugs_list = [DD.objects.get(pk=drug).drug_name for drug in drugs]
 
-            if len(drugs_list) != 2:
-                raise WrongDrugNumberError
+            # if len(drugs_list) != 2:
+            #     raise WrongDrugNumberError
 
-            interactions = InteractionRetriever().get_interactions(drugs_list)
+            context = []
 
-            if not any(interactions):
-                context = {
-                    'drugs': drugs_list,
-                    'description': 'Справка в MedScape отсутствует',
-                    'compatibility_medscape': (
-                        'Информация о совместимости в MedScape отсутствует')
-                }
-                logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
-                return CustomResponse.response(
-                    data=context,
-                    status=status.HTTP_200_OK,
-                    message='Совместимость ЛС по MedScape успешно расcчитана',
-                    http_status=status.HTTP_200_OK
-                )
-            context = {
-                'drugs': drugs_list,
-                'description': interactions[0][0]['description'],
-                'compatibility_medscape': TermReplace().replace(
-                    interactions[0][0]['classification'])
-            }
+            for pair in list(combinations(drugs_list, self.COMBINATION_LONG)):
+                pair = list(pair)
+                interactions = InteractionRetriever().get_interactions(pair)
+
+                if not any(interactions):
+                    context.append({
+                        'drugs': pair,
+                        'description': 'Справка в MedScape отсутствует',
+                        'compatibility_medscape': (
+                            'Информация о совместимости в MedScape отсутствует')
+                    })
+                    logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
+                    # return CustomResponse.response(
+                    #     data=context,
+                    #     status=status.HTTP_200_OK,
+                    #     message='Совместимость ЛС по MedScape успешно расcчитана',
+                    #     http_status=status.HTTP_200_OK
+                    # )
+                else:
+                    context.append({
+                        'drugs': pair,
+                        'description': interactions[0][0]['description'],
+                        'compatibility_medscape': TermReplace().replace(
+                            interactions[0][0]['classification'])
+                    })
+            print('len(context) =', len(context))
             logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
             return CustomResponse.response(
                     data=context,

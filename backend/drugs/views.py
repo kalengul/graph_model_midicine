@@ -1,8 +1,6 @@
 import traceback
 
 from rest_framework.views import APIView
-from accounts.auth import BearerTokenAuthentication
-from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError

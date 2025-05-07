@@ -1,12 +1,15 @@
 """Модуль выдуль не посредственного вычисления."""
 
 import os
+import logging
 
 import numpy as np
 
 from ranker.models import (DrugCHF,
                            DiseaseCHF)
-from medscape_api.interaction_retriever import InteractionRetriever
+
+
+logger = logging.getLogger('ranker')
 
 
 class FortranCalculator:
@@ -37,13 +40,16 @@ class FortranCalculator:
             - rangm2.txt – Мужчины после 65;
             - rangf2.txt – Женщины после 65.
         """
-        print('DrugCHF.objects.count() =', DrugCHF.objects.count())
-        print('DiseaseCHF.objects.count() =', DiseaseCHF.objects.count())
+        logger.debug(f'DrugCHF.objects.count() = {DrugCHF.objects.count()}')
+        logger.debug(f'DiseaseCHF.objects.count() = {DiseaseCHF.objects.count()}')
 
-        print('self.n_j =', self.n_j)
-        print('self.n_k =', self.n_k)
+        logger.debug(f'self.n_j = {self.n_j}')
+        logger.debug(f'self.n_k = {self.n_k}')
 
-        print('nj =', nj)
+        logger.debug(f'nj = {nj}')
+        print(f'nj = {nj}')
+
+        non_zero = list(filter(lambda x: x != 0, nj))
 
         # Вычисление рангов взаимодействий и эффектов
         rang1 = np.zeros((self.n_j, self.n_k))
@@ -187,4 +193,6 @@ class FortranCalculator:
                 "drugs": [item['name'] for item in drug_array2]},
             {"сompatibility": 'incompatible',
                 "drugs": [item['name'] for item in drug_array3]},]
+        context['drugs'] = [DrugCHF.objects.get(id=i).name
+                            for i in non_zero]
         return context

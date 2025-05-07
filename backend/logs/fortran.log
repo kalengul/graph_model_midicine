@@ -173,3 +173,75 @@
 2025-05-05 19:05:57,183 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%204]&humanData=%7B%22age%22:%20%22rangs.txt%22%7D
 2025-05-05 20:06:32,684 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%204]&humanData=%7B%22age%22:%20%22rangbase.txt%22%7D
 2025-05-05 20:08:01,915 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%204]&humanData=%7B%22age%22:%20%22rangs.txt%22%7D
+2025-05-06 15:50:03,896 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%204]&humanData=1
+2025-05-06 15:50:03,896 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 4]'], 'humanData': ['1']}>
+2025-05-06 15:50:03,896 DEBUG fortran data = {'drugs': [1, 4], 'humanData': 1}
+2025-05-07 11:46:09,705 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 11:46:09,707 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 11:46:09,707 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 11:46:26,638 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=2
+2025-05-07 11:46:26,638 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['2']}>
+2025-05-07 11:46:26,638 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 2}
+2025-05-07 11:46:38,091 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 11:46:38,091 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 11:46:38,092 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 11:55:22,699 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 11:55:22,699 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 11:55:22,699 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 11:55:24,010 DEBUG fortran Время выполнения экспорда данных и рассчёта: 1.31 сек.
+2025-05-07 11:56:05,409 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 11:56:05,409 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 11:56:05,409 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 11:56:06,716 INFO fortran Время выполнения экспорда данных и рассчёта: 1.31 сек.
+2025-05-07 11:58:53,111 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 11:58:53,112 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 11:58:53,112 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 11:58:54,403 INFO fortran Время выполнения экспорда данных и рассчёта: 1.29 сек.
+2025-05-07 11:59:25,660 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 11:59:25,660 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 11:59:25,660 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 11:59:26,960 INFO fortran Время выполнения экспорда данных и рассчёта: 1.30 сек.
+2025-05-07 12:00:54,782 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 12:00:54,782 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 12:00:54,782 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 12:01:02,570 INFO fortran Время выполнения экспорда данных и рассчёта: 7.79 сек.
+2025-05-07 12:05:30,551 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 12:05:30,551 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 12:05:30,552 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 12:05:43,602 INFO fortran Время выполнения экспорда данных и рассчёта: 13.05 сек.
+2025-05-07 12:06:09,122 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-07 12:06:09,122 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-07 12:06:09,123 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 3}
+2025-05-07 12:06:10,983 INFO fortran Время выполнения экспорда данных и рассчёта: 1.86 сек.
+2025-05-07 13:59:50,520 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 13:59:50,520 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 13:59:50,521 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 13:59:52,409 INFO fortran Время выполнения экспорда данных и рассчёта: 1.89 сек.
+2025-05-07 14:04:16,856 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1]&humanData=1
+2025-05-07 14:04:16,856 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1]'], 'humanData': ['1']}>
+2025-05-07 14:04:16,857 DEBUG fortran data = {'drugs': [1], 'humanData': 1}
+2025-05-07 14:04:18,871 INFO fortran Время выполнения экспорда данных и рассчёта: 2.01 сек.
+2025-05-07 14:14:56,598 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202,%204,%203]&humanData=1
+2025-05-07 14:14:56,598 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2, 4, 3]'], 'humanData': ['1']}>
+2025-05-07 14:14:56,598 DEBUG fortran data = {'drugs': [1, 2, 4, 3], 'humanData': 1}
+2025-05-07 14:14:58,571 INFO fortran Время выполнения экспорда данных и рассчёта: 1.97 сек.
+2025-05-07 14:20:35,512 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1]&humanData=1
+2025-05-07 14:20:35,513 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1]'], 'humanData': ['1']}>
+2025-05-07 14:20:35,513 DEBUG fortran data = {'drugs': [1], 'humanData': 1}
+2025-05-07 14:20:37,451 INFO fortran Время выполнения экспорда данных и рассчёта: 1.94 сек.
+2025-05-07 14:33:15,442 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1]&humanData=1
+2025-05-07 14:33:15,442 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1]'], 'humanData': ['1']}>
+2025-05-07 14:33:15,442 DEBUG fortran data = {'drugs': [1], 'humanData': 1}
+2025-05-07 14:33:17,068 INFO fortran Время выполнения экспорда данных и рассчёта: 1.63 сек.
+2025-05-07 14:37:32,884 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1]&humanData=1
+2025-05-07 14:37:32,884 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1]'], 'humanData': ['1']}>
+2025-05-07 14:37:32,884 DEBUG fortran data = {'drugs': [1], 'humanData': 1}
+2025-05-07 14:37:34,190 INFO fortran Время выполнения экспорда данных и рассчёта: 1.31 сек.
+2025-05-07 14:37:45,715 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-07 14:37:45,715 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-07 14:37:45,715 DEBUG fortran data = {'drugs': [1, 2], 'humanData': 1}
+2025-05-07 14:37:47,029 INFO fortran Время выполнения экспорда данных и рассчёта: 1.31 сек.
+2025-05-07 14:37:53,162 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202,%203]&humanData=1
+2025-05-07 14:37:53,162 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2, 3]'], 'humanData': ['1']}>
+2025-05-07 14:37:53,162 DEBUG fortran data = {'drugs': [1, 2, 3], 'humanData': 1}
+2025-05-07 14:37:54,517 INFO fortran Время выполнения экспорда данных и рассчёта: 1.35 сек.
