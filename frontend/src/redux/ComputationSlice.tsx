@@ -39,7 +39,7 @@ export interface IResultMedscape{
 
 interface IComputationState {
   computationList: IComputationElem[]
-  resultMedscape: IResultMedscape
+  resultMedscape: IResultMedscape[]
   resultFortran: IResultFortran
   isresultMedscape: boolean
   isresultFortran: boolean
@@ -56,11 +56,11 @@ const initStateFortran: IResultFortran = {
     drugs: [],
 }
 
-const initStateMedscape: IResultMedscape = {
-  compatibility_medscape: "",
-  description: "",
-  drugs: [],
-}
+// const initStateMedscape: IResultMedscape = {
+//   compatibility_medscape: "",
+//   description: "",
+//   drugs: [],
+// }
 
 export interface sendForm{
   drugs: string[]
@@ -79,7 +79,7 @@ interface TrunkResult<T = any> {
 }
 
 
-export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionMedscape', async (data: IComputationElem[]): Promise<TrunkResult<IResultMedscape>> => {
+export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionMedscape', async (data: IComputationElem[]): Promise<TrunkResult<IResultMedscape[]>> => {
   try {
     
       const sendData: sendForm = {drugs:[]}
@@ -90,10 +90,10 @@ export const iteractionMedscape = createAsyncThunk('computationSlice/iteractionM
         params: {drugs: `[${sendData.drugs.join(", ")}]`}
       });
       if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
-      return { status: "err", data: initStateMedscape, message:`Ошибка при добавлении совместимости medScape`}
+      return { status: "err", data: [], message:`Ошибка при добавлении совместимости medScape`}
   } catch (error) {
       console.error(`Ошибка при расчете совместимости medScape:\n`, error);
-      return { status: "err", data: initStateMedscape, message:`Ошибка при добавлении совместимости medScape`}; // Возвращаем пустой массив при ошибке
+      return { status: "err", data: [], message:`Ошибка при добавлении совместимости medScape`}; // Возвращаем пустой массив при ошибке
   }
 });
 
@@ -120,7 +120,7 @@ const ComputationSlice = createSlice({
     name: 'computation',
     initialState: {
       computationList: [],
-      resultMedscape: initStateMedscape,
+      resultMedscape: [], //initStateMedscape,
       isresultMedscape: false,
       resultFortran: initStateFortran,
       isresultFortran: false,
@@ -144,14 +144,14 @@ const ComputationSlice = createSlice({
 
       initStates(state){
         state.computationList = []
-        state.resultMedscape = initStateMedscape
+        state.resultMedscape = []//initStateMedscape
         state.isresultMedscape = false
         state.resultFortran = initStateFortran
         state.isresultFortran = false
       },
 
       initResultMedscape(state){
-        state.resultMedscape = initStateMedscape
+        state.resultMedscape = []//initStateMedscape
         state.isresultMedscape = false
       },
 
@@ -166,7 +166,7 @@ const ComputationSlice = createSlice({
 
     extraReducers: (builder) => {
         builder
-        .addCase(iteractionMedscape.fulfilled, (state, action: PayloadAction<TrunkResult<IResultMedscape>>) => {
+        .addCase(iteractionMedscape.fulfilled, (state, action: PayloadAction<TrunkResult<IResultMedscape[]>>) => {
           if(action.payload.status === 200) 
           {
             state.isresultMedscape = true
