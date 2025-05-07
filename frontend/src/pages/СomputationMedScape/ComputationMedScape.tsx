@@ -1,3 +1,5 @@
+import { Nav } from '../../components/nav/nav';
+
 import { ComputationMedScapeForm } from "../../components/computationMedScapeForm/computationMedScapeForm"
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 
@@ -10,38 +12,29 @@ export const ComputationMedScape = () =>{
     const resultMedScape = useAppSelector(state=>state.computation.resultMedscape)
     const isresultMedscape = useAppSelector(state => state.computation.isresultMedscape)
     return(
-        <>
+        <div className="flex">
+        <Nav></Nav>
+        <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по MedScape</h1>
-            {/* <div className="w-75 mt-4 drugManage">
-                <a className='link-dark' data-bs-toggle="collapse" href="#collapseComputationMedScape" role="button" aria-expanded="false" aria-controls="collapseComputationMedScape">
-                    <div className="flex ai-center">
-                        <img className='me-2 chevron-icon' src={chevronRight} alt='chevronDown'/>
-                        <h4>Ввести данные для расчета взаимодействия</h4>
-                    </div>
-                </a>
-                <div className="collapse mt-4" id="collapseComputationMedScape">
-                    <ComputationMedScapeForm/>
-                </div>
-            </div>
-            <hr/> */}
-
-            
-            {/* <h4>Ввести данные для расчета взаимодействия</h4> */}
             <ComputationMedScapeForm/>
             <hr/>
             <h4>Результаты оценки совместимости</h4>
             {
-                isresultMedscape && <div>
-                    
-                    <h5>Проверяемые лекарственные средства: { Array.isArray(resultMedScape.drugs) && resultMedScape.drugs.join(" ")}</h5>
-                    <h5 className="mt-3">Результаты: </h5>
+                isresultMedscape &&  
+                Array.isArray(resultMedScape) && resultMedScape.map(res=>
+                    <div>
+                        <h6>Проверяемые лекарственные средства: { Array.isArray(res.drugs) && res.drugs.join(", ")}</h6>
+                        <h6 className="mt-3">Результаты: </h6>
 
-                    <ComputationResults compatibility={resultMedScape.compatibility_medscape} />
+                        <ComputationResults compatibility={res.compatibility_medscape} />
 
-                    <h5 className="mt-3">Примечание:</h5>
-                    <p>{resultMedScape.description}</p>
-                </div>
+                        <h6 className="mt-3">Примечание:</h6>
+                        <p>{res.description}</p>
+                        <hr/>
+                    </div>
+                )
             }
-        </>
+        </main>
+        </div>
     )
 }

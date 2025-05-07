@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import { ComputationFortranForm } from "../../components/computationFortranForm/computationFortranForm"
 
+import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
@@ -14,11 +15,16 @@ export const ComputationFortran = () =>{
     }, [dispatch])
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const resultFortran = useAppSelector(state=>state.computation.resultFortran)
+
+    const isresultMedscape = useAppSelector(state=>state.computation.isresultMedscape)
+    const resultMedscape = useAppSelector(state=>state.computation.resultMedscape)
     
     console.log(resultFortran)
 
     return(
-        <>
+        <div className="flex">
+        <Nav></Nav>
+        <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по Fortran</h1>
 
             <ComputationFortranForm/>
@@ -128,16 +134,20 @@ export const ComputationFortran = () =>{
                     
                     <hr/>
                     <h4>Результаты оценки совместимости по MedScape</h4>
-                    <div>
-                    
-                        <h5>Проверяемые лекарственные средства: { Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
-                        <h5 className="mt-3">Результаты: </h5>
+                    {isresultMedscape &&
+                        Array.isArray(resultMedscape) && resultMedscape.map(res=>
+                        <div>
+                            <h6>Проверяемые лекарственные средства: { Array.isArray(res.drugs) && res.drugs.join(", ")}</h6>
+                            <h6 className="mt-3">Результаты: </h6>
 
-                        <ComputationResults compatibility={resultFortran.compatibility_medscape} />
+                            <ComputationResults compatibility={res.compatibility_medscape} />
 
-                        <h5 className="mt-3">Примечание:</h5>
-                        <p>{resultFortran.description}</p>
-                    </div>
+                            <h6 className="mt-3">Примечание:</h6>
+                            <p>{res.description}</p>
+                            <hr/>
+                        </div>
+                        )
+                    }
                     {/* 
                     
 
@@ -148,6 +158,7 @@ export const ComputationFortran = () =>{
                 </div>
             }
 
-        </>
+        </main>
+        </div>
     )
 }

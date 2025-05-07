@@ -1,13 +1,7 @@
-interface IAddDrugGroupValidator{
-    dg_name?: string
-}
+import {ISendDrugGroupDataError, ISendDrugGroupData} from '../../redux/DrugGroupManageSlice'
 
-interface IErrors{
-    dg_name?: string,
-}
-
-export const AddDrugGroupValidator = (values: IAddDrugGroupValidator) =>{
-    const errors: IErrors={}
+export const AddDrugGroupValidator = (values: ISendDrugGroupData) =>{
+    const errors: ISendDrugGroupDataError = {}
     if (!values.dg_name) errors.dg_name = "Пожалуйста введите название группы лекарственных средств";
     return errors
 }

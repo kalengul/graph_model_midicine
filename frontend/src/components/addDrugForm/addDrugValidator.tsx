@@ -1,13 +1,7 @@
-interface IAddDrugValidator{
-    drug_name?: string
-}
+import { ISendDrugData, ISendDrugDataError } from "../../redux/DrugManageSlice";
 
-interface IErrors{
-    drug_name?: string,
-}
-
-export const AddDrugValidator = (values: IAddDrugValidator) =>{
-    const errors: IErrors={}
+export const AddDrugValidator = (values: ISendDrugData) =>{
+    const errors: ISendDrugDataError={}
     if (!values.drug_name) errors.drug_name = "Пожалуйста введите название лекарственного средства";
     return errors
 }

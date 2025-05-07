@@ -4,16 +4,12 @@ import {AddDrugGroupValidator} from "./addDrugGroupValidator"
 import "./addDrugGroupForm.scss"
 
 import { useAppDispatch} from '../../redux/hooks';
-import { addDrugGroup } from '../../redux/DrugGroupManageSlice';
-
-interface ISendDrugData{
-    dg_name: string,
-}
+import { addDrugGroup, ISendDrugGroupData} from '../../redux/DrugGroupManageSlice';
 
 export const AddDrugGroupForm = () =>{
     const dispatch = useAppDispatch()
 
-    const SendHandler =async (values: ISendDrugData)=>{
+    const SendHandler =async (values: ISendDrugGroupData)=>{
         dispatch(addDrugGroup(values.dg_name))
     }
 
@@ -40,6 +36,7 @@ export const AddDrugGroupForm = () =>{
                     id = "dg_name"
                     type = "text"
                     placeholder = "Введите название группы лекарственных средств"
+                    className='mb-4'
                 ></Input>
 
                 <button className='btn send-btn' onClick={ScrollInto} disabled={submitting} >Добавить</button>

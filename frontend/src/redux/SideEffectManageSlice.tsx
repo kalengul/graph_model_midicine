@@ -16,8 +16,17 @@ interface IStateSE {
     sideEffects: ISideEffectElem[]; // Указываем тип элементов массива
     ranks: IRankElem[];
     updateRanksList: IRankElem[];
+    updateRankStatus: string;
     loadStatus: string;
     [key: string]: any; // Если state может содержать другие динамические поля
+}
+
+export interface ISendSideEffectData{
+    se_name: string,
+}
+
+export interface ISendSideEffectDataError{
+    se_name?: string,
 }
 
 // Асинхронный Thunk для загрузки списка побочных эффектов с сервера
@@ -49,20 +58,52 @@ export const fetchSideEffectRankList = createAsyncThunk('sideEffectManage/fetchS
 
 export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updateSideEffectRankList', async (updateData: IRankElem[]) => {
     try {
-        console.log(updateData)
+        // console.log(updateData)
         const data = {update_rsgs: updateData}
-        console.log(data)
+        // console.log(data)
         const response = await axios.put('/api/updateRanks/', data , {
             headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
             }
         });
-        if(response.data.result.status===200) return response.data.data;
+        // if(response.data.result.status===200) 
+        return response.data.result.message;
     } catch (error) {
         console.error(`Ошибка при обновлении рангов:\n`, error);
         return `Ошибка при обновлении рангов`; // Возвращаем пустой массив при ошибке
     }
 });
+
+export const addSideEffect = createAsyncThunk('sideEffectManage/addSideEffect', async (data: ISendSideEffectData)=>{
+    try {
+        const response = await axios.post("/api/addSideEffect/", data, {
+            headers: { 
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            },
+        })
+        if(response.data.result.status===200) return response.data.data;
+    } catch (error) {
+        console.error(`Ошибка при добавлении побочного эффекта  ${data.se_name}:\n`, error);
+        return `Ошибка при добавлении побочного эффекта ${data.se_name}`;
+    }
+})
+
+export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEffect', async (id: string)=>{
+    try {
+        const response = await axios.delete(`/api/deleteSideEffect/`,  {
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
+            params: { se_id: id } 
+        })
+    if(response.data.result.status===200) return id
+    } catch (error) {
+        console.error(`Ошибка при удалении побочного эффекта:\n`, error)
+        return `Ошибка при удалении побочного эффекта`;
+    }
+})
 
 const SideEffectManageSlice = createSlice({
     name: 'sideEffectManage',
@@ -70,6 +111,7 @@ const SideEffectManageSlice = createSlice({
         sideEffects: [],
         ranks: [],
         updateRanksList: [],
+        updateRankStatus: "",
         loadStatus: "",
     } as IStateSE,
     reducers: {
@@ -125,13 +167,16 @@ const SideEffectManageSlice = createSlice({
                 state.loadStatus = 'succeeded';
                 state.ranks = action.payload;
             })
-            // .addCase(addDrug.fulfilled, (state, action) => {
-            //     console.log(action.payload)
-            //     state.drugs.push(action.payload); // Добавляем новый todo в список
-            // })
-            // .addCase(deleteDrug.fulfilled, (state, action)=>{
-            //     state.drugs = state.drugs.filter(drug => drug.id!=action.payload)
-            // });
+            .addCase(updateSideEffectRankList.fulfilled, (state, action)=>{
+                state.updateRankStatus = action.payload;
+            })
+            .addCase(addSideEffect.fulfilled, (state, action) => {
+                // console.log(action.payload)
+                state.sideEffects.push(action.payload); // Добавляем новый todo в список
+            })
+            .addCase(deleteSideEffect.fulfilled, (state, action)=>{
+                state.sideEffects = state.sideEffects.filter(se => se.id!=action.payload)
+            });
     }
 })
 

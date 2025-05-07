@@ -12,6 +12,14 @@ interface IDrugGroupManageState {
     [key: string]: any; // Если state может содержать другие динамические поля
 }
 
+export interface ISendDrugGroupData{
+    dg_name: string,
+}
+
+export interface ISendDrugGroupDataError{
+    dg_name?: string,
+}
+
 // Асинхронный Thunk для загрузки списка групп ЛС с сервера
 export const fetchDrugGroupList = createAsyncThunk('drugGroupManage/fetchDrugGroupList', async () => {
     try {
@@ -33,6 +41,7 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
         data.append('dg_name', dg_name)
         const response = await axios.post('/api/addDrugGroup/', data, {
             headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'multipart/form-data'
             }
         });
@@ -45,7 +54,12 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
 
 export const deleteDrugGroup = createAsyncThunk('drugGroupManage/deleteDrugGroup', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/deleteDrugGroup/`,  { params: { dg_id: id } })
+        const response = await axios.delete(`/api/deleteDrugGroup/`,  { 
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+            },
+            params: { dg_id: id } 
+        })
         if(response.data.result.status===200) return id
     } catch (error) {
         console.error(`Ошибка при удалении группы:\n`, error)

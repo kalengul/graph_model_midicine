@@ -3,11 +3,11 @@ import {Form, Field} from 'react-final-form';
 import { ComputationInputForm } from "../form/computationInputForm/computationInputForm"
 
 import {ComputationFortranValidator} from "./computationFortranValidator"
-import { iteractionFortran, IComputationFortran } from '../../redux/ComputationSlice';
+import { iteractionFortran, IComputationFortran, iteractionMedscape } from '../../redux/ComputationSlice';
 
 interface IHumanData{
   label: string,
-  value: string,
+  value: string ,
 }
 
 // interface FormDataFortran{
@@ -17,12 +17,12 @@ interface IHumanData{
 export const ComputationFortranForm = () =>{
 
     const HumanData: IHumanData[] = [
-      {label: "Общий", value: "rangbase.txt"},
-      {label: "Мужчины до 65", value: "rangm1.txt"},
-      {label: "Женщины до 65", value: "rangf1.txt"},
-      {label: "Нормальный", value: "rangfreq.txt"},
-      {label: "Мужчины после 65", value: "rangm2.txt"},
-      {label: "Женщины после 65", value: "rangf2.txt"},
+      {label: "Общий", value: "0"}, //"rangbase.txt"},
+      {label: "Мужчины до 65", value: "1" }, //"rangm1.txt"},
+      {label: "Женщины до 65", value: "2" }, //"rangf1.txt"},
+      {label: "Нормальный", value: "3" }, //"rangfreq.txt"},
+      {label: "Мужчины после 65", value: "4"}, // "rangm2.txt"},
+      {label: "Женщины после 65", value: "5" }, //"rangf2.txt"},
     ]
 
     const dispatch = useAppDispatch()
@@ -32,6 +32,7 @@ export const ComputationFortranForm = () =>{
         if(computationList.length!=0){
           const data: IComputationFortran = {drugs: computationList, humanData: value.humanData}
           dispatch(iteractionFortran(data))
+          dispatch(iteractionMedscape(computationList))
         }
       }
     return (
@@ -43,7 +44,7 @@ export const ComputationFortranForm = () =>{
           {({ handleSubmit, submitting}) => (
           <form onSubmit={handleSubmit}>
               <ComputationInputForm
-                  label = "Лекартсвеннные средства для расчета взаимодействия"
+                  label = "Лекарственнные средства для расчета взаимодействия"
                   name = "drugs"
                   placeholder = "Введите лекарственные средства"
               ></ComputationInputForm>

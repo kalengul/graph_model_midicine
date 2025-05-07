@@ -1,14 +1,17 @@
-import { useEffect } from "react"
-import {AddDrugGroupForm} from "../addSideEffectForm/addSideEffectForm"
+import { useEffect, useState } from "react"
+import {AddSideEffectForm} from "../addSideEffectForm/addSideEffectForm"
 import { SideEffectsTable } from '../sideEffectsTable/sideEffectsTable'
 
 import trash3 from "../../../public/trash3.svg"
 import chevronRight from "../../../public/chevron-right.svg"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
+import { Modal } from '../modals/modal';
+import { ModalNotification } from "../modals/modalNotification"
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList} from '../../redux/SideEffectManageSlice'
+import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList, deleteSideEffect} from '../../redux/SideEffectManageSlice'
+
 
 
 export const SideEffectManage = () =>{
@@ -22,12 +25,25 @@ export const SideEffectManage = () =>{
     }, [dispatch])
 
     const SideEffectList = useAppSelector((state)=>state.sideEffectManage.sideEffects)
-
     const updateRangs = useAppSelector((state)=>state.sideEffectManage.updateRanksList)
-    
-    const saveSideEffectChanges=()=>{
-        dispatch(updateSideEffectRankList(updateRangs))
+
+
+    const [UpdateNotification, setUpdateNotification] = useState({
+        isVisible: false, type: "", message: ""
+    })
+    const saveSideEffectChanges = async ()=>{
+        const resultAction = await dispatch(updateSideEffectRankList(updateRangs))
+        if (updateSideEffectRankList.fulfilled.match(resultAction)) {
+            setUpdateNotification({isVisible: true, type: "success", message: "Ранги онбновлены"})
+        }
+        else setUpdateNotification({isVisible: true, type: "error", message: "Ошибка при обновлении рангов"})
     }
+
+    const deleteSideEffectHendler=(id: string) =>{
+        dispatch(deleteSideEffect(id))
+    }
+
+    const [isVisible, setIsVisible] = useState<string | null>(null)
 
     return (
         <>
@@ -40,8 +56,15 @@ export const SideEffectManage = () =>{
                 </div>
             </a>
             <div className="collapse mt-4" id="collapseSETable">
-              <SideEffectsTable/>
-              <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
+                <SideEffectsTable/>
+                <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
+                {UpdateNotification.isVisible && 
+                    <ModalNotification 
+                        type={UpdateNotification.type} 
+                        message={UpdateNotification.message}
+                        onClose={() => setUpdateNotification({...UpdateNotification, isVisible: false})}
+                    />
+                }
             </div>
         </div>
         <hr/>
@@ -54,7 +77,7 @@ export const SideEffectManage = () =>{
                 </div>
             </a>
             <div className="collapse mt-4" id="collapseSideEffect">
-                <AddDrugGroupForm/>
+                <AddSideEffectForm/>
             </div>
         </div>
         
@@ -74,7 +97,14 @@ export const SideEffectManage = () =>{
                             <span className='me-3'>{index+1}.</span> 
                             <span>{sideEffect.se_name}</span>
                         </div>
-                        <img src={trash3}/>
+                        <img src={trash3} onClick={()=>{setIsVisible(`se-${sideEffect.id}`)}}/>
+                        <Modal 
+                            id = {`se-${sideEffect.id}`} 
+                            isVisible={isVisible===`se-${sideEffect.id}`} 
+                            onClose={()=>setIsVisible(null)}
+                            handler={()=>{deleteSideEffectHendler(sideEffect.id)}}
+                            message={`Вы хотите удалить лекарственное средство ${sideEffect.se_name}?`}
+                        ></Modal>
                     </div>
                     <hr/>
                 </>

@@ -1,15 +1,7 @@
-interface IAddSideEffectValidator{
-    se_name?: string
-}
+import { ISendSideEffectDataError, ISendSideEffectData } from "../../redux/SideEffectManageSlice";
 
-interface IErrors{
-    se_name?: string,
-}
-
-
-
-export const AddSideEffectValidator = (values: IAddSideEffectValidator) =>{
-    const errors: IErrors={}
+export const AddSideEffectValidator = (values: ISendSideEffectData) =>{
+    const errors: ISendSideEffectDataError={}
     if (!values.se_name) errors.se_name = "Пожалуйста введите название побочного эффекта";
     return errors
 }

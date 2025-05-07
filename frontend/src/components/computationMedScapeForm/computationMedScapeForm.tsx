@@ -29,7 +29,7 @@ export const ComputationMedScapeForm = () => {
       {({ handleSubmit, submitting}) => (
       <form onSubmit={handleSubmit}>
           <ComputationInputForm
-              label = "Лекартсвеннные средства для расчета взаимодействия"
+              label = "Лекарственнные средства для расчета взаимодействия"
               name = "drug_list"
               placeholder = "Введите лекарственные средства"
           ></ComputationInputForm>

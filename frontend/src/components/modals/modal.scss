@@ -1,0 +1,85 @@
+div.modalPortal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1021;
+
+    background-color: rgba(0, 0, 0, 0.3); // Лучше использовать rgba для прозрачности
+    backdrop-filter: blur(2px); // Дополнительный эффект размытия
+}
+
+.modal-body{
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; // На мобильных устройствах
+    max-width: 500px; // Максимальная ширина
+    background-color: #fff;
+    z-index: 1022;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+
+    // Адаптивные стили
+    @media (min-width: 768px) {
+        width: 70%;
+    }
+    
+    @media (min-width: 992px) {
+        width: 50%;
+    }
+}
+
+
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1% 2%;
+    border-radius: 7px;
+    box-shadow: 
+        -3px -3px 5px rgba(255, 255, 255, 0.8),   
+        3px 3px 5px rgba(0, 0, 0, 0.2);      
+    z-index: 1000;
+    animation: slideIn 0.5s forwards;
+  
+    &.success {
+        background-color: #dcf5d6;
+        color: #329939;
+    }
+  
+    &.error {
+        background-color: #fba785;
+        color: #b3441f;
+    }
+  
+    .notification-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .notif-btn {
+        background: none;
+        border: none;
+        color: inherit;
+        font-size: 20px;
+        cursor: pointer;
+        margin-left: 15px;
+      }
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
