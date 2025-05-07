@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
 import { LoginForm } from "../../components/loginForm/loginForm"
+// import { HelloCard } from './HelloCard/HelloCard';
 import { useAppSelector } from "../../redux/hooks"
 import { useEffect } from 'react';
 
@@ -24,6 +25,10 @@ export const LoginPage = () =>{
         </div>
 
         <div className='loginContent flex jc-center w-50'>
+            {/* <HelloCard>
+                <p className='m-0'>Добро пожаловать в систему оценки рисков </p>
+                <p className='m-0 logo'>ТОШ</p>
+            </HelloCard> */}
             <div>
                 <p className='m-0'>Добро пожаловать в систему оценки рисков </p>
                 <p className='m-0 logo'>ТОШ</p>

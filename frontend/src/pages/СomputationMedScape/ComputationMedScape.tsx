@@ -20,16 +20,19 @@ export const ComputationMedScape = () =>{
             <hr/>
             <h4>Результаты оценки совместимости</h4>
             {
-                isresultMedscape && <div>
-                    
-                    <h5>Проверяемые лекарственные средства: { Array.isArray(resultMedScape.drugs) && resultMedScape.drugs.join(" ")}</h5>
-                    <h5 className="mt-3">Результаты: </h5>
+                isresultMedscape &&  
+                Array.isArray(resultMedScape) && resultMedScape.map(res=>
+                    <div>
+                        <h6>Проверяемые лекарственные средства: { Array.isArray(res.drugs) && res.drugs.join(", ")}</h6>
+                        <h6 className="mt-3">Результаты: </h6>
 
-                    <ComputationResults compatibility={resultMedScape.compatibility_medscape} />
+                        <ComputationResults compatibility={res.compatibility_medscape} />
 
-                    <h5 className="mt-3">Примечание:</h5>
-                    <p>{resultMedScape.description}</p>
-                </div>
+                        <h6 className="mt-3">Примечание:</h6>
+                        <p>{res.description}</p>
+                        <hr/>
+                    </div>
+                )
             }
         </main>
         </div>

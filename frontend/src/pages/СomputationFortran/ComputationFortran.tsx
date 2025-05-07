@@ -134,19 +134,19 @@ export const ComputationFortran = () =>{
                     
                     <hr/>
                     <h4>Результаты оценки совместимости по MedScape</h4>
-                    {isresultMedscape && 
+                    {isresultMedscape &&
+                        Array.isArray(resultMedscape) && resultMedscape.map(res=>
                         <div>
-                        
-                            
-                            
-                            <h5>Проверяемые лекарственные средства: { Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
-                            <h5 className="mt-3">Результаты: </h5>
+                            <h6>Проверяемые лекарственные средства: { Array.isArray(res.drugs) && res.drugs.join(", ")}</h6>
+                            <h6 className="mt-3">Результаты: </h6>
 
-                            <ComputationResults compatibility={resultMedscape.compatibility_medscape} />
+                            <ComputationResults compatibility={res.compatibility_medscape} />
 
-                            <h5 className="mt-3">Примечание:</h5>
-                            <p>{resultMedscape.description}</p>
+                            <h6 className="mt-3">Примечание:</h6>
+                            <p>{res.description}</p>
+                            <hr/>
                         </div>
+                        )
                     }
                     {/* 
                     
