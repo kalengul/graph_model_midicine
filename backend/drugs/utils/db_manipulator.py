@@ -3,7 +3,6 @@
 import os
 import logging
 
-from tqdm import tqdm
 from django.conf import settings
 
 from ..models import (DrugGroup,
@@ -82,9 +81,8 @@ class DBManipulator:
         assert len(rangs) == len(drugs) * len(effects), (
             "Размерность рангов не совпадает!")
 
-        print('Загрузка рангов началась')
         idx = 0
-        for drug in tqdm(drugs, ncols=80):
+        for drug in enumerate(drugs, 1):
             for effect in effects:
                 DrugSideEffect.objects.create(
                     drug=drug,
@@ -98,7 +96,9 @@ class DBManipulator:
                     rang_freq=float(rangsfreq[idx])
                 )
                 idx += 1
-        print('Загружено рангов:', idx)
+                logger.info(f"Прогресс: {idx}/{len(effect)} итераций")
+
+        logger.info('Загружено рангов: %d', idx) 
 
     def load_to_db(self):
         """Метод загрузки данных в БД."""

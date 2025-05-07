@@ -6,7 +6,6 @@ import logging
 
 import django
 from django.conf import settings
-from tqdm import tqdm
 
 from medscape_api.models import (WarningsMedScape,
                                  TypeDrugsMedScape,
@@ -71,7 +70,8 @@ class JSONLoader:
                                                'testmedscape_ru')
         s = 'START'
         # проходим по всем файлам в папке
-        for file_name in tqdm(os.listdir(json_folder_medscape_en), ncols=80):
+        file_names = os.listdir(json_folder_medscape_en)
+        for idx, file_name in enumerate(file_names, 1):
             s = s + file_name
             # print(file_name)
             if file_name.endswith('.json'):  # если файл имеет расширение .json
@@ -289,7 +289,6 @@ class JSONLoader:
 
                     drugs_info_obj.save()
 
-                    # print(drugs_info_obj)
-                    # print('NEXT')
+            logger.info(f"Прогресс: {idx}/{len(file_names)} итераций")
 
         return s

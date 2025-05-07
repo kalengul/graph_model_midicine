@@ -30,7 +30,7 @@ export const SideEffectsTable = ()=>{
         (drug_id: string, se_id: string, newRank: string) => {
           dispatch(updateRank({drug_id, se_id, value: newRank}));
         },
-        300 // Задержка 300мс
+        100 // Задержка 100мс
     ), [dispatch])
     
 

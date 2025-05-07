@@ -33,10 +33,10 @@ class LoginUser(APIView):
 
         if user.is_superuser:
             role = "superuser"
- 
+
         elif user.is_staff:
             role = "staff"
- 
+
         else:
             role = "no_role"
 
@@ -54,18 +54,19 @@ class LoginUser(APIView):
 
 class LogoutUser(APIView):
     permission_classes = [AllowAny]
-    permission_classes = [permissions.IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
 
     def post(self, request):
         user = request.user
 
         if user and user.is_authenticated:
             try:
-                request.user.auth_token.delete()
+                user.auth_token.delete()
             except Token.DoesNotExist:
-                pass  
+                pass
 
         return CustomResponse.response(
             message="Выход выполнен успешно",
             http_status=status.HTTP_200_OK
         )
+    

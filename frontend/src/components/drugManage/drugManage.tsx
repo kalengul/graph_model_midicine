@@ -1,7 +1,9 @@
+import {useState} from "react"
 import chevronRight from "../../../public/chevron-right.svg"
 import trash3 from "../../../public/trash3.svg"
 import { AddDrugForm } from "../../components/addDrugForm/addDrugForm"
 import { ErrMessageCard } from '../messageCards/errMessageCard';
+import { Modal } from '../modals/modal';
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import {deleteDrug} from '../../redux/DrugManageSlice'
@@ -13,6 +15,8 @@ export const DrugManage = () =>{
     const deleteDrugHendler = (id: string) =>{
         dispatch(deleteDrug(id))
     }
+
+    const [isVisible, setIsVisible] = useState<string | null>(null)
 
     return (
         <>
@@ -46,7 +50,14 @@ export const DrugManage = () =>{
                                 <span className='me-3'>{index+1}.</span> 
                                 <span>{drug.drug_name}</span>
                             </div>
-                            <img src={trash3} onClick={()=>{deleteDrugHendler(drug.id)}}/>
+                            <img src={trash3} onClick={()=>{setIsVisible(`drug-${drug.id}`)}}/>
+                            <Modal 
+                                id = {`drug-${drug.id}`} 
+                                isVisible={isVisible===`drug-${drug.id}`} 
+                                onClose={()=>setIsVisible(null)}
+                                handler={()=>{deleteDrugHendler(drug.id)}}
+                                message={`Вы хотите удалить лекарственное средство ${drug.drug_name}?`}
+                            ></Modal>
                         </div>
                         <hr/>
                     </>

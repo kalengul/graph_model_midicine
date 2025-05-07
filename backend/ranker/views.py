@@ -13,16 +13,16 @@ from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 
 
-logger = logging.getLogger('fortran')
-
 TXT_FILENAMES = [
-    'rangbase.txt',
+    'rangbase.txt', 
     'rangm1.txt', 
     'rangf1.txt',
     'rangfreq.txt', 
     'rangm2.txt', 
     'rangf2.txt', 
-]
+    ]
+
+logger = logging.getLogger('fortran')
 
 
 class CalculationAPI(APIView):
@@ -59,6 +59,7 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST)
 
         start_time = time.time()
+
         DBManipulator().export_from_db()
         FileLoader.load_all(base_dir)
 
@@ -84,8 +85,10 @@ class CalculationAPI(APIView):
                 message='Совместимость ЛС по Fortran успешно расcчитана',
                 http_status=status.HTTP_200_OK,
                 data=context)
+        
         except Exception:
             logger.critical(traceback.format_exc())
+
             return CustomResponse.response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',

@@ -4,11 +4,7 @@ import {AddDrugValidator} from "./addDrugValidator"
 import "./addDrugForm.scss"
 
 import { useAppDispatch} from '../../redux/hooks';
-import { addDrug } from '../../redux/DrugManageSlice';
-
-interface ISendDrugData{
-    drug_name: string,
-}
+import { addDrug, ISendDrugData } from '../../redux/DrugManageSlice';
 
 export const AddDrugForm = () =>{
     const dispatch = useAppDispatch()
@@ -41,6 +37,7 @@ export const AddDrugForm = () =>{
                     id = "drug_name"
                     type = "text"
                     placeholder = "Введите название лекарственного средства"
+                    className='mb-4'
                 ></Input>
 
                 <button className='btn send-btn' onClick={ScrollInto} disabled={submitting} >Добавить</button>
