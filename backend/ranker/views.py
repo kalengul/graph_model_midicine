@@ -6,8 +6,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
 
-from ranker.utils.file_loader import FileLoader
-from drugs.utils.db_manipulator import DBManipulator
+# from ranker.utils.file_loader import FileLoader
+# from drugs.utils.db_manipulator import DBManipulator
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
@@ -60,8 +60,8 @@ class CalculationAPI(APIView):
 
         start_time = time.time()
 
-        DBManipulator().export_from_db()
-        FileLoader.load_all(base_dir)
+        # DBManipulator().export_from_db()
+        # FileLoader.load_all(base_dir)
 
         calculator = FortranCalculator()
 
@@ -70,7 +70,7 @@ class CalculationAPI(APIView):
 
         try:
             filename = TXT_FILENAMES[file_index]
-
+            logger.debug(f'filename во вьюшке = {filename}')
             context = calculator.calculate(
                 base_dir=base_dir,
                 file_name=filename,

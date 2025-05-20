@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'ml_pharm_web.middlewares.APILogMiddleware',
 ]
 
 ROOT_URLCONF = 'ml_pharm_web.urls'

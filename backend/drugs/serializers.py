@@ -42,6 +42,18 @@ class DrugSerializer(serializers.ModelSerializer):
         required=False
     )
 
+    def validate_drug_name(self, value):
+        """
+        Валидания названия ЛС.
+
+        Проверяет наличие ЛС в БД перед его добавлением.
+        """
+        if Drug.objects.filter(drug_name__iexact=value).exists():
+            message = f'ЛС {value} уже существует'
+            logger.info(message)
+            raise serializers.ValidationError(message)
+        return value
+
     def create(self, validated_data):
         """Добавление ЛС."""
         side_effects_data = validated_data.pop('side_effects', [])
@@ -118,6 +130,18 @@ class SideEffectSerializer(serializers.ModelSerializer):
         write_only=True,
         required=False
     )
+
+    def validate_se_name(self, value):
+        """
+        Валидация названия ПД.
+
+        Проверяет наличие ПД в БД перед его добавлением.
+        """
+        if SideEffect.objects.filter(se_name__iexact=value).exists():
+            message = f'Побочный эффект {value} уже существует'
+            logger.info(message)
+            raise serializers.ValidationError(message)
+        return value
 
     def create(self, validated_data):
         """Добавление ПД."""

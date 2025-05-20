@@ -39,7 +39,7 @@ class DBManipulator:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
                     Drug.objects.create(drug_name=drug.split('\t')[1].strip(),
                                         drug_group=group)
-            logger.info('Загружено ЛС:', Drug.objects.count())
+            logger.info(f'Загружено ЛС: {Drug.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
@@ -54,7 +54,7 @@ class DBManipulator:
                         se_name=s_e.split('\t')[1].replace(';', '').strip(),
                         weight=float(
                             s_e.split('\t')[2].replace(',', '.').strip()))
-            logger.info('Загружено побочных действий:', SideEffect.objects.count())
+            logger.info(f'Загружено побочных действий: {SideEffect.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой {error}')
 
@@ -82,7 +82,7 @@ class DBManipulator:
             "Размерность рангов не совпадает!")
 
         idx = 0
-        for drug in enumerate(drugs, 1):
+        for drug in drugs:
             for effect in effects:
                 DrugSideEffect.objects.create(
                     drug=drug,
@@ -96,9 +96,9 @@ class DBManipulator:
                     rang_freq=float(rangsfreq[idx])
                 )
                 idx += 1
-                logger.info(f"Прогресс: {idx}/{len(effect)} итераций")
+                logger.info(f"Прогресс: {idx}/{len(effects)*len(drugs)} итераций")
 
-        logger.info('Загружено рангов: %d', idx) 
+        logger.info(f'Загружено рангов: {idx}') 
 
     def load_to_db(self):
         """Метод загрузки данных в БД."""

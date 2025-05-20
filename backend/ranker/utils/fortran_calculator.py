@@ -1,12 +1,16 @@
 """Модуль выдуль не посредственного вычисления."""
 
-import os
+from types import MappingProxyType
 import logging
 
 import numpy as np
 
-from ranker.models import (DrugCHF,
-                           DiseaseCHF)
+from drugs.models import (Drug,
+                          SideEffect,
+                          DrugSideEffect)
+
+# from ranker.models import (DrugCHF,
+#                            DiseaseCHF)
 
 
 logger = logging.getLogger('fortran')
@@ -21,10 +25,26 @@ class FortranCalculator:
         - n_k - число ПД.
     """
 
+    _DEFAULT_FILENAME = 'rangbase.txt'
+
+    @classmethod
+    def get_default_filename(cls):
+        """Метод получение защищённой кностанты _DEFAULT_FILENAME."""
+        return cls._DEFAULT_FILENAME
+
+    IDX2FILENAME = MappingProxyType({
+        'rangbase.txt': 'rang_base',
+        'rangm1.txt': 'rang_m1',
+        'rangf1.txt': 'rang_f1',
+        'rangfreq.txt': 'rang_freq',
+        'rangm2.txt': 'rang_m2',
+        'rangf2.txt': 'rang_f2'
+    })
+
     def __init__(self):
         """Конструктор."""
-        self.n_j = DrugCHF.objects.count() + 1
-        self.n_k = DiseaseCHF.objects.count()
+        self.n_j = Drug.objects.count() + 1
+        self.n_k = SideEffect.objects.count()
 
     def calculate(self, base_dir, file_name, nj):
         """
@@ -40,8 +60,8 @@ class FortranCalculator:
             - rangm2.txt – Мужчины после 65;
             - rangf2.txt – Женщины после 65.
         """
-        logger.debug(f'DrugCHF.objects.count() = {DrugCHF.objects.count()}')
-        logger.debug(f'DiseaseCHF.objects.count() = {DiseaseCHF.objects.count()}')
+        logger.debug(f'Drug.objects.count() = {Drug.objects.count()}')
+        logger.debug(f'SideEffect.objects.count() = {SideEffect.objects.count()}')
 
         logger.debug(f'self.n_j = {self.n_j}')
         logger.debug(f'self.n_k = {self.n_k}')
@@ -58,13 +78,23 @@ class FortranCalculator:
         num = np.zeros(self.n_k)
         nom = np.zeros(self.n_k)
 
-        if file_name == '':
-            file_name = 'rangbase.txt'
-        file_path = os.path.join(base_dir, 'txt_files_db', file_name)
+        # if file_name == None:
+        #     file_name = 'rangbase.txt'
+        # file_path = os.path.join(base_dir, 'txt_files_db', file_name)
 
-        with open(file_path, 'r') as file:
-            rangs = np.array([float(line.strip())
-                            for line in file.readlines()])
+        # with open(file_path, 'r') as file:
+        #     rangs = np.array([float(line.strip())
+        #                     for line in file.readlines()])
+
+        if file_name is None:
+            file_name = self.get_default_filename()
+
+        logger.debug(f'file_name = {file_name}')
+
+        rangs = [getattr(rang, self.IDX2FILENAME[file_name])
+                 for rang in DrugSideEffect.objects.order_by('id')]
+
+        logger.debug(f'len(rangs) = {len(rangs)}')
 
         # Составление таблицы рангов и эффектов для отдельных ЛС
         for j in range(1, self.n_j):
@@ -114,11 +144,11 @@ class FortranCalculator:
                 nom[k] = 1
 
             # Получение значения name из базы данных по индексу k
-            disease = DiseaseCHF.objects.get(index=k)
+            disease = SideEffect.objects.get(index=k)
 
             # Сохранение названия и значения в контексте
             side_effects.append({
-                'se_name': disease.name,
+                'se_name': disease.se_name,
                 'class': int(nom[k]),
                 'rank': round(float(rangsum[k]), 2)
             })
@@ -171,19 +201,19 @@ class FortranCalculator:
 
         drug_array2 = []
         for k in range(1, len(drugs_class_2)):
-            drug = DrugCHF.objects.get(index=drugs_class_2[k])
-            drug_array2.append({'name': drug.name, 'class': 2})        
+            drug = Drug.objects.get(index=drugs_class_2[k])
+            drug_array2.append({'name': drug.drug_name, 'class': 2})        
 
         drug_array3 = []
         for k in range(1, len(drugs_class_3)):
-            drug = DrugCHF.objects.get(index=drugs_class_3[k])
-            drug_array3.append({'name': drug.name, 'class': 3})
+            drug = Drug.objects.get(index=drugs_class_3[k])
+            drug_array3.append({'name': drug.drug_name, 'class': 3})
 
         context['combinations'] = [
             {"сompatibility": 'cause',
                 "drugs": [item['name'] for item in drug_array2]},
             {"сompatibility": 'incompatible',
                 "drugs": [item['name'] for item in drug_array3]},]
-        context['drugs'] = [DrugCHF.objects.get(id=i).name
+        context['drugs'] = [Drug.objects.get(id=i).drug_name
                             for i in non_zero]
         return context
