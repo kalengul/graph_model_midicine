@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'ranker',
     'medscape_api',
     'menu',
+    'synonyms',
 
     'rest_framework',
     'rest_framework.authtoken',

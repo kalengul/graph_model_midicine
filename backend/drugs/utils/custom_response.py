@@ -1,6 +1,7 @@
 """Модуль кастомного респонса."""
 
 from rest_framework.response import Response
+from rest_framework import status as DRF_status
 
 
 class CustomResponse:
@@ -8,10 +9,13 @@ class CustomResponse:
 
     @staticmethod
     def response(data=None,
-                 status=200,
+                 status=DRF_status.HTTP_200_OK,
                  message='успешно',
-                 http_status=200):
+                 http_status=DRF_status.HTTP_200_OK):
         """Отправка ответа."""
+        if status != DRF_status.HTTP_200_OK:
+            http_status = status
+
         if data:
             return Response({
                 "result": {

@@ -55,6 +55,10 @@ class GetMenuAPI(APIView):
                 {
                     "title": "Управление данными",
                     "slug": "/dataManage"
+                },
+                {
+                    "title": "Синонимы", 
+                    "slug": "/synonyms"
                 }
             ]
         }

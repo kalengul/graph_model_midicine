@@ -13,6 +13,7 @@ urlpatterns = [
     path('api/v1/', include('menu.urls')),
     path('api/v1/polifarmakoterapiya-fortran/', include('ranker.urls')),
     path('api/v1/', include('medscape_api.urls')),
+    path('api/v1/', include('synonyms.urls')),
 
     re_path('', API404.as_view(), name='api-404'),
 ]
