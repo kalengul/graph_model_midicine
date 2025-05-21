@@ -13,14 +13,14 @@ from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 
 
-TXT_FILENAMES = [
-    'rangbase.txt', 
-    'rangm1.txt', 
-    'rangf1.txt',
-    'rangfreq.txt', 
-    'rangm2.txt', 
-    'rangf2.txt', 
-    ]
+TXT_FILENAMES = {
+    1: 'rangbase.txt', 
+    2: 'rangm1.txt', 
+    3: 'rangf1.txt',
+    4: 'rangfreq.txt', 
+    5: 'rangm2.txt', 
+    6: 'rangf2.txt',
+}
 
 logger = logging.getLogger('fortran')
 
@@ -50,7 +50,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if file_index is None or file_index >= len(TXT_FILENAMES):
+        if file_index is None or file_index >= len(TXT_FILENAMES) or file_index < 1:
             message = "Обязательный параметр humanData отсутствует или некорректный."
             logger.error(message)
             return CustomResponse.response(

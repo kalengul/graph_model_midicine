@@ -217,7 +217,7 @@ class DrugSideEffectSerializer(serializers.ModelSerializer):
         source='side_effect',
         read_only=True)
 
-    rank = FloatWithCommanField(source='probability')
+    rank = FloatWithCommanField(source='rang_base')
 
     class Meta:
         """Настройка сериализатора."""

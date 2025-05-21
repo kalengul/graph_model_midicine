@@ -1164,3 +1164,359 @@ IndexError: list index out of range
 2025-05-20 02:13:58,150 DEBUG fortran file_name = rangf2.txt
 2025-05-20 02:13:58,181 DEBUG fortran len(rangs) = 4536
 2025-05-20 02:13:58,232 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.12 сек.
+2025-05-20 19:24:44,977 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-20 19:24:44,978 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-20 19:24:44,979 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-20 19:24:45,025 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-20 19:24:45,025 DEBUG fortran Drug.objects.count() = 54
+2025-05-20 19:24:45,026 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:24:45,026 DEBUG fortran self.n_j = 55
+2025-05-20 19:24:45,026 DEBUG fortran self.n_k = 79
+2025-05-20 19:24:45,026 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:24:45,026 DEBUG fortran file_name = rangm1.txt
+2025-05-20 19:24:45,057 DEBUG fortran len(rangs) = 4266
+2025-05-20 19:24:45,108 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.13 сек.
+2025-05-20 19:24:57,951 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=2
+2025-05-20 19:24:57,951 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['2']}>
+2025-05-20 19:24:57,952 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 2)])
+2025-05-20 19:24:57,992 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-20 19:24:57,993 DEBUG fortran Drug.objects.count() = 54
+2025-05-20 19:24:57,993 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:24:57,993 DEBUG fortran self.n_j = 55
+2025-05-20 19:24:57,993 DEBUG fortran self.n_k = 79
+2025-05-20 19:24:57,993 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:24:57,993 DEBUG fortran file_name = rangf1.txt
+2025-05-20 19:24:58,022 DEBUG fortran len(rangs) = 4266
+2025-05-20 19:24:58,076 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.12 сек.
+2025-05-20 19:28:37,481 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-20 19:28:37,482 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-20 19:28:37,482 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-20 19:28:37,627 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-20 19:28:37,627 DEBUG fortran Drug.objects.count() = 56
+2025-05-20 19:28:37,629 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:28:37,629 DEBUG fortran self.n_j = 57
+2025-05-20 19:28:37,629 DEBUG fortran self.n_k = 79
+2025-05-20 19:28:37,629 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:28:37,629 DEBUG fortran file_name = rangm1.txt
+2025-05-20 19:28:37,677 DEBUG fortran len(rangs) = 4424
+2025-05-20 19:28:37,746 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.26 сек.
+2025-05-20 19:48:42,324 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-20 19:48:42,324 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-20 19:48:42,326 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-20 19:48:42,366 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-20 19:48:42,367 DEBUG fortran Drug.objects.count() = 56
+2025-05-20 19:48:42,367 DEBUG fortran SideEffect.objects.count() = 81
+2025-05-20 19:48:42,368 DEBUG fortran self.n_j = 57
+2025-05-20 19:48:42,368 DEBUG fortran self.n_k = 81
+2025-05-20 19:48:42,368 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:48:42,368 DEBUG fortran file_name = rangm1.txt
+2025-05-20 19:48:42,399 DEBUG fortran len(rangs) = 4536
+2025-05-20 19:48:42,452 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.13 сек.
+2025-05-20 19:51:44,625 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-20 19:51:44,625 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-20 19:51:44,626 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-20 19:51:44,768 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-20 19:51:44,768 DEBUG fortran Drug.objects.count() = 54
+2025-05-20 19:51:44,769 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:51:44,769 DEBUG fortran self.n_j = 55
+2025-05-20 19:51:44,769 DEBUG fortran self.n_k = 79
+2025-05-20 19:51:44,769 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:51:44,769 DEBUG fortran file_name = rangm1.txt
+2025-05-20 19:51:44,841 DEBUG fortran len(rangs) = 4266
+2025-05-20 19:51:44,891 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.27 сек.
+2025-05-20 19:52:06,846 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=2
+2025-05-20 19:52:06,846 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['2']}>
+2025-05-20 19:52:06,847 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 2)])
+2025-05-20 19:52:06,987 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-20 19:52:06,988 DEBUG fortran Drug.objects.count() = 54
+2025-05-20 19:52:06,988 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:52:06,988 DEBUG fortran self.n_j = 55
+2025-05-20 19:52:06,988 DEBUG fortran self.n_k = 79
+2025-05-20 19:52:06,988 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:52:06,988 DEBUG fortran file_name = rangf1.txt
+2025-05-20 19:52:07,018 DEBUG fortran len(rangs) = 4266
+2025-05-20 19:52:07,069 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.22 сек.
+2025-05-20 19:52:10,531 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-20 19:52:10,531 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-20 19:52:10,532 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-20 19:52:10,572 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-20 19:52:10,573 DEBUG fortran Drug.objects.count() = 54
+2025-05-20 19:52:10,573 DEBUG fortran SideEffect.objects.count() = 79
+2025-05-20 19:52:10,573 DEBUG fortran self.n_j = 55
+2025-05-20 19:52:10,573 DEBUG fortran self.n_k = 79
+2025-05-20 19:52:10,574 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-20 19:52:10,574 DEBUG fortran file_name = rangm1.txt
+2025-05-20 19:52:10,604 DEBUG fortran len(rangs) = 4266
+2025-05-20 19:52:10,655 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.12 сек.
+2025-05-21 18:19:41,612 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-21 18:19:41,613 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-21 18:19:41,614 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-21 18:19:41,656 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-21 18:19:41,657 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:19:41,658 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:19:41,658 DEBUG fortran self.n_j = 88
+2025-05-21 18:19:41,659 DEBUG fortran self.n_k = 104
+2025-05-21 18:19:41,659 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:19:41,659 DEBUG fortran file_name = rangm1.txt
+2025-05-21 18:19:41,716 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:19:41,766 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.15 сек.
+2025-05-21 18:19:46,606 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=2
+2025-05-21 18:19:46,606 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['2']}>
+2025-05-21 18:19:46,608 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 2)])
+2025-05-21 18:19:46,646 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-21 18:19:46,647 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:19:46,648 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:19:46,648 DEBUG fortran self.n_j = 88
+2025-05-21 18:19:46,648 DEBUG fortran self.n_k = 104
+2025-05-21 18:19:46,649 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:19:46,649 DEBUG fortran file_name = rangf1.txt
+2025-05-21 18:19:46,738 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:19:46,784 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.18 сек.
+2025-05-21 18:19:55,958 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-21 18:19:55,958 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-21 18:19:55,959 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-21 18:19:56,098 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-21 18:19:56,099 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:19:56,100 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:19:56,100 DEBUG fortran self.n_j = 88
+2025-05-21 18:19:56,100 DEBUG fortran self.n_k = 104
+2025-05-21 18:19:56,100 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:19:56,100 DEBUG fortran file_name = rangm1.txt
+2025-05-21 18:19:56,157 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:19:56,204 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.25 сек.
+2025-05-21 18:20:11,922 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=2
+2025-05-21 18:20:11,922 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['2']}>
+2025-05-21 18:20:11,923 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 2)])
+2025-05-21 18:20:11,963 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-21 18:20:11,963 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:20:11,964 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:20:11,965 DEBUG fortran self.n_j = 88
+2025-05-21 18:20:11,965 DEBUG fortran self.n_k = 104
+2025-05-21 18:20:11,965 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:20:11,965 DEBUG fortran file_name = rangf1.txt
+2025-05-21 18:20:12,047 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:20:12,091 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.17 сек.
+2025-05-21 18:20:15,331 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=3
+2025-05-21 18:20:15,331 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['3']}>
+2025-05-21 18:20:15,333 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 3)])
+2025-05-21 18:20:15,474 DEBUG fortran filename во вьюшке = rangfreq.txt
+2025-05-21 18:20:15,475 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:20:15,476 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:20:15,476 DEBUG fortran self.n_j = 88
+2025-05-21 18:20:15,476 DEBUG fortran self.n_k = 104
+2025-05-21 18:20:15,476 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:20:15,477 DEBUG fortran file_name = rangfreq.txt
+2025-05-21 18:20:15,534 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:20:15,578 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.25 сек.
+2025-05-21 18:20:20,264 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2054]&humanData=3
+2025-05-21 18:20:20,265 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 54]'], 'humanData': ['3']}>
+2025-05-21 18:20:20,267 DEBUG fortran data = OrderedDict([('drugs', [1, 54]), ('humanData', 3)])
+2025-05-21 18:20:20,316 DEBUG fortran filename во вьюшке = rangfreq.txt
+2025-05-21 18:20:20,316 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:20:20,317 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:20:20,317 DEBUG fortran self.n_j = 88
+2025-05-21 18:20:20,317 DEBUG fortran self.n_k = 104
+2025-05-21 18:20:20,317 DEBUG fortran nj = [1, 54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:20:20,318 DEBUG fortran file_name = rangfreq.txt
+2025-05-21 18:20:20,399 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:20:20,445 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.18 сек.
+2025-05-21 18:20:35,681 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2054]&humanData=5
+2025-05-21 18:20:35,681 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 54]'], 'humanData': ['5']}>
+2025-05-21 18:20:35,682 DEBUG fortran data = OrderedDict([('drugs', [1, 54]), ('humanData', 5)])
+2025-05-21 18:20:35,723 DEBUG fortran filename во вьюшке = rangf2.txt
+2025-05-21 18:20:35,723 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:20:35,724 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:20:35,724 DEBUG fortran self.n_j = 88
+2025-05-21 18:20:35,724 DEBUG fortran self.n_k = 104
+2025-05-21 18:20:35,725 DEBUG fortran nj = [1, 54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:20:35,725 DEBUG fortran file_name = rangf2.txt
+2025-05-21 18:20:35,815 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:20:35,861 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.18 сек.
+2025-05-21 18:32:12,173 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=1
+2025-05-21 18:32:12,174 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['1']}>
+2025-05-21 18:32:12,175 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 1)])
+2025-05-21 18:32:12,216 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-21 18:32:12,217 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:32:12,219 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:32:12,219 DEBUG fortran self.n_j = 88
+2025-05-21 18:32:12,219 DEBUG fortran self.n_k = 104
+2025-05-21 18:32:12,219 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:32:12,219 DEBUG fortran file_name = rangm1.txt
+2025-05-21 18:32:12,279 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:32:12,324 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.15 сек.
+2025-05-21 18:32:29,616 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%202]&humanData=0
+2025-05-21 18:32:29,616 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 2]'], 'humanData': ['0']}>
+2025-05-21 18:32:29,618 DEBUG fortran data = OrderedDict([('drugs', [1, 2]), ('humanData', 0)])
+2025-05-21 18:32:29,655 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:32:29,656 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:32:29,657 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:32:29,657 DEBUG fortran self.n_j = 88
+2025-05-21 18:32:29,657 DEBUG fortran self.n_k = 104
+2025-05-21 18:32:29,657 DEBUG fortran nj = [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:32:29,657 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:32:29,757 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:32:29,835 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.22 сек.
+2025-05-21 18:32:57,695 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%204]&humanData=0
+2025-05-21 18:32:57,695 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 4]'], 'humanData': ['0']}>
+2025-05-21 18:32:57,696 DEBUG fortran data = OrderedDict([('drugs', [1, 4]), ('humanData', 0)])
+2025-05-21 18:32:57,838 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:32:57,839 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:32:57,840 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:32:57,840 DEBUG fortran self.n_j = 88
+2025-05-21 18:32:57,840 DEBUG fortran self.n_k = 104
+2025-05-21 18:32:57,840 DEBUG fortran nj = [1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:32:57,840 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:32:57,896 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:32:57,972 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.28 сек.
+2025-05-21 18:33:05,971 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%203]&humanData=0
+2025-05-21 18:33:05,971 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 3]'], 'humanData': ['0']}>
+2025-05-21 18:33:05,973 DEBUG fortran data = OrderedDict([('drugs', [1, 3]), ('humanData', 0)])
+2025-05-21 18:33:06,012 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:33:06,013 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:33:06,014 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:33:06,014 DEBUG fortran self.n_j = 88
+2025-05-21 18:33:06,014 DEBUG fortran self.n_k = 104
+2025-05-21 18:33:06,014 DEBUG fortran nj = [1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:33:06,014 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:33:06,100 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:33:06,180 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.21 сек.
+2025-05-21 18:33:14,049 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=0
+2025-05-21 18:33:14,050 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['0']}>
+2025-05-21 18:33:14,051 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 0)])
+2025-05-21 18:33:14,094 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:33:14,095 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:33:14,096 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:33:14,096 DEBUG fortran self.n_j = 88
+2025-05-21 18:33:14,096 DEBUG fortran self.n_k = 104
+2025-05-21 18:33:14,096 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:33:14,097 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:33:14,154 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:33:14,237 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.19 сек.
+2025-05-21 18:37:42,895 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=0
+2025-05-21 18:37:42,895 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['0']}>
+2025-05-21 18:37:42,896 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 0)])
+2025-05-21 18:37:42,938 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:37:42,939 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:37:42,940 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:37:42,940 DEBUG fortran self.n_j = 88
+2025-05-21 18:37:42,940 DEBUG fortran self.n_k = 104
+2025-05-21 18:37:42,940 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:37:42,940 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:37:42,995 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:37:43,072 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.17 сек.
+2025-05-21 18:37:46,918 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=1
+2025-05-21 18:37:46,918 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['1']}>
+2025-05-21 18:37:46,919 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 1)])
+2025-05-21 18:37:46,958 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:37:46,959 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:37:46,960 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:37:46,960 DEBUG fortran self.n_j = 88
+2025-05-21 18:37:46,960 DEBUG fortran self.n_k = 104
+2025-05-21 18:37:46,960 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:37:46,960 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:37:47,048 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:37:47,121 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.20 сек.
+2025-05-21 18:37:49,383 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=2
+2025-05-21 18:37:49,384 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['2']}>
+2025-05-21 18:37:49,385 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 2)])
+2025-05-21 18:37:49,423 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-21 18:37:49,424 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:37:49,425 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:37:49,425 DEBUG fortran self.n_j = 88
+2025-05-21 18:37:49,425 DEBUG fortran self.n_k = 104
+2025-05-21 18:37:49,425 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:37:49,425 DEBUG fortran file_name = rangm1.txt
+2025-05-21 18:37:49,483 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:37:49,527 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.14 сек.
+2025-05-21 18:37:52,057 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=3
+2025-05-21 18:37:52,057 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['3']}>
+2025-05-21 18:37:52,059 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 3)])
+2025-05-21 18:37:52,097 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-21 18:37:52,098 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:37:52,098 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:37:52,098 DEBUG fortran self.n_j = 88
+2025-05-21 18:37:52,099 DEBUG fortran self.n_k = 104
+2025-05-21 18:37:52,099 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:37:52,099 DEBUG fortran file_name = rangf1.txt
+2025-05-21 18:37:52,190 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:37:52,234 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.17 сек.
+2025-05-21 18:40:16,026 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=3
+2025-05-21 18:40:16,027 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['3']}>
+2025-05-21 18:40:16,028 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 3)])
+2025-05-21 18:40:16,178 DEBUG fortran filename во вьюшке = rangf1.txt
+2025-05-21 18:40:16,178 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:40:16,180 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:40:16,180 DEBUG fortran self.n_j = 88
+2025-05-21 18:40:16,180 DEBUG fortran self.n_k = 104
+2025-05-21 18:40:16,180 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:40:16,180 DEBUG fortran file_name = rangf1.txt
+2025-05-21 18:40:16,240 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:40:16,287 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.26 сек.
+2025-05-21 18:40:19,029 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=1
+2025-05-21 18:40:19,029 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['1']}>
+2025-05-21 18:40:19,030 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 1)])
+2025-05-21 18:40:19,068 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:40:19,068 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:40:19,069 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:40:19,069 DEBUG fortran self.n_j = 88
+2025-05-21 18:40:19,069 DEBUG fortran self.n_k = 104
+2025-05-21 18:40:19,070 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:40:19,070 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:40:19,157 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:40:19,231 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.20 сек.
+2025-05-21 18:40:24,987 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=0
+2025-05-21 18:40:24,987 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['0']}>
+2025-05-21 18:40:24,989 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 0)])
+2025-05-21 18:40:25,028 CRITICAL fortran Traceback (most recent call last):
+  File "C:\for the job\graph_model_midicine\backend\ranker\views.py", line 72, in get
+    filename = TXT_FILENAMES[file_index]
+KeyError: 0
+
+2025-05-21 18:40:37,549 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=0
+2025-05-21 18:40:37,549 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['0']}>
+2025-05-21 18:40:37,550 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 0)])
+2025-05-21 18:40:37,550 ERROR fortran Обязательный параметр humanData отсутствует или некорректный.
+2025-05-21 18:40:54,099 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=0
+2025-05-21 18:40:54,099 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['0']}>
+2025-05-21 18:40:54,100 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 0)])
+2025-05-21 18:40:54,101 ERROR fortran Обязательный параметр humanData отсутствует или некорректный.
+2025-05-21 18:40:58,142 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=1
+2025-05-21 18:40:58,143 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['1']}>
+2025-05-21 18:40:58,144 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 1)])
+2025-05-21 18:40:58,182 DEBUG fortran filename во вьюшке = rangbase.txt
+2025-05-21 18:40:58,183 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:40:58,183 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:40:58,184 DEBUG fortran self.n_j = 88
+2025-05-21 18:40:58,184 DEBUG fortran self.n_k = 104
+2025-05-21 18:40:58,184 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:40:58,184 DEBUG fortran file_name = rangbase.txt
+2025-05-21 18:40:58,242 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:40:58,318 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.17 сек.
+2025-05-21 18:41:04,017 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=2
+2025-05-21 18:41:04,018 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['2']}>
+2025-05-21 18:41:04,019 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 2)])
+2025-05-21 18:41:04,057 DEBUG fortran filename во вьюшке = rangm1.txt
+2025-05-21 18:41:04,058 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:41:04,059 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:41:04,059 DEBUG fortran self.n_j = 88
+2025-05-21 18:41:04,059 DEBUG fortran self.n_k = 104
+2025-05-21 18:41:04,059 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:41:04,059 DEBUG fortran file_name = rangm1.txt
+2025-05-21 18:41:04,146 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:41:04,192 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.17 сек.
+2025-05-21 18:41:08,334 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=5
+2025-05-21 18:41:08,334 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['5']}>
+2025-05-21 18:41:08,336 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 5)])
+2025-05-21 18:41:08,374 DEBUG fortran filename во вьюшке = rangm2.txt
+2025-05-21 18:41:08,374 DEBUG fortran Drug.objects.count() = 87
+2025-05-21 18:41:08,375 DEBUG fortran SideEffect.objects.count() = 104
+2025-05-21 18:41:08,376 DEBUG fortran self.n_j = 88
+2025-05-21 18:41:08,376 DEBUG fortran self.n_k = 104
+2025-05-21 18:41:08,376 DEBUG fortran nj = [1, 80, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+2025-05-21 18:41:08,376 DEBUG fortran file_name = rangm2.txt
+2025-05-21 18:41:08,434 DEBUG fortran len(rangs) = 9048
+2025-05-21 18:41:08,478 DEBUG fortran Время выполнения экспорда данных и рассчёта: 0.14 сек.
+2025-05-21 18:41:11,282 DEBUG fortran входная строка http://127.0.0.1:8000/api/v1/polifarmakoterapiya-fortran/?drugs=[1,%2080]&humanData=6
+2025-05-21 18:41:11,283 DEBUG fortran request.query_params = <QueryDict: {'drugs': ['[1, 80]'], 'humanData': ['6']}>
+2025-05-21 18:41:11,284 DEBUG fortran data = OrderedDict([('drugs', [1, 80]), ('humanData', 6)])
+2025-05-21 18:41:11,284 ERROR fortran Обязательный параметр humanData отсутствует или некорректный.
