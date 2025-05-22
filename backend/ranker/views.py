@@ -14,12 +14,12 @@ from ranker.serializers import QueryParamsSerializer
 
 
 TXT_FILENAMES = {
-    1: 'rangbase.txt', 
-    2: 'rangm1.txt', 
-    3: 'rangf1.txt',
-    4: 'rangfreq.txt', 
-    5: 'rangm2.txt', 
-    6: 'rangf2.txt',
+    0: 'rangbase.txt', 
+    1: 'rangm1.txt', 
+    2: 'rangf1.txt',
+    3: 'rangfreq.txt', 
+    4: 'rangm2.txt', 
+    5: 'rangf2.txt',
 }
 
 logger = logging.getLogger('fortran')
@@ -50,7 +50,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if file_index is None or file_index >= len(TXT_FILENAMES) or file_index < 1:
+        if file_index is None or file_index >= len(TXT_FILENAMES):
             message = "Обязательный параметр humanData отсутствует или некорректный."
             logger.error(message)
             return CustomResponse.response(
