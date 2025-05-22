@@ -197,6 +197,7 @@ class DrugAPI(APIView):
                 message="Лекарственное средство не найдено",
                 http_status=status.HTTP_404_NOT_FOUND)
         except Exception:
+            traceback.print_exc()
             return CustomResponse.response(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
@@ -266,10 +267,11 @@ class SideEffectAPI(APIView):
                              ' уже существует'),
                     http_status=status.HTTP_400_BAD_REQUEST)
             except Exception:
+                traceback.print_exc()
                 return CustomResponse.response(
-                    status=status.HTTP_400_BAD_REQUEST,
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message=SERVER_ERROR,
-                    http_status=status.HTTP_400_BAD_REQUEST)
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         if "se_name" in serializer.errors:
             for error in serializer.errors["se_name"]:
                 if " уже существует" in error.lower():

@@ -1,0 +1,22 @@
+.synList{
+    max-height: 65vh;
+    overflow: auto;
+
+    .sunList-elem{
+        cursor: pointer;
+        border-radius: 7px;
+        border-bottom: solid 1px rgba(#212529, 0.25);
+        margin: 1rem 0;
+        padding: 1rem 0;
+    }
+
+    .isChange{
+        background-color: var(--bg-green);
+        color: var(--color-green);
+    }
+
+    .no_isChange{
+        background-color: var(--bg-red);
+        color: var(--color-red);
+    }
+}

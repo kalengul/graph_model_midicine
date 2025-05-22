@@ -13,6 +13,10 @@ LOGGING = {
         },
     },
     'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'detailed'
+        },
         'medscape_file': {
             'class': 'logging.FileHandler',
             'filename': os.path.join(BASE_DIR, 'logs', 'medscape.log'),
@@ -30,23 +34,34 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'logs', 'drugs.log'),
             'formatter': 'detailed',
             'encoding': 'utf-8'
-        }
+        },
+        'apilog_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'apilog.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
+        },
     },
     'loggers': {
         'medscape': {
-            'handlers': ['medscape_file'],
+            'handlers': ['medscape_file', 'console'],
             'level': 'DEBUG',
             'propagate': False
         },
         'fortran': {
-            'handlers': ['fortran_file'],
+            'handlers': ['fortran_file', 'console'],
             'level': 'DEBUG',
             'propagate': False
         },
         'drugs': {
-            'handlers': ['drugs_file'],
+            'handlers': ['drugs_file', 'console'],
             'level': 'DEBUG',
             'propagate': False
-        }
+        },
+        'apilog': {
+            'handlers': ['apilog_file', 'console'],
+            'level': 'INFO',
+            'propagate': False
+        },
     },
 }

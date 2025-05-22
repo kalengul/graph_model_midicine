@@ -56,7 +56,7 @@ class JSONLoader:
                 warnings_type='warnings;{};{}'.format(warning_type['name'],
                                                       warning_type['category'])
             )
-            # print(warning_obj)
+
             warning_obj.save()
             arr_warning.append(warning_obj)
             i = i + 1
@@ -73,7 +73,7 @@ class JSONLoader:
         file_names = os.listdir(json_folder_medscape_en)
         for idx, file_name in enumerate(file_names, 1):
             s = s + file_name
-            # print(file_name)
+
             if file_name.endswith('.json'):  # если файл имеет расширение .json
                 # Поиск аналогичного русского файла JSON
                 f_ru = open(os.path.join(json_folder_medscape_ru, file_name),
@@ -87,7 +87,6 @@ class JSONLoader:
                     data_ru = json.load(f_ru)
 
                     # Создаем объекты Type_Drugs_MedScape
-                    # print('CLASS')
                     arr_drug_obj = []
                     i = 0
                     max_len = len(data['classes'])
@@ -100,15 +99,14 @@ class JSONLoader:
                             TypeDrugsMedScape.objects.get_or_create(
                                 type_en=type_drug_en,
                                 type_ru=type_drug_ru))
-                        # print(type_drug_obj)
+
                         type_drug_obj.save()
                         arr_drug_obj.append(type_drug_obj)
                         i = i + 1
-                    # print(arr_drug_obj)
 
                     # Создаем объекты Name_Drugs_MedScape
                     arr_name_drugs = []
-                    # print('NAME')
+
                     group_type_en = data['name'].lower()
                     group_type_ru = data_ru['name'].lower()
                     group_type_obj, _ = (
@@ -121,7 +119,7 @@ class JSONLoader:
                         group_type_obj.group_type.add(arr_drug_obj[
                             i_arr_drug_obj])
                         i_arr_drug_obj = i_arr_drug_obj + 1
-                    # print(group_type_obj)
+
                     group_type_obj.save()
                     arr_name_drugs.append(group_type_obj)
                     i = 0
@@ -140,7 +138,7 @@ class JSONLoader:
                             group_type_obj.group_type.add(arr_drug_obj[
                                 i_arr_drug_obj])
                             i_arr_drug_obj = i_arr_drug_obj + 1
-                        # print(group_type_obj)
+
                         group_type_obj.save()
                         arr_name_drugs.append(group_type_obj)
                         i = i + 1
@@ -156,13 +154,12 @@ class JSONLoader:
                             data['adverse effects'][i]['name'].lower())
                         adverse_effect_ru = data_ru['adverse effects'][i]['name'].lower()
                         adverse_effect_percent = data['adverse effects'][i]['percent']
-                        # print(adverse_effect_en, adverse_effect_ru, adverse_effect_percent)
+
                         adverse_effect_obj, _ = AdverseEffectsMedScape.objects.get_or_create(
                             adverse_effects_name_en=adverse_effect_en,
                             adverse_effects_name_ru=adverse_effect_ru,
                             adverse_effects_percent=str(adverse_effect_percent)
                         )
-                        # print(adverse_effect_obj)
                         adverse_effect_obj.save()
                         arr_adverse_effects.append(adverse_effect_obj)
                         i = i + 1
@@ -170,53 +167,7 @@ class JSONLoader:
                     # Создаем объекты Source_Drugs и связи с Drugs_information
                     source_en = data['source']
                     source_obj, _ = SourceDrugsMedScape.objects.get_or_create(source=source_en)
-                    # print(source_obj)
                     source_obj.save()
-
-                    # Создаем объект Pregnancy_and_lactation и связи с Drugs_information
-                # i = 0
-                # pregnancy_common_en = ''
-                # pregnancy_common_ru = ''
-                    #max_len = len(data['pregnancy']['common'])
-                    #if len(data_ru['pregnancy']['common']) < max_len:
-                    #    max_len = len(data_ru['pregnancy']['common'])
-                    #while i < max_len:
-                #     pregnancy_common_en = '; '.join(data['pregnancy']['common'][i])
-                #     pregnancy_common_ru = '; '.join(data_ru['pregnancy']['common'][i])
-                    #    i = i + 1
-                    #i = 0
-                    #pregnancy_specific_en = ''
-                    #pregnancy_specific_ru = ''
-                # max_len = len(data['pregnancy']['specific'])
-                    #if len(data_ru['pregnancy']['specific']) < max_len:
-                    #    max_len = len(data_ru['pregnancy']['specific'])
-                    #while i < max_len:
-                    #    pregnancy_specific_en = '; '.join(data['pregnancy']['specific'][i])
-                    #    pregnancy_specific_ru = '; '.join(data_ru['pregnancy']['specific'][i])
-                    #    i = i + 1
-                    #i = 0
-                    #lactation_common_en = ''
-                    #lactation_common_ru = ''
-                # max_len = len(data['lactation']['common'])
-                    #if len(data_ru['lactation']['common']) < max_len:
-                    #    max_len = len(data_ru['lactation']['common'])
-                    #while i < max_len:
-                    #    lactation_common_en = '; '.join(data['lactation']['common'][i])
-                    #    lactation_common_ru = '; '.join(data_ru['lactation']['common'][i])
-                #     i = i + 1
-
-                    #preg_lact_obj, _ = Pregnancy_and_lactation_MedScape.objects.get_or_create(
-                    #    Pregnancy_common_en=pregnancy_common_en,
-                    #    Pregnancy_specific_en=pregnancy_specific_en,
-                    #    Lactation_common_en=lactation_common_en,
-                        # Lactation_specific_en=lactation_specific_en,
-                    #    Pregnancy_common_ru=pregnancy_common_ru,
-                    #    Pregnancy_specific_ru=pregnancy_specific_ru,
-                    #    Lactation_common_ru=lactation_common_ru,
-                        # Lactation_specific_ru=lactation_specific_ru
-                # )
-                    ## print(preg_lact_obj)
-                    #preg_lact_obj.save()
 
                     # Создаем объекты Warnings и связи с Drugs_information
                     arr_warning = []
@@ -225,7 +176,7 @@ class JSONLoader:
                         arr_warning = self.create_warning_objects(data, data_ru, warning_type, arr_warning)
 
                     # Создаем объекты interactions и связи с Drugs_information
-                    # print('interactions')
+
                     arr_interactions = []
                     i = 0
                     max_len = len(data['interactions'])
@@ -240,7 +191,7 @@ class JSONLoader:
                         description_ru = data_ru['interactions'][i]['description']['common']
                         with_obj, _ = NameDrugsMedScape.objects.get_or_create(name_en=interaction_with_en,
                                                                               name_ru=interaction_with_ru)
-                        # print(with_obj)
+
                         interaction_obj, _ = InteractionMedScape.objects.get_or_create(
                             interaction_with=with_obj,
                             classification_type_en=classification_type_en,
@@ -248,25 +199,19 @@ class JSONLoader:
                             description_en=description_en,
                             description_ru=description_ru,
                         )
-                        # print(interaction_obj)
+
                         interaction_obj.save()
                         arr_interactions.append(interaction_obj)
                         i = i + 1
-                    # print('Drugs_information_MedScape')
+
                     # Создаем объекты Drugs_information_MedScape
                     info_name_file = file_name
                     info_comment_en = data['comment']
                     info_comment_ru = data_ru['comment']
-                    ## print(preg_lact_obj)
-                    # print(source_obj)
-                    # print(arr_name_drugs)
-                    # print(arr_adverse_effects)
-                    # print(arr_warning)
-                    # print(arr_interactions)
+
                     drugs_info_obj, _ = DrugsInformationMedScape.objects.get_or_create(name_file=info_name_file,
                                                                                         comment_en=info_comment_en,
                                                                                         comment_ru=info_comment_ru,
-                                                                                        #Pregnancy_and_lactation=preg_lact_obj,
                                                                                         source_drugs=source_obj,
                                                                                         )
 

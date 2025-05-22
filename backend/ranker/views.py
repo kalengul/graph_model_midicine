@@ -6,21 +6,21 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
 
-from ranker.utils.file_loader import FileLoader
-from drugs.utils.db_manipulator import DBManipulator
+# from ranker.utils.file_loader import FileLoader
+# from drugs.utils.db_manipulator import DBManipulator
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 
 
-TXT_FILENAMES = [
-    'rangbase.txt', 
-    'rangm1.txt', 
-    'rangf1.txt',
-    'rangfreq.txt', 
-    'rangm2.txt', 
-    'rangf2.txt', 
-    ]
+TXT_FILENAMES = {
+    0: 'rangbase.txt', 
+    1: 'rangm1.txt', 
+    2: 'rangf1.txt',
+    3: 'rangfreq.txt', 
+    4: 'rangm2.txt', 
+    5: 'rangf2.txt',
+}
 
 logger = logging.getLogger('fortran')
 
@@ -60,8 +60,8 @@ class CalculationAPI(APIView):
 
         start_time = time.time()
 
-        DBManipulator().export_from_db()
-        FileLoader.load_all(base_dir)
+        # DBManipulator().export_from_db()
+        # FileLoader.load_all(base_dir)
 
         calculator = FortranCalculator()
 
@@ -70,15 +70,14 @@ class CalculationAPI(APIView):
 
         try:
             filename = TXT_FILENAMES[file_index]
-
+            logger.debug(f'filename во вьюшке = {filename}')
             context = calculator.calculate(
                 base_dir=base_dir,
                 file_name=filename,
                 nj=drugs)
 
             elapsed_time = time.time() - start_time
-            print('elapsed_time =', elapsed_time)
-            logger.info(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
+            logger.debug(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
 
             return CustomResponse.response(
                 status=status.HTTP_200_OK,

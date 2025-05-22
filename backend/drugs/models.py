@@ -48,6 +48,7 @@ class DrugGroup(models.Model):
 class Drug(models.Model):
     """Класс ЛС."""
 
+    index = models.PositiveIntegerField(editable=False)
     drug_name = models.CharField(max_length=MAX_LENGTH,
                                  verbose_name='Название ЛС',
                                  unique=True)
@@ -67,7 +68,11 @@ class Drug(models.Model):
                                           related_name='drugs')
 
     def save(self, *args, **kwargs):
-        """Сохранение группы ЛС."""
+        """Сохранение ЛС."""
+        if not self.pk:
+            max_index = Drug.objects.aggregate(models.Max('index'))['index__max'] or 0
+            self.index = max_index + 1
+
         if not self.slug:
             base_slug = slugify(self.drug_name)
             unique_slug = base_slug
@@ -95,6 +100,7 @@ class Drug(models.Model):
 class SideEffect(models.Model):
     """Класс ПД."""
 
+    index = models.PositiveIntegerField(editable=False)
     se_name = models.CharField(max_length=MAX_LENGTH,
                                verbose_name="Побочный эффект",
                                unique=True)
@@ -108,6 +114,13 @@ class SideEffect(models.Model):
     def __str__(self):
         """Строковое представление."""
         return self.se_name
+
+    def save(self, *args, **kwargs):
+        """Сохранение ПД."""
+        if not self.pk:
+            max_index = SideEffect.objects.aggregate(models.Max('index'))['index__max'] or 0
+            self.index = max_index + 1
+        super().save(*args, **kwargs)
 
 
 class DrugSideEffect(models.Model):

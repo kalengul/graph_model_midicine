@@ -586,9 +586,9 @@
     "side_effects": [
         {
             "drug_id": 1,
-            "rank": 0.8,
+            "rank": 0.8
         }
-    ],
+    ]
 }
 ```
  
