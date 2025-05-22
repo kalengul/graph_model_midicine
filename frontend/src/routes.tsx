@@ -4,6 +4,7 @@ import {PrivateRoute} from "./routesPrivar"
 import { DataManagePage } from "./pages/DataManagea/DataManagePage"
 import {ComputationMedScape} from "./pages/СomputationMedScape/ComputationMedScape"
 import {ComputationFortran} from "./pages/СomputationFortran/ComputationFortran"
+import { SynonymsPage } from "./pages/SynonymsPage/SynonymsPage"
 import { LoginPage } from "./pages/Login/LoginPage"
 
 export const useRoutes = () =>{
@@ -20,6 +21,15 @@ export const useRoutes = () =>{
                             <DataManagePage/>
                         </PrivateRoute>
                }
+            />
+
+            <Route 
+                path="/synonyms"  
+                element={
+                    <PrivateRoute> 
+                        <SynonymsPage/> 
+                    </PrivateRoute>
+                }
             />
 
             <Route path="*" element={<Navigate to="/computationMedScape" replace />}/>                       

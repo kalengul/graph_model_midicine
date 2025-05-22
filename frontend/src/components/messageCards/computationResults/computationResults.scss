@@ -4,23 +4,23 @@
 }
 
 .incompatible{
-    background-color: #fba785;
-    color: #b3441f;
+    background-color: var(--bg-red);
+    color: var(-color-red);
 }
 
 .compatible{
-    background-color: #dcf5d6;
-    color: #329939;
+    background-color: var(--bg-green);
+    color: var(--color-green);
 }
 
 .caution{
-    background-color: #fbf2c4;
-    color: #dab153;
+    background-color: var(--bg-yellow);
+    color: var(--color-yellow);
 }
 
 .default{
-    background-color: #d7eaea;
-    color: #52969c;
+    background-color: var(--bg-blue);
+    color: var(--color-blue);
 }
 
 div.ComputationResults p{

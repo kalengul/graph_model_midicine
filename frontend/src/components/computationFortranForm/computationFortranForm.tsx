@@ -1,14 +1,14 @@
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import {Form, Field} from 'react-final-form';
+import {Form} from 'react-final-form'; //Field
 import { ComputationInputForm } from "../form/computationInputForm/computationInputForm"
 
 import {ComputationFortranValidator} from "./computationFortranValidator"
 import { iteractionFortran, IComputationFortran, iteractionMedscape } from '../../redux/ComputationSlice';
 
-interface IHumanData{
-  label: string,
-  value: string ,
-}
+// interface IHumanData{
+//   label: string,
+//   value: string ,
+// }
 
 // interface FormDataFortran{
 //   humanData: string
@@ -16,14 +16,14 @@ interface IHumanData{
 
 export const ComputationFortranForm = () =>{
 
-    const HumanData: IHumanData[] = [
-      {label: "Общий", value: "0"}, //"rangbase.txt"},
-      {label: "Мужчины до 65", value: "1" }, //"rangm1.txt"},
-      {label: "Женщины до 65", value: "2" }, //"rangf1.txt"},
-      {label: "Нормальный", value: "3" }, //"rangfreq.txt"},
-      {label: "Мужчины после 65", value: "4"}, // "rangm2.txt"},
-      {label: "Женщины после 65", value: "5" }, //"rangf2.txt"},
-    ]
+    // const HumanData: IHumanData[] = [
+    //   {label: "Общий", value: "0"}, //"rangbase.txt"},
+    //   {label: "Мужчины до 65", value: "1" }, //"rangm1.txt"},
+    //   {label: "Женщины до 65", value: "2" }, //"rangf1.txt"},
+    //   {label: "Нормальный", value: "3" }, //"rangfreq.txt"},
+    //   {label: "Мужчины после 65", value: "4"}, // "rangm2.txt"},
+    //   {label: "Женщины после 65", value: "5" }, //"rangf2.txt"},
+    // ]
 
     const dispatch = useAppDispatch()
     const computationList = useAppSelector(state=>state.computation.computationList)
@@ -38,6 +38,7 @@ export const ComputationFortranForm = () =>{
     return (
         <div className='mt-4'>
           <Form 
+              initialValues={{ humanData: 0, drugs: [] }}
               onSubmit={SendHandler}
               validate={(values)=>ComputationFortranValidator(values)}
           >
@@ -49,7 +50,7 @@ export const ComputationFortranForm = () =>{
                   placeholder = "Введите лекарственные средства"
               ></ComputationInputForm>
 
-              <div className="mb-4 form-group required">
+              {/* <div className="mb-4 form-group required">
                 <label className="form-label control-label">Выбирете дополнительную информацию о пациенте</label>
 
                 {HumanData.map((humanData, index)=>
@@ -63,7 +64,7 @@ export const ComputationFortranForm = () =>{
                     <label>{humanData.label}</label>
                   </div>
                 )}
-              </div>
+              </div> */}
     
               <button className='btn send-btn' disabled={submitting} >Расчитать взаимодействие</button>
           </form>
