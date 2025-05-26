@@ -31,7 +31,6 @@ class DrugGroupAPI(APIView):
     @bearer_token_required
     def post(self, request):
         """Метод для запросов POST."""
-        self.check_permissions(request)
         serializer = DrugGroupSerializer(data=request.data)
 
         if serializer.is_valid():
