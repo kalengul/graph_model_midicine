@@ -31,3 +31,14 @@
         background-color: var(--btn-send-active);
     }
 }
+
+.toggle-btn{
+    color: inherit;
+    font-weight: 700;
+    border: 1px solid currentColor;
+
+    &:hover{
+        // border: 1px solid currentColor;
+        // color: var(--color-durk-green);
+    }
+}

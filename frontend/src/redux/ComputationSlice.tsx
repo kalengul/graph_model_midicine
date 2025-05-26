@@ -6,7 +6,7 @@ export interface IComputationElem {
   drug_name: string,
 }
 
-interface ISE{
+export interface ISE{
   se_name: string,
   rank: number,
 }
