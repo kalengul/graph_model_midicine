@@ -133,9 +133,11 @@ class FortranCalculator:
             'сompatibility_fortran': classification
         }
 
+        logger.debug(f'len(rangsum) = {len(rangsum)}')
+
         # Распределение рангов по всей совокупности эффектов
         side_effects = []
-        for k in range(1, self.n_k):
+        for k in range(0, self.n_k):
             if rangsum[k] >= 1.0:
                 nom[k] = 3
             elif 0.5 <= rangsum[k] < 1.0:
@@ -144,7 +146,7 @@ class FortranCalculator:
                 nom[k] = 1
 
             # Получение значения name из базы данных по индексу k
-            disease = SideEffect.objects.get(index=k)
+            disease = SideEffect.objects.get(index=k+1)
 
             # Сохранение названия и значения в контексте
             side_effects.append({
@@ -163,7 +165,11 @@ class FortranCalculator:
             'effects': []},
         ]})
 
+
+        logger.debug(f'len(side_effects) до сортировки = {len(side_effects)}')
         side_effects = sorted(side_effects, key=lambda x: x['rank'], reverse=True)
+
+        logger.debug(f'len(side_effects) после сортировки = {len(side_effects)}')
 
         for side_effect in side_effects:
             if side_effect['class'] == 1:
