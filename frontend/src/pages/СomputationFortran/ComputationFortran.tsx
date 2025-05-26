@@ -63,7 +63,7 @@ export const ComputationFortran = () =>{
                         />
                     }
 
-                    <h5 className="mt-3">Комбинации лекарсвтенных средств: </h5>
+                    <h5 className="mt-3">Комбинации лекарственных средств: </h5>
                     
                     {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
                         
