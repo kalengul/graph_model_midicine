@@ -41,12 +41,13 @@ class Loader(ABC):
 class ExcelLoader(Loader):
     """Загрузчик из excel-файлов."""
 
-    EXCEL_PATH = os.path.join(settings.TXT_DB_PATH, 'Базовые эффекты.xlsx')
+    EXCEL_PATH = os.path.join(settings.TXT_DB_PATH,
+                              'Таблица_для_программы_по_побочным_эффектам.xlsx')
     BASE_SHEET = 'Лист2'
     SIDE_EFFECTS_SHEET = 'Лист1'
-    MILD = 1
-    MODERATE = 29
-    SEVERE = 70
+    # MILD = 1
+    # MODERATE = 29
+    # SEVERE = 70
 
     def _load_drugs(self):
         """Загрузка ЛС."""
@@ -67,8 +68,9 @@ class ExcelLoader(Loader):
     def _load_side_effects(self):
         """Загрузка ПД."""        
         df = pd.read_excel(self.EXCEL_PATH,
-                           sheet_name=self.SIDE_EFFECTS_SHEET,
-                           skiprows=[self.MILD, self.MODERATE, self.SEVERE])        
+                           sheet_name=self.SIDE_EFFECTS_SHEET
+                        #    skiprows=[self.MILD, self.MODERATE, self.SEVERE]
+                           )        
         try:
             logger.info('Загрузка побочных действий началась')
             for _, side_effect, weight in list(df.itertuples(index=False, name=None)):
