@@ -9,7 +9,7 @@ interface ISynonymGroup{
 
 export interface ISynItemUpdate{
     s_id: string,
-    is_changed: boolean,
+    status: boolean,
 }
 
 interface ISynonym{
@@ -57,10 +57,30 @@ export const fetchSynonymList = createAsyncThunk("synonyms/fetchSynonymList", as
     }
 })
 
+//Сохранение обновлений синонимов на сервере
+export const updateSynonymList = createAsyncThunk("synonyms/updateSynonymList", async(_, { getState })=>{
+    try {
+        // Получаем текущий state
+        const state = getState() as ISynonymsState;
+
+        const response = await axios.put('/api/updateSynonymList', {sg_id: state.SelectGr_id, list_id: state.updateList}, {
+             headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Content-Type': 'application/json'
+            }
+        })
+        return {status: response.data.result.status, message: response.data.result.message, data:[]}
+    } catch (error) {
+        console.error(`Ошибка при обновлении синонимов:\n`, error);
+        return {status: 500, message:"Ошибка при обновлении синонимов", data:[]}
+    }
+})
+
 interface ISynonymsState{
     SynonymGroupList: ISynonymGroup[],
     SynonymList: ISynonym[],
     SelectGr_id: string,
+    updateList: ISynItemUpdate[], 
     message: string
 }
 
@@ -68,6 +88,7 @@ const initialState: ISynonymsState = {
     SynonymGroupList: [],
     SynonymList: [],
     SelectGr_id: "",
+    updateList: [],
     message: "",
 }
 
@@ -75,15 +96,39 @@ const SynonymsSlice = createSlice({
     name: 'synonyms',
     initialState,
     reducers: {
-        changeIsChange(state, action: PayloadAction<string>){
-            const synonymIndex: number|undefined = state.SynonymList.findIndex(item=> item.s_id === action.payload)
+        changeIsChange(state, action: PayloadAction<ISynItemUpdate>){
+            //Изменение состояния синонима для отображения
+            const synonymIndex: number|undefined = state.SynonymList.findIndex(item=> item.s_id === action.payload.s_id)
             if(synonymIndex>=0) state.SynonymList[synonymIndex].is_changed = !state.SynonymList[synonymIndex].is_changed
+
+            //Добавление в список обновления
+            if(state.updateList){
+                const updateItem: ISynItemUpdate | undefined = state.updateList.find((elem: ISynItemUpdate) =>elem.s_id === action.payload.s_id)
+                if(!updateItem) state.updateList.push(action.payload)
+                else state.updateList = state.updateList.filter((elem: ISynItemUpdate) => elem.s_id !== action.payload.s_id)
+            }else{
+                state.updateList = []
+                state.updateList.push(action.payload)
+            }
+
+        },
+        initState(state){
+            state.updateList = []
         }
     },
     extraReducers: (builder) => {
         builder
         .addCase(fetchSynonymGroupList.fulfilled, (state, action: PayloadAction<IResultGet>) => {
-            if(action.payload.status===200) state.SynonymGroupList=action.payload.data as ISynonymGroup[]
+            if(action.payload.status===200) 
+                {
+                    state.SynonymGroupList=action.payload.data as ISynonymGroup[]
+
+                    if(action.payload.data.length === 0) {
+                        state.SelectGr_id = ""
+                        state.SynonymList = []
+                        state.updateList = []
+                    }
+                }
             else {
                 state.message = action.payload.message
                 state.SynonymGroupList = []
@@ -100,8 +145,14 @@ const SynonymsSlice = createSlice({
                 state.SynonymList = []
             }
         })
+        .addCase(updateSynonymList.fulfilled, (state, action: PayloadAction<IResultGet>)=>{
+            if(action.payload.status === 200){
+                // console.log("Статус синонимов обновлен")
+                state.updateList = []
+            }
+        })
     }
 })
 
-export const {changeIsChange} = SynonymsSlice.actions;
+export const {changeIsChange, initState} = SynonymsSlice.actions;
 export default SynonymsSlice.reducer;
