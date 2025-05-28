@@ -4,7 +4,9 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import AllowAny
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
+
 from drugs.utils.custom_response import CustomResponse
+from accounts.auth import bearer_token_required
 
 
 class LoginUser(APIView):
@@ -67,6 +69,33 @@ class LogoutUser(APIView):
 
         return CustomResponse.response(
             message="Выход выполнен успешно",
+            http_status=status.HTTP_200_OK
+        )
+
+
+class TokenCheck(APIView):
+    @bearer_token_required
+    def post(self, request):
+        req_username = request.data.get('username')
+
+        if not req_username:
+            return CustomResponse.response(
+                status=400,
+                message="Поле 'username' обязательно",
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+
+        if request.user.username != req_username:
+            return CustomResponse.response(
+                status=403,
+                message="Имя пользователя не соответствует токену",
+                http_status=status.HTTP_403_FORBIDDEN
+            )
+
+        return CustomResponse.response(
+            data={"username": request.user.username},
+            status=200,
+            message="Токен валиден и принадлежит пользователю",
             http_status=status.HTTP_200_OK
         )
     
