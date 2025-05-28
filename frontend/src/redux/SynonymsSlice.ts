@@ -63,7 +63,10 @@ export const updateSynonymList = createAsyncThunk("synonyms/updateSynonymList", 
         // Получаем текущий state
         const state = getState() as ISynonymsState;
 
-        const response = await axios.put('/api/updateSynonymList', {sg_id: state.SelectGr_id, list_id: state.updateList}, {
+        const data = {sg_id: state.SelectGr_id, list_id: state.updateList}
+        console.log(data)
+
+        const response = await axios.put('/api/updateSynonymList', data, {
              headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'

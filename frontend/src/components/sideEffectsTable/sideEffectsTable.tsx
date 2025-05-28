@@ -5,6 +5,8 @@ import "./sideEffectsTable.scss"
 import { debounce } from 'lodash';
 import {useMemo, useCallback} from "react"
 
+// import { RankCell } from './rankCell';
+
 export const SideEffectsTable = ()=>{
     const dispatch = useAppDispatch()
 

@@ -14,8 +14,8 @@ export const SynonymsPage = () =>{
     const updateList = useAppSelector(state=>state.synonyms.updateList)
 
     const SelectGr_id = useAppSelector(state=>state.synonyms.SelectGr_id)
-    console.log(SelectGr_id)
-    console.log(symGroups)
+    // console.log(SelectGr_id)
+    // console.log(symGroups)
 
     const dispatch = useAppDispatch()
     useEffect(()=>{
