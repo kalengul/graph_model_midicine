@@ -34,7 +34,7 @@ export const SideEffectManage = () =>{
     const saveSideEffectChanges = async ()=>{
         const resultAction = await dispatch(updateSideEffectRankList(updateRangs))
         if (updateSideEffectRankList.fulfilled.match(resultAction)) {
-            setUpdateNotification({isVisible: true, type: "success", message: "Ранги онбновлены"})
+            setUpdateNotification({isVisible: true, type: "success", message: "Ранги обновлены"})
         }
         else setUpdateNotification({isVisible: true, type: "error", message: "Ошибка при обновлении рангов"})
     }
