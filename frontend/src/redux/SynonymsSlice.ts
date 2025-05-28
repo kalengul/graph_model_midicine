@@ -141,11 +141,13 @@ const SynonymsSlice = createSlice({
             if(action.payload.status===200) {
                 state.SynonymList = action.payload.data as ISynonym[]
                 state.SelectGr_id = action.meta.arg
+                state.updateList = []
             }
 
             else {
                 state.message = action.payload.message
                 state.SynonymList = []
+                state.updateList = []
             }
         })
         .addCase(updateSynonymList.fulfilled, (state, action: PayloadAction<IResultGet>)=>{
