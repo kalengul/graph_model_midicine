@@ -5,7 +5,7 @@ import "./sideEffectsTable.scss"
 import { debounce } from 'lodash';
 import {useMemo, useCallback} from "react"
 
-// import { RankCell } from './rankCell';
+ import { RankCell } from './rankCell';
 
 export const SideEffectsTable = ()=>{
     const dispatch = useAppDispatch()
@@ -55,13 +55,7 @@ export const SideEffectsTable = ()=>{
                         <th className="sticky-col-2">{sideEffect.se_name}</th>
                         {Array.isArray(drugs) && drugs.map((drug) =>
                             <td key={`${drug.id}-${sideEffect.id}`} >
-                                <input
-                                    type="text"
-                                    value={GetRankHandler(drug.id, sideEffect.id)}
-                                    onChange={(e) => rankChangeHandler(drug.id, sideEffect.id, e.target.value)}
-                                    className="form-control form-control-sm"
-                                    style={{ width: '60px' }}
-                                />
+                                <RankCell drugId={drug.id} seId={sideEffect.id} GetRankHandler={GetRankHandler} rankChangeHandler={rankChangeHandler}/>
                             </td>
                         )}
                     </tr>
