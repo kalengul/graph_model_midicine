@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from "axios";
+import { RootState } from './store';
 
 interface ISynonymGroup{
     sg_id: string,
@@ -61,9 +62,9 @@ export const fetchSynonymList = createAsyncThunk("synonyms/fetchSynonymList", as
 export const updateSynonymList = createAsyncThunk("synonyms/updateSynonymList", async(_, { getState })=>{
     try {
         // Получаем текущий state
-        const state = getState() as ISynonymsState;
+        const state = getState()  as RootState;
 
-        const data = {sg_id: state.SelectGr_id, list_id: state.updateList}
+        const data = {sg_id: state.synonyms.SelectGr_id, list_id: state.synonyms.updateList}
         console.log(data)
 
         const response = await axios.put('/api/updateSynonymList', data, {
