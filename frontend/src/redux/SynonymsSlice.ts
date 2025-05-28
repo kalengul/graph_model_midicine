@@ -67,7 +67,7 @@ export const updateSynonymList = createAsyncThunk("synonyms/updateSynonymList", 
         const data = {sg_id: state.synonyms.SelectGr_id, list_id: state.synonyms.updateList}
         console.log(data)
 
-        const response = await axios.put('/api/updateSynonymList', data, {
+        const response = await axios.put('/api/updateSynonymList/', data, {
              headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
@@ -157,7 +157,7 @@ const SynonymsSlice = createSlice({
                 // console.log("Статус синонимов обновлен")
                 state.updateList = []
             }
-            else state.updateList = []
+            else state.updateList = [] //Добавить откат исходного списка
         })
     }
 })
