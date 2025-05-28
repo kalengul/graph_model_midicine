@@ -136,6 +136,7 @@ const SynonymsSlice = createSlice({
             else {
                 state.message = action.payload.message
                 state.SynonymGroupList = []
+                state.updateList = []
             }
         })
         .addCase(fetchSynonymList.fulfilled, (state, action: PayloadAction<IResultGet, string, { arg: string }>)=>{
@@ -156,6 +157,7 @@ const SynonymsSlice = createSlice({
                 // console.log("Статус синонимов обновлен")
                 state.updateList = []
             }
+            else state.updateList = []
         })
     }
 })
