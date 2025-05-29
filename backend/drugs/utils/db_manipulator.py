@@ -9,12 +9,13 @@ from ..models import (DrugGroup,
                       Drug,
                       DrugSideEffect,
                       SideEffect)
+from drugs.utils.loaders import Loader
 
 
 logger = logging.getLogger('drugs')
 
 
-class DBManipulator:
+class DBManipulator(Loader):
     """Загрузчик БД."""
 
     DRUGS_PATH = os.path.join(settings.TXT_DB_PATH, 'drugs_xcn.txt')
@@ -28,7 +29,7 @@ class DBManipulator:
     RANGSFREQ_PATH = os.path.join(settings.TXT_DB_PATH, 'rangfreq.txt')
 
     @classmethod
-    def __load_drugs(cls):
+    def _load_drugs(cls):
         """Метод загрузки ЛС."""
         try:
             logger.info('Загрузка ЛС началась')
@@ -44,7 +45,7 @@ class DBManipulator:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
     @classmethod
-    def __load_side_effects(cls):
+    def _load_side_effects(cls):
         """Метод загрузки ПД."""
         try:
             logger.info('Загрузка побочных действий началась')
@@ -66,7 +67,7 @@ class DBManipulator:
                     for line in file if line.strip()]
 
     @classmethod
-    def __load_rangs(cls):
+    def _load_ranks(cls):
         """Метод загрузки рангов."""
         rangs = cls.__load_file(cls.RANGS_PATH)
         rangsf1 = cls.__load_file(cls.RANGSF1_PATH)
@@ -102,9 +103,7 @@ class DBManipulator:
 
     def load_to_db(self):
         """Метод загрузки данных в БД."""
-        self.__load_drugs()
-        self.__load_side_effects()
-        self.__load_rangs()
+        super().load_to_db()
         return DrugSideEffect.objects.count()
 
     def clean_db(self):
@@ -123,7 +122,7 @@ class DBManipulator:
         SideEffect.objects.all().delete()
 
     @classmethod
-    def __export_drugs(cls):
+    def _export_drugs(cls):
         """Метод экспорта ЛС из БД в файл."""
         try:
             with open(cls.DRUGS_PATH, 'w', encoding='utf-8') as file:
@@ -137,7 +136,7 @@ class DBManipulator:
             raise Exception(message)
 
     @classmethod
-    def __export_side_effects(cls):
+    def _export_side_effects(cls):
         """Метод экспорта ПД из БД в файл."""
         try:
             with open(cls.SIDE_EFFECTS_PATH, 'w', encoding='utf-8') as file:
@@ -168,7 +167,7 @@ class DBManipulator:
         cls.__clean_file(cls.RANGSF2_PATH)
 
     @classmethod
-    def __export_rangs(cls):
+    def _export_rangs(cls):
         """Метод экспорта рангов из БД в файл."""
         try:
             cls.__clean_rang_files()
@@ -212,6 +211,7 @@ class DBManipulator:
 
     def export_from_db(self):
         """Метод экспорта из БД."""
-        self.__export_drugs()
-        self.__export_side_effects()
-        self.__export_rangs()
+        # self._export_drugs()
+        # self._export_side_effects()
+        # self._export_rangs()
+        super().export_from_db()

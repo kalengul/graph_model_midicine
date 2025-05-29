@@ -90,7 +90,7 @@ class Drug(models.Model):
         return self.drug_name
 
     class Meta:
-        """Настройка модели."""
+        """Настройка модели ЛС."""
 
         verbose_name = 'ЛС'
         verbose_name_plural = 'ЛС'
@@ -121,6 +121,13 @@ class SideEffect(models.Model):
             max_index = SideEffect.objects.aggregate(models.Max('index'))['index__max'] or 0
             self.index = max_index + 1
         super().save(*args, **kwargs)
+
+    class Meta:
+        """Настройка модели ПД."""
+
+        verbose_name = 'ПД'
+        verbose_name_plural = 'ПД'
+        ordering = ['se_name']
 
 
 class DrugSideEffect(models.Model):
@@ -184,6 +191,7 @@ class DrugSideEffect(models.Model):
     class Meta:
         """Настройка модели."""
 
+        ordering = ['drug__id', 'side_effect__id']
         unique_together = ('drug', 'side_effect')
         verbose_name = "Показатель побочного эффекта"
         verbose_name_plural = "Показатели побочных эффектов"

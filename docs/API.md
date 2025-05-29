@@ -91,7 +91,7 @@
 ## Назначение
 Расчет совместимости ЛС по Fortran
 ## URL
-```GET api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&?humanData={номер файла}```
+```GET api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&humanData={номер файла}```
 ## Аутентификация
 Не требуется
 ## Вход

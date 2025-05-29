@@ -1,4 +1,5 @@
 import traceback
+import logging
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -20,6 +21,8 @@ from drugs.utils.custom_response import CustomResponse
 
 from accounts.auth import bearer_token_required
 
+
+logger = logging.getLogger('drugs')
 
 INCORRECT_DATA = 'Указаны некорректные данные'
 SERVER_ERROR = 'Неизвестная ошибка сервера'
@@ -358,11 +361,11 @@ class DrugSideEffectView(APIView):
 
         for item in update_data:
             drug_id = item.get('drug_id')
-            print('drug_id =', drug_id)
+            logger.info(f'drug_id = {drug_id}')
             se_id = item.get('se_id')
-            print('se_id =', se_id)
+            logger.info(f'se_id = {se_id}')
             rank = item.get('rank')
-            print('rank =', rank)
+            logger.info(f'rank = {rank}')
 
             if not drug_id:
                 return CustomResponse.response(
