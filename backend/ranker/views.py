@@ -1,6 +1,7 @@
 import traceback
 import logging
 import time
+from types import MappingProxyType
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -13,14 +14,14 @@ from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 
 
-TXT_FILENAMES = {
-    0: 'rangbase.txt', 
-    1: 'rangm1.txt', 
-    2: 'rangf1.txt',
-    3: 'rangfreq.txt', 
-    4: 'rangm2.txt', 
-    5: 'rangf2.txt',
-}
+IDX2FILENAME = MappingProxyType({
+        0: 'rang_base',
+        1: 'rang_m1',
+        2: 'rang_f1',
+        3: 'rang_freq',
+        4: 'rang_m2',
+        5: 'rang_f2'
+    })
 
 logger = logging.getLogger('fortran')
 
@@ -31,7 +32,6 @@ class CalculationAPI(APIView):
     def get(self, request):
         """Временный метод для просмотра изначальной структуры выхода."""
         logger.debug(f'входная строка {request.build_absolute_uri()}')
-        base_dir = settings.BASE_DIR
 
         logger.debug(f'request.query_params = {request.query_params}')
         serializer = QueryParamsSerializer(data=request.query_params)
@@ -40,7 +40,7 @@ class CalculationAPI(APIView):
 
         drugs = data.get('drugs')
         logger.debug(f'data = {data}')
-        file_index = data.get('humanData')
+        index = data.get('humanData')
 
         if drugs is None:
             message = "Обязательный параметр drugs отсутствует или некорректный."
@@ -50,7 +50,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if file_index is None or file_index >= len(TXT_FILENAMES):
+        if index is None or index >= len(IDX2FILENAME):
             message = "Обязательный параметр humanData отсутствует или некорректный."
             logger.error(message)
             return CustomResponse.response(
@@ -60,20 +60,16 @@ class CalculationAPI(APIView):
 
         start_time = time.time()
 
-        # DBManipulator().export_from_db()
-        # FileLoader.load_all(base_dir)
-
         calculator = FortranCalculator()
 
         while len(drugs) < calculator.n_k:
             drugs.append(0)
 
         try:
-            filename = TXT_FILENAMES[file_index]
-            logger.debug(f'filename во вьюшке = {filename}')
+            rank_name = IDX2FILENAME[index]
+            logger.debug(f'filename во вьюшке = {rank_name}')
             context = calculator.calculate(
-                base_dir=base_dir,
-                file_name=filename,
+                rank_name=rank_name,
                 nj=drugs)
 
             elapsed_time = time.time() - start_time
