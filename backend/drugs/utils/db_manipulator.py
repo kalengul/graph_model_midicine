@@ -211,7 +211,4 @@ class DBManipulator(Loader):
 
     def export_from_db(self):
         """Метод экспорта из БД."""
-        # self._export_drugs()
-        # self._export_side_effects()
-        # self._export_rangs()
         super().export_from_db()

@@ -199,12 +199,12 @@ class ExcelLoader(Loader):
                     dse = DrugSideEffect.objects.get(drug=drug, side_effect=effect)
                     row.append(dse.rang_base)  # или другой ранг
                 except DrugSideEffect.DoesNotExist:
-                    print('Нет таблицы рангов')
+                    logger.info('Нет таблицы рангов')
             rows.append(row) # или drug.drug_name
 
         df = pd.DataFrame(rows, columns=column_headers)
 
-        print(f'df = {df}')
+        # print(f'df = {df}')
 
         with pd.ExcelWriter(self.EXPORT_PATH, engine='openpyxl') as writer:
             self.side_effects_df.to_excel(writer,
@@ -212,7 +212,7 @@ class ExcelLoader(Loader):
                                           index=False,
                                           startcol=0)
             df_combined = pd.concat([self.drugs_df, df], ignore_index=True, axis=1)
-            print(f'df_combined = {df_combined}')
+            # print(f'df_combined = {df_combined}')
             df_combined.to_excel(writer, sheet_name='Лист2', index=False)
 
     def export_from_db(self):
