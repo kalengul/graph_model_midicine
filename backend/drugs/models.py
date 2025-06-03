@@ -104,6 +104,11 @@ class SideEffect(models.Model):
     se_name = models.CharField(max_length=MAX_LENGTH,
                                verbose_name="Побочный эффект",
                                unique=True)
+    se_name_en = models.CharField(max_length=MAX_LENGTH,
+                                  verbose_name='Side effect',
+                                  unique=True,
+                                  blank=True,
+                                  null=True)
     weight = models.FloatField(default=0.0,
                                verbose_name='Вес побочки',
                                validators=[

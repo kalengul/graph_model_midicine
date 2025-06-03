@@ -228,3 +228,9 @@ class DrugSideEffectSerializer(serializers.ModelSerializer):
             'se_id',
             'rank',
         ]
+
+
+class ExcelFileSerializer(serializers.Serializer):
+    """Сериализатор для файлов."""
+
+    file = serializers.FileField()
