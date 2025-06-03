@@ -27,28 +27,37 @@ services:
     networks:
       - backend
 
-  frontend:
-    build: ./frontend
-    container_name: frontend
-    restart: unless-stopped
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    volumes:
+      - static_volume:/static
     networks:
       - backend
 
-  nginx:
-    build: ./frontend 
-    container_name: nginx
-    depends_on:
-      - backend
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: unless-stopped
+    env_file:
+      - .env
     ports:
-      - "80:80"
+      - "5050:80"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - static_volume:/static
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - db
     networks:
       - backend
 
 volumes:
   postgres_data:
+  pgadmin_data:
   static_volume:
 
 networks:
