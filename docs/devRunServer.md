@@ -4,8 +4,12 @@
 |`python manage.py custom_clear`|Очистка тестовых данных БД|
 |`python manage.py clean_medscape`|Очистка БД Medscape|
 |`python manage.py migrate`|Миграции|
-|`python manage.py import_data`|Заполнение БД тестовыми данными|
-|`python manage.py import_from_excel`|Заполнение БД данными из excel-файла|
+|`python manage.py import_data`|Заполнение БД тестовыми данными из excel-файла по умолчанию|
+|`python manage.py import_data --excel "имя файла"`|Заполнение БД тестовыми данными из указанного файла|
+|`python manage.py import_data --txt`|Заполнение БД тестовыми данными из txt-файлов поумолчанию по умолчанию|
+|`python manage.py export_data`|Выгрузка данных из БД в excel-файл по умолчению|
+|`python manage.py export_data --excel "имя файла"`|Выгрузка данных из БД в указанный excel-файл|
+|`python manage.py export_data --txt`|Выгрузка данных из БД в txt-файлов по умолчанию|
 |`python manage.py load_medscape_data`|Заполнение БД Medscape|
 |`python manage.py runserver`|Запуск сервера|
 |`python manage.py test_initialization_with_sqlite`|Инициализация тестовыми данными с SQLite|
