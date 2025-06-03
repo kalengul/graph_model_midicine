@@ -42,7 +42,7 @@ class Command(BaseCommand):
                     'Данные из БД в текстовые файлы успешно экспортированы!'
                 ))
             elif excel_path:
-                ExcelLoader(excel_path).export_from_db()
+                ExcelLoader(export_path=excel_path).export_from_db()
                 self.stdout.write(self.style.SUCCESS(
                     f'Данные из БД в {excel_path} успешно экспортированы!'
                 ))

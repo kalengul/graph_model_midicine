@@ -1,10 +1,13 @@
+import os
 import traceback
 import logging
 
+from django.conf import settings
 from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
+from django.http import FileResponse
 
 from .models import (Drug,
                      DrugGroup,
@@ -15,10 +18,12 @@ from .serializers import (
     DrugGroupSerializer,
     DrugListRetrieveSerializer,
     SideEffectSerializer,
-    DrugSideEffectSerializer
+    DrugSideEffectSerializer,
+    ExcelFileSerializer
 )
 from drugs.utils.custom_response import CustomResponse
-
+from drugs.utils.loaders import ExcelLoader
+from drugs.utils.db_manipulator import DBManipulator
 from accounts.auth import bearer_token_required
 
 
@@ -440,3 +445,83 @@ class DrugSideEffectView(APIView):
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message="Неизвестная ошибка сервера",
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class ExcelLoadView(APIView):
+    """Вью для скачивания файла с данными из БД."""
+
+    TYPE = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    DOWN_LOAD_MODE = 'attachment'
+    FILE_NAME = 'data_from_db.xlsx'
+    CONTENT = 'Content-Disposition'
+    NOT_FILE = 'Эксель-файл не обнаружен'
+    INCORRECT_FILE = 'Неверный excel-файл'
+    SUCCESSFUL_IMPORT = 'Данные в БД импортированы успешно'
+    IMPORT_ERROR = 'Импорт данные. Ошибка при обработке файл'
+
+    def get(self, request, *args, **kwargs):
+        """Скачивание файла с данными из БД."""
+        loader = ExcelLoader()
+        loader.export_from_db()
+        try:
+            response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
+                                    content_type=self.TYPE)
+            response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
+            return response
+        except FileExistsError:
+            return CustomResponse.response(
+                status=status.HTTP_404_NOT_FOUND,
+                message=self.NOT_FILE,
+                http_status=status.HTTP_404_NOT_FOUND
+            )
+
+    @bearer_token_required
+    def post(self, request, *args, **kwargs):
+        """Загрузкад данных из excel-файла в БД."""
+        serializer = ExcelFileSerializer(data=request.data)
+        if serializer.is_valid():   
+            logger.info('Очистка БД начинается')
+            DBManipulator().clean_db()
+            logger.info('БД очистилось')
+
+            logger.info('Импорт данных в БД начался')
+            excel_file = serializer.validated_data['file']
+
+            if not excel_file.name.endswith('.xlsx'):
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message='Файл должен быть .xlsx',
+                    http_status=status.HTTP_400_BAD_REQUEST
+                )
+
+            excel_path = os.path.join(settings.TXT_DB_PATH, excel_file.name)
+
+            if os.path.exists(excel_path):
+                os.remove(excel_path)
+
+            try:
+                with open(excel_path, 'wb+') as file:
+                    file.write(excel_file.read())
+
+                ExcelLoader(import_path=os.path.abspath(excel_path)).load_to_db()
+            except Exception as error:
+                logger.error(f'Ошибка при импорте Excel: {str(error)}')
+                return CustomResponse.response(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message=self.IMPORT_ERROR,
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                )
+
+            logger.info('Импорт данных в БД закончился')
+
+            return CustomResponse.response(
+                status=status.HTTP_200_OK,
+                message=self.SUCCESSFUL_IMPORT,
+                http_status=status.HTTP_200_OK
+            )
+
+        return CustomResponse.response(
+            status=status.HTTP_400_BAD_REQUEST,
+            message=self.INCORRECT_FILE,
+            http_status=status.HTTP_400_BAD_REQUEST
+        )

@@ -5,16 +5,13 @@ from types import MappingProxyType
 
 from rest_framework.views import APIView
 from rest_framework import status
-from django.conf import settings
 
-# from ranker.utils.file_loader import FileLoader
-# from drugs.utils.db_manipulator import DBManipulator
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 
 
-IDX2FILENAME = MappingProxyType({
+IDX_2_RANK_NAME = MappingProxyType({
         0: 'rang_base',
         1: 'rang_m1',
         2: 'rang_f1',
@@ -50,7 +47,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if index is None or index >= len(IDX2FILENAME):
+        if index is None or index >= len(IDX_2_RANK_NAME):
             message = "Обязательный параметр humanData отсутствует или некорректный."
             logger.error(message)
             return CustomResponse.response(
@@ -66,7 +63,7 @@ class CalculationAPI(APIView):
             drugs.append(0)
 
         try:
-            rank_name = IDX2FILENAME[index]
+            rank_name = IDX_2_RANK_NAME[index]
             logger.debug(f'filename во вьюшке = {rank_name}')
             context = calculator.calculate(
                 rank_name=rank_name,

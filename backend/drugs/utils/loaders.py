@@ -60,29 +60,35 @@ class ExcelLoader(Loader):
     """Загрузчик из excel-файлов."""
 
     EXCEL_PATH = os.path.join(settings.TXT_DB_PATH,
-                              'Таблица_для_программы_по_побочным_эффектам.xlsx')
+                              'Список побочных эффектов edit_2.xlsx')
     EXPORT_PATH = os.path.join(settings.TXT_DB_PATH, 'exported_data.xlsx')
-    BASE_SHEET = 'Лист2'
-    SIDE_EFFECTS_SHEET = 'Лист1'
-    # MILD = 1
-    # MODERATE = 29
-    # SEVERE = 70
+    RANKS_SHEET = 'Common'
+    SIDE_EFFECTS_SHEET = 'Side_e'
+    DRUGS_SHEET = 'Drugs'
+    DRUG_SIDE_EFFECT = 'ЛС/ПЭ'
+    NUMBER_COLUMN = '№'
+    DRUG_COLUMN = 'ЛС'
 
-    def __init__(self, path=None):
+
+    def __init__(self, import_path=None, export_path=None):
         """
         Конструктор.
         
         Принимает путь к файл с данными.
         Если путь не указан, загружается из файл по умолчания.
         """
-        if path:
-            self.path = path
+        if import_path:
+            self.import_path = import_path
         else:
-            self.path = self.EXCEL_PATH
+            self.import_path = self.EXCEL_PATH
+        if export_path:
+            self.export_path = export_path
+        else:
+            self.export_path = self.EXPORT_PATH
 
     def _load_drugs(self):
         """Загрузка ЛС."""
-        df = pd.read_excel(self.path, sheet_name=self.BASE_SHEET)
+        df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
 
         try:
             logger.info('Загрузка ЛС началась')
@@ -98,15 +104,15 @@ class ExcelLoader(Loader):
 
     def _load_side_effects(self):
         """Загрузка ПД."""        
-        df = pd.read_excel(self.path,
-                           sheet_name=self.SIDE_EFFECTS_SHEET
-                        #    skiprows=[self.MILD, self.MODERATE, self.SEVERE]
-                           )        
+        df = pd.read_excel(self.import_path,
+                           sheet_name=self.SIDE_EFFECTS_SHEET)        
         try:
             logger.info('Загрузка побочных действий началась')
-            for _, side_effect, weight in list(df.itertuples(index=False, name=None)):
+            for _, side_effect, side_effect_en, weight in list(
+                df.itertuples(index=False, name=None)):
                 SideEffect.objects.create(
                     se_name=side_effect.strip(),
+                    se_name_en=side_effect_en.strip(),
                     weight=weight)
             logger.info(f'Загружено побочных действий: {SideEffect.objects.count()}')
         except Exception as error:
@@ -114,9 +120,9 @@ class ExcelLoader(Loader):
 
     def _load_ranks(self):
         """Загрузка рангов."""
-        df = pd.read_excel(self.path, sheet_name=self.BASE_SHEET)
+        df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
 
-        df = df.iloc[:, 2:]
+        df = df.iloc[1:, 2:]
         df = df.reset_index(drop=True)
         df = df.fillna(0)
 
@@ -160,8 +166,8 @@ class ExcelLoader(Loader):
         drug_names = [drug.drug_name for drug in drugs]
         self.drugs_df = pd.DataFrame(
             {
-                'n': numbers,
-                '': drug_names
+                self.NUMBER_COLUMN: numbers,
+                self.DRUG_COLUMN: drug_names
             }
         )
 
@@ -170,27 +176,27 @@ class ExcelLoader(Loader):
         side_effects = SideEffect.objects.order_by('index')
         numbers = [side_effect.index for side_effect in side_effects]
         side_effect_names = [side_effect.se_name for side_effect in side_effects]
+        side_effect_names_en = [side_effect.se_name_en for side_effect in side_effects]
         weights = [side_effect.weight for side_effect in side_effects]
 
         self.side_effects_df = pd.DataFrame(
             {
-                '№': numbers,
+                self.NUMBER_COLUMN: numbers,
                 'эффект': side_effect_names,
+                'эффект (англ.)': side_effect_names_en,
                 'ранг': weights
             }
         )
-
-        # with pd.ExcelWriter() as writer:
-        #     df.to_excel(writer, sheet_name='ПД', index=False)
 
     def _export_rangs(self):
         """Экспорт рангов."""
         side_effects = SideEffect.objects.order_by('index')
         drugs = Drug.objects.order_by('index')
-        column_headers = [se.index for se in side_effects]
+        column_headers = [side_effect.index for side_effect in side_effects]
+        side_effect_names = [side_effect.se_name for side_effect in side_effects]
 
-        # data_dict = {}
         rows = []
+        rows.append(side_effect_names)
 
         for drug in drugs:
             row = []
@@ -199,23 +205,30 @@ class ExcelLoader(Loader):
                     dse = DrugSideEffect.objects.get(drug=drug, side_effect=effect)
                     row.append(dse.rang_base)  # или другой ранг
                 except DrugSideEffect.DoesNotExist:
-                    print('Нет таблицы рангов')
+                    logger.info('Нет таблицы рангов')
             rows.append(row) # или drug.drug_name
 
         df = pd.DataFrame(rows, columns=column_headers)
 
-        print(f'df = {df}')
-
-        with pd.ExcelWriter(self.EXPORT_PATH, engine='openpyxl') as writer:
+        with pd.ExcelWriter(self.export_path, engine='openpyxl') as writer:
+            self.drugs_df.to_excel(writer,
+                                   sheet_name=self.DRUGS_SHEET,
+                                   index=False,
+                                   startcol=0)
             self.side_effects_df.to_excel(writer,
-                                          sheet_name='Лист1',
+                                          sheet_name=self.SIDE_EFFECTS_SHEET,
                                           index=False,
                                           startcol=0)
-            df_combined = pd.concat([self.drugs_df, df], ignore_index=True, axis=1)
-            print(f'df_combined = {df_combined}')
-            df_combined.to_excel(writer, sheet_name='Лист2', index=False)
+
+            self.drugs_df.columns = [''] * len(self.drugs_df.columns)
+            new_row = pd.DataFrame([[None, self.DRUG_SIDE_EFFECT]], columns=self.drugs_df.columns)
+            self.drugs_df = pd.concat([new_row, self.drugs_df], ignore_index=True)
+
+            df_combined = pd.concat([self.drugs_df, df], ignore_index=False, axis=1)
+
+            df_combined.to_excel(writer, sheet_name=self.RANKS_SHEET, index=False)
 
     def export_from_db(self):
         """Экспорт из БД."""
-        open(self.EXPORT_PATH, 'w', encoding='utf-8').close()
+        open(self.export_path, 'w', encoding='utf-8').close()
         super().export_from_db()
