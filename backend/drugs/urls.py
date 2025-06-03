@@ -3,7 +3,8 @@ from .views import (
     DrugGroupAPI,
     DrugAPI,
     SideEffectAPI,
-    DrugSideEffectView,)
+    DrugSideEffectView,
+    ExcelLoadView)
 
 
 urlpatterns = [
@@ -22,4 +23,7 @@ urlpatterns = [
 
     path('getRanks/', DrugSideEffectView.as_view(), name='get_ranks'),
     path('updateRanks/', DrugSideEffectView.as_view(), name='update_ranks'),
+
+    path('export_from_db/', ExcelLoadView.as_view(), name='export_from_db'),
+    path('import_to_db/', ExcelLoadView.as_view(), name='import_to_db')
 ]
