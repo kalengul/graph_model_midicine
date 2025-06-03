@@ -45,7 +45,7 @@ FileResponse автоматически пробразуется в двоичн
 Импорта данных о рангах в БД
 
 ## URL
-```POST api/v1/import_from_db/```<br/>
+```POST api/v1/import_to_db/```<br/>
 
 ## Аутентификация
 Требуемый статус: `admin`

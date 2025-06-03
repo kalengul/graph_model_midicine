@@ -68,6 +68,7 @@ class ExcelLoader(Loader):
     DRUG_SIDE_EFFECT = 'ЛС/ПЭ'
     NUMBER_COLUMN = '№'
     DRUG_COLUMN = 'ЛС'
+    EXPORT_DATE_SHEET = 'Export Date'
 
 
     def __init__(self, import_path=None, export_path=None):
@@ -228,7 +229,28 @@ class ExcelLoader(Loader):
 
             df_combined.to_excel(writer, sheet_name=self.RANKS_SHEET, index=False)
 
+    def _add_export_date_sheet(self):
+        """Добавляет отдельный лист с текущей датой экспорта."""
+        from datetime import datetime
+
+        now = datetime.now()
+        df = pd.DataFrame(
+            {
+                'Дата экспорта данных о рангах из БД': [
+                    now.strftime('%d.%m.%Y')],
+                'Время экспорта данных о рангах из БД': [
+                    now.strftime('%H:%M:%S')]
+            }
+        )
+
+        with pd.ExcelWriter(self.export_path,
+                            engine='openpyxl',
+                            mode='a',
+                            if_sheet_exists='replace') as writer:
+            df.to_excel(writer, sheet_name=self.EXPORT_DATE_SHEET, index=False)
+
     def export_from_db(self):
         """Экспорт из БД."""
         open(self.export_path, 'w', encoding='utf-8').close()
         super().export_from_db()
+        self._add_export_date_sheet()
