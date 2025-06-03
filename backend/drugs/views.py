@@ -457,7 +457,7 @@ class ExcelLoadView(APIView):
     NOT_FILE = 'Эксель-файл не обнаружен'
     INCORRECT_FILE = 'Неверный excel-файл'
     SUCCESSFUL_IMPORT = 'Данные в БД импортированы успешно'
-    IMPORT_ERROR = 'Импорт данные. Ошибка при обработке файл'
+    IMPORT_ERROR = 'Импорт данные. Ошибка при обработке файла'
 
     def get(self, request, *args, **kwargs):
         """Скачивание файла с данными из БД."""
