@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
-from django.core.management import call_command
+from django.http import FileResponse
 
 from .models import (Drug,
                      DrugGroup,
@@ -553,3 +553,29 @@ class ExcelLoadView(APIView):
             message=self.INCORRECT_FILE,
             http_status=status.HTTP_400_BAD_REQUEST
         )
+
+
+class ModifiedExcelLoad(ExcelLoadView):
+    """
+    Усовершенствовованная версия вью.
+    
+    Вью для прямого обращения к бекэнду,
+    минуя фронтэнд.
+    """
+
+    @bearer_token_required
+    def get(self, request, *args, **kwargs):
+        """Скачивание файла с данными из БД."""
+        loader = ExcelLoader()
+        loader.export_from_db()
+        try:
+            response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
+                                    content_type=self.TYPE)
+            response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
+            return response
+        except FileExistsError:
+            return CustomResponse.response(
+                status=status.HTTP_404_NOT_FOUND,
+                message=self.NOT_FILE,
+                http_status=status.HTTP_404_NOT_FOUND
+            )

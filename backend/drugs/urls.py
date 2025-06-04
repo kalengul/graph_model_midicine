@@ -4,7 +4,8 @@ from .views import (
     DrugAPI,
     SideEffectAPI,
     DrugSideEffectView,
-    ExcelLoadView)
+    ExcelLoadView,
+    ModifiedExcelLoad)
 
 
 urlpatterns = [
@@ -25,5 +26,9 @@ urlpatterns = [
     path('updateRanks/', DrugSideEffectView.as_view(), name='update_ranks'),
 
     path('export_from_db/', ExcelLoadView.as_view(), name='export_from_db'),
-    path('import_to_db/', ExcelLoadView.as_view(), name='import_to_db')
+    path('import_to_db/', ExcelLoadView.as_view(), name='import_to_db'),
+
+    path('simple_export_from_db/',
+         ModifiedExcelLoad.as_view(),
+         name='simple_export_from_db'),
 ]
