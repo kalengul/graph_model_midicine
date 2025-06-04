@@ -483,10 +483,6 @@ class ExcelLoadView(APIView):
         serializer = ExcelFileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
         if serializer.is_valid():   
-            logger.info('Очистка БД начинается')
-            DBManipulator().clean_db()
-            logger.info('БД очистилось')
-
             logger.info('Импорт данных в БД начался')
             excel_file = serializer.validated_data['file']
 
@@ -508,6 +504,9 @@ class ExcelLoadView(APIView):
                 excel_path = os.path.abspath(excel_path)
                 loader = ExcelLoader(import_path=excel_path)
                 if loader._check_excel_file():
+                    logger.info('Очистка БД начинается')
+                    DBManipulator().clean_db()
+                    logger.info('БД очистилось')
                     loader.load_to_db()
                 else:
                     raise IncorrectFile((f'В {os.path.basename(excel_path)}'
