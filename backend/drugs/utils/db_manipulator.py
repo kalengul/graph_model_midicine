@@ -10,6 +10,7 @@ from ..models import (DrugGroup,
                       DrugSideEffect,
                       SideEffect)
 from drugs.utils.loaders import Loader
+from drugs.utils.cleaner import CleanProcessor
 
 
 logger = logging.getLogger('drugs')
@@ -116,10 +117,13 @@ class DBManipulator(Loader):
         - SifeEffect;
         - DrugSifeEffect.
         """
-        DrugGroup.objects.all().delete()
-        DrugSideEffect.objects.all().delete()
-        Drug.objects.all().delete()
-        SideEffect.objects.all().delete()
+        # DrugGroup.objects.all().delete()
+        # DrugSideEffect.objects.all().delete()
+        # Drug.objects.all().delete()
+        # SideEffect.objects.all().delete()
+        logger.debug('Удаление с CleanProcessor')
+        cleaner = CleanProcessor().get_cleaner()
+        cleaner.clear_table()
 
     @classmethod
     def _export_drugs(cls):

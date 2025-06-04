@@ -8,7 +8,6 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
-from django.http import FileResponse
 from django.core.management import call_command
 
 from .models import (Drug,
@@ -518,8 +517,8 @@ class ExcelLoadView(APIView):
                 loader = ExcelLoader(import_path=excel_path)
                 if loader._check_excel_file():
                     logger.info('Очистка БД начинается')
-                    # DBManipulator().clean_db()
-                    call_command('custom_clear')
+                    DBManipulator().clean_db()
+                    # call_command('custom_clear')
                     logger.info('БД очистилось')
                     loader.load_to_db()
                 else:
