@@ -1,0 +1,16 @@
+name: Integration Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-compose:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run docker-compose integration test
+        run: |
+          docker-compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from backend

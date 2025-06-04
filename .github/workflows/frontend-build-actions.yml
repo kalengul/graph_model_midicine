@@ -1,0 +1,36 @@
+name: Frontend Build Only
+
+on:
+  push:
+    branches: [deploy-CI/CD]
+    paths:
+      - 'frontend/**'
+  pull_request:
+    branches: [deploy-CI/CD]
+    paths:
+      - 'frontend/**'
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies (legacy peer deps)
+        working-directory: ./frontend
+        run: npm install --legacy-peer-deps
+
+      - name: Build frontend
+        working-directory: ./frontend
+        run: npm run build
+
+      - name: Verify output
+        working-directory: ./frontend
+        run: ls -la dist
