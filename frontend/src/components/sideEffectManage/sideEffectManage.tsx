@@ -57,14 +57,22 @@ export const SideEffectManage = () =>{
             </a>
             <div className="collapse mt-4" id="collapseSETable">
                 <SideEffectsTable/>
-                <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
-                {UpdateNotification.isVisible && 
-                    <ModalNotification 
-                        type={UpdateNotification.type} 
-                        message={UpdateNotification.message}
-                        onClose={() => setUpdateNotification({...UpdateNotification, isVisible: false})}
-                    />
-                }
+                <div className="flex jc-sb">
+                    <div>
+                        <button className='btn send-btn mt-3' onClick={saveSideEffectChanges}>Сохранить изменения</button>
+                        {UpdateNotification.isVisible && 
+                            <ModalNotification 
+                                type={UpdateNotification.type} 
+                                message={UpdateNotification.message}
+                                onClose={() => setUpdateNotification({...UpdateNotification, isVisible: false})}
+                            />
+                        }
+                    </div>
+                    <div className="flex">
+                        <button className='btn send-btn mt-3 me-3'>Загрузить ранги</button>
+                        <button className='btn send-btn mt-3'>Экспортировать ранги</button>
+                    </div>
+                </div>
             </div>
         </div>
         <hr/>

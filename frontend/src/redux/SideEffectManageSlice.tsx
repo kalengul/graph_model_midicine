@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { saveAs } from "file-saver"
 
 interface ISideEffectElem{
     id: string //ключ сохраняемого объекта
@@ -102,6 +103,30 @@ export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEff
     } catch (error) {
         console.error(`Ошибка при удалении побочного эффекта:\n`, error)
         return `Ошибка при удалении побочного эффекта`;
+    }
+})
+
+export const exportRanksFile = createAsyncThunk('sideEffectManage/exportRanksFile', async ()=>{
+    try {
+        const response = await axios.get(`/api/export_from_db/`, {
+            responseType: 'arraybuffer',
+            headers: {
+                'Authorization': `Bearer ${localStorage.getItem('token')}`,
+                'Accept': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            }
+        })
+        if(response.data.result.status===200){
+            const blob = new Blob([response.data.data], {
+                type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+            });
+            
+            const now = new Date()
+            const fileName = `Ranks-${now}.xlsx`
+            saveAs(blob, fileName);
+        }
+    } catch (error) {
+        console.error(`Ошибка экспорта файла рангов:\n`, error)
+        return `Ошибка экспорта файла рангов`;
     }
 })
 
