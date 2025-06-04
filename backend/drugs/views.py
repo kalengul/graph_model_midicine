@@ -24,6 +24,7 @@ from .serializers import (
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
 from drugs.utils.db_manipulator import DBManipulator
+from drugs.utils.custom_exception import IncorrectFile
 from accounts.auth import bearer_token_required
 
 
@@ -504,9 +505,21 @@ class ExcelLoadView(APIView):
             try:
                 with open(excel_path, 'wb+') as file:
                     file.write(excel_file.read())
-
-                ExcelLoader(import_path=os.path.abspath(excel_path)).load_to_db()
+                excel_path = os.path.abspath(excel_path)
+                loader = ExcelLoader(import_path=excel_path)
+                if loader._check_excel_file():
+                    loader.load_to_db()
+                else:
+                    raise IncorrectFile((f'В {os.path.basename(excel_path)}'
+                                         ' некорректные листы или таблицы'))
+            except IncorrectFile as error:
+                logger.error(f'Ошибка при импорте Excel: {str(error)}')
+                return CustomResponse.response(
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message=str(error),
+                    http_status=status.HTTP_400_BAD_REQUEST)
             except Exception as error:
+                traceback.print_exc()
                 logger.error(f'Ошибка при импорте Excel: {str(error)}')
                 return CustomResponse.response(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,

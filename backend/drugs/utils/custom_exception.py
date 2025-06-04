@@ -1,3 +1,5 @@
+"""Модуль исключений."""
+
 from drugs.utils.custom_response import CustomResponse
 from rest_framework.views import exception_handler
 from rest_framework import exceptions
@@ -40,3 +42,7 @@ def custom_exception_handler(exc, context):
         )
 
     return exception_handler(exc, context)
+
+
+class IncorrectFile(Exception):
+    """Исключение из-за некорректного содержания файла."""

@@ -68,6 +68,8 @@ class ExcelLoader(Loader):
     DRUG_SIDE_EFFECT = 'ЛС/ПЭ'
     NUMBER_COLUMN = '№'
     DRUG_COLUMN = 'ЛС'
+    EFFECT_COLUMN = 'эффект'
+    RANK_COLUMN = 'ранг'
     EXPORT_DATE_SHEET = 'Export Date'
 
 
@@ -86,6 +88,35 @@ class ExcelLoader(Loader):
             self.export_path = export_path
         else:
             self.export_path = self.EXPORT_PATH
+
+    def _check_excel_file(self):
+        """Проверка корректности excel-файла."""
+        excel_file = pd.ExcelFile(self.import_path)
+
+        def check_sheets():
+            """Проверка листов."""
+            return all([
+                self.DRUGS_SHEET in excel_file.sheet_names,
+                self.SIDE_EFFECTS_SHEET in excel_file.sheet_names,
+                self.RANKS_SHEET in excel_file.sheet_names
+            ])
+
+        def check_tables():
+            """Проверка таблиц."""
+            colunms = []
+            for _, col in pd.read_excel(self.import_path, sheet_name=None).items():
+                colunms.extend(col.columns)
+            return all(elem in colunms for elem in [
+                self.NUMBER_COLUMN,
+                self.DRUG_COLUMN,
+                self.EFFECT_COLUMN,
+                self.RANK_COLUMN
+            ])
+
+        if check_sheets():
+            logger.info('Все нужные листы в наличии')
+            return check_tables()
+        return False
 
     def _load_drugs(self):
         """Загрузка ЛС."""
