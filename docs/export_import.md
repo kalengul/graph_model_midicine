@@ -6,7 +6,7 @@
 ```GET api/v1/export_from_db/```<br/>
 
 ## Аутентификация
-Не требуется
+Требуемый статус: `admin`
 
 ## Вход
 Нет параметров
@@ -61,11 +61,38 @@ FileResponse автоматически пробразуется в двоичн
 Content-Type: multipart/form-data
 Content-Disposition: form-data; name="file"; filename="какое-то название.xlsx"
 
+### HTTP-запрос
+POST api/v1/import_to_db/ HTTP/<какая-то версия>
+Host: <example.com>
+Authorization: Bearer <токен>
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary...
+
+------WebKitFormBoundary...
+Content-Disposition: form-data; name="file"; filename="<your_data.xlsx>"
+Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+
+<содержимое файла Excel>
+
+------WebKitFormBoundary...
+
+### Пример входных данных
+```
+{
+  'file': 'сам файл'
+}
+```
+```
+{
+  'file': [<InMemoryUploadedFile: Список побочных эффектов sqrt5_2.xlsx (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)>]
+}
+```
+
+
 ## Выход
 ### Статусы ответа  
 - `200` — файл успешно найден и передан
 - `400` — файл должен быть .xlsx
-- `400` — файл не найден на сервере
+- `400` — в <имя файла> некоррекнтые листы или таблицы
 - `500` — внутренная ошибка сервера
 
 ### Вывод при успешном импорте
@@ -90,12 +117,12 @@ Content-Disposition: form-data; name="file"; filename="какое-то назв�
 }
 ```
 
-### Вывод при некорректности самого excel-файла
+### Вывод при некорректности содержания excel-файла
 ```
 {
   "result": {
     "status": 400,
-    "message": "Неверный excel-файл"
+    "message": "В <имя файла> некорректные листы или таблицы"
   },
   "data": {}
 }

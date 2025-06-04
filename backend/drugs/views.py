@@ -459,6 +459,7 @@ class ExcelLoadView(APIView):
     SUCCESSFUL_IMPORT = 'Данные в БД импортированы успешно'
     IMPORT_ERROR = 'Импорт данные. Ошибка при обработке файл'
 
+    @bearer_token_required
     def get(self, request, *args, **kwargs):
         """Скачивание файла с данными из БД."""
         loader = ExcelLoader()
@@ -479,6 +480,7 @@ class ExcelLoadView(APIView):
     def post(self, request, *args, **kwargs):
         """Загрузкад данных из excel-файла в БД."""
         serializer = ExcelFileSerializer(data=request.data)
+        logger.debug(f'request.data = {request.data}')
         if serializer.is_valid():   
             logger.info('Очистка БД начинается')
             DBManipulator().clean_db()
