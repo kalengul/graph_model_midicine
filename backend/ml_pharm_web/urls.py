@@ -25,6 +25,7 @@ def custom_page_not_found(request, exception):
 
 handler404 = custom_page_not_found
 
+
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
