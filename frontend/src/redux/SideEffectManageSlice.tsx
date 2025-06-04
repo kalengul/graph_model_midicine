@@ -22,6 +22,7 @@ interface IStateSE {
     [key: string]: any; // Если state может содержать другие динамические поля
 }
 
+
 export interface ISendSideEffectData{
     se_name: string,
 }
