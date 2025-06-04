@@ -1,6 +1,7 @@
 import os
 import traceback
 import logging
+import base64
 
 from django.conf import settings
 from rest_framework.views import APIView
@@ -467,10 +468,21 @@ class ExcelLoadView(APIView):
         loader = ExcelLoader()
         loader.export_from_db()
         try:
-            response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
-                                    content_type=self.TYPE)
-            response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
-            return response
+            # response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
+            #                         content_type=self.TYPE)
+            # response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
+            # return response
+            with open(loader.EXPORT_PATH, 'rb') as file:
+                encoded = base64.b64encode(file.read()).decode('utf-8')
+            return CustomResponse.response(
+                status=status.HTTP_200_OK,
+                message='Эксель-файл успешно экспортирован',
+                http_status=status.HTTP_200_OK,
+                data={
+                    'file_name': self.FILE_NAME,
+                    'file_base64': encoded,
+                }
+            )
         except FileExistsError:
             return CustomResponse.response(
                 status=status.HTTP_404_NOT_FOUND,
