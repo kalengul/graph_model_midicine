@@ -527,6 +527,7 @@ class ExcelLoadView(APIView):
                 )
 
             logger.info('Импорт данных в БД закончился')
+            logger.info('Филипп - классный!')
 
             return CustomResponse.response(
                 status=status.HTTP_200_OK,
