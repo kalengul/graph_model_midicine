@@ -2,11 +2,11 @@ name: Frontend Build Only
 
 on:
   push:
-    branches: [deploy-CI/CD]
+    branches: [deploy]
     paths:
       - 'frontend/**'
   pull_request:
-    branches: [deploy-CI/CD]
+    branches: [deploy]
     paths:
       - 'frontend/**'
 
