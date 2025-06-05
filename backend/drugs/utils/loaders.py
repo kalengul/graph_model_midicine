@@ -69,6 +69,7 @@ class ExcelLoader(Loader):
     NUMBER_COLUMN = '№'
     DRUG_COLUMN = 'ЛС'
     EFFECT_COLUMN = 'эффект'
+    EFFECT_COLUMN_EN = 'эффект_en'
     RANK_COLUMN = 'ранг'
     EXPORT_DATE_SHEET = 'Export Date'
 
@@ -113,9 +114,32 @@ class ExcelLoader(Loader):
                 self.RANK_COLUMN
             ])
 
+        def check_drug_unique():
+            """Проверка уникальности названий ЛС."""
+            df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
+            return df[self.DRUG_COLUMN].is_unique
+
+        def check_side_effect_unique():
+            """Проверка уникальности названий ПД."""
+            df = pd.read_excel(self.import_path, sheet_name=self.SIDE_EFFECTS_SHEET)
+            return df[self.EFFECT_COLUMN].is_unique
+
+        def check_side_effect_unique_en():
+            """Проверка уникальности названий ПД на англ."""
+            df = pd.read_excel(self.import_path, sheet_name=self.SIDE_EFFECTS_SHEET)
+            return df[self.EFFECT_COLUMN_EN].is_unique
+
         if check_sheets():
-            logger.info('Все нужные листы в наличии')
-            return check_tables()
+            logger.debug('Все нужные листы в наличии')
+            if check_tables():
+                logger.debug('Все нужные таблицы в наличии')
+                return all([
+                    check_drug_unique(),
+                    check_side_effect_unique(),
+                    check_side_effect_unique_en()
+                ])
+            else:
+                return False
         return False
 
     def _load_drugs(self):

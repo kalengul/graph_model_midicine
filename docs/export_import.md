@@ -145,7 +145,7 @@ Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 {
   "result": {
     "status": 400,
-    "message": "В <имя файла> некорректные листы или таблицы"
+    "message": "В <имя файла> некорректные листы, таблицы или не уникальные названия ЛС и ПД"
   },
   "data": {}
 }

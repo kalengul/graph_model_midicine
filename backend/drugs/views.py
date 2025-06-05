@@ -523,7 +523,8 @@ class ExcelLoadView(APIView):
                     loader.load_to_db()
                 else:
                     raise IncorrectFile((f'В {os.path.basename(excel_path)}'
-                                         ' некорректные листы или таблицы'))
+                                         ' некорректные листы, таблицы или '
+                                         'неуникальные названия ЛС и ПД'))
             except IncorrectFile as error:
                 logger.error(f'Ошибка при импорте Excel: {str(error)}')
                 return CustomResponse.response(
