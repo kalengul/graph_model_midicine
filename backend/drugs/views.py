@@ -24,6 +24,7 @@ from .serializers import (
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
+from drugs.utils.banned_pairs_loader import CSVBannedPairLoader
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
 from accounts.auth import bearer_token_required
@@ -469,7 +470,7 @@ class ExcelLoadView(APIView):
         try:
             # response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
             #                         content_type=self.TYPE)
-            # response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
+            # response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={os.path.basename(loader.export_path)}'
             # return response
             with open(loader.EXPORT_PATH, 'rb') as file:
                 encoded = base64.b64encode(file.read()).decode('utf-8')
@@ -478,7 +479,7 @@ class ExcelLoadView(APIView):
                 message='Эксель-файл успешно экспортирован',
                 http_status=status.HTTP_200_OK,
                 data={
-                    'file_name': self.FILE_NAME,
+                    'file_name': os.path.basename(loader.export_path),
                     'file_base64': encoded,
                 }
             )
@@ -518,7 +519,6 @@ class ExcelLoadView(APIView):
                 if loader._check_excel_file():
                     logger.info('Очистка БД начинается')
                     DBManipulator().clean_db()
-                    # call_command('custom_clear')
                     logger.info('БД очистилось')
                     loader.load_to_db()
                 else:
@@ -541,7 +541,6 @@ class ExcelLoadView(APIView):
                 )
 
             logger.info('Импорт данных в БД закончился')
-            logger.info('Филипп - классный!')
 
             return CustomResponse.response(
                 status=status.HTTP_200_OK,
@@ -556,7 +555,7 @@ class ExcelLoadView(APIView):
         )
 
 
-class ModifiedExcelLoad(ExcelLoadView):
+class ModifiedExcelLoadView(ExcelLoadView):
     """
     Усовершенствовованная версия вью.
     
@@ -572,11 +571,81 @@ class ModifiedExcelLoad(ExcelLoadView):
         try:
             response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
                                     content_type=self.TYPE)
-            response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={self.FILE_NAME}'
+            response[self.CONTENT] = (
+                f'{self.DOWN_LOAD_MODE}; '
+                f'filename={os.path.basename(loader.export_path)}')
             return response
         except FileExistsError:
             return CustomResponse.response(
                 status=status.HTTP_404_NOT_FOUND,
                 message=self.NOT_FILE,
                 http_status=status.HTTP_404_NOT_FOUND
+            )
+
+
+class BannedPairLoadView(APIView):
+    """Вью для работы с запрещёнными парами ЛС."""
+
+    INCORRECT_FILE = 'Неверный excel-файл'
+    IMPORT_ERROR = 'Импорт запрещённых пар ЛС. Ошибка при обработке файл'
+    SUCCESSFUL_IMPORT = 'Запрещённый пары ЛС импортированы в БД успешно'
+
+    @bearer_token_required
+    def post(self, request, *args, **kwargs):
+        """Загрузка запрещённых в БД."""
+        serializer = ExcelFileSerializer(data=request.data)
+        logger.debug(f'request.data = {request.data}')
+        if serializer.is_valid():
+            logger.info('Импорт запрещённых пар ЛС в БД начался')
+            importing_file = serializer.validated_data['file']
+
+            if importing_file.name.endswith('.csv'):
+                path = os.path.join(settings.TXT_DB_PATH, importing_file.name)
+
+                if os.path.exists(path):
+                    os.remove(path)
+
+                try:
+                    with open(path, 'wb+') as file:
+                        file.write(importing_file.read())
+                    path = os.path.abspath(path)
+                    loader = CSVBannedPairLoader(import_path=path)
+                    logger.info('Очистка БД начинается')
+                    loader.clear_db()
+                    logger.info('БД очистилось')
+                    loader.load_to_db()
+                except IncorrectFile as error:
+                    logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
+                    return CustomResponse.response(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message=str(error),
+                        http_status=status.HTTP_400_BAD_REQUEST)
+                except Exception as error:
+                    traceback.print_exc()
+                    logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
+                    return CustomResponse.response(
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                        message=self.IMPORT_ERROR,
+                        http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                    )
+
+                logger.info('Импорт данных в БД закончился')
+
+                return CustomResponse.response(
+                    status=status.HTTP_200_OK,
+                    message=self.SUCCESSFUL_IMPORT,
+                    http_status=status.HTTP_200_OK
+                )
+
+            else:
+                return CustomResponse.response(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message='Файл должен быть .csv',
+                        http_status=status.HTTP_400_BAD_REQUEST
+                    )
+
+        return CustomResponse.response(
+                status=status.HTTP_400_BAD_REQUEST,
+                message=self.INCORRECT_FILE,
+                http_status=status.HTTP_400_BAD_REQUEST
             )

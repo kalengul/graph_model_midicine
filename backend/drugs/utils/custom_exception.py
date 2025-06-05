@@ -46,3 +46,9 @@ def custom_exception_handler(exc, context):
 
 class IncorrectFile(Exception):
     """Исключение из-за некорректного содержания файла."""
+
+class PairFileError(Exception):
+    """Исключение из-за файл запрещённых пар ЛС."""
+
+class PairDBError(Exception):
+    """Исключение из-за запрещённых пар ЛС в БД."""

@@ -3,6 +3,7 @@
 import os
 import logging
 from abc import ABC, abstractmethod
+from datetime import datetime
 
 import pandas as pd
 
@@ -61,7 +62,7 @@ class ExcelLoader(Loader):
 
     EXCEL_PATH = os.path.join(settings.TXT_DB_PATH,
                               'Список побочных эффектов edit_2.xlsx')
-    EXPORT_PATH = os.path.join(settings.TXT_DB_PATH, 'exported_data.xlsx')
+    EXPORT_PATH = os.path.join(settings.TXT_DB_PATH, 'TOSH_table.xlsx')
     RANKS_SHEET = 'Common'
     SIDE_EFFECTS_SHEET = 'Side_e'
     DRUGS_SHEET = 'Drugs'
@@ -88,7 +89,12 @@ class ExcelLoader(Loader):
         if export_path:
             self.export_path = export_path
         else:
-            self.export_path = self.EXPORT_PATH
+            now = datetime.now()
+            self.date_in_name = now.strftime('%Y.%m.%d_%H.%M')
+            self.date_in_sheet = now.strftime('%d.%m.%Y')
+            self.time_in_name = now.strftime('%H:%M:%S')
+            self.export_path = self.EXPORT_PATH.replace('.xlsx',
+                                                        f'_{self.date_in_name}.xlsx')
 
     def _check_excel_file(self):
         """Проверка корректности excel-файла."""
@@ -238,9 +244,9 @@ class ExcelLoader(Loader):
         self.side_effects_df = pd.DataFrame(
             {
                 self.NUMBER_COLUMN: numbers,
-                'эффект': side_effect_names,
-                'эффект (англ.)': side_effect_names_en,
-                'ранг': weights
+                self.EFFECT_COLUMN: side_effect_names,
+                self.EFFECT_COLUMN_EN: side_effect_names_en,
+                self.RANK_COLUMN: weights
             }
         )
 
@@ -286,15 +292,12 @@ class ExcelLoader(Loader):
 
     def _add_export_date_sheet(self):
         """Добавляет отдельный лист с текущей датой экспорта."""
-        from datetime import datetime
-
-        now = datetime.now()
         df = pd.DataFrame(
             {
                 'Дата экспорта данных о рангах из БД': [
-                    now.strftime('%d.%m.%Y')],
+                    self.date_in_sheet],
                 'Время экспорта данных о рангах из БД': [
-                    now.strftime('%H:%M:%S')]
+                    self.time_in_name]
             }
         )
 
@@ -306,6 +309,7 @@ class ExcelLoader(Loader):
 
     def export_from_db(self):
         """Экспорт из БД."""
+
         open(self.export_path, 'w', encoding='utf-8').close()
         super().export_from_db()
         self._add_export_date_sheet()

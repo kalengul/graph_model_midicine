@@ -200,3 +200,19 @@ class DrugSideEffect(models.Model):
         unique_together = ('drug', 'side_effect')
         verbose_name = "Показатель побочного эффекта"
         verbose_name_plural = "Показатели побочных эффектов"
+
+
+class BannedDrugPair(models.Model):
+    """Пара ЛС."""
+
+    first_drug = models.CharField(max_length=MAX_LENGTH, verbose_name='Первое ЛС')
+    second_drug = models.CharField(max_length=MAX_LENGTH, verbose_name='Второе ЛС')
+
+    def __str__(self):
+        return f'Пара ЛС: {self.first_drug} и {self.second_drug}'
+
+    class Meta:
+        """Настройка."""
+
+        ordering = ['first_drug', 'second_drug']
+        unique_together = ['first_drug', 'second_drug']

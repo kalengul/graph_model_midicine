@@ -2,6 +2,7 @@ import traceback
 import logging
 import time
 from types import MappingProxyType
+from itertools import combinations
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -9,6 +10,7 @@ from rest_framework import status
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
+from drugs.models import BannedDrugPair, Drug
 
 
 IDX_2_RANK_NAME = MappingProxyType({
@@ -25,6 +27,21 @@ logger = logging.getLogger('fortran')
 
 class CalculationAPI(APIView):
     """Вычисление рангов."""
+
+    def check_banned_drug_pair(self, drugs):
+        """Проверка на наличие запрещённых пар ЛС."""
+        drug_map = {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)}
+        for id1, id2 in combinations(drugs, 2):
+            name1 = drug_map[id1].drug_name
+            name2 = drug_map[id2].drug_name
+
+            if (BannedDrugPair.objects.filter(first_drug__iexact=name1,
+                                              second_drug__iexact=name2).exists()
+                or BannedDrugPair.objects.filter(first_drug__iexact=name2,
+                                                 second_drug__iexact=name1).exists()):
+                return (name1, name2)
+        return None
+
 
     def get(self, request):
         """Временный метод для просмотра изначальной структуры выхода."""
@@ -54,6 +71,27 @@ class CalculationAPI(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
+        banned = self.check_banned_drug_pair(drugs)
+        if banned:
+            return CustomResponse.response(
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по Fortran успешно расcчитана',
+                http_status=status.HTTP_200_OK,
+                data={
+                    "сompatibility_fortran": "banned", 
+                    "combinations":[
+                        {
+                            "сompatibility":"banned",
+                            "drugs": list(banned)
+
+                        }],
+                    "drugs": list(
+                            Drug.objects.filter(id__in=drugs
+                                                ).values_list(
+                                                    'drug_name', flat=True)
+                        )
+                    }
+                )
 
         start_time = time.time()
 
