@@ -110,10 +110,10 @@ export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEff
 export const exportRanksFile = createAsyncThunk('sideEffectManage/exportRanksFile', async ()=>{
     try {
         const response = await axios.get(`/api/export_from_db/`, {
-            responseType: 'arraybuffer',
+            // responseType: 'arraybuffer',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
-                'Accept': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                // 'Accept': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
             }
         })
         if(response.data.result.status===200){
@@ -202,6 +202,9 @@ const SideEffectManageSlice = createSlice({
             })
             .addCase(deleteSideEffect.fulfilled, (state, action)=>{
                 state.sideEffects = state.sideEffects.filter(se => se.id!=action.payload)
+            })
+            .addCase(exportRanksFile.fulfilled, ()=>{
+                //state.sideEffects = state.sideEffects.filter(se => se.id!=action.payload)
             });
     }
 })

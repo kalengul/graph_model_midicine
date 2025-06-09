@@ -37,93 +37,62 @@ export const ComputationFortran = () =>{
                     <h5 className="mt-3">Результаты: </h5>
                     <ComputationResults compatibility={resultFortran.сompatibility_fortran} />
 
-                    <h5 className="mt-3">Риски побочных эффектов: </h5>
+                    {(resultFortran.сompatibility_fortran.trim()!=="banned") &&
+                    <>
+                        <h5 className="mt-3">Риски побочных эффектов: </h5>
                     
-                    {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
-                        <CollapsList 
-                            className="ComputationResults incompatible"
-                            type="riscs"
-                            content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects}
-                        />
-                    }
+                        {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
+                            <CollapsList 
+                                className="ComputationResults incompatible"
+                                type="riscs"
+                                content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects}
+                            />
+                        }
 
-                    { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
-                        <CollapsList 
-                            className="ComputationResults incompatible caution mt-2"
-                            type="riscs"
-                            content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects}
-                        />
-                    }
+                        { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
+                            <CollapsList 
+                                className="ComputationResults incompatible caution mt-2"
+                                type="riscs"
+                                content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects}
+                            />
+                        }
 
-                    { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
-                        <CollapsList 
-                            className="ComputationResults incompatible compatible mt-2"
-                            type="riscs"
-                            content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects}
-                        />
-                    }
+                        { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
+                            <CollapsList 
+                                className="ComputationResults incompatible compatible mt-2"
+                                type="riscs"
+                                content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects}
+                            />
+                        }
 
-                    <h5 className="mt-3">Комбинации лекарственных средств: </h5>
+                        <h5 className="mt-3">Комбинации лекарственных средств: </h5>
                     
-                    {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
-                        
-                        <CollapsList 
-                            className="ComputationResults incompatible"
-                            type="drugs-combin"
-                            content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs}
-                        />
+                        {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
+                            
+                            <CollapsList 
+                                className="ComputationResults incompatible"
+                                type="drugs-combin"
+                                content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs}
+                            />
+                        }
 
-                        // <div className="ComputationResults incompatible">
-                        //     {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs?.map((d, index)=>
-                        //      <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                        //          <div>
-                        //              <span className='me-3'>{index+1}.</span> 
-                        //              <span>{d}</span>
-                        //          </div>
-                        //      </div>
-                        //     )}
-                        // </div>
-                        
-                    }
+                        { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
+                            <CollapsList 
+                                className="ComputationResults caution mt-2"
+                                type="drugs-combin"
+                                content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs}
+                            />
+                        }
 
-                    { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
-                        <CollapsList 
-                            className="ComputationResults caution mt-2"
-                            type="drugs-combin"
-                            content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs}
-                        />
-                        // <div className="ComputationResults caution mt-2">
-                        //     {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs?.map((d, index)=>
-                        //         <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                        //          <div>
-                        //              <span className='me-3'>{index+1}.</span> 
-                        //              <span>{d}</span>
-                        //          </div>
-                        //      </div>
-                        //     )}
-                        // </div>
-                        
-                    }
+                        { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
+                            <CollapsList 
+                                className="ComputationResults compatible mt-2"
+                                type="drugs-combin"
+                                content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs}
+                            />
+                        }
+                    </>}
 
-                    { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
-                        <CollapsList 
-                            className="ComputationResults compatible mt-2"
-                            type="drugs-combin"
-                            content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs}
-                        />
-                        // <div className="ComputationResults compatible mt-2">
-                        //     {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs?.map((d, index)=>
-                        //         <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                        //          <div>
-                        //              <span className='me-3'>{index+1}.</span> 
-                        //              <span>{d}</span>
-                        //          </div>
-                        //      </div>
-                        //     )}
-                        // </div>
-                        
-                    }
-                    
                     <hr/>
                     <h4>Результаты оценки совместимости по MedScape</h4>
                     {isresultMedscape &&
