@@ -472,7 +472,7 @@ class ExcelLoadView(APIView):
             #                         content_type=self.TYPE)
             # response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={os.path.basename(loader.export_path)}'
             # return response
-            with open(loader.EXPORT_PATH, 'rb') as file:
+            with open(loader.export_path, 'rb') as file:
                 encoded = base64.b64encode(file.read()).decode('utf-8')
             return CustomResponse.response(
                 status=status.HTTP_200_OK,
@@ -576,6 +576,7 @@ class ModifiedExcelLoadView(ExcelLoadView):
                 f'filename={os.path.basename(loader.export_path)}')
             return response
         except FileExistsError:
+            traceback.print_exc()
             return CustomResponse.response(
                 status=status.HTTP_404_NOT_FOUND,
                 message=self.NOT_FILE,
