@@ -10,7 +10,7 @@ import { ModalNotification } from "../modals/modalNotification"
 import "./sideEffectManage.scss"
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
-import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList, deleteSideEffect} from '../../redux/SideEffectManageSlice'
+import { fetchSideEffectList, fetchSideEffectRankList, updateSideEffectRankList, deleteSideEffect, exportRanksFile} from '../../redux/SideEffectManageSlice'
 
 
 
@@ -70,7 +70,7 @@ export const SideEffectManage = () =>{
                     </div>
                     <div className="flex">
                         <button className='btn send-btn mt-3 me-3'>Загрузить ранги</button>
-                        <button className='btn send-btn mt-3'>Экспортировать ранги</button>
+                        <button className='btn send-btn mt-3' onClick={()=>{dispatch(exportRanksFile())}}>Экспортировать ранги</button>
                     </div>
                 </div>
             </div>
