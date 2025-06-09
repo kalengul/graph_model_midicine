@@ -33,5 +33,7 @@ urlpatterns = [
          ModifiedExcelLoadView.as_view(),
          name='simple_export_from_db'),
 
-    path('import_banned_pair/', BannedPairLoadView.as_view(), name='import_banned_pair'),
+    path('import_banned_pair/',
+         BannedPairLoadView.as_view(),
+         name='import_banned_pair'),
 ]

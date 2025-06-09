@@ -569,7 +569,7 @@ class ModifiedExcelLoadView(ExcelLoadView):
         loader = ExcelLoader()
         loader.export_from_db()
         try:
-            response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
+            response = FileResponse(open(loader.export_path, 'rb'),
                                     content_type=self.TYPE)
             response[self.CONTENT] = (
                 f'{self.DOWN_LOAD_MODE}; '
