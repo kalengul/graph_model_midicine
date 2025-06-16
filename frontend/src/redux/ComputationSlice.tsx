@@ -4,6 +4,7 @@ import axios from "axios";
 export interface IComputationElem {
   id: string,
   drug_name: string,
+  dg_id: string,
 }
 
 export interface ISE{

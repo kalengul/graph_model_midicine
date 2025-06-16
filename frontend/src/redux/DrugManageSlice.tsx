@@ -2,9 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 
-interface IDrugElem {
+export interface IDrugElem {
     id: string,
     drug_name: string,
+    dg_id: string,
 }
 
 export interface ISendDrugData{
