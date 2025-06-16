@@ -39,7 +39,7 @@ export const useRoutes = () =>{
                 }
             />
 
-            <Route path="*" element={<Navigate to="/computationMedScape" replace />}/>                       
+            <Route path="*" element={<Navigate to="/computationFortran" replace />}/>                       
         </Routes>
     )
 }
