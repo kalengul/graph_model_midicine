@@ -3,6 +3,7 @@ import { ISE } from "../../redux/ComputationSlice"
 import "./collapsList.scss"
 
 interface ICollapsListProps{
+    title?: string;
     className?: string
     type: "riscs"|"drugs-combin"
     content: ISE[] | string[] |undefined
@@ -20,6 +21,7 @@ export const CollapsList = (props: ICollapsListProps) =>{
 
         return (
             <div className={props.className}>
+                <h6>{props.title}</h6>
                 {props.type === "riscs" ? 
                     (visibleItems as ISE[]).map((e, index) => (
                         <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>

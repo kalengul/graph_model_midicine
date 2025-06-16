@@ -28,7 +28,7 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
          case "banned":
             return(
                 <div className="ComputationResults incompatible">
-                    <p >Лекарственные средства категорически запрещены для совместного применения</p>
+                    <p >В введённом списке присутствует лекарственные средства, сочетание которых запрещено</p>
                 </div>
             )
         default:
