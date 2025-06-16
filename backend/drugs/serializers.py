@@ -114,7 +114,7 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
     class Meta:
         """Настройка сериализатора."""
         model = Drug
-        fields = ['id', 'drug_name']
+        fields = ['id', 'drug_name', 'drug_group']
 
 
 class SideEffectSerializer(serializers.ModelSerializer):
