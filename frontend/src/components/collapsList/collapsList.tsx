@@ -21,7 +21,10 @@ export const CollapsList = (props: ICollapsListProps) =>{
 
         return (
             <div className={props.className}>
-                <h6>{props.title}</h6>
+                <div className='ps-3'>
+                    <h6>{props.title}</h6>
+                </div>
+                
                 {props.type === "riscs" ? 
                     (visibleItems as ISE[]).map((e, index) => (
                         <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
