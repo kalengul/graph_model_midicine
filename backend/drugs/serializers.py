@@ -107,14 +107,16 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
     Вывода ЛС в формате:
     {
        "id": "...",
-       "drug_name": "..."
+       "drug_name": "...",
+       "dg_id": "..."
     }
     """
+    dg_id = serializers.IntegerField(source='drug_group.id', read_only=True)
 
     class Meta:
         """Настройка сериализатора."""
         model = Drug
-        fields = ['id', 'drug_name']
+        fields = ['id', 'drug_name', 'dg_id']
 
 
 class SideEffectSerializer(serializers.ModelSerializer):

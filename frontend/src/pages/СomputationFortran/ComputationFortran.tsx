@@ -17,8 +17,8 @@ export const ComputationFortran = () =>{
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const resultFortran = useAppSelector(state=>state.computation.resultFortran)
 
-    const isresultMedscape = useAppSelector(state=>state.computation.isresultMedscape)
-    const resultMedscape = useAppSelector(state=>state.computation.resultMedscape)
+    // const isresultMedscape = useAppSelector(state=>state.computation.isresultMedscape)
+    // const resultMedscape = useAppSelector(state=>state.computation.resultMedscape)
     
     console.log(resultFortran)
 
@@ -42,7 +42,8 @@ export const ComputationFortran = () =>{
                         <h5 className="mt-3">Риски побочных эффектов: </h5>
                     
                         {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
-                            <CollapsList 
+                            <CollapsList
+                                title = "Высокий уровень риска появления побочных эффектов"
                                 className="ComputationResults incompatible"
                                 type="riscs"
                                 content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects}
@@ -51,6 +52,7 @@ export const ComputationFortran = () =>{
 
                         { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
                             <CollapsList 
+                                title = "Средний уровень риска появления побочных эффектов"
                                 className="ComputationResults incompatible caution mt-2"
                                 type="riscs"
                                 content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects}
@@ -58,7 +60,8 @@ export const ComputationFortran = () =>{
                         }
 
                         { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
-                            <CollapsList 
+                            <CollapsList
+                                title = "Низкий уровень риска появления побочных эффектов" 
                                 className="ComputationResults incompatible compatible mt-2"
                                 type="riscs"
                                 content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects}
@@ -69,7 +72,8 @@ export const ComputationFortran = () =>{
                     
                         {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
                             
-                            <CollapsList 
+                            <CollapsList
+                                title = "Запрещенные комбинации лекарственных средств"
                                 className="ComputationResults incompatible"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs}
@@ -77,7 +81,8 @@ export const ComputationFortran = () =>{
                         }
 
                         { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
-                            <CollapsList 
+                            <CollapsList
+                                title = "Запрещено добавлять к комбинации:"
                                 className="ComputationResults caution mt-2"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs}
@@ -86,6 +91,7 @@ export const ComputationFortran = () =>{
 
                         { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
                             <CollapsList 
+                                title = "Добавлять к комбинации с осторожностью:"
                                 className="ComputationResults compatible mt-2"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs}
@@ -93,7 +99,7 @@ export const ComputationFortran = () =>{
                         }
                     </>}
 
-                    <hr/>
+                    {/* <hr/>
                     <h4>Результаты оценки совместимости по MedScape</h4>
                     {isresultMedscape &&
                         Array.isArray(resultMedscape) && resultMedscape.map(res=>
@@ -108,7 +114,7 @@ export const ComputationFortran = () =>{
                             <hr/>
                         </div>
                         )
-                    }
+                    } */}
                     {/* 
                     
 

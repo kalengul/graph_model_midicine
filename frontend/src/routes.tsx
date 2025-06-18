@@ -11,7 +11,14 @@ export const useRoutes = () =>{
     return(
         <Routes>
             
-            <Route path="/computationMedScape" element={<ComputationMedScape/>}/>
+            <Route 
+                path="/computationMedScape" 
+                element={
+                    <PrivateRoute>
+                        <ComputationMedScape/>
+                    </PrivateRoute>
+                }
+            />
             <Route path="/computationFortran" element={<ComputationFortran/>}/>
             <Route path="/login" element={<LoginPage/>}/>
             
@@ -32,7 +39,7 @@ export const useRoutes = () =>{
                 }
             />
 
-            <Route path="*" element={<Navigate to="/computationMedScape" replace />}/>                       
+            <Route path="*" element={<Navigate to="/computationFortran" replace />}/>                       
         </Routes>
     )
 }

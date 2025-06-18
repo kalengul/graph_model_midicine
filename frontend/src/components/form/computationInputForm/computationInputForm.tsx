@@ -4,13 +4,9 @@ import { Field } from 'react-final-form';
 
 import { useAppDispatch, useAppSelector} from '../../../redux/hooks';
 import {IComputationElem, removeComputationElem, addValue} from "../../../redux/ComputationSlice"
+import { IDrugElem} from "../../../redux/DrugManageSlice"
 
 import "./computationInputForm.scss"
-
-interface IDrugElem {
-    id: string,
-    drug_name: string,
-}
 
 interface IComputationInputFormProps{
     label: string,
@@ -76,7 +72,6 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
         dispatch(removeComputationElem(id));
     };
 
-
     return(
         <Field name={props.name}>
             {({ input, meta }) => {
@@ -123,7 +118,7 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
 
                             <div className='mt-1 mb-2'>
                                 {computationList.map((computationElem: IComputationElem) => (
-                                    <span key={computationElem.id} className="mt-1 me-1 computation-badge">
+                                    <span key={computationElem.id} className={`mt-1 me-1 computation-badge dg-${computationElem.dg_id}`}>
                                         {computationElem.drug_name}
                                         <button
                                             type="button"
