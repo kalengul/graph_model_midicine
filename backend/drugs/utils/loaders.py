@@ -268,7 +268,7 @@ class ExcelLoader(Loader):
                     row.append(dse.rang_base)  # или другой ранг
                 except DrugSideEffect.DoesNotExist:
                     logger.info('Нет таблицы рангов')
-            rows.append(row) # или drug.drug_name
+            rows.append(row)
 
         df = pd.DataFrame(rows, columns=column_headers)
 

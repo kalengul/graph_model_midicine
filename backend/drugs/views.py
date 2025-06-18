@@ -616,7 +616,7 @@ class BannedPairLoadView(APIView):
                     logger.info('БД очистилось')
                     loader.load_to_db()
                 except IncorrectFile as error:
-                    logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
+                    logger.error(f'Ошибка работы с файлом: {str(error)}')
                     return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=str(error),

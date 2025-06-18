@@ -213,8 +213,17 @@ class LoadSynonymView(APIView):
     @bearer_token_required
     def get(self, request):
         """Экспорт синонимов из БД в json-файл."""
-        response = HttpResponse(InnerJSONSynonymLoader().export_synonyms(),
-                                content_type='application/json; charset=utf-8')
-        response['Content-Disposition'] = (
-            f'attachment; filename=clusters_{datetime.now().strftime("%Y_%m_%d")}.json')
-        return response
+        try:
+            response = HttpResponse(InnerJSONSynonymLoader().export_synonyms(),
+                                    content_type='application/json; charset=utf-8')
+            response['Content-Disposition'] = (
+                f'attachment; filename=clusters_{datetime.now().strftime("%Y_%m_%d")}.json')
+            return response
+        except Exception as error:
+            message = 'Ошибка при экспорте синонимов'
+            logger.error(f'{message}: {error}')
+            return CustomResponse(
+                message=message,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
