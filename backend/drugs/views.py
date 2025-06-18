@@ -48,27 +48,27 @@ class DrugGroupAPI(APIView):
             try:
                 serializer.save()
 
-                return CustomResponse.response(
+                return CustomResponse(
                     data=serializer.data,
                     status=status.HTTP_200_OK,
                     message=(f'Группа ЛС {request.data.get("dg_name")}'
                              ' добавлена'),
                     http_status=status.HTTP_200_OK)
             except IntegrityError:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=(f'Группа {request.data.get("dg_name")}'
                              ' уже существует'),
                     http_status=status.HTTP_400_BAD_REQUEST
                 )
             except Exception:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message=SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                     )
 
-        return CustomResponse.response(
+        return CustomResponse(
             status=status.HTTP_400_BAD_REQUEST,
             message=((f'Группа {request.data.get("dg_name")}'
                       ' уже существует')),
@@ -80,7 +80,7 @@ class DrugGroupAPI(APIView):
         if not pk:
             queryset = DrugGroup.objects.all()
             serializer = DrugGroupSerializer(queryset, many=True)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="Список групп ЛС получен",
@@ -88,13 +88,13 @@ class DrugGroupAPI(APIView):
         try:
             group = DrugGroup.objects.get(pk=pk)
             serializer = DrugGroupSerializer(group)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message='Группа ЛС получена',
                 http_status=status.HTTP_200_OK)
         except ObjectDoesNotExist:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message='Группа ЛС не найдена',
                 http_status=status.HTTP_404_NOT_FOUND)
@@ -106,17 +106,17 @@ class DrugGroupAPI(APIView):
             instance = DrugGroup.objects.get(
                 pk=request.query_params.get('dg_id'))
             instance.delete()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_200_OK,
                 message=f'Группа {instance.dg_name} удалена',
                 http_status=status.HTTP_200_OK)
         except DrugGroup.DoesNotExist:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Ошибка определения удаляемого объекта',
                 http_status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -144,7 +144,7 @@ class DrugAPI(APIView):
         if serializer.is_valid():
             try:
                 serializer.save()
-                return CustomResponse.response(
+                return CustomResponse(
                     data={
                             self.ID: serializer.data[self.ID],
                             self.DRUG_NAME: serializer.data[self.DRUG_NAME]
@@ -154,25 +154,25 @@ class DrugAPI(APIView):
                     http_status=status.HTTP_200_OK)
             except IntegrityError as error:
                 if 'slug' in str(error):
-                    return CustomResponse.response(
+                    return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=(f"ЛС {request.data.get('drug_name')}"
                                  " уже существует"),
                         http_status=status.HTTP_400_BAD_REQUEST)
             except Exception:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message='Ошибка при создании лекарства',
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         if "drug_name" in serializer.errors:
             for error in serializer.errors["drug_name"]:
                 if "уже существует" in error.lower():
-                    return CustomResponse.response(
+                    return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=((f'ЛС {request.data.get("drug_name")}'
                                   ' уже существует')),
                         http_status=status.HTTP_400_BAD_REQUEST)
-        return CustomResponse.response(
+        return CustomResponse(
             status=status.HTTP_400_BAD_REQUEST,
             message=(f"ЛС {request.data.get('drug_name')}"
                      " уже существует"),
@@ -186,7 +186,7 @@ class DrugAPI(APIView):
         if not drug_id:
             drugs = Drug.objects.all()
             serializer = DrugListRetrieveSerializer(drugs, many=True)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="Список ЛС получен",
@@ -196,19 +196,19 @@ class DrugAPI(APIView):
         try:
             drug = Drug.objects.get(pk=drug_id)
             serializer = DrugListRetrieveSerializer(drug)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="ЛС получено",
                 http_status=status.HTTP_200_OK)
         except Drug.DoesNotExist:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message="Лекарственное средство не найдено",
                 http_status=status.HTTP_404_NOT_FOUND)
         except Exception:
             traceback.print_exc()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -220,18 +220,18 @@ class DrugAPI(APIView):
             instance = Drug.objects.get(
                 pk=request.query_params.get('drug_id'))
             instance.delete()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_200_OK,
                 message=f'Лекарственное средство {instance.drug_name} удалено',
                 http_status=status.HTTP_200_OK)
         except Drug.DoesNotExist:
             traceback.print_exc()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Ошибка определения удаляемого ЛС',
                 http_status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -261,7 +261,7 @@ class SideEffectAPI(APIView):
         if serializer.is_valid():
             try:
                 serializer.save()
-                return CustomResponse.response(
+                return CustomResponse(
                     data={
                         self.ID: serializer.data[self.ID],
                         self.SE_NAME: serializer.data[self.SE_NAME]
@@ -271,27 +271,27 @@ class SideEffectAPI(APIView):
                              ' добавлен'),
                     http_status=status.HTTP_200_OK)
             except IntegrityError:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=(f'Побочный эффект {request.data.get("se_name")}'
                              ' уже существует'),
                     http_status=status.HTTP_400_BAD_REQUEST)
             except Exception:
                 traceback.print_exc()
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message=SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         if "se_name" in serializer.errors:
             for error in serializer.errors["se_name"]:
                 if " уже существует" in error.lower():
-                    return CustomResponse.response(
+                    return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=(('Побочное действие '
                                   f'{request.data.get("se_name")}'
                                   ' уже существует')),
                         http_status=status.HTTP_400_BAD_REQUEST)
-        return CustomResponse.response(
+        return CustomResponse(
             status=status.HTTP_400_BAD_REQUEST,
             message=(f'Побочный эффект {request.data.get("se_name")}'
                      'уже существует'),
@@ -305,7 +305,7 @@ class SideEffectAPI(APIView):
         if not se_id:
             serializer = SideEffectSerializer(SideEffect.objects.all(),
                                               many=True)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="Список побочных эффектов получен",
@@ -314,18 +314,18 @@ class SideEffectAPI(APIView):
         # Если se_id указан, пытаемся получить один
         try:
             serializer = SideEffectSerializer(SideEffect.objects.get(pk=se_id))
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="Побочный эффект получен",
                 http_status=status.HTTP_200_OK)
         except SideEffect.DoesNotExist:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message="Побочный эффект не найден",
                 http_status=status.HTTP_404_NOT_FOUND)
         except Exception:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -337,17 +337,17 @@ class SideEffectAPI(APIView):
             instance = SideEffect.objects.get(
                 pk=request.query_params.get('se_id'))
             instance.delete()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_200_OK,
                 message=f'Побочное действие "{instance.se_name}" удалено',
                 http_status=status.HTTP_200_OK)
         except SideEffect.DoesNotExist:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Ошибка определения удаляемого объекта',
                 http_status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -362,7 +362,7 @@ class DrugSideEffectView(APIView):
         update_data = request.data.get('update_rsgs')
 
         if not update_data or not isinstance(update_data, list):
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Передан некорректный формат данных',
                 http_status=status.HTTP_400_BAD_REQUEST)
@@ -376,25 +376,25 @@ class DrugSideEffectView(APIView):
             logger.info(f'rank = {rank}')
 
             if not drug_id:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='id ЛС не передан',
                     http_status=status.HTTP_400_BAD_REQUEST)
 
             if not se_id:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='id побочного действия не передан',
                     http_status=status.HTTP_400_BAD_REQUEST)
 
             if not Drug.objects.filter(id=drug_id).exists():
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_404_NOT_FOUND,
                     message=f'ЛС с id={drug_id} не найдено',
                     http_status=status.HTTP_404_NOT_FOUND)
 
             if not SideEffect.objects.filter(id=se_id).exists():
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_404_NOT_FOUND,
                     message=f'Побочный эффект с id={se_id} не найден',
                     http_status=status.HTTP_404_NOT_FOUND)
@@ -405,7 +405,7 @@ class DrugSideEffectView(APIView):
                     side_effect_id=se_id
                 )
             except DrugSideEffect.DoesNotExist:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_404_NOT_FOUND,
                     message=(f'Связь drug_id={drug_id} '
                              f'и se_id={se_id} не найдена'),
@@ -416,13 +416,13 @@ class DrugSideEffectView(APIView):
             if serializer.is_valid():
                 serializer.save()
             else:
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=f'Некорректный ранг: {serializer.errors}',
                     http_status=status.HTTP_400_BAD_REQUEST
                 )
 
-        return CustomResponse.response(
+        return CustomResponse(
             status=status.HTTP_200_OK,
             message='Ранги успешно обновлены',
             http_status=status.HTTP_200_OK
@@ -433,18 +433,18 @@ class DrugSideEffectView(APIView):
         try:
             serializer = DrugSideEffectSerializer(DrugSideEffect.objects.all(),
                                                   many=True)
-            return CustomResponse.response(
+            return CustomResponse(
                 data=serializer.data,
                 status=status.HTTP_200_OK,
                 message="Ранги получены",
                 http_status=status.HTTP_200_OK)
         except ValueError:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message="Ошибка при получении ранга",
                 http_status=status.HTTP_400_BAD_REQUEST)
         except Exception:
-            return CustomResponse.response(
+            return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message="Неизвестная ошибка сервера",
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -474,7 +474,7 @@ class ExcelLoadView(APIView):
             # return response
             with open(loader.export_path, 'rb') as file:
                 encoded = base64.b64encode(file.read()).decode('utf-8')
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_200_OK,
                 message='Эксель-файл успешно экспортирован',
                 http_status=status.HTTP_200_OK,
@@ -484,7 +484,7 @@ class ExcelLoadView(APIView):
                 }
             )
         except FileExistsError:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message=self.NOT_FILE,
                 http_status=status.HTTP_404_NOT_FOUND
@@ -500,7 +500,7 @@ class ExcelLoadView(APIView):
             excel_file = serializer.validated_data['file']
 
             if not excel_file.name.endswith('.xlsx'):
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Файл должен быть .xlsx',
                     http_status=status.HTTP_400_BAD_REQUEST
@@ -527,14 +527,14 @@ class ExcelLoadView(APIView):
                                          'неуникальные названия ЛС и ПД'))
             except IncorrectFile as error:
                 logger.error(f'Ошибка при импорте Excel: {str(error)}')
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message=str(error),
                     http_status=status.HTTP_400_BAD_REQUEST)
             except Exception as error:
                 traceback.print_exc()
                 logger.error(f'Ошибка при импорте Excel: {str(error)}')
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     message=self.IMPORT_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -542,13 +542,13 @@ class ExcelLoadView(APIView):
 
             logger.info('Импорт данных в БД закончился')
 
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_200_OK,
                 message=self.SUCCESSFUL_IMPORT,
                 http_status=status.HTTP_200_OK
             )
 
-        return CustomResponse.response(
+        return CustomResponse(
             status=status.HTTP_400_BAD_REQUEST,
             message=self.INCORRECT_FILE,
             http_status=status.HTTP_400_BAD_REQUEST
@@ -577,7 +577,7 @@ class ModifiedExcelLoadView(ExcelLoadView):
             return response
         except FileExistsError:
             traceback.print_exc()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message=self.NOT_FILE,
                 http_status=status.HTTP_404_NOT_FOUND
@@ -617,14 +617,14 @@ class BannedPairLoadView(APIView):
                     loader.load_to_db()
                 except IncorrectFile as error:
                     logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
-                    return CustomResponse.response(
+                    return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message=str(error),
                         http_status=status.HTTP_400_BAD_REQUEST)
                 except Exception as error:
                     traceback.print_exc()
                     logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
-                    return CustomResponse.response(
+                    return CustomResponse(
                         status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                         message=self.IMPORT_ERROR,
                         http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -632,20 +632,20 @@ class BannedPairLoadView(APIView):
 
                 logger.info('Импорт данных в БД закончился')
 
-                return CustomResponse.response(
+                return CustomResponse(
                     status=status.HTTP_200_OK,
                     message=self.SUCCESSFUL_IMPORT,
                     http_status=status.HTTP_200_OK
                 )
 
             else:
-                return CustomResponse.response(
+                return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message='Файл должен быть .csv',
                         http_status=status.HTTP_400_BAD_REQUEST
                     )
 
-        return CustomResponse.response(
+        return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message=self.INCORRECT_FILE,
                 http_status=status.HTTP_400_BAD_REQUEST

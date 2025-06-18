@@ -13,7 +13,7 @@ class API404(APIView):
 
     def _not_found(self):
         """Метод отправки сообщения об ошибке."""
-        return CustomResponse.response(
+        return CustomResponse(
             status=404,
             message="Ресурс не найден.",
             http_status=status.HTTP_404_NOT_FOUND

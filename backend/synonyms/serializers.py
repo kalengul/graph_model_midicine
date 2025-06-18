@@ -1,3 +1,5 @@
+import os
+
 from rest_framework import serializers
 from .models import SynonymGroup, Synonym
 
@@ -55,4 +57,20 @@ class SynonymCreateSerializer(serializers.Serializer):
          allow_empty=False,
          help_text="Список текстов новых синонимов"
      )
-     
+
+
+class FileUploadSerializer(serializers.Serializer):
+    """Сериализатор для входных файлов с синоннимами."""
+
+    file = serializers.FileField()
+
+    def validate_file(self, file):
+        """Проверка файла."""
+        valid_extensions = ['.json']
+        ext = os.path.splitext(file.name)[1].lower()
+
+        if ext not in valid_extensions:
+            raise serializers.ValidationError(f'Неверное расширение файла: {ext}. '
+                                              f'Разрешены только: {valid_extensions}'
+            )
+        return file

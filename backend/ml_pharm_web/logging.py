@@ -53,6 +53,12 @@ if not DEBUG:
             'formatter': 'detailed',
             'encoding': 'utf-8'
         },
+        'synonyms_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(log_dir, 'synonyms.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
+        }
     })
 
 # Назначим хендлеры по логгерам
@@ -77,6 +83,11 @@ loggers = {
         'level': 'INFO',
         'propagate': False
     },
+    'synonyms': {
+        'handlers': ['console'] + ([] if DEBUG else ['synonyms_file']),
+        'level': 'DEBUG',
+        'propagate': False
+    }
 }
 
 LOGGING = {

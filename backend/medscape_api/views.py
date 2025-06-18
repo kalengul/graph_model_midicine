@@ -54,7 +54,7 @@ class InteractionMedScapeView(APIView):
             drugs_list = [DD.objects.get(pk=drug).drug_name for drug in drugs]
 
             if len(drugs_list) == 1:
-                return CustomResponse.response(
+                return CustomResponse(
                     data={},
                     status=status.HTTP_204_NO_CONTENT,
                     message='Лекарственное средство с самим собой не взаимодействует',
@@ -83,7 +83,7 @@ class InteractionMedScapeView(APIView):
                             interactions[0][0]['classification'])
                     })
             logger.debug('Совместимость ЛС по MedScape успешно расcчитана')
-            return CustomResponse.response(
+            return CustomResponse(
                     data=context,
                     status=status.HTTP_200_OK,
                     message='Совместимость ЛС по MedScape успешно расcчитана',
@@ -92,7 +92,7 @@ class InteractionMedScapeView(APIView):
         except ObjectDoesNotExist:
             traceback.print_exc()
             logger.debug('Ресурс не найден')
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message='Ресурс не найден',
                 http_status=status.HTTP_404_NOT_FOUND
@@ -100,7 +100,7 @@ class InteractionMedScapeView(APIView):
         
         except WrongInputDataError:
             logger.debug('Обязательный параметр drugs отсутствует или некорректный')
-            return CustomResponse.response(
+            return CustomResponse(
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Обязательный параметр drugs отсутствует или некорректный',
                     http_status=status.HTTP_400_BAD_REQUEST
@@ -108,7 +108,7 @@ class InteractionMedScapeView(APIView):
         
         except WrongDrugNumberError:
             logger.debug('Укажите два препарата')
-            return CustomResponse.response(
+            return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
                         message='Укажите два препарата',
                         http_status=status.HTTP_400_BAD_REQUEST
@@ -116,7 +116,7 @@ class InteractionMedScapeView(APIView):
         
         except Exception:
             traceback.print_exc()
-            return CustomResponse.response(
+            return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)

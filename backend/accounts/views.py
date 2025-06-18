@@ -17,7 +17,7 @@ class LoginUser(APIView):
         password = request.data.get('password')
 
         if not username or not password:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=400,
                 message="Логин и пароль обязательны",
                 http_status=status.HTTP_400_BAD_REQUEST
@@ -25,7 +25,7 @@ class LoginUser(APIView):
 
         user = authenticate(username=username, password=password)
         if user is None:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=401,
                 message="Неверные учетные данные",
                 http_status=status.HTTP_401_UNAUTHORIZED
@@ -42,7 +42,7 @@ class LoginUser(APIView):
         else:
             role = "no_role"
 
-        return CustomResponse.response(
+        return CustomResponse(
             data={
                 "token": token.key, 
                 "username": username, 
@@ -67,7 +67,7 @@ class LogoutUser(APIView):
             except Token.DoesNotExist:
                 pass
 
-        return CustomResponse.response(
+        return CustomResponse(
             message="Выход выполнен успешно",
             http_status=status.HTTP_200_OK
         )
@@ -79,20 +79,20 @@ class TokenCheck(APIView):
         req_username = request.data.get('username')
 
         if not req_username:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=400,
                 message="Поле 'username' обязательно",
                 http_status=status.HTTP_400_BAD_REQUEST
             )
 
         if request.user.username != req_username:
-            return CustomResponse.response(
+            return CustomResponse(
                 status=403,
                 message="Имя пользователя не соответствует токену",
                 http_status=status.HTTP_403_FORBIDDEN
             )
 
-        return CustomResponse.response(
+        return CustomResponse(
             data={"username": request.user.username},
             status=200,
             message="Токен валиден и принадлежит пользователю",

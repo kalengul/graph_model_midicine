@@ -117,10 +117,6 @@ class DBManipulator(Loader):
         - SifeEffect;
         - DrugSifeEffect.
         """
-        # DrugGroup.objects.all().delete()
-        # DrugSideEffect.objects.all().delete()
-        # Drug.objects.all().delete()
-        # SideEffect.objects.all().delete()
         logger.debug('Удаление с CleanProcessor')
         cleaner = CleanProcessor().get_cleaner()
         cleaner.clear_table()
