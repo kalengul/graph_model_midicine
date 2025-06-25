@@ -173,3 +173,4 @@ REST_FRAMEWORK = {
 }
 
 TXT_DB_PATH = os.path.join(BASE_DIR, 'txt_files_db')
+BACKUP_PATH = os.path.join(BASE_DIR, 'backup')

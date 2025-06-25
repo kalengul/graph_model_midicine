@@ -32,7 +32,8 @@ logger = logging.getLogger('synonyms')
 class SynonymGroupAPI(APIView):
     @bearer_token_required
     def get(self, request):
-        serializer = SynonymGroupListSerializer(SynonymGroup.objects.all(), many=True)
+        serializer = SynonymGroupListSerializer(SynonymGroup.objects.all(),
+                                                many=True)
 
         return CustomResponse(
             status=status.HTTP_200_OK,
@@ -60,7 +61,8 @@ class SynonymGroupAPI(APIView):
             return CustomResponse(
                     data=serializer.data,
                     status=status.HTTP_200_OK,
-                    message=(f'Группа Синонимов {request.data.get("name")} добавлена'),
+                    message=(f'Группа Синонимов {request.data.get("name")}'
+                             ' добавлена'),
                     http_status=status.HTTP_200_OK,
                 )
             
