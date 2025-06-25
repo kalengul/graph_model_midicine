@@ -76,13 +76,21 @@ export const Nav = ()=>{
                                         {elem.title}
                                     </a>
                                 </li>
-                            ) :(
+                            ) :
+                            ((elem.slug === "/computationMedScape") ? (
+                                isAuth && 
                                 <li className='nav-item mb-3 nav-main' key={index}>
                                     <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
                                         {elem.title}
                                     </a>
                                 </li>
-                            ))
+                            ): (
+                                <li className='nav-item mb-3 nav-main' key={index}>
+                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
+                                        {elem.title}
+                                    </a>
+                                </li>
+                            ))) 
                         )}
 
                         <div className='nav-footer'>
