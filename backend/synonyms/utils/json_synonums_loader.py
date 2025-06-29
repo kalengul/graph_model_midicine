@@ -39,10 +39,12 @@ class InnerJSONSynonymLoader(SynonymLoader):
         """Экспорт синонимов из БД в json-словаря."""
         clusters = OrderedDict()
 
-        groups = SynonymGroup.objects.filter(synonyms__is_changed=True).distinct().order_by('id')
+        groups = SynonymGroup.objects.filter(synonyms__st_id__gt=0
+                                             ).distinct().order_by('id')
 
         for index, group in enumerate(groups):
-            synonyms = group.synonyms.filter(is_changed=True).values_list('name', flat=True)
+            synonyms = group.synonyms.filter(st_id__gt=0).values_list('name',
+                                                                      flat=True)
             clusters[f'cluster_{index}'] = {
                 'labels': list(synonyms)
             }
