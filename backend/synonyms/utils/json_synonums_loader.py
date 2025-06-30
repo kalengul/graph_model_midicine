@@ -29,11 +29,27 @@ class InnerJSONSynonymLoader(SynonymLoader):
     IMPORT_PATH = 'exported_synonyms.json'
     UNDEFINITED = 'Не определено'
 
+    GROUP_STATUS_COLORS = [
+        {
+            'name': 'Group_1',
+            'code': None
+        },
+        {
+            'name': 'Group_2',
+            'code': '#DE049D'
+        },
+        {
+            'name': 'Group_3',
+            'code': '#665F78'
+        }
+    ]
+
     def import_synonyms(self, clusters_data=None):
         """Импорт синонимов в БД."""
 
-        SynonymStatus.objects.create(st_name=self.UNDEFINITED,
-                                     st_code='#FF1493')
+        for status in self.GROUP_STATUS_COLORS:
+            SynonymStatus.objects.create(st_name=status['name'],
+                                         st_code=status['code'])
 
         clusters_data = clusters_data or open(
             os.path.join(settings.TXT_DB_PATH, self.IMPORT_PATH),
@@ -50,12 +66,12 @@ class InnerJSONSynonymLoader(SynonymLoader):
         """Экспорт синонимов из БД в json-словаря."""
         clusters = OrderedDict()
 
-        groups = SynonymGroup.objects.filter(
+        groups = SynonymGroup.objects.exclude(
             synonyms__st_id__st_name=self.UNDEFINITED
         ).distinct().order_by('id')
 
         for index, group in enumerate(groups):
-            synonyms = group.synonyms.filter(
+            synonyms = group.synonyms.exclude(
                 st_id__st_name=self.UNDEFINITED).values_list('name',
                                                              flat=True)
             clusters[f'cluster_{index}'] = {

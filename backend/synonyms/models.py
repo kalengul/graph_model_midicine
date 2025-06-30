@@ -64,7 +64,8 @@ class SynonymStatus(models.Model):
                                unique=True,
                                verbose_name='название статуса синонима')
     st_code = models.CharField(max_length=COLOR_MAX_LENGTH,
-                               verbose_name='цвет статуса')
+                               verbose_name='цвет статуса',
+                               null=True)
 
     def __str__(self):
         return self.st_name

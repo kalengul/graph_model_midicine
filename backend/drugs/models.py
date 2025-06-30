@@ -205,8 +205,13 @@ class DrugSideEffect(models.Model):
 class BannedDrugPair(models.Model):
     """Пара ЛС."""
 
-    first_drug = models.CharField(max_length=MAX_LENGTH, verbose_name='Первое ЛС')
-    second_drug = models.CharField(max_length=MAX_LENGTH, verbose_name='Второе ЛС')
+    first_drug = models.CharField(max_length=MAX_LENGTH,
+                                  verbose_name='Первое ЛС')
+    second_drug = models.CharField(max_length=MAX_LENGTH,
+                                   verbose_name='Второе ЛС')
+    comment = models.TextField(null=True,
+                               blank=True,
+                               verbose_name='Комментарий')
 
     def __str__(self):
         return f'Пара ЛС: {self.first_drug} и {self.second_drug}'
