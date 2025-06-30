@@ -13,7 +13,7 @@
 |`python manage.py export_data --txt`|Выгрузка данных из БД в txt-файлов по умолчанию|
 |`python manage.py load_medscape_data`|Заполнение БД Medscape|
 |`python manage.py import_synonyms`|Заполнение БД синонимов|
-|`python manage.py export_synonyms`|Выгрузка БД синонимов|
+|`python manage.py export_synonyms`|Выгрузка из БД синонимов|
 |`python manage.py full_load_data`|Полная загрузка данных (выполняет `custom_clear`, `clear_synonyms`, `migrate`, `import_data`, `import_synonyms`)|
 |`python manage.py runserver`|Запуск сервера|
 |`python manage.py test_initialization_with_sqlite`|Инициализация тестовыми данными с SQLite|
