@@ -26,13 +26,14 @@ class InnerJSONSynonymLoader(SynonymLoader):
     LABELS = 'labels'
     REPLACED = 'cluster_'
     REPLACING = 'Кластер_'
-    IMPORT_PATH = 'UMAPStrategy_AgglomerativeStrategy_clusters200_.json'
+    IMPORT_PATH = 'exported_synonyms.json'
+    UNDEFINITED = 'Не определено'
 
     def import_synonyms(self, clusters_data=None):
         """Импорт синонимов в БД."""
 
-        status = SynonymStatus.objects.create(st_name='Не определено',
-                                              st_code='#FF1493')
+        SynonymStatus.objects.create(st_name=self.UNDEFINITED,
+                                     st_code='#FF1493')
 
         clusters_data = clusters_data or open(
             os.path.join(settings.TXT_DB_PATH, self.IMPORT_PATH),
@@ -43,18 +44,20 @@ class InnerJSONSynonymLoader(SynonymLoader):
             group = SynonymGroup.objects.create(
                 name=cluster.replace(self.REPLACED, self.REPLACING))
             for synonym in clusters_data[self.CLUSTERS][cluster][self.LABELS]:
-                Synonym.objects.create(name=synonym, group=group, st_id=status)
+                Synonym.objects.create(name=synonym, group=group)
 
     def export_synonyms(self):
         """Экспорт синонимов из БД в json-словаря."""
         clusters = OrderedDict()
 
-        groups = SynonymGroup.objects.filter(synonyms__st_id__gt=0
-                                             ).distinct().order_by('id')
+        groups = SynonymGroup.objects.filter(
+            synonyms__st_id__st_name=self.UNDEFINITED
+        ).distinct().order_by('id')
 
         for index, group in enumerate(groups):
-            synonyms = group.synonyms.filter(st_id__gt=0).values_list('name',
-                                                                      flat=True)
+            synonyms = group.synonyms.filter(
+                st_id__st_name=self.UNDEFINITED).values_list('name',
+                                                             flat=True)
             clusters[f'cluster_{index}'] = {
                 'labels': list(synonyms)
             }
