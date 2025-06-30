@@ -6,7 +6,7 @@ from django.db import connection
 
 from drugs.utils.cleaner import BaseCleaner
 
-from synonyms.models import Synonym, SynonymGroup
+from synonyms.models import Synonym, SynonymGroup, SynonymStatus
 
 
 class SynonymCleaner(BaseCleaner):
@@ -15,11 +15,13 @@ class SynonymCleaner(BaseCleaner):
     table_names = [
         'synonyms_synonym',
         'synonyms_synonymgroup',
+        'synonyms_synonymstatus'
     ]
 
     model_classes = [
         Synonym,
         SynonymGroup,
+        SynonymStatus
     ]
 
 

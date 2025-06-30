@@ -8,6 +8,7 @@ python manage.py import_data
 import traceback
 
 from django.core.management.base import BaseCommand
+
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.loaders import ExcelLoader
 

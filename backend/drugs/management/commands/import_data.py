@@ -1,11 +1,12 @@
 """
-Модуль команды для импорда данных в БД.
+Модуль команды для импорта данных в БД.
 
 Выполняется в терминале:
 python manage.py import_data
 """
 
 from django.core.management.base import BaseCommand
+
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.loaders import ExcelLoader
 

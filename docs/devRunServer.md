@@ -3,6 +3,7 @@
 |:-----:|:--------|
 |`python manage.py custom_clear`|Очистка тестовых данных БД|
 |`python manage.py clean_medscape`|Очистка БД Medscape|
+|`python manage.py clear_synonyms`|Очистка БД синонимов|
 |`python manage.py migrate`|Миграции|
 |`python manage.py import_data`|Заполнение БД тестовыми данными из excel-файла по умолчанию|
 |`python manage.py import_data --excel "имя файла"`|Заполнение БД тестовыми данными из указанного файла|
@@ -11,6 +12,9 @@
 |`python manage.py export_data --excel "имя файла"`|Выгрузка данных из БД в указанный excel-файл|
 |`python manage.py export_data --txt`|Выгрузка данных из БД в txt-файлов по умолчанию|
 |`python manage.py load_medscape_data`|Заполнение БД Medscape|
+|`python manage.py import_synonyms.py`|Заполнение БД синонимов|
+|`python manage.py export_synonyms.py`|Выгрузка БД синонимов|
+|`python manage.py full_load_data.py`|Полная загрузка данных (выполняет `custom_clear`, `clear_synonyms`, `migrate`, `import_data`, `import_synonyms`)|
 |`python manage.py runserver`|Запуск сервера|
 |`python manage.py test_initialization_with_sqlite`|Инициализация тестовыми данными с SQLite|
 
