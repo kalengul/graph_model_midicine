@@ -20,7 +20,7 @@ from .serializers import (
     DrugListRetrieveSerializer,
     SideEffectSerializer,
     DrugSideEffectSerializer,
-    ExcelFileSerializer
+    FileSerializer
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
@@ -493,7 +493,7 @@ class ExcelLoadView(APIView):
     @bearer_token_required
     def post(self, request, *args, **kwargs):
         """Загрузкад данных из excel-файла в БД."""
-        serializer = ExcelFileSerializer(data=request.data)
+        serializer = FileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
         if serializer.is_valid():   
             logger.info('Импорт данных в БД начался')
@@ -594,7 +594,7 @@ class BannedPairLoadView(APIView):
     @bearer_token_required
     def post(self, request, *args, **kwargs):
         """Загрузка запрещённых в БД."""
-        serializer = ExcelFileSerializer(data=request.data)
+        serializer = FileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
         if serializer.is_valid():
             logger.info('Импорт запрещённых пар ЛС в БД начался')

@@ -4,6 +4,7 @@
 |`python manage.py custom_clear`|Очистка тестовых данных БД|
 |`python manage.py clean_medscape`|Очистка БД Medscape|
 |`python manage.py clear_synonyms`|Очистка БД синонимов|
+|`python manage.py clear_banned_pairs`|Очистка БД запрещённых пар ЛС|
 |`python manage.py migrate`|Миграции|
 |`python manage.py import_data`|Заполнение БД тестовыми данными из excel-файла по умолчанию|
 |`python manage.py import_data --excel "имя файла"`|Заполнение БД тестовыми данными из указанного файла|
@@ -13,8 +14,9 @@
 |`python manage.py export_data --txt`|Выгрузка данных из БД в txt-файлов по умолчанию|
 |`python manage.py load_medscape_data`|Заполнение БД Medscape|
 |`python manage.py import_synonyms`|Заполнение БД синонимов|
-|`python manage.py export_synonyms`|Выгрузка из БД синонимов|
-|`python manage.py full_load_data`|Полная загрузка данных (выполняет `custom_clear`, `clear_synonyms`, `migrate`, `import_data`, `import_synonyms`)|
+|`python manage.py load_banned_pairs`|Заполнение БД синонимов|
+|`python manage.py export_synonyms`|Выгрузка из БД запрещённых пар ЛС|
+|`python manage.py full_load_data`|Полная загрузка данных (выполняет `custom_clear`, `clear_synonyms`, `clear_banned_pairs`, `migrate`, `import_data`, `import_synonyms`, `load_banned_pairs`)|
 |`python manage.py runserver`|Запуск сервера|
 |`python manage.py test_initialization_with_sqlite`|Инициализация тестовыми данными с SQLite|
 

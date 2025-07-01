@@ -32,8 +32,10 @@ class PandasBannedPairLoader(BannedPairLoader):
 
     DRUG1 = 'drug1'
     DRUG2 = 'drug2'
+    COMMENT = 'comment'
     DRUG1_NUMBER = 0
     DRUG2_NUMBER = 1
+    COMMENT_NUMBER = 2
 
     def __init__(self, import_path):
         self.import_path = import_path
@@ -55,13 +57,17 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
             df = pd.read_csv(self.import_path,
                              sep=';')
             
-            df = df.rename(columns={df.columns[self.DRUG1_NUMBER]: self.DRUG1,
-                                    df.columns[self.DRUG2_NUMBER]: self.DRUG2})
+            df = df.rename(
+                columns={df.columns[self.DRUG1_NUMBER]: self.DRUG1,
+                         df.columns[self.DRUG2_NUMBER]: self.DRUG2,
+                         df.columns[self.COMMENT_NUMBER]: self.COMMENT})
 
             logger.debug(f'df.shape = {df.shape}')
         except Exception as error:
-            message = ('Проблема загрузки пар ЛС. '
-                       f'Ошибка чтения csv-файла {os.path.basename(self.import_path)}')
+            message = (
+                'Проблема загрузки пар ЛС. '
+                'Ошибка чтения csv-файла'
+                f' {os.path.basename(self.import_path)}')
             logger.error(message)
             raise PairFileError(message) from error
 
@@ -88,12 +94,20 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
                 seen_pairs.add(normal_pair)
                 unique_rows.append((drug1, drug2))
 
+                comment = row[self.COMMENT]
+                comment = (
+                    None if pd.isna(comment)
+                    else str(comment).strip().lower())
+                print('comment =', comment)
+
                 if (Drug.objects.filter(drug_name__iexact=drug1).exists()
                     and Drug.objects.filter(drug_name__iexact=drug2).exists()):
                     logger.debug('Есть в БД')
                     logger.debug(f'drug1 = {drug1}')
                     logger.debug(f'drug2 = {drug2}')
-                    BannedDrugPair.objects.create(first_drug=drug1, second_drug=drug2)
+                    BannedDrugPair.objects.create(first_drug=drug1,
+                                                  second_drug=drug2,
+                                                  comment=comment)
                 else:
                     logger.debug('Нет  в БД')
                     logger.debug(f'drug1 = {drug1}')

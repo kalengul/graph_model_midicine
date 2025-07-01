@@ -6,6 +6,7 @@ from itertools import combinations
 
 from rest_framework.views import APIView
 from rest_framework import status
+from django.db.models import Q
 
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
@@ -36,11 +37,13 @@ class CalculationAPI(APIView):
             name1 = drug_map[id1].drug_name
             name2 = drug_map[id2].drug_name
 
-            if (BannedDrugPair.objects.filter(first_drug__iexact=name1,
-                                              second_drug__iexact=name2).exists()
-                or BannedDrugPair.objects.filter(first_drug__iexact=name2,
-                                                 second_drug__iexact=name1).exists()):
-                banned_pairs.append((name1, name2))
+            pair = BannedDrugPair.objects.filter(
+                Q(first_drug__iexact=name1, second_drug__iexact=name2) |
+                Q(first_drug__iexact=name2, second_drug__iexact=name1)
+            ).first()
+
+            if pair:
+                banned_pairs.append((name1, name2, pair.comment))
         return banned_pairs
 
 
@@ -73,6 +76,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
         banned = self.check_banned_drug_pair(drugs)
+        logger.debug(f'banned = {banned}')
         if banned:
             return CustomResponse(
                 status=status.HTTP_200_OK,

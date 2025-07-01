@@ -232,7 +232,7 @@ class DrugSideEffectSerializer(serializers.ModelSerializer):
         ]
 
 
-class ExcelFileSerializer(serializers.Serializer):
+class FileSerializer(serializers.Serializer):
     """Сериализатор для файлов."""
 
     file = serializers.FileField()

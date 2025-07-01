@@ -21,10 +21,12 @@ class Command(BaseCommand):
             call_command('custom_clear')
             # call_command('clean_medscape')
             call_command('clear_synonyms')
+            call_command('clear_banned_pairs')
             call_command('migrate')
             call_command('import_data')
             # call_command('load_medscape_data')
             call_command('import_synonyms')
+            call_command('load_banned_pairs')
             self.stdout.write('Полина - Великолепная!')
         except Exception as error:
             self.stderr.write(
