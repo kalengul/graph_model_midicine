@@ -30,7 +30,7 @@ class SynonymListSerializer(serializers.ModelSerializer):
 
     def get_st_id(self, obj):
         """Обработка идентификатора статуса синонимов."""
-        return obj.st_id if obj.st_id else None
+        return obj.st_id.id if obj.st_id else None
 
 
 class SynonymItemSerializer(serializers.Serializer):

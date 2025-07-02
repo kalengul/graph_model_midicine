@@ -59,8 +59,17 @@ class InnerJSONSynonymLoader(SynonymLoader):
         for cluster in clusters_data[self.CLUSTERS].keys():
             group = SynonymGroup.objects.create(
                 name=cluster.replace(self.REPLACED, self.REPLACING))
-            for synonym in clusters_data[self.CLUSTERS][cluster][self.LABELS]:
-                Synonym.objects.create(name=synonym, group=group)
+            for synonym, status in clusters_data[self.CLUSTERS][cluster][self.LABELS]:
+                try:
+                    st_id = (SynonymStatus.objects.get(id=status)
+                             if status else None)
+                except SynonymStatus.DoesNotExist:
+                    st_id = None
+                Synonym.objects.create(
+                    name=synonym,
+                    group=group,
+                    st_id=st_id
+                    )
 
     def export_synonyms(self):
         """Экспорт синонимов из БД в json-словаря."""
@@ -73,7 +82,7 @@ class InnerJSONSynonymLoader(SynonymLoader):
         for index, group in enumerate(groups):
             synonyms = group.synonyms.exclude(
                 st_id__st_name=self.UNDEFINITED).values_list('name',
-                                                             flat=True)
+                                                             'st_id')
             clusters[f'cluster_{index}'] = {
                 'labels': list(synonyms)
             }
@@ -86,7 +95,8 @@ class InnerJSONSynonymLoader(SynonymLoader):
         clusters = OrderedDict()
 
         for index, group in enumerate(SynonymGroup.objects.all()):
-            synonyms = group.synonyms.values_list('name', flat=True)
+            synonyms = group.synonyms.values_list('name',
+                                                  'st_id')
             clusters[f'cluster_{index}'] = {
                 'labels': list(synonyms)
             }

@@ -100,7 +100,9 @@ class SynonymListAPI(APIView):
         
         queryset = Synonym.objects.filter(group_id=sg_id)
         serializer = SynonymListSerializer(queryset, many=True)
-        
+
+        print('serializer.data =', serializer.data)
+
         return CustomResponse(
             status=status.HTTP_200_OK,
             message="Список синонимов получен",
@@ -207,6 +209,7 @@ class LoadSynonymView(APIView):
                 uploaded_file.seek(0)
                 InnerJSONSynonymLoader().import_synonyms(uploaded_file)
             except Exception as second_error:
+                traceback.print_exc()
                 logger.info(('Обычный импорт синонимов не сработал'
                              f' {second_error}'))
                 return CustomResponse(
