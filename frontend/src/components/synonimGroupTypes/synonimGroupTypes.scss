@@ -1,0 +1,10 @@
+span.st_name {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+span.st_name.isActive {
+    font-size: 1.2rem;
+    font-weight: 600;
+}

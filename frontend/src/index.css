@@ -64,6 +64,11 @@ h6{
   font-weight: 700;
 }
 
+p.h7{
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -85,6 +90,11 @@ h6{
 .dg-3{ /*Грипп*/
   color: #fff !important;
   background-color: #31ac47 !important;
+}
+
+input[type="color"]{
+  padding: 0;
+  border: none; 
 }
 
 
