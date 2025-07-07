@@ -130,6 +130,7 @@ export const updateSynStatusColor  = createAsyncThunk("synonyms/updateSynStatusC
 interface ISynonymsState{
     SynonymGroupList: ISynonymGroup[],
     SynonymList: ISynonym[],
+    SynonymList_v1: ISynonym[],
     SelectGr: ISynonymGroup | undefined,
     updateList: ISynItemUpdate[], 
     synStatusList: ISynStatus[],
@@ -140,6 +141,7 @@ interface ISynonymsState{
 const initialState: ISynonymsState = {
     SynonymGroupList: [],
     SynonymList: [],
+    SynonymList_v1: [],
     synStatusList: [],
     SelectGr: undefined,
     activeStatus: undefined,
@@ -161,7 +163,6 @@ const SynonymsSlice = createSlice({
         },
         changeSynStatus(state, action: PayloadAction<string>){
             //Изменение состояния синонима для отображения
-            // console.log(action.payload)
             const synonymIndex: number|undefined = state.SynonymList.findIndex(item=> item.s_id === action.payload)
             let newStatusId: string | undefined = undefined
             if(synonymIndex>=0) 
@@ -177,6 +178,17 @@ const SynonymsSlice = createSlice({
             if(state.updateList){
                 const updateItem: ISynItemUpdate | undefined = state.updateList.find((elem: ISynItemUpdate) =>elem.s_id === action.payload)
                 if(!updateItem) state.updateList.push({s_id: action.payload, st_id: newStatusId})
+                else{
+                    const updateIndex: number = state.updateList.findIndex((elem: ISynItemUpdate)=>elem.s_id===action.payload)
+                    console.log(state.SynonymList_v1)
+                    const oldSynIndex: number = state.SynonymList_v1.findIndex((elem)=>elem.s_id===action.payload)
+                    if(newStatusId === state.SynonymList_v1[oldSynIndex].st_id) {
+                        state.updateList = state.updateList.filter((elem: ISynItemUpdate) => elem.s_id !== action.payload)
+                    } else state.updateList[updateIndex].st_id = newStatusId
+                }
+            } else {
+                state.updateList = []
+                state.updateList.push({s_id: action.payload, st_id: newStatusId})
             }
             // if(state.updateList){
             //     const updateItem: ISynItemUpdate | undefined = state.updateList.find((elem: ISynItemUpdate) =>elem.s_id === action.payload.s_id)
@@ -202,6 +214,7 @@ const SynonymsSlice = createSlice({
                     if(action.payload.data.length === 0) {
                         state.SelectGr = undefined
                         state.SynonymList = []
+                        state.SynonymList_v1 = []
                         state.updateList = []
                     }
                 }
@@ -214,6 +227,7 @@ const SynonymsSlice = createSlice({
         .addCase(fetchSynonymList.fulfilled, (state, action: PayloadAction<IResultGet, string, { arg: string }>)=>{
             if(action.payload.status===200) {
                 state.SynonymList = action.payload.data as ISynonym[]
+                state.SynonymList_v1 = action.payload.data as ISynonym[]
                 state.SelectGr = state.SynonymGroupList.find(sg=>sg.sg_id == action.meta.arg)
                 state.updateList = []
             }
@@ -222,6 +236,7 @@ const SynonymsSlice = createSlice({
                 state.SelectGr = undefined
                 state.message = action.payload.message
                 state.SynonymList = []
+                state.SynonymList_v1 =[]
                 state.updateList = []
             }
         })
