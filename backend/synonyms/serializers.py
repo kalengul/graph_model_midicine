@@ -35,7 +35,26 @@ class SynonymListSerializer(serializers.ModelSerializer):
 
 class SynonymItemSerializer(serializers.Serializer):
     s_id = serializers.IntegerField()
-    st_id = serializers.IntegerField(help_text="Новый флаг изменения/удаления")
+    st_id = serializers.IntegerField(required=False,
+                                     allow_null=True,
+                                     help_text="Новый флаг изменения/удаления")
+
+    def to_internal_value(self, data):
+        data = data.copy()
+        st_id = data.get('st_id')
+
+        if isinstance(st_id, str):
+            if st_id.strip().lower() in ["null", "none", "undefined", ""]:
+                data['st_id'] = None
+            else:
+                try:
+                    data['st_id'] = int(st_id)
+                except ValueError:
+                    raise serializers.ValidationError({
+                        "st_id": "Введите правильное число."
+                    })
+
+        return super().to_internal_value(data)
 
         
 class SynonymUpdateSerializer(serializers.Serializer):

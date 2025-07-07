@@ -171,11 +171,16 @@ class SynonymListAPI(APIView):
 
         for item in serializer.validated_data['list_id']:
             syn = get_object_or_404(Synonym, pk=item['s_id'], group_id=sg_id)
-            syn.st_id = get_object_or_404(SynonymStatus, pk=item['st_id'])
+            # syn.st_id = get_object_or_404(SynonymStatus, pk=item['st_id'])
+            st_id = item.get('st_id', None)
+            if st_id in (None, 'undefined'):
+                syn.st_id = None
+            else:
+                syn.st_id = get_object_or_404(SynonymStatus, pk=st_id)
             syn.save(update_fields=['st_id'])
             ids.append(syn.id)
             updated_ids.append({'s_id': syn.id,
-                                'st_id': item['st_id']})
+                                'st_id': item.get('st_id')})
 
         return CustomResponse(
             status=status.HTTP_200_OK,
