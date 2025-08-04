@@ -94,8 +94,12 @@ class SynonymListAPI(APIView):
 
         if not sg_id:
             return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message="Не указан параметр sg_id",
+                status=status.HTTP_200_OK,
+                data=SynonymListSerializer(
+                    Synonym.objects.all(),
+                    many=True
+                ).data,
+                message="Список синонимов получен",
             )
         
         queryset = Synonym.objects.filter(group_id=sg_id)
