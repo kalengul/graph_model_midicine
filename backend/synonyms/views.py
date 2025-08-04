@@ -3,6 +3,8 @@ from datetime import datetime
 import logging
 import traceback
 
+from django.db.models import IntegerField, F, Func, Value
+from django.db.models.functions import Cast, Substr
 from rest_framework.views import APIView
 from rest_framework import status
 from django.db import IntegrityError
@@ -37,15 +39,24 @@ class SynonymGroupAPI(APIView):
 
     @bearer_token_required
     def get(self, request):
-        serializer = SynonymGroupListSerializer(SynonymGroup.objects.all(),
-                                                many=True)
+        try:
+            queryset = SynonymGroup.objects.annotate(
+                number=Cast(Substr('name', 9), IntegerField())
+            ).order_by('number')
+            # serializer = SynonymGroupListSerializer(SynonymGroup.objects.all().order_by(lambda x: x.split('_')),
+            #                                         many=True)
 
-        return CustomResponse(
-            status=status.HTTP_200_OK,
-            message="Группа синонимов получена",
-            data=serializer.data,        
-        )
-    
+            return CustomResponse(
+                status=status.HTTP_200_OK,
+                message="Группа синонимов получена",
+                data=SynonymGroupListSerializer(queryset, many=True).data,
+                http_status=status.HTTP_200_OK
+            )
+        except Exception:
+            return CustomResponse(status=status.HTTP_400_BAD_REQUEST,
+                                  message='Некорректное имя кластера!',
+                                  http_status=status.HTTP_400_BAD_REQUEST)
+
     @bearer_token_required
     def post(self, request):
         logger.debug(f'request.data = {request.data}')
