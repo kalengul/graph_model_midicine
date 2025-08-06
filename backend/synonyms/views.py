@@ -40,12 +40,11 @@ class SynonymGroupAPI(APIView):
     @bearer_token_required
     def get(self, request):
         try:
-            queryset = SynonymGroup.objects.annotate(
-                number=Cast(Substr('name', 9), IntegerField())
-            ).order_by('number')
-            # serializer = SynonymGroupListSerializer(SynonymGroup.objects.all().order_by(lambda x: x.split('_')),
-            #                                         many=True)
-
+            pattern_groups = SynonymGroup.objects.filter(name__regex=r'^Кластер_\d+$')
+            other_groups = SynonymGroup.objects.exclude(name__regex=r'^Кластер_\d+$')
+            ordered_pattern_groups = pattern_groups.annotate(number=Cast(Substr('name', 9),
+                                                                         IntegerField())).order_by('number')
+            queryset = list(ordered_pattern_groups) + list(other_groups)
             return CustomResponse(
                 status=status.HTTP_200_OK,
                 message="Группа синонимов получена",
