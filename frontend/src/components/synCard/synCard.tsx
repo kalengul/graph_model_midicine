@@ -1,3 +1,4 @@
+import {memo} from "react"
 import styled from 'styled-components';
 import { useAppDispatch } from '../../redux/hooks';
 import {changeSynStatus} from "../../redux/SynonymsSlice"
@@ -14,7 +15,7 @@ interface IStileDiveProps {
     $BgColor: string | undefined;
 }
 
-export const SynCard = (props: ISynCardProps) =>{
+export const SynCard = memo((props: ISynCardProps) =>{
     const dispatch = useAppDispatch()
     const StyledDiv = styled.div<IStileDiveProps>`
         background-color: ${props => props.$BgColor};
@@ -33,4 +34,4 @@ export const SynCard = (props: ISynCardProps) =>{
             </div>
         </StyledDiv>
     )
-}
+})
