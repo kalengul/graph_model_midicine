@@ -1,0 +1,24 @@
+from django.db import models
+
+
+MAX_LENGTH = 255
+
+
+class Contraindication(models.Model):
+    """Противопоказания."""
+
+    name = models.CharField(max_length=MAX_LENGTH,
+                            verbose_name='Название противопоказания')
+    weigth = models.FloatField(null=True,
+                               blank=True,
+                               verbose_name='Вес противопоказания')
+    node_target = models.CharField(max_length=MAX_LENGTH,
+                                   null=True,
+                                   blank=True,
+                                   verbose_name='Соседняя вершина')
+
+    def __str__(self):
+        return f'{self.name} - {self.weigth}'
+
+    class Meta:
+        ordering = ['name']
