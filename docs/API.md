@@ -989,9 +989,14 @@
             "slug": "/computationFortran"
         },
         {
+            "title": "Взаимодействие по Байесу",
+            "slug": "/computationBayes"
+        },
+        {
             "title": "Управление данными",
             "slug": "/dataManage"
-        }
+        },
+       
     ]
 }
 ```
