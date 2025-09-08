@@ -37,10 +37,24 @@ INSTALLED_APPS = [
     'medscape_api',
     'menu',
     'synonyms',
+    'graphs.apps.GraphsConfig',
+    'contraindications.apps.ContraindicationsConfig',
 
     'rest_framework',
     'rest_framework.authtoken',
+
+    'django_plotly_dash.apps.DjangoPlotlyDashConfig',
+    'channels',
 ]
+
+
+ASGI_APPLICATION = "project_name.routing.application"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

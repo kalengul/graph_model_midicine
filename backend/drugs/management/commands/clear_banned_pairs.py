@@ -14,11 +14,12 @@ class Command(BaseCommand):
         """Очистка таблицы запрещённых пар."""
         try:
             BannedDrugPairCleanProcessor().get_cleaner().clear_table()
-            self.stderr.write(self.style.SUCCESS(
+            self.stdout.write(self.style.SUCCESS(
                 'Таблица запрещённых пар очищина успешно!'
             ))
         except Exception as error:
             print('error =', error)
             self.stderr.write(self.style.ERROR(
-                'При очистке таблицы запрещённых пар произошла ошибка.'
+                ('При очистке таблицы запрещённых пар произошла ошибка.'
+                 f'Ошибка: {error}')
             ))

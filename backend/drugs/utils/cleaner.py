@@ -115,4 +115,3 @@ class BannedDrugPairCleanProcessor:
             return PostgresBannedDrugCleaner()
         else:
             raise NotImplementedError(f"Неизвестный движок БД: {engine}")
-
