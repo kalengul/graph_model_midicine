@@ -21,14 +21,12 @@
 ### Пример входных данных
 ```json
 {
-    "data":{
-        "drugs": [1, 2], 
-        "humanData":{
-            "age": "child",
-            "gender": "woman",
-            "cont_list": [1, 2]
-        }
-    },    
+    "drugs": [1, 2], 
+    "humanData":{
+        "age": "child",
+        "gender": "woman",
+        "cont_list": [1, 2]
+    }   
 }
 ```
 ## Выход

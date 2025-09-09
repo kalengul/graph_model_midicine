@@ -260,7 +260,7 @@ class BayeseView(APIView):
 
         drugs = []
 
-        for short_id in serializer.validated_data['data']['drugs']:
+        for short_id in serializer.validated_data['drugs']:
             drugs.append(id2drugs[short_id])
             long_id = short_id2long_id[short_id]
             drug_states_input[long_id] = 1
@@ -316,10 +316,3 @@ class BayeseView(APIView):
             message='Совместимость ЛС по сети Байеса успешно расcчитана',
             data=result
         )
-    
-        # return CustomResponse(
-        #     http_status=status.HTTP_200_OK,
-        #     status=status.HTTP_200_OK,
-        #     message='Совместимость ЛС по сети Байеса успешно расcчитана',
-        #     data=data
-        # )

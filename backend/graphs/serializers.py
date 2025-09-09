@@ -76,11 +76,7 @@ class UpdateGraphSerializer(serializers.ModelSerializer):
 class BayesSerializer(serializers.Serializer):
     """Сериализатор для Байеса."""
 
-    class DataSerializer(serializers.Serializer):
-        """Сериализатор данных из тела запроса."""
-        drugs = serializers.ListField(
-            child=serializers.IntegerField(), required=True
-        )
-        humanData = serializers.DictField(required=False)
-
-    data = DataSerializer()
+    drugs = serializers.ListField(
+        child=serializers.IntegerField(), required=True
+    )
+    humanData = serializers.DictField(required=False)
