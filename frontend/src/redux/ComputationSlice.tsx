@@ -32,6 +32,14 @@ export interface IResultFortran{
   drugs: string[]
 }
 
+export interface IResultBayes{
+  сompatibility_bayes: string | undefined,
+  rank_iteractions: number | undefined,
+  side_effects: ISideEffectComputationFortran[],
+  combinations: IDrugCombination[] | undefined
+  drugs: string[]
+}
+
 export interface IResultMedscape{
   compatibility_medscape: string,
   description: string,
@@ -42,8 +50,10 @@ interface IComputationState {
   computationList: IComputationElem[]
   resultMedscape: IResultMedscape[]
   resultFortran: IResultFortran
+  resultBayes: IResultBayes
   isresultMedscape: boolean
   isresultFortran: boolean
+  isresultBayes: boolean
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -54,6 +64,14 @@ const initStateFortran: IResultFortran = {
     side_effects: [],
     combinations: [],
     // description: "",
+    drugs: [],
+}
+
+const initStateBayes: IResultBayes = {
+    сompatibility_bayes: undefined,
+    rank_iteractions: undefined,
+    side_effects: [],
+    combinations: undefined,
     drugs: [],
 }
 
@@ -68,9 +86,25 @@ export interface sendForm{
   humanData?: string
 }
 
+export interface sendFormBayes{
+  drugs: string[]
+  humanData: IHumanData | undefined
+}
+
 export interface IComputationFortran{
   drugs: IComputationElem[],
   humanData: string,
+}
+
+interface IHumanData{
+  age: string | undefined;
+  gender: "man" | "woman" | undefined;
+  cont_list: number[] | undefined;
+}
+
+export interface IComputationBayes{
+  drugs: IComputationElem[],
+  humanData: IHumanData | undefined,
 }
 
 interface TrunkResult<T = any> {
@@ -117,6 +151,30 @@ export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFo
   }
 });
 
+export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBayes', async (data: IComputationBayes): Promise<TrunkResult<IResultBayes>> => {
+  try {
+    
+      const sendData: sendFormBayes = {drugs:[], humanData: undefined}
+      data.drugs.forEach(e=>sendData.drugs.push(e.id))
+
+      if(data.humanData){
+        sendData.humanData = {age: undefined, gender: undefined, cont_list: []}
+        sendData.humanData.age = data.humanData.age
+        sendData.humanData.gender = data.humanData.gender
+        data.humanData.cont_list?.forEach(e=>sendData.humanData?.cont_list?.push(e))
+      }
+
+      const response = await axios.post('/api/polifarmakoterapiya-bayes/', sendData, {
+        headers:{'Content-Type': 'application/json'},
+      });
+      if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
+      return { status: "err", data: initStateBayes, message:`Ошибка при добавлении совместимости Fortran`}
+  } catch (error) {
+      console.error(`Ошибка при расчете совместимости Fortran:\n`, error);
+      return { status: "err", data:initStateBayes, message:`Ошибка при добавлении совместимости Fortran`}; // Возвращаем пустой массив при ошибке
+  }
+});
+
 const ComputationSlice = createSlice({
     name: 'computation',
     initialState: {
@@ -125,6 +183,8 @@ const ComputationSlice = createSlice({
       isresultMedscape: false,
       resultFortran: initStateFortran,
       isresultFortran: false,
+      resultBayes: initStateBayes,
+      isresultBayes: false,
     } as IComputationState,
     reducers: {
       addValue(state, action){
@@ -162,6 +222,12 @@ const ComputationSlice = createSlice({
           state.isresultFortran = false
           state.computationList = []
         // }
+      },
+
+      initResultBayes(state){
+        state.computationList = []
+        state.isresultBayes = false
+        state.resultBayes = initStateBayes
       }
     },
 
@@ -182,9 +248,17 @@ const ComputationSlice = createSlice({
             state.resultFortran =  action.payload.data
           }
           else if ( action.payload.status === "err") state.isresultFortran = false
-        })  
+        }) 
+        .addCase(iteractionBayes.fulfilled, (state, action: PayloadAction<TrunkResult<IResultBayes>>)=>{
+          if( action.payload.status === 200) 
+          {
+            state.isresultBayes = true
+            state.resultBayes = action.payload.data
+          }
+          else if ( action.payload.status === "err") state.isresultBayes = false
+        })
     },
 })
 
-export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
+export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates, initResultBayes} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationSlice.reducer; //Формирование reduser из набора методов из redusers
