@@ -9,7 +9,6 @@ from drugs.utils.handler404 import API404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dash/', include('django_plotly_dash.urls')),
     path('api/v1/', include('accounts.urls')),
     path('api/v1/', include('drugs.urls')),
     path('api/v1/', include('menu.urls')),

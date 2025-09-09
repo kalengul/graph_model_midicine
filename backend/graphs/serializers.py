@@ -71,3 +71,16 @@ class UpdateGraphSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('Рёбра должны быть список')
 
         return value
+
+
+class BayesSerializer(serializers.Serializer):
+    """Сериализатор для Байеса."""
+
+    class DataSerializer(serializers.Serializer):
+        """Сериализатор данных из тела запроса."""
+        drugs = serializers.ListField(
+            child=serializers.IntegerField(), required=True
+        )
+        humanData = serializers.DictField(required=False)
+
+    data = DataSerializer()

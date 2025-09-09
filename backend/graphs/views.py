@@ -6,14 +6,18 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import get_object_or_404
 
 from drugs.utils.custom_response import CustomResponse
-from .serializers import GraphSerializer, UpdateGraphSerializer
-from .models import Graph
+from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
+                                BayesSerializer)
+from graphs.models import Graph
 from graphs.utils.cleaner_graph_db import CleanProcessor
 from graphs.utils.graph_loader import JSONGraphLoader
 from graphs.utils.graph_manipulator import GraphManipulator
 from graphs.utils.binarizer import Binarizer
 from graphs.utils.merger import Merger
 from graphs.utils.parse_ids import parse_ids
+from graphs.bayes_calculation import (load_combined_data, get_result,
+                                      build_network, calculate_probabilities,
+                                      GRAPHS_4_PATH, PROBABILITIES_PATH)
 
 
 INCORRECT_DATA = 'Некорректные данные'
@@ -221,3 +225,101 @@ class BayeseView(APIView):
             http_status=status.HTTP_200_OK,
             message='Бинарный словарь id-ов сформировался успешно',
             data=bin_ids)
+
+    def post(self, request):
+        """Вычисление сети Байеса."""
+
+        serializer = BayesSerializer(data=request.data)
+        if not serializer.is_valid():
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                http_status=status.HTTP_400_BAD_REQUEST,
+                message='Некорректные данные'
+            )
+
+        short_id2long_id = {
+            3: "38de65bc-cc45-49b8-bd94-d9bc3be57dea",
+            6: "0f2b49cf-6635-4f1f-af0f-29c16c4f3e04",
+            20: "79f54542-ae01-4088-b4fd-3079b0c03504",
+            42: "c4b54c3f-93ef-4139-b4fa-cdad14c7ddc2"
+        }
+
+        id2drugs = {
+            3: "Апиксабан",
+            6: "Бисопролол",
+            20: "Каптоприл",
+            42: "Спиронолактон"
+        }
+
+        drug_states_input = {
+            "38de65bc-cc45-49b8-bd94-d9bc3be57dea": 0,
+            "0f2b49cf-6635-4f1f-af0f-29c16c4f3e04": 0,
+            "79f54542-ae01-4088-b4fd-3079b0c03504": 0,
+            "c4b54c3f-93ef-4139-b4fa-cdad14c7ddc2": 0
+        }
+
+        drugs = []
+
+        for short_id in serializer.validated_data['data']['drugs']:
+            drugs.append(id2drugs[short_id])
+            long_id = short_id2long_id[short_id]
+            drug_states_input[long_id] = 1
+
+        with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f: # Предполагается, что это ваш файл графа
+            graph = json.load(f)
+
+        prob_data, drug_states_input_data, drugs_for_output, combination_description = load_combined_data(
+            graph_data=graph,
+            prob_file=PROBABILITIES_PATH,  # Теперь этот файл - источник общих вероятностей
+            drug_states_input=drug_states_input # А этот - входные состояния препаратов
+        )
+
+        # Построение сети с новыми параметрами
+        network = build_network(graph, prob_data)
+
+        # Перерасчет вероятностей (логирование не меняется)
+        final_probs = calculate_probabilities(network)
+
+        data = get_result(
+            final_probs,
+            graph,
+            drug_states_input_data,
+            drugs_for_output,
+            combination_description
+        )
+
+        result = {
+                    "сompatibility_bayes": "unknown", 
+                    "rank_iteractions": "undefined",
+                    "side_effects": [
+                        {
+                            "сompatibility":"undefined",
+                            "effects": [{
+                                "se_name": "брадикардия",
+                                "rank": 0.1,
+                            }]
+
+                        }],
+                    "combinations":"undefined",
+                    "drugs": drugs   
+            }
+
+        for se in data["side_effects"]:
+            result["side_effects"][0]["effects"].append({
+                "se_name": se,
+                "rank": data["side_effects"][se]["probability"],
+            })
+
+        return CustomResponse(
+            http_status=status.HTTP_200_OK,
+            status=status.HTTP_200_OK,
+            message='Совместимость ЛС по сети Байеса успешно расcчитана',
+            data=result
+        )
+    
+        # return CustomResponse(
+        #     http_status=status.HTTP_200_OK,
+        #     status=status.HTTP_200_OK,
+        #     message='Совместимость ЛС по сети Байеса успешно расcчитана',
+        #     data=data
+        # )
