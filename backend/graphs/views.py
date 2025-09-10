@@ -294,10 +294,7 @@ class BayeseView(APIView):
                     "side_effects": [
                         {
                             "сompatibility":"undefined",
-                            "effects": [{
-                                "se_name": "брадикардия",
-                                "rank": 0.1,
-                            }]
+                            "effects": []
 
                         }],
                     "combinations":"undefined",
