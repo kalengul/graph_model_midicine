@@ -310,6 +310,9 @@ class BayeseView(APIView):
                 "rank": data["side_effects"][se]["probability"],
             })
 
+        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
+                                                  reverse=True)
+
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
