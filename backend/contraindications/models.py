@@ -8,9 +8,9 @@ class Contraindication(models.Model):
     """Противопоказания."""
 
     name = models.CharField(max_length=MAX_LENGTH,
+                            unique=True,
                             verbose_name='Название противопоказания')
-    weigth = models.FloatField(null=True,
-                               blank=True,
+    weight = models.FloatField(default=0.0,
                                verbose_name='Вес противопоказания')
     node_target = models.CharField(max_length=MAX_LENGTH,
                                    null=True,
@@ -18,7 +18,7 @@ class Contraindication(models.Model):
                                    verbose_name='Соседняя вершина')
 
     def __str__(self):
-        return f'{self.name} - {self.weigth}'
+        return f'{self.name} - {self.weight}'
 
     class Meta:
         ordering = ['name']

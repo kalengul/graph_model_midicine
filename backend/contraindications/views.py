@@ -12,22 +12,26 @@ from drugs.utils.custom_response import CustomResponse
 
 def require_contraindication(func):
     @wraps(func)
-    def wrapper(self, request, id=None, *args, **kwargs):
-        if not id:
+    def wrapper(view, request, *args, **kwargs):
+        contraindication_id = (kwargs.get('id')
+                               or request.query_params.get('id'))
+
+        if not contraindication_id:
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Не указан ID изменяемого противопоказания',
             )
         try:
-            contraindication = Contraindication.objects.get(id=id)
+            contraindication = Contraindication.objects.get(
+                id=contraindication_id)
         except ObjectDoesNotExist:
             return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 http_status=status.HTTP_404_NOT_FOUND,
                 message="Противопоказание не найдено"
             )
-        return func(self, request, id=id, contraindication=contraindication,
+        return func(view, request, contraindication=contraindication,
                     *args, **kwargs)
     return wrapper
 
@@ -42,9 +46,11 @@ class ContraindicationView(APIView):
         Если id указан, отправляется в ответе указанный объект.
         В противном случае, отправляется полный список.
         """
-        if id:
+        contraindication_id = id or request.query_params.get('id')
+        if contraindication_id:
             try:
-                contraindication = Contraindication.objects.get(id=id)
+                contraindication = Contraindication.objects.get(
+                    id=contraindication_id)
                 return CustomResponse(
                     status=status.HTTP_200_OK,
                     http_status=status.HTTP_200_OK,
@@ -73,10 +79,10 @@ class ContraindicationView(APIView):
         try:
             serializer.is_valid(raise_exception=True)
             serializer.save()
-            CustomResponse(
+            return CustomResponse(
                 http_status=status.HTTP_201_CREATED,
                 status=status.HTTP_201_CREATED,
-                message='Противокпоказание успешно добавлено',
+                message='Противопоказание успешно добавлено',
                 data=serializer.data)
         except ValueError:
             return CustomResponse(
@@ -94,7 +100,7 @@ class ContraindicationView(APIView):
             )
 
     @require_contraindication
-    def put(self, request, id=None, contraindication=None):
+    def put(self, request, contraindication=None,  *args, **kwargs):
         """Изменение противопоказания."""
         try:
             serializer = ContraindicationDetailSerializer(contraindication,
@@ -117,7 +123,7 @@ class ContraindicationView(APIView):
             )
 
     @require_contraindication
-    def delete(self, request, id=None, contraindication=None):
+    def delete(self, request, contraindication=None,  *args, **kwargs):
         """Удаление противопоказания."""        
         contraindication.delete()
         return CustomResponse(
