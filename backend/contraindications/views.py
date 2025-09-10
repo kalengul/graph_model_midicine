@@ -1,4 +1,5 @@
 from functools import wraps
+import json
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -8,6 +9,7 @@ from contraindications.models import Contraindication
 from contraindications.serializers import (ContraindicationListSerializer,
                                            ContraindicationDetailSerializer)
 from drugs.utils.custom_response import CustomResponse
+from drugs.models import Drug
 
 
 def require_contraindication(func):
@@ -130,4 +132,43 @@ class ContraindicationView(APIView):
             http_status=status.HTTP_204_NO_CONTENT,
             status=status.HTTP_204_NO_CONTENT,
             message='Противопоказание удалено успешно'
+        )
+
+
+class LoadAndBuildDrugContraindications(APIView):
+    """Служебная вьюшка для загрузки противопоказаний ЛС."""
+
+    def post(self, request):
+        """Загрузка противопоказаний и связывание с ЛС."""
+        loaded_file = request.FILES.get('file')
+        if not loaded_file:
+            return CustomResponse(
+                http_status=status.HTTP_400_BAD_REQUEST,
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Файл с ЛС и противопоказания не загружен'
+            )
+
+        data = json.load(loaded_file)
+
+        for drug_name in data:
+            try:
+                drug = Drug.objects.get(drug_name__iexact = drug_name)
+            except Drug.DoesNotExist:
+                return CustomResponse(
+                    http_status=status.HTTP_404_NOT_FOUND,
+                    status=status.HTTP_404_NOT_FOUND,
+                    message=f'В БД нет такого ЛС: {drug_name}'
+                )
+            for name in data[drug_name]:
+                try:
+                    contraindication = Contraindication.objects.get(
+                        name__iexact = name)
+                except Contraindication.DoesNotExist:
+                    contraindication = Contraindication.objects.create(
+                        name=name)
+                drug.contraindications.add(contraindication)
+        return CustomResponse(
+            http_status=status.HTTP_200_OK,
+            status=status.HTTP_200_OK,
+            message='ЛС и противопоказания успешно связаны'
         )
