@@ -3,7 +3,7 @@ import {Form} from 'react-final-form'; //Field
 import { ComputationInputForm } from "../form/computationInputForm/computationInputForm"
 
 import { ComputationBayesValidator } from '../../components/computationBayesForm/computationBayesValidator';
-import { iteractionBayes, IComputationBayes } from '../../redux/ComputationSlice';
+import { iteractionFortran, iteractionBayes, IComputationBayes } from '../../redux/ComputationSlice';
 
 
 export const ComputationBayesForm = () =>{
@@ -14,6 +14,7 @@ export const ComputationBayesForm = () =>{
         if(computationList.length!=0){
             const data: IComputationBayes = {drugs: computationList, humanData: value.humanData}
             dispatch(iteractionBayes(data))
+            dispatch(iteractionFortran({drugs: computationList, humanData: "0"}))
         }
     }
     return(

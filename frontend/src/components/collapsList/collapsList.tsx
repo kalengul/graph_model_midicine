@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import { ISE } from "../../redux/ComputationSlice"
+import { ISE, ICompareData } from "../../redux/ComputationSlice"
 import "./collapsList.scss"
 
 interface ICollapsListProps{
     title?: string;
     className?: string
-    type: "riscs"|"drugs-combin"
-    content: ISE[] | string[] |undefined
+    type: "riscs"|"compare-riscs"|"drugs-combin"
+    content: ISE[] | string[] | ICompareData[] | undefined
 }
 
 export const CollapsList = (props: ICollapsListProps) =>{
@@ -35,6 +35,19 @@ export const CollapsList = (props: ICollapsListProps) =>{
                             <span>{e.rank}</span>
                         </div>
                     ))
+                : (props.type === "compare-riscs" ? 
+                    (visibleItems as ICompareData[]).map((e, index)=>
+                        <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
+                            <div>
+                                <span className='me-3'>{index+1}.</span> 
+                                <span>{e.se_name}</span>
+                            </div>
+                            <div className='w-25 flex jc-sb'>
+                                <span>{e.rankBayes}</span>
+                                <span  className='ms-3'>{e.rankFortran}</span>
+                            </div>
+                        </div>
+                    )
                 :
                 (props.type === "drugs-combin" && 
                     (visibleItems as string[]).map((d, index)=>
@@ -45,7 +58,7 @@ export const CollapsList = (props: ICollapsListProps) =>{
                             </div>
                         </div>
                     )
-                )
+                ))
                 }
 
                 {shouldShowToggle && (

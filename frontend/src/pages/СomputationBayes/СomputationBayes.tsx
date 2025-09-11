@@ -1,21 +1,39 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { Nav } from '../../components/nav/nav';
 import { CollapsList } from "../../components/collapsList/collapsList";
 import { ComputationBayesForm } from '../../components/computationBayesForm/computationBayesForm';
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { initResultBayes } from "../../redux/ComputationSlice"
-
+import { initResultBayes, initResultFortran, createCompareData} from "../../redux/ComputationSlice"
 
 export const ComputationBayes = () =>{
+    const [compareView, setCompareView] = useState(false)
+    const [compareTitle, setCompareTitle] = useState("Показать сравнение с Фортраном")
     const dispatch = useAppDispatch()
+
     useEffect(()=>{
         dispatch(initResultBayes())
+        dispatch(initResultFortran())
     }, [dispatch])
     const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
     const resultBayes = useAppSelector(state=>state.computation.resultBayes)
-    console.log(isresultBayes)
-    console.log(resultBayes)
+
+    const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
+    const compareData = useAppSelector(state=>state.computation.compareSide_effects)
+
+    useEffect(()=>{
+        setCompareTitle("Показать сравнение с Фортраном")
+        setCompareView(false)
+    }, [isresultBayes, resultBayes])
+   
+    const CompareWhithFortranHandler = () =>{
+        if (!compareView) {
+            setCompareTitle("Скрыть сравнение с Фортраном")
+            dispatch(createCompareData())
+        }
+        else setCompareTitle("Показать сравнение с Фортраном")
+        setCompareView(!compareView)
+    }
 
     return(
     <div className="flex">
@@ -27,26 +45,32 @@ export const ComputationBayes = () =>{
             <hr/>
             <h4>Результаты оценки совместимости</h4>
             {
-                isresultBayes && <div>
+                isresultBayes && isresultFortran && <div>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
-                    {/* <h5 className="mt-3">Результаты: </h5> */}
-                    {/* <ComputationResults compatibility={resultFortran.сompatibility_fortran} /> */}
+                    <h5 className="mt-3">Риски побочных эффектов: </h5>
 
-                    {/* {(resultFortran.сompatibility_fortran.trim()!=="banned") &&
-                    <> */}
-                        <h5 className="mt-3">Риски побочных эффектов: </h5>
                     
-                        {resultBayes.side_effects &&
-                            <CollapsList
-                                title = "Высокий уровень риска появления побочных эффектов"
-                                className="ComputationResults default"
-                                type="riscs"
-                                content= {resultBayes.side_effects[0].effects}
-                            />
-                        }
+                
+                    {!compareView && resultBayes.side_effects &&
+                        <CollapsList
+                            title = ""
+                            className="ComputationResults default"
+                            type="riscs"
+                            content= {resultBayes.side_effects[0].effects}
+                        />
+                    }
+                    {
+                        compareView && (compareData.length>0) && 
+                        <CollapsList
+                            title = ""
+                            className="ComputationResults default"
+                            type="compare-riscs"
+                            content= {compareData}
+                        />
+                    }
 
-                    {/* </>} */}
-                    </div>
+                    <button className="btn send-btn mt-3" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
+                </div>      
             }
         </main>
     </div>
