@@ -72,7 +72,7 @@ class ContraindicationView(APIView):
         return CustomResponse(
             status=status.HTTP_200_OK,
             http_status=status.HTTP_200_OK,
-            message='Противопоказания успешно получены',
+            message='Группа противопоказаний получена',
             data=serializer.data)
 
     def post(self, request):
@@ -82,8 +82,8 @@ class ContraindicationView(APIView):
             serializer.is_valid(raise_exception=True)
             serializer.save()
             return CustomResponse(
-                http_status=status.HTTP_201_CREATED,
-                status=status.HTTP_201_CREATED,
+                http_status=status.HTTP_200_OK,
+                status=status.HTTP_200_OK,
                 message='Противопоказание успешно добавлено',
                 data=serializer.data)
         except ValueError:
@@ -115,6 +115,12 @@ class ContraindicationView(APIView):
                 message='Противопоказание изменено успешно',
                 data=serializer.data
             )
+        except ValueError:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                http_status=status.HTTP_400_BAD_REQUEST,
+                message='Некорректные данные'
+            )
         except Exception as error:
             message = 'Ошибка изменения противопоказания',
             print(f'{message}. Ошибка: {error}')
@@ -129,8 +135,8 @@ class ContraindicationView(APIView):
         """Удаление противопоказания."""        
         contraindication.delete()
         return CustomResponse(
-            http_status=status.HTTP_204_NO_CONTENT,
-            status=status.HTTP_204_NO_CONTENT,
+            http_status=status.HTTP_200_OK,
+            status=status.HTTP_200_OK,
             message='Противопоказание удалено успешно'
         )
 
