@@ -1,7 +1,8 @@
 from django.urls import path
 
 from contraindications.views import (ContraindicationView,
-                                     LoadAndBuildDrugContraindications)
+                                     LoadAndBuildDrugContraindications,
+                                     ClearContraindication)
 
 
 urlpatterns = [
@@ -11,4 +12,6 @@ urlpatterns = [
          name='contraindications-detail'),
     path('contraindications/load_and_link/',
          LoadAndBuildDrugContraindications.as_view(), name='load_and_link'),
+    path('contraindications/clean/', ClearContraindication.as_view(),
+         name='clean'),
 ]

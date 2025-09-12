@@ -76,7 +76,18 @@ class UpdateGraphSerializer(serializers.ModelSerializer):
 class BayesSerializer(serializers.Serializer):
     """Сериализатор для Байеса."""
 
+    class HumanDataSerializer(serializers.Serializer):
+        """Сериализатор дааных о пациенте."""
+
+        age = serializers.CharField(required=False, allow_null=True,
+                                    allow_blank=True)
+        gender = serializers.CharField(required=False, allow_null=True,
+                                       allow_blank=True)
+        cont_list = serializers.ListField(
+            child=serializers.IntegerField(required=False, allow_null=True),
+            required=False, allow_empty=True, allow_null=True, default=list)
+
     drugs = serializers.ListField(
         child=serializers.IntegerField(), required=True
     )
-    humanData = serializers.DictField(required=False)
+    humanData = HumanDataSerializer(required=False)

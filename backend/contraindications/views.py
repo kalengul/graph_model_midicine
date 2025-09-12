@@ -10,6 +10,8 @@ from contraindications.serializers import (ContraindicationListSerializer,
                                            ContraindicationDetailSerializer)
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
+from contraindications.utils.adapters import ContraAdapter, DrugAdapter
+from contraindications.utils.cleaner import CleanProcessor
 
 
 def require_contraindication(func):
@@ -132,7 +134,7 @@ class ContraindicationView(APIView):
 
     @require_contraindication
     def delete(self, request, contraindication=None,  *args, **kwargs):
-        """Удаление противопоказания."""        
+        """Удаление противопоказания."""
         contraindication.delete()
         return CustomResponse(
             http_status=status.HTTP_200_OK,
@@ -147,6 +149,8 @@ class LoadAndBuildDrugContraindications(APIView):
     def post(self, request):
         """Загрузка противопоказаний и связывание с ЛС."""
         loaded_file = request.FILES.get('file')
+        contras_key = request.POST.get('contras_key')
+        drug_key = request.POST.get('drug_key')
         if not loaded_file:
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
@@ -156,19 +160,23 @@ class LoadAndBuildDrugContraindications(APIView):
 
         data = json.load(loaded_file)
 
-        for drug_name in data:
+        contras_key = None if not contras_key else [contras_key]
+        drug_key = None if not drug_key else [drug_key]
+
+        for item in data:
+            drug_name = DrugAdapter(item, drug_key).name
             try:
-                drug = Drug.objects.get(drug_name__iexact = drug_name)
+                drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 return CustomResponse(
                     http_status=status.HTTP_404_NOT_FOUND,
                     status=status.HTTP_404_NOT_FOUND,
                     message=f'В БД нет такого ЛС: {drug_name}'
                 )
-            for name in data[drug_name]:
+            for name in ContraAdapter(item, contras_key).contras:
                 try:
                     contraindication = Contraindication.objects.get(
-                        name__iexact = name)
+                        name__iexact=name)
                 except Contraindication.DoesNotExist:
                     contraindication = Contraindication.objects.create(
                         name=name)
@@ -178,3 +186,24 @@ class LoadAndBuildDrugContraindications(APIView):
             status=status.HTTP_200_OK,
             message='ЛС и противопоказания успешно связаны'
         )
+
+
+class ClearContraindication(APIView):
+    """Вью полной очистки противопоказания."""
+
+    def delete(self, request):
+        """Очистка от всех противопоказаний."""
+        try:
+            CleanProcessor().get_cleaner().clean()
+            return CustomResponse(
+                status=status.HTTP_200_OK,
+                http_status=status.HTTP_200_OK,
+                message="Таблица противопоказаний очищина успешно"
+            )
+        except Exception as error:
+            return CustomResponse(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=('При очистке противопоказаний возника ошибка.'
+                         f'Ошибка: {error}')
+            )

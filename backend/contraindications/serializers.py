@@ -6,7 +6,6 @@ from contraindications.models import Contraindication
 class BaseContraindicationSerialize(serializers.ModelSerializer):
     """Класс прорадитель для сериализаторов """
 
-    # id = serializers.IntegerField(read_only=True)
     cont_id = serializers.IntegerField(read_only=True, source='id')
     cont_name = serializers.CharField(source='name')
     cont_weigth = serializers.FloatField(source='weight', required=False)
@@ -15,7 +14,6 @@ class BaseContraindicationSerialize(serializers.ModelSerializer):
         """Настройка сериализатора для противопоказаний."""
 
         model = Contraindication
-        # fields = ('id', 'name', 'weight')
         fields = ('cont_id', 'cont_name', 'cont_weigth')
 
 
@@ -27,7 +25,7 @@ class ContraindicationListSerializer(BaseContraindicationSerialize):
     для получения всех противопоказаний.
     """
 
-    def validate_name(self, value):
+    def validate_cont_name(self, value):
         """
         Проверка наличия противопоказания в БД.
 

@@ -18,6 +18,8 @@ from graphs.utils.parse_ids import parse_ids
 from graphs.bayes_calculation import (load_combined_data, get_result,
                                       build_network, calculate_probabilities,
                                       GRAPHS_4_PATH, PROBABILITIES_PATH)
+from contraindications.models import Contraindication
+from drugs.models import Drug
 
 
 INCORRECT_DATA = 'Некорректные данные'
@@ -63,7 +65,6 @@ class GraphView(APIView):
 
     def post(self, request):
         """Добавление графа."""
-
         graph_json, graph_xml, error = self._get_graph_from_file(request)
 
         if error:
@@ -214,10 +215,36 @@ class MergeView(APIView):
 class BayeseView(APIView):
     """Вьюшка для бинарного словаря идентификаторов."""
 
+    def _exist_contraindications(self, drug_ids, contra_ids):
+        """
+        Проверка наличия противопаказаний.
+
+        ПРоверка пересечения противопоказаний у ЛС из комбинации
+        и противопоказаний, указаных в запросе.
+        """
+        exist = False
+        submessages = []
+
+        drugs = Drug.objects.filter(id__in=drug_ids).prefetch_related(
+            "contraindications")
+        for drug in drugs:
+            intersect = drug.contraindications.filter(id__in=contra_ids)
+            if intersect.exists():
+                names = ", ".join(list(intersect.values_list("name", flat=True)))
+                submessages.append(f'{drug.drug_name}: {names}')
+                exist = True
+
+        if submessages:
+            *rest, last = submessages
+            message = ';\n'.join(rest + [last + '.'])
+        else:
+            message = None
+
+        return exist, message
+
     @parse_ids
     def get(self, request, ids, *args, **kwargs):
         """Получение бинарного словаря идентификаторов."""
-
         bin_ids = Binarizer().binarize(ids)
 
         return CustomResponse(
@@ -228,7 +255,6 @@ class BayeseView(APIView):
 
     def post(self, request):
         """Вычисление сети Байеса."""
-
         serializer = BayesSerializer(data=request.data)
         if not serializer.is_valid():
             return CustomResponse(
@@ -236,6 +262,26 @@ class BayeseView(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST,
                 message='Некорректные данные'
             )
+
+        drug_ids = serializer.validated_data['drugs']
+
+        human_data = serializer.validated_data.get('humanData')
+
+        exist = False
+        description = None
+        if human_data:
+            age = human_data["age"]
+            gender = human_data['gender']
+            contraindication_ids = human_data.get('cont_list', [])
+        if contraindication_ids:
+            exist, description = (
+                self._exist_contraindications(drug_ids, contraindication_ids))
+        if exist:
+            return CustomResponse(
+                http_status=status.HTTP_200_OK,
+                status=status.HTTP_200_OK,
+                message=f'Комбнация ЛС запрещена: {description}'
+            )            
 
         short_id2long_id = {
             3: "38de65bc-cc45-49b8-bd94-d9bc3be57dea",
@@ -260,19 +306,20 @@ class BayeseView(APIView):
 
         drugs = []
 
-        for short_id in serializer.validated_data['drugs']:
+        for short_id in drug_ids:
             drugs.append(id2drugs[short_id])
             long_id = short_id2long_id[short_id]
             drug_states_input[long_id] = 1
 
-        with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f: # Предполагается, что это ваш файл графа
+        with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f:
             graph = json.load(f)
 
-        prob_data, drug_states_input_data, drugs_for_output, combination_description = load_combined_data(
-            graph_data=graph,
-            prob_file=PROBABILITIES_PATH,  # Теперь этот файл - источник общих вероятностей
-            drug_states_input=drug_states_input # А этот - входные состояния препаратов
-        )
+        prob_data, drug_states_input_data, drugs_for_output, \
+            combination_description = load_combined_data(
+                graph_data=graph,
+                prob_file=PROBABILITIES_PATH,
+                drug_states_input=drug_states_input
+            )
 
         # Построение сети с новыми параметрами
         network = build_network(graph, prob_data)
@@ -289,15 +336,15 @@ class BayeseView(APIView):
         )
 
         result = {
-                    "сompatibility_bayes": "unknown", 
+                    "сompatibility_bayes": "unknown",
                     "rank_iteractions": "undefined",
                     "side_effects": [
                         {
-                            "сompatibility":"undefined",
+                            "сompatibility": "undefined",
                             "effects": []
 
                         }],
-                    "combinations":"undefined",
+                    "combinations": "undefined",
                     "drugs": drugs   
             }
 
