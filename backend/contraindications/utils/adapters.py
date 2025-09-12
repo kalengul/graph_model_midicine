@@ -7,8 +7,7 @@ class ContraAdapter:
     def __init__(self, item, keys=None):
         """Создание адаптера для ключей противопоказаний."""
         self.item = item
-        self.keys = keys or ['contrindication', 'extracted_contraindication',
-                             'contrindications']
+        self.keys = keys or ['extracted_contraindication',]
 
     @property
     def contras(self):
