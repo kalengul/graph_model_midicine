@@ -16,18 +16,19 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         """Полная загрузка данных в БД."""
-
         try:
             call_command('custom_clear')
             # call_command('clean_medscape')
             call_command('clear_synonyms')
             call_command('clear_banned_pairs')
+            call_command('сlean_contraindications')
             # call_command('clean_graph_db')
             call_command('migrate')
             call_command('import_data')
             # call_command('load_medscape_data')
             call_command('import_synonyms')
             call_command('load_banned_pairs')
+            call_command('load_contraindications_to_db')
             # call_command('load_graphs_to_db')
             self.stdout.write('Полина - Великолепная!!!)')
         except Exception as error:
@@ -36,4 +37,3 @@ class Command(BaseCommand):
                     f'Ошибка при полной загрузки данных в БД: {error}'
                 )
             )
-
