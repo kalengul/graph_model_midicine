@@ -46,6 +46,12 @@ export interface IResultMedscape{
   drugs: string[]
 }
 
+export interface ICompareData{
+  se_name: string,
+  rankFortran: number | "-",
+  rankBayes: number,
+}
+
 interface IComputationState {
   computationList: IComputationElem[]
   resultMedscape: IResultMedscape[]
@@ -54,6 +60,7 @@ interface IComputationState {
   isresultMedscape: boolean
   isresultFortran: boolean
   isresultBayes: boolean
+  compareSide_effects: ICompareData[]
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -185,6 +192,7 @@ const ComputationSlice = createSlice({
       isresultFortran: false,
       resultBayes: initStateBayes,
       isresultBayes: false,
+      compareSide_effects:[],
     } as IComputationState,
     reducers: {
       addValue(state, action){
@@ -228,6 +236,28 @@ const ComputationSlice = createSlice({
         state.computationList = []
         state.isresultBayes = false
         state.resultBayes = initStateBayes
+      },
+
+      createCompareData(state){
+        if(state.isresultBayes && state.isresultFortran){
+          //заполняем побочки и ранги из байеса
+          state.compareSide_effects = state.resultBayes.side_effects[0].effects.map((item: ISE)=>({
+            se_name: item.se_name,
+            rankFortran:  "-",
+            rankBayes: item.rank,
+          }))
+
+          //Добавляем ранги из фортрана
+          state.resultFortran.side_effects.forEach(group=>{
+            group.effects.forEach(effect=>{
+              const index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
+              if (index !== -1){
+                state.compareSide_effects[index].rankFortran = effect.rank
+              }else (console.log(effect.se_name.trim().toLowerCase()))
+            })
+          })
+          
+        } else state.compareSide_effects=[]
       }
     },
 
@@ -260,5 +290,5 @@ const ComputationSlice = createSlice({
     },
 })
 
-export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates, initResultBayes} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
+export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates, initResultBayes, createCompareData} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationSlice.reducer; //Формирование reduser из набора методов из redusers
