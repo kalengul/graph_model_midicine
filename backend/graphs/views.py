@@ -279,8 +279,6 @@ class BayeseView(APIView):
             if not match_found:
                 result.append(effect)
 
-        # return [effect for effect in source_effect
-        #         if effect[self.EFFECT_NAME] not in excluded]
         return result
 
     @parse_ids
@@ -311,6 +309,7 @@ class BayeseView(APIView):
         exist = False
         description = None
         gender = None
+        сompatibility_bayes = 'unknown'
         contraindication_ids = []
         if human_data:
             age = human_data.get("age")
@@ -320,11 +319,7 @@ class BayeseView(APIView):
             exist, description = (
                 self._exist_contraindications(drug_ids, contraindication_ids))
         if exist:
-            return CustomResponse(
-                http_status=status.HTTP_200_OK,
-                status=status.HTTP_200_OK,
-                message=f'Комбнация ЛС запрещена: {description}'
-            )
+            сompatibility_bayes = 'banned'
 
         short_id2long_id = {
             3: "38de65bc-cc45-49b8-bd94-d9bc3be57dea",
@@ -379,7 +374,7 @@ class BayeseView(APIView):
         )
 
         result = {
-                    "сompatibility_bayes": "unknown",
+                    "сompatibility_bayes": сompatibility_bayes,
                     "rank_iteractions": "undefined",
                     "side_effects": [
                         {
@@ -390,6 +385,71 @@ class BayeseView(APIView):
                     "combinations": "undefined",
                     "drugs": drugs
             }
+
+        # result = {
+        #             "сompatibility_bayes": сompatibility_bayes,
+        #             "rank_iteractions": "undefined",
+        #             "side_effects": [
+        #                 {
+        #                     "сompatibility": "undefined",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "compatible",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "caution",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "incompatible",
+        #                     "effects": []
+
+        #                 }
+        #                 ],
+        #             "combinations": "undefined",
+        #             "drugs": drugs
+        #     }
+
+        # max_rank = 0
+        # for se in data["side_effects"]:
+        #     rank = data["side_effects"][se]["probability"]
+        #     if rank > max_rank:
+        #         max_rank = rank
+        #     if not rank:
+        #         result["side_effects"][0]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank < 0.5:
+        #         result["side_effects"][1]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank < 0.75:
+        #         result["side_effects"][2]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank >= 0.75:
+        #         result["side_effects"][3]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+
+        # if max_rank < 0.5:
+        #     сompatibility_bayes = 'compatible'
+        # elif max_rank < 0.75:
+        #     сompatibility_bayes = 'caution'
+        # else:
+        #     сompatibility_bayes = 'incompatible'
+
+        # if not exist:
+        #     result['сompatibility_bayes'] = сompatibility_bayes
 
         for se in data["side_effects"]:
             result["side_effects"][0]["effects"].append({
