@@ -18,8 +18,8 @@ from graphs.utils.parse_ids import parse_ids
 from graphs.bayes_calculation import (load_combined_data, get_result,
                                       build_network, calculate_probabilities,
                                       GRAPHS_4_PATH, PROBABILITIES_PATH)
-from contraindications.models import Contraindication
 from drugs.models import Drug
+from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 
 
 INCORRECT_DATA = 'Некорректные данные'
@@ -33,7 +33,12 @@ class GraphView(APIView):
     GRAPH_XML = 'graph_xml'
 
     def _get_graph_from_file(self, request):
-        """Достаёт файл из запроса и возвращает dict-граф или CustomResponse."""
+        """
+        Получение файл из запроса.
+
+        Достаёт файл из запроса и возвращает dict-граф
+        или CustomResponse.
+        """
         file = request.FILES.get('file')
         file2 = request.FILES.get('file2')
 
@@ -215,6 +220,12 @@ class MergeView(APIView):
 class BayeseView(APIView):
     """Вьюшка для бинарного словаря идентификаторов."""
 
+    MAN = 'man'
+    WOMAN = 'woman'
+    GENDER = 'gender'
+    SIDE_EFFECT = 'side_effects'
+    EFFECT_NAME = "se_name"
+
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
         Проверка наличия противопаказаний.
@@ -230,7 +241,8 @@ class BayeseView(APIView):
         for drug in drugs:
             intersect = drug.contraindications.filter(id__in=contra_ids)
             if intersect.exists():
-                names = ", ".join(list(intersect.values_list("name", flat=True)))
+                names = ", ".join(list(intersect.values_list("name",
+                                                             flat=True)))
                 submessages.append(f'{drug.drug_name}: {names}')
                 exist = True
 
@@ -241,6 +253,35 @@ class BayeseView(APIView):
             message = None
 
         return exist, message
+
+    def _exclude_by_gender(self, source_effect, gender, gender_effects):
+        """
+        Исключение по полу.
+
+        Если gender - man, недопускаются женские ПД,
+        и наоборот, если woman, мужские ПД.
+        """
+        if gender == self.MAN:
+            excluded = gender_effects[self.WOMAN]
+        else:
+            excluded = gender_effects[self.MAN]
+
+        result = []
+        for effect in source_effect:
+            effect_name = effect[self.EFFECT_NAME]
+
+            match_found = False
+            for exc in excluded:
+                if exc in effect_name or effect_name in exc:
+                    match_found = True
+                    break
+
+            if not match_found:
+                result.append(effect)
+
+        # return [effect for effect in source_effect
+        #         if effect[self.EFFECT_NAME] not in excluded]
+        return result
 
     @parse_ids
     def get(self, request, ids, *args, **kwargs):
@@ -269,9 +310,11 @@ class BayeseView(APIView):
 
         exist = False
         description = None
+        gender = None
+        contraindication_ids = []
         if human_data:
-            age = human_data["age"]
-            gender = human_data['gender']
+            age = human_data.get("age")
+            gender = human_data.get('gender')
             contraindication_ids = human_data.get('cont_list', [])
         if contraindication_ids:
             exist, description = (
@@ -281,7 +324,7 @@ class BayeseView(APIView):
                 http_status=status.HTTP_200_OK,
                 status=status.HTTP_200_OK,
                 message=f'Комбнация ЛС запрещена: {description}'
-            )            
+            )
 
         short_id2long_id = {
             3: "38de65bc-cc45-49b8-bd94-d9bc3be57dea",
@@ -345,17 +388,22 @@ class BayeseView(APIView):
 
                         }],
                     "combinations": "undefined",
-                    "drugs": drugs   
+                    "drugs": drugs
             }
 
         for se in data["side_effects"]:
             result["side_effects"][0]["effects"].append({
-                "se_name": se,
+                self.EFFECT_NAME: se,
                 "rank": data["side_effects"][se]["probability"],
             })
 
         result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
                                                   reverse=True)
+
+        if gender:
+            result["side_effects"][0]["effects"] = (
+                self._exclude_by_gender(result["side_effects"][0]["effects"],
+                                        gender, GENDER_SIDE_EFFECT))
 
         return CustomResponse(
             http_status=status.HTTP_200_OK,
