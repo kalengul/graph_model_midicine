@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction, createAsyncThunk} from "@reduxjs/toolkit";
+import {IContElem} from "./ContraindicationsManageSlice"
 import axios from "axios";
 
 export interface IComputationElem {
@@ -6,6 +7,11 @@ export interface IComputationElem {
   drug_name: string,
   dg_id: string,
 }
+
+export interface IContraindicationsElem {
+  id: string,
+  cont_name: string,
+} 
 
 export interface ISE{
   se_name: string,
@@ -54,6 +60,7 @@ export interface ICompareData{
 
 interface IComputationState {
   computationList: IComputationElem[]
+  contList: IContElem[]
   resultMedscape: IResultMedscape[]
   resultFortran: IResultFortran
   resultBayes: IResultBayes
@@ -106,12 +113,12 @@ export interface IComputationFortran{
 interface IHumanData{
   age: string | undefined;
   gender: "man" | "woman" | undefined;
-  cont_list: number[] | undefined;
+  cont_list: string[] | undefined;
 }
 
 export interface IComputationBayes{
   drugs: IComputationElem[],
-  humanData: IHumanData | undefined,
+  humanData: IHumanData ,
 }
 
 interface TrunkResult<T = any> {
@@ -164,21 +171,26 @@ export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBaye
       const sendData: sendFormBayes = {drugs:[], humanData: undefined}
       data.drugs.forEach(e=>sendData.drugs.push(e.id))
 
+      console.log(data.humanData)
+
       if(data.humanData){
-        sendData.humanData = {age: undefined, gender: undefined, cont_list: []}
+        sendData.humanData = {age: undefined, gender: undefined, cont_list: undefined}
         sendData.humanData.age = data.humanData.age
         sendData.humanData.gender = data.humanData.gender
+        if(data.humanData.cont_list) sendData.humanData.cont_list = []
         data.humanData.cont_list?.forEach(e=>sendData.humanData?.cont_list?.push(e))
       }
+
+      console.log(sendData)
 
       const response = await axios.post('/api/polifarmakoterapiya-bayes/', sendData, {
         headers:{'Content-Type': 'application/json'},
       });
       if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
-      return { status: "err", data: initStateBayes, message:`Ошибка при добавлении совместимости Fortran`}
+      return { status: "err", data: initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}
   } catch (error) {
-      console.error(`Ошибка при расчете совместимости Fortran:\n`, error);
-      return { status: "err", data:initStateBayes, message:`Ошибка при добавлении совместимости Fortran`}; // Возвращаем пустой массив при ошибке
+      console.error(`Ошибка при расчете совместимости Байеса:\n`, error);
+      return { status: "err", data:initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}; // Возвращаем пустой массив при ошибке
   }
 });
 
@@ -186,6 +198,7 @@ const ComputationSlice = createSlice({
     name: 'computation',
     initialState: {
       computationList: [],
+      contList: [],
       resultMedscape: [], //initStateMedscape,
       isresultMedscape: false,
       resultFortran: initStateFortran,
@@ -203,6 +216,13 @@ const ComputationSlice = createSlice({
                   state.computationList.push(action.payload.value)
                 }
             break;
+          case "contList":
+            // console.log(action.payload.value)
+            if(!state.contList.find(d=>d.cont_id === action.payload.value.cont_id))
+            {
+                state.contList.push(action.payload.value)
+            }
+            break;
           default:
             break;
         }
@@ -210,9 +230,13 @@ const ComputationSlice = createSlice({
       removeComputationElem (state, action){
         state.computationList = state.computationList.filter(c=>c.id!==action.payload)
       },
+      removeContElem(state, action){
+        state.contList = state.contList.filter(c=>c.cont_id!==action.payload)
+      },
 
       initStates(state){
         state.computationList = []
+        state.contList = []
         state.resultMedscape = []//initStateMedscape
         state.isresultMedscape = false
         state.resultFortran = initStateFortran
@@ -229,11 +253,13 @@ const ComputationSlice = createSlice({
           state.resultFortran = initStateFortran
           state.isresultFortran = false
           state.computationList = []
+          state.contList = []
         // }
       },
 
       initResultBayes(state){
         state.computationList = []
+        state.contList = []
         state.isresultBayes = false
         state.resultBayes = initStateBayes
       },
@@ -290,5 +316,5 @@ const ComputationSlice = createSlice({
     },
 })
 
-export const {addValue, removeComputationElem, initResultMedscape, initResultFortran, initStates, initResultBayes, createCompareData} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
+export const {addValue, removeComputationElem, removeContElem, initResultMedscape, initResultFortran, initStates, initResultBayes, createCompareData} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationSlice.reducer; //Формирование reduser из набора методов из redusers

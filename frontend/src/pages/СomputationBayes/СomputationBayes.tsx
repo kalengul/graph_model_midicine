@@ -5,6 +5,7 @@ import { ComputationBayesForm } from '../../components/computationBayesForm/comp
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { initResultBayes, initResultFortran, createCompareData} from "../../redux/ComputationSlice"
+// import { fetchContraindicationssList } from "../../redux/ContraindicationsManageSlice";
 
 export const ComputationBayes = () =>{
     const [compareView, setCompareView] = useState(false)
@@ -14,6 +15,7 @@ export const ComputationBayes = () =>{
     useEffect(()=>{
         dispatch(initResultBayes())
         dispatch(initResultFortran())
+        
     }, [dispatch])
     const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
     const resultBayes = useAppSelector(state=>state.computation.resultBayes)
