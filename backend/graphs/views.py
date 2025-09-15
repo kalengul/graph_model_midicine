@@ -343,7 +343,7 @@ class BayeseView(APIView):
                 exist, description = (
                     self._exist_contraindications(drug_ids, contraindication_ids))
             if exist:
-                сompatibility_bayes = 'banned-contraindictions'
+                сompatibility_bayes = 'banned-contraindications'
 
             drugs = []
             for id in drug_ids:
@@ -473,12 +473,13 @@ class BayeseView(APIView):
                 status=status.HTTP_200_OK,
                 message='Совместимость ЛС по сети Байеса успешно расcчитана',
                 data=result
-            )        
+            ) 
         except Exception as e:
+            traceback.print_exc()
             return CustomResponse(
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=f'Ошибка: {e} + {traceback.print_exc()}',
+                message=f'Ошибка: {e}',
             )
 
 
