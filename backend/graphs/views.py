@@ -473,50 +473,12 @@ class BayeseView(APIView):
                 message='Совместимость ЛС по сети Байеса успешно расcчитана',
                 data=result
             )
-<<<<<<< Updated upstream
-
-        drug_ids = serializer.validated_data['drugs']
-
-        human_data = serializer.validated_data.get('humanData')
-
-        exist = False
-        description = None
-        gender = None
-        сompatibility_bayes = 'unknown'
-        contraindication_ids = []
-        if human_data:
-            age = human_data.get("age")
-            gender = human_data.get('gender')
-            contraindication_ids = human_data.get('cont_list', [])
-        if contraindication_ids:
-            exist, description = (
-                self._exist_contraindications(drug_ids, contraindication_ids))
-        print('exist =', exist)
-        if exist:
-            сompatibility_bayes = 'banned-contraindictions'
-
-        drugs = []
-        for id in drug_ids:
-            drug = Drug.objects.get(id=id)
-            if not drug:
-                continue
-            drugs.append(drug.drug_name)
-
-        with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f:
-            graph = json.load(f)
-
-        prob_data, drug_states_input_data, drugs_for_output, \
-            combination_description = load_combined_data(
-                graph_data=graph,
-                prob_file=PROBABILITIES_PATH,
-                drug_states_input=self._get_bin_ids(drugs)
-=======
+        
         except Exception as e:
             return CustomResponse(
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=f'Ошибка: {e}',
->>>>>>> Stashed changes
             )
 
 class GraphStorageView(APIView):
