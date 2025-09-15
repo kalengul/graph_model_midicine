@@ -24,7 +24,7 @@ class PostgresCleaner(ContraindicationCleaner):
         """таблицы противопоказаний."""
         with connection.cursor() as cursor:
             cursor.execute(
-                (f'TRUNCATE TABLE "{self.model._meta.db_table}"' 
+                (f'TRUNCATE TABLE "{self.model._meta.db_table}"'
                  'RESTART IDENTITY CASCADE;'))
 
 
@@ -35,7 +35,7 @@ class SQLiteCleaner(ContraindicationCleaner):
         """таблицы противопоказаний."""
         self.model.objects.all().delete()
         with connection.cursor() as cursor:
-            cursor.execute(('DELETE FROM sqlite_sequence'
+            cursor.execute(('DELETE FROM sqlite_sequence '
                             f'WHERE name="{self.model._meta.db_table}"'))
 
 

@@ -22,16 +22,14 @@ class LoadAndBuildDrugContraindications:
         """Загрузка противопоказаний и связывание с ЛС."""
         with open(self.PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
-
         for item in data:
-            drug_name = TextBuilder(item[self.NAME]).lower().strip().text
+            drug_name = TextBuilder(item[self.NAME]).strip().text
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 continue
             for name in item[self.CONTRAS]:
-                name = TextBuilder(name).lower().strip().text
-                print('name =', name)
+                name = TextBuilder(name).strip().text
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)

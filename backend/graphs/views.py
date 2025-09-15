@@ -236,7 +236,7 @@ class BayeseView(APIView):
         """
         Проверка наличия противопаказаний.
 
-        ПРоверка пересечения противопоказаний у ЛС из комбинации
+        Проверка пересечения противопоказаний у ЛС из комбинации
         и противопоказаний, указаных в запросе.
         """
         exist = False
@@ -246,7 +246,13 @@ class BayeseView(APIView):
             "contraindications")
         for drug in drugs:
             intersect = drug.contraindications.filter(id__in=contra_ids)
+            print('intersect =', intersect)
+            print('drug =', drug.drug_name)
+            print('drug.contraindications =', drug.contraindications.all())
+            for contra in drug.contraindications.all():
+                print('contra -', contra.id, contra.name)
             if intersect.exists():
+                print('условие intersect.exists() сработало')
                 names = ", ".join(list(intersect.values_list("name",
                                                              flat=True)))
                 submessages.append(f'{drug.drug_name}: {names}')
@@ -317,170 +323,163 @@ class BayeseView(APIView):
 
     def post(self, request):
         """Вычисление сети Байеса."""
-        try:
-            serializer = BayesSerializer(data=request.data)
-            if not serializer.is_valid():
-                return CustomResponse(
-                    status=status.HTTP_400_BAD_REQUEST,
-                    http_status=status.HTTP_400_BAD_REQUEST,
-                    message='Некорректные данные'
-                )
-
-            drug_ids = serializer.validated_data['drugs']
-
-            human_data = serializer.validated_data.get('humanData')
-
-            exist = False
-            description = None
-            gender = None
-            сompatibility_bayes = 'unknown'
-            contraindication_ids = []
-            if human_data:
-                age = human_data.get("age")
-                gender = human_data.get('gender')
-                contraindication_ids = human_data.get('cont_list', [])
-            if contraindication_ids:
-                exist, description = (
-                    self._exist_contraindications(drug_ids, contraindication_ids))
-            if exist:
-                сompatibility_bayes = 'banned-contraindications'
-
-            drugs = []
-            for id in drug_ids:
-                drug = Drug.objects.get(id=id)
-                if not drug:
-                    continue
-                drugs.append(drug.drug_name)
-
-            with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f:
-                graph = json.load(f)
-
-            prob_data, drug_states_input_data, drugs_for_output, \
-                combination_description = load_combined_data(
-                    graph_data=graph,
-                    prob_file=PROBABILITIES_PATH,
-                    drug_states_input=self._get_bin_ids(drugs)
-                )
-
-            # Построение сети с новыми параметрами
-            network = build_network(graph, prob_data)
-
-            # Перерасчет вероятностей (логирование не меняется)
-            final_probs = calculate_probabilities(network)
-
-            data = get_result(
-                final_probs,
-                graph,
-                drug_states_input_data,
-                drugs_for_output,
-                combination_description
+        graph_storage = GraphStorage()
+        serializer = BayesSerializer(data=request.data)
+        if not serializer.is_valid():
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                http_status=status.HTTP_400_BAD_REQUEST,
+                message='Некорректные данные'
             )
 
-            result = {
-                        "сompatibility_bayes": сompatibility_bayes,
-                        "rank_iteractions": "unknown",
-                        "side_effects": [
-                            {
-                                "сompatibility": "unknown",
-                                "effects": []
+        drug_ids = serializer.validated_data['drugs']
 
-                            }],
-                        "combinations": "unknown",
-                        "drugs": drugs
-                }
+        human_data = serializer.validated_data.get('humanData')
 
-            # result = {
-            #             "сompatibility_bayes": сompatibility_bayes,
-            #             "rank_iteractions": "unknown",
-            #             "side_effects": [
-            #                 {
-            #                     "сompatibility": "unknown",
-            #                     "effects": []
+        exist = False
+        description = None
+        gender = None
+        сompatibility_bayes = 'unknown'
+        contraindication_ids = []
+        if human_data:
+            age = human_data.get("age")
+            gender = human_data.get('gender')
+            contraindication_ids = human_data.get('cont_list', [])
+        if contraindication_ids:
+            exist, description = (
+                self._exist_contraindications(drug_ids, contraindication_ids))
+        if exist:
+            сompatibility_bayes = 'banned-contraindications'
 
-            #                 },
-            #                 {
-            #                     "сompatibility": "compatible",
-            #                     "effects": []
+        drugs = []
+        for id in drug_ids:
+            drug = Drug.objects.get(id=id)
+            if not drug:
+                continue
+            drugs.append(drug.drug_name)
 
-            #                 },
-            #                 {
-            #                     "сompatibility": "caution",
-            #                     "effects": []
+        with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
+            graph = json.load(f)
 
-            #                 },
-            #                 {
-            #                     "сompatibility": "incompatible",
-            #                     "effects": []
-
-            #                 }
-            #                 ],
-            #             "combinations": "unknown",
-            #             "drugs": drugs
-            #     }
-
-            # max_rank = 0
-            # for se in data["side_effects"]:
-            #     rank = data["side_effects"][se]["probability"]
-            #     if rank > max_rank:
-            #         max_rank = rank
-            #     if not rank:
-            #         result["side_effects"][0]["effects"].append({
-            #             self.EFFECT_NAME: se,
-            #             "rank": rank,
-            #         })
-            #     elif rank < 0.5:
-            #         result["side_effects"][1]["effects"].append({
-            #             self.EFFECT_NAME: se,
-            #             "rank": rank,
-            #         })
-            #     elif rank < 0.75:
-            #         result["side_effects"][2]["effects"].append({
-            #             self.EFFECT_NAME: se,
-            #             "rank": rank,
-            #         })
-            #     elif rank >= 0.75:
-            #         result["side_effects"][3]["effects"].append({
-            #             self.EFFECT_NAME: se,
-            #             "rank": rank,
-            #         })
-
-            # if max_rank < 0.5:
-            #     сompatibility_bayes = 'compatible'
-            # elif max_rank < 0.75:
-            #     сompatibility_bayes = 'caution'
-            # else:
-            #     сompatibility_bayes = 'incompatible'
-
-            # if not exist:
-            #     result['сompatibility_bayes'] = сompatibility_bayes
-
-            for se in data["side_effects"]:
-                result["side_effects"][0]["effects"].append({
-                    self.EFFECT_NAME: se,
-                    "rank": data["side_effects"][se]["probability"],
-                })
-
-            result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-                                                      reverse=True)
-
-            if gender:
-                result["side_effects"][0]["effects"] = (
-                    self._exclude_by_gender(result["side_effects"][0]["effects"],
-                                            gender, GENDER_SIDE_EFFECT))
-
-            return CustomResponse(
-                http_status=status.HTTP_200_OK,
-                status=status.HTTP_200_OK,
-                message='Совместимость ЛС по сети Байеса успешно расcчитана',
-                data=result
-            ) 
-        except Exception as e:
-            traceback.print_exc()
-            return CustomResponse(
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=f'Ошибка: {e}',
+        prob_data, drug_states_input_data, drugs_for_output, \
+            combination_description = load_combined_data(
+                graph_data=graph,
+                prob_file=graph_storage.probability_path,
+                drug_states_input=self._get_bin_ids(drugs)
             )
+
+        # Построение сети с новыми параметрами
+        network = build_network(graph, prob_data)
+
+        # Перерасчет вероятностей (логирование не меняется)
+        final_probs = calculate_probabilities(network)
+
+        data = get_result(
+            final_probs,
+            graph,
+            drug_states_input_data,
+            drugs_for_output,
+            combination_description
+        )
+
+        result = {
+                    "сompatibility_bayes": сompatibility_bayes,
+                    "rank_iteractions": "unknown",
+                    "side_effects": [
+                        {
+                            "сompatibility": "unknown",
+                            "effects": []
+
+                        }],
+                    "combinations": "unknown",
+                    "drugs": drugs
+            }
+
+        # result = {
+        #             "сompatibility_bayes": сompatibility_bayes,
+        #             "rank_iteractions": "unknown",
+        #             "side_effects": [
+        #                 {
+        #                     "сompatibility": "unknown",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "compatible",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "caution",
+        #                     "effects": []
+
+        #                 },
+        #                 {
+        #                     "сompatibility": "incompatible",
+        #                     "effects": []
+
+        #                 }
+        #                 ],
+        #             "combinations": "unknown",
+        #             "drugs": drugs
+        #     }
+
+        # max_rank = 0
+        # for se in data["side_effects"]:
+        #     rank = data["side_effects"][se]["probability"]
+        #     if rank > max_rank:
+        #         max_rank = rank
+        #     if not rank:
+        #         result["side_effects"][0]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank < 0.5:
+        #         result["side_effects"][1]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank < 0.75:
+        #         result["side_effects"][2]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+        #     elif rank >= 0.75:
+        #         result["side_effects"][3]["effects"].append({
+        #             self.EFFECT_NAME: se,
+        #             "rank": rank,
+        #         })
+
+        # if max_rank < 0.5:
+        #     сompatibility_bayes = 'compatible'
+        # elif max_rank < 0.75:
+        #     сompatibility_bayes = 'caution'
+        # else:
+        #     сompatibility_bayes = 'incompatible'
+
+        # if not exist:
+        #     result['сompatibility_bayes'] = сompatibility_bayes
+
+        for se in data["side_effects"]:
+            result["side_effects"][0]["effects"].append({
+                self.EFFECT_NAME: se,
+                "rank": data["side_effects"][se]["probability"],
+            })
+
+        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
+                                                    reverse=True)
+
+        if gender:
+            result["side_effects"][0]["effects"] = (
+                self._exclude_by_gender(result["side_effects"][0]["effects"],
+                                        gender, GENDER_SIDE_EFFECT))
+
+        return CustomResponse(
+            http_status=status.HTTP_200_OK,
+            status=status.HTTP_200_OK,
+            message='Совместимость ЛС по сети Байеса успешно расcчитана',
+            data=result
+        )
 
 
 class GraphStorageView(APIView):
