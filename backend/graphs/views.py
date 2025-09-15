@@ -1,6 +1,7 @@
 import json
 import io
 import zipfile
+import traceback
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -460,7 +461,7 @@ class BayeseView(APIView):
                 })
 
             result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-                                                    reverse=True)
+                                                      reverse=True)
 
             if gender:
                 result["side_effects"][0]["effects"] = (
@@ -472,14 +473,14 @@ class BayeseView(APIView):
                 status=status.HTTP_200_OK,
                 message='Совместимость ЛС по сети Байеса успешно расcчитана',
                 data=result
-            )
-        
+            )        
         except Exception as e:
             return CustomResponse(
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=f'Ошибка: {e}',
+                message=f'Ошибка: {e} + {traceback.print_exc}',
             )
+
 
 class GraphStorageView(APIView):
     """Вью экспорта/импрота графов для СБ."""
