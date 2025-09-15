@@ -39,7 +39,7 @@ export interface IResultFortran{
 }
 
 export interface IResultBayes{
-  сompatibility_bayes: string | undefined,
+  сompatibility_bayes: string ,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputationFortran[],
   combinations: IDrugCombination[] | undefined
@@ -82,7 +82,7 @@ const initStateFortran: IResultFortran = {
 }
 
 const initStateBayes: IResultBayes = {
-    сompatibility_bayes: undefined,
+    сompatibility_bayes: "unknown",
     rank_iteractions: undefined,
     side_effects: [],
     combinations: undefined,

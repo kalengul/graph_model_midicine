@@ -340,6 +340,7 @@ class BayeseView(APIView):
         if contraindication_ids:
             exist, description = (
                 self._exist_contraindications(drug_ids, contraindication_ids))
+        print('exist =', exist)
         if exist:
             сompatibility_bayes = 'banned-contraindictions'
 

@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react"
 import { Nav } from '../../components/nav/nav';
+import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
 import { ComputationBayesForm } from '../../components/computationBayesForm/computationBayesForm';
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { initResultBayes, initResultFortran, createCompareData} from "../../redux/ComputationSlice"
 // import { fetchContraindicationssList } from "../../redux/ContraindicationsManageSlice";
+
+import {isRegex} from "../../assets/regex"
 
 export const ComputationBayes = () =>{
     const [compareView, setCompareView] = useState(false)
@@ -50,28 +53,29 @@ export const ComputationBayes = () =>{
                 isresultBayes && isresultFortran && <div>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
                     <h5 className="mt-3">Риски побочных эффектов: </h5>
+                    <ComputationResults compatibility={resultBayes.сompatibility_bayes} />
 
-                    
-                
-                    {!compareView && resultBayes.side_effects &&
-                        <CollapsList
-                            title = ""
-                            className="ComputationResults default"
-                            type="riscs"
-                            content= {resultBayes.side_effects[0].effects}
-                        />
-                    }
-                    {
-                        compareView && (compareData.length>0) && 
-                        <CollapsList
-                            title = ""
-                            className="ComputationResults default"
-                            type="compare-riscs"
-                            content= {compareData}
-                        />
-                    }
+                    {!isRegex(resultBayes.сompatibility_bayes, "banned")&&<div className="mt-3">
+                        {!compareView && resultBayes.side_effects &&
+                            <CollapsList
+                                title = ""
+                                className="ComputationResults default"
+                                type="riscs"
+                                content= {resultBayes.side_effects[0].effects}
+                            />
+                        }
+                        {
+                            compareView && (compareData.length>0) && 
+                            <CollapsList
+                                title = ""
+                                className="ComputationResults default"
+                                type="compare-riscs"
+                                content= {compareData}
+                            />
+                        }
 
-                    <button className="btn send-btn mt-3" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
+                        <button className="btn send-btn mt-3" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
+                    </div>}
                 </div>      
             }
         </main>
