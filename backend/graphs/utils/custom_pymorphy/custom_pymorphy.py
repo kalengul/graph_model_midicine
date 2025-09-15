@@ -1,12 +1,12 @@
 import json
 import re
+from pathlib import Path
 
 from pymorphy3 import MorphAnalyzer
 from django.conf import settings
 
 
-LEMM_PATH = (f"{settings.BASE_DIR}"
-             "\\graphs\\utils\\custom_pymorphy\\custom_lemma_dict.json")
+LEMM_PATH = Path(settings.BASE_DIR) / "graphs" / "utils" / "custom_pymorphy" / "custom_lemma_dict.json"
 
 
 def normalize_text(text):
