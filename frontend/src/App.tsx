@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import {useRoutes}  from './routes';
 import { useAppDispatch } from './redux/hooks';
 import {fetchDrugsList} from './redux/DrugManageSlice'
+import { fetchContraindicationssList } from './redux/ContraindicationsManageSlice';
 import { initStates } from './redux/ComputationSlice';
 import { checkAuth } from './redux/AuthSlice';
 
@@ -12,6 +13,7 @@ function App() {
   useEffect(()=>{
     Promise.all([
       dispatch(fetchDrugsList()),
+      dispatch(fetchContraindicationssList()),
       dispatch(initStates())
     ])
   }, [dispatch])

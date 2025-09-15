@@ -3,6 +3,7 @@
 import json
 import sys
 from typing import Any
+from pathlib import Path
 
 from django.conf import settings
 
@@ -13,8 +14,7 @@ from graphs.utils.process_nx_graph import ProcessNxGraph
 class Merger:
     """Слиятель графов."""
 
-    PATH_SIDE_E_DICT = (f"{settings.BASE_DIR}\\graphs\\utils\\"
-                        "data\\side_e_synonim_dict_all.json")
+    PATH_SIDE_E_DICT = Path(settings.BASE_DIR) / "graphs" / "utils" / "data" / "side_e_synonim_dict_all.json"
 
     def merge(self, ids: list[int]) -> Any:
         processor = ProcessNxGraph()

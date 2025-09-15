@@ -4,13 +4,13 @@ import json
 import random
 from collections import defaultdict
 from itertools import product
+from pathlib import Path
 
 from django.conf import settings
 
 
-PROBABILITIES_PATH = (
-    f'{settings.GRAPH_PATH}\\probabilities_opt.json')
-GRAPHS_4_PATH = f'{settings.GRAPH_PATH}\\graphs_4.json'
+PROBABILITIES_PATH = Path(settings.GRAPH_PATH) / 'probabilities_opt.json'
+GRAPHS_4_PATH = Path(settings.GRAPH_PATH) / 'graphs_4.json'
 
 
 class BayesianNode:
