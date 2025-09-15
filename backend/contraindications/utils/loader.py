@@ -8,6 +8,7 @@ from django.conf import settings
 from contraindications.models import Contraindication
 from drugs.models import Drug
 from contraindications.utils.adapters import DrugAdapter, ContraAdapter
+from graphs.utils.text_builder import TextBuilder
 
 
 class LoadAndBuildDrugContraindications:
@@ -23,12 +24,14 @@ class LoadAndBuildDrugContraindications:
             data = json.load(f)
 
         for item in data:
-            drug_name = item[self.NAME]
+            drug_name = TextBuilder(item[self.NAME]).lower().strip().text
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 continue
             for name in item[self.CONTRAS]:
+                name = TextBuilder(name).lower().strip().text
+                print('name =', name)
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)
@@ -60,12 +63,14 @@ class DrugContraindicationLoader:
     def _process(self, data):
         for item in data:
             drug_name = DrugAdapter(item, self.drug_key).name
+            drug_name = TextBuilder(drug_name).lower().strip().text
             drug, created = Drug.objects.get_or_create(
                 drug_name__iexact=drug_name,
                 defaults={"drug_name": drug_name},
             )
 
             for name in ContraAdapter(item, self.contras_key).contras:
+                name = TextBuilder(name).lower().strip().text
                 contraindication, _ = Contraindication.objects.get_or_create(
                     name__iexact=name, defaults={"name": name}
                 )

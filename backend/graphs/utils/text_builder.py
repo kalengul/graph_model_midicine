@@ -15,7 +15,7 @@ class TextBuilder:
 
     def strip(self):
         """Удаление непечатных символов."""
-        self._text = self._text.split()
+        self._text = self._text.strip()
         return self
 
     def replace_yo(self):
