@@ -478,7 +478,7 @@ class BayeseView(APIView):
             return CustomResponse(
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=f'Ошибка: {e} + {traceback.print_exc}',
+                message=f'Ошибка: {e} + {traceback.print_exc()}',
             )
 
 
