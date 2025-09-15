@@ -62,6 +62,7 @@
 `caution` - С осторожностью, <br/>
 `unknown` - Неизвестно, <br/>
 `banned` - Запрещено <br/>
+`banned-contraindictions` - В связи с противопоказаниями пациента </br>
 
 ### Статусы ответа
 200 - Совместимость ЛС по сети Байеса успешно расcчитана<br/>
@@ -79,17 +80,17 @@
     },
     "data":{
         "сompatibility_bayes": "unknown", 
-        "rank_iteractions": "undefined",
+        "rank_iteractions": "unknown",
         "side_effects": [
             {
-                "сompatibility":"undefined",
+                "сompatibility":"unknown",
                 "effects": [{
                     "se_name": "брадикардия",
                     "rank": 0.1,
                 }]
 
             }],
-        "combinations":"undefined",
+        "combinations":"unknown",
         "drugs": ["амиодарон", "амлодипин"]
     },    
 }

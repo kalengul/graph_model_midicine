@@ -1,9 +1,12 @@
 import json
+import io
+import zipfile
 
 from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import get_object_or_404
+from django.http import HttpResponse
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
@@ -20,6 +23,8 @@ from graphs.bayes_calculation import (load_combined_data, get_result,
                                       GRAPHS_4_PATH, PROBABILITIES_PATH)
 from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
+from graphs.utils.graph_storage import GraphStorage
+from graphs.utils.text_builder import TextBuilder
 
 
 INCORRECT_DATA = 'Некорректные данные'
@@ -268,10 +273,11 @@ class BayeseView(APIView):
 
         result = []
         for effect in source_effect:
-            effect_name = effect[self.EFFECT_NAME]
+            effect_name = TextBuilder(effect[self.EFFECT_NAME]).lower().text
 
             match_found = False
             for exc in excluded:
+                exc = TextBuilder(exc).lower().text
                 if exc in effect_name or effect_name in exc:
                     match_found = True
                     break
@@ -280,6 +286,22 @@ class BayeseView(APIView):
                 result.append(effect)
 
         return result
+
+    def _get_bin_ids(self, drugs):
+        """Получение бинаризированного словаря."""
+        graph = GraphStorage().download_graph()
+        bin_id = {}
+        drug2id = {}
+
+        for node in graph['nodes']:
+            if node['label'] != 'prepare':
+                continue
+            drug2id[node[NAME]] = node['id']
+            bin_id[node['id']] = 0
+
+        for drug in drugs:
+            bin_id[drug2id[drug.lower()]] = 1
+        return bin_id
 
     @parse_ids
     def get(self, request, ids, *args, **kwargs):
@@ -319,35 +341,14 @@ class BayeseView(APIView):
             exist, description = (
                 self._exist_contraindications(drug_ids, contraindication_ids))
         if exist:
-            сompatibility_bayes = 'banned'
-
-        short_id2long_id = {
-            3: "38de65bc-cc45-49b8-bd94-d9bc3be57dea",
-            6: "0f2b49cf-6635-4f1f-af0f-29c16c4f3e04",
-            20: "79f54542-ae01-4088-b4fd-3079b0c03504",
-            42: "c4b54c3f-93ef-4139-b4fa-cdad14c7ddc2"
-        }
-
-        id2drugs = {
-            3: "Апиксабан",
-            6: "Бисопролол",
-            20: "Каптоприл",
-            42: "Спиронолактон"
-        }
-
-        drug_states_input = {
-            "38de65bc-cc45-49b8-bd94-d9bc3be57dea": 0,
-            "0f2b49cf-6635-4f1f-af0f-29c16c4f3e04": 0,
-            "79f54542-ae01-4088-b4fd-3079b0c03504": 0,
-            "c4b54c3f-93ef-4139-b4fa-cdad14c7ddc2": 0
-        }
+            сompatibility_bayes = 'banned-contraindictions'
 
         drugs = []
-
-        for short_id in drug_ids:
-            drugs.append(id2drugs[short_id])
-            long_id = short_id2long_id[short_id]
-            drug_states_input[long_id] = 1
+        for id in drug_ids:
+            drug = Drug.objects.get(id=id)
+            if not drug:
+                continue
+            drugs.append(drug.drug_name)
 
         with open(GRAPHS_4_PATH, 'r', encoding='utf-8') as f:
             graph = json.load(f)
@@ -356,7 +357,7 @@ class BayeseView(APIView):
             combination_description = load_combined_data(
                 graph_data=graph,
                 prob_file=PROBABILITIES_PATH,
-                drug_states_input=drug_states_input
+                drug_states_input=self._get_bin_ids(drugs)
             )
 
         # Построение сети с новыми параметрами
@@ -375,23 +376,23 @@ class BayeseView(APIView):
 
         result = {
                     "сompatibility_bayes": сompatibility_bayes,
-                    "rank_iteractions": "undefined",
+                    "rank_iteractions": "unknown",
                     "side_effects": [
                         {
-                            "сompatibility": "undefined",
+                            "сompatibility": "unknown",
                             "effects": []
 
                         }],
-                    "combinations": "undefined",
+                    "combinations": "unknown",
                     "drugs": drugs
             }
 
         # result = {
         #             "сompatibility_bayes": сompatibility_bayes,
-        #             "rank_iteractions": "undefined",
+        #             "rank_iteractions": "unknown",
         #             "side_effects": [
         #                 {
-        #                     "сompatibility": "undefined",
+        #                     "сompatibility": "unknown",
         #                     "effects": []
 
         #                 },
@@ -411,7 +412,7 @@ class BayeseView(APIView):
 
         #                 }
         #                 ],
-        #             "combinations": "undefined",
+        #             "combinations": "unknown",
         #             "drugs": drugs
         #     }
 
@@ -471,3 +472,76 @@ class BayeseView(APIView):
             message='Совместимость ЛС по сети Байеса успешно расcчитана',
             data=result
         )
+
+
+class GraphStorageView(APIView):
+    """Вью экспорта/импрота графов для СБ."""
+
+    def post(self, request):
+        """Импорт графа и вероятностей."""
+        graph_file = request.FILES.get('graph_file')
+        probability_file = request.FILES.get('probability_file')
+
+        storage = GraphStorage()
+
+        if graph_file:
+            graph = json.load(graph_file)
+            storage.save_graph(graph)
+        else:
+            return CustomResponse(
+                http_status=status.HTTP_400_BAD_REQUEST,
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Не был отправлен файл с графом.'
+            )
+        if probability_file:
+            probability = json.load(probability_file)
+            storage.save_probability(probability)
+        else:
+            return CustomResponse(
+                http_status=status.HTTP_400_BAD_REQUEST,
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Не был отправлен файл с вероятностями.'
+            )
+        return CustomResponse(
+            http_status=status.HTTP_200_OK,
+            status=status.HTTP_200_OK,
+            message='Граф и вероятности успешно загружены.'
+        )
+
+    def get(self, request):
+        """Экспорта графа и вероятностей."""
+        storage = GraphStorage()
+
+        if storage.size_of_graph_file == 0:
+            return CustomResponse(
+                http_status=status.HTTP_404_NOT_FOUND,
+                status=status.HTTP_404_NOT_FOUND,
+                message=('Файл с графов - пустой. '
+                         'Пожалуйста, загрузите файл с графом')
+            )
+        if storage.size_of_probability_file == 0:
+            return CustomResponse(
+                http_status=status.HTTP_404_NOT_FOUND,
+                status=status.HTTP_404_NOT_FOUND,
+                message=('Файл с вероятностями - пустой. '
+                         'Пожалуйста, загрузите файл с вероятностями')
+            )
+
+        graph = storage.download_graph()
+        probability = storage.download_probability()
+
+        drug_number = len(graph[NAME])
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w') as zipedfile:
+            zipedfile.writestr(
+                f'multigraph_{drug_number}.json',
+                json.dumps(graph, ensure_ascii=False, indent=4))
+            zipedfile.writestr(
+                f'probability_{drug_number}.json',
+                json.dumps(probability, ensure_ascii=False, indent=4))
+        buffer.seek(0)
+
+        response = HttpResponse(buffer, content_type='application/zip')
+        response['Content-Disposition'] = (
+            f'attachment; filename="graph_export_{drug_number}.zip"')
+        return response
