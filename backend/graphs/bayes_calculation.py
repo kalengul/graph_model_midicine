@@ -9,8 +9,8 @@ from django.conf import settings
 
 
 PROBABILITIES_PATH = (
-    f'{settings.BASE_DIR}\\txt_files_db\\probabilities_opt.json')
-GRAPHS_4_PATH = f'{settings.BASE_DIR}\\txt_files_db\\graphs_4.json'
+    f'{settings.GRAPH_PATH}\\probabilities_opt.json')
+GRAPHS_4_PATH = f'{settings.GRAPH_PATH}\\graphs_4.json'
 
 
 class BayesianNode:
