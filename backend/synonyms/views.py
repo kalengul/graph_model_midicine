@@ -80,14 +80,14 @@ class SynonymGroupAPI(APIView):
                              ' добавлена'),
                     http_status=status.HTTP_200_OK,
                 )
-            
+
         except IntegrityError:
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message=(f'Группа {request.data.get("name")} уже существует'),
                 http_status=status.HTTP_400_BAD_REQUEST
             )
-            
+
         except Exception:
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -111,7 +111,6 @@ class SynonymListAPI(APIView):
                 ).data,
                 message="Список синонимов получен",
             )
-        
         queryset = Synonym.objects.filter(group_id=sg_id)
         serializer = SynonymListSerializer(queryset, many=True)
 
@@ -122,7 +121,7 @@ class SynonymListAPI(APIView):
             message="Список синонимов получен",
             data=serializer.data,
         )
-    
+
     @bearer_token_required
     def post(self, request):
         serializer = SynonymCreateSerializer(data=request.data)
@@ -178,7 +177,7 @@ class SynonymListAPI(APIView):
                 "message": "Неверные данные",
                 "errors": errors
             }, status=status.HTTP_400_BAD_REQUEST)
-    
+
         sg_id = serializer.validated_data['sg_id']
         updated_ids = []
         ids = []
