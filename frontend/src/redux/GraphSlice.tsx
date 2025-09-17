@@ -1,17 +1,48 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, /*createAsyncThunk*/ } from "@reduxjs/toolkit";
+// import axios from "axios";
 import { IDrugElem } from "./DrugManageSlice";
+
+export interface IGraphNode{ //Узел графа
+    id: string;
+    name: string;
+    label: string;
+    level: number;
+    parents: string[]
+}
+
+export interface IDraphLink{ //Связь графа
+    source: string,
+    target: string,
+}
+
+export interface IGraph{ //Граф
+    nodes: IGraphNode[],
+    links: IDraphLink[],
+    name: string[],
+    maxLevel: number,
+}
+
+const InitStateGraph: IGraph = {
+    nodes: [],
+    links: [],
+    name: [],
+    maxLevel: 0,
+}
 
 export interface IGraphState{
     drugs: IDrugElem[]
     loadStatus: string;
+    graph: IGraph
     [key: string]: any;
 }
+
+//Получение графа с сервера
 
 const GraphSlice = createSlice({
     name: 'graph',
     initialState: {
         drugs: [],
+        graph: InitStateGraph,
         loadStatus: "",
     } as IGraphState,
     reducers: {
@@ -23,6 +54,7 @@ const GraphSlice = createSlice({
 
        initStates(state){
         state.drugs = []
+        state.graph = InitStateGraph
         state.loadStatus = ""
        }
     },

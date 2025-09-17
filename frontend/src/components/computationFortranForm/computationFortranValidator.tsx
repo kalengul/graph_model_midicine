@@ -11,6 +11,7 @@ interface IErrors{
 
 export const ComputationFortranValidator = (values: IComputationFortran)=>{
     const errors: IErrors = {}
+    if(values) return errors
     //  console.log(values)
     return errors
 }
