@@ -40,6 +40,13 @@ class GraphView(APIView):
     GRAPH_JSON = 'graph_json'
     GRAPH_XML = 'graph_xml'
 
+    REMOVING = ("directed", "multigraph", "graph")
+    ERROR_COMPATIBILITY = 'Ошибка определения совместимости'
+
+    def _remove_key_value(self, data):
+        """Удаление ненужных пар по ключу."""
+        return {k: v for k, v in data.items() if k not in self.REMOVING}
+
     def _get_graph_from_file(self, request):
         """
         Получение файл из запроса.
@@ -76,6 +83,16 @@ class GraphView(APIView):
 
         return graph_json, graph_xml, None
 
+    def _parse_ids(self, ids):
+        """Парсинг списка id."""
+        parsed_ids = []
+        for id in ids:
+            parsed_id = id.replace('[', '').replace(']', '').split(', ')
+            for item in parsed_id:
+                parsed_id = int(item)
+                parsed_ids.append(item)
+        return parsed_ids
+
     def post(self, request):
         """Добавление графа."""
         graph_json, graph_xml, error = self._get_graph_from_file(request)
@@ -105,27 +122,57 @@ class GraphView(APIView):
 
     def get(self, request, id=None):
         """Получнение графа по id или список."""
-        if id:
-            try:
-                graph = Graph.objects.get(id=id)
-            except Graph.DoesNotExist:
-                return CustomResponse(
-                    status=status.HTTP_404_NOT_FOUND,
-                    http_status=status.HTTP_404_NOT_FOUND,
-                    message="Граф не найден"
-                )
-
+        try:
+            ids = id or request.query_params.getlist('id')
+            ids = self._parse_ids(ids)
+        except Exception as error:
+            message = 'Не передан id'
+            logger.error(f'{message}. Ошибка {error}')
             return CustomResponse(
-                data=GraphSerializer(graph).data,
-                status=status.HTTP_200_OK,
-                http_status=status.HTTP_200_OK,
-                message="Граф найден успешно")
-
-        return CustomResponse(
-            data=GraphSerializer(Graph.objects.all(), many=True).data,
-            status=status.HTTP_200_OK,
-            http_status=status.HTTP_200_OK,
-            message="Графы получены успешно")
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=self.ERROR_COMPATIBILITY
+            )
+        graph_ids = []
+        if ids:
+            try:
+                for id in ids:
+                    drug = Drug.objects.get(id=id)
+                    if not drug:
+                        return CustomResponse(
+                            http_status=status.HTTP_404_NOT_FOUND,
+                            status=status.HTTP_404_NOT_FOUND,
+                            message='ЛС не найдено'
+                        )
+                    graph = Graph.objects.get(name__iexact=drug.drug_name)
+                    if not graph:
+                        return CustomResponse(
+                            http_status=status.HTTP_404_NOT_FOUND,
+                            status=status.HTTP_404_NOT_FOUND,
+                            message='Граф для ЛС не найден'
+                        )
+                    graph_ids.append(graph.id)
+                merged_graph = Merger().merge(graph_ids)
+                merged_graph = self._remove_key_value(merged_graph)
+                return CustomResponse(
+                    status=status.HTTP_200_OK,
+                    http_status=status.HTTP_200_OK,
+                    message='Граф для лекарственных средств получен',
+                    data=merged_graph
+                )
+            except Exception as error:
+                logger.error(f"Ошибка получения графа ЛС {error}")
+                return CustomResponse(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message=self.ERROR_COMPATIBILITY
+                )
+        else:
+            return CustomResponse(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message=self.ERROR_COMPATIBILITY
+            )
 
     def put(self, request, id):
         """Изменение графа."""

@@ -5,12 +5,12 @@ from graphs.views import (GraphView, LoadGraphView, BayeseView, MergeView,
 
 
 urlpatterns = [
-    path('graphs/', GraphView.as_view(), name='graph-list-create'),
-    path('graphs/<int:id>/', GraphView.as_view(), name='graph-detail'),
+    path('graph/', GraphView.as_view(), name='graph-list-create'),
+    path('graph/<int:id>/', GraphView.as_view(), name='graph-detail'),
     path('polifarmakoterapiya-bayes/', BayeseView.as_view(), name='bayes'),
-    path('graphs/merge/', MergeView.as_view(), name='merge'),
+    path('graph/merge/', MergeView.as_view(), name='merge'),
     path('graphs_from_json_to_db/', LoadGraphView.as_view(),
          name='graphs_from_json_to_db'),
-    path('graphs/storage_graph/', GraphStorageView.as_view(),
+    path('graph/storage_graph/', GraphStorageView.as_view(),
          name='storage_graph'),
 ]
