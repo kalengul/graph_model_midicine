@@ -2,13 +2,18 @@
 
 import json
 import os
+import logging
 
 from django.conf import settings
+from django.db import connection
 
 from contraindications.models import Contraindication
 from drugs.models import Drug
 from contraindications.utils.adapters import DrugAdapter, ContraAdapter
 from graphs.utils.text_builder import TextBuilder
+
+
+logger = logging.getLogger('contraindications')
 
 
 class LoadAndBuildDrugContraindications:
@@ -20,24 +25,28 @@ class LoadAndBuildDrugContraindications:
 
     def load(self):
         """Загрузка противопоказаний и связывание с ЛС."""
+        logger.debug(f'СУБД: {connection.vendor}')
         with open(self.PATH, 'r', encoding='utf-8') as f:
             data = json.load(f)
-
         for item in data:
-            drug_name = TextBuilder(item[self.NAME]).lower().strip().text
+            drug_name = TextBuilder(item[self.NAME]).strip().text
+            logger.debug(f'drug_name = {drug_name}')
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 continue
             for name in item[self.CONTRAS]:
-                name = TextBuilder(name).lower().strip().text
-                print('name =', name)
+                name = TextBuilder(name).normalize().lower().strip().text
+                logger.debug(f'name = {name}')
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)
+                    logger.debug(f'противопоказания {name} найдено')
                 except Contraindication.DoesNotExist:
+                    logger.debug(f'противопоказания {name} не найдено')
                     contraindication = Contraindication.objects.create(
                         name=name)
+                    logger.debug(f'противопоказания {name} добавлено')
                 drug.contraindications.add(contraindication)
 
 

@@ -23,7 +23,7 @@ class SynonymGroup(models.Model):
         ordering = ['name']
         verbose_name = "Группа синонимов"
         verbose_name_plural = "Группы синонимов"
-    
+
 
 class Synonym(models.Model):
     """Синоним."""

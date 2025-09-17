@@ -1,5 +1,6 @@
-from functools import wraps
 import json
+import logging
+from functools import wraps
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -14,6 +15,9 @@ from contraindications.utils.adapters import ContraAdapter, DrugAdapter
 from contraindications.utils.cleaner import CleanProcessor
 
 
+logger = logging.getLogger('contraindications')
+
+
 def require_contraindication(func):
     @wraps(func)
     def wrapper(view, request, *args, **kwargs):
@@ -21,19 +25,23 @@ def require_contraindication(func):
                                or request.query_params.get('id'))
 
         if not contraindication_id:
+            message = 'Не указан ID изменяемого противопоказания'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
                 status=status.HTTP_400_BAD_REQUEST,
-                message='Не указан ID изменяемого противопоказания',
+                message=message
             )
         try:
             contraindication = Contraindication.objects.get(
                 id=contraindication_id)
         except ObjectDoesNotExist:
+            message = "Противопоказание не найдено"
+            logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 http_status=status.HTTP_404_NOT_FOUND,
-                message="Противопоказание не найдено"
+                message=message
             )
         return func(view, request, contraindication=contraindication,
                     *args, **kwargs)
@@ -55,26 +63,33 @@ class ContraindicationView(APIView):
             try:
                 contraindication = Contraindication.objects.get(
                     id=contraindication_id)
+                message = 'Противопоказание успешно получено'
+                logger.info(f'message = {message}')
                 return CustomResponse(
                     status=status.HTTP_200_OK,
                     http_status=status.HTTP_200_OK,
-                    message='Противопоказание успешно получено',
+                    message=message,
                     data=ContraindicationDetailSerializer(
                         contraindication).data
                 )
             except ObjectDoesNotExist:
+                message = "Противопоказание не найдено"
+                logger.info(f'message = {message}')
                 return CustomResponse(
                     status=status.HTTP_404_NOT_FOUND,
                     http_status=status.HTTP_404_NOT_FOUND,
-                    message="Противопоказание не найдено")
+                    message=message
+                    )
         serializer = ContraindicationListSerializer(
             Contraindication.objects.all(),
             many=True
         )
+        message = 'Группа противопоказаний получена'
+        logger.info(f'message = {message}')
         return CustomResponse(
             status=status.HTTP_200_OK,
             http_status=status.HTTP_200_OK,
-            message='Группа противопоказаний получена',
+            message=message,
             data=serializer.data)
 
     def post(self, request):
@@ -83,16 +98,20 @@ class ContraindicationView(APIView):
         try:
             serializer.is_valid(raise_exception=True)
             serializer.save()
+            message = 'Противопоказание успешно добавлено'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_200_OK,
                 status=status.HTTP_200_OK,
-                message='Противопоказание успешно добавлено',
+                message=message,
                 data=serializer.data)
         except ValueError:
+            message = 'Такое противопоказание уже есть'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 http_status=status.HTTP_400_BAD_REQUEST,
-                message='Такое противопоказание уже есть'
+                message=message
             )
         except Exception as error:
             message = 'Ошибка добавления противопоказания',
@@ -111,17 +130,21 @@ class ContraindicationView(APIView):
                                                           data=request.data)
             serializer.is_valid(raise_exception=True)
             serializer.save()
+            message = 'Противопоказание изменено успешно'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_200_OK,
                 status=status.HTTP_200_OK,
-                message='Противопоказание изменено успешно',
+                message=message,
                 data=serializer.data
             )
         except ValueError:
+            message = 'Некорректные данные'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 http_status=status.HTTP_400_BAD_REQUEST,
-                message='Некорректные данные'
+                message=message
             )
         except Exception as error:
             message = 'Ошибка изменения противопоказания',
@@ -136,10 +159,12 @@ class ContraindicationView(APIView):
     def delete(self, request, contraindication=None,  *args, **kwargs):
         """Удаление противопоказания."""
         contraindication.delete()
+        message = 'Противопоказание удалено успешно'
+        logger.info(f'message = {message}')
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
-            message='Противопоказание удалено успешно'
+            message=message
         )
 
 
@@ -152,10 +177,12 @@ class LoadAndBuildDrugContraindications(APIView):
         contras_key = request.POST.get('contras_key')
         drug_key = request.POST.get('drug_key')
         if not loaded_file:
+            message = 'Файл с ЛС и противопоказания не загружен'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
                 status=status.HTTP_400_BAD_REQUEST,
-                message='Файл с ЛС и противопоказания не загружен'
+                message=message
             )
 
         data = json.load(loaded_file)
@@ -168,10 +195,12 @@ class LoadAndBuildDrugContraindications(APIView):
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
+                message = f'В БД нет такого ЛС: {drug_name}'
+                logger.info(f'message {message}')
                 return CustomResponse(
                     http_status=status.HTTP_404_NOT_FOUND,
                     status=status.HTTP_404_NOT_FOUND,
-                    message=f'В БД нет такого ЛС: {drug_name}'
+                    message=message
                 )
             for name in ContraAdapter(item, contras_key).contras:
                 try:
@@ -181,10 +210,12 @@ class LoadAndBuildDrugContraindications(APIView):
                     contraindication = Contraindication.objects.create(
                         name=name)
                 drug.contraindications.add(contraindication)
+        message = 'ЛС и противопоказания успешно связаны'
+        logger.info(f'message = {message}')
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
-            message='ЛС и противопоказания успешно связаны'
+            message=message
         )
 
 
@@ -195,15 +226,19 @@ class ClearContraindication(APIView):
         """Очистка от всех противопоказаний."""
         try:
             CleanProcessor().get_cleaner().clean()
+            message = "Таблица противопоказаний очищина успешно"
+            logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_200_OK,
                 http_status=status.HTTP_200_OK,
-                message="Таблица противопоказаний очищина успешно"
+                message=message
             )
         except Exception as error:
+            message = ('При очистке противопоказаний возника ошибка.'
+                       f'Ошибка: {error}')
+            logger.error(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=('При очистке противопоказаний возника ошибка.'
-                         f'Ошибка: {error}')
+                message=message
             )

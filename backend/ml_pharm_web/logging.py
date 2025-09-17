@@ -58,6 +58,18 @@ if not DEBUG:
             'filename': os.path.join(log_dir, 'synonyms.log'),
             'formatter': 'detailed',
             'encoding': 'utf-8'
+        },
+        'graphs_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(log_dir, 'graphs.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
+        },
+        'contraindications_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(log_dir, 'contraindications.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
         }
     })
 
@@ -85,6 +97,17 @@ loggers = {
     },
     'synonyms': {
         'handlers': ['console'] + ([] if DEBUG else ['synonyms_file']),
+        'level': 'DEBUG',
+        'propagate': False
+    },
+    'graphs': {
+        'handlers': ['console'] + ([] if DEBUG else ['graphs_file']),
+        'level': 'DEBUG',
+        'propagate': False
+    },
+    'contraindications': {
+        'handlers': ['console'] + ([] if DEBUG
+                                   else ['contraindications_file']),
         'level': 'DEBUG',
         'propagate': False
     }
