@@ -1,6 +1,7 @@
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include, re_path
+from django.views.generic import TemplateView
 from rest_framework.exceptions import NotFound
 
 from . import settings
@@ -17,11 +18,14 @@ urlpatterns = [
     path('api/v1/', include('synonyms.urls')),
     path('api/v1/', include('graphs.urls')),
     path('api/v1/', include('contraindications.urls')),
+    re_path(r'^mini-front-manager/?$',
+            TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),
 ]
 
 
 def custom_page_not_found(request, exception):
+    """Обработка отсутствия ресуса."""
     raise NotFound("Ресурс не найден.")
 
 

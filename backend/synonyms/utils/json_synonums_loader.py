@@ -47,9 +47,10 @@ class InnerJSONSynonymLoader(SynonymLoader):
     def import_synonyms(self, clusters_data=None):
         """Импорт синонимов в БД."""
 
-        for status in self.GROUP_STATUS_COLORS:
-            SynonymStatus.objects.create(st_name=status['name'],
-                                         st_code=status['code'])
+        if SynonymStatus.objects.count():
+            for status in self.GROUP_STATUS_COLORS:
+                SynonymStatus.objects.create(st_name=status['name'],
+                                             st_code=status['code'])
 
         clusters_data = clusters_data or open(
             os.path.join(settings.TXT_DB_PATH, self.IMPORT_PATH),

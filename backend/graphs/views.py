@@ -2,6 +2,7 @@ import json
 import io
 import zipfile
 import traceback
+import logging
 
 from rest_framework.views import APIView
 from rest_framework import status
@@ -28,6 +29,7 @@ from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
 
 
+logger = logging.getLogger('graphs')
 INCORRECT_DATA = 'Некорректные данные'
 NAME = 'name'
 
@@ -246,13 +248,11 @@ class BayeseView(APIView):
             "contraindications")
         for drug in drugs:
             intersect = drug.contraindications.filter(id__in=contra_ids)
-            print('intersect =', intersect)
-            print('drug =', drug.drug_name)
-            print('drug.contraindications =', drug.contraindications.all())
+            logger.debug(f'drug = {drug.drug_name}')
             for contra in drug.contraindications.all():
-                print('contra -', contra.id, contra.name)
+                logger.debug(f'contra - {contra.id}, {contra.name}')
             if intersect.exists():
-                print('условие intersect.exists() сработало')
+                logger.debug('Противопоказание у ЛС есть')
                 names = ", ".join(list(intersect.values_list("name",
                                                              flat=True)))
                 submessages.append(f'{drug.drug_name}: {names}')
@@ -281,15 +281,17 @@ class BayeseView(APIView):
         result = []
         for effect in source_effect:
             effect_name = TextBuilder(effect[self.EFFECT_NAME]).lower().text
-
+            logger.debug(f'effect_name = {effect_name}')
             match_found = False
             for exc in excluded:
                 exc = TextBuilder(exc).lower().text
                 if exc in effect_name or effect_name in exc:
+                    logger.debug(f'{effect_name} - половое ПД')
                     match_found = True
                     break
 
             if not match_found:
+                logger.debug(f'{effect_name} - не половое ПД. Добавление')
                 result.append(effect)
 
         return result
@@ -325,11 +327,13 @@ class BayeseView(APIView):
         """Вычисление сети Байеса."""
         graph_storage = GraphStorage()
         serializer = BayesSerializer(data=request.data)
+        message = 'Некорректные данные'
+        logger.info(f'message = {message}')
         if not serializer.is_valid():
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 http_status=status.HTTP_400_BAD_REQUEST,
-                message='Некорректные данные'
+                message=message
             )
 
         drug_ids = serializer.validated_data['drugs']
@@ -349,12 +353,14 @@ class BayeseView(APIView):
             exist, description = (
                 self._exist_contraindications(drug_ids, contraindication_ids))
         if exist:
+            logger.debug('Есть найдено противопоказание')
             сompatibility_bayes = 'banned-contraindications'
 
         drugs = []
         for id in drug_ids:
             drug = Drug.objects.get(id=id)
             if not drug:
+                logger.debug(f'ЛС с id {id} нет в БД')
                 continue
             drugs.append(drug.drug_name)
 
@@ -467,17 +473,20 @@ class BayeseView(APIView):
             })
 
         result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-                                                    reverse=True)
+                                                  reverse=True)
 
         if gender:
+            logger.debug(f'Пол указан. gender = {gender}')
             result["side_effects"][0]["effects"] = (
                 self._exclude_by_gender(result["side_effects"][0]["effects"],
                                         gender, GENDER_SIDE_EFFECT))
 
+        message = 'Совместимость ЛС по сети Байеса успешно расcчитана'
+        logger.info(f'message = {message}')
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
-            message='Совместимость ЛС по сети Байеса успешно расcчитана',
+            message=message,
             data=result
         )
 
@@ -496,24 +505,30 @@ class GraphStorageView(APIView):
             graph = json.load(graph_file)
             storage.save_graph(graph)
         else:
+            message = 'Не был отправлен файл с графом.'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
                 status=status.HTTP_400_BAD_REQUEST,
-                message='Не был отправлен файл с графом.'
+                message=message
             )
         if probability_file:
             probability = json.load(probability_file)
             storage.save_probability(probability)
         else:
+            message = 'Не был отправлен файл с вероятностями.'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_400_BAD_REQUEST,
                 status=status.HTTP_400_BAD_REQUEST,
-                message='Не был отправлен файл с вероятностями.'
+                message=message
             )
+        message = 'Граф и вероятности успешно загружены.'
+        logger.info(f'message = {message}')
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
-            message='Граф и вероятности успешно загружены.'
+            message=message
         )
 
     def get(self, request):
@@ -521,18 +536,22 @@ class GraphStorageView(APIView):
         storage = GraphStorage()
 
         if storage.size_of_graph_file == 0:
+            message = ('Файл с графов - пустой. '
+                       'Пожалуйста, загрузите файл с графом')
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_404_NOT_FOUND,
                 status=status.HTTP_404_NOT_FOUND,
-                message=('Файл с графов - пустой. '
-                         'Пожалуйста, загрузите файл с графом')
+                message=message
             )
         if storage.size_of_probability_file == 0:
+            message = ('Файл с вероятностями - пустой. '
+                       'Пожалуйста, загрузите файл с вероятностями')
+            logger.info(f'message = {message}')
             return CustomResponse(
                 http_status=status.HTTP_404_NOT_FOUND,
                 status=status.HTTP_404_NOT_FOUND,
-                message=('Файл с вероятностями - пустой. '
-                         'Пожалуйста, загрузите файл с вероятностями')
+                message=message
             )
 
         graph = storage.download_graph()

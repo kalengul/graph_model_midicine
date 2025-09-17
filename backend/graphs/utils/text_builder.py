@@ -1,5 +1,7 @@
 """Модуль строителя для текста."""
 
+import unicodedata
+
 
 class TextBuilder:
     """Строитель для текста."""
@@ -26,6 +28,11 @@ class TextBuilder:
     def remove_extra_spaces(self):
         """удаление лишних пробелов."""
         self._text = " ".join(self._text.split())
+        return self
+
+    def normalize(self):
+        """Нормализация."""
+        self._text = unicodedata.normalize('NFC', self._text)
         return self
 
     @property
