@@ -171,7 +171,7 @@ export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBaye
       const sendData: sendFormBayes = {drugs:[], humanData: undefined}
       data.drugs.forEach(e=>sendData.drugs.push(e.id))
 
-      console.log(data.humanData)
+      // console.log(data.humanData)
 
       if(data.humanData){
         sendData.humanData = {age: undefined, gender: undefined, cont_list: undefined}
@@ -181,7 +181,7 @@ export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBaye
         data.humanData.cont_list?.forEach(e=>sendData.humanData?.cont_list?.push(e))
       }
 
-      console.log(sendData)
+      // console.log(sendData)
 
       const response = await axios.post('/api/polifarmakoterapiya-bayes/', sendData, {
         headers:{'Content-Type': 'application/json'},
@@ -279,7 +279,7 @@ const ComputationSlice = createSlice({
               const index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
               if (index !== -1){
                 state.compareSide_effects[index].rankFortran = effect.rank
-              }else (console.log(effect.se_name.trim().toLowerCase()))
+              }//else (console.log(effect.se_name.trim().toLowerCase()))
             })
           })
           

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+// import {useNavigate} from 'react-router-dom'
 import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
@@ -7,10 +8,12 @@ import { ComputationBayesForm } from '../../components/computationBayesForm/comp
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
 import { initResultBayes, initResultFortran, createCompareData} from "../../redux/ComputationSlice"
 // import { fetchContraindicationssList } from "../../redux/ContraindicationsManageSlice";
+import { addValue } from "../../redux/GraphSlice";
 
 import {isRegex} from "../../assets/regex"
 
 export const ComputationBayes = () =>{
+    // const navigate = useNavigate();
     const [compareView, setCompareView] = useState(false)
     const [compareTitle, setCompareTitle] = useState("Показать сравнение с Фортраном")
     const dispatch = useAppDispatch()
@@ -26,6 +29,8 @@ export const ComputationBayes = () =>{
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const compareData = useAppSelector(state=>state.computation.compareSide_effects)
 
+    const data = useAppSelector(state=>state.computation.computationList)
+
     useEffect(()=>{
         setCompareTitle("Показать сравнение с Фортраном")
         setCompareView(false)
@@ -40,6 +45,13 @@ export const ComputationBayes = () =>{
         setCompareView(!compareView)
     }
 
+    const ShowGraphHandker = () =>{
+        const idsArray = data.map( e=> e.id).join(",")
+        dispatch(addValue({title: "drugs", value: data}))
+        // navigate(`/graph/${idsArray}`) 
+        window.open(`/graph/${idsArray}`, '_blank');
+    }
+
     return(
     <div className="flex">
         <Nav></Nav>
@@ -48,9 +60,10 @@ export const ComputationBayes = () =>{
 
             <ComputationBayesForm/>
             <hr/>
-            <h4>Результаты оценки совместимости</h4>
+            
             {
                 isresultBayes && isresultFortran && <div>
+                    <h4>Результаты оценки совместимости</h4>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
                     <h5 className="mt-3">Риски побочных эффектов: </h5>
                     <ComputationResults compatibility={resultBayes.сompatibility_bayes} />
@@ -73,8 +86,10 @@ export const ComputationBayes = () =>{
                                 content= {compareData}
                             />
                         }
-
-                        <button className="btn send-btn mt-3" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
+                        <div className="flex jc-sb mt-3">
+                            <button className="btn send-btn" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
+                            <button className="btn send-btn" onClick={ ShowGraphHandker }>Отобразить граф</button>
+                        </div>
                     </div>}
                 </div>      
             }

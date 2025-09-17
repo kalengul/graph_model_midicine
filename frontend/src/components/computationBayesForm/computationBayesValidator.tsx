@@ -11,6 +11,6 @@ interface IErrors{
 
 export const ComputationBayesValidator = (values: IComputationBayes)=>{
     const errors: IErrors = {}
-     console.log(values)
+    //  console.log(values)
     return errors
 }

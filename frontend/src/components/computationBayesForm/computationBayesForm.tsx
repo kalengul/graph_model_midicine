@@ -18,8 +18,8 @@ export const ComputationBayesForm = () =>{
     const SendHandler = (value: IComputationBayes) =>{
         if(computationList.length!=0){
             const humanData = value.humanData
-            console.log(humanData)
-            console.log(contList)
+            // console.log(humanData)
+            // console.log(contList)
             if(contList && contList.length>0){
                 if(!humanData?.cont_list) humanData.cont_list = []
                 contList.forEach(cont=> humanData?.cont_list?.push(cont.cont_id))
