@@ -4,9 +4,10 @@ import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
 import { ComputationBayesForm } from '../../components/computationBayesForm/computationBayesForm';
+import { LoadBar } from "../../components/loadBar/loadBar";
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { initResultBayes, initResultFortran, createCompareData} from "../../redux/ComputationSlice"
+import { initResultBayes, initResultFortran, createCompareData, addValue as addValueComputation} from "../../redux/ComputationSlice"
 // import { fetchContraindicationssList } from "../../redux/ContraindicationsManageSlice";
 import { addValue } from "../../redux/GraphSlice";
 
@@ -21,6 +22,7 @@ export const ComputationBayes = () =>{
     useEffect(()=>{
         dispatch(initResultBayes())
         dispatch(initResultFortran())
+        dispatch(addValueComputation({title: "compareStart", value: false}))
         
     }, [dispatch])
     const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
@@ -52,6 +54,12 @@ export const ComputationBayes = () =>{
         window.open(`/graph/${idsArray}`, '_blank');
     }
 
+    const isLoadFortran = useAppSelector(state=>state.computation.isLoadFortran)
+    const isLoadBayes = useAppSelector(state=>state.computation.isLoadBayes)
+    const compareStart = useAppSelector(state=>state.computation.compareStart)
+    console.log(isLoadBayes)
+    console.log(isLoadFortran)
+
     return(
     <div className="flex">
         <Nav></Nav>
@@ -60,9 +68,11 @@ export const ComputationBayes = () =>{
 
             <ComputationBayesForm/>
             <hr/>
-            
-            {
-                isresultBayes && isresultFortran && <div>
+            { compareStart &&
+            (
+                (!isLoadFortran || !isLoadBayes)?(<LoadBar className="mt-4"/>)
+                :
+                (isLoadFortran && isLoadBayes && isresultBayes && isresultFortran && <div>
                     <h4>Результаты оценки совместимости</h4>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
                     <h5 className="mt-3">Риски побочных эффектов: </h5>
@@ -91,7 +101,8 @@ export const ComputationBayes = () =>{
                             <button className="btn send-btn" onClick={ ShowGraphHandker }>Отобразить граф</button>
                         </div>
                     </div>}
-                </div>      
+                </div>)      
+            )
             }
         </main>
     </div>
