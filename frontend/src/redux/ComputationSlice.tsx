@@ -68,6 +68,9 @@ interface IComputationState {
   isresultFortran: boolean
   isresultBayes: boolean
   compareSide_effects: ICompareData[]
+  isLoadBayes: boolean
+  isLoadFortran: boolean
+  compareStart: boolean
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -206,6 +209,9 @@ const ComputationSlice = createSlice({
       resultBayes: initStateBayes,
       isresultBayes: false,
       compareSide_effects:[],
+      isLoadBayes: false,
+      isLoadFortran: false,
+      compareStart: false
     } as IComputationState,
     reducers: {
       addValue(state, action){
@@ -222,6 +228,9 @@ const ComputationSlice = createSlice({
             {
                 state.contList.push(action.payload.value)
             }
+            break;
+          case "compareStart":
+            state.compareStart = action.payload.value;
             break;
           default:
             break;
@@ -241,6 +250,8 @@ const ComputationSlice = createSlice({
         state.isresultMedscape = false
         state.resultFortran = initStateFortran
         state.isresultFortran = false
+        state.isLoadBayes = false
+        state.isLoadFortran = false
       },
 
       initResultMedscape(state){
@@ -254,6 +265,7 @@ const ComputationSlice = createSlice({
           state.isresultFortran = false
           state.computationList = []
           state.contList = []
+          state.isLoadFortran = false
         // }
       },
 
@@ -262,6 +274,12 @@ const ComputationSlice = createSlice({
         state.contList = []
         state.isresultBayes = false
         state.resultBayes = initStateBayes
+        state.isLoadBayes = false
+      },
+
+      initLoad(state){
+        state.isLoadBayes = false
+        state.isLoadFortran = false
       },
 
       createCompareData(state){
@@ -302,19 +320,27 @@ const ComputationSlice = createSlice({
           {
             state.isresultFortran = true
             state.resultFortran =  action.payload.data
+            state.isLoadFortran = true
           }
-          else if ( action.payload.status === "err") state.isresultFortran = false
-        }) 
+          else if ( action.payload.status === "err") {
+            state.isresultFortran = false
+            state.isLoadFortran = false
+          }
+        })
         .addCase(iteractionBayes.fulfilled, (state, action: PayloadAction<TrunkResult<IResultBayes>>)=>{
           if( action.payload.status === 200) 
           {
             state.isresultBayes = true
             state.resultBayes = action.payload.data
+            state.isLoadBayes = true
           }
-          else if ( action.payload.status === "err") state.isresultBayes = false
+          else if ( action.payload.status === "err") {
+            state.isresultBayes = false
+            state.isLoadBayes = false
+          }
         })
     },
 })
 
-export const {addValue, removeComputationElem, removeContElem, initResultMedscape, initResultFortran, initStates, initResultBayes, createCompareData} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
+export const {addValue, removeComputationElem, removeContElem, initResultMedscape, initResultFortran, initStates, initResultBayes, createCompareData, initLoad} = ComputationSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationSlice.reducer; //Формирование reduser из набора методов из redusers

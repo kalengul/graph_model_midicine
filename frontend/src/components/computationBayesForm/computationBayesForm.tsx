@@ -4,7 +4,7 @@ import { ComputationInputForm } from "../form/computationInputForm/computationIn
 import { ContraindicationInputForm } from '../form/computationInputForm/ContraindicationInputForm';
 
 import { ComputationBayesValidator } from '../../components/computationBayesForm/computationBayesValidator';
-import { iteractionFortran, iteractionBayes, IComputationBayes } from '../../redux/ComputationSlice';
+import { iteractionFortran, iteractionBayes, IComputationBayes, initLoad, addValue } from '../../redux/ComputationSlice';
 //import { ComputationForm } from '../form/computationInputForm/computationForm_v2';
 
 
@@ -29,6 +29,8 @@ export const ComputationBayesForm = () =>{
             const data: IComputationBayes = {drugs: computationList, humanData: humanData}
             dispatch(iteractionBayes(data))
             dispatch(iteractionFortran({drugs: computationList, humanData: "0"}))
+            dispatch(addValue({title: "compareStart", value: true}))
+            dispatch(initLoad())
         }
     }
     return(
