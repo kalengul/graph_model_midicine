@@ -1,0 +1,59 @@
+.form-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.form-page label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-page input[type="file"] {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.form-page button {
+    background-color: #61c5fb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-page button:hover {
+    background-color: #4aa0d8;
+}
+
+.form-page button + button {
+    margin-left: 15px;
+}
+
+.form-page input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    transform: scale(1.3);
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+
+.form-page h2 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}

@@ -490,12 +490,12 @@ class ExcelLoadView(APIView):
                 http_status=status.HTTP_404_NOT_FOUND
             )
 
-    @bearer_token_required
+    # @bearer_token_required
     def post(self, request, *args, **kwargs):
         """Загрузкад данных из excel-файла в БД."""
         serializer = FileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
-        if serializer.is_valid():   
+        if serializer.is_valid():
             logger.info('Импорт данных в БД начался')
             excel_file = serializer.validated_data['file']
 
@@ -558,12 +558,12 @@ class ExcelLoadView(APIView):
 class ModifiedExcelLoadView(ExcelLoadView):
     """
     Усовершенствовованная версия вью.
-    
+
     Вью для прямого обращения к бекэнду,
     минуя фронтэнд.
     """
 
-    @bearer_token_required
+    # @bearer_token_required
     def get(self, request, *args, **kwargs):
         """Скачивание файла с данными из БД."""
         loader = ExcelLoader()

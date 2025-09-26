@@ -23,11 +23,12 @@ class LoadAndBuildDrugContraindications:
     CONTRAS = 'extracted_contraindication'
     PATH = os.path.join(settings.TXT_DB_PATH, 'extracted_data_not_all.json')
 
-    def load(self):
+    def load(self, data=None):
         """Загрузка противопоказаний и связывание с ЛС."""
         logger.debug(f'СУБД: {connection.vendor}')
-        with open(self.PATH, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+        if not data:
+            with open(self.PATH, 'r', encoding='utf-8') as f:
+                data = json.load(f)
         for item in data:
             drug_name = TextBuilder(item[self.NAME]).strip().text
             logger.debug(f'drug_name = {drug_name}')
@@ -48,6 +49,16 @@ class LoadAndBuildDrugContraindications:
                         name=name)
                     logger.debug(f'противопоказания {name} добавлено')
                 drug.contraindications.add(contraindication)
+
+    def download(self):
+        """Выгрузка противопоказаний."""
+        drug_with_contras = []
+        for drug in Drug.objects.all():
+            drug_with_contras.append({
+                self.NAME: drug.drug_name,
+                self.CONTRAS: [c.name for c in drug.contraindications.all()]
+            })
+        return drug_with_contras
 
 
 class DrugContraindicationLoader:

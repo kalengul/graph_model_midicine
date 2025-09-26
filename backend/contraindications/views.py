@@ -4,21 +4,24 @@ from functools import wraps
 
 from rest_framework.views import APIView
 from rest_framework import status
+from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 
 from contraindications.models import Contraindication
 from contraindications.serializers import (ContraindicationListSerializer,
                                            ContraindicationDetailSerializer)
 from drugs.utils.custom_response import CustomResponse
-from drugs.models import Drug
-from contraindications.utils.adapters import ContraAdapter, DrugAdapter
+# from drugs.models import Drug
+# from contraindications.utils.adapters import ContraAdapter, DrugAdapter
 from contraindications.utils.cleaner import CleanProcessor
+from contraindications.utils.loader import LoadAndBuildDrugContraindications
 
 
 logger = logging.getLogger('contraindications')
 
 
 def require_contraindication(func):
+    """Проверка id противопоказаний."""
     @wraps(func)
     def wrapper(view, request, *args, **kwargs):
         contraindication_id = (kwargs.get('id')
@@ -168,14 +171,12 @@ class ContraindicationView(APIView):
         )
 
 
-class LoadAndBuildDrugContraindications(APIView):
-    """Служебная вьюшка для загрузки противопоказаний ЛС."""
+class LoadContraindicationView(APIView):
+    """Загрузка противопоказаний из загружаемого файла."""
 
     def post(self, request):
         """Загрузка противопоказаний и связывание с ЛС."""
         loaded_file = request.FILES.get('file')
-        contras_key = request.POST.get('contras_key')
-        drug_key = request.POST.get('drug_key')
         if not loaded_file:
             message = 'Файл с ЛС и противопоказания не загружен'
             logger.info(f'message = {message}')
@@ -184,39 +185,96 @@ class LoadAndBuildDrugContraindications(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message
             )
-
         data = json.load(loaded_file)
+        try:
+            # Очистка таблица противопоказаний
+            CleanProcessor().get_cleaner().clean()
+            # Непосредственно загрузка противопоказаний
+            LoadAndBuildDrugContraindications().load(data)
+            message = 'Противопоказания загружены успешно'
+            logger.info(message)
+            return CustomResponse(
+                http_status=status.HTTP_200_OK,
+                status=status.HTTP_200_OK,
+                message=message
+            )
+        except Exception as error:
+            logger.error(f'Ошибка загрузки противопоказаний {error}')
+            return CustomResponse(
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='При загрузке противопоказаний в БД произошла ошибка'
+            )
 
-        contras_key = None if not contras_key else [contras_key]
-        drug_key = None if not drug_key else [drug_key]
+    def get(self, request):
+        """Выгрузка противопоказаний из БД."""
+        try:
+            data = LoadAndBuildDrugContraindications().download()
+            response = HttpResponse(
+                json.dumps(data, ensure_ascii=False, indent=4),
+                content_type='application/json'
+            )
+            response['Content-Disposition'] = (
+                'attachment; filename="expoerted_contraindications.json"')
+            return response
+        except Exception as error:
+            logger.error(f'Ошибка выгрузки противопоказаний {error}')
+            return CustomResponse(
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='При выгрузке противопоказаний в БД произошла ошибка'
+            )
 
-        for item in data:
-            drug_name = DrugAdapter(item, drug_key).name
-            try:
-                drug = Drug.objects.get(drug_name__iexact=drug_name)
-            except Drug.DoesNotExist:
-                message = f'В БД нет такого ЛС: {drug_name}'
-                logger.info(f'message {message}')
-                return CustomResponse(
-                    http_status=status.HTTP_404_NOT_FOUND,
-                    status=status.HTTP_404_NOT_FOUND,
-                    message=message
-                )
-            for name in ContraAdapter(item, contras_key).contras:
-                try:
-                    contraindication = Contraindication.objects.get(
-                        name__iexact=name)
-                except Contraindication.DoesNotExist:
-                    contraindication = Contraindication.objects.create(
-                        name=name)
-                drug.contraindications.add(contraindication)
-        message = 'ЛС и противопоказания успешно связаны'
-        logger.info(f'message = {message}')
-        return CustomResponse(
-            http_status=status.HTTP_200_OK,
-            status=status.HTTP_200_OK,
-            message=message
-        )
+
+# class LoadAndBuildDrugContraindications(APIView):
+#     """Служебная вьюшка для загрузки противопоказаний ЛС."""
+
+#     def post(self, request):
+#         """Загрузка противопоказаний и связывание с ЛС."""
+#         loaded_file = request.FILES.get('file')
+#         contras_key = request.POST.get('contras_key')
+#         drug_key = request.POST.get('drug_key')
+#         if not loaded_file:
+#             message = 'Файл с ЛС и противопоказания не загружен'
+#             logger.info(f'message = {message}')
+#             return CustomResponse(
+#                 http_status=status.HTTP_400_BAD_REQUEST,
+#                 status=status.HTTP_400_BAD_REQUEST,
+#                 message=message
+#             )
+
+#         data = json.load(loaded_file)
+
+#         contras_key = None if not contras_key else [contras_key]
+#         drug_key = None if not drug_key else [drug_key]
+
+#         for item in data:
+#             drug_name = DrugAdapter(item, drug_key).name
+#             try:
+#                 drug = Drug.objects.get(drug_name__iexact=drug_name)
+#             except Drug.DoesNotExist:
+#                 message = f'В БД нет такого ЛС: {drug_name}'
+#                 logger.info(f'message {message}')
+#                 return CustomResponse(
+#                     http_status=status.HTTP_404_NOT_FOUND,
+#                     status=status.HTTP_404_NOT_FOUND,
+#                     message=message
+#                 )
+#             for name in ContraAdapter(item, contras_key).contras:
+#                 try:
+#                     contraindication = Contraindication.objects.get(
+#                         name__iexact=name)
+#                 except Contraindication.DoesNotExist:
+#                     contraindication = Contraindication.objects.create(
+#                         name=name)
+#                 drug.contraindications.add(contraindication)
+#         message = 'ЛС и противопоказания успешно связаны'
+#         logger.info(f'message = {message}')
+#         return CustomResponse(
+#             http_status=status.HTTP_200_OK,
+#             status=status.HTTP_200_OK,
+#             message=message
+#         )
 
 
 class ClearContraindication(APIView):

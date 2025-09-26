@@ -18,7 +18,7 @@ urlpatterns = [
     path('api/v1/', include('synonyms.urls')),
     path('api/v1/', include('graphs.urls')),
     path('api/v1/', include('contraindications.urls')),
-    re_path(r'^mini-front-manager/?$',
+    re_path(r'^mini-front-manager.*$',
             TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),
 ]

@@ -1,7 +1,7 @@
 from django.urls import path
 
 from graphs.views import (GraphView, LoadGraphView, BayeseView, MergeView,
-                          GraphStorageView)
+                          GraphStorageView, GraphVisualizationView)
 
 
 urlpatterns = [
@@ -13,4 +13,6 @@ urlpatterns = [
          name='graphs_from_json_to_db'),
     path('graph/storage_graph/', GraphStorageView.as_view(),
          name='storage_graph'),
+    path('graph/visualization/', GraphVisualizationView.as_view(),
+         name='visualization'),
 ]

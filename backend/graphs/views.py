@@ -4,6 +4,7 @@ import zipfile
 import traceback
 import logging
 
+import networkx as nx
 from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
@@ -27,6 +28,8 @@ from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
+from graphs.utils.removing_direct_side_effect_nodes import (
+    remove_direct_side_effect_nodes)
 
 
 logger = logging.getLogger('graphs')
@@ -619,3 +622,22 @@ class GraphStorageView(APIView):
         response['Content-Disposition'] = (
             f'attachment; filename="graph_export_{drug_number}.zip"')
         return response
+
+
+class GraphVisualizationView(APIView):
+    """Отдаёт граф для визуализации на фронтенде."""
+
+    def get(self, request):
+        """Отправка json-файл графа для визуализации."""
+        graph = GraphStorage().download_graph()
+        if not graph:
+            return CustomResponse(
+                http_status=status.HTTP_404_NOT_FOUND,
+                status=status.HTTP_404_NOT_FOUND,
+                message='Граф для не найден'
+            )
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            http_status=status.HTTP_200_OK,
+            data=graph
+        )
