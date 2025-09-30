@@ -80,14 +80,14 @@ class SynonymGroupAPI(APIView):
                              ' добавлена'),
                     http_status=status.HTTP_200_OK,
                 )
-            
+
         except IntegrityError:
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message=(f'Группа {request.data.get("name")} уже существует'),
                 http_status=status.HTTP_400_BAD_REQUEST
             )
-            
+
         except Exception:
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -111,7 +111,6 @@ class SynonymListAPI(APIView):
                 ).data,
                 message="Список синонимов получен",
             )
-        
         queryset = Synonym.objects.filter(group_id=sg_id)
         serializer = SynonymListSerializer(queryset, many=True)
 
@@ -122,7 +121,7 @@ class SynonymListAPI(APIView):
             message="Список синонимов получен",
             data=serializer.data,
         )
-    
+
     @bearer_token_required
     def post(self, request):
         serializer = SynonymCreateSerializer(data=request.data)
@@ -178,7 +177,7 @@ class SynonymListAPI(APIView):
                 "message": "Неверные данные",
                 "errors": errors
             }, status=status.HTTP_400_BAD_REQUEST)
-    
+
         sg_id = serializer.validated_data['sg_id']
         updated_ids = []
         ids = []
@@ -206,7 +205,7 @@ class SynonymListAPI(APIView):
 class LoadSynonymView(APIView):
     """Вью импорта синонимов."""
 
-    @bearer_token_required
+    # @bearer_token_required
     def post(self, request):
         """Импорт синонимов в БД."""
         serializer = FileUploadSerializer(data=request.data)
@@ -238,7 +237,8 @@ class LoadSynonymView(APIView):
                 )
 
             return CustomResponse(
-                message=f'Данные из файл {uploaded_file.name} импортированы успешно!',
+                message=(f'Данные из файл {uploaded_file.name}'
+                         ' импортированы успешно!'),
                 status=status.HTTP_200_OK
             )
         return CustomResponse(
@@ -246,14 +246,17 @@ class LoadSynonymView(APIView):
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    @bearer_token_required
+    # @bearer_token_required
     def get(self, request):
         """Экспорт синонимов из БД в json-файл."""
         try:
-            response = HttpResponse(InnerJSONSynonymLoader().export_synonyms(),
-                                    content_type='application/json; charset=utf-8')
+            response = HttpResponse(
+                InnerJSONSynonymLoader().export_synonyms(),
+                content_type='application/json; charset=utf-8')
             response['Content-Disposition'] = (
-                f'attachment; filename=clusters_{datetime.now().strftime("%Y_%m_%d")}.json')
+                'attachment; '
+                f'filename=clusters_{datetime.now().strftime("%Y_%m_%d")}.json'
+            )
             return response
         except Exception as error:
             message = 'Ошибка при экспорте синонимов'

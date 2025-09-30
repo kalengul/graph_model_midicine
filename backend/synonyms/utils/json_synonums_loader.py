@@ -46,10 +46,10 @@ class InnerJSONSynonymLoader(SynonymLoader):
 
     def import_synonyms(self, clusters_data=None):
         """Импорт синонимов в БД."""
-
-        for status in self.GROUP_STATUS_COLORS:
-            SynonymStatus.objects.create(st_name=status['name'],
-                                         st_code=status['code'])
+        if SynonymStatus.objects.count():
+            for status in self.GROUP_STATUS_COLORS:
+                SynonymStatus.objects.create(st_name=status['name'],
+                                             st_code=status['code'])
 
         clusters_data = clusters_data or open(
             os.path.join(settings.TXT_DB_PATH, self.IMPORT_PATH),
@@ -59,14 +59,14 @@ class InnerJSONSynonymLoader(SynonymLoader):
         for cluster in clusters_data[self.CLUSTERS].keys():
             group = SynonymGroup.objects.create(
                 name=cluster.replace(self.REPLACED, self.REPLACING))
-            for synonym, status in clusters_data[self.CLUSTERS][cluster][self.LABELS]:
+            for snm, st in clusters_data[self.CLUSTERS][cluster][self.LABELS]:
                 try:
-                    st_id = (SynonymStatus.objects.get(id=status)
-                             if status else None)
+                    st_id = (SynonymStatus.objects.get(id=st)
+                             if st else None)
                 except SynonymStatus.DoesNotExist:
                     st_id = None
                 Synonym.objects.create(
-                    name=synonym,
+                    name=snm,
                     group=group,
                     st_id=st_id
                     )

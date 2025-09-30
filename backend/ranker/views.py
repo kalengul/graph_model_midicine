@@ -12,6 +12,7 @@ from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from ranker.serializers import QueryParamsSerializer
 from drugs.models import BannedDrugPair, Drug
+from ranker.utils.check_banned import DrugPairChecker
 
 
 IDX_2_RANK_NAME = MappingProxyType({
@@ -31,7 +32,8 @@ class CalculationAPI(APIView):
 
     def check_banned_drug_pair(self, drugs):
         """Проверка на наличие запрещённых пар ЛС."""
-        drug_map = {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)}
+        drug_map = (
+            {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)})
         banned_pairs = []
         for id1, id2 in combinations(drugs, 2):
             name1 = drug_map[id1].drug_name
@@ -46,12 +48,12 @@ class CalculationAPI(APIView):
                 banned_pairs.append((name1, name2, pair.comment))
         return banned_pairs
 
-
     def get(self, request):
         """Временный метод для просмотра изначальной структуры выхода."""
         logger.debug(f'входная строка {request.build_absolute_uri()}')
 
         logger.debug(f'request.query_params = {request.query_params}')
+
         serializer = QueryParamsSerializer(data=request.query_params)
         serializer.is_valid(raise_exception=True)
         data = serializer.validated_data
@@ -61,7 +63,9 @@ class CalculationAPI(APIView):
         index = data.get('humanData')
 
         if drugs is None:
-            message = "Обязательный параметр drugs отсутствует или некорректный."
+            message = (
+                "Обязательный параметр drugs отсутствует"
+                " или некорректный.")
             logger.error(message)
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
@@ -69,13 +73,15 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST)
 
         if index is None or index >= len(IDX_2_RANK_NAME):
-            message = "Обязательный параметр humanData отсутствует или некорректный."
+            message = (
+                "Обязательный параметр humanData отсутствует"
+                " или некорректный.")
             logger.error(message)
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
-        banned = self.check_banned_drug_pair(drugs)
+        banned = DrugPairChecker().check_banned(drugs)
         logger.debug(f'banned = {banned}')
         if banned:
             return CustomResponse(

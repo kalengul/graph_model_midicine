@@ -66,11 +66,15 @@ class Drug(models.Model):
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
                                           related_name='drugs')
+    contraindications = models.ManyToManyField('contraindications.Contraindication',
+                                               related_name='drugs')
 
     def save(self, *args, **kwargs):
         """Сохранение ЛС."""
         if not self.pk:
-            max_index = Drug.objects.aggregate(models.Max('index'))['index__max'] or 0
+            max_index = (
+                Drug.objects.aggregate(models.Max('index'))['index__max']
+                or 0)
             self.index = max_index + 1
 
         if not self.slug:
@@ -123,7 +127,9 @@ class SideEffect(models.Model):
     def save(self, *args, **kwargs):
         """Сохранение ПД."""
         if not self.pk:
-            max_index = SideEffect.objects.aggregate(models.Max('index'))['index__max'] or 0
+            max_index = (
+                SideEffect.objects.aggregate(models.Max('index'))['index__max']
+                or 0)
             self.index = max_index + 1
         super().save(*args, **kwargs)
 

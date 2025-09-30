@@ -8,6 +8,8 @@ import DrugGroupManageSlice from './DrugGroupManageSlice.tsx'
 import SideEffectManageSlice from './SideEffectManageSlice.tsx';
 import ComputationSlice from "./ComputationSlice.tsx"
 import SynonymsSlice from "./SynonymsSlice.ts"
+import ContraindicationsManageSlice from "./ContraindicationsManageSlice.tsx"
+import GraphSlice from './GraphSlice.tsx';
 
 import AuthSlice from "./AuthSlice.ts"
 
@@ -18,6 +20,8 @@ const reducers = combineReducers({
     sideEffectManage: SideEffectManageSlice,
     computation: ComputationSlice,
     synonyms: SynonymsSlice,
+    contraindicationsManage: ContraindicationsManageSlice,
+    graph: GraphSlice,
 
     auth: AuthSlice,
 

@@ -8,7 +8,8 @@ from rest_framework import status as DRF_status
 class CustomResponse(Response):
     """Кастомный респонс."""
 
-    def __init__(self, data=None, status=DRF_status.HTTP_200_OK, message='успешно',
+    def __init__(self, data=None, status=DRF_status.HTTP_200_OK,
+                 message='успешно',
                  http_status=DRF_status.HTTP_200_OK):
         """Формирование ответа."""
         if status != DRF_status.HTTP_200_OK:

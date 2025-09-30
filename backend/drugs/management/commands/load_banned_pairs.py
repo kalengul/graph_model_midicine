@@ -19,7 +19,7 @@ class Command(BaseCommand):
         try:
             CSVBannedPairLoader(
                 os.path.join(settings.TXT_DB_PATH,
-                            self.BANNED_PAIRS_FILE_NAME)
+                             self.BANNED_PAIRS_FILE_NAME)
             ).load_to_db()
             self.stdout.write(
                 self.style.SUCCESS('Запрещённые пары ЛС загружены успешно!'))

@@ -4,8 +4,10 @@ import {PrivateRoute} from "./routesPrivar"
 import { DataManagePage } from "./pages/DataManagea/DataManagePage"
 import {ComputationMedScape} from "./pages/СomputationMedScape/ComputationMedScape"
 import {ComputationFortran} from "./pages/СomputationFortran/ComputationFortran"
+import { ComputationBayes } from "./pages/СomputationBayes/СomputationBayes"
 import { SynonymsPage } from "./pages/SynonymsPage/SynonymsPage"
 import { LoginPage } from "./pages/Login/LoginPage"
+import { GraphPage } from "./pages/GraphPage/GraphPage"
 
 export const useRoutes = () =>{
     return(
@@ -20,6 +22,8 @@ export const useRoutes = () =>{
                 }
             />
             <Route path="/computationFortran" element={<ComputationFortran/>}/>
+            <Route path="/computationBayes" element={<ComputationBayes/>}/>
+            <Route path="/graph/:id" element={<GraphPage/>}></Route>
             <Route path="/login" element={<LoginPage/>}/>
             
             <Route 

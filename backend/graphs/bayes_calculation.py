@@ -4,13 +4,13 @@ import json
 import random
 from collections import defaultdict
 from itertools import product
+from pathlib import Path
 
 from django.conf import settings
 
 
-PROBABILITIES_PATH = (
-    f'{settings.BASE_DIR}\\txt_files_db\\probabilities_opt.json')
-GRAPHS_4_PATH = f'{settings.BASE_DIR}\\txt_files_db\\graphs_4.json'
+PROBABILITIES_PATH = Path(settings.GRAPH_PATH) / 'probabilities_opt.json'
+GRAPHS_4_PATH = Path(settings.GRAPH_PATH) / 'graphs_4.json'
 
 
 class BayesianNode:
@@ -169,7 +169,7 @@ def build_network(graph_data, prob_data):
     parent_map = defaultdict(list)
     for link in graph_data['links']:
         parent_map[link['target']].append(link['source'])
-    
+
     nodes = {}
     for node in graph_data['nodes']:
         node_id = node['id']
@@ -183,13 +183,13 @@ def build_network(graph_data, prob_data):
 
 def calculate_probabilities(network):
     """Вычисляет априорные вероятности для всех узлов сети"""
-    
+
     # 1. Создаем словарь связей "узел -> его родители"
     parent_map = {nid: node.parents for nid, node in network.items()}
-    
+
     # 2. Топологическая сортировка узлов
     sorted_nodes = topological_sort(network.keys(), parent_map)
-    
+
     # 3. Словарь для накопления результатов
     probabilities = {}
 
@@ -218,7 +218,7 @@ def calculate_probabilities(network):
 
             total_conditional = sum(node.prob_table.values())
             normalized_probs = {}
-            
+
             if abs(total_conditional - 1.0) > 1e-9:
                 f.write(f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
                 for comb, p in node.prob_table.items():
@@ -230,7 +230,7 @@ def calculate_probabilities(network):
             # Расчет для узлов с родителями
             total = 0.0
             f.write(f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
-            
+
             for i, (comb, p_node) in enumerate(normalized_probs.items(), 1):
                 prob_comb = 1.0
                 comb_str = ",".join(map(str, comb))
@@ -242,7 +242,7 @@ def calculate_probabilities(network):
                     parent = network[parent_id]
                     operation = "P" if state == 1 else "1-P"
                     value = parent_prob if state == 1 else (1 - parent_prob)
-                    
+
                     f.write(f"  Родитель {j}: {parent.name} (ID {parent_id})\n")
                     f.write(f"  Состояние: {state} → {operation}({parent_prob:.4f}) = {value:.4f}\n")
 

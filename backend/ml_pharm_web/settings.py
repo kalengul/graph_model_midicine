@@ -3,9 +3,13 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 
+DATA_UPLOAD_MAX_MEMORY_SIZE = 104857600  # 100 MB
+FILE_UPLOAD_MAX_MEMORY_SIZE = 104857600  # 100 MB
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 load_dotenv(override=True)
+MINI_FRONT_PATH = os.path.join(BASE_DIR, "mini_front", "dist")
 
 from .logging import LOGGING
 
@@ -70,7 +74,7 @@ ROOT_URLCONF = 'ml_pharm_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [MINI_FRONT_PATH],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -152,10 +156,11 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = []
+STATICFILES_DIRS = [
+    MINI_FRONT_PATH,
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -185,4 +190,5 @@ REST_FRAMEWORK = {
 }
 
 TXT_DB_PATH = os.path.join(BASE_DIR, 'txt_files_db')
+GRAPH_PATH = os.path.join(BASE_DIR, 'graphs_for_bayes')
 BACKUP_PATH = os.path.join(BASE_DIR, 'backup')
