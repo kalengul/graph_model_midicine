@@ -3,6 +3,7 @@ import io
 import zipfile
 import traceback
 import logging
+from pathlib import Path
 
 import networkx as nx
 from rest_framework.views import APIView
@@ -10,6 +11,7 @@ from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
+from django.conf import settings
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
@@ -30,11 +32,19 @@ from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
 from graphs.utils.removing_direct_side_effect_nodes import (
     remove_direct_side_effect_nodes)
+from graphs.utils.graph_optimization.lineman import Lineman
+from graphs.utils.graph_optimization.deleter_non_relative_nodes import (
+    SmartNonRelativeNodesDeleter,
+    SimpleNonRelativeNodesDeleter)
+from graphs.utils.parser import GraphParser
 
 
 logger = logging.getLogger('graphs')
 INCORRECT_DATA = 'Некорректные данные'
 NAME = 'name'
+MULTI_GRAPH_PATH = Path(settings.GRAPH_PATH) / 'multigraph.json'
+GRAPH_FOR_BAYES_PATH = Path(settings.GRAPH_PATH) / 'node_with_roots.json'
+UNNECESSARY = ['directed', 'multigraph', 'graph']
 
 
 class GraphView(APIView):
@@ -45,6 +55,71 @@ class GraphView(APIView):
 
     REMOVING = ("directed", "multigraph", "graph")
     ERROR_COMPATIBILITY = 'Ошибка определения совместимости'
+
+    def _get_multigraph(self):
+        """Получение мультиграфа."""
+        with open(MULTI_GRAPH_PATH, 'r', encoding='utf-8') as f:
+            json_graph = json.load(f)
+        return nx.node_link_graph(json_graph)
+
+    def _get_subgraph(self, drug_name):
+        """Получение подграфа для отдельного ЛС."""
+        graph = self._get_multigraph()
+        drug_node = None
+        for node_id, node_data in graph.nodes(data=True):
+            if node_data.get('name') == drug_name:
+                drug_node = node_id
+                break
+        if drug_node is None:
+            raise ValueError(f"Вершина с именем '{drug_name}' не найдена")
+
+        all_descendants = nx.descendants(graph, drug_node)
+
+        subgraph_nodes = {drug_node} | all_descendants
+        subgraph = graph.subgraph(subgraph_nodes)
+
+        return subgraph
+
+    # def _calculate_max_level(self, graph):
+    #     """Вычисляет максимальный уровень из всех вершин графа."""
+    #     roots = [node for node in graph.nodes() if graph.in_degree(node) == 0]
+
+    #     if not roots:
+    #         min_level = float('inf')
+    #         for node, data in graph.nodes(data=True):
+    #             level = data.get('level', float('inf'))
+    #             if level < min_level:
+    #                 min_level = level
+    #         roots = [node for node, data in graph.nodes(data=True)
+    #                  if data.get('level', -1) == min_level]
+
+    #     max_height = 0
+    #     for root in roots:
+    #         if root in graph:
+    #             try
+
+    def _combine_subgraphs(self, subgraphs):
+        """Объединение подграфов отдлеьных ЛС в единый подграф нескольких ЛС."""
+        if not subgraphs:
+            return nx.DiGraph()
+
+        combined_graph = subgraphs[0].copy()
+        combined_graph.graph[NAME] = [subgraphs[0].graph[NAME]]
+        combined_graph.graph['maxLevel'] = 0
+
+        for i in range(1, len(subgraphs)):
+            current_subgraph = subgraphs[i]
+
+            for node, node_data in current_subgraph.nodes(data=True):
+                if not combined_graph.has_node(node):
+                    combined_graph.add_node(node, **node_data)
+            for u, v, edge_data in current_subgraph.edges(data=True):
+                if not combined_graph.has_edge(u, v):
+                    combined_graph.add_edge(u, v, **edge_data)
+
+            combined_graph.graph[NAME].append(current_subgraph.graph[NAME])
+
+        return combined_graph
 
     def _remove_key_value(self, data):
         """Удаление ненужных пар по ключу."""
@@ -96,6 +171,12 @@ class GraphView(APIView):
                 parsed_ids.append(item)
         return parsed_ids
 
+    def remove_unnecessary_keys_and_values(self, graph):
+        """Удаление ненужный клчей и значкний из словаря графа."""
+        for key in UNNECESSARY:
+            graph.pop(key)
+        return graph
+
     def post(self, request):
         """Добавление графа."""
         graph_json, graph_xml, error = self._get_graph_from_file(request)
@@ -136,39 +217,50 @@ class GraphView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=self.ERROR_COMPATIBILITY
             )
-        graph_ids = []
         if ids:
+            drugs = []
+            graph_storage = GraphStorage()
             try:
                 for id in ids:
                     drug = Drug.objects.get(id=id)
+                    drugs.append(drug.drug_name.lower())
                     if not drug:
                         return CustomResponse(
                             http_status=status.HTTP_404_NOT_FOUND,
                             status=status.HTTP_404_NOT_FOUND,
                             message='ЛС не найдено'
                         )
-                    graph = Graph.objects.get(name__iexact=drug.drug_name)
-                    if not graph:
-                        return CustomResponse(
-                            http_status=status.HTTP_404_NOT_FOUND,
-                            status=status.HTTP_404_NOT_FOUND,
-                            message='Граф для ЛС не найден'
-                        )
-                    graph_ids.append(graph.id)
-                merged_graph = Merger().merge(graph_ids)
-                merged_graph = self._remove_key_value(merged_graph)
+                with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
+                    graph = json.load(f)
+
+                with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
+                    most_relative_nodes = json.load(f)
+
+                print('drugs =', drugs)
+
+                graph = SmartNonRelativeNodesDeleter().delete_nodes(
+                    nx.node_link_graph(graph, edges='links'),
+                    most_relative_nodes=most_relative_nodes,
+                    roots=[node['id'] for node in graph['nodes']
+                           if node['name'] in drugs])
+
+                json_graph = nx.node_link_data(graph, edges='links')
+                json_graph = GraphParser().jsonPolina(json_graph)
+                json_graph['name'] = drugs
+                json_graph = self.remove_unnecessary_keys_and_values(
+                    json_graph)
                 return CustomResponse(
-                    status=status.HTTP_200_OK,
                     http_status=status.HTTP_200_OK,
-                    message='Граф для лекарственных средств получен',
-                    data=merged_graph
+                    status=status.HTTP_200_OK,
+                    message='Граф для лекарственных средств получения',
+                    data=json_graph
                 )
             except Exception as error:
                 logger.error(f"Ошибка получения графа ЛС {error}")
                 return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message=self.ERROR_COMPATIBILITY
+                    message="Общий граф отстутсвует"
                 )
         else:
             return CustomResponse(
@@ -412,10 +504,21 @@ class BayeseView(APIView):
             if not drug:
                 logger.debug(f'ЛС с id {id} нет в БД')
                 continue
-            drugs.append(drug.drug_name)
+            drugs.append(drug.drug_name.lower())
 
         with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
             graph = json.load(f)
+
+        with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
+            most_relative_nodes = json.load(f)
+
+        graph = SimpleNonRelativeNodesDeleter().delete_nodes(
+            nx.node_link_graph(graph, edges='links'),
+            most_relative_nodes=most_relative_nodes,
+            roots=[node['id'] for node in graph['nodes']
+                   if node['name'] in drugs]
+        )
+        graph = nx.node_link_data(graph, edges='links')
 
         prob_data, drug_states_input_data, drugs_for_output, \
             combination_description = load_combined_data(
@@ -553,6 +656,10 @@ class GraphStorageView(APIView):
 
         if graph_file:
             graph = json.load(graph_file)
+            result = Lineman().traverse(nx.node_link_graph(graph,
+                                                           edges='links'))
+            with open(GRAPH_FOR_BAYES_PATH, 'w', encoding='utf-8') as f:
+                json.dump(result, f, ensure_ascii=False, indent=4)
             storage.save_graph(graph)
         else:
             message = 'Не был отправлен файл с графом.'

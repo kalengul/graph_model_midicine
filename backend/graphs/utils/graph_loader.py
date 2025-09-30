@@ -19,7 +19,7 @@ class JSONGraphLoader:
 
     def load(self, count=None):
         """Загрузчик данных из JSON-файлов."""
-        files =  os.listdir(DIR)
+        files = os.listdir(DIR)
         json_files = []
         xml_files = []
 
@@ -45,7 +45,7 @@ class JSONGraphLoader:
                           encoding='utf-8') as f:
                     graph_xml = f.read()
 
-                name='+'.join(graph_json.get(self.NAME))
+                name = '+'.join(graph_json.get(self.NAME))
                 if name and Graph.objects.filter(name=name).count() == 0:
                     Graph.objects.create(name=name,
                                          graph_json=graph_json,
