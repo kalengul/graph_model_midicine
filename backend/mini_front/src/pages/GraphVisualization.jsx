@@ -9,6 +9,8 @@ export default function GraphVisualization() {
     const [hideSideEffects, setHideSideEffects] = useState(false);
     const [hideGroup, setHideGroup] = useState(false);
     const [selectedNodeId, setSelectedNodeId] = useState(null);
+    const [graphList, setGraphList] = useState([]);
+    const [selectedIds, setSelectedIds] = useState([]);
 
     const PREPARE = 'prepare'
     const EFFECT = 'side_e'
@@ -23,8 +25,34 @@ export default function GraphVisualization() {
     };
 
     useEffect(() => {
+        fetch("/api/v1/graph/get_list/")
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.data) {
+                setGraphList(data.data);
+            }
+        })
+        .catch((err) => console.error("Ошибка загрузки списка графов", err))
         loadGraph();
     }, []);
+
+    const loadMergedGraph = async () => {
+        if (selectedIds.length === 0) {
+            alert("Выберите граф!");
+            return;
+        }
+        try {
+            const query = encodeURIComponent('[' + selectedIds.join(',') + ']');
+            const response = await fetch(`/api/v1/graph/merge/?ids=${query}`);
+            const data = await response.json();
+            if (data.data) {
+                setGraphData(data.data);
+                setFigure(buildFigure(data.data, hideSideEffects, hideGroup));
+            } 
+        } catch (e) {
+            console.error("Ошибка загрузки merged-графа", e);
+        }
+    }
 
     const getFilterGraph = (graph, hideSide, hideGroup) => {
         let nodes = [...graph.nodes];
@@ -78,7 +106,7 @@ export default function GraphVisualization() {
         const filtered = getFilterGraph(graphData, hideSideEffects, hideGroup);
         const nodeName = (searchValue || "").trim().toLowerCase();
         if (nodeName === "") {
-            alert(`Введите название вершиный`);
+            alert(`Введите название вершины`);
             return;
         }
         const node = filtered.nodes.find(n => String(n.name || '') .toLowerCase() === nodeName);
@@ -246,6 +274,33 @@ export default function GraphVisualization() {
     return (
         <div className="form-page">
             <h2>Визуализация графа</h2>
+
+            <div style={{ marginBottom: "15px" }}>
+                <label>Выберите графы:</label>
+                <select
+                    multiple
+                    value={selectedIds}
+                    onChange={(e) => {
+                        const options = Array.from(e.target.selectedOptions);
+                        setSelectedIds(options.map((o) => o.value));
+                    }}
+                    style={{ marginLeft: "10px", minWidth: "250px", minHeight: "100px" }}
+                >
+
+                    {graphList.map((g) => (
+                        <option key={g.id} value={g.id}>
+                            {g.name || `Graph #${g.id}`}
+                        </option>
+                    ))}
+                </select>
+                <button onClick={loadMergedGraph} style={{ marginLeft: "10px" }}>
+                    Загрузить граф для выбранных ЛС
+                </button>
+                <button onClick={loadGraph}>
+                    Загрузить общий граф
+                </button>
+            </div>
+
             <div style={{ marginBottom: '10px' }}>
                 <div className="search-bar">
                     <input

@@ -15,7 +15,7 @@ from django.conf import settings
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
-                                BayesSerializer)
+                                BayesSerializer, GraphListSerializer)
 from graphs.models import Graph
 from graphs.utils.cleaner_graph_db import CleanProcessor
 from graphs.utils.graph_loader import JSONGraphLoader
@@ -24,14 +24,11 @@ from graphs.utils.binarizer import Binarizer
 from graphs.utils.merger import Merger
 from graphs.utils.parse_ids import parse_ids
 from graphs.bayes_calculation import (load_combined_data, get_result,
-                                      build_network, calculate_probabilities,
-                                      GRAPHS_4_PATH, PROBABILITIES_PATH)
+                                      build_network, calculate_probabilities)
 from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
-from graphs.utils.removing_direct_side_effect_nodes import (
-    remove_direct_side_effect_nodes)
 from graphs.utils.graph_optimization.lineman import Lineman
 from graphs.utils.graph_optimization.deleter_non_relative_nodes import (
     SmartNonRelativeNodesDeleter,
@@ -42,9 +39,7 @@ from graphs.utils.parser import GraphParser
 logger = logging.getLogger('graphs')
 INCORRECT_DATA = 'Некорректные данные'
 NAME = 'name'
-MULTI_GRAPH_PATH = Path(settings.GRAPH_PATH) / 'multigraph.json'
 GRAPH_FOR_BAYES_PATH = Path(settings.GRAPH_PATH) / 'node_with_roots.json'
-UNNECESSARY = ['directed', 'multigraph', 'graph']
 
 
 class GraphView(APIView):
@@ -56,74 +51,89 @@ class GraphView(APIView):
     REMOVING = ("directed", "multigraph", "graph")
     ERROR_COMPATIBILITY = 'Ошибка определения совместимости'
 
-    def _get_multigraph(self):
-        """Получение мультиграфа."""
-        with open(MULTI_GRAPH_PATH, 'r', encoding='utf-8') as f:
-            json_graph = json.load(f)
-        return nx.node_link_graph(json_graph)
+    def _remove_unnecessary_keys_and_values(self, graph):
+        """Удаление ненужный клчей и значкний из словаря графа."""
+        for key in self.REMOVING:
+            graph.pop(key)
+        return graph
 
-    def _get_subgraph(self, drug_name):
-        """Получение подграфа для отдельного ЛС."""
-        graph = self._get_multigraph()
-        drug_node = None
-        for node_id, node_data in graph.nodes(data=True):
-            if node_data.get('name') == drug_name:
-                drug_node = node_id
-                break
-        if drug_node is None:
-            raise ValueError(f"Вершина с именем '{drug_name}' не найдена")
+    def _parse_ids(self, ids):
+        """Парсинг списка id."""
+        parsed_ids = []
+        for id in ids:
+            parsed_id = id.replace('[', '').replace(']', '').split(', ')
+            for item in parsed_id:
+                parsed_id = int(item)
+                parsed_ids.append(item)
+        return parsed_ids
 
-        all_descendants = nx.descendants(graph, drug_node)
+    def get(self, request, id=None):
+        """Получнение графа по id или список."""
+        try:
+            ids = id or request.query_params.getlist('id')
+            ids = self._parse_ids(ids)
+        except Exception as error:
+            message = 'Не передан id'
+            logger.error(f'{message}. Ошибка {error}')
+            return CustomResponse(
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=message
+            )
+        if ids:
+            drugs = []
+            graph_storage = GraphStorage()
+            try:
+                for id in ids:
+                    drug = Drug.objects.get(id=id)
+                    drugs.append(drug.drug_name.lower())
+                    if not drug:
+                        return CustomResponse(
+                            http_status=status.HTTP_404_NOT_FOUND,
+                            status=status.HTTP_404_NOT_FOUND,
+                            message='ЛС не найдено'
+                        )
+                with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
+                    graph = json.load(f)
 
-        subgraph_nodes = {drug_node} | all_descendants
-        subgraph = graph.subgraph(subgraph_nodes)
+                with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
+                    most_relative_nodes = json.load(f)
 
-        return subgraph
+                print('drugs =', drugs)
 
-    # def _calculate_max_level(self, graph):
-    #     """Вычисляет максимальный уровень из всех вершин графа."""
-    #     roots = [node for node in graph.nodes() if graph.in_degree(node) == 0]
+                graph = SmartNonRelativeNodesDeleter().delete_nodes(
+                    nx.node_link_graph(graph, edges='links'),
+                    most_relative_nodes=most_relative_nodes,
+                    roots=[node['id'] for node in graph['nodes']
+                           if node['name'] in drugs])
 
-    #     if not roots:
-    #         min_level = float('inf')
-    #         for node, data in graph.nodes(data=True):
-    #             level = data.get('level', float('inf'))
-    #             if level < min_level:
-    #                 min_level = level
-    #         roots = [node for node, data in graph.nodes(data=True)
-    #                  if data.get('level', -1) == min_level]
+                json_graph = nx.node_link_data(graph, edges='links')
+                json_graph = GraphParser().jsonPolina(json_graph)
+                json_graph['name'] = drugs
+                json_graph = self._remove_unnecessary_keys_and_values(
+                    json_graph)
+                return CustomResponse(
+                    http_status=status.HTTP_200_OK,
+                    status=status.HTTP_200_OK,
+                    message='Граф для лекарственных средств получения',
+                    data=json_graph
+                )
+            except Exception as error:
+                logger.error(f"Ошибка получения графа ЛС {error}")
+                return CustomResponse(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message="Общий граф отстутсвует"
+                )
+        else:
+            return CustomResponse(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message=self.ERROR_COMPATIBILITY
+            )
 
-    #     max_height = 0
-    #     for root in roots:
-    #         if root in graph:
-    #             try
 
-    def _combine_subgraphs(self, subgraphs):
-        """Объединение подграфов отдлеьных ЛС в единый подграф нескольких ЛС."""
-        if not subgraphs:
-            return nx.DiGraph()
-
-        combined_graph = subgraphs[0].copy()
-        combined_graph.graph[NAME] = [subgraphs[0].graph[NAME]]
-        combined_graph.graph['maxLevel'] = 0
-
-        for i in range(1, len(subgraphs)):
-            current_subgraph = subgraphs[i]
-
-            for node, node_data in current_subgraph.nodes(data=True):
-                if not combined_graph.has_node(node):
-                    combined_graph.add_node(node, **node_data)
-            for u, v, edge_data in current_subgraph.edges(data=True):
-                if not combined_graph.has_edge(u, v):
-                    combined_graph.add_edge(u, v, **edge_data)
-
-            combined_graph.graph[NAME].append(current_subgraph.graph[NAME])
-
-        return combined_graph
-
-    def _remove_key_value(self, data):
-        """Удаление ненужных пар по ключу."""
-        return {k: v for k, v in data.items() if k not in self.REMOVING}
+class CRUDGraphView(APIView):
 
     def _get_graph_from_file(self, request):
         """
@@ -161,21 +171,16 @@ class GraphView(APIView):
 
         return graph_json, graph_xml, None
 
-    def _parse_ids(self, ids):
-        """Парсинг списка id."""
-        parsed_ids = []
-        for id in ids:
-            parsed_id = id.replace('[', '').replace(']', '').split(', ')
-            for item in parsed_id:
-                parsed_id = int(item)
-                parsed_ids.append(item)
-        return parsed_ids
-
-    def remove_unnecessary_keys_and_values(self, graph):
-        """Удаление ненужный клчей и значкний из словаря графа."""
-        for key in UNNECESSARY:
-            graph.pop(key)
-        return graph
+    def get(self, request):
+        """Получение списка графов или отдельных графов."""
+        graphs = Graph.objects.all()
+        serializer = GraphListSerializer(instance=graphs, many=True)
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            http_status=status.HTTP_200_OK,
+            message='Список графов получен успешно',
+            data=serializer.data
+        )
 
     def post(self, request):
         """Добавление графа."""
@@ -202,71 +207,6 @@ class GraphView(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST,
                 message=(f'{INCORRECT_DATA}. Убедитесь что у него есть поля '
                          f'name, nodes, links. {graph_serializer.errors}')
-            )
-
-    def get(self, request, id=None):
-        """Получнение графа по id или список."""
-        try:
-            ids = id or request.query_params.getlist('id')
-            ids = self._parse_ids(ids)
-        except Exception as error:
-            message = 'Не передан id'
-            logger.error(f'{message}. Ошибка {error}')
-            return CustomResponse(
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=self.ERROR_COMPATIBILITY
-            )
-        if ids:
-            drugs = []
-            graph_storage = GraphStorage()
-            try:
-                for id in ids:
-                    drug = Drug.objects.get(id=id)
-                    drugs.append(drug.drug_name.lower())
-                    if not drug:
-                        return CustomResponse(
-                            http_status=status.HTTP_404_NOT_FOUND,
-                            status=status.HTTP_404_NOT_FOUND,
-                            message='ЛС не найдено'
-                        )
-                with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
-                    graph = json.load(f)
-
-                with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
-                    most_relative_nodes = json.load(f)
-
-                print('drugs =', drugs)
-
-                graph = SmartNonRelativeNodesDeleter().delete_nodes(
-                    nx.node_link_graph(graph, edges='links'),
-                    most_relative_nodes=most_relative_nodes,
-                    roots=[node['id'] for node in graph['nodes']
-                           if node['name'] in drugs])
-
-                json_graph = nx.node_link_data(graph, edges='links')
-                json_graph = GraphParser().jsonPolina(json_graph)
-                json_graph['name'] = drugs
-                json_graph = self.remove_unnecessary_keys_and_values(
-                    json_graph)
-                return CustomResponse(
-                    http_status=status.HTTP_200_OK,
-                    status=status.HTTP_200_OK,
-                    message='Граф для лекарственных средств получения',
-                    data=json_graph
-                )
-            except Exception as error:
-                logger.error(f"Ошибка получения графа ЛС {error}")
-                return CustomResponse(
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message="Общий граф отстутсвует"
-                )
-        else:
-            return CustomResponse(
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message=self.ERROR_COMPATIBILITY
             )
 
     def put(self, request, id):

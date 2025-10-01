@@ -73,6 +73,21 @@ class UpdateGraphSerializer(serializers.ModelSerializer):
         return value
 
 
+class GraphListSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор для списка графов.
+
+    Предназначен для GET-запрос на список графов.
+    Каждый элемент списка это название и id graph.
+    """
+
+    class Meta:
+        """Настройка сериализатора."""
+
+        model = Graph
+        fields = ('id', 'name')
+
+
 class BayesSerializer(serializers.Serializer):
     """Сериализатор для Байеса."""
 
