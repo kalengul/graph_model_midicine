@@ -3,7 +3,8 @@ import '@xyflow/react/dist/style.css';
 import { useEffect, useState,  useCallback} from 'react';
 import {/*useNavigate,*/ useParams} from 'react-router-dom'
 
-import { /*useAppDispatch,*/ useAppSelector } from "../../redux/hooks"
+import { useAppDispatch, useAppSelector } from "../../redux/hooks"
+import { fetchGraph, IGraphNode, IDraphLink, IGraph} from '../../redux/GraphSlice';
 
 const initialNodes: Node[] = [
   { id: '1', data: { label: 'Node 1' }, position: { x: 5, y: 5 } },
@@ -14,6 +15,7 @@ const initialEdges: Edge[] = [{ id: 'e1-2', source: '1', target: '2' }];
 
 export const GraphPage = () =>{
     const { id } = useParams()
+    const dispatch = useAppDispatch()
     // const navigate = useNavigate();
 
     const drugs = useAppSelector(state=>state.graph.drugs)
@@ -25,6 +27,14 @@ export const GraphPage = () =>{
 
     useEffect(()=>{
         console.log(id)
+        const idsArray = id?.split(",")
+        if(idsArray) {
+            //Получение графа по id
+            dispatch(fetchGraph(idsArray))
+
+
+            //Преобразование графа для отображения
+        }
     },[])
 
     const [nodes, setNodes] = useState(initialNodes);

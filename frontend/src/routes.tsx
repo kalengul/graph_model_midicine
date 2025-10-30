@@ -8,6 +8,7 @@ import { ComputationBayes } from "./pages/СomputationBayes/СomputationBayes"
 import { SynonymsPage } from "./pages/SynonymsPage/SynonymsPage"
 import { LoginPage } from "./pages/Login/LoginPage"
 import { GraphPage } from "./pages/GraphPage/GraphPage"
+import {StatisticBayesPage} from "./pages/StatisticBayesPage/StatisticBayes"
 
 export const useRoutes = () =>{
     return(
@@ -39,6 +40,15 @@ export const useRoutes = () =>{
                 element={
                     <PrivateRoute> 
                         <SynonymsPage/> 
+                    </PrivateRoute>
+                }
+            />
+
+            <Route 
+                path="/statisticBayes"  
+                element={
+                    <PrivateRoute> 
+                        <StatisticBayesPage/> 
                     </PrivateRoute>
                 }
             />

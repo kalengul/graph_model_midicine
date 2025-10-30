@@ -88,13 +88,20 @@ export const ComputationBayes = () =>{
                             />
                         }
                         {
-                            compareView && (compareData.length>0) && 
-                            <CollapsList
-                                title = ""
-                                className="ComputationResults default"
-                                type="compare-riscs"
-                                content= {compareData}
-                            />
+                            compareView && (compareData.length>0) && <>
+                                
+                                {/* <div className="mb-4 flex jc-sb ai-center">
+                                    <button className="btn send-btn sm-btn" >Экспортировать</button>
+                                </div> */}
+
+                                <CollapsList
+                                    title = ""
+                                    className="ComputationResults default"
+                                    type="compare-riscs"
+                                    content= {compareData}
+                                />
+                               
+                            </>
                         }
                         <div className="flex jc-sb mt-3">
                             <button className="btn send-btn" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
