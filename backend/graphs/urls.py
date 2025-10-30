@@ -17,6 +17,6 @@ urlpatterns = [
          name='storage_graph'),
     path('graph/visualization/', GraphVisualizationView.as_view(),
          name='visualization'),
-	path('graph/statisticFile/', BayesTableView.as_view(),
+	path('statisticFile', BayesTableView.as_view(),
 		 name='statisticFile'),
 ]

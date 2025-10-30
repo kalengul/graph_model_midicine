@@ -36,6 +36,7 @@ from graphs.utils.graph_optimization.deleter_non_relative_nodes import (
     SmartNonRelativeNodesDeleter,
     SimpleNonRelativeNodesDeleter)
 from graphs.utils.parser import GraphParser
+from accounts.auth import bearer_token_required
 
 
 logger = logging.getLogger('graphs')
@@ -737,6 +738,7 @@ class BayesTableView(APIView):
             bin_id[drug2id[drug.lower()]] = 1
         return bin_id
 
+    @bearer_token_required
     def get(self, request):
         """Получения таблицы рангов Байеса."""
         storage = GraphStorage()
