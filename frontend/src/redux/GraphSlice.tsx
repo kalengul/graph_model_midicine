@@ -1,5 +1,5 @@
-import { createSlice, /*createAsyncThunk*/ } from "@reduxjs/toolkit";
-// import axios from "axios";
+import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import axios from "axios";
 import { IDrugElem } from "./DrugManageSlice";
 
 export interface IGraphNode{ //Узел графа
@@ -7,7 +7,8 @@ export interface IGraphNode{ //Узел графа
     name: string;
     label: string;
     level: number;
-    parents: string[]
+    parents: string[];
+    weight: number;
 }
 
 export interface IDraphLink{ //Связь графа
@@ -37,6 +38,20 @@ export interface IGraphState{
 }
 
 //Получение графа с сервера
+export const fetchGraph = createAsyncThunk('graph/fetchGraph', async (id: string[]) => {
+    try {
+        const response = await axios.get('/api/graph/',  {
+                params: { id: `[${id.join(", ")}]` } 
+            });
+        if (response.data.result.status === 200) {
+            return response.data.data;
+        }
+        return []; // Если статус не 200
+    } catch (error) {
+        console.error('Ошибка при загрузке графа:\n', error);
+        return []; // Возвращаем пустой массив при ошибке
+    }
+});
 
 const GraphSlice = createSlice({
     name: 'graph',

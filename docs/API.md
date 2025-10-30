@@ -993,6 +993,10 @@
             "slug": "/computationBayes"
         },
         {
+            "title": "Статистика Байес",
+            "slug": "/statisticBayes"
+        },
+        {
             "title": "Управление данными",
             "slug": "/dataManage"
         },
