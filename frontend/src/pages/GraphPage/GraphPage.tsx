@@ -4,8 +4,8 @@ import { useEffect, useState,  useCallback} from 'react';
 import {/*useNavigate,*/ useParams} from 'react-router-dom'
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { fetchGraph, IGraphNode, IDraphLink, IGraph} from '../../redux/GraphSlice';
-
+import { fetchGraph,} from '../../redux/GraphSlice';
+// IGraphNode, IDraphLink, IGraph
 const initialNodes: Node[] = [
   { id: '1', data: { label: 'Node 1' }, position: { x: 5, y: 5 } },
   { id: '2', data: { label: 'Node 2' }, position: { x: 5, y: 100 } },
