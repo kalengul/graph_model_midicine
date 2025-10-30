@@ -9,7 +9,7 @@ USER = 'Пользователь'
 
 
 class NameDrugsMedScape(models.Model):
-    """Модели ЛС из MedScape."""
+    """Модель ЛС из MedScape."""
 
     name_en = models.CharField(max_length=MAX_LENGTH,
                                verbose_name='Name Drug')

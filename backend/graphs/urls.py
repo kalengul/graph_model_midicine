@@ -2,7 +2,7 @@ from django.urls import path
 
 from graphs.views import (GraphView, LoadGraphView, BayeseView, MergeView,
                           GraphStorageView, GraphVisualizationView,
-                          CRUDGraphView)
+                          CRUDGraphView, BayesTableView)
 
 
 urlpatterns = [
@@ -17,4 +17,6 @@ urlpatterns = [
          name='storage_graph'),
     path('graph/visualization/', GraphVisualizationView.as_view(),
          name='visualization'),
+	path('graph/statisticFile/', BayesTableView.as_view(),
+		 name='statisticFile'),
 ]

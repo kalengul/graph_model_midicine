@@ -1,9 +1,9 @@
 import json
 import io
 import zipfile
-import traceback
 import logging
 from pathlib import Path
+from datetime import datetime
 
 import networkx as nx
 from rest_framework.views import APIView
@@ -12,6 +12,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.conf import settings
+import pandas as pd
+import numpy as np
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
@@ -25,7 +27,7 @@ from graphs.utils.merger import Merger
 from graphs.utils.parse_ids import parse_ids
 from graphs.bayes_calculation import (load_combined_data, get_result,
                                       build_network, calculate_probabilities)
-from drugs.models import Drug
+from drugs.models import Drug, SideEffect, DrugSideEffect
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
@@ -134,6 +136,7 @@ class GraphView(APIView):
 
 
 class CRUDGraphView(APIView):
+    """Вью для CRUD."""
 
     def _get_graph_from_file(self, request):
         """
@@ -460,6 +463,7 @@ class BayeseView(APIView):
         )
         graph = nx.node_link_data(graph, edges='links')
 
+        full_process_start = datetime.now()
         prob_data, drug_states_input_data, drugs_for_output, \
             combination_description = load_combined_data(
                 graph_data=graph,
@@ -471,7 +475,9 @@ class BayeseView(APIView):
         network = build_network(graph, prob_data)
 
         # Перерасчет вероятностей (логирование не меняется)
+        calculation_start = datetime.now()
         final_probs = calculate_probabilities(network)
+        calculation_finish = datetime.now()
 
         data = get_result(
             final_probs,
@@ -479,7 +485,19 @@ class BayeseView(APIView):
             drug_states_input_data,
             drugs_for_output,
             combination_description
-        )
+            )
+
+        full_process_finish = datetime.now()
+        full_process = full_process_finish - full_process_start
+        calculation = calculation_finish - calculation_start
+
+        log_path = Path(settings.LOG_PATH)
+
+        with open(log_path / 'calculation_time.txt', 'w',
+                  encoding='utf-8') as f:
+            f.write(f'время для выполнения вероятностей: {calculation}\n')
+            f.write(('время для выполнения всех этапах '
+                     f'сети Байеса {full_process}\n'))
 
         result = {
                     "сompatibility_bayes": сompatibility_bayes,
@@ -565,8 +583,10 @@ class BayeseView(APIView):
                 "rank": data["side_effects"][se]["probability"],
             })
 
-        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-                                                  reverse=True)
+        # result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
+        #                                           reverse=True)
+        result["side_effects"][0]["effects"].sort(
+            key=lambda x: x[self.EFFECT_NAME])
 
         if gender:
             logger.debug(f'Пол указан. gender = {gender}')
@@ -576,6 +596,14 @@ class BayeseView(APIView):
 
         message = 'Совместимость ЛС по сети Байеса успешно расcчитана'
         logger.info(f'message = {message}')
+
+        with (open(log_path / 'side_effects.txt', 'w', encoding='utf-8') as f1,
+              open(log_path / 'weight.txt', 'w', encoding='utf-8') as f2):
+            for side_effects in result['side_effects']:
+                for effect in side_effects['effects']:
+                    f1.write(f"{effect['se_name']}\n")
+                    f2.write(f"{effect['rank']}\n")
+
         return CustomResponse(
             http_status=status.HTTP_200_OK,
             status=status.HTTP_200_OK,
@@ -688,3 +716,147 @@ class GraphVisualizationView(APIView):
             http_status=status.HTTP_200_OK,
             data=graph
         )
+
+
+class BayesTableView(APIView):
+    """Вью для таблицы рангов Байеса для каждого ЛС и ПД."""
+
+    def _get_bin_ids(self, drugs):
+        """Получение бинаризированного словаря."""
+        graph = GraphStorage().download_graph()
+        bin_id = {}
+        drug2id = {}
+
+        for node in graph['nodes']:
+            if node['label'] != 'prepare':
+                continue
+            drug2id[node[NAME]] = node['id']
+            bin_id[node['id']] = 0
+
+        for drug in drugs:
+            bin_id[drug2id[drug.lower()]] = 1
+        return bin_id
+
+    def get(self, request):
+        """Получения таблицы рангов Байеса."""
+        storage = GraphStorage()
+        graph = storage.download_graph()
+
+        drugs = sorted(graph['name'])
+        effects = [effect.se_name
+                   for effect in SideEffect.objects.all()]
+        bayes_table = pd.DataFrame('-', index=drugs, columns=effects)
+
+        for drug in drugs:
+            prob_data, drug_states_input_data, drugs_for_output, \
+                combination_description = load_combined_data(
+                    graph_data=graph,
+                    prob_file=storage.probability_path,
+                    drug_states_input=self._get_bin_ids([drug])
+                )
+
+            # Построение сети с новыми параметрами
+            network = build_network(graph, prob_data)
+
+            # Перерасчет вероятностей (логирование не меняется)
+            final_probs = calculate_probabilities(network)
+
+            data = get_result(
+                final_probs,
+                graph,
+                drug_states_input_data,
+                drugs_for_output,
+                combination_description)
+
+            for effect in data['side_effects']:
+                bayes_table.loc[drug, effect] = (
+                    data['side_effects'][effect]['probability'])
+
+        fortran_table = pd.DataFrame('-', index=drugs, columns=effects)
+        for drug in drugs:
+            for effect in effects:
+                fortran_table.loc[drug, effect] = DrugSideEffect.objects.get(
+                    drug__drug_name__iexact=drug,
+                    side_effect__se_name=effect).rang_base
+
+        # --- Преобразуем таблицы в числовой формат ---
+        # Заменяем '-' на NaN и конвертируем в float
+        bayes_numeric = bayes_table.replace('-', np.nan).astype(float)
+        fortran_numeric = fortran_table.replace('-', np.nan).astype(float)
+
+        # --- Вычисляем квадрат разницы ---
+        diff_squared = (bayes_numeric - fortran_numeric) ** 2
+
+        # Сумма по строкам (только числа)
+        row_sums = diff_squared.sum(axis=1)
+
+        # Заменяем NaN обратно на '-' для отображения (опционально)
+        diff_squared_display = diff_squared.fillna('-')
+        diff_squared_display['Сумма'] = row_sums.fillna('-')
+
+        # Порог
+        epsilon = 0.05
+
+        # Абсолютная разница
+        abs_diff = (bayes_numeric - fortran_numeric).abs()
+
+        # Булево сравнение: True если разница <= epsilon
+        accuracy_mask = abs_diff <= epsilon
+
+        # Преобразуем True/False в "Верно"/"Неверно"
+        accuracy_table = accuracy_mask.replace({True: 'Верно',
+                                                False: 'Неверно'})
+
+        # Восстанавливаем '-' вместо значений,
+        # где хотя бы одна ячейка была пустой
+        # (т.е. где была NaN в исходных числовых таблицах)
+        mask_nan = bayes_numeric.isna() | fortran_numeric.isna()
+        accuracy_table = accuracy_table.mask(mask_nan, '-')
+
+        # Определяем, какие столбцы относятся к эффектам (все, кроме, возможно, уже добавленного 'Сумма')
+        # В accuracy_table изначально столько же столбцов, сколько в effects
+        effect_columns = effects  # или: [col for col in accuracy_table.columns if col != 'Сумма']
+
+        # Извлекаем под-DataFrame только с эффектами
+        acc_effect_part = accuracy_table[effect_columns]
+
+        # Считаем количество "Верно" по строкам
+        count_true = (acc_effect_part == 'Верно').sum(axis=1)
+
+        # Считаем общее количество не-"-" значений (т.е. "Верно" или "Неверно")
+        count_valid = acc_effect_part.isin(['Верно', 'Неверно']).sum(axis=1)
+
+        # Вычисляем долю
+        accuracy_ratio = count_true / count_valid
+
+        # Где нет валидных данных — ставим NaN, затем заменим на '-'
+        accuracy_ratio = accuracy_ratio.where(count_valid > 0, np.nan)
+
+        # Добавляем столбец в основную таблицу
+        accuracy_table['Доля верно'] = accuracy_ratio.fillna('-')
+
+        excel_buffer = io.BytesIO()
+        with pd.ExcelWriter(excel_buffer, engine='openpyxl') as writer:
+            bayes_table.to_excel(writer, sheet_name='Байес', index=True)
+            fortran_table.to_excel(writer, sheet_name='Фортран', index=True)
+            diff_squared_display.to_excel(writer,
+                                          sheet_name='Кв. разности',
+                                          index=True)
+            accuracy_table.to_excel(writer, sheet_name='Точность', index=True)
+
+        excel_buffer.seek(0)
+
+        zip_buffer = io.BytesIO()
+        with zipfile.ZipFile(zip_buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+            zip_file.writestr('comparison_bayes_and_fortran_tables.xlsx',
+                              excel_buffer.getvalue())
+
+        zip_buffer.seek(0)
+
+        response = HttpResponse(
+            zip_buffer.getvalue(),
+            content_type=('application/zip')
+        )
+        response['Content-Disposition'] = ('attachment; '
+                                           'filename="bayes_tables.zip"')
+        return response

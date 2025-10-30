@@ -89,7 +89,7 @@ class CalculationAPI(APIView):
                 message='Совместимость ЛС по Fortran успешно расcчитана',
                 http_status=status.HTTP_200_OK,
                 data={
-                    "сompatibility_fortran": "banned", 
+                    "сompatibility_fortran": "banned",
                     "combinations":[
                         {
                             "сompatibility":"banned",
@@ -126,7 +126,7 @@ class CalculationAPI(APIView):
                 message='Совместимость ЛС по Fortran успешно расcчитана',
                 http_status=status.HTTP_200_OK,
                 data=context)
-        
+
         except Exception:
             logger.critical(traceback.format_exc())
 

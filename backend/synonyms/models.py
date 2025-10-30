@@ -15,6 +15,7 @@ class SynonymGroup(models.Model):
                                        verbose_name="Завершена")
 
     def __str__(self):
+        """Вывод информации о группе синонимов."""
         return self.name
 
     class Meta:
@@ -47,6 +48,7 @@ class Synonym(models.Model):
             )
 
     def __str__(self):
+        """Вывод информации о синониме."""
         return self.name
 
     class Meta:
@@ -68,6 +70,7 @@ class SynonymStatus(models.Model):
                                null=True)
 
     def __str__(self):
+        """Вывод информации о статусе синонима."""
         return self.st_name
 
     class Meta:

@@ -66,8 +66,9 @@ class Drug(models.Model):
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
                                           related_name='drugs')
-    contraindications = models.ManyToManyField('contraindications.Contraindication',
-                                               related_name='drugs')
+    contraindications = models.ManyToManyField(
+        'contraindications.Contraindication',
+        related_name='drugs')
 
     def save(self, *args, **kwargs):
         """Сохранение ЛС."""
@@ -220,6 +221,7 @@ class BannedDrugPair(models.Model):
                                verbose_name='Комментарий')
 
     def __str__(self):
+        """Вывод информации о паре ЛС."""
         return f'Пара ЛС: {self.first_drug} и {self.second_drug}'
 
     class Meta:
