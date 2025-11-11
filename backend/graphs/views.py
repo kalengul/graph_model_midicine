@@ -738,7 +738,7 @@ class BayesTableView(APIView):
             bin_id[drug2id[drug.lower()]] = 1
         return bin_id
 
-    @bearer_token_required
+    # @bearer_token_required
     def get(self, request):
         """Получения таблицы рангов Байеса."""
         storage = GraphStorage()
@@ -748,6 +748,9 @@ class BayesTableView(APIView):
         effects = [effect.se_name
                    for effect in SideEffect.objects.all()]
         bayes_table = pd.DataFrame('-', index=drugs, columns=effects)
+
+        # print('len(effects) =', len(effects))
+        print('bayes_table =', bayes_table)
 
         for drug in drugs:
             prob_data, drug_states_input_data, drugs_for_output, \
@@ -771,15 +774,21 @@ class BayesTableView(APIView):
                 combination_description)
 
             for effect in data['side_effects']:
-                bayes_table.loc[drug, effect] = (
-                    data['side_effects'][effect]['probability'])
+                if effect in effects:
+                    bayes_table.loc[drug, effect] = (
+                        data['side_effects'][effect]['probability'])
+
+        print('bayes_table =', bayes_table)
 
         fortran_table = pd.DataFrame('-', index=drugs, columns=effects)
         for drug in drugs:
             for effect in effects:
                 fortran_table.loc[drug, effect] = DrugSideEffect.objects.get(
                     drug__drug_name__iexact=drug,
-                    side_effect__se_name=effect).rang_base
+                    side_effect__se_name__iexact=effect).rang_base
+
+        print('bayes_table =', bayes_table)
+        # print('fortran_table =', fortran_table)
 
         # --- Преобразуем таблицы в числовой формат ---
         # Заменяем '-' на NaN и конвертируем в float
@@ -813,8 +822,13 @@ class BayesTableView(APIView):
         # где хотя бы одна ячейка была пустой
         # (т.е. где была NaN в исходных числовых таблицах)
         mask_nan = bayes_numeric.isna() | fortran_numeric.isna()
-        accuracy_table = accuracy_table.mask(mask_nan, '-')
+        # # accuracy_table = accuracy_table.mask(mask_nan, '-')
+        # accuracy_table = accuracy_table.where(~mask_nan, '-')
+        # Создаём копию accuracy_table
+        accuracy_table = accuracy_table.copy()
 
+        # Применяем маску напрямую: где mask_nan == True → ставим '-'
+        accuracy_table[mask_nan] = '-'
         # Определяем, какие столбцы относятся к эффектам (все, кроме, возможно, уже добавленного 'Сумма')
         # В accuracy_table изначально столько же столбцов, сколько в effects
         effect_columns = effects  # или: [col for col in accuracy_table.columns if col != 'Сумма']
