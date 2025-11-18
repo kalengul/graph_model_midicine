@@ -30,9 +30,11 @@ class BayesianNode:
     def get_probability(self, parent_states):
         return self.prob_table.get(parent_states, 0.0)
 
+
 def load_graph(filename):
     with open(filename, 'r') as f:
         return json.load(f)
+
 
 def load_probabilities(filename='probabilities.json'):
     try:
@@ -41,19 +43,21 @@ def load_probabilities(filename='probabilities.json'):
     except FileNotFoundError:
         return {}
 
+
 def create_base_probabilities(graph_data, output_file='probabilities.json'):
     # Инициализация структур данных
     parent_map = defaultdict(list)
     id_to_node = {n['id']: n for n in graph_data['nodes']}
-    
+
     # Построение карты родителей
     for link in graph_data['links']:
         parent_map[link['target']].append(link['source'])
-    
+
     # Находим все prepare-узлы и их предков
-    prepare_nodes = [n['id'] for n in graph_data['nodes'] if n.get('label') == 'prepare']
+    prepare_nodes = [n['id']
+                     for n in graph_data['nodes'] if n.get('label') == 'prepare']
     zero_nodes = set()
-    
+
     # Рекурсивный поиск предков
     def find_ancestors(node_id):
         ancestors = set()
@@ -61,33 +65,37 @@ def create_base_probabilities(graph_data, output_file='probabilities.json'):
             ancestors.add(parent)
             ancestors.update(find_ancestors(parent))
         return ancestors
-    
+
     # Собираем все узлы для обнуления
     for node_id in prepare_nodes:
         zero_nodes.add(node_id)
         zero_nodes.update(find_ancestors(node_id))
-    
+
     # Генерация вероятностей
     probabilities = {}
     for node in graph_data['nodes']:
         node_id = node['id']
         parents = parent_map.get(node_id, [])
-        
+
         # Для нулевых узлов
         if node_id in zero_nodes:
             if not parents:
                 probabilities[node['name']] = {"": 0.0}
             else:
-                combs = product([0], repeat=len(parents))  # Все комбинации нулей
-                probabilities[node['name']] = {','.join(map(str, c)): 0.0 for c in combs}
+                # Все комбинации нулей
+                combs = product([0], repeat=len(parents))
+                probabilities[node['name']] = {
+                    ','.join(map(str, c)): 0.0 for c in combs}
         else:
             # Случайные вероятности для остальных
             if not parents:
-                probabilities[node['name']] = {"": random.uniform(0.00001, 0.999)}
+                probabilities[node['name']] = {
+                    "": random.uniform(0.00001, 0.999)}
             else:
                 combs = product([0, 1], repeat=len(parents))
-                probabilities[node['name']] = {','.join(map(str, c)): random.uniform(0.0000001, 0.999) for c in combs}
-    
+                probabilities[node['name']] = {
+                    ','.join(map(str, c)): random.uniform(0.0000001, 0.999) for c in combs}
+
     # Сохранение в файл
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(probabilities, f, indent=4, ensure_ascii=False)
@@ -95,9 +103,10 @@ def create_base_probabilities(graph_data, output_file='probabilities.json'):
 
 # Функция создания файла доз (оригинальная, оставлена без изменений согласно заданию)
 def create_doses_file(graph_data, output_file='prepare_doses.json'):
-    prepare_nodes = [n['name'] for n in graph_data['nodes'] if n.get('label') == 'prepare']
+    prepare_nodes = [n['name']
+                     for n in graph_data['nodes'] if n.get('label') == 'prepare']
     doses = {name: 0.0 for name in prepare_nodes}
-    
+
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(doses, f, indent=4, ensure_ascii=False)
 
@@ -107,10 +116,11 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
                        drug_states_input=None):
     with open(prob_file, 'r', encoding='utf-8') as f:
         probabilities = json.load(f)
-    
+
     # Создаем маппинг drug_id <-> drug_name для удобства
-    drug_id_to_name = {n['id']: n['name'] for n in graph_data['nodes'] if n.get('label') == 'prepare'}
-    
+    drug_id_to_name = {n['id']: n['name']
+                       for n in graph_data['nodes'] if n.get('label') == 'prepare'}
+
     # Обновляем вероятности из файла drug_states
     for drug_id, state in drug_states_input.items():
         drug_name = drug_id_to_name.get(drug_id)
@@ -122,15 +132,17 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
                 # Применяем состояние к каждой комбинации родителей
                 # Это предполагает, что состояние (0 или 1) переписывает
                 # любую условную логику для этого узла препарата.
-                probabilities[drug_name] = {k: float(state) for k in probabilities[drug_name]}
-    
+                probabilities[drug_name] = {
+                    k: float(state) for k in probabilities[drug_name]}
+
     # Подготовка данных для вывода в файл optimized_results.json
     drugs_for_output = []
     combination_parts = []
 
     # Отсортируем ID препаратов, чтобы порядок в выводе был предсказуемым
-    sorted_drug_ids = sorted(drug_states_input.keys(), key=lambda drug_id: drug_id_to_name.get(drug_id, ''))
-    
+    sorted_drug_ids = sorted(drug_states_input.keys(
+    ), key=lambda drug_id: drug_id_to_name.get(drug_id, ''))
+
     for drug_id in sorted_drug_ids:
         drug_name = drug_id_to_name.get(drug_id)
         state = drug_states_input.get(drug_id)
@@ -147,7 +159,7 @@ def topological_sort(nodes, parent_map):
     visited = set()
     result = []
     stack = []
-    
+
     for node in nodes:
         if node not in visited:
             stack.append((node, False))
@@ -165,6 +177,7 @@ def topological_sort(nodes, parent_map):
                         stack.append((parent, False))
     return result
 
+
 def build_network(graph_data, prob_data):
     parent_map = defaultdict(list)
     for link in graph_data['links']:
@@ -180,6 +193,7 @@ def build_network(graph_data, prob_data):
             prob_data=prob_data.get(node['name'], {})
         )
     return nodes
+
 
 def calculate_probabilities(network):
     """Вычисляет априорные вероятности для всех узлов сети"""
@@ -220,16 +234,18 @@ def calculate_probabilities(network):
             normalized_probs = {}
 
             if abs(total_conditional - 1.0) > 1e-9:
-                f.write(f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
+                f.write(
+                    f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
                 for comb, p in node.prob_table.items():
-                    normalized_probs[comb] = p / total_conditional if total_conditional != 0 else 0.0
+                    normalized_probs[comb] = p / \
+                        total_conditional if total_conditional != 0 else 0.0
             else:
                 normalized_probs = node.prob_table
 
-
             # Расчет для узлов с родителями
             total = 0.0
-            f.write(f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
+            f.write(
+                f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
 
             for i, (comb, p_node) in enumerate(normalized_probs.items(), 1):
                 prob_comb = 1.0
@@ -243,17 +259,21 @@ def calculate_probabilities(network):
                     operation = "P" if state == 1 else "1-P"
                     value = parent_prob if state == 1 else (1 - parent_prob)
 
-                    f.write(f"  Родитель {j}: {parent.name} (ID {parent_id})\n")
-                    f.write(f"  Состояние: {state} → {operation}({parent_prob:.4f}) = {value:.4f}\n")
+                    f.write(
+                        f"  Родитель {j}: {parent.name} (ID {parent_id})\n")
+                    f.write(
+                        f"  Состояние: {state} → {operation}({parent_prob:.4f}) = {value:.4f}\n")
 
                     prob_comb *= value
                     f.write(f"  Текущая prob_comb: {prob_comb:.4f}\n")
 
-                contribution = p_node * prob_comb   
+                contribution = p_node * prob_comb
                 tr_temp = total
                 total = total + contribution
-                f.write(f"Вклад комбинации: {p_node:.4f} * {prob_comb:.4f} = {contribution:.4f}\n")
-                f.write(f"!!!Накопление суммы влияний: {tr_temp:.4f} + {contribution:.4f} = {total:.4f}\n")
+                f.write(
+                    f"Вклад комбинации: {p_node:.4f} * {prob_comb:.4f} = {contribution:.4f}\n")
+                f.write(
+                    f"!!!Накопление суммы влияний: {tr_temp:.4f} + {contribution:.4f} = {total:.4f}\n")
                 f.write(f"Накопленный сумма (свертка): {total:.4f}\n")
 
             probabilities[node_id] = total
@@ -261,6 +281,7 @@ def calculate_probabilities(network):
             f.write("="*50 + "\n\n")
 
     return probabilities
+
 
 def get_conditional_probability(network, node_id, parent_states):
     node = network.get(node_id)
@@ -272,7 +293,7 @@ def get_conditional_probability(network, node_id, parent_states):
 def get_result(final_probs, graph_data, drug_states_input, drugs_for_output, combination_description):
     # Создаем вспомогательный словарь для быстрого поиска узлов по ID
     id_to_node = {n['id']: n for n in graph_data['nodes']}
-    
+
     all_side_effects_output = {}
 
     # Перебираем все узлы в графе, чтобы найти побочные эффекты
@@ -284,9 +305,10 @@ def get_result(final_probs, graph_data, drug_states_input, drugs_for_output, com
             side_effect_name = node['name']
             all_side_effects_output[side_effect_name] = {
                 "id": node_id,
-                "probability": round(float(prob), 6) # Округляем до 6 знаков после запятой
+                # Округляем до 6 знаков после запятой
+                "probability": round(float(prob), 6)
             }
-    
+
     # Формируем финальную структуру данных по образцу optimized_results.json
     final_output_data = {
         "combination_description": combination_description,
@@ -296,11 +318,11 @@ def get_result(final_probs, graph_data, drug_states_input, drugs_for_output, com
     }
     return final_output_data
 
-        
+
 def save_results(final_probs, graph_data, drug_states_input, drugs_for_output, combination_description, filename="results.json"):
     # Создаем вспомогательный словарь для быстрого поиска узлов по ID
     id_to_node = {n['id']: n for n in graph_data['nodes']}
-    
+
     all_side_effects_output = {}
 
     # Перебираем все узлы в графе, чтобы найти побочные эффекты
@@ -312,9 +334,10 @@ def save_results(final_probs, graph_data, drug_states_input, drugs_for_output, c
             side_effect_name = node['name']
             all_side_effects_output[side_effect_name] = {
                 "id": node_id,
-                "probability": round(float(prob), 6) # Округляем до 6 знаков после запятой
+                # Округляем до 6 знаков после запятой
+                "probability": round(float(prob), 6)
             }
-    
+
     # Формируем финальную структуру данных по образцу optimized_results.json
     final_output_data = {
         "combination_description": combination_description,
@@ -330,9 +353,9 @@ def save_results(final_probs, graph_data, drug_states_input, drugs_for_output, c
 
 if __name__ == "__main__":
     # Загрузка графа
-    with open('graphs_4.json') as f: # Предполагается, что это ваш файл графа
+    with open('graphs_4.json') as f:  # Предполагается, что это ваш файл графа
         graph = json.load(f)
-    
+
     # Шаг 1 и 2 по созданию файлов base_probabilities и prepare_doses
     # закомментированы, так как drug_states.json и probabilities_opt.json
     # предполагаются как уже существующие входные данные.
@@ -342,16 +365,17 @@ if __name__ == "__main__":
     # Шаг 3: Загрузить объединенные данные с учетом drug_states.json
     prob_data, drug_states_input_data, drugs_for_output, combination_description = load_combined_data(
         graph_data=graph,
-        prob_file='probabilities_opt.json',  # Теперь этот файл - источник общих вероятностей
-        drug_states_file='drug_states.json' # А этот - входные состояния препаратов
+        # Теперь этот файл - источник общих вероятностей
+        prob_file='probabilities_opt.json',
+        drug_states_file='drug_states.json'  # А этот - входные состояния препаратов
     )
-    
+
     # Построение сети с новыми параметрами
     network = build_network(graph, prob_data)
-    
+
     # Перерасчет вероятностей (логирование не меняется)
     final_probs = calculate_probabilities(network)
-    
+
     # Сохранение обновленных результатов в новом формате
     save_results(
         final_probs,
@@ -361,5 +385,5 @@ if __name__ == "__main__":
         combination_description,
         "results.json"
     )
-    
+
     print("Расчеты успешно завершены. Результаты сохранены в results.json")

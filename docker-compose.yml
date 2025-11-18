@@ -17,9 +17,6 @@ services:
     build: ./backend
     container_name: backend
     restart: unless-stopped
-    volumes:
-      - ./backend:/app
-      - static_volume:/app/static
     depends_on:
       - db
     env_file:
@@ -35,8 +32,6 @@ services:
       - "80:80"
     depends_on:
       - backend
-    volumes:
-      - static_volume:/static
     networks:
       - backend
 
@@ -58,7 +53,6 @@ services:
 volumes:
   postgres_data:
   pgadmin_data:
-  static_volume:
 
 networks:
   backend:
