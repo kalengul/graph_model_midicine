@@ -8,6 +8,7 @@ RUN npm install --legacy-peer-deps
 COPY ../frontend .
 RUN npm run build
 
+# ===== Stage 2: Build mini-frontend =====
 FROM node:18 AS mini_front_builder
 
 WORKDIR /app/backend/mini_front
