@@ -104,24 +104,8 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
     # Создаем маппинг drug_id <-> drug_name для удобства
     drug_id_to_name = {n['id']: n['name'] for n in graph_data['nodes'] if n.get('label') == 'prepare'}
     # print("drug_id_to_name:", drug_id_to_name)
-    
-    # # Обновляем вероятности из файла drug_states
-    # for drug_id, state in drug_states_input.items():
-    #     drug_name = drug_id_to_name.get(drug_id)
-    #     if drug_name and drug_name in probabilities:
-    #         # Для узлов без родителей или для всех комбинаций родителей
-    #         if "" in probabilities[drug_name]:
-    #             probabilities[drug_name][""] = float(state)
-    #         else:
-    #             # Применяем состояние к каждой комбинации родителей
-    #             # Это предполагает, что состояние (0 или 1) переписывает
-    #             # любую условную логику для этого узла препарата.
 
-    #             # probabilities[drug_name] = {"": float(state)}
-    #             probabilities[drug_name] = {k: float(state) for k in probabilities[drug_name]}
-
-
-        # Обновляем вероятности из файла drug_states
+    # Обновляем вероятности из файла drug_states
     for drug_id, state in drug_states_input.items():
         drug_name = drug_id_to_name.get(drug_id)
         if drug_id and drug_id in probabilities:
@@ -144,13 +128,6 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
 
     # Отсортируем ID препаратов, чтобы порядок в выводе был предсказуемым
     sorted_drug_ids = sorted(drug_states_input.keys(), key=lambda drug_id: drug_id_to_name.get(drug_id, ''))
-    
-    # for drug_id in sorted_drug_ids:
-    #     drug_name = drug_id_to_name.get(drug_id)
-    #     state = drug_states_input.get(drug_id)
-    #     if drug_name:
-    #         drugs_for_output.append(drug_name)
-    #         combination_parts.append(f"{drug_name}={state}")
 
     for drug_id in sorted_drug_ids:
         drug_name = drug_id_to_name.get(drug_id)
@@ -190,7 +167,7 @@ def build_network(graph_data, prob_data):
     parent_map = defaultdict(list)
 
     # Добавлено
-    # drug_id_list = [n['id'] for n in graph_data['nodes'] if n.get('label') == 'prepare']
+    drug_id_list = [n['id'] for n in graph_data['nodes'] if n.get('label') == 'prepare']
 
     for link in graph_data['links']:
         # # Добавлено
@@ -201,6 +178,9 @@ def build_network(graph_data, prob_data):
 
     nodes = {}
     for node in graph_data['nodes']:
+        # if node['label'] == 'group':
+        #     continue
+
         node_id = node['id']
         nodes[node_id] = BayesianNode(
             node_id=node_id,
@@ -209,6 +189,9 @@ def build_network(graph_data, prob_data):
             # prob_data=prob_data.get(node['name'], {})
             prob_data=prob_data.get(node_id, {})
         )
+
+        # print(node['label'], node['name'])
+
     return nodes
 
 def calculate_probabilities(network, calc_trace_path):
@@ -246,7 +229,7 @@ def calculate_probabilities(network, calc_trace_path):
                 f.write("-"*50 + "\n\n")
                 continue
 
-            print("node.prob_table", node.prob_table)
+            # print("node.prob_table", node.prob_table)
             
             total_conditional = sum(node.prob_table.values())
             normalized_probs = {}
@@ -278,7 +261,8 @@ def calculate_probabilities(network, calc_trace_path):
                 ])
 
                 f.write(f"\nКомбинация {i}: {comb_str}\n")
-                f.write(f"P({node.name}|{comb_maping}) = {p:.4f}/{total_conditional:.4f} = {p_node:.4f}\n")
+                f.write(f"total_conditional = {total_conditional:.4f}\n")
+                f.write(f"P({node.name}|{comb_maping}) = {p_node:.4f}\n")
 
                 for j, (parent_id, state) in enumerate(zip(node.parents, comb), 1):
                     parent_prob = probabilities.get(parent_id, 0.0)

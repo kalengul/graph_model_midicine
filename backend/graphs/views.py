@@ -469,16 +469,16 @@ class BayeseView(APIView):
 
         print('Все ЛС соотвествуют')
 
-        with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
-            most_relative_nodes = json.load(f)
+        # with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
+        #     most_relative_nodes = json.load(f)
 
-        graph = SimpleNonRelativeNodesDeleter().delete_nodes(
-            nx.node_link_graph(graph, edges='links'),
-            most_relative_nodes=most_relative_nodes,
-            roots=[node['id'] for node in graph['nodes']
-                   if node['name'] in drugs]
-        )
-        graph = nx.node_link_data(graph, edges='links')
+        # graph = SimpleNonRelativeNodesDeleter().delete_nodes(
+        #     nx.node_link_graph(graph, edges='links'),
+        #     most_relative_nodes=most_relative_nodes,
+        #     roots=[node['id'] for node in graph['nodes']
+        #            if node['name'] in drugs]
+        # )
+        # graph = nx.node_link_data(graph, edges='links')
 
         full_process_start = datetime.now()
         prob_data, drug_states_input_data, drugs_for_output, \
