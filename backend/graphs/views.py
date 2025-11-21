@@ -42,6 +42,8 @@ from accounts.auth import bearer_token_required
 logger = logging.getLogger('graphs')
 INCORRECT_DATA = 'Некорректные данные'
 NAME = 'name'
+NODES = 'nodes'
+ID = 'id'
 GRAPH_FOR_BAYES_PATH = Path(settings.GRAPH_PATH) / 'node_with_roots.json'
 
 
@@ -453,6 +455,8 @@ class BayeseView(APIView):
         with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
             graph = json.load(f)
 
+        # id2effects = {effect[ID]: effect[NAME] for effect in graph[NODES]}
+
         diff = set(drugs) - set(graph[NAME])
         if diff:
             msg = ', '.join(list(diff))
@@ -489,7 +493,7 @@ class BayeseView(APIView):
 
         # Перерасчет вероятностей (логирование не меняется)
         calculation_start = datetime.now()
-        final_probs = calculate_probabilities(network)
+        final_probs = calculate_probabilities(network, 'calculation_trace.txt')
         calculation_finish = datetime.now()
 
         data = get_result(
@@ -497,8 +501,7 @@ class BayeseView(APIView):
             graph,
             drug_states_input_data,
             drugs_for_output,
-            combination_description
-            )
+            combination_description)
 
         full_process_finish = datetime.now()
         full_process = full_process_finish - full_process_start
@@ -592,6 +595,7 @@ class BayeseView(APIView):
 
         for se in data["side_effects"]:
             result["side_effects"][0]["effects"].append({
+                # self.EFFECT_NAME: id2effects[se],
                 self.EFFECT_NAME: se,
                 "rank": data["side_effects"][se]["probability"],
             })
@@ -776,7 +780,8 @@ class BayesTableView(APIView):
             network = build_network(graph, prob_data)
 
             # Перерасчет вероятностей (логирование не меняется)
-            final_probs = calculate_probabilities(network)
+            final_probs = calculate_probabilities(network,
+                                                  'calculation_trace.txt')
 
             data = get_result(
                 final_probs,
