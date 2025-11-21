@@ -413,9 +413,9 @@ class BayeseView(APIView):
         """Вычисление сети Байеса."""
         graph_storage = GraphStorage()
         serializer = BayesSerializer(data=request.data)
-        message = 'Некорректные данные'
-        logger.info(f'message = {message}')
         if not serializer.is_valid():
+            message = 'Некорректные данные'
+            logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 http_status=status.HTTP_400_BAD_REQUEST,
@@ -453,15 +453,17 @@ class BayeseView(APIView):
         with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
             graph = json.load(f)
 
-        print('drugs =', drugs)
-        print('graph[NAME] =', graph[NAME])
         diff = set(drugs) - set(graph[NAME])
         if diff:
             msg = ', '.join(list(diff))
+            message = f'В сети Байеса нет данных о ЛС: {msg}'
+            logger.error(message)
             return CustomResponse(
-                status=status.HTTP_404_NOT_FOUND,
-                http_status=status.HTTP_404_NOT_FOUND,
-                message=f'В сети Байеса нет данных о ЛС: {msg}')
+                status=status.HTTP_400_BAD_REQUEST,
+                http_status=status.HTTP_400_BAD_REQUEST,
+                message=message)
+
+        print('Все ЛС соотвествуют')
 
         with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
             most_relative_nodes = json.load(f)
