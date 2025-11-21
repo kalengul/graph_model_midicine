@@ -55,7 +55,8 @@ def create_base_probabilities(graph_data, output_file='probabilities.json'):
 
     # Находим все prepare-узлы и их предков
     prepare_nodes = [n['id']
-                     for n in graph_data['nodes'] if n.get('label') == 'prepare']
+                     for n in graph_data['nodes']
+                     if n.get('label') == 'prepare']
     zero_nodes = set()
 
     # Рекурсивный поиск предков
@@ -124,16 +125,16 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
     # Обновляем вероятности из файла drug_states
     for drug_id, state in drug_states_input.items():
         drug_name = drug_id_to_name.get(drug_id)
-        if drug_name and drug_name in probabilities:
+        if drug_id and drug_id in probabilities:
             # Для узлов без родителей или для всех комбинаций родителей
-            if "" in probabilities[drug_name]:
-                probabilities[drug_name][""] = float(state)
+            if "" in probabilities[drug_id]:
+                probabilities[drug_id][""] = float(state)
             else:
                 # Применяем состояние к каждой комбинации родителей
                 # Это предполагает, что состояние (0 или 1) переписывает
                 # любую условную логику для этого узла препарата.
-                probabilities[drug_name] = {
-                    k: float(state) for k in probabilities[drug_name]}
+                probabilities[drug_id] = {
+                    k: float(state) for k in probabilities[drug_id]}
 
     # Подготовка данных для вывода в файл optimized_results.json
     drugs_for_output = []
@@ -147,8 +148,8 @@ def load_combined_data(graph_data, prob_file='probabilities_opt.json',
         drug_name = drug_id_to_name.get(drug_id)
         state = drug_states_input.get(drug_id)
         if drug_name:
-            drugs_for_output.append(drug_name)
-            combination_parts.append(f"{drug_name}={state}")
+            drugs_for_output.append(drug_id)
+            combination_parts.append(f"{drug_id}={state}")
 
     combination_description = " + ".join(combination_parts)
 
@@ -190,7 +191,7 @@ def build_network(graph_data, prob_data):
             node_id=node_id,
             name=node['name'],
             parents=parent_map.get(node_id, []),
-            prob_data=prob_data.get(node['name'], {})
+            prob_data=prob_data.get(node_id, {})
         )
     return nodes
 
@@ -233,27 +234,40 @@ def calculate_probabilities(network):
             total_conditional = sum(node.prob_table.values())
             normalized_probs = {}
 
-            if abs(total_conditional - 1.0) > 1e-9:
-                f.write(
-                    f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
-                for comb, p in node.prob_table.items():
-                    normalized_probs[comb] = p / \
-                        total_conditional if total_conditional != 0 else 0.0
-            else:
-                normalized_probs = node.prob_table
+            # if abs(total_conditional - 1.0) > 1e-9:
+            #     f.write(
+            #         f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
+            #     for comb, p in node.prob_table.items():
+            #         normalized_probs[comb] = (p, p, total_conditional) \
+            #             if total_conditional != 0 else 0.0
+            # else:
+            #     normalized_probs = node.prob_table
+
+            f.write(f"! Нормализация условных вероятностей (исходная сумма: {total_conditional:.4f})\n")
+            for comb, p in node.prob_table.items():
+                # normalized_probs[comb] = (p, p / total_conditional if total_conditional != 0 else 0.0, total_conditional)
+                normalized_probs[comb] = (p, p if total_conditional != 0 else 0.0, total_conditional)
 
             # Расчет для узлов с родителями
             total = 0.0
-            f.write(
-                f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
+            f.write(f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
+            f.write("P(дочерний=1)=P(дочерний=1∣родитель=0)⋅P(родитель=0)+P(дочерний=1∣родитель=1)⋅P(родитель=1)\n")
 
-            for i, (comb, p_node) in enumerate(normalized_probs.items(), 1):
+            for i, (comb, info_node) in enumerate(normalized_probs.items(), 1):
+                p, p_node, total_conditional = info_node
                 prob_comb = 1.0
                 comb_str = ",".join(map(str, comb))
-                f.write(f"\nКомбинация {i}: {comb_str}\n")
-                f.write(f"P({node.name}|{comb_str}) = {p_node:.4f}\n")
 
-                for j, (parent_id, state) in enumerate(zip(node.parents, comb), 1):
+                parent_names = [network[parent_id].name for parent_id in node.parents]
+                comb_maping = ",".join([
+                    f"{parent_name} = {comb_item}"
+                     for parent_name, comb_item in zip(parent_names, comb)
+                ])
+                f.write(f"\nКомбинация {i}: {comb_str}\n")
+                f.write(f"P({node.name}|{comb_maping}) = {p_node:.4f}\n")
+
+                for j, (parent_id, state) in enumerate(zip(node.parents, comb),
+                                                       1):
                     parent_prob = probabilities.get(parent_id, 0.0)
                     parent = network[parent_id]
                     operation = "P" if state == 1 else "1-P"
@@ -264,8 +278,8 @@ def calculate_probabilities(network):
                     f.write(
                         f"  Состояние: {state} → {operation}({parent_prob:.4f}) = {value:.4f}\n")
 
+                    f.write(f"  Текущая prob_comb = {prob_comb:.4f}*{value:.4f} = {(prob_comb * value):.4f}\n")
                     prob_comb *= value
-                    f.write(f"  Текущая prob_comb: {prob_comb:.4f}\n")
 
                 contribution = p_node * prob_comb
                 tr_temp = total
