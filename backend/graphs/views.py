@@ -99,21 +99,22 @@ class GraphView(APIView):
                             message='ЛС не найдено'
                         )
                 with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
-                    graph = json.load(f)
+                    json_graph = json.load(f)
+                    # graph = json.load(f)
 
-                with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
-                    most_relative_nodes = json.load(f)
+                # with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
+                #     most_relative_nodes = json.load(f)
 
-                print('drugs =', drugs)
+                # print('drugs =', drugs)
 
-                graph = SmartNonRelativeNodesDeleter().delete_nodes(
-                    nx.node_link_graph(graph, edges='links'),
-                    most_relative_nodes=most_relative_nodes,
-                    roots=[node['id'] for node in graph['nodes']
-                           if node['name'] in drugs])
+                # graph = SmartNonRelativeNodesDeleter().delete_nodes(
+                #     nx.node_link_graph(graph, edges='links'),
+                #     most_relative_nodes=most_relative_nodes,
+                #     roots=[node['id'] for node in graph['nodes']
+                #            if node['name'] in drugs])
 
-                json_graph = nx.node_link_data(graph, edges='links')
-                json_graph = GraphParser().jsonPolina(json_graph)
+                # json_graph = nx.node_link_data(graph, edges='links')
+                # json_graph = GraphParser().jsonPolina(json_graph)
                 json_graph['name'] = drugs
                 json_graph = self._remove_unnecessary_keys_and_values(
                     json_graph)
@@ -600,10 +601,10 @@ class BayeseView(APIView):
                 "rank": data["side_effects"][se]["probability"],
             })
 
-        # result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-        #                                           reverse=True)
-        result["side_effects"][0]["effects"].sort(
-            key=lambda x: x[self.EFFECT_NAME])
+        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
+                                                  reverse=True)
+        # result["side_effects"][0]["effects"].sort(
+        #     key=lambda x: x[self.EFFECT_NAME])
 
         if gender:
             logger.debug(f'Пол указан. gender = {gender}')
