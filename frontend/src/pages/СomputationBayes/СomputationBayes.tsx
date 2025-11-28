@@ -150,6 +150,8 @@ export const ComputationBayes = () =>{
                                     className="ComputationResults default mb-3"
                                     type="compare-riscs"
                                     content= {serd.effects}
+
+                                    key={index}
                                 />
                             )
                         }
