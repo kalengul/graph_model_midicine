@@ -529,76 +529,19 @@ class BayeseView(APIView):
                     "drugs": drugs
             }
 
-        # result = {
-        #             "сompatibility_bayes": сompatibility_bayes,
-        #             "rank_iteractions": "unknown",
-        #             "side_effects": [
-        #                 {
-        #                     "сompatibility": "unknown",
-        #                     "effects": []
-
-        #                 },
-        #                 {
-        #                     "сompatibility": "compatible",
-        #                     "effects": []
-
-        #                 },
-        #                 {
-        #                     "сompatibility": "caution",
-        #                     "effects": []
-
-        #                 },
-        #                 {
-        #                     "сompatibility": "incompatible",
-        #                     "effects": []
-
-        #                 }
-        #                 ],
-        #             "combinations": "unknown",
-        #             "drugs": drugs
-        #     }
-
-        # max_rank = 0
-        # for se in data["side_effects"]:
-        #     rank = data["side_effects"][se]["probability"]
-        #     if rank > max_rank:
-        #         max_rank = rank
-        #     if not rank:
-        #         result["side_effects"][0]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank < 0.5:
-        #         result["side_effects"][1]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank < 0.75:
-        #         result["side_effects"][2]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank >= 0.75:
-        #         result["side_effects"][3]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-
-        # if max_rank < 0.5:
-        #     сompatibility_bayes = 'compatible'
-        # elif max_rank < 0.75:
-        #     сompatibility_bayes = 'caution'
-        # else:
-        #     сompatibility_bayes = 'incompatible'
-
-        # if not exist:
-        #     result['сompatibility_bayes'] = сompatibility_bayes
-
         for se in data["side_effects"]:
             result["side_effects"][0]["effects"].append({
                 # self.EFFECT_NAME: id2effects[se],
                 self.EFFECT_NAME: se,
                 "rank": data["side_effects"][se]["probability"],
+            })
+        
+        result["SEFromDrug"] = []
+
+        for drug in drugs:
+            result["SEFromDrug"].append({
+                "d_name": drug,
+                "effects": [{self.EFFECT_NAME: se, "rank": data['side_effects'][se]["probability"]} for se in data['side_effects']]
             })
 
         result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
