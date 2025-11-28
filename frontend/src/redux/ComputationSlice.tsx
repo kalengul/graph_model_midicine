@@ -38,10 +38,16 @@ export interface IResultFortran{
   drugs: string[]
 }
 
+export interface ISEFromDrug{
+  d_name: string,
+  effects: ISE[]
+}
+
 export interface IResultBayes{
   сompatibility_bayes: string ,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputationFortran[],
+  SEFromDrug: ISEFromDrug[],
   combinations: IDrugCombination[] | undefined
   drugs: string[]
 }
@@ -58,6 +64,11 @@ export interface ICompareData{
   rankBayes: number,
 }
 
+export interface ICompareDataFromDrug{
+  d_name: string,
+  effects: ICompareData[]
+}
+
 interface IComputationState {
   computationList: IComputationElem[]
   contList: IContElem[]
@@ -68,6 +79,7 @@ interface IComputationState {
   isresultFortran: boolean
   isresultBayes: boolean
   compareSide_effects: ICompareData[]
+  compareSide_effects_fromDrug: ICompareDataFromDrug[],
   isLoadBayes: boolean
   isLoadFortran: boolean
   compareStart: boolean
@@ -88,6 +100,7 @@ const initStateBayes: IResultBayes = {
     сompatibility_bayes: "unknown",
     rank_iteractions: undefined,
     side_effects: [],
+    SEFromDrug: [],
     combinations: undefined,
     drugs: [],
 }
@@ -209,6 +222,7 @@ const ComputationSlice = createSlice({
       resultBayes: initStateBayes,
       isresultBayes: false,
       compareSide_effects:[],
+      compareSide_effects_fromDrug:[],
       isLoadBayes: false,
       isLoadFortran: false,
       compareStart: false
@@ -291,13 +305,42 @@ const ComputationSlice = createSlice({
             rankBayes: item.rank,
           }))
 
+          //заполняем побочки для конкретных ЛС
+          state.compareSide_effects_fromDrug = state.resultBayes.SEFromDrug.map((item: ISEFromDrug)=>({
+            d_name: item.d_name,
+            effects: item.effects.map((effect: ISE)=>({
+              se_name: effect.se_name,
+              rankFortran:  "-",
+              rankBayes: effect.rank
+            }))
+          }))
+
           //Добавляем ранги из фортрана
           state.resultFortran.side_effects.forEach(group=>{
             group.effects.forEach(effect=>{
-              const index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
+              let index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
+              // if(index == -1){
+              //   state.compareSide_effects_fromDrug.map(se_fromDrug =>{
+              //     index = se_fromDrug.effects.findIndex(item=>item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase())
+              //     if(index !== -1) {
+              //       se_fromDrug.effects[index].rankFortran = effect.rank
+              //     }
+              //   })
+              // }else state.compareSide_effects[index].rankFortran = effect.rank
+
+              
+              
               if (index !== -1){
                 state.compareSide_effects[index].rankFortran = effect.rank
-              }//else (console.log(effect.se_name.trim().toLowerCase()))
+              }
+             //}//else (console.log(effect.se_name.trim().toLowerCase()))
+
+              state.compareSide_effects_fromDrug.map(se_fromDrug =>{
+                  index = se_fromDrug.effects.findIndex(item=>item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase())
+                  if(index !== -1) {
+                    se_fromDrug.effects[index].rankFortran = effect.rank
+                }
+              })
             })
           })
           
@@ -330,6 +373,7 @@ const ComputationSlice = createSlice({
         .addCase(iteractionBayes.fulfilled, (state, action: PayloadAction<TrunkResult<IResultBayes>>)=>{
           if( action.payload.status === 200) 
           {
+            //console.log(action.payload.data)
             state.isresultBayes = true
             state.resultBayes = action.payload.data
             state.isLoadBayes = true
