@@ -526,22 +526,56 @@ class BayeseView(APIView):
 
                         }],
                     "combinations": "unknown",
-                    "drugs": drugs
+                    "drugs": drugs,
+                    "SEFromDrug": [],
             }
-
-        for se in data["side_effects"]:
-            result["side_effects"][0]["effects"].append({
-                # self.EFFECT_NAME: id2effects[se],
-                self.EFFECT_NAME: se,
-                "rank": data["side_effects"][se]["probability"],
-            })
         
-        result["SEFromDrug"] = []
+        individual_drug_effects = {}
 
         for drug in drugs:
+            single_drug_prob_data, single_drug_states, single_drugs_for_output, _ = load_combined_data(
+                graph_data=graph,
+                prob_file=graph_storage.probability_path,
+                drug_states_input=self._get_bin_ids([drug])
+            )
+            
+            single_network = build_network(graph, single_drug_prob_data)
+            single_probs = calculate_probabilities(single_network, 'single_calculation_trace.txt')
+            
+            individual_data = get_result(
+                single_probs,
+                graph,
+                single_drug_states,
+                single_drugs_for_output,
+                combination_description)
+            
+            individual_drug_effects[drug] = individual_data["side_effects"]
+
+        for drug in drugs:
+            drug_effects = []
+        
+            if drug in individual_drug_effects:
+                for se_name, se_data in individual_drug_effects[drug].items():
+                    drug_effects.append({
+                        self.EFFECT_NAME: se_name,
+                        "rank": se_data["probability"]
+                    })
+            
+            drug_effects.sort(key=lambda x: x["rank"], reverse=True)
+            
+            if gender:
+                drug_effects = self._exclude_by_gender(drug_effects, gender, GENDER_SIDE_EFFECT)
+            
             result["SEFromDrug"].append({
                 "d_name": drug,
-                "effects": [{self.EFFECT_NAME: se, "rank": data['side_effects'][se]["probability"]} for se in data['side_effects']]
+                "effects": drug_effects
+            })
+
+        # Общие побочки (от взаимодействия) оставляем как есть
+        for se in data["side_effects"]:
+            result["side_effects"][0]["effects"].append({
+                self.EFFECT_NAME: se,
+                "rank": data["side_effects"][se]["probability"],
             })
 
         result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
