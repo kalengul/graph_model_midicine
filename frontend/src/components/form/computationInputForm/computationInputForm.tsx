@@ -25,15 +25,32 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
 
     const inputRef = useRef<HTMLInputElement>(null);
 
+    
+
+    // Функция для обновления подсказок
+    const updateSuggestions = (value: string = '') => {
+        if (value.length >= 1) {
+            const filtered = drugsList.filter(d => 
+                d.drug_name.toLocaleLowerCase().includes(value.toLocaleLowerCase())
+            );
+            setSuggestions(filtered);
+        } else {
+            // Если поле пустое, показываем все лекарственные средства
+            setSuggestions([...drugsList]);
+        }
+    };
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setInputValue(value);
 
-        if (value.length >= 1){
-            const filtered = drugsList.filter(d=> d.drug_name.toLocaleLowerCase().includes(value.toLocaleLowerCase()))
-            //Добавляем фильтрацию, что ЛС нет в списке добавленных
-            setSuggestions(filtered);
-        }   else setSuggestions([])
+        updateSuggestions(value);
+    };
+
+    const handleFocus = () => {
+        setShowSuggestions(true);
+        // При фокусе обновляем подсказки (показываем все или отфильтрованные)
+        updateSuggestions(inputValue);
     };
 
     const addNewComputationElem = (value: string) => {
@@ -47,7 +64,11 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
         }
 
         setInputValue('');
-        setSuggestions([]);
+        setSuggestions([...drugsList]); // После добавления показываем все подсказки снова
+        //setSuggestions([]);
+
+        // inputRef.current?.blur();
+        // setShowSuggestions(false);
         inputRef.current?.focus();
     };
     
@@ -64,7 +85,8 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
     const selectSuggestion = (computationDrug: IDrugElem) => {
         dispatch(addValue({title: "computationList", value: computationDrug}));
         setInputValue('');
-        setSuggestions([]);
+        setSuggestions([...drugsList]); // После выбора показываем все подсказки снова
+        //setSuggestions([]);
         inputRef.current?.focus();
     };
 
@@ -96,7 +118,8 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
                                 value={inputValue}
                                 onChange={handleInputChange}
                                 onKeyDown={handleKeyDown}
-                                onFocus={() => setShowSuggestions(true)}
+                                onFocus={handleFocus} // Используем новую функцию
+                                //onFocus={() => setShowSuggestions(true)}
                                 onBlur={handleBlur}
                                 placeholder={computationList.length === 0 ? props.placeholder : ''}
                             />
