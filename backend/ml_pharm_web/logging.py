@@ -70,6 +70,12 @@ if not DEBUG:
             'filename': os.path.join(log_dir, 'contraindications.log'),
             'formatter': 'detailed',
             'encoding': 'utf-8'
+        },
+        'med_bayes_file': {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(log_dir, 'med_bayes.log'),
+            'formatter': 'detailed',
+            'encoding': 'utf-8'
         }
     })
 
@@ -108,6 +114,12 @@ loggers = {
     'contraindications': {
         'handlers': ['console'] + ([] if DEBUG
                                    else ['contraindications_file']),
+        'level': 'DEBUG',
+        'propagate': False
+    },
+    'med_bayes': {
+        'handlers': ['console'] + ([] if DEBUG
+                                   else ['med_bayes_file']),
         'level': 'DEBUG',
         'propagate': False
     }

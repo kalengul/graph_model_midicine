@@ -3,7 +3,8 @@ import GraphsPage from "./pages/GraphsPage";
 import ContrasPage from "./pages/ContrasPage";
 import SynonymsPage from "./pages/SynonymsPage";
 import FortranPage from "./pages/FortranPage";
-import GraphVisualization from './pages/GraphVisualization';
+import GraphVisualization from "./pages/GraphVisualization";
+import BannedPairPage from "./pages/BannedPairPage";
 import "./App.css";
 import "./FormPages.css"
 
@@ -21,6 +22,7 @@ export default function App() {
           <li><Link to="/contraindications">Противопоказания</Link></li>
           <li><Link to="/synonyms">Синонимы</Link></li>
           <li><Link to="/graph-visualization">Визуализация графа</Link></li>
+          <li><Link to="/banned-pairs">Запрещённые комбинации лекарственных средств</Link></li>
         </ul>
       </nav>
       <main>
@@ -30,6 +32,7 @@ export default function App() {
           <Route path="/contraindications" element={<ContrasPage />} />
           <Route path="/synonyms" element={<SynonymsPage/>} />
           <Route path="/graph-visualization" element={<GraphVisualization />} />
+          <Route path="/banned-pairs" element={<BannedPairPage />} />
         </Routes>
       </main>
       <footer>

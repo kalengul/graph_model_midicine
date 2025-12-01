@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'synonyms',
     'graphs.apps.GraphsConfig',
     'contraindications.apps.ContraindicationsConfig',
+    'med_bayes.apps.MedBayesConfig',
 
     'rest_framework',
     'rest_framework.authtoken',
