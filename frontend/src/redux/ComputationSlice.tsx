@@ -183,7 +183,7 @@ export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFo
   }
 });
 
-export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBayes', async (data: IComputationBayes, { rejectWithValue }): Promise<TrunkResult<IResultBayes>> => {
+export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBayes', async (data: IComputationBayes): Promise<TrunkResult<IResultBayes>> => {
   try {
     
       const sendData: sendFormBayes = {drugs:[], humanData: undefined}
