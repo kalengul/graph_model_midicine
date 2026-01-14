@@ -64,6 +64,7 @@ export const ComputationBayes = () =>{
     const isLoadFortran = useAppSelector(state=>state.computation.isLoadFortran)
     const isLoadBayes = useAppSelector(state=>state.computation.isLoadBayes)
     const compareStart = useAppSelector(state=>state.computation.compareStart)
+    const fetchBayesStatus = useAppSelector(state=>state.computation.fetchBayesStatus)
     // console.log(isLoadBayes)
     // console.log(isLoadFortran)
 
@@ -79,7 +80,8 @@ export const ComputationBayes = () =>{
             <hr/>
             { compareStart &&
             (
-                (!isLoadFortran || !isLoadBayes)?(<LoadBar className="mt-4"/>)
+                ((!isLoadFortran || !isLoadBayes) && (fetchBayesStatus === null))?(<LoadBar className="mt-4"/>)
+                : ((!isLoadFortran || !isLoadBayes) && !fetchBayesStatus ? (<p>Для лекарственного средства нет графа</p>)
                 :
                 (isLoadFortran && isLoadBayes && isresultBayes && isresultFortran && <div>
                     <h4>Результаты оценки совместимости</h4>
@@ -163,7 +165,7 @@ export const ComputationBayes = () =>{
                         </div>
                     </div>}
                 </div>)      
-            )
+            ))
             }
         </main>
     </div>
