@@ -11,6 +11,9 @@ from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import BayesSerializer
 from graphs.utils.binarizer import Binarizer
 from graphs.utils.parse_ids import parse_ids
+# from med_bayes.utils.bayes_calculation_ import (load_combined_data, get_result,
+#                                                 build_network,
+#                                                 calculate_probabilities)
 from med_bayes.utils.bayes_calculation import (load_combined_data, get_result,
                                                build_network,
                                                calculate_probabilities)

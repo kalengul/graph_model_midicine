@@ -5,6 +5,11 @@ import random
 from collections import defaultdict
 from itertools import product
 
+import torch
+
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
 class BayesianNode:
     def __init__(self, node_id, name, parents, prob_data):
@@ -248,9 +253,48 @@ def calculate_probabilities(network, calc_trace_path):
             #     normalized_probs = node.prob_table
 
             # Расчет для узлов с родителями
-            total = 0.0
-            f.write(f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
-            f.write("P(дочерний=1)=P(дочерний=1∣родитель=0)⋅P(родитель=0)+P(дочерний=1∣родитель=1)⋅P(родитель=1)\n")
+            k = len(node.parents)
+
+            parent_probs_list = [probabilities.get(pid, 0.0)
+                                 for pid in node.parents]
+            parent_probs = torch.tensor(parent_probs_list,
+                                        dtype=torch.float32,
+                                        device=device)
+
+            if k == 0:
+                total = 0.0
+            else:
+                sorted_comb_keys = sorted(normalized_probs.keys())
+
+                assert len(sorted_comb_keys) == 2 ** k, f"Несоотвествие: {len(sorted_comb_keys)} != {2**k}"
+
+                cond_probs_list = []
+                for comb in sorted_comb_keys:
+                    p, p_node, _ = normalized_probs[comb]
+                    cond_probs_list.append(p_node)
+                cond_probs = torch.tensor(cond_probs_list, dtype=torch.float32,
+                                          device=device)
+
+                combs = torch.cartesian_prod(
+                    *[torch.tensor([0, 1], dtype=torch.float32, device=device)
+                      for _ in range(k)])
+                if k == 1:
+                    combs = combs.unsqueeze(1)
+
+                eps = 1e-8
+                log_parent_probs = torch.log(parent_probs + eps)
+                log_one_minus_parent_probs = torch.log(1 - parent_probs + eps)
+
+                log_joint = (combs * log_parent_probs + (1 - combs)
+                             * log_one_minus_parent_probs)
+                joint_probs = torch.exp(log_joint.sum(dim=1))
+
+                total_tensor = (cond_probs * joint_probs).sum()
+                total = total_tensor.item()
+
+            # total = 0.0
+            # f.write(f"Комбинации состояний родителей ({len(normalized_probs)}):\n")
+            # f.write("P(дочерний=1)=P(дочерний=1∣родитель=0)⋅P(родитель=0)+P(дочерний=1∣родитель=1)⋅P(родитель=1)\n")
 
             # for i, (comb, info_node) in enumerate(normalized_probs.items(), 1):
             #     prob_comb = 1.0
