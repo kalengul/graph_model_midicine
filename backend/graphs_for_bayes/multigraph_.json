@@ -1,0 +1,2722 @@
+{
+    "directed": true,
+    "multigraph": false,
+    "graph": {},
+    "nodes": [
+        {
+            "name": "активация внутриклеточный гуанилатциклаза",
+            "label": "action",
+            "weight": 5,
+            "id": "bdba5476-0a1f-4c75-81cd-9702cbe2c3e0",
+            "level": 10,
+            "parents": [
+                "af9cb20f-0cb4-42f1-b92b-c2e481cd031a"
+            ]
+        },
+        {
+            "name": "повышение уровень циклический гуанозиномонофосфат",
+            "label": "action",
+            "weight": 5,
+            "id": "e194f617-08f2-4b14-8d42-0d4313105da8",
+            "level": 11,
+            "parents": [
+                "bdba5476-0a1f-4c75-81cd-9702cbe2c3e0"
+            ]
+        },
+        {
+            "name": "антагонист альдостерон",
+            "label": "group",
+            "weight": 5,
+            "id": "b27b4e41-4d7a-4757-a2fb-723649ebb396",
+            "level": 2,
+            "parents": [
+                "6665110c-4812-41db-a09b-b93b2bdddce1"
+            ]
+        },
+        {
+            "name": "спиронолактон",
+            "label": "prepare",
+            "weight": 5,
+            "id": "f38dbaf8-efab-4890-8690-85a2e370ea63",
+            "level": 3,
+            "parents": [
+                "b27b4e41-4d7a-4757-a2fb-723649ebb396"
+            ]
+        },
+        {
+            "name": "антагонист альдостерон и другой калийсберегающий диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "6665110c-4812-41db-a09b-b93b2bdddce1",
+            "level": 1,
+            "parents": [
+                "06be8e41-e8a6-4a0f-bf6b-6aacf9f5e0d4"
+            ]
+        },
+        {
+            "name": "антагонист рецептор ангиотензин ii",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "199786f9-7c92-44e0-8c0c-69389b067306",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "избирательно блокировать рецептор подтип at1",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "level": 1,
+            "parents": [
+                "199786f9-7c92-44e0-8c0c-69389b067306"
+            ]
+        },
+        {
+            "name": "антагонист рецептор ангиотензин ii",
+            "label": "prepare",
+            "weight": 5,
+            "id": "b29ad385-72a5-4cae-ac8c-63772c3fb294",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "почка",
+            "label": "excretion",
+            "weight": 5,
+            "id": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9",
+            "level": 4,
+            "parents": [
+                "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+                "925c0e05-a234-4aeb-b63b-b7a306e8cc0b",
+                "ca8ee02e-9030-4305-9ada-124825da0670",
+                "f38dbaf8-efab-4890-8690-85a2e370ea63",
+                "f62ea207-c001-4c44-8d89-e35e220d3a94",
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+                "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+                "b29ad385-72a5-4cae-ac8c-63772c3fb294"
+            ]
+        },
+        {
+            "name": "антигипертензивный действие",
+            "label": "action",
+            "weight": 5,
+            "id": "b6ee07b8-1681-461f-bab1-d45219af39a9",
+            "level": 8,
+            "parents": [
+                "4f094a69-bae6-4644-89f0-20938cf2fdde",
+                "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1"
+            ]
+        },
+        {
+            "name": "гипотензия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "level": 17,
+            "parents": [
+                "98df31d5-f636-4fb2-8fd6-965a24880816",
+                "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+                "78cccd2d-a164-4fa0-b343-48af6bee2a08",
+                "7237560a-c68f-4e8a-88a4-0247c99fd544",
+                "e31f8eed-8586-4c41-bb5b-a58c242e3f25",
+                "84e12fa3-1156-4dee-9211-9a072699af8e",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610",
+                "df9fb069-42e6-4f66-a889-6b4b616dfce1",
+                "4e6ddad3-8c56-423b-87b9-b13b7d12f771",
+                "eb84636b-2513-4f88-85e3-68746c558697",
+                "b6ee07b8-1681-461f-bab1-d45219af39a9"
+            ]
+        },
+        {
+            "name": "антигипертензивный эффект",
+            "label": "action",
+            "weight": 5,
+            "id": "4e6ddad3-8c56-423b-87b9-b13b7d12f771",
+            "level": 9,
+            "parents": [
+                "98df31d5-f636-4fb2-8fd6-965a24880816",
+                "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+                "eaa1e1f4-d087-47e1-a234-cbec2039e32f",
+                "8b8b333a-963b-48b8-b756-d51d4938e181"
+            ]
+        },
+        {
+            "name": "антидепрессант",
+            "label": "group",
+            "weight": 5,
+            "id": "2464989a-e198-4e4b-9258-fda8b7423fab",
+            "level": 1,
+            "parents": [
+                "847f6a03-f359-43fc-ad4a-e55f6962a152"
+            ]
+        },
+        {
+            "name": "селективный ингибитор обратный захват серотонин",
+            "label": "group",
+            "weight": 5,
+            "id": "655f8104-4637-4097-ba78-17916e407710",
+            "level": 2,
+            "parents": [
+                "2464989a-e198-4e4b-9258-fda8b7423fab"
+            ]
+        },
+        {
+            "name": "антикоагулянт прямой действие-селективный ингибитор фактор свёртывание кровь ха",
+            "label": "group",
+            "weight": 5,
+            "id": "adab4853-1f18-4762-8338-c7cd8910d2c0",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "апиксабан",
+            "label": "prepare",
+            "weight": 5,
+            "id": "5cfc7509-1f92-4829-9d03-b5d4502dea51",
+            "level": 1,
+            "parents": [
+                "adab4853-1f18-4762-8338-c7cd8910d2c0"
+            ]
+        },
+        {
+            "name": "антикоагуляционный эффект",
+            "label": "action",
+            "weight": 5,
+            "id": "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+            "level": 10,
+            "parents": [
+                "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+            ]
+        },
+        {
+            "name": "внутричерепное кровоизлияние",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b6894f7c-96ce-4efa-b5fe-98e13b325370",
+            "level": 11,
+            "parents": [
+                "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+                "98df31d5-f636-4fb2-8fd6-965a24880816"
+            ]
+        },
+        {
+            "name": "гематурия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "8593a288-fa21-42be-9b19-0cf4e2d8f1bf",
+            "level": 11,
+            "parents": [
+                "8c52f1a6-dbff-43c0-9968-82834bde0c4a"
+            ]
+        },
+        {
+            "name": "желудочно-кишечное кровотечение",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e3724299-ac5a-4ad6-b646-8b9e64cd336e",
+            "level": 11,
+            "parents": [
+                "8c52f1a6-dbff-43c0-9968-82834bde0c4a"
+            ]
+        },
+        {
+            "name": "тахикардия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "47106e8e-6ea5-4195-9d42-372527451eca",
+            "level": 18,
+            "parents": [
+                "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+                "7237560a-c68f-4e8a-88a4-0247c99fd544",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c",
+                "4e39b4cc-8d03-413b-a82d-375204cf0b98"
+            ]
+        },
+        {
+            "name": "антитромботический средство",
+            "label": "group",
+            "weight": 5,
+            "id": "0bd6a10e-d9d2-49c4-a746-215adc7fd1dd",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "группа гепарин",
+            "label": "group",
+            "weight": 5,
+            "id": "90f3f55e-1d52-4640-b0cf-e37880b3bec4",
+            "level": 1,
+            "parents": [
+                "0bd6a10e-d9d2-49c4-a746-215adc7fd1dd"
+            ]
+        },
+        {
+            "name": "блокировать они ферментативный активность",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee",
+            "level": 6,
+            "parents": [
+                "5cfc7509-1f92-4829-9d03-b5d4502dea51",
+                "1c7ea72f-dd09-497e-b09d-9f85f9b145b9",
+                "9ec17cee-e626-42d6-aa90-c4422d92f992",
+                "4ba1ef85-eab7-453e-b3c5-bc71db348175",
+                "aa979b68-0992-413c-9cf0-a8b3286b7914"
+            ]
+        },
+        {
+            "name": "желудочный-кишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "263a0372-fae2-45da-9bb0-473e0af3382c",
+            "level": 3,
+            "parents": [
+                "5cfc7509-1f92-4829-9d03-b5d4502dea51",
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+                "d1701e1b-737a-4ade-a37a-9cc9d6ce2535"
+            ]
+        },
+        {
+            "name": "бета1-адреноблокатор",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "a43adfc8-3440-473c-8441-2505c80c5f02",
+            "level": 2,
+            "parents": [
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5"
+            ]
+        },
+        {
+            "name": "замедлять атриовентрикулярный проводимость",
+            "label": "action",
+            "weight": 5,
+            "id": "c6be84e1-1c84-421f-8f52-74033dbc5e53",
+            "level": 3,
+            "parents": [
+                "a43adfc8-3440-473c-8441-2505c80c5f02"
+            ]
+        },
+        {
+            "name": "снижать внутриклеточный ток ион кальций",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "4f094a69-bae6-4644-89f0-20938cf2fdde",
+            "level": 3,
+            "parents": [
+                "a43adfc8-3440-473c-8441-2505c80c5f02"
+            ]
+        },
+        {
+            "name": "бета1-адреноблокатор селективный",
+            "label": "group",
+            "weight": 5,
+            "id": "a4bf8211-8e4e-4489-88f9-41cfa457b83f",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "бисопролол",
+            "label": "prepare",
+            "weight": 5,
+            "id": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "level": 1,
+            "parents": [
+                "a4bf8211-8e4e-4489-88f9-41cfa457b83f"
+            ]
+        },
+        {
+            "name": "бета2-адреноблокатор",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "level": 2,
+            "parents": [
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5"
+            ]
+        },
+        {
+            "name": "бессонница",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a567c579-5286-4b7a-a88a-75febf254cf1",
+            "level": 5,
+            "parents": [
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "15e27163-a05e-497d-982a-5c32160a39d9"
+            ]
+        },
+        {
+            "name": "бронхоспазм",
+            "label": "side_e",
+            "weight": 5,
+            "id": "4db3f867-d496-45a2-a5ad-5cac5947bfe5",
+            "level": 3,
+            "parents": [
+                "15e27163-a05e-497d-982a-5c32160a39d9",
+                "cfcc0d69-fad7-46ea-bc82-7b59cac2ce57"
+            ]
+        },
+        {
+            "name": "диарея",
+            "label": "side_e",
+            "weight": 5,
+            "id": "6716d111-a776-4eb4-b635-78049130b1d6",
+            "level": 8,
+            "parents": [
+                "15e27163-a05e-497d-982a-5c32160a39d9",
+                "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+            ]
+        },
+        {
+            "name": "запор",
+            "label": "side_e",
+            "weight": 5,
+            "id": "f923e92a-fda0-4abd-8d3a-324f7e80b816",
+            "level": 3,
+            "parents": [
+                "15e27163-a05e-497d-982a-5c32160a39d9"
+            ]
+        },
+        {
+            "name": "рвота",
+            "label": "side_e",
+            "weight": 5,
+            "id": "c7eff413-3ebc-4ff9-a8c9-a2a406295386",
+            "level": 19,
+            "parents": [
+                "d93dc400-d9fe-461e-8c42-28bdccd2d41a",
+                "15e27163-a05e-497d-982a-5c32160a39d9",
+                "7237560a-c68f-4e8a-88a4-0247c99fd544"
+            ]
+        },
+        {
+            "name": "тошнота",
+            "label": "side_e",
+            "weight": 5,
+            "id": "d93dc400-d9fe-461e-8c42-28bdccd2d41a",
+            "level": 18,
+            "parents": [
+                "7237560a-c68f-4e8a-88a4-0247c99fd544",
+                "15e27163-a05e-497d-982a-5c32160a39d9",
+                "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c"
+            ]
+        },
+        {
+            "name": "бета2-адреноблокатор гладкий мускулатура бронх",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "cfcc0d69-fad7-46ea-bc82-7b59cac2ce57",
+            "level": 2,
+            "parents": [
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5"
+            ]
+        },
+        {
+            "name": "бета2-адреноблокатор гладкий мускулатура периферический артерия",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "77bf8108-b166-4c7e-804a-42ddf49619e3",
+            "level": 2,
+            "parents": [
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5"
+            ]
+        },
+        {
+            "name": "парестезия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a0828c92-3521-4edd-944a-51401f7780d8",
+            "level": 8,
+            "parents": [
+                "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "77bf8108-b166-4c7e-804a-42ddf49619e3",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610",
+                "a4f25a77-fccd-43db-a7f9-a7d801fa52ac"
+            ]
+        },
+        {
+            "name": "снижение либидо",
+            "label": "side_e",
+            "weight": 5,
+            "id": "6698adbb-4c92-40b0-b495-2183476f8ad2",
+            "level": 18,
+            "parents": [
+                "68b46f75-baed-4b5e-a9c0-09face411e2c",
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "77bf8108-b166-4c7e-804a-42ddf49619e3",
+                "55ee5d55-f13e-4dab-ab55-5d086bd903e5",
+                "10c1ccc1-54cb-4bc5-8ab6-e683016bf40a"
+            ]
+        },
+        {
+            "name": "печень",
+            "label": "metabol",
+            "weight": 5,
+            "id": "ae7c42af-cd98-46b4-9167-cd7ca3889901",
+            "level": 4,
+            "parents": [
+                "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+                "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+                "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+                "ca8ee02e-9030-4305-9ada-124825da0670"
+            ]
+        },
+        {
+            "name": "прямой ингибитор fxa",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "a791332d-d74f-47cf-941a-d2dd105d8568",
+            "level": 7,
+            "parents": [
+                "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+            ]
+        },
+        {
+            "name": "снижать вязкость кровь",
+            "label": "action",
+            "weight": 5,
+            "id": "18045579-4016-496d-bdf3-fccab755d509",
+            "level": 7,
+            "parents": [
+                "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+            ]
+        },
+        {
+            "name": "брадикардия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "level": 6,
+            "parents": [
+                "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+                "c57167ba-8e81-474e-a0b7-21b6e18d6398"
+            ]
+        },
+        {
+            "name": "астения",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e118a6e6-c847-4a79-b24b-d4313f3e0cb8",
+            "level": 18,
+            "parents": [
+                "4f094a69-bae6-4644-89f0-20938cf2fdde",
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+                "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c"
+            ]
+        },
+        {
+            "name": "вертиго",
+            "label": "side_e",
+            "weight": 5,
+            "id": "063572f2-6dca-4aed-8079-39c98551891f",
+            "level": 18,
+            "parents": [
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+                "7237560a-c68f-4e8a-88a4-0247c99fd544",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c",
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9"
+            ]
+        },
+        {
+            "name": "гипертензия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b981203e-b119-41bd-9a1a-b51631964575",
+            "level": 7,
+            "parents": [
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b"
+            ]
+        },
+        {
+            "name": "головная боль",
+            "label": "side_e",
+            "weight": 5,
+            "id": "42114354-be3f-4be6-8f6c-7088e464fe97",
+            "level": 18,
+            "parents": [
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c",
+                "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9"
+            ]
+        },
+        {
+            "name": "обморок",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e6aeeaeb-d4bc-493c-9c88-58ec0c1f23e6",
+            "level": 19,
+            "parents": [
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+                "b6894f7c-96ce-4efa-b5fe-98e13b325370",
+                "063572f2-6dca-4aed-8079-39c98551891f",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c"
+            ]
+        },
+        {
+            "name": "утомляемость",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3a429b3a-95ee-4580-925f-c6146294fec5",
+            "level": 18,
+            "parents": [
+                "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+                "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c"
+            ]
+        },
+        {
+            "name": "быстро метаболизироваться в организм человек",
+            "label": "metabol",
+            "weight": 5,
+            "id": "bd0162c5-c330-4c4a-b46f-fdb54cb27c4c",
+            "level": 4,
+            "parents": [
+                "f38dbaf8-efab-4890-8690-85a2e370ea63"
+            ]
+        },
+        {
+            "name": "гепатит",
+            "label": "side_e",
+            "weight": 5,
+            "id": "8a4a37c2-e65e-4a33-85e2-329cd594ca43",
+            "level": 5,
+            "parents": [
+                "464343c9-22e9-42a2-b194-dc9ca2a59ec5",
+                "bd0162c5-c330-4c4a-b46f-fdb54cb27c4c"
+            ]
+        },
+        {
+            "name": "вазодилататор для лечение заболевание сердце",
+            "label": "group",
+            "weight": 5,
+            "id": "df718bb5-fc04-436f-9699-e23dd24f3c2e",
+            "level": 1,
+            "parents": [
+                "b484cac0-adc4-4352-a815-05a621de0436"
+            ]
+        },
+        {
+            "name": "органический нитрат",
+            "label": "group",
+            "weight": 5,
+            "id": "39637c79-13fc-4366-8f29-1f72e72629f9",
+            "level": 2,
+            "parents": [
+                "df718bb5-fc04-436f-9699-e23dd24f3c2e"
+            ]
+        },
+        {
+            "name": "высвобождение оксид азот в эндотелий сосуд",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "af9cb20f-0cb4-42f1-b92b-c2e481cd031a",
+            "level": 9,
+            "parents": [
+                "98df31d5-f636-4fb2-8fd6-965a24880816"
+            ]
+        },
+        {
+            "name": "гепарин натрия",
+            "label": "prepare",
+            "weight": 5,
+            "id": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84",
+            "level": 2,
+            "parents": [
+                "90f3f55e-1d52-4640-b0cf-e37880b3bec4"
+            ]
+        },
+        {
+            "name": "связывание с антитромбин iii",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "5f73fbe7-1b8f-40cb-a5a5-6f95f4f43285",
+            "level": 3,
+            "parents": [
+                "f6fb0baf-1638-464f-a12d-b9ea4d37cf84"
+            ]
+        },
+        {
+            "name": "связывать некоторый компонент система комплемент, снижать она активность",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "7654bda0-7b73-43d1-a3cf-be902ab4d897",
+            "level": 3,
+            "parents": [
+                "f6fb0baf-1638-464f-a12d-b9ea4d37cf84"
+            ]
+        },
+        {
+            "name": "сорбироваться на поверхность мембрана форменный элемент кровь",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "fadadf91-c8a4-4481-97f8-cad9d1124b0f",
+            "level": 3,
+            "parents": [
+                "f6fb0baf-1638-464f-a12d-b9ea4d37cf84"
+            ]
+        },
+        {
+            "name": "сорбироваться на поверхность мембрана эндотелий",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "27cfe06a-af18-45ae-9660-cd7ff7ac88c5",
+            "level": 3,
+            "parents": [
+                "f6fb0baf-1638-464f-a12d-b9ea4d37cf84"
+            ]
+        },
+        {
+            "name": "некроз",
+            "label": "side_e",
+            "weight": 5,
+            "id": "33069045-9d44-4919-be39-1aca74512557",
+            "level": 6,
+            "parents": [
+                "8a4a37c2-e65e-4a33-85e2-329cd594ca43"
+            ]
+        },
+        {
+            "name": "гиперкалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "level": 7,
+            "parents": [
+                "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+                "6457c010-1805-4551-96eb-89e8439a44a7",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610"
+            ]
+        },
+        {
+            "name": "гиперурикемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "be3509a1-9d3f-445a-ac5c-fb4a03e34f50",
+            "level": 8,
+            "parents": [
+                "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+                "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610"
+            ]
+        },
+        {
+            "name": "печеночная недостаточность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "ab7299f2-af37-4862-9506-9091f8689f6e",
+            "level": 8,
+            "parents": [
+                "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+                "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610",
+                "464343c9-22e9-42a2-b194-dc9ca2a59ec5"
+            ]
+        },
+        {
+            "name": "судороги",
+            "label": "side_e",
+            "weight": 5,
+            "id": "52a53e4e-fa11-40a2-8616-62297932874c",
+            "level": 8,
+            "parents": [
+                "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+                "62629a17-3ac6-4485-b348-235b7ada22f4",
+                "3474a0b2-63d8-4769-b247-edefc1fb8610",
+                "4f094a69-bae6-4644-89f0-20938cf2fdde",
+                "a4f25a77-fccd-43db-a7f9-a7d801fa52ac"
+            ]
+        },
+        {
+            "name": "диспепсия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "d90b2e25-e64e-4703-b75a-1aa2ed4b9722",
+            "level": 18,
+            "parents": [
+                "68b46f75-baed-4b5e-a9c0-09face411e2c",
+                "fa928a08-d321-4d74-aa02-b5b5edaa2595"
+            ]
+        },
+        {
+            "name": "одышка",
+            "label": "side_e",
+            "weight": 5,
+            "id": "15a69e06-fd06-4c8c-a7a7-385f2b6ed486",
+            "level": 18,
+            "parents": [
+                "1fe61376-ba88-4aba-9135-3f712141d5e9",
+                "68b46f75-baed-4b5e-a9c0-09face411e2c"
+            ]
+        },
+        {
+            "name": "действие вазодилатировать",
+            "label": "action",
+            "weight": 5,
+            "id": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "level": 7,
+            "parents": [
+                "37f831eb-684e-40d8-883f-f692cf41cb52",
+                "6ad535d3-2201-4bb9-bffc-560aacd70509"
+            ]
+        },
+        {
+            "name": "снижение постнагрузка",
+            "label": "action",
+            "weight": 5,
+            "id": "03cf30b3-d774-47d3-9624-da6848b2c4f0",
+            "level": 8,
+            "parents": [
+                "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+                "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+            ]
+        },
+        {
+            "name": "снижение преднагрузка",
+            "label": "action",
+            "weight": 5,
+            "id": "4dbfa0bf-224e-46bf-b329-2ea3148e7963",
+            "level": 8,
+            "parents": [
+                "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+                "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+            ]
+        },
+        {
+            "name": "увеличивать сила сердечный сокращение",
+            "label": "action",
+            "weight": 5,
+            "id": "1280cbf7-02c7-41aa-a2db-7bb1ff879489",
+            "level": 8,
+            "parents": [
+                "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+                "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+            ]
+        },
+        {
+            "name": "действие инотропный",
+            "label": "action",
+            "weight": 5,
+            "id": "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+            "level": 7,
+            "parents": [
+                "37f831eb-684e-40d8-883f-f692cf41cb52",
+                "6ad535d3-2201-4bb9-bffc-560aacd70509"
+            ]
+        },
+        {
+            "name": "дисменорея",
+            "label": "side_e",
+            "weight": 5,
+            "id": "55ee5d55-f13e-4dab-ab55-5d086bd903e5",
+            "level": 5,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130"
+            ]
+        },
+        {
+            "name": "диуретик",
+            "label": "group",
+            "weight": 5,
+            "id": "06be8e41-e8a6-4a0f-bf6b-6aacf9f5e0d4",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "другой кардиотонический средство",
+            "label": "group",
+            "weight": 5,
+            "id": "1c84418a-ebd7-401b-afe2-6739f596ba44",
+            "level": 2,
+            "parents": [
+                "14053f53-06f3-469f-8844-bc14c6b76a0f"
+            ]
+        },
+        {
+            "name": "левосимендан",
+            "label": "prepare",
+            "weight": 5,
+            "id": "925c0e05-a234-4aeb-b63b-b7a306e8cc0b",
+            "level": 3,
+            "parents": [
+                "1c84418a-ebd7-401b-afe2-6739f596ba44"
+            ]
+        },
+        {
+            "name": "другой препарат для лечение заболевание сердце",
+            "label": "group",
+            "weight": 5,
+            "id": "fb445ba5-5ab3-4868-b59f-c282357e19a1",
+            "level": 1,
+            "parents": [
+                "b484cac0-adc4-4352-a815-05a621de0436"
+            ]
+        },
+        {
+            "name": "ивабрадин",
+            "label": "prepare",
+            "weight": 5,
+            "id": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+            "level": 2,
+            "parents": [
+                "fb445ba5-5ab3-4868-b59f-c282357e19a1"
+            ]
+        },
+        {
+            "name": "желудочнокишечный тракт",
+            "label": "absorbtion",
+            "weight": 5,
+            "id": "fa928a08-d321-4d74-aa02-b5b5edaa2595",
+            "level": 4,
+            "parents": [
+                "f38dbaf8-efab-4890-8690-85a2e370ea63"
+            ]
+        },
+        {
+            "name": "гастрит",
+            "label": "side_e",
+            "weight": 5,
+            "id": "0ee0be40-ff93-4dcb-b206-30dff1400c3e",
+            "level": 4,
+            "parents": [
+                "263a0372-fae2-45da-9bb0-473e0af3382c"
+            ]
+        },
+        {
+            "name": "уменьшать возбудимость миокард",
+            "label": "action",
+            "weight": 5,
+            "id": "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f",
+            "level": 4,
+            "parents": [
+                "c6be84e1-1c84-421f-8f52-74033dbc5e53"
+            ]
+        },
+        {
+            "name": "ингибирование if-канал синусовый узел",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "45d837d2-56e3-498f-a889-cab7b6a260d2",
+            "level": 3,
+            "parents": [
+                "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918"
+            ]
+        },
+        {
+            "name": "ингибирование ih-канал",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "aabda97c-196a-4182-99eb-6cdf5be75a39",
+            "level": 3,
+            "parents": [
+                "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918"
+            ]
+        },
+        {
+            "name": "повышение плазменный концентрация ангиотензин ii",
+            "label": "action",
+            "weight": 5,
+            "id": "0b239c9c-22f2-426c-bd0b-25c7f9de65e0",
+            "level": 2,
+            "parents": [
+                "3474a0b2-63d8-4769-b247-edefc1fb8610"
+            ]
+        },
+        {
+            "name": "изосорбида динитрат",
+            "label": "prepare",
+            "weight": 5,
+            "id": "ca8ee02e-9030-4305-9ada-124825da0670",
+            "level": 3,
+            "parents": [
+                "39637c79-13fc-4366-8f29-1f72e72629f9"
+            ]
+        },
+        {
+            "name": "периферический вазодилатация",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "98df31d5-f636-4fb2-8fd6-965a24880816",
+            "level": 8,
+            "parents": [
+                "1fe61376-ba88-4aba-9135-3f712141d5e9",
+                "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31",
+                "ca8ee02e-9030-4305-9ada-124825da0670"
+            ]
+        },
+        {
+            "name": "желудочковая экстрасистолия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "0a6e2246-cef7-48ef-b2d6-00c3c710a3b8",
+            "level": 10,
+            "parents": [
+                "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+                "45d837d2-56e3-498f-a889-cab7b6a260d2",
+                "4e39b4cc-8d03-413b-a82d-375204cf0b98"
+            ]
+        },
+        {
+            "name": "урежение чсс",
+            "label": "action",
+            "weight": 5,
+            "id": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+            "level": 4,
+            "parents": [
+                "45d837d2-56e3-498f-a889-cab7b6a260d2"
+            ]
+        },
+        {
+            "name": "фибрилляция",
+            "label": "side_e",
+            "weight": 5,
+            "id": "01ea7fd3-b501-402e-8918-eb4b6377de39",
+            "level": 10,
+            "parents": [
+                "4e39b4cc-8d03-413b-a82d-375204cf0b98",
+                "45d837d2-56e3-498f-a889-cab7b6a260d2"
+            ]
+        },
+        {
+            "name": "нарушение зрения",
+            "label": "side_e",
+            "weight": 5,
+            "id": "8c8b43f5-f6f5-4671-aae2-782c5760b91f",
+            "level": 4,
+            "parents": [
+                "aabda97c-196a-4182-99eb-6cdf5be75a39"
+            ]
+        },
+        {
+            "name": "ингибировать агрегация тромбоцит",
+            "label": "action",
+            "weight": 5,
+            "id": "5a7fc89e-b977-424a-b7a6-9e0613cace10",
+            "level": 9,
+            "parents": [
+                "4e04f049-68cd-4c06-84b8-45f066930e85",
+                "18045579-4016-496d-bdf3-fccab755d509",
+                "f1160dd0-b00c-444f-afab-80ca3e0919a7",
+                "f68df86d-705e-4c37-8537-59e090fd4f2b"
+            ]
+        },
+        {
+            "name": "тромбоцитопения",
+            "label": "side_e",
+            "weight": 5,
+            "id": "b881f263-2864-4c78-b394-5ac4708f0d0e",
+            "level": 10,
+            "parents": [
+                "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+            ]
+        },
+        {
+            "name": "ингибировать апф",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "7c551d61-3dd1-4e3f-904c-68d3f716ad82",
+            "level": 3,
+            "parents": [
+                "d1701e1b-737a-4ade-a37a-9cc9d6ce2535"
+            ]
+        },
+        {
+            "name": "снижать активность ренин-ангиотензин-альдостерон система",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "6283925c-dc66-487d-a6f6-c05ba8bf514d",
+            "level": 4,
+            "parents": [
+                "7c551d61-3dd1-4e3f-904c-68d3f716ad82"
+            ]
+        },
+        {
+            "name": "уменьшать опосредовать апф деградация брадикинин",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "3d5f79f8-fb34-4073-85f5-76b493cc2d74",
+            "level": 4,
+            "parents": [
+                "7c551d61-3dd1-4e3f-904c-68d3f716ad82"
+            ]
+        },
+        {
+            "name": "ингибитор ангиотензинпревращать фермент",
+            "label": "group",
+            "weight": 5,
+            "id": "02bdd91b-1a20-4476-8bc0-3b3929f49d7b",
+            "level": 1,
+            "parents": [
+                "53b0e9e6-dcc8-4a94-a6da-cdc3d4bead73"
+            ]
+        },
+        {
+            "name": "каптоприл",
+            "label": "prepare",
+            "weight": 5,
+            "id": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+            "level": 2,
+            "parents": [
+                "02bdd91b-1a20-4476-8bc0-3b3929f49d7b"
+            ]
+        },
+        {
+            "name": "индуцировать расширение артерия",
+            "label": "action",
+            "weight": 5,
+            "id": "37f831eb-684e-40d8-883f-f692cf41cb52",
+            "level": 5,
+            "parents": [
+                "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd"
+            ]
+        },
+        {
+            "name": "калийсберегающий диуретик",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "6457c010-1805-4551-96eb-89e8439a44a7",
+            "level": 6,
+            "parents": [
+                "e15a8212-1209-49d9-9161-b335abec597a"
+            ]
+        },
+        {
+            "name": "снижать артериальный давление",
+            "label": "action",
+            "weight": 5,
+            "id": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1",
+            "level": 7,
+            "parents": [
+                "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+                "e3b77f5b-0c70-449e-a329-0895576ff3f7",
+                "6457c010-1805-4551-96eb-89e8439a44a7"
+            ]
+        },
+        {
+            "name": "кардиотонический средство, кроме сердечный гликозид",
+            "label": "group",
+            "weight": 5,
+            "id": "14053f53-06f3-469f-8844-bc14c6b76a0f",
+            "level": 1,
+            "parents": [
+                "b484cac0-adc4-4352-a815-05a621de0436"
+            ]
+        },
+        {
+            "name": "конкурентный антагонист альдостерон",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "level": 4,
+            "parents": [
+                "f38dbaf8-efab-4890-8690-85a2e370ea63"
+            ]
+        },
+        {
+            "name": "алопеция",
+            "label": "side_e",
+            "weight": 5,
+            "id": "787d59cc-8ec7-4403-a9fc-4eed26dc76b1",
+            "level": 6,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130",
+                "9f4ced30-f4ad-4522-8e11-7d195f909b33"
+            ]
+        },
+        {
+            "name": "гинекомастия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "e4b75abf-6cb7-449e-ad19-e64118704019",
+            "level": 6,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130",
+                "9f4ced30-f4ad-4522-8e11-7d195f909b33"
+            ]
+        },
+        {
+            "name": "подавлять калийвыводить эффект",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e15a8212-1209-49d9-9161-b335abec597a",
+            "level": 5,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130"
+            ]
+        },
+        {
+            "name": "препятствовать задержка вода",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e3b77f5b-0c70-449e-a329-0895576ff3f7",
+            "level": 5,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130"
+            ]
+        },
+        {
+            "name": "препятствовать задержка натрий",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "level": 5,
+            "parents": [
+                "e366ca0f-06cd-47df-861b-417815e6c130"
+            ]
+        },
+        {
+            "name": "конформационный изменение в он молекула",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e3006f47-66ac-42c1-87ab-d784c2291c61",
+            "level": 4,
+            "parents": [
+                "5f73fbe7-1b8f-40cb-a5a5-6f95f4f43285"
+            ]
+        },
+        {
+            "name": "ускорять связывание антитромбин iii с фактор iiа",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "aa979b68-0992-413c-9cf0-a8b3286b7914",
+            "level": 5,
+            "parents": [
+                "e3006f47-66ac-42c1-87ab-d784c2291c61"
+            ]
+        },
+        {
+            "name": "ускорять связывание антитромбин iii с фактор xiа",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "9ec17cee-e626-42d6-aa90-c4422d92f992",
+            "level": 5,
+            "parents": [
+                "e3006f47-66ac-42c1-87ab-d784c2291c61"
+            ]
+        },
+        {
+            "name": "ускорять связывание антитромбин iii с фактор хii",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "4ba1ef85-eab7-453e-b3c5-bc71db348175",
+            "level": 5,
+            "parents": [
+                "e3006f47-66ac-42c1-87ab-d784c2291c61"
+            ]
+        },
+        {
+            "name": "ускорять связывание антитромбин iii с фактор ха",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "1c7ea72f-dd09-497e-b09d-9f85f9b145b9",
+            "level": 5,
+            "parents": [
+                "e3006f47-66ac-42c1-87ab-d784c2291c61"
+            ]
+        },
+        {
+            "name": "открывать атф-чувствительный калиевый канал в гладкий мышца сосуд",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd",
+            "level": 4,
+            "parents": [
+                "925c0e05-a234-4aeb-b63b-b7a306e8cc0b"
+            ]
+        },
+        {
+            "name": "связывать с тропонина c миокард",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "aecff730-d02e-4faa-af8a-f81fceb3dde8",
+            "level": 4,
+            "parents": [
+                "925c0e05-a234-4aeb-b63b-b7a306e8cc0b"
+            ]
+        },
+        {
+            "name": "накопление брадикинин",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31",
+            "level": 5,
+            "parents": [
+                "3d5f79f8-fb34-4073-85f5-76b493cc2d74"
+            ]
+        },
+        {
+            "name": "увеличиваться активность калликреин-кининовый система тканевый",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "42e90404-58e0-4af2-bddd-f217bf9f86ee",
+            "level": 6,
+            "parents": [
+                "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31"
+            ]
+        },
+        {
+            "name": "увеличиваться активность калликреин-кининовый система циркулировать",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "fbec7a72-d2bf-46a9-9e42-8e920a3bc55a",
+            "level": 6,
+            "parents": [
+                "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31"
+            ]
+        },
+        {
+            "name": "нарушать фосфорелирование белок гладкомышечный клетка",
+            "label": "action",
+            "weight": 5,
+            "id": "7449ba12-3ad4-4f12-b539-3f461844ecec",
+            "level": 13,
+            "parents": [
+                "358aff22-92fa-4698-bbb0-7b776d38281e"
+            ]
+        },
+        {
+            "name": "снижать сократимость",
+            "label": "action",
+            "weight": 5,
+            "id": "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d",
+            "level": 14,
+            "parents": [
+                "7449ba12-3ad4-4f12-b539-3f461844ecec"
+            ]
+        },
+        {
+            "name": "гипокалиемия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "55cd5a55-c724-43e5-a2e8-774307b5989f",
+            "level": 5,
+            "parents": [
+                "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd"
+            ]
+        },
+        {
+            "name": "печень",
+            "label": "excretion",
+            "weight": 5,
+            "id": "464343c9-22e9-42a2-b194-dc9ca2a59ec5",
+            "level": 4,
+            "parents": [
+                "f62ea207-c001-4c44-8d89-e35e220d3a94"
+            ]
+        },
+        {
+            "name": "желтуха",
+            "label": "side_e",
+            "weight": 5,
+            "id": "bc6def76-5041-4bd1-82f5-f774edc9c956",
+            "level": 5,
+            "parents": [
+                "ae7c42af-cd98-46b4-9167-cd7ca3889901"
+            ]
+        },
+        {
+            "name": "повышать сердечный выброс",
+            "label": "action",
+            "weight": 5,
+            "id": "f810809e-2f79-4f77-9da8-c9a375c71e56",
+            "level": 9,
+            "parents": [
+                "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+            ]
+        },
+        {
+            "name": "стенокардия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "1a5f2d6d-3e6a-4c1e-9ddc-d8183a2e1ca1",
+            "level": 10,
+            "parents": [
+                "22938cab-0233-42af-9964-db933db53066",
+                "f810809e-2f79-4f77-9da8-c9a375c71e56",
+                "222eedcf-b460-44c2-8b11-76a31a6b70a4"
+            ]
+        },
+        {
+            "name": "повышать ударный объём",
+            "label": "action",
+            "weight": 5,
+            "id": "222eedcf-b460-44c2-8b11-76a31a6b70a4",
+            "level": 9,
+            "parents": [
+                "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+            ]
+        },
+        {
+            "name": "повышать чувствительность к кальций сократительный белок",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "86c7eca8-a149-4ceb-9e30-8781b447fa8b",
+            "level": 5,
+            "parents": [
+                "aecff730-d02e-4faa-af8a-f81fceb3dde8"
+            ]
+        },
+        {
+            "name": "положительный кальцийзависить",
+            "label": "action",
+            "weight": 5,
+            "id": "6ad535d3-2201-4bb9-bffc-560aacd70509",
+            "level": 6,
+            "parents": [
+                "86c7eca8-a149-4ceb-9e30-8781b447fa8b"
+            ]
+        },
+        {
+            "name": "стимулировать at2 рецептор",
+            "label": "action",
+            "weight": 5,
+            "id": "eb84636b-2513-4f88-85e3-68746c558697",
+            "level": 3,
+            "parents": [
+                "0b239c9c-22f2-426c-bd0b-25c7f9de65e0"
+            ]
+        },
+        {
+            "name": "стимулировать цгмфа-зависимый протеинкиназа",
+            "label": "action",
+            "weight": 5,
+            "id": "358aff22-92fa-4698-bbb0-7b776d38281e",
+            "level": 12,
+            "parents": [
+                "e194f617-08f2-4b14-8d42-0d4313105da8"
+            ]
+        },
+        {
+            "name": "почечная недостаточность",
+            "label": "side_e",
+            "weight": 5,
+            "id": "3a6ae49f-7322-4b07-8825-1af902d08fed",
+            "level": 5,
+            "parents": [
+                "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+            ]
+        },
+        {
+            "name": "предотвращать образование тромб",
+            "label": "action",
+            "weight": 5,
+            "id": "4e04f049-68cd-4c06-84b8-45f066930e85",
+            "level": 8,
+            "parents": [
+                "a791332d-d74f-47cf-941a-d2dd105d8568"
+            ]
+        },
+        {
+            "name": "предотвращать образование тромбин",
+            "label": "action",
+            "weight": 5,
+            "id": "f68df86d-705e-4c37-8537-59e090fd4f2b",
+            "level": 8,
+            "parents": [
+                "a791332d-d74f-47cf-941a-d2dd105d8568"
+            ]
+        },
+        {
+            "name": "психоаналептик",
+            "label": "group",
+            "weight": 5,
+            "id": "847f6a03-f359-43fc-ad4a-e55f6962a152",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "рассабление гладкий мышца желудочный-кишечный тракт",
+            "label": "action",
+            "weight": 5,
+            "id": "b0571965-ed39-47e6-b72e-57b186c6f554",
+            "level": 15,
+            "parents": [
+                "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d"
+            ]
+        },
+        {
+            "name": "изжога",
+            "label": "side_e",
+            "weight": 5,
+            "id": "6280d546-1483-40ef-9268-7238a0ff1b12",
+            "level": 16,
+            "parents": [
+                "b0571965-ed39-47e6-b72e-57b186c6f554"
+            ]
+        },
+        {
+            "name": "рассабление гладкий мышца периферический сосуд артерия",
+            "label": "action",
+            "weight": 5,
+            "id": "21b2c851-2da4-40c0-a407-3bb67426dce3",
+            "level": 15,
+            "parents": [
+                "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d"
+            ]
+        },
+        {
+            "name": "снижение ад",
+            "label": "action",
+            "weight": 5,
+            "id": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "level": 16,
+            "parents": [
+                "21b2c851-2da4-40c0-a407-3bb67426dce3"
+            ]
+        },
+        {
+            "name": "снижение венозный возврат к сердце",
+            "label": "action",
+            "weight": 5,
+            "id": "84e12fa3-1156-4dee-9211-9a072699af8e",
+            "level": 16,
+            "parents": [
+                "21b2c851-2da4-40c0-a407-3bb67426dce3"
+            ]
+        },
+        {
+            "name": "рассабление гладкий мышца периферический сосуд артерия головной мозг",
+            "label": "action",
+            "weight": 5,
+            "id": "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9",
+            "level": 15,
+            "parents": [
+                "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d"
+            ]
+        },
+        {
+            "name": "связывать гистамин",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "e31f8eed-8586-4c41-bb5b-a58c242e3f25",
+            "level": 4,
+            "parents": [
+                "7654bda0-7b73-43d1-a3cf-be902ab4d897"
+            ]
+        },
+        {
+            "name": "связывать серотонин",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "78cccd2d-a164-4fa0-b343-48af6bee2a08",
+            "level": 4,
+            "parents": [
+                "7654bda0-7b73-43d1-a3cf-be902ab4d897"
+            ]
+        },
+        {
+            "name": "эсциталопрам",
+            "label": "prepare",
+            "weight": 5,
+            "id": "f62ea207-c001-4c44-8d89-e35e220d3a94",
+            "level": 3,
+            "parents": [
+                "655f8104-4637-4097-ba78-17916e407710"
+            ]
+        },
+        {
+            "name": "селективный ингибитор обратный захват серотонин  с высокий аффинность к первичный активный центр",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "level": 4,
+            "parents": [
+                "f62ea207-c001-4c44-8d89-e35e220d3a94"
+            ]
+        },
+        {
+            "name": "анорексия",
+            "label": "side_e",
+            "weight": 5,
+            "id": "dae525a0-e24b-4c5f-b580-48a70f989686",
+            "level": 5,
+            "parents": [
+                "62629a17-3ac6-4485-b348-235b7ada22f4"
+            ]
+        },
+        {
+            "name": "тремор",
+            "label": "side_e",
+            "weight": 5,
+            "id": "7ccfa33a-5fde-4fb7-8e4c-423b6bb71b6f",
+            "level": 5,
+            "parents": [
+                "62629a17-3ac6-4485-b348-235b7ada22f4"
+            ]
+        },
+        {
+            "name": "снижать ад",
+            "label": "action",
+            "weight": 5,
+            "id": "df9fb069-42e6-4f66-a889-6b4b616dfce1",
+            "level": 9,
+            "parents": [
+                "03cf30b3-d774-47d3-9624-da6848b2c4f0",
+                "4dbfa0bf-224e-46bf-b329-2ea3148e7963"
+            ]
+        },
+        {
+            "name": "уменьшение секреция альдостерон кора надпочечник",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+            "level": 5,
+            "parents": [
+                "6283925c-dc66-487d-a6f6-c05ba8bf514d"
+            ]
+        },
+        {
+            "name": "устранять вазоконстрикторный воздействие",
+            "label": "action",
+            "weight": 5,
+            "id": "10c1ccc1-54cb-4bc5-8ab6-e683016bf40a",
+            "level": 5,
+            "parents": [
+                "6283925c-dc66-487d-a6f6-c05ba8bf514d"
+            ]
+        },
+        {
+            "name": "устранять вазоконстрикторный воздействие сосуд артериальный",
+            "label": "action",
+            "weight": 5,
+            "id": "eaa1e1f4-d087-47e1-a234-cbec2039e32f",
+            "level": 5,
+            "parents": [
+                "6283925c-dc66-487d-a6f6-c05ba8bf514d"
+            ]
+        },
+        {
+            "name": "устранять вазоконстрикторный воздействие сосуд венозный",
+            "label": "action",
+            "weight": 5,
+            "id": "8b8b333a-963b-48b8-b756-d51d4938e181",
+            "level": 5,
+            "parents": [
+                "6283925c-dc66-487d-a6f6-c05ba8bf514d"
+            ]
+        },
+        {
+            "name": "увеличивать они отрицательный заряд",
+            "label": "action",
+            "weight": 5,
+            "id": "f1160dd0-b00c-444f-afab-80ca3e0919a7",
+            "level": 4,
+            "parents": [
+                "27cfe06a-af18-45ae-9660-cd7ff7ac88c5",
+                "fadadf91-c8a4-4481-97f8-cad9d1124b0f"
+            ]
+        },
+        {
+            "name": "средство для лечение заболевание сердце",
+            "label": "group",
+            "weight": 5,
+            "id": "b484cac0-adc4-4352-a815-05a621de0436",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "средство, действовать на ренин-ангиотензиновый система",
+            "label": "group",
+            "weight": 5,
+            "id": "53b0e9e6-dcc8-4a94-a6da-cdc3d4bead73",
+            "level": 0,
+            "parents": []
+        },
+        {
+            "name": "увеличение синтез простагландин е2",
+            "label": "mechanism",
+            "weight": 5,
+            "id": "1fe61376-ba88-4aba-9135-3f712141d5e9",
+            "level": 7,
+            "parents": [
+                "fbec7a72-d2bf-46a9-9e42-8e920a3bc55a",
+                "42e90404-58e0-4af2-bddd-f217bf9f86ee"
+            ]
+        },
+        {
+            "name": "кашель",
+            "label": "side_e",
+            "weight": 5,
+            "id": "9adcef92-eaf1-4d77-b198-efb2f406bd65",
+            "level": 8,
+            "parents": [
+                "1fe61376-ba88-4aba-9135-3f712141d5e9"
+            ]
+        },
+        {
+            "name": "увеличивать фракция выброс",
+            "label": "action",
+            "weight": 5,
+            "id": "22938cab-0233-42af-9964-db933db53066",
+            "level": 9,
+            "parents": [
+                "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+            ]
+        },
+        {
+            "name": "увеличивать чсс",
+            "label": "action",
+            "weight": 5,
+            "id": "4e39b4cc-8d03-413b-a82d-375204cf0b98",
+            "level": 9,
+            "parents": [
+                "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+            ]
+        },
+        {
+            "name": "атриовентрикулярная блокада",
+            "label": "side_e",
+            "weight": 5,
+            "id": "ff27382d-02da-4d58-a581-31df0af0c061",
+            "level": 5,
+            "parents": [
+                "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+                "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f"
+            ]
+        },
+        {
+            "name": "уменьшать частота сердечный сокращение",
+            "label": "action",
+            "weight": 5,
+            "id": "c57167ba-8e81-474e-a0b7-21b6e18d6398",
+            "level": 5,
+            "parents": [
+                "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f"
+            ]
+        }
+    ],
+    "links": [
+        {
+            "source": "bdba5476-0a1f-4c75-81cd-9702cbe2c3e0",
+            "target": "e194f617-08f2-4b14-8d42-0d4313105da8"
+        },
+        {
+            "source": "e194f617-08f2-4b14-8d42-0d4313105da8",
+            "target": "358aff22-92fa-4698-bbb0-7b776d38281e"
+        },
+        {
+            "source": "b27b4e41-4d7a-4757-a2fb-723649ebb396",
+            "target": "f38dbaf8-efab-4890-8690-85a2e370ea63"
+        },
+        {
+            "source": "f38dbaf8-efab-4890-8690-85a2e370ea63",
+            "target": "bd0162c5-c330-4c4a-b46f-fdb54cb27c4c"
+        },
+        {
+            "source": "f38dbaf8-efab-4890-8690-85a2e370ea63",
+            "target": "fa928a08-d321-4d74-aa02-b5b5edaa2595"
+        },
+        {
+            "source": "f38dbaf8-efab-4890-8690-85a2e370ea63",
+            "target": "e366ca0f-06cd-47df-861b-417815e6c130"
+        },
+        {
+            "source": "f38dbaf8-efab-4890-8690-85a2e370ea63",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "6665110c-4812-41db-a09b-b93b2bdddce1",
+            "target": "b27b4e41-4d7a-4757-a2fb-723649ebb396"
+        },
+        {
+            "source": "199786f9-7c92-44e0-8c0c-69389b067306",
+            "target": "3474a0b2-63d8-4769-b247-edefc1fb8610"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "be3509a1-9d3f-445a-ac5c-fb4a03e34f50"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "a0828c92-3521-4edd-944a-51401f7780d8"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "ab7299f2-af37-4862-9506-9091f8689f6e"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "0b239c9c-22f2-426c-bd0b-25c7f9de65e0"
+        },
+        {
+            "source": "3474a0b2-63d8-4769-b247-edefc1fb8610",
+            "target": "52a53e4e-fa11-40a2-8616-62297932874c"
+        },
+        {
+            "source": "b29ad385-72a5-4cae-ac8c-63772c3fb294",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9",
+            "target": "3a6ae49f-7322-4b07-8825-1af902d08fed"
+        },
+        {
+            "source": "b6ee07b8-1681-461f-bab1-d45219af39a9",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "e118a6e6-c847-4a79-b24b-d4313f3e0cb8"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "063572f2-6dca-4aed-8079-39c98551891f"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "42114354-be3f-4be6-8f6c-7088e464fe97"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "d90b2e25-e64e-4703-b75a-1aa2ed4b9722"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "e6aeeaeb-d4bc-493c-9c88-58ec0c1f23e6"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "15a69e06-fd06-4c8c-a7a7-385f2b6ed486"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "6698adbb-4c92-40b0-b495-2183476f8ad2"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "47106e8e-6ea5-4195-9d42-372527451eca"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "d93dc400-d9fe-461e-8c42-28bdccd2d41a"
+        },
+        {
+            "source": "68b46f75-baed-4b5e-a9c0-09face411e2c",
+            "target": "3a429b3a-95ee-4580-925f-c6146294fec5"
+        },
+        {
+            "source": "4e6ddad3-8c56-423b-87b9-b13b7d12f771",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "2464989a-e198-4e4b-9258-fda8b7423fab",
+            "target": "655f8104-4637-4097-ba78-17916e407710"
+        },
+        {
+            "source": "655f8104-4637-4097-ba78-17916e407710",
+            "target": "f62ea207-c001-4c44-8d89-e35e220d3a94"
+        },
+        {
+            "source": "adab4853-1f18-4762-8338-c7cd8910d2c0",
+            "target": "5cfc7509-1f92-4829-9d03-b5d4502dea51"
+        },
+        {
+            "source": "5cfc7509-1f92-4829-9d03-b5d4502dea51",
+            "target": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+        },
+        {
+            "source": "5cfc7509-1f92-4829-9d03-b5d4502dea51",
+            "target": "263a0372-fae2-45da-9bb0-473e0af3382c"
+        },
+        {
+            "source": "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+            "target": "b6894f7c-96ce-4efa-b5fe-98e13b325370"
+        },
+        {
+            "source": "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+            "target": "8593a288-fa21-42be-9b19-0cf4e2d8f1bf"
+        },
+        {
+            "source": "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+            "target": "e3724299-ac5a-4ad6-b646-8b9e64cd336e"
+        },
+        {
+            "source": "8c52f1a6-dbff-43c0-9968-82834bde0c4a",
+            "target": "47106e8e-6ea5-4195-9d42-372527451eca"
+        },
+        {
+            "source": "b6894f7c-96ce-4efa-b5fe-98e13b325370",
+            "target": "e6aeeaeb-d4bc-493c-9c88-58ec0c1f23e6"
+        },
+        {
+            "source": "0bd6a10e-d9d2-49c4-a746-215adc7fd1dd",
+            "target": "90f3f55e-1d52-4640-b0cf-e37880b3bec4"
+        },
+        {
+            "source": "90f3f55e-1d52-4640-b0cf-e37880b3bec4",
+            "target": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84"
+        },
+        {
+            "source": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee",
+            "target": "a791332d-d74f-47cf-941a-d2dd105d8568"
+        },
+        {
+            "source": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee",
+            "target": "18045579-4016-496d-bdf3-fccab755d509"
+        },
+        {
+            "source": "263a0372-fae2-45da-9bb0-473e0af3382c",
+            "target": "0ee0be40-ff93-4dcb-b206-30dff1400c3e"
+        },
+        {
+            "source": "a43adfc8-3440-473c-8441-2505c80c5f02",
+            "target": "c6be84e1-1c84-421f-8f52-74033dbc5e53"
+        },
+        {
+            "source": "a43adfc8-3440-473c-8441-2505c80c5f02",
+            "target": "4f094a69-bae6-4644-89f0-20938cf2fdde"
+        },
+        {
+            "source": "c6be84e1-1c84-421f-8f52-74033dbc5e53",
+            "target": "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f"
+        },
+        {
+            "source": "4f094a69-bae6-4644-89f0-20938cf2fdde",
+            "target": "b6ee07b8-1681-461f-bab1-d45219af39a9"
+        },
+        {
+            "source": "4f094a69-bae6-4644-89f0-20938cf2fdde",
+            "target": "e118a6e6-c847-4a79-b24b-d4313f3e0cb8"
+        },
+        {
+            "source": "4f094a69-bae6-4644-89f0-20938cf2fdde",
+            "target": "52a53e4e-fa11-40a2-8616-62297932874c"
+        },
+        {
+            "source": "a4bf8211-8e4e-4489-88f9-41cfa457b83f",
+            "target": "647949c4-1880-4f2a-bb8b-759cbd2aaec5"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "a43adfc8-3440-473c-8441-2505c80c5f02"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "15e27163-a05e-497d-982a-5c32160a39d9"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "cfcc0d69-fad7-46ea-bc82-7b59cac2ce57"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "77bf8108-b166-4c7e-804a-42ddf49619e3"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "263a0372-fae2-45da-9bb0-473e0af3382c"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "ae7c42af-cd98-46b4-9167-cd7ca3889901"
+        },
+        {
+            "source": "647949c4-1880-4f2a-bb8b-759cbd2aaec5",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "a567c579-5286-4b7a-a88a-75febf254cf1"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "4db3f867-d496-45a2-a5ad-5cac5947bfe5"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "6716d111-a776-4eb4-b635-78049130b1d6"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "f923e92a-fda0-4abd-8d3a-324f7e80b816"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "c7eff413-3ebc-4ff9-a8c9-a2a406295386"
+        },
+        {
+            "source": "15e27163-a05e-497d-982a-5c32160a39d9",
+            "target": "d93dc400-d9fe-461e-8c42-28bdccd2d41a"
+        },
+        {
+            "source": "d93dc400-d9fe-461e-8c42-28bdccd2d41a",
+            "target": "c7eff413-3ebc-4ff9-a8c9-a2a406295386"
+        },
+        {
+            "source": "cfcc0d69-fad7-46ea-bc82-7b59cac2ce57",
+            "target": "4db3f867-d496-45a2-a5ad-5cac5947bfe5"
+        },
+        {
+            "source": "77bf8108-b166-4c7e-804a-42ddf49619e3",
+            "target": "a0828c92-3521-4edd-944a-51401f7780d8"
+        },
+        {
+            "source": "77bf8108-b166-4c7e-804a-42ddf49619e3",
+            "target": "6698adbb-4c92-40b0-b495-2183476f8ad2"
+        },
+        {
+            "source": "ae7c42af-cd98-46b4-9167-cd7ca3889901",
+            "target": "bc6def76-5041-4bd1-82f5-f774edc9c956"
+        },
+        {
+            "source": "a791332d-d74f-47cf-941a-d2dd105d8568",
+            "target": "4e04f049-68cd-4c06-84b8-45f066930e85"
+        },
+        {
+            "source": "a791332d-d74f-47cf-941a-d2dd105d8568",
+            "target": "f68df86d-705e-4c37-8537-59e090fd4f2b"
+        },
+        {
+            "source": "18045579-4016-496d-bdf3-fccab755d509",
+            "target": "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "e118a6e6-c847-4a79-b24b-d4313f3e0cb8"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "063572f2-6dca-4aed-8079-39c98551891f"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "b981203e-b119-41bd-9a1a-b51631964575"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "42114354-be3f-4be6-8f6c-7088e464fe97"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "e6aeeaeb-d4bc-493c-9c88-58ec0c1f23e6"
+        },
+        {
+            "source": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b",
+            "target": "3a429b3a-95ee-4580-925f-c6146294fec5"
+        },
+        {
+            "source": "063572f2-6dca-4aed-8079-39c98551891f",
+            "target": "e6aeeaeb-d4bc-493c-9c88-58ec0c1f23e6"
+        },
+        {
+            "source": "bd0162c5-c330-4c4a-b46f-fdb54cb27c4c",
+            "target": "8a4a37c2-e65e-4a33-85e2-329cd594ca43"
+        },
+        {
+            "source": "8a4a37c2-e65e-4a33-85e2-329cd594ca43",
+            "target": "33069045-9d44-4919-be39-1aca74512557"
+        },
+        {
+            "source": "df718bb5-fc04-436f-9699-e23dd24f3c2e",
+            "target": "39637c79-13fc-4366-8f29-1f72e72629f9"
+        },
+        {
+            "source": "39637c79-13fc-4366-8f29-1f72e72629f9",
+            "target": "ca8ee02e-9030-4305-9ada-124825da0670"
+        },
+        {
+            "source": "af9cb20f-0cb4-42f1-b92b-c2e481cd031a",
+            "target": "bdba5476-0a1f-4c75-81cd-9702cbe2c3e0"
+        },
+        {
+            "source": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84",
+            "target": "5f73fbe7-1b8f-40cb-a5a5-6f95f4f43285"
+        },
+        {
+            "source": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84",
+            "target": "7654bda0-7b73-43d1-a3cf-be902ab4d897"
+        },
+        {
+            "source": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84",
+            "target": "fadadf91-c8a4-4481-97f8-cad9d1124b0f"
+        },
+        {
+            "source": "f6fb0baf-1638-464f-a12d-b9ea4d37cf84",
+            "target": "27cfe06a-af18-45ae-9660-cd7ff7ac88c5"
+        },
+        {
+            "source": "5f73fbe7-1b8f-40cb-a5a5-6f95f4f43285",
+            "target": "e3006f47-66ac-42c1-87ab-d784c2291c61"
+        },
+        {
+            "source": "7654bda0-7b73-43d1-a3cf-be902ab4d897",
+            "target": "e31f8eed-8586-4c41-bb5b-a58c242e3f25"
+        },
+        {
+            "source": "7654bda0-7b73-43d1-a3cf-be902ab4d897",
+            "target": "78cccd2d-a164-4fa0-b343-48af6bee2a08"
+        },
+        {
+            "source": "fadadf91-c8a4-4481-97f8-cad9d1124b0f",
+            "target": "f1160dd0-b00c-444f-afab-80ca3e0919a7"
+        },
+        {
+            "source": "27cfe06a-af18-45ae-9660-cd7ff7ac88c5",
+            "target": "f1160dd0-b00c-444f-afab-80ca3e0919a7"
+        },
+        {
+            "source": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "target": "be3509a1-9d3f-445a-ac5c-fb4a03e34f50"
+        },
+        {
+            "source": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "target": "a0828c92-3521-4edd-944a-51401f7780d8"
+        },
+        {
+            "source": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "target": "ab7299f2-af37-4862-9506-9091f8689f6e"
+        },
+        {
+            "source": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "target": "52a53e4e-fa11-40a2-8616-62297932874c"
+        },
+        {
+            "source": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac",
+            "target": "3a429b3a-95ee-4580-925f-c6146294fec5"
+        },
+        {
+            "source": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "target": "6716d111-a776-4eb4-b635-78049130b1d6"
+        },
+        {
+            "source": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "target": "03cf30b3-d774-47d3-9624-da6848b2c4f0"
+        },
+        {
+            "source": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "target": "4dbfa0bf-224e-46bf-b329-2ea3148e7963"
+        },
+        {
+            "source": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "target": "d93dc400-d9fe-461e-8c42-28bdccd2d41a"
+        },
+        {
+            "source": "e1dbd959-8285-4b9d-8256-f8a2e4c01723",
+            "target": "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+        },
+        {
+            "source": "03cf30b3-d774-47d3-9624-da6848b2c4f0",
+            "target": "df9fb069-42e6-4f66-a889-6b4b616dfce1"
+        },
+        {
+            "source": "4dbfa0bf-224e-46bf-b329-2ea3148e7963",
+            "target": "df9fb069-42e6-4f66-a889-6b4b616dfce1"
+        },
+        {
+            "source": "1280cbf7-02c7-41aa-a2db-7bb1ff879489",
+            "target": "f810809e-2f79-4f77-9da8-c9a375c71e56"
+        },
+        {
+            "source": "1280cbf7-02c7-41aa-a2db-7bb1ff879489",
+            "target": "222eedcf-b460-44c2-8b11-76a31a6b70a4"
+        },
+        {
+            "source": "1280cbf7-02c7-41aa-a2db-7bb1ff879489",
+            "target": "22938cab-0233-42af-9964-db933db53066"
+        },
+        {
+            "source": "1280cbf7-02c7-41aa-a2db-7bb1ff879489",
+            "target": "4e39b4cc-8d03-413b-a82d-375204cf0b98"
+        },
+        {
+            "source": "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+            "target": "03cf30b3-d774-47d3-9624-da6848b2c4f0"
+        },
+        {
+            "source": "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+            "target": "4dbfa0bf-224e-46bf-b329-2ea3148e7963"
+        },
+        {
+            "source": "1f16ad85-ba47-4e11-b62a-f9be332739a7",
+            "target": "1280cbf7-02c7-41aa-a2db-7bb1ff879489"
+        },
+        {
+            "source": "55ee5d55-f13e-4dab-ab55-5d086bd903e5",
+            "target": "6698adbb-4c92-40b0-b495-2183476f8ad2"
+        },
+        {
+            "source": "06be8e41-e8a6-4a0f-bf6b-6aacf9f5e0d4",
+            "target": "6665110c-4812-41db-a09b-b93b2bdddce1"
+        },
+        {
+            "source": "1c84418a-ebd7-401b-afe2-6739f596ba44",
+            "target": "925c0e05-a234-4aeb-b63b-b7a306e8cc0b"
+        },
+        {
+            "source": "925c0e05-a234-4aeb-b63b-b7a306e8cc0b",
+            "target": "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd"
+        },
+        {
+            "source": "925c0e05-a234-4aeb-b63b-b7a306e8cc0b",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "925c0e05-a234-4aeb-b63b-b7a306e8cc0b",
+            "target": "aecff730-d02e-4faa-af8a-f81fceb3dde8"
+        },
+        {
+            "source": "fb445ba5-5ab3-4868-b59f-c282357e19a1",
+            "target": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918"
+        },
+        {
+            "source": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+            "target": "45d837d2-56e3-498f-a889-cab7b6a260d2"
+        },
+        {
+            "source": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+            "target": "aabda97c-196a-4182-99eb-6cdf5be75a39"
+        },
+        {
+            "source": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+            "target": "ae7c42af-cd98-46b4-9167-cd7ca3889901"
+        },
+        {
+            "source": "cfb5f1b8-7d01-4d65-ba68-2ac1570bc918",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "fa928a08-d321-4d74-aa02-b5b5edaa2595",
+            "target": "d90b2e25-e64e-4703-b75a-1aa2ed4b9722"
+        },
+        {
+            "source": "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f",
+            "target": "ff27382d-02da-4d58-a581-31df0af0c061"
+        },
+        {
+            "source": "14d8c6e3-a8e6-4d22-afb4-2fd2411a184f",
+            "target": "c57167ba-8e81-474e-a0b7-21b6e18d6398"
+        },
+        {
+            "source": "45d837d2-56e3-498f-a889-cab7b6a260d2",
+            "target": "0a6e2246-cef7-48ef-b2d6-00c3c710a3b8"
+        },
+        {
+            "source": "45d837d2-56e3-498f-a889-cab7b6a260d2",
+            "target": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc"
+        },
+        {
+            "source": "45d837d2-56e3-498f-a889-cab7b6a260d2",
+            "target": "01ea7fd3-b501-402e-8918-eb4b6377de39"
+        },
+        {
+            "source": "aabda97c-196a-4182-99eb-6cdf5be75a39",
+            "target": "8c8b43f5-f6f5-4671-aae2-782c5760b91f"
+        },
+        {
+            "source": "0b239c9c-22f2-426c-bd0b-25c7f9de65e0",
+            "target": "eb84636b-2513-4f88-85e3-68746c558697"
+        },
+        {
+            "source": "ca8ee02e-9030-4305-9ada-124825da0670",
+            "target": "98df31d5-f636-4fb2-8fd6-965a24880816"
+        },
+        {
+            "source": "ca8ee02e-9030-4305-9ada-124825da0670",
+            "target": "ae7c42af-cd98-46b4-9167-cd7ca3889901"
+        },
+        {
+            "source": "ca8ee02e-9030-4305-9ada-124825da0670",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "98df31d5-f636-4fb2-8fd6-965a24880816",
+            "target": "4e6ddad3-8c56-423b-87b9-b13b7d12f771"
+        },
+        {
+            "source": "98df31d5-f636-4fb2-8fd6-965a24880816",
+            "target": "b6894f7c-96ce-4efa-b5fe-98e13b325370"
+        },
+        {
+            "source": "98df31d5-f636-4fb2-8fd6-965a24880816",
+            "target": "af9cb20f-0cb4-42f1-b92b-c2e481cd031a"
+        },
+        {
+            "source": "98df31d5-f636-4fb2-8fd6-965a24880816",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+            "target": "ff27382d-02da-4d58-a581-31df0af0c061"
+        },
+        {
+            "source": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+            "target": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b"
+        },
+        {
+            "source": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "7e417a6c-bb4f-4065-ab4f-d7ab6a8b8bbc",
+            "target": "0a6e2246-cef7-48ef-b2d6-00c3c710a3b8"
+        },
+        {
+            "source": "5a7fc89e-b977-424a-b7a6-9e0613cace10",
+            "target": "8c52f1a6-dbff-43c0-9968-82834bde0c4a"
+        },
+        {
+            "source": "5a7fc89e-b977-424a-b7a6-9e0613cace10",
+            "target": "b881f263-2864-4c78-b394-5ac4708f0d0e"
+        },
+        {
+            "source": "7c551d61-3dd1-4e3f-904c-68d3f716ad82",
+            "target": "6283925c-dc66-487d-a6f6-c05ba8bf514d"
+        },
+        {
+            "source": "7c551d61-3dd1-4e3f-904c-68d3f716ad82",
+            "target": "3d5f79f8-fb34-4073-85f5-76b493cc2d74"
+        },
+        {
+            "source": "6283925c-dc66-487d-a6f6-c05ba8bf514d",
+            "target": "9f4ced30-f4ad-4522-8e11-7d195f909b33"
+        },
+        {
+            "source": "6283925c-dc66-487d-a6f6-c05ba8bf514d",
+            "target": "10c1ccc1-54cb-4bc5-8ab6-e683016bf40a"
+        },
+        {
+            "source": "6283925c-dc66-487d-a6f6-c05ba8bf514d",
+            "target": "eaa1e1f4-d087-47e1-a234-cbec2039e32f"
+        },
+        {
+            "source": "6283925c-dc66-487d-a6f6-c05ba8bf514d",
+            "target": "8b8b333a-963b-48b8-b756-d51d4938e181"
+        },
+        {
+            "source": "3d5f79f8-fb34-4073-85f5-76b493cc2d74",
+            "target": "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31"
+        },
+        {
+            "source": "02bdd91b-1a20-4476-8bc0-3b3929f49d7b",
+            "target": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535"
+        },
+        {
+            "source": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+            "target": "263a0372-fae2-45da-9bb0-473e0af3382c"
+        },
+        {
+            "source": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+            "target": "7c551d61-3dd1-4e3f-904c-68d3f716ad82"
+        },
+        {
+            "source": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+            "target": "ae7c42af-cd98-46b4-9167-cd7ca3889901"
+        },
+        {
+            "source": "d1701e1b-737a-4ade-a37a-9cc9d6ce2535",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "37f831eb-684e-40d8-883f-f692cf41cb52",
+            "target": "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+        },
+        {
+            "source": "37f831eb-684e-40d8-883f-f692cf41cb52",
+            "target": "1f16ad85-ba47-4e11-b62a-f9be332739a7"
+        },
+        {
+            "source": "6457c010-1805-4551-96eb-89e8439a44a7",
+            "target": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac"
+        },
+        {
+            "source": "6457c010-1805-4551-96eb-89e8439a44a7",
+            "target": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1"
+        },
+        {
+            "source": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1",
+            "target": "b6ee07b8-1681-461f-bab1-d45219af39a9"
+        },
+        {
+            "source": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1",
+            "target": "e118a6e6-c847-4a79-b24b-d4313f3e0cb8"
+        },
+        {
+            "source": "14053f53-06f3-469f-8844-bc14c6b76a0f",
+            "target": "1c84418a-ebd7-401b-afe2-6739f596ba44"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "787d59cc-8ec7-4403-a9fc-4eed26dc76b1"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "e4b75abf-6cb7-449e-ad19-e64118704019"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "55ee5d55-f13e-4dab-ab55-5d086bd903e5"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "e15a8212-1209-49d9-9161-b335abec597a"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "e3b77f5b-0c70-449e-a329-0895576ff3f7"
+        },
+        {
+            "source": "e366ca0f-06cd-47df-861b-417815e6c130",
+            "target": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7"
+        },
+        {
+            "source": "e15a8212-1209-49d9-9161-b335abec597a",
+            "target": "6457c010-1805-4551-96eb-89e8439a44a7"
+        },
+        {
+            "source": "e3b77f5b-0c70-449e-a329-0895576ff3f7",
+            "target": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1"
+        },
+        {
+            "source": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "target": "be3509a1-9d3f-445a-ac5c-fb4a03e34f50"
+        },
+        {
+            "source": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "target": "a0828c92-3521-4edd-944a-51401f7780d8"
+        },
+        {
+            "source": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "target": "ab7299f2-af37-4862-9506-9091f8689f6e"
+        },
+        {
+            "source": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "target": "d22a6ffe-9df5-40b1-8e10-955ae5ece6b1"
+        },
+        {
+            "source": "0ecb4ec2-e2a0-4e96-86e2-b7dde3ca6ad7",
+            "target": "52a53e4e-fa11-40a2-8616-62297932874c"
+        },
+        {
+            "source": "e3006f47-66ac-42c1-87ab-d784c2291c61",
+            "target": "aa979b68-0992-413c-9cf0-a8b3286b7914"
+        },
+        {
+            "source": "e3006f47-66ac-42c1-87ab-d784c2291c61",
+            "target": "9ec17cee-e626-42d6-aa90-c4422d92f992"
+        },
+        {
+            "source": "e3006f47-66ac-42c1-87ab-d784c2291c61",
+            "target": "4ba1ef85-eab7-453e-b3c5-bc71db348175"
+        },
+        {
+            "source": "e3006f47-66ac-42c1-87ab-d784c2291c61",
+            "target": "1c7ea72f-dd09-497e-b09d-9f85f9b145b9"
+        },
+        {
+            "source": "aa979b68-0992-413c-9cf0-a8b3286b7914",
+            "target": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+        },
+        {
+            "source": "9ec17cee-e626-42d6-aa90-c4422d92f992",
+            "target": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+        },
+        {
+            "source": "4ba1ef85-eab7-453e-b3c5-bc71db348175",
+            "target": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+        },
+        {
+            "source": "1c7ea72f-dd09-497e-b09d-9f85f9b145b9",
+            "target": "22c5d80f-dcf9-4780-b6f2-4313e33ff1ee"
+        },
+        {
+            "source": "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd",
+            "target": "55cd5a55-c724-43e5-a2e8-774307b5989f"
+        },
+        {
+            "source": "dc8a604d-5d4c-4711-b2f6-f2ebee9192fd",
+            "target": "37f831eb-684e-40d8-883f-f692cf41cb52"
+        },
+        {
+            "source": "aecff730-d02e-4faa-af8a-f81fceb3dde8",
+            "target": "86c7eca8-a149-4ceb-9e30-8781b447fa8b"
+        },
+        {
+            "source": "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31",
+            "target": "98df31d5-f636-4fb2-8fd6-965a24880816"
+        },
+        {
+            "source": "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31",
+            "target": "42e90404-58e0-4af2-bddd-f217bf9f86ee"
+        },
+        {
+            "source": "7a0f4d00-83dc-4b9f-ab5a-b0f29e003c31",
+            "target": "fbec7a72-d2bf-46a9-9e42-8e920a3bc55a"
+        },
+        {
+            "source": "42e90404-58e0-4af2-bddd-f217bf9f86ee",
+            "target": "1fe61376-ba88-4aba-9135-3f712141d5e9"
+        },
+        {
+            "source": "fbec7a72-d2bf-46a9-9e42-8e920a3bc55a",
+            "target": "1fe61376-ba88-4aba-9135-3f712141d5e9"
+        },
+        {
+            "source": "7449ba12-3ad4-4f12-b539-3f461844ecec",
+            "target": "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d"
+        },
+        {
+            "source": "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d",
+            "target": "b0571965-ed39-47e6-b72e-57b186c6f554"
+        },
+        {
+            "source": "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d",
+            "target": "21b2c851-2da4-40c0-a407-3bb67426dce3"
+        },
+        {
+            "source": "67ac4767-8b1b-4f4b-8dbe-5191b6d8b14d",
+            "target": "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9"
+        },
+        {
+            "source": "464343c9-22e9-42a2-b194-dc9ca2a59ec5",
+            "target": "8a4a37c2-e65e-4a33-85e2-329cd594ca43"
+        },
+        {
+            "source": "464343c9-22e9-42a2-b194-dc9ca2a59ec5",
+            "target": "ab7299f2-af37-4862-9506-9091f8689f6e"
+        },
+        {
+            "source": "f810809e-2f79-4f77-9da8-c9a375c71e56",
+            "target": "1a5f2d6d-3e6a-4c1e-9ddc-d8183a2e1ca1"
+        },
+        {
+            "source": "222eedcf-b460-44c2-8b11-76a31a6b70a4",
+            "target": "1a5f2d6d-3e6a-4c1e-9ddc-d8183a2e1ca1"
+        },
+        {
+            "source": "86c7eca8-a149-4ceb-9e30-8781b447fa8b",
+            "target": "6ad535d3-2201-4bb9-bffc-560aacd70509"
+        },
+        {
+            "source": "6ad535d3-2201-4bb9-bffc-560aacd70509",
+            "target": "e1dbd959-8285-4b9d-8256-f8a2e4c01723"
+        },
+        {
+            "source": "6ad535d3-2201-4bb9-bffc-560aacd70509",
+            "target": "1f16ad85-ba47-4e11-b62a-f9be332739a7"
+        },
+        {
+            "source": "eb84636b-2513-4f88-85e3-68746c558697",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "358aff22-92fa-4698-bbb0-7b776d38281e",
+            "target": "7449ba12-3ad4-4f12-b539-3f461844ecec"
+        },
+        {
+            "source": "4e04f049-68cd-4c06-84b8-45f066930e85",
+            "target": "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+        },
+        {
+            "source": "f68df86d-705e-4c37-8537-59e090fd4f2b",
+            "target": "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+        },
+        {
+            "source": "847f6a03-f359-43fc-ad4a-e55f6962a152",
+            "target": "2464989a-e198-4e4b-9258-fda8b7423fab"
+        },
+        {
+            "source": "b0571965-ed39-47e6-b72e-57b186c6f554",
+            "target": "6280d546-1483-40ef-9268-7238a0ff1b12"
+        },
+        {
+            "source": "21b2c851-2da4-40c0-a407-3bb67426dce3",
+            "target": "7237560a-c68f-4e8a-88a4-0247c99fd544"
+        },
+        {
+            "source": "21b2c851-2da4-40c0-a407-3bb67426dce3",
+            "target": "84e12fa3-1156-4dee-9211-9a072699af8e"
+        },
+        {
+            "source": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "target": "063572f2-6dca-4aed-8079-39c98551891f"
+        },
+        {
+            "source": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "target": "c7eff413-3ebc-4ff9-a8c9-a2a406295386"
+        },
+        {
+            "source": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "target": "47106e8e-6ea5-4195-9d42-372527451eca"
+        },
+        {
+            "source": "7237560a-c68f-4e8a-88a4-0247c99fd544",
+            "target": "d93dc400-d9fe-461e-8c42-28bdccd2d41a"
+        },
+        {
+            "source": "84e12fa3-1156-4dee-9211-9a072699af8e",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9",
+            "target": "063572f2-6dca-4aed-8079-39c98551891f"
+        },
+        {
+            "source": "e3e07dfa-b7a1-4dbf-9b0a-31ed5c35cee9",
+            "target": "42114354-be3f-4be6-8f6c-7088e464fe97"
+        },
+        {
+            "source": "e31f8eed-8586-4c41-bb5b-a58c242e3f25",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "78cccd2d-a164-4fa0-b343-48af6bee2a08",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "f62ea207-c001-4c44-8d89-e35e220d3a94",
+            "target": "464343c9-22e9-42a2-b194-dc9ca2a59ec5"
+        },
+        {
+            "source": "f62ea207-c001-4c44-8d89-e35e220d3a94",
+            "target": "d8e479ea-6b9b-403f-8f96-08200b2fc9b9"
+        },
+        {
+            "source": "f62ea207-c001-4c44-8d89-e35e220d3a94",
+            "target": "62629a17-3ac6-4485-b348-235b7ada22f4"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "dae525a0-e24b-4c5f-b580-48a70f989686"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "a567c579-5286-4b7a-a88a-75febf254cf1"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "063572f2-6dca-4aed-8079-39c98551891f"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "42114354-be3f-4be6-8f6c-7088e464fe97"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "a0828c92-3521-4edd-944a-51401f7780d8"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "6698adbb-4c92-40b0-b495-2183476f8ad2"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "52a53e4e-fa11-40a2-8616-62297932874c"
+        },
+        {
+            "source": "62629a17-3ac6-4485-b348-235b7ada22f4",
+            "target": "7ccfa33a-5fde-4fb7-8e4c-423b6bb71b6f"
+        },
+        {
+            "source": "df9fb069-42e6-4f66-a889-6b4b616dfce1",
+            "target": "68b46f75-baed-4b5e-a9c0-09face411e2c"
+        },
+        {
+            "source": "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+            "target": "787d59cc-8ec7-4403-a9fc-4eed26dc76b1"
+        },
+        {
+            "source": "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+            "target": "4e6ddad3-8c56-423b-87b9-b13b7d12f771"
+        },
+        {
+            "source": "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+            "target": "e4b75abf-6cb7-449e-ad19-e64118704019"
+        },
+        {
+            "source": "9f4ced30-f4ad-4522-8e11-7d195f909b33",
+            "target": "a4f25a77-fccd-43db-a7f9-a7d801fa52ac"
+        },
+        {
+            "source": "10c1ccc1-54cb-4bc5-8ab6-e683016bf40a",
+            "target": "6698adbb-4c92-40b0-b495-2183476f8ad2"
+        },
+        {
+            "source": "eaa1e1f4-d087-47e1-a234-cbec2039e32f",
+            "target": "4e6ddad3-8c56-423b-87b9-b13b7d12f771"
+        },
+        {
+            "source": "8b8b333a-963b-48b8-b756-d51d4938e181",
+            "target": "4e6ddad3-8c56-423b-87b9-b13b7d12f771"
+        },
+        {
+            "source": "f1160dd0-b00c-444f-afab-80ca3e0919a7",
+            "target": "5a7fc89e-b977-424a-b7a6-9e0613cace10"
+        },
+        {
+            "source": "b484cac0-adc4-4352-a815-05a621de0436",
+            "target": "df718bb5-fc04-436f-9699-e23dd24f3c2e"
+        },
+        {
+            "source": "b484cac0-adc4-4352-a815-05a621de0436",
+            "target": "fb445ba5-5ab3-4868-b59f-c282357e19a1"
+        },
+        {
+            "source": "b484cac0-adc4-4352-a815-05a621de0436",
+            "target": "14053f53-06f3-469f-8844-bc14c6b76a0f"
+        },
+        {
+            "source": "53b0e9e6-dcc8-4a94-a6da-cdc3d4bead73",
+            "target": "02bdd91b-1a20-4476-8bc0-3b3929f49d7b"
+        },
+        {
+            "source": "1fe61376-ba88-4aba-9135-3f712141d5e9",
+            "target": "9adcef92-eaf1-4d77-b198-efb2f406bd65"
+        },
+        {
+            "source": "1fe61376-ba88-4aba-9135-3f712141d5e9",
+            "target": "15a69e06-fd06-4c8c-a7a7-385f2b6ed486"
+        },
+        {
+            "source": "1fe61376-ba88-4aba-9135-3f712141d5e9",
+            "target": "98df31d5-f636-4fb2-8fd6-965a24880816"
+        },
+        {
+            "source": "22938cab-0233-42af-9964-db933db53066",
+            "target": "1a5f2d6d-3e6a-4c1e-9ddc-d8183a2e1ca1"
+        },
+        {
+            "source": "4e39b4cc-8d03-413b-a82d-375204cf0b98",
+            "target": "0a6e2246-cef7-48ef-b2d6-00c3c710a3b8"
+        },
+        {
+            "source": "4e39b4cc-8d03-413b-a82d-375204cf0b98",
+            "target": "47106e8e-6ea5-4195-9d42-372527451eca"
+        },
+        {
+            "source": "4e39b4cc-8d03-413b-a82d-375204cf0b98",
+            "target": "01ea7fd3-b501-402e-8918-eb4b6377de39"
+        },
+        {
+            "source": "c57167ba-8e81-474e-a0b7-21b6e18d6398",
+            "target": "4a0a6f8a-72a9-4a94-b3a6-60f4007ae93b"
+        }
+    ],
+    "name": [
+        "спиронолактон",
+        "апиксабан",
+        "бисопролол",
+        "гепарин натрия",
+        "левосимендан",
+        "ивабрадин",
+        "изосорбида динитрат",
+        "каптоприл",
+        "эсциталопрам"
+    ],
+    "maxLevel": 20
+}

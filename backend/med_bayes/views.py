@@ -319,7 +319,7 @@ class BayeseView(APIView):
             result["side_effects"][0]["effects"].append({
                 # self.EFFECT_NAME: id2effects[se],
                 self.EFFECT_NAME: se,
-                self.RANK: data["side_effects"][se]["probability"],
+                self.RANK: round(data["side_effects"][se]["probability"], 2),
             })
 
         result["side_effects"][0]["effects"].sort(
@@ -374,7 +374,8 @@ class BayeseView(APIView):
             for se in data['side_effects']:
                 effect = {
                     self.EFFECT_NAME: se,
-                    self.RANK: data["side_effects"][se]["probability"],
+                    self.RANK: round(data["side_effects"][se]["probability"],
+                                     2),
                 }
                 drug_effects["effects"].append(effect)
 
