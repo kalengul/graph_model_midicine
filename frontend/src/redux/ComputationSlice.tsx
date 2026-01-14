@@ -38,10 +38,16 @@ export interface IResultFortran{
   drugs: string[]
 }
 
+export interface ISEFromDrug{
+  d_name: string,
+  effects: ISE[]
+}
+
 export interface IResultBayes{
   сompatibility_bayes: string ,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputationFortran[],
+  SEFromDrug: ISEFromDrug[],
   combinations: IDrugCombination[] | undefined
   drugs: string[]
 }
@@ -58,6 +64,11 @@ export interface ICompareData{
   rankBayes: number,
 }
 
+export interface ICompareDataFromDrug{
+  d_name: string,
+  effects: ICompareData[]
+}
+
 interface IComputationState {
   computationList: IComputationElem[]
   contList: IContElem[]
@@ -68,9 +79,12 @@ interface IComputationState {
   isresultFortran: boolean
   isresultBayes: boolean
   compareSide_effects: ICompareData[]
+  compareSide_effects_fromDrug: ICompareDataFromDrug[],
   isLoadBayes: boolean
   isLoadFortran: boolean
   compareStart: boolean
+
+  fetchBayesStatus: boolean | null
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -88,6 +102,7 @@ const initStateBayes: IResultBayes = {
     сompatibility_bayes: "unknown",
     rank_iteractions: undefined,
     side_effects: [],
+    SEFromDrug: [],
     combinations: undefined,
     drugs: [],
 }
@@ -188,12 +203,13 @@ export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBaye
 
       const response = await axios.post('/api/polifarmakoterapiya-bayes/', sendData, {
         headers:{'Content-Type': 'application/json'},
-      });
+      })
       if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
       return { status: "err", data: initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}
-  } catch (error) {
+  } catch (err) {
+      const error: any = err
       console.error(`Ошибка при расчете совместимости Байеса:\n`, error);
-      return { status: "err", data:initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}; // Возвращаем пустой массив при ошибке
+      return { status: error.response.data.data.result.status, data:initStateBayes, message: error.response.data}; // Возвращаем пустой массив при ошибке
   }
 });
 
@@ -209,9 +225,11 @@ const ComputationSlice = createSlice({
       resultBayes: initStateBayes,
       isresultBayes: false,
       compareSide_effects:[],
+      compareSide_effects_fromDrug:[],
       isLoadBayes: false,
       isLoadFortran: false,
-      compareStart: false
+      compareStart: false,
+      fetchBayesStatus: null
     } as IComputationState,
     reducers: {
       addValue(state, action){
@@ -252,6 +270,8 @@ const ComputationSlice = createSlice({
         state.isresultFortran = false
         state.isLoadBayes = false
         state.isLoadFortran = false
+
+        state.fetchBayesStatus = null
       },
 
       initResultMedscape(state){
@@ -275,11 +295,13 @@ const ComputationSlice = createSlice({
         state.isresultBayes = false
         state.resultBayes = initStateBayes
         state.isLoadBayes = false
+        state.fetchBayesStatus = null
       },
 
       initLoad(state){
         state.isLoadBayes = false
         state.isLoadFortran = false
+        state.fetchBayesStatus = null
       },
 
       createCompareData(state){
@@ -291,13 +313,43 @@ const ComputationSlice = createSlice({
             rankBayes: item.rank,
           }))
 
+          //заполняем побочки для конкретных ЛС
+          console.log(state.resultBayes.SEFromDrug)
+          state.compareSide_effects_fromDrug = state.resultBayes.SEFromDrug.map((item: ISEFromDrug)=>({
+            d_name: item.d_name,
+            effects: item.effects.map((effect: ISE)=>({
+              se_name: effect.se_name,
+              rankFortran:  "-",
+              rankBayes: effect.rank
+            }))
+          }))
+
           //Добавляем ранги из фортрана
           state.resultFortran.side_effects.forEach(group=>{
             group.effects.forEach(effect=>{
-              const index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
+              let index = state.compareSide_effects.findIndex(item => item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase());
+              // if(index == -1){
+              //   state.compareSide_effects_fromDrug.map(se_fromDrug =>{
+              //     index = se_fromDrug.effects.findIndex(item=>item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase())
+              //     if(index !== -1) {
+              //       se_fromDrug.effects[index].rankFortran = effect.rank
+              //     }
+              //   })
+              // }else state.compareSide_effects[index].rankFortran = effect.rank
+
+              
+              
               if (index !== -1){
                 state.compareSide_effects[index].rankFortran = effect.rank
-              }//else (console.log(effect.se_name.trim().toLowerCase()))
+              }
+             //}//else (console.log(effect.se_name.trim().toLowerCase()))
+
+              state.compareSide_effects_fromDrug.map(se_fromDrug =>{
+                  index = se_fromDrug.effects.findIndex(item=>item.se_name.trim().toLowerCase() === effect.se_name.trim().toLowerCase())
+                  if(index !== -1) {
+                    se_fromDrug.effects[index].rankFortran = effect.rank
+                }
+              })
             })
           })
           
@@ -330,15 +382,23 @@ const ComputationSlice = createSlice({
         .addCase(iteractionBayes.fulfilled, (state, action: PayloadAction<TrunkResult<IResultBayes>>)=>{
           if( action.payload.status === 200) 
           {
+            //console.log(action.payload.data)
             state.isresultBayes = true
             state.resultBayes = action.payload.data
             state.isLoadBayes = true
+            state.fetchBayesStatus = true
           }
           else if ( action.payload.status === "err") {
             state.isresultBayes = false
             state.isLoadBayes = false
+            state.fetchBayesStatus = false
           }
         })
+        .addCase(iteractionBayes.rejected, (state)=>{
+          console.log("Нет выбранного ЛС")
+          state.fetchBayesStatus = false
+        })
+        
     },
 })
 

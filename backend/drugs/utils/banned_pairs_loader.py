@@ -56,7 +56,7 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
         try:
             df = pd.read_csv(self.import_path,
                              sep=';')
-            
+
             df = df.rename(
                 columns={df.columns[self.DRUG1_NUMBER]: self.DRUG1,
                          df.columns[self.DRUG2_NUMBER]: self.DRUG2,

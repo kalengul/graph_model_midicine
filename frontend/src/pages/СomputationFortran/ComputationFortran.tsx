@@ -68,12 +68,12 @@ export const ComputationFortran = () =>{
                             />
                         }
 
-                        <h5 className="mt-3">Комбинации лекарственных средств: </h5>
+                        <h5 className="mt-3">Дополнительные лекарственные средства: </h5>
                     
                         {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
                             
                             <CollapsList
-                                title = "Запрещенные комбинации лекарственных средств"
+                                title = "Лекарственные средства, запрещенные с данной комбинацией"
                                 className="ComputationResults incompatible"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs}
@@ -82,7 +82,7 @@ export const ComputationFortran = () =>{
 
                         { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
                             <CollapsList
-                                title = "Запрещено добавлять к комбинации:"
+                                title = "Лекарственные средства, которые добавлять с осторожностью:"
                                 className="ComputationResults caution mt-2"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs}
@@ -91,7 +91,7 @@ export const ComputationFortran = () =>{
 
                         { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
                             <CollapsList 
-                                title = "Добавлять к комбинации с осторожностью:"
+                                title = "Лекарственные средства, которые можно добавлять к комбинации:"
                                 className="ComputationResults compatible mt-2"
                                 type="drugs-combin"
                                 content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs}

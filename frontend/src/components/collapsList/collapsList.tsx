@@ -1,12 +1,57 @@
 import { useState } from 'react';
-import { ISE, ICompareData } from "../../redux/ComputationSlice"
+import { ISE, ICompareData, ISEFromDrug } from "../../redux/ComputationSlice"
 import "./collapsList.scss"
 
 interface ICollapsListProps{
     title?: string;
     className?: string
-    type: "riscs"|"compare-riscs"|"drugs-combin"
-    content: ISE[] | string[] | ICompareData[] | undefined
+    type: "riscs"|"compare-riscs"|"drugs-combin"|"riscs-from-drug"
+    content: ISE[] | string[] | ICompareData[] | ISEFromDrug[]| undefined
+}
+
+const RenderItem = (type: ICollapsListProps['type'], item: any, index: number) =>{
+
+    switch (type) {
+        case "riscs": {
+            const riscItem = item as ISE;
+            return(
+                <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
+                    <div>
+                        <span className='me-3'>{index+1}.</span> 
+                        <span>{riscItem.se_name}</span>
+                    </div>
+                    <span>{riscItem.rank}</span>
+                </div>
+            )
+        }
+        case "compare-riscs":{
+            const compareItem = item as ICompareData;
+
+            return (
+                <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
+                    <div>
+                        <span className='me-3'>{index + 1}.</span> 
+                        <span>{compareItem.se_name}</span>
+                    </div>
+                    <div className='w-25 flex jc-sb'>
+                        <span>{compareItem.rankBayes}</span>
+                        <span className='ms-3'>{compareItem.rankFortran}</span>
+                    </div>
+                </div>
+            );
+        }
+        case "drugs-combin":
+            return (
+                <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
+                    <div>
+                        <span className='me-3'>{index + 1}.</span> 
+                        <span>{item}</span>
+                    </div>
+                </div>
+            );
+        default:
+            return null;
+    }
 }
 
 export const CollapsList = (props: ICollapsListProps) =>{
@@ -24,43 +69,11 @@ export const CollapsList = (props: ICollapsListProps) =>{
                 <div className='ps-3'>
                     <h6>{props.title}</h6>
                 </div>
-                
-                {props.type === "riscs" ? 
-                    (visibleItems as ISE[]).map((e, index) => (
-                        <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                            <div>
-                                <span className='me-3'>{index+1}.</span> 
-                                <span>{e.se_name}</span>
-                            </div>
-                            <span>{e.rank}</span>
-                        </div>
-                    ))
-                : (props.type === "compare-riscs" ? 
-                    (visibleItems as ICompareData[]).map((e, index)=>
-                        <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                            <div>
-                                <span className='me-3'>{index+1}.</span> 
-                                <span>{e.se_name}</span>
-                            </div>
-                            <div className='w-25 flex jc-sb'>
-                                <span>{e.rankBayes}</span>
-                                <span  className='ms-3'>{e.rankFortran}</span>
-                            </div>
-                        </div>
-                    )
-                :
-                (props.type === "drugs-combin" && 
-                    (visibleItems as string[]).map((d, index)=>
-                        <div className='flex jc-sb w-100 ps-3 pe-3' key={index}>
-                            <div>
-                                <span className='me-3'>{index+1}.</span> 
-                                <span>{d}</span>
-                            </div>
-                        </div>
-                    )
-                ))
-                }
 
+                {visibleItems.map((item, index) => 
+                    RenderItem(props.type, item, index)
+                )}
+                
                 {shouldShowToggle && (
                     <button 
                         onClick={() => setIsExpanded(!isExpanded)}

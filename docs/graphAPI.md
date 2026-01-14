@@ -30,6 +30,7 @@
 |id          |String        |Да                |Id узла             |
 |level       |Integer       |Да                |Уровень узла в графе|
 |parents     |Array(String) |Да                |Массив родителей    |
+|weight      |Integer       |Да                |Вес                 |
 
 
 Допустимые значения `label`<br/>

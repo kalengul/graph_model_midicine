@@ -18,7 +18,10 @@ class Contraindication(models.Model):
                                    verbose_name='Соседняя вершина')
 
     def __str__(self):
+        """Вывод информации о противопоказании."""
         return f'{self.name} - {self.weight}'
 
     class Meta:
+        """Настройка противопоказаний."""
+
         ordering = ['name']

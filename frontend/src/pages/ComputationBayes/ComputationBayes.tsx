@@ -13,6 +13,8 @@ import { addValue } from "../../redux/GraphSlice";
 
 import {isRegex} from "../../assets/regex"
 
+// import {SelectedType} from "./SelectedType"
+
 export const ComputationBayes = () =>{
     // const navigate = useNavigate();
     const [compareView, setCompareView] = useState(false)
@@ -28,8 +30,13 @@ export const ComputationBayes = () =>{
     const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
     const resultBayes = useAppSelector(state=>state.computation.resultBayes)
 
+    // console.log(resultBayes)
+
     const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
     const compareData = useAppSelector(state=>state.computation.compareSide_effects)
+    const compareDtaFromDrug = useAppSelector(state=>state.computation.compareSide_effects_fromDrug)
+
+    console.log(compareDtaFromDrug)
 
     const data = useAppSelector(state=>state.computation.computationList)
 
@@ -57,8 +64,11 @@ export const ComputationBayes = () =>{
     const isLoadFortran = useAppSelector(state=>state.computation.isLoadFortran)
     const isLoadBayes = useAppSelector(state=>state.computation.isLoadBayes)
     const compareStart = useAppSelector(state=>state.computation.compareStart)
-    console.log(isLoadBayes)
-    console.log(isLoadFortran)
+    const fetchBayesStatus = useAppSelector(state=>state.computation.fetchBayesStatus)
+    // console.log(isLoadBayes)
+    // console.log(isLoadFortran)
+
+
 
     return(
     <div className="flex">
@@ -70,7 +80,8 @@ export const ComputationBayes = () =>{
             <hr/>
             { compareStart &&
             (
-                (!isLoadFortran || !isLoadBayes)?(<LoadBar className="mt-4"/>)
+                ((!isLoadFortran || !isLoadBayes) && (fetchBayesStatus === null))?(<LoadBar className="mt-4"/>)
+                : ((!isLoadFortran || !isLoadBayes) && !fetchBayesStatus ? (<p>Для лекарственного средства нет графа</p>)
                 :
                 (isLoadFortran && isLoadBayes && isresultBayes && isresultFortran && <div>
                     <h4>Результаты оценки совместимости</h4>
@@ -79,6 +90,19 @@ export const ComputationBayes = () =>{
                     <ComputationResults compatibility={resultBayes.сompatibility_bayes} />
 
                     {!isRegex(resultBayes.сompatibility_bayes, "banned")&&<div className="mt-3">
+
+                        
+
+                        <div className="mt-3 mb-2 flex jc-sb ai-center">
+                            <h6>Эффекты в результате взаимодействия</h6>
+
+                            {/* <select name="sortSelectSE" >
+                                {SelectedType.map(type => 
+                                    <option key={type.id} value={type.value}>{type.title}</option>)
+                                }
+                            </select> */}
+                        </div>
+
                         {!compareView && resultBayes.side_effects &&
                             <CollapsList
                                 title = ""
@@ -88,21 +112,60 @@ export const ComputationBayes = () =>{
                             />
                         }
                         {
-                            compareView && (compareData.length>0) && 
-                            <CollapsList
-                                title = ""
-                                className="ComputationResults default"
-                                type="compare-riscs"
-                                content= {compareData}
-                            />
+                            compareView && (compareData.length>0) && <>
+
+                                <CollapsList
+                                    title = ""
+                                    className="ComputationResults default"
+                                    type="compare-riscs"
+                                    content= {compareData}
+                                />
+                               
+                            </>
                         }
+
+                        <div className="mt-3 mb-2 flex jc-sb ai-center">
+                            <h6>Эффекты в результате действия лекарственного средства</h6>
+
+                            {/* <select name="sortSelectFD" >
+                                {SelectedType.map(type => 
+                                    <option key={type.id} value={type.value}>{type.title}</option>)
+                                }
+                            </select> */}
+                        </div>
+
+                        { !compareView && resultBayes.SEFromDrug && resultBayes.SEFromDrug.map((serd, index) =>
+                            <CollapsList
+                                title = {serd.d_name}
+                                className="ComputationResults default mb-3"
+                                type="riscs"
+                                content= {serd.effects}
+
+                                key={index}
+                            />
+
+                        )}
+                        {
+                            compareView && (compareDtaFromDrug.length>0) && compareDtaFromDrug.map((serd, index) =>
+                                <CollapsList
+                                    title = {serd.d_name}
+                                    className="ComputationResults default mb-3"
+                                    type="compare-riscs"
+                                    content= {serd.effects}
+
+                                    key={index}
+                                />
+                            )
+                        }
+
+
                         <div className="flex jc-sb mt-3">
                             <button className="btn send-btn" onClick={CompareWhithFortranHandler}>{compareTitle}</button>
                             <button className="btn send-btn" onClick={ ShowGraphHandker }>Отобразить граф</button>
                         </div>
                     </div>}
                 </div>)      
-            )
+            ))
             }
         </main>
     </div>

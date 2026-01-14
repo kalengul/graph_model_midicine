@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'synonyms',
     'graphs.apps.GraphsConfig',
     'contraindications.apps.ContraindicationsConfig',
+    'med_bayes.apps.MedBayesConfig',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -192,3 +193,4 @@ REST_FRAMEWORK = {
 TXT_DB_PATH = os.path.join(BASE_DIR, 'txt_files_db')
 GRAPH_PATH = os.path.join(BASE_DIR, 'graphs_for_bayes')
 BACKUP_PATH = os.path.join(BASE_DIR, 'backup')
+LOG_PATH = os.path.join(BASE_DIR, 'logs')

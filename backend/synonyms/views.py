@@ -36,14 +36,19 @@ logger = logging.getLogger('synonyms')
 
 
 class SynonymGroupAPI(APIView):
+    """Вью для групп синонимов."""
 
     @bearer_token_required
     def get(self, request):
+        """Получение групп синонимов."""
         try:
-            pattern_groups = SynonymGroup.objects.filter(name__regex=r'^Кластер_\d+$')
-            other_groups = SynonymGroup.objects.exclude(name__regex=r'^Кластер_\d+$')
-            ordered_pattern_groups = pattern_groups.annotate(number=Cast(Substr('name', 9),
-                                                                         IntegerField())).order_by('number')
+            pattern_groups = SynonymGroup.objects.filter(
+                name__regex=r'^Кластер_\d+$')
+            other_groups = SynonymGroup.objects.exclude(
+                name__regex=r'^Кластер_\d+$')
+            ordered_pattern_groups = pattern_groups.annotate(
+                number=Cast(Substr('name', 9),
+                            IntegerField())).order_by('number')
             queryset = list(ordered_pattern_groups) + list(other_groups)
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -58,12 +63,14 @@ class SynonymGroupAPI(APIView):
 
     @bearer_token_required
     def post(self, request):
+        """Добавление группы синонимов."""
         logger.debug(f'request.data = {request.data}')
         serializer = SynonymGroupCreateSerializer(data=request.data)
 
         if not serializer.is_valid():
             logger.debug(f'request.errors = {serializer.errors}')
-            logger.debug(f'request.error_messages = {serializer.error_messages}')
+            logger.debug(
+                f'request.error_messages = {serializer.error_messages}')
             traceback.print_exc()
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
@@ -97,9 +104,11 @@ class SynonymGroupAPI(APIView):
 
 
 class SynonymListAPI(APIView):
+    """Вью для синоннимов."""
 
     @bearer_token_required
     def get(self, request):
+        """Получение списка синонимов и/или отдельного синонима."""
         sg_id = request.query_params.get('sg_id')
 
         if not sg_id:
@@ -124,6 +133,7 @@ class SynonymListAPI(APIView):
 
     @bearer_token_required
     def post(self, request):
+        """Добавление синонима."""
         serializer = SynonymCreateSerializer(data=request.data)
 
         if not serializer.is_valid():
@@ -168,6 +178,7 @@ class SynonymListAPI(APIView):
 
     @bearer_token_required
     def put(self, request):
+        """Изменение синонима."""
         serializer = SynonymUpdateSerializer(data=request.data)
 
         if not serializer.is_valid():
@@ -348,9 +359,9 @@ class SynonymStatusView(APIView):
             instance = SynonymStatus.objects.get(id=st_id)
         except SynonymStatus.DoesNotExist:
             return CustomResponse(
-            status=status.HTTP_404_NOT_FOUND,
-            message='Статус синонима не найден',
-            http_status=status.HTTP_404_NOT_FOUND
+                status=status.HTTP_404_NOT_FOUND,
+                message='Статус синонима не найден',
+                http_status=status.HTTP_404_NOT_FOUND
             )
 
         serializer = ChangeSynonymStatusSerializer(instance, data=request.data)
