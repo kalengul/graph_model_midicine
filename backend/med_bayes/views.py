@@ -41,6 +41,7 @@ class BayeseView(APIView):
     GENDER = 'gender'
     SIDE_EFFECT = 'side_effects'
     EFFECT_NAME = "se_name"
+    RANK = "rank"
 
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
@@ -245,7 +246,8 @@ class BayeseView(APIView):
 
                         }],
                     "combinations": "unknown",
-                    "drugs": drugs
+                    "drugs": drugs,
+                    'SEFromDrug': []
             }
 
         # result = {
@@ -317,11 +319,12 @@ class BayeseView(APIView):
             result["side_effects"][0]["effects"].append({
                 # self.EFFECT_NAME: id2effects[se],
                 self.EFFECT_NAME: se,
-                "rank": data["side_effects"][se]["probability"],
+                self.RANK: data["side_effects"][se]["probability"],
             })
 
-        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
-                                                  reverse=True)
+        result["side_effects"][0]["effects"].sort(
+            key=lambda x: x[self.RANK],
+            reverse=True)
         # result["side_effects"][0]["effects"].sort(
         #     key=lambda x: x[self.EFFECT_NAME])
 
@@ -340,6 +343,46 @@ class BayeseView(APIView):
                 for effect in side_effects['effects']:
                     f1.write(f"{effect['se_name']}\n")
                     f2.write(f"{effect['rank']}\n")
+
+        for drug in drugs:
+            prob_data, drug_states_input_data, drugs_for_output, \
+                combination_description = load_combined_data(
+                    graph_data=graph,
+                    prob_file=graph_storage.probability_path,
+                    drug_states_input=self._get_bin_ids([drug])
+                )
+
+            # Построение сети с новыми параметрами
+            network = build_network(graph, prob_data)
+
+            # Перерасчет вероятностей (логирование не меняется)
+            final_probs = calculate_probabilities(network,
+                                                  'calculation_trace.txt')
+
+            data = get_result(
+                final_probs,
+                graph,
+                drug_states_input_data,
+                drugs_for_output,
+                combination_description)
+
+            drug_effects = {
+                "d_name": drug,
+                "effects": [],
+            }
+
+            for se in data['side_effects']:
+                effect = {
+                    self.EFFECT_NAME: se,
+                    self.RANK: data["side_effects"][se]["probability"],
+                }
+                drug_effects["effects"].append(effect)
+
+            drug_effects["effects"] = sorted(drug_effects["effects"],
+                                             key=lambda x: x[self.RANK],
+                                             reverse=True)
+
+            result['SEFromDrug'].append(drug_effects)
 
         return CustomResponse(
             http_status=status.HTTP_200_OK,
