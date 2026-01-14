@@ -21,7 +21,7 @@ class Command(BaseCommand):
             # call_command('clean_medscape')
             call_command('clear_synonyms')
             call_command('clear_banned_pairs')
-            call_command('сlean_contraindications')
+            call_command('clean_contraindications')
             # call_command('clean_graph_db')
             call_command('migrate')
             call_command('import_data')
