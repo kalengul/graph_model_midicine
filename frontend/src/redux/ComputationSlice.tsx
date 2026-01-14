@@ -83,6 +83,8 @@ interface IComputationState {
   isLoadBayes: boolean
   isLoadFortran: boolean
   compareStart: boolean
+
+  fetchBayesStatus: boolean | null
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -181,7 +183,7 @@ export const iteractionFortran = createAsyncThunk('computationSlice/iteractionFo
   }
 });
 
-export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBayes', async (data: IComputationBayes): Promise<TrunkResult<IResultBayes>> => {
+export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBayes', async (data: IComputationBayes, { rejectWithValue }): Promise<TrunkResult<IResultBayes>> => {
   try {
     
       const sendData: sendFormBayes = {drugs:[], humanData: undefined}
@@ -201,12 +203,13 @@ export const iteractionBayes = createAsyncThunk('computationSlice/iteractionBaye
 
       const response = await axios.post('/api/polifarmakoterapiya-bayes/', sendData, {
         headers:{'Content-Type': 'application/json'},
-      });
+      })
       if(response.data.result.status===200) return {status: 200, data: response.data.data, message: ""};
       return { status: "err", data: initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}
-  } catch (error) {
+  } catch (err) {
+      const error: any = err
       console.error(`Ошибка при расчете совместимости Байеса:\n`, error);
-      return { status: "err", data:initStateBayes, message:`Ошибка при добавлении совместимости Байеса`}; // Возвращаем пустой массив при ошибке
+      return { status: error.response.data.data.result.status, data:initStateBayes, message: error.response.data}; // Возвращаем пустой массив при ошибке
   }
 });
 
@@ -225,7 +228,8 @@ const ComputationSlice = createSlice({
       compareSide_effects_fromDrug:[],
       isLoadBayes: false,
       isLoadFortran: false,
-      compareStart: false
+      compareStart: false,
+      fetchBayesStatus: null
     } as IComputationState,
     reducers: {
       addValue(state, action){
@@ -266,6 +270,8 @@ const ComputationSlice = createSlice({
         state.isresultFortran = false
         state.isLoadBayes = false
         state.isLoadFortran = false
+
+        state.fetchBayesStatus = null
       },
 
       initResultMedscape(state){
@@ -289,11 +295,13 @@ const ComputationSlice = createSlice({
         state.isresultBayes = false
         state.resultBayes = initStateBayes
         state.isLoadBayes = false
+        state.fetchBayesStatus = null
       },
 
       initLoad(state){
         state.isLoadBayes = false
         state.isLoadFortran = false
+        state.fetchBayesStatus = null
       },
 
       createCompareData(state){
@@ -306,6 +314,7 @@ const ComputationSlice = createSlice({
           }))
 
           //заполняем побочки для конкретных ЛС
+          console.log(state.resultBayes.SEFromDrug)
           state.compareSide_effects_fromDrug = state.resultBayes.SEFromDrug.map((item: ISEFromDrug)=>({
             d_name: item.d_name,
             effects: item.effects.map((effect: ISE)=>({
@@ -377,12 +386,19 @@ const ComputationSlice = createSlice({
             state.isresultBayes = true
             state.resultBayes = action.payload.data
             state.isLoadBayes = true
+            state.fetchBayesStatus = true
           }
           else if ( action.payload.status === "err") {
             state.isresultBayes = false
             state.isLoadBayes = false
+            state.fetchBayesStatus = false
           }
         })
+        .addCase(iteractionBayes.rejected, (state)=>{
+          console.log("Нет выбранного ЛС")
+          state.fetchBayesStatus = false
+        })
+        
     },
 })
 
