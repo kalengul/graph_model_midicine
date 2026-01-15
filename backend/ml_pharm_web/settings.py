@@ -20,7 +20,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-default-key')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-
+# ALLOWED_HOSTS = ['*']
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 

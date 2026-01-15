@@ -11,12 +11,10 @@ from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import BayesSerializer
 from graphs.utils.binarizer import Binarizer
 from graphs.utils.parse_ids import parse_ids
-# from med_bayes.utils.bayes_calculation_ import (load_combined_data, get_result,
-#                                                 build_network,
-#                                                 calculate_probabilities)
-from med_bayes.utils.bayes_calculation import (load_combined_data, get_result,
-                                               build_network,
-                                               calculate_probabilities)
+from med_bayes.utils.bayes_calculation_2 import (load_combined_data,
+                                                 get_result,
+                                                 build_network,
+                                                 calculate_probabilities)
 from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
