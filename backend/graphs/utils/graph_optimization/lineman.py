@@ -6,7 +6,7 @@ import networkx as nx
 
 
 PATH_JSON_GRAPH = ('C:\\for the job\\graph_model_midicine\\backend'
-                   '\\graphs_for_bayes\\graphs_10_3_optimized_weights.json')
+                   '\\data/graphs_for_bayes\\graphs_10_3_optimized_weights.json')
 
 
 class Lineman:

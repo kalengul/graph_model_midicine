@@ -190,7 +190,7 @@ REST_FRAMEWORK = {
     # )
 }
 
-TXT_DB_PATH = os.path.join(BASE_DIR, 'txt_files_db')
-GRAPH_PATH = os.path.join(BASE_DIR, 'graphs_for_bayes')
+TXT_DB_PATH = os.path.join(BASE_DIR, 'data/txt_files_db')
+GRAPH_PATH = os.path.join(BASE_DIR, 'data/graphs_for_bayes')
 BACKUP_PATH = os.path.join(BASE_DIR, 'backup')
 LOG_PATH = os.path.join(BASE_DIR, 'logs')
