@@ -99,8 +99,7 @@ class CalculationAPI(APIView):
                     "drugs": list(
                             Drug.objects.filter(id__in=drugs
                                                 ).values_list(
-                                                    'drug_name', flat=True)
-                        )
+                                                    'drug_name', flat=True)),
                     }
                 )
 

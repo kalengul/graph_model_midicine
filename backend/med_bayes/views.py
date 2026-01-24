@@ -5,6 +5,7 @@ from datetime import datetime
 
 from rest_framework.views import APIView
 from rest_framework import status
+from rest_framework.response import Response
 from django.conf import settings
 
 from drugs.utils.custom_response import CustomResponse
@@ -17,6 +18,7 @@ from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
+from med_bayes.utils.color_management import colors, color_path
 
 from accounts.auth import bearer_token_required
 
@@ -26,10 +28,14 @@ INCORRECT_DATA = 'Некорректные данные'
 NAME = 'name'
 NODES = 'nodes'
 ID = 'id'
+
 GRAPH_FOR_BAYES_PATH = Path(settings.GRAPH_PATH) / 'node_with_roots.json'
-GREEN = 0.15
-YELLOW = 0.25
-RED = 0.26
+GREEN_COLOR = 'green'
+YELLOW_COLOR = 'yellow'
+RED_COLOR = 'red'
+GREEN = colors.get(GREEN_COLOR, 0.15)
+YELLOW = colors.get(YELLOW_COLOR, 0.25)
+RED = colors.get(RED_COLOR, 0.26)
 
 
 class BayeseView(APIView):
@@ -353,3 +359,23 @@ class BayeseView(APIView):
             message=message,
             data=result
         )
+
+
+class BayesColor(APIView):
+    """Управление цветами для Байеса."""
+
+    def post(self, request):
+        """Указание значений для цветов."""
+        with open(color_path, 'r', encoding='utf-8') as file:
+            colors = json.load(file)
+
+        colors[GREEN_COLOR] = request.data['green']
+        colors[YELLOW_COLOR] = request.data['yellow']
+        colors[RED_COLOR] = request.data['red']
+
+        with open(color_path, 'w', encoding='utf-8') as file:
+            json.dump(colors, file, ensure_ascii=False, indent=4)
+
+        return Response(status=status.HTTP_200_OK,
+                        data={'message': 'Цвета успешно обновлены',
+                              'status': status.HTTP_200_OK})
