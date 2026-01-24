@@ -123,7 +123,7 @@ export const LoadBar = (props: ILoadBar) =>{
                     id="load-container"
                     // style={{ transform: `rotate(${DrowData.rotate}deg)` }}
                 />
-                <p>Подождите пожалуйста, мы усердно счтиаем, это может занять какое-то время</p>
+                <p>Подождите пожалуйста, мы усердно считаем, это может занять какое-то время</p>
                 {/* <canvas id="load-container" width="200" height="200"></canvas> */}
             </div>
             
