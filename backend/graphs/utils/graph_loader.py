@@ -9,7 +9,7 @@ from django.conf import settings
 from graphs.models import Graph
 
 
-DIR = os.path.join(settings.BASE_DIR, 'json_and_xml_graphs')
+DIR = os.path.join(settings.BASE_DIR, 'data/json_and_xml_graphs')
 
 
 class JSONGraphLoader:

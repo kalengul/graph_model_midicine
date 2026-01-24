@@ -84,7 +84,7 @@ def main():
 
     json_graph_path = (
         'C:\\for the job\\graph_model_midicine\\backend'
-        '\\graphs_for_bayes\\graphs_10_3_optimized_weights.json')
+        '\\data/graphs_for_bayes\\graphs_10_3_optimized_weights.json')
 
     with open(json_graph_path, 'r', encoding='utf-8') as f:
         graph = nx.node_link_graph(json.load(f), edges='links')

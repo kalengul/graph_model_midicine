@@ -9,14 +9,10 @@ from django.conf import settings
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import BayesSerializer
-from graphs.utils.binarizer import Binarizer
-from graphs.utils.parse_ids import parse_ids
-# from med_bayes.utils.bayes_calculation_ import (load_combined_data, get_result,
-#                                                 build_network,
-#                                                 calculate_probabilities)
-from med_bayes.utils.bayes_calculation import (load_combined_data, get_result,
-                                               build_network,
-                                               calculate_probabilities)
+from med_bayes.utils.bayes_calculation_2 import (load_combined_data,
+                                                 get_result,
+                                                 build_network,
+                                                 calculate_probabilities)
 from drugs.models import Drug
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
@@ -31,6 +27,9 @@ NAME = 'name'
 NODES = 'nodes'
 ID = 'id'
 GRAPH_FOR_BAYES_PATH = Path(settings.GRAPH_PATH) / 'node_with_roots.json'
+GREEN = 0.15
+YELLOW = 0.25
+RED = 0.26
 
 
 class BayeseView(APIView):
@@ -41,7 +40,6 @@ class BayeseView(APIView):
     GENDER = 'gender'
     SIDE_EFFECT = 'side_effects'
     EFFECT_NAME = "se_name"
-    RANK = "rank"
 
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
@@ -121,17 +119,7 @@ class BayeseView(APIView):
             bin_id[drug2id[drug.lower()]] = 1
         return bin_id
 
-    @parse_ids
-    def get(self, request, ids, *args, **kwargs):
-        """Получение бинарного словаря идентификаторов."""
-        bin_ids = Binarizer().binarize(ids)
-
-        return CustomResponse(
-            status=status.HTTP_200_OK,
-            http_status=status.HTTP_200_OK,
-            message='Бинарный словарь id-ов сформировался успешно',
-            data=bin_ids)
-
+    # @bearer_token_required
     def post(self, request):
         """Вычисление сети Байеса."""
         graph_storage = GraphStorage()
@@ -176,8 +164,6 @@ class BayeseView(APIView):
         with open(graph_storage.graph_path, 'r', encoding='utf-8') as f:
             graph = json.load(f)
 
-        # id2effects = {effect[ID]: effect[NAME] for effect in graph[NODES]}
-
         diff = set(drugs) - set(graph[NAME])
         if diff:
             msg = ', '.join(list(diff))
@@ -189,17 +175,6 @@ class BayeseView(APIView):
                 message=message)
 
         print('Все ЛС соотвествуют')
-
-        # with open(GRAPH_FOR_BAYES_PATH, 'r', encoding='utf-8') as f:
-        #     most_relative_nodes = json.load(f)
-
-        # graph = SimpleNonRelativeNodesDeleter().delete_nodes(
-        #     nx.node_link_graph(graph, edges='links'),
-        #     most_relative_nodes=most_relative_nodes,
-        #     roots=[node['id'] for node in graph['nodes']
-        #            if node['name'] in drugs]
-        # )
-        # graph = nx.node_link_data(graph, edges='links')
 
         full_process_start = datetime.now()
         prob_data, drug_states_input_data, drugs_for_output, \
@@ -237,96 +212,124 @@ class BayeseView(APIView):
                      f'сети Байеса {full_process}\n'))
 
         result = {
-                    "сompatibility_bayes": сompatibility_bayes,
                     "rank_iteractions": "unknown",
+                    "сompatibility_bayes": сompatibility_bayes,
                     "side_effects": [
                         {
-                            "сompatibility": "unknown",
+                            "сompatibility": "compatible",
                             "effects": []
 
-                        }],
+                        },
+                        {
+                            "сompatibility": "caution",
+                            "effects": []
+
+                        },
+                        {
+                            "сompatibility": "incompatible",
+                            "effects": []
+
+                        }
+                    ],
                     "combinations": "unknown",
                     "drugs": drugs,
-                    'SEFromDrug': []
+                    "SEFromDrug": [],
             }
 
-        # result = {
-        #             "сompatibility_bayes": сompatibility_bayes,
-        #             "rank_iteractions": "unknown",
-        #             "side_effects": [
-        #                 {
-        #                     "сompatibility": "unknown",
-        #                     "effects": []
+        individual_drug_effects = {}
 
-        #                 },
-        #                 {
-        #                     "сompatibility": "compatible",
-        #                     "effects": []
+        for drug in drugs:
+            single_drug_prob_data, single_drug_states, \
+                single_drugs_for_output, _ = load_combined_data(
+                    graph_data=graph,
+                    prob_file=graph_storage.probability_path,
+                    drug_states_input=self._get_bin_ids([drug]))
+            single_network = build_network(graph, single_drug_prob_data)
+            single_probs = calculate_probabilities(
+                single_network,
+                'single_calculation_trace.txt')
 
-        #                 },
-        #                 {
-        #                     "сompatibility": "caution",
-        #                     "effects": []
+            individual_data = get_result(
+                single_probs,
+                graph,
+                single_drug_states,
+                single_drugs_for_output,
+                combination_description)
 
-        #                 },
-        #                 {
-        #                     "сompatibility": "incompatible",
-        #                     "effects": []
+            individual_drug_effects[drug] = individual_data["side_effects"]
 
-        #                 }
-        #                 ],
-        #             "combinations": "unknown",
-        #             "drugs": drugs
-        #     }
+        for drug in drugs:
+            drug_effects = []
+            if drug in individual_drug_effects:
+                for se_name, se_data in individual_drug_effects[drug].items():
+                    drug_effects.append({
+                        self.EFFECT_NAME: se_name,
+                        "rank": round(se_data["probability"], 2)
+                    })
 
-        # max_rank = 0
-        # for se in data["side_effects"]:
-        #     rank = data["side_effects"][se]["probability"]
-        #     if rank > max_rank:
-        #         max_rank = rank
-        #     if not rank:
-        #         result["side_effects"][0]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank < 0.5:
-        #         result["side_effects"][1]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank < 0.75:
-        #         result["side_effects"][2]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
-        #     elif rank >= 0.75:
-        #         result["side_effects"][3]["effects"].append({
-        #             self.EFFECT_NAME: se,
-        #             "rank": rank,
-        #         })
+            drug_effects.sort(key=lambda x: x["rank"], reverse=True)
 
-        # if max_rank < 0.5:
-        #     сompatibility_bayes = 'compatible'
-        # elif max_rank < 0.75:
-        #     сompatibility_bayes = 'caution'
-        # else:
-        #     сompatibility_bayes = 'incompatible'
+            if gender:
+                drug_effects = self._exclude_by_gender(drug_effects, gender,
+                                                       GENDER_SIDE_EFFECT)
 
-        # if not exist:
-        #     result['сompatibility_bayes'] = сompatibility_bayes
-
-        for se in data["side_effects"]:
-            result["side_effects"][0]["effects"].append({
-                # self.EFFECT_NAME: id2effects[se],
-                self.EFFECT_NAME: se,
-                self.RANK: round(data["side_effects"][se]["probability"], 2),
+            result["SEFromDrug"].append({
+                "d_name": drug,
+                "effects": drug_effects
             })
 
-        result["side_effects"][0]["effects"].sort(
-            key=lambda x: x[self.RANK],
-            reverse=True)
-        # result["side_effects"][0]["effects"].sort(
-        #     key=lambda x: x[self.EFFECT_NAME])
+        combinations = [
+            {
+                "сompatibility": "cause",
+                "drugs": []
+            },
+            {
+                "сompatibility": "incompatible",
+                "drugs": []
+            },
+        ]
+
+        # Общие побочки (от взаимодействия) оставляем как есть
+        max_rank = 0
+        for se in data["side_effects"]:
+            rank = data["side_effects"][se]["probability"]
+            if rank > max_rank:
+                max_rank = rank
+            elif rank <= GREEN:
+                result["side_effects"][0]["effects"].append({
+                    self.EFFECT_NAME: se,
+                    "rank": round(rank, 2),
+                })
+            elif GREEN < rank <= YELLOW:
+                result["side_effects"][1]["effects"].append({
+                    self.EFFECT_NAME: se,
+                    "rank": round(rank, 2),
+                })
+            elif YELLOW < rank:
+                result["side_effects"][2]["effects"].append({
+                    self.EFFECT_NAME: se,
+                    "rank": round(rank, 2),
+                })
+
+        if max_rank <= GREEN:
+            сompatibility_bayes = 'compatible'
+        elif GREEN < max_rank <= YELLOW:
+            сompatibility_bayes = 'caution'
+            combinations[0]["drugs"] = drugs
+        elif max_rank > YELLOW:
+            сompatibility_bayes = 'incompatible'
+            combinations[1]["drugs"] = drugs
+
+        print('сompatibility_bayes = ', сompatibility_bayes)
+
+        result['сompatibility_bayes'] = сompatibility_bayes
+
+        result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
+                                                  reverse=True)
+
+        result['rank_iteractions'] = round(max_rank, 2)
+
+        result['combinations'] = list(combinations)
 
         if gender:
             logger.debug(f'Пол указан. gender = {gender}')
@@ -343,47 +346,6 @@ class BayeseView(APIView):
                 for effect in side_effects['effects']:
                     f1.write(f"{effect['se_name']}\n")
                     f2.write(f"{effect['rank']}\n")
-
-        for drug in drugs:
-            prob_data, drug_states_input_data, drugs_for_output, \
-                combination_description = load_combined_data(
-                    graph_data=graph,
-                    prob_file=graph_storage.probability_path,
-                    drug_states_input=self._get_bin_ids([drug])
-                )
-
-            # Построение сети с новыми параметрами
-            network = build_network(graph, prob_data)
-
-            # Перерасчет вероятностей (логирование не меняется)
-            final_probs = calculate_probabilities(network,
-                                                  'calculation_trace.txt')
-
-            data = get_result(
-                final_probs,
-                graph,
-                drug_states_input_data,
-                drugs_for_output,
-                combination_description)
-
-            drug_effects = {
-                "d_name": drug,
-                "effects": [],
-            }
-
-            for se in data['side_effects']:
-                effect = {
-                    self.EFFECT_NAME: se,
-                    self.RANK: round(data["side_effects"][se]["probability"],
-                                     2),
-                }
-                drug_effects["effects"].append(effect)
-
-            drug_effects["effects"] = sorted(drug_effects["effects"],
-                                             key=lambda x: x[self.RANK],
-                                             reverse=True)
-
-            result['SEFromDrug'].append(drug_effects)
 
         return CustomResponse(
             http_status=status.HTTP_200_OK,
