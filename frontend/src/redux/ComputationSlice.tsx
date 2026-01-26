@@ -18,7 +18,7 @@ export interface ISE{
   rank: number,
 }
 
-interface ISideEffectComputationFortran{
+export interface ISideEffectComputationFortran{
   сompatibility: string,
   effects: ISE[]
 }
