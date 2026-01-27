@@ -301,16 +301,19 @@ class BayeseView(APIView):
             rank = data["side_effects"][se]["probability"]
             if rank > max_rank:
                 max_rank = rank
-            elif rank <= GREEN:
+
+            if rank <= GREEN:
                 result["side_effects"][0]["effects"].append({
                     self.EFFECT_NAME: se,
                     "rank": round(rank, 2),
                 })
+
             elif GREEN < rank <= YELLOW:
                 result["side_effects"][1]["effects"].append({
                     self.EFFECT_NAME: se,
                     "rank": round(rank, 2),
                 })
+
             elif YELLOW < rank:
                 result["side_effects"][2]["effects"].append({
                     self.EFFECT_NAME: se,
