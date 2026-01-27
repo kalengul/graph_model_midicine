@@ -126,7 +126,7 @@ export const ComputationBayes = () =>{
                             {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
                                 <CollapsList
                                     title = "Средний уровень риска появления побочных эффектов"
-                                    className="ComputationResults caution"  //default
+                                    className="ComputationResults caution mt-2"  //default
                                     type="riscs"
                                     content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects} //side_effect[0].effects
                                 />
@@ -135,7 +135,7 @@ export const ComputationBayes = () =>{
                                 compareView && compareWithFortran.find(e=>e.сompatibility.trim()==="caution") &&
                                     <CollapsList
                                         title = "Средний уровень риска появления побочных эффектов"
-                                        className="ComputationResults caution"
+                                        className="ComputationResults caution mt-2"
                                         type="compare-riscs"
                                         content= {compareWithFortran.find(e=>e.сompatibility.trim()==="caution")?.compareData}
                                     />
