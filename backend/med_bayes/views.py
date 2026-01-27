@@ -19,6 +19,7 @@ from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
 from med_bayes.utils.color_management import colors, color_path
+from ranker.utils.check_banned import DrugPairChecker
 
 from accounts.auth import bearer_token_required
 
@@ -148,6 +149,29 @@ class BayeseView(APIView):
         gender = None
         сompatibility_bayes = 'unknown'
         contraindication_ids = []
+
+        banned = DrugPairChecker().check_banned(drug_ids)
+        print('banned =', banned)
+        logger.debug(f'banned = {banned}')
+        if banned:
+            return CustomResponse(
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по сети Байеса успешно расcчитана',
+                http_status=status.HTTP_200_OK,
+                data={
+                    "сompatibility_bayes": "banned",
+                    "combinations": [
+                        {
+                            "сompatibility": "banned",
+                            "drugs": banned
+
+                        }],
+                    "drugs": list(
+                            Drug.objects.filter(id__in=drug_ids
+                                                ).values_list(
+                                                    'drug_name', flat=True)),
+                    }
+                )
         if human_data:
             age = human_data.get("age")
             gender = human_data.get('gender')

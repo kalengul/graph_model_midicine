@@ -90,9 +90,9 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_200_OK,
                 data={
                     "сompatibility_fortran": "banned",
-                    "combinations":[
+                    "combinations": [
                         {
-                            "сompatibility":"banned",
+                            "сompatibility": "banned",
                             "drugs": banned
 
                         }],
