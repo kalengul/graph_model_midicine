@@ -5,7 +5,7 @@ from io import BytesIO
 from itertools import combinations
 
 import pandas as pd
-from tqdm import tqdm
+# from tqdm import tqdm
 
 from ranker.utils.fortran_calculator import FortranCalculator
 from ranker.utils.check_banned import DrugPairChecker
