@@ -388,13 +388,15 @@ const ComputationSlice = createSlice({
             state.isLoadBayes = true
             state.fetchBayesStatus = true
 
-            //Сортируем результаты по убыванию ранга попбочки
-            state.resultBayes.side_effects = state.resultBayes.side_effects.map(item => (
-              {
-                сompatibility: item.сompatibility,
-                effects: item.effects.sort((a, b) => b.rank - a.rank)
-              }
-            ))
+            if(state.resultBayes.сompatibility_bayes.trim()!=="banned"){
+              //Сортируем результаты по убыванию ранга попбочки
+              state.resultBayes.side_effects = state.resultBayes.side_effects.map(item => (
+                {
+                  сompatibility: item.сompatibility,
+                  effects: item.effects.sort((a, b) => b.rank - a.rank)
+                }
+              ))
+            }
           }
           else if ( action.payload.status === "err") {
             state.isresultBayes = false
