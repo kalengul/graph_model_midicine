@@ -36,8 +36,11 @@ class PandasBannedPairLoader(BannedPairLoader):
     DRUG1_NUMBER = 0
     DRUG2_NUMBER = 1
     COMMENT_NUMBER = 2
+    NULL_VALUES = ['', 'nan', 'NaN', 'NAN', 'null',
+               'NULL', 'none', 'None', 'NONE', ' ']
 
     def __init__(self, import_path):
+        """Инициализатор."""
         self.import_path = import_path
 
     @abstractmethod
@@ -48,6 +51,7 @@ class PandasBannedPairLoader(BannedPairLoader):
         """Очистка БД от старых пар ЛС."""
         BannedDrugPairCleanProcessor().get_cleaner().clear_table()
 
+
 class CSVBannedPairLoader(PandasBannedPairLoader):
     """Загрузчик запрещённых пар."""
 
@@ -55,6 +59,8 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
         """Загрузка запрещённых пар из CSV-файлов."""
         try:
             df = pd.read_csv(self.import_path,
+                             na_values=self.NULL_VALUES,
+                             keep_default_na=True,
                              sep=';')
 
             df = df.rename(
@@ -71,10 +77,16 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
             logger.error(message)
             raise PairFileError(message) from error
 
+        df = df.dropna(subset=[self.DRUG1, self.DRUG2])
+
         df[self.DRUG1] = df[self.DRUG1].str.strip()
         df[self.DRUG2] = df[self.DRUG2].str.strip()
-        df[self.DRUG1] = df[self.DRUG1].str.replace(r'\s*\+\s*', '+', regex=True)
-        df[self.DRUG2] = df[self.DRUG2].str.replace(r'\s*\+\s*', '+', regex=True)
+        df[self.DRUG1] = df[self.DRUG1].str.replace(r'\s*\+\s*',
+                                                    '+',
+                                                    regex=True)
+        df[self.DRUG2] = df[self.DRUG2].str.replace(r'\s*\+\s*',
+                                                    '+',
+                                                    regex=True)
         df[self.DRUG1] = df[self.DRUG1].str.lower()
         df[self.DRUG2] = df[self.DRUG2].str.lower()
 
@@ -101,7 +113,8 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
                 print('comment =', comment)
 
                 if (Drug.objects.filter(drug_name__iexact=drug1).exists()
-                    and Drug.objects.filter(drug_name__iexact=drug2).exists()):
+                        and Drug.objects.filter(drug_name__iexact=drug2
+                                                ).exists()):
                     logger.debug('Есть в БД')
                     logger.debug(f'drug1 = {drug1}')
                     logger.debug(f'drug2 = {drug2}')

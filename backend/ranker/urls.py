@@ -3,5 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.CalculationAPI.as_view(), name='rank_calculation')
+    path('generate-tables/', views.GetTablesView.as_view(),
+         name='table_generation'),
+    path('', views.CalculationAPI.as_view(), name='rank_calculation'),
 ]

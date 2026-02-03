@@ -1,28 +1,19 @@
 import traceback
 import logging
 import time
-from types import MappingProxyType
-from itertools import combinations
 
+from django.utils import timezone
+from django.http import FileResponse
 from rest_framework.views import APIView
 from rest_framework import status
-from django.db.models import Q
 
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
-from ranker.serializers import QueryParamsSerializer
-from drugs.models import BannedDrugPair, Drug
+from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
+from ranker.services.table_gerention import ExcelTableGenerater
+from ranker.constants import IDX_2_RANK_NAME
 
-
-IDX_2_RANK_NAME = MappingProxyType({
-        0: 'rang_base',
-        1: 'rang_m1',
-        2: 'rang_f1',
-        3: 'rang_freq',
-        4: 'rang_m2',
-        5: 'rang_f2'
-    })
 
 logger = logging.getLogger('fortran')
 
@@ -30,37 +21,49 @@ logger = logging.getLogger('fortran')
 class CalculationAPI(APIView):
     """Вычисление рангов."""
 
-    def check_banned_drug_pair(self, drugs):
-        """Проверка на наличие запрещённых пар ЛС."""
-        drug_map = (
-            {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)})
-        banned_pairs = []
-        for id1, id2 in combinations(drugs, 2):
-            name1 = drug_map[id1].drug_name
-            name2 = drug_map[id2].drug_name
+    AGE = 65
+    MAN = 'man'
+    WOMEN = 'woman'
 
-            pair = BannedDrugPair.objects.filter(
-                Q(first_drug__iexact=name1, second_drug__iexact=name2) |
-                Q(first_drug__iexact=name2, second_drug__iexact=name1)
-            ).first()
-
-            if pair:
-                banned_pairs.append((name1, name2, pair.comment))
-        return banned_pairs
-
-    def get(self, request):
+    def post(self, request):
         """Временный метод для просмотра изначальной структуры выхода."""
-        logger.debug(f'входная строка {request.build_absolute_uri()}')
+        # logger.debug(f'входная строка {request.build_absolute_uri()}')
 
-        logger.debug(f'request.query_params = {request.query_params}')
+        # logger.debug(f'request.query_params = {request.query_params}')
 
-        serializer = QueryParamsSerializer(data=request.query_params)
-        serializer.is_valid(raise_exception=True)
-        data = serializer.validated_data
+        # serializer = QueryParamsSerializer(data=request.query_params)
+        # serializer.is_valid(raise_exception=True)
+        # data = serializer.validated_data
 
-        drugs = data.get('drugs')
-        logger.debug(f'data = {data}')
-        index = data.get('humanData')
+        drugs = request.data.get('drugs')
+        # logger.debug(f'data = {data}')
+        human_data = request.data.get('humanData', None)
+
+        if human_data is not None:
+            age = human_data.get('age', 18)
+            if age is None:
+                age = 18
+
+            gender = human_data.get('gender', 'man')
+            if gender is None:
+                gender = 'man'
+
+        print('drugs', drugs)
+        print('human_data', human_data)
+
+        index = None
+        if human_data is None:
+            index = 0
+        else:
+            if age < self.AGE and gender == self.MAN:
+                index = 1
+            elif age < self.AGE and gender == self.WOMEN:
+                print('Моложая женщина')
+                index = 2
+            elif age >= self.AGE and gender == self.MAN:
+                index = 3
+            elif age >= self.AGE and gender == self.WOMEN:
+                index = 4
 
         if drugs is None:
             message = (
@@ -72,7 +75,7 @@ class CalculationAPI(APIView):
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        if index is None or index >= len(IDX_2_RANK_NAME):
+        if index >= len(IDX_2_RANK_NAME):
             message = (
                 "Обязательный параметр humanData отсутствует"
                 " или некорректный.")
@@ -118,7 +121,8 @@ class CalculationAPI(APIView):
                 nj=drugs)
 
             elapsed_time = time.time() - start_time
-            logger.debug(f'Время выполнения экспорда данных и рассчёта: {elapsed_time:.2f} сек.')
+            logger.debug(('Время выполнения экспорда данных '
+                          f'и рассчёта: {elapsed_time:.2f} сек.'))
 
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -132,4 +136,46 @@ class CalculationAPI(APIView):
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class GetTablesView(APIView):
+    """
+    Экспорт таблиц.
+
+    Таблицы:
+        - ранги для ЛС;
+        - исключения (они же запрещённые пары);
+        - ЛС, противопоказния и их веса.
+    """
+
+    def get(self, request):
+        """Получение Excel-файла с таблицами."""
+        try:
+            buffer = ExcelTableGenerater().generate_tables()
+
+            file_size = len(buffer.getvalue())
+            logger.debug(f"Размер файла: {file_size} байт")
+
+            if file_size < 1000:
+                logger.error('Сгенерированный файл слишком маленький. '
+                             'Вероятно, поврежден.')
+                return CustomResponse(
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    message='Сгенерированный файл поврежден',
+                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+            return FileResponse(
+                buffer,
+                content_type=('application/vnd.openxmlformats-officedocument.'
+                              'spreadsheetml.sheet'),
+                filename=(f'tables_{timezone.now().strftime("%Y%m%d_%H%M%S")}'
+                          '.xlsx'),
+                as_attachment=True)
+        except Exception as error:
+            message = 'Ошибка генерации таблиц'
+            logger.error(f'{message}. {error}')
+            return CustomResponse(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=message,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
