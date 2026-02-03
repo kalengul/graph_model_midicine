@@ -1,51 +1,64 @@
 import { useEffect, useState } from "react"
-// import {useNavigate} from 'react-router-dom'
 import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
-import { ComputationBayesForm } from '../../components/computationBayesForm/computationBayesForm';
 import { LoadBar } from "../../components/loadBar/loadBar";
 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks"
-import { initResultBayes, initResultFortran, addValue as addValueComputation} from "../../redux/ComputationSlice"
-// import { fetchContraindicationssList } from "../../redux/ContraindicationsManageSlice";
+import { initStates as initStatesFortran } from "../../redux/ComputationFortranSlice"
+import {initStates as initStatesBayes} from "../../redux/ComputationBayesSlice"
+// import { initResultBayes, initResultFortran, addValue as addValueComputation} from "../../redux/ComputationSlice"
 import { addValue } from "../../redux/GraphSlice";
 
 import {isRegex} from "../../assets/regex"
 import { CreateCompareFunction, ICompareDataRisk } from "./CreateCompareData";
-// import {SelectedType} from "./SelectedType"
+
+import { ComputationForm } from "../../components/computationForm/ComputationForm";
 
 export const ComputationBayes = () =>{
-    // const navigate = useNavigate();
     const [compareView, setCompareView] = useState(false)
     const [compareTitle, setCompareTitle] = useState("Показать сравнение с Фортраном")
     const dispatch = useAppDispatch()
 
     useEffect(()=>{
-        dispatch(initResultBayes())
-        dispatch(initResultFortran())
-        dispatch(addValueComputation({title: "compareStart", value: false}))
+        dispatch(initStatesBayes())
+        dispatch(initStatesFortran())
+        // dispatch(addValueComputation({title: "compareStart", value: false}))
         
     }, [dispatch])
-    const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
-    const resultBayes = useAppSelector(state=>state.computation.resultBayes)
 
-    // console.log(resultBayes)
+    const isLoadFortran = useAppSelector(state=>state.computationFortran.isLoad)
+    const resultFortran = useAppSelector(state=>state.computationFortran.resultFortran)
+    const isResultFortran = useAppSelector(state=>state.computationFortran.isresultFortran);
+    // const errMessageFortran = useAppSelector(state=>state.computationFortran.errMessage)
+    const isSendFortran = useAppSelector(state=>state.computationFortran.isSend)
 
-    const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
-    // const compareData = useAppSelector(state=>state.computation.compareSide_effects)
-    const compareDtaFromDrug = useAppSelector(state=>state.computation.compareSide_effects_fromDrug)
+    const isLoadBayes = useAppSelector(state=>state.computationBayes.isLoad)
+    const resultBayes = useAppSelector(state=>state.computationBayes.resultBayes)
+    const isResultBayes = useAppSelector(state=>state.computationBayes.isresultBayes);
+    const errMessageBayes = useAppSelector(state=>state.computationBayes.errMessage)
+    const isSendBayes = useAppSelector(state=>state.computationBayes.isSend)
+    const drugIds = useAppSelector(state=>state.computationBayes.drugIds)
+    
+    // const isresultBayes = useAppSelector(state=>state.computation.isresultBayes)
+    // const resultBayes = useAppSelector(state=>state.computation.resultBayes)
 
-    console.log(compareDtaFromDrug)
+    // // console.log(resultBayes)
 
-    const data = useAppSelector(state=>state.computation.computationList)
+    // const isresultFortran = useAppSelector(state=>state.computation.isresultFortran)
+    // // const compareData = useAppSelector(state=>state.computation.compareSide_effects)
+    // const compareDtaFromDrug = useAppSelector(state=>state.computation.compareSide_effects_fromDrug)
+
+    // console.log(compareDtaFromDrug)
+
+    // const data = useAppSelector(state=>state.computation.computationList)
 
     useEffect(()=>{
         setCompareTitle("Показать сравнение с Фортраном")
         setCompareView(false)
-    }, [isresultBayes, resultBayes])
+    }, [isLoadBayes, resultBayes])
    
-    const resultFortran = useAppSelector(state=>state.computation.resultFortran)
+    // const resultFortran = useAppSelector(state=>state.computation.resultFortran)
     const [compareWithFortran, setCompareWithFortran] = useState<ICompareDataRisk[]>([])
     const CompareWhithFortranHandler = () =>{
         if (!compareView) {
@@ -58,17 +71,18 @@ export const ComputationBayes = () =>{
         setCompareView(!compareView)
     }
 
+
     const ShowGraphHandker = () =>{
-        const idsArray = data.map( e=> e.id).join(",")
-        dispatch(addValue({title: "drugs", value: data}))
+        const idsArray = drugIds.join(",")
+        dispatch(addValue({title: "drugs", value: drugIds}))
         // navigate(`/graph/${idsArray}`) 
         window.open(`/graph/${idsArray}`, '_blank');
     }
 
-    const isLoadFortran = useAppSelector(state=>state.computation.isLoadFortran)
-    const isLoadBayes = useAppSelector(state=>state.computation.isLoadBayes)
-    const compareStart = useAppSelector(state=>state.computation.compareStart)
-    const fetchBayesStatus = useAppSelector(state=>state.computation.fetchBayesStatus)
+    // const isLoadFortran = useAppSelector(state=>state.computation.isLoadFortran)
+    // const isLoadBayes = useAppSelector(state=>state.computation.isLoadBayes)
+    // const compareStart = useAppSelector(state=>state.computation.compareStart)
+    // const fetchBayesStatus = useAppSelector(state=>state.computation.fetchBayesStatus)
 
     return(
     <div className="flex">
@@ -76,14 +90,16 @@ export const ComputationBayes = () =>{
         <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по Байесу</h1>
 
-            <ComputationBayesForm/>
+            <ComputationForm type="bayes"/>
+            
+            {/* <ComputationBayesForm/> */}
             <hr/>
-            { compareStart &&
+            { isSendFortran && isSendBayes &&
             (
-                ((!isLoadFortran || !isLoadBayes) && (fetchBayesStatus === null))?(<LoadBar className="mt-4"/>)
-                : ((!isLoadFortran || !isLoadBayes) && !fetchBayesStatus ? (<p>Для лекарственного средства нет графа</p>)
+                (!isLoadFortran || !isLoadBayes)?<LoadBar className="mt-4"/>
+                : ((!isLoadFortran || !isLoadBayes) && errMessageBayes ? (<p>Для лекарственного средства нет графа</p>)
                 :
-                (isLoadFortran && isLoadBayes && isresultBayes && isresultFortran && <div>
+                (isLoadFortran && isLoadBayes && isResultBayes && isResultFortran && <div>
                     <h4>Результаты оценки совместимости</h4>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
                     <h5 className="mt-3">Результаты: </h5>
@@ -112,6 +128,7 @@ export const ComputationBayes = () =>{
                                     className="ComputationResults incompatible"  //default
                                     type="riscs"
                                     content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects} //side_effect[0].effects
+                                    visibleRisks = {true}
                                 />
                             }
                             {
@@ -121,6 +138,7 @@ export const ComputationBayes = () =>{
                                         className="ComputationResults incompatible"
                                         type="compare-riscs"
                                         content= {compareWithFortran.find(e=>e.сompatibility.trim()==="incompatible")?.compareData}
+                                        visibleRisks = {true}
                                     />
                             }
                             {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
@@ -129,6 +147,7 @@ export const ComputationBayes = () =>{
                                     className="ComputationResults caution mt-2"  //default
                                     type="riscs"
                                     content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects} //side_effect[0].effects
+                                    visibleRisks = {true}
                                 />
                             }
                             {
@@ -138,6 +157,7 @@ export const ComputationBayes = () =>{
                                         className="ComputationResults caution mt-2"
                                         type="compare-riscs"
                                         content= {compareWithFortran.find(e=>e.сompatibility.trim()==="caution")?.compareData}
+                                        visibleRisks = {true}
                                     />
                             }
 
@@ -147,6 +167,7 @@ export const ComputationBayes = () =>{
                                     className="ComputationResults compatible mt-2"  //default
                                     type="riscs"
                                     content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects} //side_effect[0].effects
+                                    visibleRisks = {true}
                                 />
                             }
                             {
@@ -156,6 +177,7 @@ export const ComputationBayes = () =>{
                                         className="ComputationResults compatible mt-2"
                                         type="compare-riscs"
                                         content= {compareWithFortran.find(e=>e.сompatibility.trim()==="compatible")?.compareData}
+                                        visibleRisks = {true}
                                     />
                             }
 
@@ -177,6 +199,7 @@ export const ComputationBayes = () =>{
                                     content= {serd.effects}
 
                                     key={index}
+                                    visibleRisks = {true}
                                 />
 
                             )}
