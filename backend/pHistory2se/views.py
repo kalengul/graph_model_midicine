@@ -118,7 +118,7 @@ class MedicalHistoryToSideEffectsAPIView(APIView):
         }
         
         return HttpResponse(
-            json.dumps(response_data_moc, ensure_ascii=False, indent=2),
+            json.dumps(response_data, ensure_ascii=False, indent=2),
             content_type='application/json',
             status=status.HTTP_200_OK
         )
