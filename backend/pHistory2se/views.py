@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Create your views here.
 import docx
+import json
 from rest_framework.views import APIView
 from rest_framework import status
 from django.utils.decorators import method_decorator
@@ -9,7 +10,8 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponse
 from django.conf import settings
 
-# 🔑 КЛЮЧЕВЫЕ СЛОВА — МЕНЯТЬ ТОЛЬКО ЗДЕСЬ
+
+# КЛЮЧЕВЫЕ СЛОВА — МЕНЯТЬ ТОЛЬКО ЗДЕСЬ
 TARGET_KEYWORDS = ["анализ", "диагноз", "рекомендация", "прогноз", "лечение"]
 
 
@@ -107,9 +109,16 @@ class MedicalHistoryToSideEffectsAPIView(APIView):
             "text_length": len(text),
             "note": "PDF support will be added in future updates"
         }
+        response_data_moc= {
+            "filename": file_obj.name,
+            "contraindications": [ "Гипертоническая болезнь III стадии с поражением сердца",
+                                  "Хроническая сердечная недостаточность I стадии, II функциональный класс (NYHA), с сохранённой фракцией выброса",
+                                  "Фибрилляция предсердий, персистирующая форма, тахисистолический вариант (впервые выявлен-ная)"
+            ]
+        }
         
         return HttpResponse(
-            json.dumps(response_data, ensure_ascii=False, indent=2),
+            json.dumps(response_data_moc, ensure_ascii=False, indent=2),
             content_type='application/json',
             status=status.HTTP_200_OK
         )
@@ -134,7 +143,3 @@ class MedicalHistoryToSideEffectsAPIView(APIView):
     #         content_type='application/json',
     #         status=status.HTTP_501_NOT_IMPLEMENTED
     #     )
-
-
-# Импортируем json в конце, чтобы избежать циклических импортов
-import json
