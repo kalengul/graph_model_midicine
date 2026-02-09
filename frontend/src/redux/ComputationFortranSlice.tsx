@@ -57,8 +57,22 @@ export const iteractionFortran = createAsyncThunk<
   }
 >('computationFortranSlice/iteractionFortran', async (data: sendFormFortran, { rejectWithValue }) => {
   try {
-      const response = await axios.post('/api/polifarmakoterapiya-fortran/', data, {
-        headers:{'Content-Type': 'application/json'},
+      const formData = new FormData();
+      
+      // Добавляем простые данные
+      formData.append('drugs', JSON.stringify(data.drugs));
+      
+      if (data.humanData) {
+        formData.append('humanData', JSON.stringify(data.humanData));
+      }
+      
+      // Добавляем файл, если он есть
+      if (data.medCard) {
+        formData.append('medCard', data.medCard);
+      }
+
+      const response = await axios.post('/api/polifarmakoterapiya-fortran/', formData, {
+        headers:{'Content-Type': 'multipart/form-data'},//'application/json'},
       })
       return response.data;
       
