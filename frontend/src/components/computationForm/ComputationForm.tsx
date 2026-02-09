@@ -202,7 +202,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
             } else if(props.type === 'fortran'){
                 const sendData: sendFormFortran = {
                     drugs: checkedDrugIds.map(drugId => Number(drugId)),
-                    humanData: undefined
+                    humanData: undefined,
+                    medCard: null
                 }
 
                 if(age !="" || gender != "" || checkedContraindIds.length>0) {
@@ -211,6 +212,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if(gender != "") sendData.humanData.gender = gender
                     if(checkedContraindIds.length>0) sendData.humanData.cont_list = checkedContraindIds
                 }
+
+                if(selectedFile) sendData.medCard = selectedFile
 
                 console.log(sendData)
 

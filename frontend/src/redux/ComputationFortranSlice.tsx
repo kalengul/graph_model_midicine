@@ -30,6 +30,7 @@ interface IHumanData{
 export interface sendFormFortran{
   drugs: number[]
   humanData: IHumanData | undefined
+  medCard?: File | null
 }
 
 
