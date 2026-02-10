@@ -12,13 +12,13 @@ import pandas as pd
 
 from ranker.utils.fortran_calculator import get_calculator, FortranCalculator
 from ranker.utils.check_banned import DrugPairChecker
-from ranker.constants import RANK_NAMES
+# from ranker.constants import RANK_NAMES
 from drugs.models import Drug, BannedDrugPair
 from contraindications.models import Contraindication
 
 
 logger = logging.getLogger('fortran')
-# RANK_NAMES = ['rang_base']
+RANK_NAMES = ['rang_base']
 
 
 def _incompatible_worker(args):
@@ -85,6 +85,69 @@ def _incompatible_worker(args):
             count += 1
 
     return r, rows, count, total_processed
+
+
+def _worker_for_lenght(args):
+    """
+    Воркер для обработки ЧАНКА комбинаций одной длины.
+
+    Аргументы:
+        args (tuple): (
+            chunk,                # часть комбинаций для обработки
+            drug_pk_to_index,
+            rank_matrix,
+            n_k,
+            banned_pairs,
+            rank_names
+        )
+
+    Возвращает:
+        tuple: (rows, incompatible_combinations_found)
+            - rows: список строк для таблицы
+            - incompatible_combinations_found: список кортежей несовместимых комбинаций
+    """
+    import numpy as np
+
+    (chunk, drug_pk_to_index, rank_matrix, n_k,
+     banned_pairs, rank_names) = args
+
+    def is_banned_combination(ids):
+        """Проверка запрещённых пар."""
+        for i in range(len(ids)):
+            for j in range(i + 1, len(ids)):
+                pair = tuple(sorted([ids[i], ids[j]]))
+                if pair in banned_pairs:
+                    return True
+        return False
+
+
+    rows = []
+    incompatible_found = []
+
+    for drugs in chunk:
+        ids = [drug_pk_to_index[drug] for drug in drugs]
+
+    if is_banned_combination(ids):
+        row = {"ЛС": ", ".join(drugs)}
+        for rank in rank_names:
+            row[rank] = "incompatible"
+        rows.append(row)
+        incompatible_found.append(tuple(sorted(drugs)))
+
+    nj = ids.copy()
+    while len(nj) < n_k:
+        nj.append(0)
+
+    drug_indices = [drug_pk_to_index[pk] for pk in nj if pk != 0]
+    unique_indices = list(set(drug_indices))
+    drug_indices_0based = [idx - 1 for idx in unique_indices]
+
+    rang1 = rank_matrix[drug_indices_0based, :]
+    rangsum = np.sum(rang1, axis=0)
+    ram = float(np.max(rangsum))
+
+    if ram >= 1.0:
+        row = {"ЛС": ", ".join(drugs)}
 
 
 class ExcelTableGenerater():
