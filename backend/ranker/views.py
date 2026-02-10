@@ -31,9 +31,6 @@ class CalculationAPI(APIView):
 
         # logger.debug(f'request.query_params = {request.query_params}')
 
-        # serializer = QueryParamsSerializer(data=request.query_params)
-        # serializer.is_valid(raise_exception=True)
-        # data = serializer.validated_data
 
         drugs = request.data.get('drugs')
         # logger.debug(f'data = {data}')
