@@ -1,17 +1,21 @@
 import traceback
 import logging
 import time
+import json
+from pathlib import Path
 
 from django.utils import timezone
 from django.http import FileResponse
 from rest_framework.views import APIView
 from rest_framework import status
+from django.conf import settings
 
 from ranker.utils.fortran_calculator import FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
 from ranker.services.table_gerention import ExcelTableGenerater
+from ranker.services.file_naming import generate_unique_filename
 from ranker.constants import IDX_2_RANK_NAME
 
 
@@ -31,10 +35,24 @@ class CalculationAPI(APIView):
 
         # logger.debug(f'request.query_params = {request.query_params}')
 
+        drugs_line = request.data.get('drugs', None)
 
-        drugs = request.data.get('drugs')
+        if isinstance(drugs_line, str):
+            drugs = json.loads(drugs_line)
+        else:
+            drugs = drugs_line
+
+        # drugs = json.loads(drugs_line) if drugs_line else None
+
         # logger.debug(f'data = {data}')
-        human_data = request.data.get('humanData', None)
+
+        human_data_line = request.data.get('humanData', None)
+        if isinstance(human_data_line, str):
+            human_data = json.loads(human_data_line)
+        else:
+            human_data = human_data_line
+
+        med_card = request.FILES.get('medCard', None)
 
         if human_data is not None:
             age = human_data.get('age', 18)
@@ -81,6 +99,14 @@ class CalculationAPI(APIView):
                 status=status.HTTP_400_BAD_REQUEST,
                 message=message,
                 http_status=status.HTTP_400_BAD_REQUEST)
+
+        if med_card:
+            filename = generate_unique_filename(med_card.name)
+            med_card_dir_path = Path(settings.CART_PATH) / filename
+            with open(med_card_dir_path, 'wb') as f:
+                for chunk in med_card.chunks():
+                    f.write(chunk)
+
         banned = DrugPairChecker().check_banned(drugs)
         logger.debug(f'banned = {banned}')
         if banned:

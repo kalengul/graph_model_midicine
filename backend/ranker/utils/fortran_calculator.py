@@ -43,7 +43,7 @@ class FortranCalculator(BaseCalculator):
             f"{self.n_k} ПЭ")
 
     def calculate(self, rank_name, nj):
-        """Вычмсление рангов."""
+        """Вычисление рангов."""
         # logger.debug(f"Индексы входных ЛС (nj): {nj}")
 
         non_zero_nj = [idx for idx in nj if idx != 0]
@@ -112,21 +112,25 @@ class FortranCalculator(BaseCalculator):
 
         # Анализ потенциальных ЛС
         rangs_matrix = np.array(rangs).reshape(self.n_j, self.n_k)
+
         unique_nj_sub_1 = [idx - 1 for idx in unique_nj]
         drugs_class_2, drugs_class_3 = [], []
-
-        # logger.debug(f'rangs_matrix = {rangs_matrix}')
-        # logger.debug(f'unique_nj_sub_1 = {unique_nj_sub_1}')
+        print('rangs_matrix.shape =', rangs_matrix.shape)
+        logger.debug(f'rangs_matrix = {rangs_matrix}')
+        logger.debug(f'unique_nj_sub_1 = {unique_nj_sub_1}')
         for j in range(self.n_j):
-            if j not in unique_nj_sub_1:
-                new_rangsum = rangsum + rangs_matrix[j]
-                max_rang = np.max(new_rangsum)
-                # logger.debug(f'j = {j}')
-                # logger.debug(f'max_rang = {max_rang}')
-                if max_rang >= 1.0:
-                    drugs_class_3.append(j)
-                elif max_rang >= 0.5:
-                    drugs_class_2.append(j)
+            # if j not in unique_nj_sub_1:
+            new_rangsum = rangsum + rangs_matrix[j]
+            max_rang = np.max(new_rangsum)
+            logger.debug(f'j = {j}')
+            logger.debug(f'max_rang = {max_rang}')
+            if max_rang >= 1.0:
+                drugs_class_3.append(j)
+            elif max_rang >= 0.5:
+                drugs_class_2.append(j)
+
+        print('drugs_class_3 =', drugs_class_3)
+        print('drugs_class_2 =', drugs_class_2)
 
         drug_array2 = [{'name': Drug.objects.get(index=j+1).drug_name,
                         'class': 2}
@@ -138,9 +142,9 @@ class FortranCalculator(BaseCalculator):
 
         drug_array3 = [{'name': Drug.objects.get(index=j+1).drug_name,
                         'class': 3} 
-                       or j in drugs_class_3]
+                       for j in drugs_class_3]
 
-        # print('drug_array3 =', drug_array3)
+        print('drug_array3 =', drug_array3)
 
         context['combinations'] = [
             {"сompatibility": 'cause', "drugs": [d['name']

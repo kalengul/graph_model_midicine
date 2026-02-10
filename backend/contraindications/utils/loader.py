@@ -29,13 +29,16 @@ class LoadAndBuildDrugContraindications:
         if not data:
             with open(self.PATH, 'r', encoding='utf-8') as f:
                 data = json.load(f)
+
         for item in data:
             drug_name = TextBuilder(item[self.NAME]).strip().text
             logger.debug(f'drug_name = {drug_name}')
+
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 continue
+
             for name in item[self.CONTRAS]:
                 name = TextBuilder(name).normalize().lower().strip().text
                 logger.debug(f'name = {name}')

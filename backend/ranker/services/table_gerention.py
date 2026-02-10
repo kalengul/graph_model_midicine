@@ -477,8 +477,6 @@ class ExcelTableGenerater():
                     any(set(incomp).issubset(set(drugs))
                         for incomp in incompatible_combinations)):
                     is_incompatible = True
-                    for rank in RANK_NAMES:
-                        row[rank] = self.INCOMPATIBLE
                 else:
                     calculator = get_calculator(self.MULTIPROCESSING)
                     nj = ids.copy()

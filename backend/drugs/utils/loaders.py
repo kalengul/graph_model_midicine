@@ -74,11 +74,10 @@ class ExcelLoader(Loader):
     RANK_COLUMN = 'ранг'
     EXPORT_DATE_SHEET = 'Export Date'
 
-
     def __init__(self, import_path=None, export_path=None):
         """
         Конструктор.
-        
+
         Принимает путь к файл с данными.
         Если путь не указан, загружается из файл по умолчания.
         """
@@ -93,8 +92,8 @@ class ExcelLoader(Loader):
             self.date_in_name = now.strftime('%Y.%m.%d_%H.%M')
             self.date_in_sheet = now.strftime('%d.%m.%Y')
             self.time_in_name = now.strftime('%H:%M:%S')
-            self.export_path = self.EXPORT_PATH.replace('.xlsx',
-                                                        f'_{self.date_in_name}.xlsx')
+            self.export_path = self.EXPORT_PATH.replace(
+                '.xlsx', f'_{self.date_in_name}.xlsx')
 
     def _check_excel_file(self):
         """Проверка корректности excel-файла."""
@@ -111,7 +110,8 @@ class ExcelLoader(Loader):
         def check_tables():
             """Проверка таблиц."""
             colunms = []
-            for _, col in pd.read_excel(self.import_path, sheet_name=None).items():
+            for _, col in pd.read_excel(self.import_path,
+                                        sheet_name=None).items():
                 colunms.extend(col.columns)
             return all(elem in colunms for elem in [
                 self.NUMBER_COLUMN,
@@ -123,17 +123,25 @@ class ExcelLoader(Loader):
         def check_drug_unique():
             """Проверка уникальности названий ЛС."""
             df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
-            return df[self.DRUG_COLUMN].is_unique
+            lv = df[self.DRUG_COLUMN].is_unique
+            logger.debug('Проверка уникальности названий ЛС. lv =', lv)
+            return lv
 
         def check_side_effect_unique():
             """Проверка уникальности названий ПД."""
-            df = pd.read_excel(self.import_path, sheet_name=self.SIDE_EFFECTS_SHEET)
-            return df[self.EFFECT_COLUMN].is_unique
+            df = pd.read_excel(self.import_path,
+                               sheet_name=self.SIDE_EFFECTS_SHEET)
+            lv = df[self.EFFECT_COLUMN].is_unique
+            logger.debug('Проверка уникальности названий ПД. lv =', lv)
+            return lv
 
         def check_side_effect_unique_en():
             """Проверка уникальности названий ПД на англ."""
-            df = pd.read_excel(self.import_path, sheet_name=self.SIDE_EFFECTS_SHEET)
-            return df[self.EFFECT_COLUMN_EN].is_unique
+            df = pd.read_excel(self.import_path,
+                               sheet_name=self.SIDE_EFFECTS_SHEET)
+            lv = df[self.EFFECT_COLUMN_EN].is_unique
+            logger.debug('Проверка уникальности названий ПД на англ. lv =', lv)
+            return lv
 
         if check_sheets():
             logger.debug('Все нужные листы в наличии')
@@ -142,7 +150,7 @@ class ExcelLoader(Loader):
                 return all([
                     check_drug_unique(),
                     check_side_effect_unique(),
-                    check_side_effect_unique_en()
+                    check_side_effect_unique_en(),
                 ])
             else:
                 return False
@@ -171,7 +179,7 @@ class ExcelLoader(Loader):
         try:
             logger.info('Загрузка побочных действий началась')
             for _, side_effect, side_effect_en, weight in list(
-                df.itertuples(index=False, name=None)):
+                 df.itertuples(index=False, name=None)):
                 SideEffect.objects.create(
                     se_name=side_effect.strip(),
                     se_name_en=side_effect_en.strip(),
@@ -205,9 +213,9 @@ class ExcelLoader(Loader):
             for j, effect in enumerate(effects):
                 bulk.append(
                     DrugSideEffect(
-                    drug=drug,
-                    side_effect=effect,
-                    rang_base=df.iloc[i, j]
+                        drug=drug,
+                        side_effect=effect,
+                        rang_base=df.iloc[i, j]
                     )
                 )
                 idx += 1
