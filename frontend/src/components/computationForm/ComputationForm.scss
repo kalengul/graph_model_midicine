@@ -1,0 +1,49 @@
+.lableCF{
+    font-weight: 600;
+}
+
+.checkBlock{
+    width: 52%;
+    
+}
+
+.checkBlock-list{
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-top: none;
+    border-radius: 0px 0px 7px 7px;
+    padding: 2%;
+}
+
+.checkBlock-search{
+    border-radius: 7px 7px 0px 0px;
+}
+
+.showBlock{
+    width: 48%;
+}
+
+.showBlock-list{
+    height: 50vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: 7px;
+    padding: 2%;
+}
+
+.size-s{
+    height: 30vh;
+}

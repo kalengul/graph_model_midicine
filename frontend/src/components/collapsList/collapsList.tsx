@@ -7,9 +7,11 @@ interface ICollapsListProps{
     className?: string
     type: "riscs"|"compare-riscs"|"drugs-combin"|"riscs-from-drug"
     content: ISE[] | string[] | ICompareData[] | ISEFromDrug[]| undefined
+
+    visibleRisks: boolean
 }
 
-const RenderItem = (type: ICollapsListProps['type'], item: any, index: number) =>{
+const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, visibleRisks: boolean) =>{
 
     switch (type) {
         case "riscs": {
@@ -20,7 +22,7 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number) =
                         <span className='me-3'>{index+1}.</span> 
                         <span>{riscItem.se_name}</span>
                     </div>
-                    <span>{riscItem.rank}</span>
+                    {visibleRisks && <span>{riscItem.rank}</span>}
                 </div>
             )
         }
@@ -33,10 +35,10 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number) =
                         <span className='me-3'>{index + 1}.</span> 
                         <span>{compareItem.se_name}</span>
                     </div>
-                    <div className='w-25 flex jc-sb'>
+                    {visibleRisks && <div className='w-25 flex jc-sb'>
                         <span>{compareItem.rankBayes}</span>
                         <span className='ms-3'>{compareItem.rankFortran}</span>
-                    </div>
+                    </div>}
                 </div>
             );
         }
@@ -71,7 +73,7 @@ export const CollapsList = (props: ICollapsListProps) =>{
                 </div>
 
                 {visibleItems.map((item, index) => 
-                    RenderItem(props.type, item, index)
+                    RenderItem(props.type, item, index, props.visibleRisks)
                 )}
                 
                 {shouldShowToggle && (

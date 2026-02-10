@@ -10,6 +10,8 @@ import ComputationSlice from "./ComputationSlice.tsx"
 import SynonymsSlice from "./SynonymsSlice.ts"
 import ContraindicationsManageSlice from "./ContraindicationsManageSlice.tsx"
 import GraphSlice from './GraphSlice.tsx';
+import ComputationBayesSlice from './ComputationBayesSlice.tsx';
+import ComputationFortranSlice from "./ComputationFortranSlice.tsx"
 
 import AuthSlice from "./AuthSlice.ts"
 
@@ -22,6 +24,8 @@ const reducers = combineReducers({
     synonyms: SynonymsSlice,
     contraindicationsManage: ContraindicationsManageSlice,
     graph: GraphSlice,
+    computationBayes: ComputationBayesSlice,
+    computationFortran: ComputationFortranSlice,
 
     auth: AuthSlice,
 
