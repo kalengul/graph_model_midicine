@@ -8,7 +8,6 @@ from itertools import combinations
 from multiprocessing import Process, Manager, Lock, Pool, cpu_count
 
 import pandas as pd
-from tqdm import tqdm
 
 
 from ranker.utils.fortran_calculator import get_calculator, FortranCalculator
@@ -315,7 +314,7 @@ class ExcelTableGenerater():
         incompatible_combinations = set()
 
         counter = 0
-        for r in tqdm(range(self.LEFT, self.RIGHT+1), ncols=80):
+        for r in range(self.LEFT, self.RIGHT+1):
             drug_combinations = list(combinations(
                 sorted(self.drug2ids.keys()), r))
 
@@ -459,8 +458,7 @@ class ExcelTableGenerater():
 
         total_processed = 0
 
-        for r in tqdm(range(self.LEFT, self.RIGHT + 1),
-                      ncols=80):
+        for r in range(self.LEFT, self.RIGHT + 1):
             drug_combinations = combinations(sorted(self.drug2ids.keys()), r)
 
             for drugs in drug_combinations:
