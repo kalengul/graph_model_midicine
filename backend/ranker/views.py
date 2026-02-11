@@ -29,6 +29,38 @@ class CalculationAPI(APIView):
     MAN = 'man'
     WOMEN = 'woman'
 
+    def _exist_contraindications(self, drug_ids, contra_ids):
+        """
+        Проверка наличия противопаказаний.
+
+        Проверка пересечения противопоказаний у ЛС из комбинации
+        и противопоказаний, указаных в запросе.
+        """
+        exist = False
+        submessages = []
+
+        drugs = Drug.objects.filter(id__in=drug_ids).prefetch_related(
+            "contraindications")
+        for drug in drugs:
+            intersect = drug.contraindications.filter(id__in=contra_ids)
+            logger.debug(f'drug = {drug.drug_name}')
+            for contra in drug.contraindications.all():
+                logger.debug(f'contra - {contra.id}, {contra.name}')
+            if intersect.exists():
+                logger.debug('Противопоказание у ЛС есть')
+                names = ", ".join(list(intersect.values_list("name",
+                                                             flat=True)))
+                submessages.append(f'{drug.drug_name}: {names}')
+                exist = True
+
+        if submessages:
+            *rest, last = submessages
+            message = ';\n'.join(rest + [last + '.'])
+        else:
+            message = None
+
+        return exist, message
+
     def post(self, request):
         """Временный метод для просмотра изначальной структуры выхода."""
         # logger.debug(f'входная строка {request.build_absolute_uri()}')
@@ -54,31 +86,35 @@ class CalculationAPI(APIView):
 
         med_card = request.FILES.get('medCard', None)
 
+        contraindications = None
+
         if human_data is not None:
-            age = human_data.get('age', 18)
+            age = human_data.get('age', 30)
             if age is None:
-                age = 18
+                age = 30
 
             gender = human_data.get('gender', 'man')
             if gender is None:
                 gender = 'man'
 
-        print('drugs', drugs)
-        print('human_data', human_data)
+            contraindications = human_data.get('cont_list', None)
 
-        index = None
-        if human_data is None:
-            index = 0
-        else:
-            if age < self.AGE and gender == self.MAN:
-                index = 1
-            elif age < self.AGE and gender == self.WOMEN:
-                print('Моложая женщина')
-                index = 2
-            elif age >= self.AGE and gender == self.MAN:
-                index = 3
-            elif age >= self.AGE and gender == self.WOMEN:
-                index = 4
+        print('contraindications =', contraindications)
+
+        index = 0
+        # index = None
+        # if human_data is None:
+        #     index = 0
+        # else:
+        #     if age < self.AGE and gender == self.MAN:
+        #         index = 1
+        #     elif age < self.AGE and gender == self.WOMEN:
+        #         print('Моложая женщина')
+        #         index = 2
+        #     elif age >= self.AGE and gender == self.MAN:
+        #         index = 3
+        #     elif age >= self.AGE and gender == self.WOMEN:
+        #         index = 4
 
         if drugs is None:
             message = (
@@ -107,18 +143,21 @@ class CalculationAPI(APIView):
                 for chunk in med_card.chunks():
                     f.write(chunk)
 
+        сompatibility_fortran = None
+
         banned = DrugPairChecker().check_banned(drugs)
         logger.debug(f'banned = {banned}')
         if banned:
+            сompatibility_fortran = "banned"
             return CustomResponse(
                 status=status.HTTP_200_OK,
                 message='Совместимость ЛС по Fortran успешно расcчитана',
                 http_status=status.HTTP_200_OK,
                 data={
-                    "сompatibility_fortran": "banned",
+                    "сompatibility_fortran": сompatibility_fortran,
                     "combinations": [
                         {
-                            "сompatibility": "banned",
+                            "сompatibility": сompatibility_fortran,
                             "drugs": banned
 
                         }],
@@ -128,6 +167,17 @@ class CalculationAPI(APIView):
                                                     'drug_name', flat=True)),
                     }
                 )
+
+        exist = None
+        if contraindications:
+            exist, description = (
+                self._exist_contraindications(drugs, contraindications))
+
+        if exist:
+            logger.debug('Есть найдено противопоказание')
+            сompatibility_fortran = 'banned-contraindications'
+
+        print('exist =', exist)
 
         start_time = time.time()
 
@@ -146,6 +196,9 @@ class CalculationAPI(APIView):
             elapsed_time = time.time() - start_time
             logger.debug(('Время выполнения экспорда данных '
                           f'и рассчёта: {elapsed_time:.2f} сек.'))
+
+            if сompatibility_fortran:
+                context["сompatibility_fortran"] = сompatibility_fortran
 
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -198,6 +251,10 @@ class GetTablesView(APIView):
         except Exception as error:
             message = 'Ошибка генерации таблиц'
             logger.error(f'{message}. {error}')
+            print("=" * 80)
+            print("КРИТИЧЕСКАЯ ОШИБКА в генерации таблиц:")
+            traceback.print_exc()
+            print("=" * 80)
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=message,

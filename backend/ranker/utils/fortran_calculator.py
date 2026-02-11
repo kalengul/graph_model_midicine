@@ -115,9 +115,9 @@ class FortranCalculator(BaseCalculator):
 
         unique_nj_sub_1 = [idx - 1 for idx in unique_nj]
         drugs_class_2, drugs_class_3 = [], []
-        print('rangs_matrix.shape =', rangs_matrix.shape)
-        logger.debug(f'rangs_matrix = {rangs_matrix}')
-        logger.debug(f'unique_nj_sub_1 = {unique_nj_sub_1}')
+        # print('rangs_matrix.shape =', rangs_matrix.shape)
+        # logger.debug(f'rangs_matrix = {rangs_matrix}')
+        # logger.debug(f'unique_nj_sub_1 = {unique_nj_sub_1}')
         for j in range(self.n_j):
             # if j not in unique_nj_sub_1:
             new_rangsum = rangsum + rangs_matrix[j]
@@ -129,8 +129,8 @@ class FortranCalculator(BaseCalculator):
             elif max_rang >= 0.5:
                 drugs_class_2.append(j)
 
-        print('drugs_class_3 =', drugs_class_3)
-        print('drugs_class_2 =', drugs_class_2)
+        # print('drugs_class_3 =', drugs_class_3)
+        # print('drugs_class_2 =', drugs_class_2)
 
         drug_array2 = [{'name': Drug.objects.get(index=j+1).drug_name,
                         'class': 2}
@@ -144,7 +144,7 @@ class FortranCalculator(BaseCalculator):
                         'class': 3} 
                        for j in drugs_class_3]
 
-        print('drug_array3 =', drug_array3)
+        # print('drug_array3 =', drug_array3)
 
         context['combinations'] = [
             {"сompatibility": 'cause', "drugs": [d['name']
@@ -183,6 +183,8 @@ class CalculatorMP(BaseCalculator):
         self.n_j = len(self.drugs)
         self.drug_names = {drug.index: drug.drug_name for drug in self.drugs}
         self.drug_pk_to_index = {drug.pk: drug.index for drug in self.drugs}
+        self.drug_name_to_index = {drug.drug_name: drug.index
+                                   for drug in self.drugs}
 
         self.side_effects = list(SideEffect.objects.order_by('index'))
         self.n_k = len(self.side_effects)
