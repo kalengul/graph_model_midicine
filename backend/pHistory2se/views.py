@@ -8,14 +8,17 @@ from rest_framework import status
 from django.http import HttpResponse
 
 from .parsers import SimpleDocxParser
-from .extractors import SimpleMedicalExtractor
-
+from .utils.extractors import SimpleMedicalExtractor
+from .utils.normalize_contraindications import normalize_contraindications
+from .model_loader import get_embedding_model, get_synonym_dict
 
 class MedicalHistoryToSideEffectsAPIView(APIView):
     """
     API для анализа медицинских .docx документов
     Публичный эндпоинт без авторизации
     """
+
+    SIMILARITY_THRESHOLD = 0.9 
     
     def post(self, request, *args, **kwargs):
         # Проверка наличия файла
@@ -41,12 +44,23 @@ class MedicalHistoryToSideEffectsAPIView(APIView):
             
             # Извлекаем структурированные данные
             data = SimpleMedicalExtractor.extract(text)
-            
+            contraindications = SimpleMedicalExtractor.extract_contraindications(data)
+
+            # Инициализация модели и сравнение
+            model = get_embedding_model()
+            synonym_dict = get_synonym_dict()
+            normal_contraindications = normalize_contraindications(
+                contraindications,
+                synonym_dict,
+                model,
+                self.SIMILARITY_THRESHOLD
+            )
+
             # Формируем ответ
             response = {
                 "status": "success",
                 "filename": file_obj.name,
-                "contraindications": data,
+                "contraindications": normal_contraindications,
                 "total_contraindications": len(data)
             }
             
