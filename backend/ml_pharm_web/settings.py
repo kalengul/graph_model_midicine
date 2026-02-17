@@ -195,5 +195,6 @@ REST_FRAMEWORK = {
 TXT_DB_PATH = os.path.join(BASE_DIR, 'data/txt_files_db')
 GRAPH_PATH = os.path.join(BASE_DIR, 'data/graphs_for_bayes')
 CART_PATH = os.path.join(BASE_DIR, 'data/med_cards')
+GENERATED_TABLES = os.path.join(BASE_DIR, 'data/generated_tables')
 BACKUP_PATH = os.path.join(BASE_DIR, 'backup')
 LOG_PATH = os.path.join(BASE_DIR, 'logs')

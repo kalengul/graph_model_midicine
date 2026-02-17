@@ -79,8 +79,6 @@ backend/single_calculation_trace.txt
 single_calculation_trace.txt
 debug_tables.xlsx
 
-med_cards/
-
 # exclude
 !backend/graphs/utils/custom_pymorphy/custom_lemma_dict.json
 !backend/graphs/utils/data/side_e_synonim_dict_all.json
@@ -96,5 +94,6 @@ med_cards/
 !backend/data/txt_files_db/banned_pairs.csv
 !backend/mini_front/*
 !backend/data/rank_colors/default_colors.json
+!backend/data/med_cards
 
 backend/mini_front/package-lock.json

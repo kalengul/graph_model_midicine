@@ -1,4 +1,5 @@
 import os
+import json
 import traceback
 import logging
 import base64
@@ -24,7 +25,8 @@ from .serializers import (
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
-from drugs.utils.banned_pairs_loader import CSVBannedPairLoader
+from drugs.utils.banned_pairs_loader import (CSVBannedPairLoader,
+                                             JSONBannedPairLoader)
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
 from accounts.auth import bearer_token_required
@@ -591,11 +593,12 @@ class BannedPairLoadView(APIView):
     IMPORT_ERROR = 'Импорт запрещённых пар ЛС. Ошибка при обработке файл'
     SUCCESSFUL_IMPORT = 'Запрещённый пары ЛС импортированы в БД успешно'
 
-    @bearer_token_required
+    # @bearer_token_required
     def post(self, request, *args, **kwargs):
         """Загрузка запрещённых в БД."""
         serializer = FileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
+
         if serializer.is_valid():
             logger.info('Импорт запрещённых пар ЛС в БД начался')
             importing_file = serializer.validated_data['file']
@@ -630,6 +633,41 @@ class BannedPairLoadView(APIView):
                         http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                     )
 
+                logger.info('Импорт данных в БД закончился')
+
+                return CustomResponse(
+                    status=status.HTTP_200_OK,
+                    message=self.SUCCESSFUL_IMPORT,
+                    http_status=status.HTTP_200_OK
+                )
+            elif importing_file.name.endswith('.json'):
+                file_content = importing_file.read()
+
+                if isinstance(file_content, bytes):
+                    file_content = file_content.decode('utf-8')
+
+                data = json.loads(file_content)
+
+                try:
+                    loader = JSONBannedPairLoader()
+                    logger.info('Очистка БД начинается')
+                    loader.clear_db()
+                    logger.info('БД очистилось')
+                    loader.load_to_db(data=data)
+                except IncorrectFile as error:
+                    logger.error(f'Ошибка работы с файлом: {str(error)}')
+                    return CustomResponse(
+                        status=status.HTTP_400_BAD_REQUEST,
+                        message=str(error),
+                        http_status=status.HTTP_400_BAD_REQUEST)
+                except Exception as error:
+                    traceback.print_exc()
+                    logger.error(f'Ошибка при импорте пар из csv: {str(error)}')
+                    return CustomResponse(
+                        status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                        message=self.IMPORT_ERROR,
+                        http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                    )
                 logger.info('Импорт данных в БД закончился')
 
                 return CustomResponse(

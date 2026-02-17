@@ -1,3 +1,4 @@
+import os
 import traceback
 import logging
 import time
@@ -215,9 +216,9 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class GetTablesView(APIView):
+class TablesView(APIView):
     """
-    Экспорт таблиц.
+    Генерация таблиц.
 
     Таблицы:
         - ранги для ЛС;
@@ -225,8 +226,8 @@ class GetTablesView(APIView):
         - ЛС, противопоказния и их веса.
     """
 
-    def get(self, request):
-        """Получение Excel-файла с таблицами."""
+    def post(self, request):
+        """Генерация Excel-файла с таблицами."""
         try:
             buffer = ExcelTableGenerater().generate_tables()
 
@@ -241,13 +242,11 @@ class GetTablesView(APIView):
                     message='Сгенерированный файл поврежден',
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            return FileResponse(
-                buffer,
-                content_type=('application/vnd.openxmlformats-officedocument.'
-                              'spreadsheetml.sheet'),
-                filename=(f'tables_{timezone.now().strftime("%Y%m%d_%H%M%S")}'
-                          '.xlsx'),
-                as_attachment=True)
+            return CustomResponse(
+                status=status.HTTP_200_OK,
+                message="Excel-файл с таблици сгенерирован успешно",
+                http_status=status.HTTP_200_OK)
+
         except Exception as error:
             message = 'Ошибка генерации таблиц'
             logger.error(f'{message}. {error}')
@@ -259,3 +258,34 @@ class GetTablesView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=message,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    def get(self, request):
+        """Получение Excel-файла с таблицами."""
+        path = Path(settings.GENERATED_TABLES)
+
+        if not path.exists() or not path.is_dir:
+            return CustomResponse(
+                status=status.HTTP_404_NOT_FOUND,
+                message="Нет директории с генерированными excel-таблицами",
+                http_status=status.HTTP_404_NOT_FOUND
+            )
+
+        files = [f for f in path.iterdir() if f.is_file()]
+
+        if not files:
+            return CustomResponse(
+                status=status.HTTP_404_NOT_FOUND,
+                message="В директории нет сгенерированного excel-таблицами",
+                http_status=status.HTTP_404_NOT_FOUND
+            )
+
+        tables_file = max(files, key=lambda f: f.stat().st_mtime)
+
+        print('tables_file.name =', tables_file.name)
+
+        return FileResponse(
+                tables_file.open('rb'),
+                content_type=('application/vnd.openxmlformats-officedocument.'
+                              'spreadsheetml.sheet'),
+                filename=tables_file.name,
+                as_attachment=True)

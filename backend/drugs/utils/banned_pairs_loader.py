@@ -19,7 +19,7 @@ class BannedPairLoader(ABC):
     """Абстрактный загрузчик запрещённых пар."""
 
     @abstractmethod
-    def load_to_db(self):
+    def load_to_db(self, *args, **kwargs):
         """Загрузка запрещённых пар."""
 
     @abstractmethod
@@ -37,14 +37,14 @@ class PandasBannedPairLoader(BannedPairLoader):
     DRUG2_NUMBER = 1
     COMMENT_NUMBER = 2
     NULL_VALUES = ['', 'nan', 'NaN', 'NAN', 'null',
-               'NULL', 'none', 'None', 'NONE', ' ']
+                   'NULL', 'none', 'None', 'NONE', ' ']
 
-    def __init__(self, import_path):
+    def __init__(self, import_path=None):
         """Инициализатор."""
         self.import_path = import_path
 
     @abstractmethod
-    def load_to_db(self):
+    def load_to_db(self, *args, **kwargs):
         """Загрузка запрещённых пар."""
 
     def clear_db(self):
@@ -55,7 +55,7 @@ class PandasBannedPairLoader(BannedPairLoader):
 class CSVBannedPairLoader(PandasBannedPairLoader):
     """Загрузчик запрещённых пар."""
 
-    def load_to_db(self):
+    def load_to_db(self, *args, **kwargs):
         """Загрузка запрещённых пар из CSV-файлов."""
         try:
             df = pd.read_csv(self.import_path,
@@ -122,7 +122,7 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
                                                   second_drug=drug2,
                                                   comment=comment)
                 else:
-                    logger.debug('Нет  в БД')
+                    logger.debug('Нет в БД')
                     logger.debug(f'drug1 = {drug1}')
                     logger.debug(f'drug2 = {drug2}')
         except Exception as error:
@@ -134,3 +134,43 @@ class CSVBannedPairLoader(PandasBannedPairLoader):
     def clear_db(self):
         """Очистка БД от старых пар ЛС."""
         super().clear_db()
+
+
+class JSONBannedPairLoader(ABC):
+    """Загрузчик запрещённых пар из JSON."""
+
+    DRUG = "drug"
+    BANNED_DRUGS = "banned_drugs"
+    DATA = "data"
+
+    def load_to_db(self, *args, **kwargs):
+        """Загрузка запрещённых пар из JSON-файлов."""
+        try:
+            drugs = kwargs[self.DATA]
+
+            for drug in drugs:
+                drug1 = drug[self.DRUG].strip()
+
+                for drug2 in drug[self.BANNED_DRUGS]:
+                    drug2 = drug2.strip()
+                    if (Drug.objects.filter(drug_name__iexact=drug1).exists()
+                            and Drug.objects.filter(drug_name__iexact=drug2
+                                                    ).exists()):
+                        logger.debug('Есть в БД')
+                        logger.debug(f'drug1 = {drug1}')
+                        logger.debug(f'drug2 = {drug2}')
+                        BannedDrugPair.objects.create(first_drug=drug1,
+                                                      second_drug=drug2)
+                    else:
+                        logger.debug('Нет в БД')
+                        logger.debug(f'drug1 = {drug1}')
+                        logger.debug(f'drug2 = {drug2}')
+        except Exception as error:
+            message = ('Проблема загрузки пар ЛС. '
+                       'Ошибка при добавлении пары в БД')
+            logger.error(message)
+            raise PairDBError(message) from error
+
+    def clear_db(self):
+        """Очистка БД от старых пар ЛС."""
+        BannedDrugPairCleanProcessor().get_cleaner().clear_table()
