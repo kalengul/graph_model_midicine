@@ -110,6 +110,45 @@ class MedicalHistoryToSideEffectsAPIView(APIView):
             "data": {}
         }, status=status_code)
     
+
+    def patch(self, request, *args, **kwargs):
+        """
+        Эндпоинт для изменения порога схожести (SIMILARITY_THRESHOLD).
+        Метод: PATCH
+        Body: { "threshold": 0.85 }
+        """
+        new_threshold = request.data.get('threshold')
+
+        if new_threshold is None:
+            return self._error_response("Поле 'threshold' обязательно.", 400)
+
+        try:
+            # Преобразуем в float
+            new_threshold = float(new_threshold)
+        except (TypeError, ValueError):
+            return self._error_response("Значение 'threshold' должно быть числом (float).", 400)
+
+        # Валидация диапазона (обычно от 0.0 до 1.0)
+        if not (0.0 <= new_threshold <= 1.0):
+            return self._error_response("Значение 'threshold' должно быть в диапазоне от 0.0 до 1.0.", 400)
+
+        # Обновляем атрибут класса
+        old_threshold = self.SIMILARITY_THRESHOLD
+        self.SIMILARITY_THRESHOLD = new_threshold
+
+        logger.info(f"Порог схожести изменен: {old_threshold} -> {new_threshold}")
+
+        return Response({
+            "result": {
+                "status": 200,
+                "message": f"Порог успешно обновлен"
+            },
+            "data": {
+                "previous_threshold": old_threshold,
+                "current_threshold": new_threshold
+            }
+        }, status=status.HTTP_200_OK)
+    
 class LoaderSynonymDictFileView(APIView):
     """
     Управление файлом словаря синонимов.
