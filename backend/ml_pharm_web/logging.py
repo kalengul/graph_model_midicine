@@ -122,7 +122,13 @@ loggers = {
                                    else ['med_bayes_file']),
         'level': 'DEBUG',
         'propagate': False
-    }
+    },
+    'medical_history': {
+        'handlers': ['console'] + ([] if DEBUG 
+                                   else ['contraindications_file']), 
+        'level': 'DEBUG',
+        'propagate': False
+    },
 }
 
 LOGGING = {

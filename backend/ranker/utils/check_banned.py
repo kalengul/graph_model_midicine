@@ -13,7 +13,7 @@ class BannedChecker(ABC):
 
     @abstractmethod
     def check_banned(self, *args, **kwargs):
-        """Провекра на наличие запретов."""
+        """Проверка на наличие запретов."""
 
 
 class DrugPairChecker(BannedChecker):

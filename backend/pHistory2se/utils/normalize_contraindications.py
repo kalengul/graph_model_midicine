@@ -4,12 +4,19 @@ from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Set
 
-from .SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+# import os
+# import django
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ml_pharm_web.settings')
+# django.setup()
+
+from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+
+# from .SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 def normalize_contraindications(
     contraindications: List[str],
     synonym_dict: Dict[str, List[str]],
-    model_path: str,
+    processor: SemanticEmbeddingProcessor,
     similarity_threshold: float = 0.85
 ) -> List[str]:
     """
@@ -18,7 +25,7 @@ def normalize_contraindications(
     Args:
         contraindications: Список извлечённых противопоказаний.
         synonym_dict: Словарь вида {стандартный_термин: [синоним1, синоним2, ...]}.
-        model_path: Путь к локальной модели SentenceTransformer.
+        processor: SemanticEmbeddingProcessor
         similarity_threshold: Порог косинусного сходства (0.0–1.0).
     
     Returns:
@@ -34,19 +41,18 @@ def normalize_contraindications(
         for synonym in synonyms
     }
 
-    # Инициализируем процессор и находим ближайшие синонимы
-    processor = SemanticEmbeddingProcessor(model_path)
-    matched_synonyms = processor.normalize_terms(
-        raw_terms=contraindications,
-        standard_terms=list(synonym_to_standard.keys()),
-        threshold=similarity_threshold
+    # Поиск ближайших синонимов
+    matched_synonyms = processor.find_similar_terms(
+        queries=contraindications,
+        corpus_terms=list(synonym_to_standard.keys()),
+        similarity_threshold=similarity_threshold
     )
 
     # Преобразуем найденные синонимы в стандартные термины
     normalized = [
-        synonym_to_standard[synonym]
-        for synonym in matched_synonyms
-        if synonym in synonym_to_standard
+        synonym_to_standard[standart[0]['term']]
+        for raw, standart in matched_synonyms.items()
+        if standart
     ]
 
     return normalized
@@ -62,8 +68,8 @@ if __name__ == "__main__":
     SYNONYM_DICT_PATH =  f"{DATA_DIR}dictionaries\\dict_synonym_contraindications.json"
     MEDCARD_PATH = f"{DATA_DIR}medcard_files\\Выписка_ХСН_3.docx"
     MODEL_PATH = f"{DATA_DIR}sentence_transformer_models\\all-MiniLM-L6-v2"
-    # MODEL_PATH = DATA_DIR / "sentence_transformer_models" / "rubert-tiny2"
-    # MODEL_PATH = DATA_DIR / "sentence_transformer_models" / "synonym-model_4"
+    # MODEL_PATH = f"{DATA_DIR}sentence_transformer_models\\rubert-tiny2"
+    # MODEL_PATH = f"{DATA_DIR}sentence_transformer_models\\synonym-model_4"
 
     with open(SYNONYM_DICT_PATH, 'r', encoding='utf-8') as file:
         synonym_dict = json.load(file)
@@ -73,13 +79,16 @@ if __name__ == "__main__":
     parsed_text = SimpleMedicalExtractor.extract(text)
     contraindications = SimpleMedicalExtractor.extract_contraindications(parsed_text)
     
+    # Инициализируем процессор
+    processor = SemanticEmbeddingProcessor(MODEL_PATH)
+    
     print(f"Исходные противопоказания: {contraindications}")
     
     # Вызов новой функции
     normalized_result = normalize_contraindications(
         contraindications=contraindications,
         synonym_dict=synonym_dict,
-        model_path=MODEL_PATH,
+        processor=processor,
         similarity_threshold=0.90
     )
     
