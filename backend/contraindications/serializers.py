@@ -4,7 +4,7 @@ from contraindications.models import Contraindication
 
 
 class BaseContraindicationSerialize(serializers.ModelSerializer):
-    """Класс прорадитель для сериализаторов """
+    """Класс прародитель для сериализаторов """
 
     cont_id = serializers.IntegerField(read_only=True, source='id')
     cont_name = serializers.CharField(source='name')

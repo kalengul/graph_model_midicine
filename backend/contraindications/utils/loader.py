@@ -37,6 +37,7 @@ class LoadAndBuildDrugContraindications:
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
+                logger.debug(f'Drug.DoesNotExist: {drug_name}')
                 continue
 
             for name in item[self.CONTRAS]:
