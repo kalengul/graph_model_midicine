@@ -159,8 +159,11 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if (res.data.age) setAge(res.data.age)
                     if (res.data.gender) setGender(res.data.gender)
                     if (res.data.cont_list) {
-                        setCheckedContraindIds(res.data.cont_list) //Заполняем список выбранных ID
+                        console.log(typeof(res.data.cont_list[0]))
+
+                        setCheckedContraindIds(res.data.cont_list.map(c=>c.toString())) //Заполняем список выбранных ID
                         //Заполняем противопоказания для отображения
+                        setShowCheckedContraind([])
                         res.data.cont_list.map(elem => {
                             const cont = contraindList.find(e => e.cont_id.toString() === elem.toString())
                             if(cont) setShowCheckedContraind(prev => [...prev, cont])
@@ -177,6 +180,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
         //вызов автозаполнения формы
 
     }
+
+    console.log(checkedContraindIds)
 
     //Отправка данных
     const SendDataHandler = (e: React.MouseEvent<HTMLButtonElement>) =>{
@@ -262,7 +267,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                             </div>
                         </div> 
                         <div className='showBlock'>
-                            <label className='form-label control-label'>Лекарственнные средства выбранные для расчета:</label>
+                            <label className='form-label control-label'>Лекарственнные средства, выбранные для расчета:</label>
                             <div className='showBlock-list'>
                                 {
                                     showCkeckedDrug && showCkeckedDrug.map(drug=>(
