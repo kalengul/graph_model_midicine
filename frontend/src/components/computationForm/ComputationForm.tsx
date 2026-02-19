@@ -5,7 +5,7 @@ import "./ComputationForm.scss"
 import { Validation, IValidation } from './validation';
 
 import { iteractionBayes, sendFormBayes, addDrugIds } from '../../redux/ComputationBayesSlice';
-import { iteractionFortran, sendFormFortran } from '../../redux/ComputationFortranSlice';
+import { iteractionFortran, sendFormFortran, autoСompletionFortran} from '../../redux/ComputationFortranSlice';
 
 type GenderType = 'man' | 'woman' | '';
 interface IComputationFormProps {
@@ -151,10 +151,30 @@ export const ComputationForm = (props: IComputationFormProps) =>{
 
         if (file) {
             setSelectedFile(file);
+
+            //автозаполнение
+            const autoComplete = dispatch(autoСompletionFortran(file)).unwrap()
+            autoComplete.then(res =>{
+                if(res.result.status === 200) {
+                    if (res.data.age) setAge(res.data.age)
+                    if (res.data.gender) setGender(res.data.gender)
+                    if (res.data.cont_list) {
+                        setCheckedContraindIds(res.data.cont_list) //Заполняем список выбранных ID
+                        //Заполняем противопоказания для отображения
+                        res.data.cont_list.map(elem => {
+                            const cont = contraindList.find(e => e.cont_id.toString() === elem.toString())
+                            if(cont) setShowCheckedContraind(prev => [...prev, cont])
+                        })
+                    }
+                }
+            })
+
         }
         else{
             setSelectedFile(null)
         }
+
+        //вызов автозаполнения формы
 
     }
 
@@ -202,7 +222,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
             } else if(props.type === 'fortran'){
                 const sendData: sendFormFortran = {
                     drugs: checkedDrugIds.map(drugId => Number(drugId)),
-                    humanData: undefined
+                    humanData: undefined,
+                    medCard: null
                 }
 
                 if(age !="" || gender != "" || checkedContraindIds.length>0) {
@@ -211,6 +232,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if(gender != "") sendData.humanData.gender = gender
                     if(checkedContraindIds.length>0) sendData.humanData.cont_list = checkedContraindIds
                 }
+
+                if(selectedFile) sendData.medCard = selectedFile
 
                 console.log(sendData)
 
