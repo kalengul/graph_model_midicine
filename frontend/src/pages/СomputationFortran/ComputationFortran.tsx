@@ -53,7 +53,7 @@ export const ComputationFortran = () =>{
                         <h5>Проверяемые лекарственные средства: {Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
                         <h5 className="mt-3">Результаты: </h5>
                         <ComputationResults compatibility={resultFortran.сompatibility_fortran} />
-                        {resultFortran.сompatibility_fortran !== "banned" &&
+                        {resultFortran.сompatibility_fortran !== "banned" && resultFortran.сompatibility_fortran !== "banned-contraindications" &&
                         <>
                             <h5 className="mt-3">Риски побочных эффектов: </h5>
                         
