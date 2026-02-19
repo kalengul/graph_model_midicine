@@ -190,15 +190,16 @@ class FortranCalculatorNormalization(BaseCalculator):
 
     def _apply_canceling_normalization(self, rangsum, canceling_groups):
         normalized_rangsum = rangsum.copy()
-
+        #logger.debug(f'normalized_rangsum = {normalized_rangsum}')
         for group in canceling_groups:
             # Преобразуем индексы эффектов (1-based) в индексы массива (0-based)
             array_indices = [idx - 1 for idx in group]
             # Получаем ранги для эффектов в группе
             group_ranks = rangsum[array_indices]
+
             # Вычисляем общую сумму рангов в группе
             total_group_rank = np.sum(group_ranks)
-
+            
             if total_group_rank == 0:
                 continue
 
@@ -206,14 +207,16 @@ class FortranCalculatorNormalization(BaseCalculator):
             weights = group_ranks / total_group_rank
 
             # Распределяем общую сумму пропорционально исходным рангам
-            for idx, weight in zip(array_indices, weights):
-                normalized_rangsum[idx] = total_group_rank * weight
+            normalized_rangsum[array_indices]=group_ranks*weights
 
+            #logger.debug(f'group_ranks = {group_ranks}, total_group_rank = {total_group_rank}, weights = {weights}, normalized_rangsum = {normalized_rangsum}')
+        #logger.debug(f'normalized_rangsum = {normalized_rangsum}')
         return normalized_rangsum
 
     def calculate(self, rank_name, nj, canceling_groups=None):
-        #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]]
+        #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2], [4, 5], [7, 10]]
         # Валидация входного массива
+        logger.debug(f"Групп нивелирования: {canceling_groups}")
         if canceling_groups is not None:
             if not isinstance(canceling_groups, list):
                 logger.error("cancel_groups должен быть списком")
@@ -235,6 +238,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         unique_nj = list(set(non_zero_nj))
         num_drugs = len(unique_nj)
 
+
         if rank_name is None:
             rank_name = self.get_default_rank_name()
 
@@ -248,11 +252,15 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         # Вычисление суммы рангов по эффектам
         rangsum = np.sum(rang1, axis=0)
-
+        for k in range(self.n_k):
+            logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
         # Применяем нормализацию для нивелирующих эффектов
         if canceling_groups:
             rangsum = self._apply_canceling_normalization(rangsum, canceling_groups)
-
+        
+        for k in range(self.n_k):
+            logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
+       
         ram = np.max(rangsum)
 
         # Классификация
@@ -529,9 +537,11 @@ def get_calculator(use_multiprocessing=False, use_normalization=True):
         Экземпляр калькулятора
     """
     if use_multiprocessing:
-        return CalculatorMP()
+        pass
+        #return CalculatorMP()
     elif use_normalization:
         canceling_effects_json_manual=[[2,3],[5,14],[32,33],[51,52],[86,87]]
-        return FortranCalculatorNormalization(canceling_effects_json=canceling_effects_json_manual)
+        #return FortranCalculatorNormalization(canceling_effects_json=canceling_effects_json_manual)
     else:
-        return FortranCalculator()
+        pass
+        #return FortranCalculator()
