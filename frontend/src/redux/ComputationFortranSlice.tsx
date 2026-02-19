@@ -22,9 +22,9 @@ const initStateFortran: IResultFortran = {
 }
 
 interface IHumanData{
-  age: number | undefined;
-  gender: "man" | "woman" | undefined;
-  cont_list: string[] | undefined;
+  age: number | undefined | null;
+  gender: "man" | "woman" | undefined | null;
+  cont_list: string[] | undefined | null;
 }
 
 export interface sendFormFortran{
@@ -58,20 +58,46 @@ export const iteractionFortran = createAsyncThunk<
 >('computationFortranSlice/iteractionFortran', async (data: sendFormFortran, { rejectWithValue }) => {
   try {
       const formData = new FormData();
-      
-      // Добавляем простые данные
+      // Добавление данных
       formData.append('drugs', JSON.stringify(data.drugs));
-      
       if (data.humanData) {
         formData.append('humanData', JSON.stringify(data.humanData));
       }
-      
-      // Добавляем файл, если он есть
       if (data.medCard) {
         formData.append('medCard', data.medCard);
       }
 
       const response = await axios.post('/api/polifarmakoterapiya-fortran/', formData, {
+        headers:{'Content-Type': 'multipart/form-data'},//'application/json'},
+      })
+      return response.data;
+      
+  } catch (err) {
+    const error = err as AxiosError<IRejectFortran>;
+    if (error.response) {
+      return rejectWithValue(error.response.data);
+    }
+  }
+});
+
+interface IResponseAutoCompliteFortran{
+  result: IResult,
+  data: IHumanData
+}
+
+export const autoСompletionFortran = createAsyncThunk<
+  IResponseAutoCompliteFortran, // Тип возвращаемого значения при успехе
+  File, // Тип аргумента
+  {
+      rejectValue: IRejectFortran; // Тип rejectWithValue
+  }
+>('computationFortranSlice/autoCompliteFortran', async (data: File, { rejectWithValue }) => {
+  try {
+      const formData = new FormData();
+      // Добавление данных
+      formData.append('file', data);
+
+      const response = await axios.post('/api/humandata_from_medcard/', formData, {
         headers:{'Content-Type': 'multipart/form-data'},//'application/json'},
       })
       return response.data;

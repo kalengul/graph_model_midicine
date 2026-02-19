@@ -7,8 +7,8 @@ import json
 from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 # Пути (можно вынести в settings.py позже)
-EMB_MODEL_PATH = 'data\\sentence_transformer_models\\all-MiniLM-L6-v2'
-# EMB_MODEL_PATH = 'all-MiniLM-L6-v2'
+# EMB_MODEL_PATH = 'data\\sentence_transformer_models\\all-MiniLM-L6-v2'
+EMB_MODEL_PATH = 'all-MiniLM-L6-v2'
 SYNONYM_DICT_PATH = "data\\dictionaries\\dict_synonym_contraindications.json"
 
 # Глобальная переменная — будет инициализирована один раз
