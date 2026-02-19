@@ -1,7 +1,7 @@
 from django.db import models
 
 
-MAX_LENGTH = 255
+MAX_LENGTH = 1024
 
 
 class Contraindication(models.Model):

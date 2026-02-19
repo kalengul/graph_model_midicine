@@ -215,7 +215,7 @@ class LoadContraindicationView(APIView):
                 content_type='application/json'
             )
             response['Content-Disposition'] = (
-                'attachment; filename="expoerted_contraindications.json"')
+                'attachment; filename="exported_contraindications.json"')
             return response
         except Exception as error:
             logger.error(f'Ошибка выгрузки противопоказаний {error}')
