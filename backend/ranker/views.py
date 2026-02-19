@@ -11,7 +11,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
 
-from ranker.utils.fortran_calculator import FortranCalculator
+from ranker.utils.fortran_calculator import FortranCalculator,FortranCalculatorNormalization
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
@@ -62,7 +62,7 @@ class CalculationAPI(APIView):
 
         return exist, message
 
-    def post(self, request):
+    def post(self, request, normalization_calculate=True):
         """Временный метод для просмотра изначальной структуры выхода."""
         # logger.debug(f'входная строка {request.build_absolute_uri()}')
 
@@ -181,8 +181,11 @@ class CalculationAPI(APIView):
         print('exist =', exist)
 
         start_time = time.time()
-
-        calculator = FortranCalculator()
+        
+        if normalization_calculate:
+            calculator = FortranCalculatorNormalization()
+        else:
+            calculator = CalculatorMP()
 
         while len(drugs) < calculator.n_k:
             drugs.append(0)
@@ -190,10 +193,17 @@ class CalculationAPI(APIView):
         try:
             rank_name = IDX_2_RANK_NAME[index]
             logger.debug(f'filename во вьюшке = {rank_name}')
-            context = calculator.calculate(
-                rank_name=rank_name,
-                nj=drugs)
-
+            if normalization_calculate:           
+                canceling_effects_json_manual=[[2,3],[5,14],[32,33],[51,52],[86,87]]
+                context = calculator.calculate(
+                    rank_name=rank_name,
+                    nj=drugs,
+                    canceling_groups=canceling_effects_json_manual)
+            else:
+                context = calculator.calculate(
+                    rank_name=rank_name,
+                    nj=drugs)
+                
             elapsed_time = time.time() - start_time
             logger.debug(('Время выполнения экспорда данных '
                           f'и рассчёта: {elapsed_time:.2f} сек.'))
