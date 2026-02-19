@@ -7,8 +7,8 @@ from django.conf import settings
 from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 # Пути (можно вынести в settings.py позже)
-EMB_MODEL_PATH = 'data\\sentence_transformer_models\\all-MiniLM-L6-v2'
-# EMB_MODEL_PATH = 'all-MiniLM-L6-v2'
+# EMB_MODEL_PATH = 'data\\sentence_transformer_models\\all-MiniLM-L6-v2'
+EMB_MODEL_PATH = 'all-MiniLM-L6-v2'
 SYNONYM_DICT_FILE = "dict_synonym_contraindications.json"
 
 DIR_PATH = Path(settings.SYNONYM_PATH)
