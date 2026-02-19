@@ -34,7 +34,7 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
         case "banned-contraindications":
             return(
                 <div className="ComputationResults incompatible">
-                    <p>Примемение запрещено в связи с индивидуальными противопоказаниями пациента</p>
+                    <p>Примение запрещено в связи с индивидуальными противопоказаниями пациента</p>
                 </div>
             )
         default:

@@ -334,7 +334,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     </div>
                     {/* Загрузка медкарты */}
                     <div>
-                        <label className=' control-label'>Закгрузить медицинскую карту:</label>
+                        <label className=' control-label'>Загрузить медицинскую карту:</label>
                         <input className="form-control" type="file" id="formFile" onChange={checkFileHandler}/>
                     </div>
                 </div>
