@@ -262,7 +262,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                             </div>
                         </div> 
                         <div className='showBlock'>
-                            <label className='form-label control-label'>Выбранные для расчета:</label>
+                            <label className='form-label control-label'>Лекарственнные средства выбранные для расчета:</label>
                             <div className='showBlock-list'>
                                 {
                                     showCkeckedDrug && showCkeckedDrug.map(drug=>(
@@ -317,7 +317,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                 </div>
                             </div> 
                             <div className='showBlock'>
-                                <label className='form-label control-label'>Выбранные для расчета:</label>
+                                <label className='form-label control-label'>Противопоказания, выбранные для расчета:</label>
                                 <div className='showBlock-list size-s'>
                                     {
                                         showCkeckedContraind && showCkeckedContraind.map(cont=>(
