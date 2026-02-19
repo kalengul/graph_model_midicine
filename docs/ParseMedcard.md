@@ -24,7 +24,7 @@ Content-Type: multipart/form-data
 ### Пример входных данных
 ```json
 {
-    "medCard": binary,   
+    "file": binary,   
 }
 ```
 
