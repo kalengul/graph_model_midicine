@@ -74,13 +74,20 @@ class ExcelLoader(Loader):
     RANK_COLUMN = 'ранг'
     EXPORT_DATE_SHEET = 'Export Date'
 
-    def __init__(self, import_path=None, export_path=None):
+    def __init__(self, import_path=None, export_path=None, transpose=False):
         """
         Конструктор.
 
         Принимает путь к файл с данными.
-        Если путь не указан, загружается из файл по умолчания.
+        Если путь не указан, загружается из файл по умолчанию.
+        
+        Args:
+            import_path: путь к файлу импорта
+            export_path: путь для экспорта
+            transpose: флаг транспонирования матрицы рангов
         """
+        self.transpose = transpose  # Сохраняем флаг
+
         if import_path:
             self.import_path = import_path
         else:
@@ -188,7 +195,7 @@ class ExcelLoader(Loader):
         except Exception as error:
             raise Exception(f'Проблема с загрузкой {error}')
 
-    def _load_ranks(self):
+    def _load_ranks(self, transpose=False):
         """Загрузка рангов."""
         df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
 
@@ -198,6 +205,13 @@ class ExcelLoader(Loader):
 
         drugs = list(Drug.objects.order_by('id'))
         effects = list(SideEffect.objects.order_by('id'))
+
+        # Транспонирование если нужно
+        if self.transpose:
+            logger.info("Выполняется транспонирование матрицы рангов")
+            df = df.T
+            df = df.reset_index(drop=True)
+            logger.debug(f"Новая размерность после транспонирования: {df.shape}")
 
         logger.debug(f'Число ЛС = {len(drugs)}')
         logger.debug(f'Число ПД = {len(effects)}')
