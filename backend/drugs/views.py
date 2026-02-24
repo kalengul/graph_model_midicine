@@ -494,12 +494,15 @@ class ExcelLoadView(APIView):
 
     # @bearer_token_required
     def post(self, request, *args, **kwargs):
-        """Загрузкад данных из excel-файла в БД."""
+        """Загрузка данных из excel-файла в БД."""
         serializer = FileSerializer(data=request.data)
         logger.debug(f'request.data = {request.data}')
         if serializer.is_valid():
             logger.info('Импорт данных в БД начался')
             excel_file = serializer.validated_data['file']
+
+            # Или из form-data:
+            transpose = request.data.get('transpose', '').lower() == 'true'
 
             if not excel_file.name.endswith('.xlsx'):
                 return CustomResponse(
@@ -517,7 +520,7 @@ class ExcelLoadView(APIView):
                 with open(excel_path, 'wb+') as file:
                     file.write(excel_file.read())
                 excel_path = os.path.abspath(excel_path)
-                loader = ExcelLoader(import_path=excel_path)
+                loader = ExcelLoader(import_path=excel_path, transpose=transpose)
                 if loader._check_excel_file():
                     logger.info('Очистка БД начинается')
                     DBManipulator().clean_db()

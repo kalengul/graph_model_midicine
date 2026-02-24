@@ -194,7 +194,7 @@ class CalculationAPI(APIView):
             rank_name = IDX_2_RANK_NAME[index]
             logger.debug(f'filename во вьюшке = {rank_name}')
             if normalization_calculate:           
-                canceling_effects_json_manual=[[2,3],[5,14],[32,33],[51,52],[86,87]]
+                canceling_effects_json_manual=[[2,3],[5,14],[7,13],[32,33],[51,52],[86,87]]
                 context = calculator.calculate(
                     rank_name=rank_name,
                     nj=drugs,
