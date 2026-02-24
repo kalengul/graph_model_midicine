@@ -20,7 +20,15 @@ class DrugPairChecker(BannedChecker):
     """Класс для проверки запрещённых пар ЛС."""
 
     def check_banned(self, drugs):
-        """Проверка на наличие запрещённых пар ЛС."""
+        """
+        Проверка на наличие запрещённых пар ЛС.
+        
+        Args:
+            drugs: list[int] - список ID препаратов для проверки
+            
+        Returns:
+            list[tuple] - список запрещённых пар (название1, название2, комментарий)
+        """
         drug_map = (
             {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)})
         banned_pairs = []
