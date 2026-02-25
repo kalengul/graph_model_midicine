@@ -11,7 +11,7 @@ from drugs.models import BannedDrugPair, Drug
 from drugs.utils.custom_exception import (PairFileError,
                                           PairDBError)
 from drugs.utils.cleaner import BannedDrugPairCleanProcessor
-
+from typing import List, Dict, Tuple
 
 logger = logging.getLogger('drugs')
 
@@ -143,6 +143,7 @@ class JSONBannedPairLoader(ABC):
     DRUG = "drug"
     BANNED_DRUGS = "banned_drugs"
     DATA = "data"
+    BANNED_GROUPS = "banned_groups"
 
     @staticmethod
     def normalize_plus_sign(text):
@@ -174,6 +175,36 @@ class JSONBannedPairLoader(ABC):
         
         return processed
 
+    def _expand_by_groups(self, drugs_data):
+        """
+        Расширяет поле 'banned_drugs' для каждого препарата,
+        добавляя нормализованные названия препаратов из групп, указанных в 'banned_groups'.
+        Модифицирует список на месте.
+        """
+        # Индекс группа → множество нормализованных препаратов
+        group_to_drugs = {}
+        for item in drugs_data:
+            drug = self.preprocess_drug_name(item.get(self.DRUG))
+            group = item.get('group')
+            if drug and group:
+                group_to_drugs.setdefault(group, set()).add(drug)
+
+        # Для каждого препарата расширяем banned_drugs
+        for item in drugs_data:
+            drug1 = self.preprocess_drug_name(item.get(self.DRUG))
+            banned_groups = item.get('banned_groups', [])
+            if not banned_groups:
+                continue
+            additional = set()
+            for banned_group in banned_groups:
+                for drug2 in group_to_drugs.get(banned_group, []):
+                    if drug1 != drug2:
+                        additional.add(drug2)
+            if additional:
+                current = set(item.get(self.BANNED_DRUGS, []))
+                # Добавляем нормализованные названия (они будут обработаны в основном цикле)
+                item[self.BANNED_DRUGS] = list(current | additional)
+    
     def load_to_db(self, *args, **kwargs):
         """Загрузка запрещённых пар из JSON-файлов."""
         created_pairs = set()  # Множество для отслеживания созданных пар
@@ -183,7 +214,8 @@ class JSONBannedPairLoader(ABC):
         
         try:
             drugs = kwargs[self.DATA]
-
+            # --- НОВЫЙ ШАГ: группы ---
+            self._expand_by_groups(drugs)
             for drug in drugs:
                 # Предобработка основного препарата
                 raw_drug1 = drug[self.DRUG]
@@ -257,3 +289,112 @@ class JSONBannedPairLoader(ABC):
     def clear_db(self):
         """Очистка БД от старых пар ЛС."""
         BannedDrugPairCleanProcessor().get_cleaner().clear_table()
+
+
+# class GroupBannedPairLoader (ABC):
+#     """
+#     Загрузчик запрещённых пар ЛС на основе групп из .json.
+#     """
+
+#     # Ключи полей 
+#     DRUG_KEY = 'drug'
+#     GROUP_KEY = 'group'
+#     BANNED_GROUPS_KEY = 'banned_groups'
+
+#     @staticmethod
+#     def normalize_plus_sign(text: str) -> str:
+#         """
+#         Нормализует пробелы вокруг знака '+'.
+#         Пример: "Препарат + Другой" -> "Препарат+Другой"
+#         """
+#         return re.sub(r'\s*\+\s*', '+', text)
+
+#     @classmethod
+#     def preprocess_drug_name(self, drug_name):
+#         """
+#         Предобработка названия препарата:
+#         1. Удаление пробелов в начале и конце
+#         2. Нормализация пробелов вокруг знака +
+#         3. Приведение к нижнему регистру
+#         """
+#         if not drug_name:
+#             return drug_name
+            
+#         # Удаляем пробелы в начале и конце
+#         processed = drug_name.strip()
+        
+#         # Нормализуем пробелы вокруг знака +
+#         processed = self.normalize_plus_sign(processed)
+        
+#         # Приводим к нижнему регистру для регистронезависимого сравнения
+#         processed = processed.lower()
+        
+#         return processed
+
+#     def find_banned_pairs_by_group(self, data: List[Dict]) -> List[Tuple[str, str]]:
+#         """
+#         Анализирует входные данные и возвращает список уникальных пар (drug1, drug2),
+#         которые должны быть запрещены согласно логике групп.
+#         """
+#         # Индекс: группа -> множество препаратов
+#         group_to_drugs: Dict[str, Set[str]] = {}
+
+#         # Сначала заполняем индекс
+#         for item in data:
+#             drug = self.preprocess_drug_name(item.get(self.DRUG_KEY))
+#             group = item.get(self.GROUP_KEY)
+#             if drug and group:
+#                 group_to_drugs.setdefault(group, set()).add(drug)
+
+#         # Множество для хранения уникальных пар (отсортированных)
+#         pairs: Set[Tuple[str, str]] = set()
+
+#         # Проходим по данным и формируем пары
+#         for item in data:
+#             drug1 = self.preprocess_drug_name(item.get(self.DRUG_KEY))
+#             banned_groups = item.get(self.BANNED_GROUPS_KEY, [])
+
+#             for banned_group in banned_groups:
+#                 for drug2 in group_to_drugs.get(banned_group, []):
+#                     if drug1 == drug2:
+#                         continue
+#                     # Сортируем, чтобы пара была канонической (first_drug, second_drug)
+#                     pair = tuple(sorted([drug1, drug2]))
+#                     pairs.add(pair)
+
+#         return list(pairs)
+
+#     def load_to_db(self, *args, **kwargs):
+#         """
+#         Загружает запрещённые пары в БД.
+#         Ожидает именованный аргумент 'data' со списком словарей.
+#         Возвращает количество созданных записей.
+#         """
+#         data = kwargs.get('data')
+#         if data is None:
+#             raise ValueError("Не передан обязательный параметр 'data'")
+
+#         # 1. Получаем все потенциальные пары по группам
+#         new_pairs = self.find_banned_pairs_by_group(data)
+
+#         # 2. Получаем уже существующие пары из БД в виде множества отсортированных кортежей
+#         existing_pairs = set()
+#         for first, second in BannedDrugPair.objects.values_list('first_drug', 'second_drug'):
+#             # Приводим к нормализованному виду на случай, если в БД есть неканонические записи
+#             norm_first = self.normalize_drug_name(first)
+#             norm_second = self.normalize_drug_name(second)
+#             existing_pairs.add(tuple(sorted([norm_first, norm_second])))
+
+#         # 3. Оставляем только те, которых ещё нет
+#         pairs_to_add = [pair for pair in new_pairs if pair not in existing_pairs]
+
+#         # 4. Создаём записи в БД
+#         created_count = 0
+#         for first, second in pairs_to_add:
+#             BannedDrugPair.objects.create(first_drug=first, second_drug=second)
+#             created_count += 1
+#             # Здесь можно добавить логирование, например:
+#             # logger.debug(f"Создана пара: {first} – {second}")
+
+#         # 5. Возвращаем результат (можно также вернуть список добавленных пар)
+#         return created_count
