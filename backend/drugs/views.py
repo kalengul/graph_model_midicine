@@ -657,10 +657,10 @@ class BannedPairLoadView(APIView):
                     loader.clear_db()
                     logger.info('БД очистилось')
                     loader.load_to_db(data=data)
-                    """"вообще тут оч плохо все. лоад ту дб надо вынести в отдельную фукницю, как и 
-                    def normalize_plus_sign  def preprocess_drug_name """
-                    loader = GroupBannedPairLoader()
-                    loader.load_to_db(data=data)
+                    # """"вообще тут оч плохо все. лоад ту дб надо вынести в отдельную фукницю, как и 
+                    # def normalize_plus_sign  def preprocess_drug_name """
+                    # loader = GroupBannedPairLoader()
+                    # loader.load_to_db(data=data)
                 except IncorrectFile as error:
                     logger.error(f'Ошибка работы с файлом: {str(error)}')
                     return CustomResponse(
