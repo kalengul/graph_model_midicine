@@ -18,7 +18,7 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, v
             const riscItem = item as ISE;
             return(
                 <>
-                <div className={flex jc-sb w-100 ps-3 pe-3 ${index===0 && "mt-3"}} key={index}>
+                <div className={`flex jc-sb w-100 ps-3 pe-3 ${index===0 && "mt-3"}`} key={index}>
                     <div>
                         <span className='me-3'>{index+1}.</span> 
                         <span>{riscItem.se_name}</span>
