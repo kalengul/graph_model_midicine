@@ -60,6 +60,14 @@ export const Nav = ()=>{
 
                     <ul className="nav nav-pills flex-column mb-auto">
                         {Array.isArray(menu) && menu.map((elem, index)=>
+                            (elem.slug==="/computationBayes")?
+                             ( isAuth &&
+                                <li className='nav-item mb-3 nav-main' key={index}>
+                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
+                                        {elem.title}
+                                    </a>
+                                </li>
+                            ) : (
                             (elem.slug === "/dataManage") ?
                             ( isAuth &&
                                 <li className='nav-item mb-3 nav-main' key={index}>
@@ -99,7 +107,7 @@ export const Nav = ()=>{
                                         {elem.title}
                                     </a>
                                 </li>
-                            )))))
+                            ))))))
                         )}
 
                         <div className='nav-footer'>

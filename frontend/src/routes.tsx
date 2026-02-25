@@ -23,7 +23,15 @@ export const useRoutes = () =>{
                 }
             />
             <Route path="/computationFortran" element={<ComputationFortran/>}/>
-            <Route path="/computationBayes" element={<ComputationBayes/>}/>
+
+             <Route 
+                path="/computationBayes" 
+                element={<PrivateRoute>
+                            <ComputationBayes/>
+                        </PrivateRoute>
+               }
+            />
+            {/* <Route path="/computationBayes" element={<ComputationBayes/>}/> */}
             <Route path="/graph/:id" element={<GraphPage/>}></Route>
             <Route path="/login" element={<LoginPage/>}/>
             
