@@ -9,7 +9,7 @@ from .serializers import MenuSerializer
 class GetMenuAPI(APIView):
     def get(self, request):
         try:
-            menu_items = Menu.objects.all()
+            menu_items = Menu.objects.filter(is_active=True)
             serializer = MenuSerializer(menu_items, many=True)
             
             response_data = {
