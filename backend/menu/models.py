@@ -7,6 +7,8 @@ MAX_LENGTH = 255
 class Menu(models.Model):
     title = models.CharField(max_length=MAX_LENGTH, verbose_name='Название')
     slug = models.CharField(max_length=MAX_LENGTH, unique=True, verbose_name='URL')
+    is_auth = models.BooleanField(default=False, verbose_name='Нужна ли авторизация?')
+    is_active = models.BooleanField(default=True, verbose_name='Отображать?')
 
     class Meta:
         verbose_name = 'Меню'
