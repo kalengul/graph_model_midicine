@@ -25,7 +25,8 @@ from .serializers import (
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
-from drugs.utils.banned_pairs_loader import (CSVBannedPairLoader, GroupBannedPairLoader,
+from drugs.utils.banned_pairs_loader import (CSVBannedPairLoader,
+                                            #  GroupBannedPairLoader,
                                              JSONBannedPairLoader)
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
