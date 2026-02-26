@@ -37,6 +37,12 @@ export const Nav = ()=>{
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const viewElem = (menuStatus: boolean, authStatus: boolean):boolean => {
+        if(!menuStatus) return true //Вывод если не нужна авторизация
+        else if( authStatus ) return true
+        else return false
+    }
+
     return (
         <>
             <nav className={`flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav ${isMenuOpen ? "mobilePosition" : ""}`}>
@@ -60,54 +66,13 @@ export const Nav = ()=>{
 
                     <ul className="nav nav-pills flex-column mb-auto">
                         {Array.isArray(menu) && menu.map((elem, index)=>
-                            (elem.slug==="/computationBayes")?
-                             ( isAuth &&
+                            viewElem(elem.is_auth, isAuth) &&
                                 <li className='nav-item mb-3 nav-main' key={index}>
                                     <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
+                                            {elem.title}
                                     </a>
                                 </li>
-                            ) : (
-                            (elem.slug === "/dataManage") ?
-                            ( isAuth &&
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
-                                    </a>
-                                </li>
-                            ) 
-                            : 
-                            ( (elem.slug === "/synonyms") ? (
-                                isAuth && 
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
-                                    </a>
-                                </li>
-                            ) 
-                            : 
-                            ((elem.slug === "/statisticBayes") ? (
-                                isAuth && 
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
-                                    </a>
-                                </li>
-                            ) : (
-                            ((elem.slug === "/computationMedScape") ? (
-                                isAuth && 
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
-                                    </a>
-                                </li>
-                            ): (
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                        {elem.title}
-                                    </a>
-                                </li>
-                            ))))))
+                            
                         )}
 
                         <div className='nav-footer'>
