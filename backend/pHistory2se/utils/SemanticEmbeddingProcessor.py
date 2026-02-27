@@ -10,11 +10,14 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sentence_transformers import SentenceTransformer
 
 class SemanticEmbeddingProcessor:
-    def __init__(self, model_path: str, abbr_dataset_path=None, cache_size: int = 1000):
+    def __init__(self, model_path: str, abbr_dataset_path=None,
+                 cache_size: int = 1000, threshold = 0.9):
+        print("model_path", model_path)
         self.model = SentenceTransformer(model_path)
         self.cache_size = cache_size
         self.cache: OrderedDict[str, np.ndarray] = OrderedDict()
         self.abbrev_map = {}
+        self.threshold = threshold
         
         if abbr_dataset_path:
             with open(abbr_dataset_path, 'r', encoding='utf-8') as file:
@@ -105,7 +108,7 @@ class SemanticEmbeddingProcessor:
         self,
         queries: List[str],
         corpus_terms: List[str],
-        similarity_threshold,
+        threshold: float = None,
         top_k: int = 1
     ) -> Dict[str, List[Dict[str, float]]]:
         """
@@ -113,7 +116,7 @@ class SemanticEmbeddingProcessor:
 
         :param queries: Список запросов.
         :param corpus_terms: Список терминов, среди которых ищем
-        :param similarity_threshold: Порог синонимичности
+        :param threshold: Порог синонимичности
         :param top_k: Количество лучших совпадений.
         :return: Словарь: {запрос: [{"term": ..., "similarity": ...}, ...]}
         """
@@ -121,6 +124,9 @@ class SemanticEmbeddingProcessor:
             return {}
         if not corpus_terms:
             return {q: [] for q in queries}
+        
+        # Используем порог из параметра или из поля класса
+        threshold = threshold if threshold is not None else self.threshold
 
         sims_matrix = self.cosine_similarity_matrix(queries, corpus_terms, False)
 
@@ -130,7 +136,7 @@ class SemanticEmbeddingProcessor:
             top_indices = np.argsort(sims)[::-1][:top_k]
             matches = [
                 {"term": corpus_terms[idx], "similarity": float(sims[idx])}
-                for idx in top_indices if sims[idx] >= similarity_threshold
+                for idx in top_indices if sims[idx] >= threshold
             ]
             results[query] = matches
 
@@ -141,12 +147,15 @@ class SemanticEmbeddingProcessor:
             self,
             raw_terms: List[str], 
             standard_terms: List[str],
-            threshold: float = 0.97,
+            threshold: float = None,
             top_n: int = 1) -> Dict[str, List[str]]:
         """Нормализует исходные термины к эталонным с помощью семантической модели."""
         
         if not raw_terms or not standard_terms:
             return {}
+        
+        # Используем порог из параметра или из поля класса
+        threshold = threshold if threshold is not None else self.threshold
         
         matches = self.find_similar_terms(raw_terms, standard_terms, threshold, top_n)
         
@@ -159,7 +168,7 @@ class SemanticEmbeddingProcessor:
     
     def cluster_similar_strings(self,
                                 strings_list: list[str],
-                                similarity_threshold: float = 0.98
+                                threshold: float = None
                                 ) -> dict[str, list[str]]:
         """
         Кластеризация списка строк по семантической схожести.
@@ -171,6 +180,9 @@ class SemanticEmbeddingProcessor:
         """
         if not strings_list:
             return {}
+        
+        # Используем порог из параметра или из поля класса
+        threshold = threshold if threshold is not None else self.threshold
         
         # Уникализация и очистка списка
         unique_strings = list(dict.fromkeys(strings_list))  # сохраняем порядок первого появления
@@ -195,7 +207,7 @@ class SemanticEmbeddingProcessor:
                 continue
             
             # Находим похожие строки
-            similar_indices = np.where(sim_matrix[i] >= similarity_threshold)[0]
+            similar_indices = np.where(sim_matrix[i] >= threshold)[0]
             new_indices = [idx for idx in similar_indices if idx not in used_indices]
             
             if not new_indices:

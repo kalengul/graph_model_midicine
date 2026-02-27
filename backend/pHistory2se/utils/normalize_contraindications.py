@@ -17,7 +17,7 @@ def normalize_contraindications(
     contraindications: List[str],
     synonym_dict: Dict[str, List[str]],
     processor: SemanticEmbeddingProcessor,
-    similarity_threshold: float = 0.85
+    threshold: float = 0.85
 ) -> List[str]:
     """
     Нормализует список противопоказаний с использованием семантической модели.
@@ -26,7 +26,7 @@ def normalize_contraindications(
         contraindications: Список извлечённых противопоказаний.
         synonym_dict: Словарь вида {стандартный_термин: [синоним1, синоним2, ...]}.
         processor: SemanticEmbeddingProcessor
-        similarity_threshold: Порог косинусного сходства (0.0–1.0).
+        threshold: Порог косинусного сходства (0.0–1.0).
     
     Returns:
         Список нормализованных стандартных терминов.
@@ -45,7 +45,7 @@ def normalize_contraindications(
     matched_synonyms = processor.find_similar_terms(
         queries=contraindications,
         corpus_terms=list(synonym_to_standard.keys()),
-        similarity_threshold=similarity_threshold
+        threshold=threshold
     )
 
     # Преобразуем найденные синонимы в стандартные термины
@@ -89,7 +89,7 @@ if __name__ == "__main__":
         contraindications=contraindications,
         synonym_dict=synonym_dict,
         processor=processor,
-        similarity_threshold=0.90
+        threshold=0.90
     )
     
     print(f"Нормализованные противопоказания: {normalized_result}")
