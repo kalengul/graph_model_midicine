@@ -38,6 +38,8 @@
 |combinations|Array[Object]|нет|Применимость комбинации с другими лекарственными средствами (если нет, то присылать undefined)|
 |drugs|Array(String)|да|Список названий проверяемых ЛС|
 |SEFromDrug|Array(Object)|да|Блоки побочек по каждому ЛС|
+|bannedPairs|Array(Array(String))|нет|Запрещенные пары ЛС|
+|bannedPairsCont|Array(Array(String))|нет|Запрещенные пары по противопоказаниям|
 
 #### Объект side_effects
 |**параметр**|**Тип данных**|**Обязательность**|**Описание**|
