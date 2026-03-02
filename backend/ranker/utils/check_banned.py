@@ -42,5 +42,8 @@ class DrugPairChecker(BannedChecker):
             ).first()
 
             if pair:
-                banned_pairs.append((name1, name2, pair.comment))
+                banned_pairs.append({
+                        "pair": [name1, name2],
+                        "comment": pair.comment
+                    })
         return banned_pairs

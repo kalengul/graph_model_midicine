@@ -6,7 +6,8 @@ from .views import (
     DrugSideEffectView,
     ExcelLoadView,
     ModifiedExcelLoadView,
-    BannedPairLoadView)
+    BannedPairLoadView,
+    DrugDataLoadView)
 
 
 urlpatterns = [
@@ -36,4 +37,9 @@ urlpatterns = [
     path('import_banned_pair/',
          BannedPairLoadView.as_view(),
          name='import_banned_pair'),
+
+     # Загрузка информации о препаратах
+     path('drug_data_load/',
+          DrugDataLoadView.as_view(),
+          name='import_banned_pair'),
 ]
