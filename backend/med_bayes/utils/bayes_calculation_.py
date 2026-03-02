@@ -266,7 +266,7 @@ def calculate_probabilities(network, calc_trace_path):
             else:
                 sorted_comb_keys = sorted(normalized_probs.keys())
 
-                assert len(sorted_comb_keys) == 2 ** k, f"Несоотвествие: {len(sorted_comb_keys)} != {2**k}"
+                assert len(sorted_comb_keys) == 2 ** k, f"Несоответствие: {len(sorted_comb_keys)} != {2**k}"
 
                 cond_probs_list = []
                 for comb in sorted_comb_keys:

@@ -126,7 +126,7 @@ class MedScapeOutDateView(APIView):
     """Получение списка взаимодействии ЛС."""
 
     def get(self, request):
-        """Метод получения списка зваимодействий."""
+        """Метод получения списка взаимодействий."""
         try:
             interactions = InteractionMedScape.objects.all().distinct(
                 'classification_type_ru').order_by('classification_type_ru')

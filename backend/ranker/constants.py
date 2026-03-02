@@ -1,4 +1,4 @@
-"""Модуль для контсант."""
+"""Модуль для констант."""
 
 from types import MappingProxyType
 

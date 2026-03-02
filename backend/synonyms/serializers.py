@@ -84,7 +84,7 @@ class SynonymCreateSerializer(serializers.Serializer):
 
 
 class FileUploadSerializer(serializers.Serializer):
-    """Сериализатор для входных файлов с синоннимами."""
+    """Сериализатор для входных файлов с синонимами."""
 
     file = serializers.FileField()
 

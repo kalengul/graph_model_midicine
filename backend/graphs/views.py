@@ -57,7 +57,7 @@ class GraphView(APIView):
     ERROR_COMPATIBILITY = 'Ошибка определения совместимости'
 
     def _remove_unnecessary_keys_and_values(self, graph):
-        """Удаление ненужный клчей и значкний из словаря графа."""
+        """Удаление ненужный ключей и значений из словаря графа."""
         for key in self.REMOVING:
             graph.pop(key)
         return graph
@@ -73,7 +73,7 @@ class GraphView(APIView):
         return parsed_ids
 
     def get(self, request, id=None):
-        """Получнение графа по id или список."""
+        """Получение графа по id или список."""
         try:
             ids = id or request.query_params.getlist('id')
             ids = self._parse_ids(ids)
@@ -129,7 +129,7 @@ class GraphView(APIView):
                 return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message="Общий граф отстутсвует"
+                    message="Общий граф отсутствует"
                 )
         else:
             return CustomResponse(
@@ -263,7 +263,7 @@ class CRUDGraphView(APIView):
             except Exception as error:
                 return CustomResponse(
                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message=f"Внутренная ошибка сервера. {error}",
+                    message=f"Внутренняя ошибка сервера. {error}",
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                 )
 
@@ -315,7 +315,7 @@ class MergeView(APIView):
 
 
 class GraphStorageView(APIView):
-    """Вью экспорта/импрота графов для СБ."""
+    """Вью экспорта/импорта графов для СБ."""
 
     def post(self, request):
         """Импорт графа и вероятностей."""

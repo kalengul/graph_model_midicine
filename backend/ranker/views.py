@@ -32,10 +32,10 @@ class CalculationAPI(APIView):
 
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
-        Проверка наличия противопаказаний.
+        Проверка наличия противопоказаний.
 
         Проверка пересечения противопоказаний у ЛС из комбинации
-        и противопоказаний, указаных в запросе.
+        и противопоказаний, указанных в запросе.
         """
         exist = False
         submessages = []
@@ -110,7 +110,7 @@ class CalculationAPI(APIView):
         #     if age < self.AGE and gender == self.MAN:
         #         index = 1
         #     elif age < self.AGE and gender == self.WOMEN:
-        #         print('Моложая женщина')
+        #         print('Молодая женщина')
         #         index = 2
         #     elif age >= self.AGE and gender == self.MAN:
         #         index = 3
@@ -205,7 +205,7 @@ class CalculationAPI(APIView):
                     nj=drugs)
                 
             elapsed_time = time.time() - start_time
-            logger.debug(('Время выполнения экспорда данных '
+            logger.debug(('Время выполнения экспорта данных '
                           f'и рассчёта: {elapsed_time:.2f} сек.'))
 
             if сompatibility_fortran:
@@ -233,7 +233,7 @@ class TablesView(APIView):
     Таблицы:
         - ранги для ЛС;
         - исключения (они же запрещённые пары);
-        - ЛС, противопоказния и их веса.
+        - ЛС, противопоказания и их веса.
     """
 
     def post(self, request):
@@ -254,7 +254,7 @@ class TablesView(APIView):
 
             return CustomResponse(
                 status=status.HTTP_200_OK,
-                message="Excel-файл с таблици сгенерирован успешно",
+                message="Excel-файл с таблицы сгенерирован успешно",
                 http_status=status.HTTP_200_OK)
 
         except Exception as error:

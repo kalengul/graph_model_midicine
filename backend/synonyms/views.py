@@ -104,7 +104,7 @@ class SynonymGroupAPI(APIView):
 
 
 class SynonymListAPI(APIView):
-    """Вью для синоннимов."""
+    """Вью для синонимов."""
 
     @bearer_token_required
     def get(self, request):
@@ -353,7 +353,7 @@ class SynonymStatusView(APIView):
 
     @bearer_token_required
     def put(self, request):
-        """Измение цвета статуса синонима."""
+        """Изменение цвета статуса синонима."""
         st_id = request.data.get('st_id')
         try:
             instance = SynonymStatus.objects.get(id=st_id)

@@ -92,7 +92,7 @@ class BayesSerializer(serializers.Serializer):
     """Сериализатор для Байеса."""
 
     class HumanDataSerializer(serializers.Serializer):
-        """Сериализатор дааных о пациенте."""
+        """Сериализатор данных о пациенте."""
 
         age = serializers.CharField(required=False, allow_null=True,
                                     allow_blank=True)

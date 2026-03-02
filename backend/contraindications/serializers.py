@@ -30,7 +30,7 @@ class ContraindicationListSerializer(BaseContraindicationSerialize):
         Проверка наличия противопоказания в БД.
 
         Если добавляется противопоказание, которое уже есть в БД,
-        вызывается иключение.
+        вызывается исключение.
         """
         if Contraindication.objects.filter(name=value):
             raise ValueError(

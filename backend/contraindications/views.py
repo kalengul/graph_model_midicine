@@ -56,7 +56,7 @@ class ContraindicationView(APIView):
 
     def get(self, request, id=None):
         """
-        Получение провопоказаний.
+        Получение противопоказаний.
 
         Если id указан, отправляется в ответе указанный объект.
         В противном случае, отправляется полный список.
@@ -284,7 +284,7 @@ class ClearContraindication(APIView):
         """Очистка от всех противопоказаний."""
         try:
             CleanProcessor().get_cleaner().clean()
-            message = "Таблица противопоказаний очищина успешно"
+            message = "Таблица противопоказаний очищена успешно"
             logger.info(f'message = {message}')
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -292,7 +292,7 @@ class ClearContraindication(APIView):
                 message=message
             )
         except Exception as error:
-            message = ('При очистке противопоказаний возника ошибка.'
+            message = ('При очистке противопоказаний возникла ошибка.'
                        f'Ошибка: {error}')
             logger.error(f'message = {message}')
             return CustomResponse(

@@ -41,7 +41,7 @@ class Merger:
 
 
 def main():
-    """Точка входна в программу."""    
+    """Точка входа в программу."""    
     try:
         ids = [int(id) for id in sys.argv[1:]]
         Merger().merge(ids)

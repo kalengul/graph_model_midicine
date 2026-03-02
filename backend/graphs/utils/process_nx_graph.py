@@ -202,7 +202,7 @@ class ProcessNxGraph():
                     new_id = str(uuid.uuid4())
                     new_label = f"{node_name} {child_name}({node_tag})"
 
-                    # Добавление нового узела и добавление его в очередь
+                    # Добавление нового узла и добавление его в очередь
                     G.add_node(new_id, label = new_label, x=x, y=y)
                     queue.append(new_id)  
 
@@ -231,7 +231,7 @@ class ProcessNxGraph():
 
     def collect_nodes_edges(self, G):
         """
-        Сохнанить уникальные узлы и связи
+        Сохранить уникальные узлы и связи
         """
 
         main_prepare = self.find_main_prepare(G)

@@ -129,7 +129,7 @@ class DrugAPI(APIView):
     """
     Вью-класс для создания ЛС.
 
-    POST api/v1/addGrug/
+    POST api/v1/addDrug/
     Добавление ЛС в БД.
 
     GET api/v1/getDrug/?drug_id={id}
@@ -242,9 +242,9 @@ class DrugAPI(APIView):
 
 class SideEffectAPI(APIView):
     """
-    Вью для побочных дейсйствий.
+    Вью для побочных действий.
 
-    Добавление побочныз действий.
+    Добавление побочных действий.
     POST api/v1/addSideEffect
 
     Получение побочного действия или списка побочных действий.
@@ -563,7 +563,7 @@ class ExcelLoadView(APIView):
 
 class ModifiedExcelLoadView(ExcelLoadView):
     """
-    Усовершенствовованная версия вью.
+    Усовершенствованная версия вью.
 
     Вью для прямого обращения к бекэнду,
     минуя фронтэнд.
@@ -658,7 +658,7 @@ class BannedPairLoadView(APIView):
                     loader.clear_db()
                     logger.info('БД очистилось')
                     loader.load_to_db(data=data)
-                    # """"вообще тут оч плохо все. лоад ту дб надо вынести в отдельную фукницю, как и 
+                    # """"вообще тут оч плохо все. лоад ту дб надо вынести в отдельную функцию, как и 
                     # def normalize_plus_sign  def preprocess_drug_name """
                     # loader = GroupBannedPairLoader()
                     # loader.load_to_db(data=data)

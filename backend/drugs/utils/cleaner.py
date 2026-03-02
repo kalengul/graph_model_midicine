@@ -1,4 +1,4 @@
-"""Модуль чистильщеков БД."""
+"""Модуль чистильщиков БД."""
 
 from abc import ABC, abstractmethod
 
@@ -69,7 +69,7 @@ class CleanProcessor:
 
 
 class BannedDrugPairCleaner(BaseCleaner):
-    """Базовый очистетель таблицы БД для пар ЛС."""
+    """Базовый очиститель таблицы БД для пар ЛС."""
 
     table_names = ['drugs_banneddrugpair',]
     model_classes = [BannedDrugPair,]
