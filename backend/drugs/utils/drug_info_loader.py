@@ -6,7 +6,7 @@ from django.conf import settings
 from ..models import Drug, DrugGroup, BannedDrugPair
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
-from contraindications.models import Contraindication
+from contraindications.utils.cleaner import CleanProcessor
 
 logger = logging.getLogger(__name__)
 
@@ -28,7 +28,7 @@ class DrugDataLoader:
     def load_all(self, data):
         """Загрузка всех данных."""
         if self.clear_before_load:
-            Contraindication.objects.all().delete()
+            CleanProcessor().get_cleaner().clean()
             self.loader_banned.clear_db()
 
         # Загрузка групп
