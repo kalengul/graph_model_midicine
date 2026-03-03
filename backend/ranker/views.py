@@ -49,15 +49,17 @@ class CalculationAPI(APIView):
             CustomResponse с результатами расчета
         """
         try:
+
+            # Валидация и подготовка данных
+            validation_result = self._validate_input_data(request)
             
-            # Валидация обязательных параметров
-            validation_result = self._validate_input_data(request.data)
-            if validation_result:
+            # Проверяем, не вернулась ли ошибка
+            if isinstance(validation_result, CustomResponse):
                 return validation_result
             
-            drugs = request.data['drugs']
-            human_data = request.data.get('humanData')
-            
+            # Распаковываем данные
+            drugs, human_data, med_card = validation_result
+
             # Создаем базовый шаблон ответа
             response_data = self._create_base_response_template(drugs)
             
@@ -91,25 +93,46 @@ class CalculationAPI(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
                
-    def _validate_input_data(self, parsed_data):
+    def _validate_input_data(self, request):
         """
-        Валидация входных данных.
+        Валидация и подготовка входных данных из request.
+        Поддерживает JSON и form-data форматы.
         
+        Args:
+            request: HTTP запрос
+            
         Returns:
-            CustomResponse с ошибкой или None, если валидация пройдена
+            - Если ошибка: CustomResponse с описанием ошибки
+            - Если успех: кортеж (drugs, human_data, med_card)
         """
-        drugs = parsed_data['drugs']
+
+        def parse_field(data, field_name, required=False):
+            """Парсит JSON поле или возвращает ошибку"""
+            value = data.get(field_name)
+            
+            if required and value is None:
+                return CustomResponse(status=400, message=f'Поле {field_name} обязательно', http_status=400)
+            
+            if isinstance(value, str):
+                try:
+                    return json.loads(value)
+                except json.JSONDecodeError:
+                    return CustomResponse(status=400, message=f'Неверный JSON в поле {field_name}', http_status=400)
+            return value
         
-        if drugs is None:
-            message = "Обязательный параметр drugs отсутствует или некорректный."
-            logger.error(message)
-            return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message=message,
-                http_status=status.HTTP_400_BAD_REQUEST
-            )
+        # Парсим drugs
+        drugs = parse_field(request.data, 'drugs', required=True)
+        if isinstance(drugs, CustomResponse):
+            return drugs
         
-        return None
+        # Парсим human_data
+        human_data = parse_field(request.data, 'humanData', required=False)
+        if isinstance(human_data, CustomResponse):
+            return human_data
+        
+        med_card = request.FILES.get('medCard')
+        
+        return (drugs, human_data, med_card)
     
     def _create_base_response_template(self, drugs):
         """
