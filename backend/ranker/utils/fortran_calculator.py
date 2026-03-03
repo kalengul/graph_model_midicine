@@ -77,7 +77,7 @@ class FortranCalculator(BaseCalculator):
 
         context = {
             'rank_iteractions': round(float(ram), 2),
-            'сompatibility_fortran': classification
+            'compatibility_fortran': classification
         }
 
         # Распределение эффектов по классам
@@ -273,7 +273,7 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         context = {
             'rank_iteractions': round(float(ram), 2),
-            'сompatibility_fortran': classification
+            'compatibility_fortran': classification
         }
 
         # Распределение эффектов по классам
@@ -442,7 +442,7 @@ class CalculatorMP(BaseCalculator):
 
         context = {
             'rank_iteractions': round(ram, 2),
-            'сompatibility_fortran': classification
+            'compatibility_fortran': classification
         }
 
         # Распределение побочных эффектов по классам
@@ -511,7 +511,7 @@ class CalculatorMP(BaseCalculator):
         """Результат для пустой комбинации."""
         return {
             'rank_iteractions': 0.0,
-            'сompatibility_fortran': 'compatible',
+            'compatibility_fortran': 'compatible',
             'side_effects': [
                 {"сompatibility": "compatible", 'effects': []},
                 {"сompatibility": "caution", 'effects': []},

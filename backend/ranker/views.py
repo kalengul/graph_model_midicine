@@ -143,6 +143,8 @@ class CalculationAPI(APIView):
             "SEFromDrug": [],
             "drugs": list(Drug.objects.filter(id__in=drugs).values_list('drug_name', flat=True)),
             "compatibility_fortran": None,              # Будет заполнено позже
+            "bannedPairs": [],
+            "bannedPairsCont": [],
         }
     
     def _exist_contraindications(self, drug_ids, contra_ids):
@@ -206,7 +208,7 @@ class CalculationAPI(APIView):
         logger.debug(f'Результат: {contraindications_result}')
 
         # Заполняем шаблон
-        template_data.update({"compatibility_fortran": self.COMPATIBILITY_BANNED})
+        template_data.update({"compatibility_fortran": self.COMPATIBILITY_BANNED_CONTRAINDICATIONS})
         template_data["bannedPairsCont"] = contraindications_result
         
         return CustomResponse(
