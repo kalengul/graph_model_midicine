@@ -168,13 +168,13 @@ class CalculationAPI(APIView):
             if intersect.exists():
                 logger.debug('Противопоказание у ЛС есть')
                 
-                # Получаем список ID найденных противопоказаний
-                contra_ids_list = list(intersect.values_list("id", flat=True))
+                # Получаем список name найденных противопоказаний
+                contra_name_list = list(intersect.values_list("name", flat=True))
                 
                 # Добавляем в результат в новом формате
                 result.append({
                     "drug": drug.drug_name,
-                    "contraindications": contra_ids_list
+                    "contraindications": contra_name_list
                 })
 
         logger.debug(f'result = {result}')
