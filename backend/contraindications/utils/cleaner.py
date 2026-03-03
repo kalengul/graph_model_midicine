@@ -33,7 +33,15 @@ class SQLiteCleaner(ContraindicationCleaner):
 
     def clean(self):
         """таблицы противопоказаний."""
+        with connection.cursor() as cursor:
+            cursor.execute("DELETE FROM drugs_drug_contraindications")
+            # Сбрасываем счетчик для связующей таблицы
+            cursor.execute("DELETE FROM sqlite_sequence WHERE name='drugs_drug_contraindications'")
+
+        # Потом удаляем противопоказания
         self.model.objects.all().delete()
+
+        # Сбрасываем счетчик
         with connection.cursor() as cursor:
             cursor.execute(('DELETE FROM sqlite_sequence '
                             f'WHERE name="{self.model._meta.db_table}"'))
