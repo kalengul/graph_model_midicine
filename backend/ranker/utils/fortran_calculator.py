@@ -119,15 +119,15 @@ class FortranCalculator(BaseCalculator):
         # logger.debug(f'rangs_matrix = {rangs_matrix}')
         # logger.debug(f'unique_n_drug_sub_1 = {unique_n_drug_sub_1}')
         for j in range(self.n_drug):
-            # if j not in unique_n_drug_sub_1:
-            new_rangsum = rangsum + rangs_matrix[j]
-            max_rang = np.max(new_rangsum)
-            logger.debug(f'j = {j}')
-            logger.debug(f'max_rang = {max_rang}')
-            if max_rang >= 1.0:
-                drugs_class_3.append(j)
-            elif max_rang >= 0.5:
-                drugs_class_2.append(j)
+            if j not in unique_n_drug_sub_1:
+                new_rangsum = rangsum + rangs_matrix[j]
+                max_rang = np.max(new_rangsum)
+                logger.debug(f'j = {j}')
+                logger.debug(f'max_rang = {max_rang}')
+                if max_rang >= 1.0:
+                    drugs_class_3.append(j)
+                elif max_rang >= 0.5:
+                    drugs_class_2.append(j)
 
         # print('drugs_class_3 =', drugs_class_3)
         # print('drugs_class_2 =', drugs_class_2)
@@ -311,16 +311,19 @@ class FortranCalculatorNormalization(BaseCalculator):
         drugs_class_2, drugs_class_3 = [], []
 
         for j in range(self.n_drug):
-            new_rangsum = rangsum + rangs_matrix[j]
-            # Применяем нормализацию для потенциальных комбинаций
-            if canceling_groups:
-                new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
-            max_rang = np.max(new_rangsum)
-            # logger.debug(f'j = {j}, max_rang = {max_rang}')
-            if max_rang >= 1.0:
-                drugs_class_3.append(j)
-            elif max_rang >= 0.5:
-                drugs_class_2.append(j)
+            if j not in unique_n_drug_sub_1:
+                new_rangsum = rangsum + rangs_matrix[j]
+
+                # Применяем нормализацию для потенциальных комбинаций
+                if canceling_groups:
+                    new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
+                max_rang = np.max(new_rangsum)
+                
+                # logger.debug(f'j = {j}, max_rang = {max_rang}')
+                if max_rang >= 1.0:
+                    drugs_class_3.append(j)
+                elif max_rang >= 0.5:
+                    drugs_class_2.append(j)
 
         drug_array2 = [{'name': Drug.objects.get(index=j + 1).drug_name,
                         'class': 2}
