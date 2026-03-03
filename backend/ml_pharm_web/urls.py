@@ -28,7 +28,7 @@ urlpatterns = [
 
 
 def custom_page_not_found(request, exception):
-    """Обработка отсутствия ресуса."""
+    """Обработка отсутствия ресурса."""
     raise NotFound("Ресурс не найден.")
 
 

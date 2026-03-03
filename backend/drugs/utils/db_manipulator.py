@@ -157,7 +157,7 @@ class DBManipulator(Loader):
 
     @classmethod
     def __clean_rang_files(cls):
-        """Метод очистки всех файлов с рагнами."""
+        """Метод очистки всех файлов с рангами."""
         cls.__clean_file(cls.RANGS_PATH)
         cls.__clean_file(cls.RANGSBASE_PATH)
         cls.__clean_file(cls.RANGSFREQ_PATH)

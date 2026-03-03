@@ -208,7 +208,7 @@ class DrugsInformationMedScape(models.Model):
     comment_en = models.CharField(max_length=MAX_LENGTH,
                                   verbose_name='Comment')
     comment_ru = models.CharField(max_length=MAX_LENGTH,
-                                  verbose_name='Коментарий')
+                                  verbose_name='Комментарий')
     name_drug = models.ManyToManyField('NameDrugsMedScape')
     source_drugs = models.ForeignKey('SourceDrugsMedScape',
                                      on_delete=models.DO_NOTHING,

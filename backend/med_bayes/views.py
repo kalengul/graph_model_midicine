@@ -50,10 +50,10 @@ class BayeseView(APIView):
 
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
-        Проверка наличия противопаказаний.
+        Проверка наличия противопоказаний.
 
         Проверка пересечения противопоказаний у ЛС из комбинации
-        и противопоказаний, указаных в запросе.
+        и противопоказаний, указанных в запросе.
         """
         exist = False
         submessages = []
@@ -84,7 +84,7 @@ class BayeseView(APIView):
         """
         Исключение по полу.
 
-        Если gender - man, недопускаются женские ПД,
+        Если gender - man, не допускаются женские ПД,
         и наоборот, если woman, мужские ПД.
         """
         if gender == self.MAN:
@@ -156,7 +156,7 @@ class BayeseView(APIView):
         if banned:
             return CustomResponse(
                 status=status.HTTP_200_OK,
-                message='Совместимость ЛС по сети Байеса успешно расcчитана',
+                message='Совместимость ЛС по сети Байеса успешно рассчитана',
                 http_status=status.HTTP_200_OK,
                 data={
                     "сompatibility_bayes": "banned",
@@ -204,7 +204,7 @@ class BayeseView(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST,
                 message=message)
 
-        print('Все ЛС соотвествуют')
+        print('Все ЛС соответствуют')
 
         full_process_start = datetime.now()
         prob_data, drug_states_input_data, drugs_for_output, \
@@ -370,7 +370,7 @@ class BayeseView(APIView):
                 self._exclude_by_gender(result["side_effects"][0]["effects"],
                                         gender, GENDER_SIDE_EFFECT))
 
-        message = 'Совместимость ЛС по сети Байеса успешно расcчитана'
+        message = 'Совместимость ЛС по сети Байеса успешно рассчитана'
         logger.info(f'message = {message}')
 
         with (open(log_path / 'side_effects.txt', 'w', encoding='utf-8') as f1,

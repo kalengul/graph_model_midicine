@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 
 class SynonymLoader(ABC):
-    """Абструктный загрузчик синонимов."""
+    """Абстрактный загрузчик синонимов."""
 
     @abstractmethod
     def import_synonyms(self, clusters_data):

@@ -11,7 +11,7 @@ class TextBuilder:
         self._text = text or ""
 
     def lower(self):
-        """Приведение в нижний регист."""
+        """Приведение в нижний регистр."""
         self._text = self._text.lower()
         return self
 

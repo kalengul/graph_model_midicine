@@ -47,7 +47,7 @@ class ExcelTableGenerater():
         self.banned_checker = DrugPairChecker()
 
     def generate_rank_table(self):
-        """Генерация таблицы соместимости ЛС на основе рангов."""
+        """Генерация таблицы совместимости ЛС на основе рангов."""
         logger.debug('вход в метод генерации ранговой таблицы')
         compatible_rows = []
         incompatible_rows = []
@@ -200,7 +200,7 @@ class ExcelTableGenerater():
         return df
 
     def generate_tables(self):
-        """Формирвание тома с таблицами."""
+        """Формирование тома с таблицами."""
         rank_df, irank_df = self.generate_rank_table()
         pair_df = self.generate_banned_pair_table()
         contra_df = self.generate_contraindication_table()

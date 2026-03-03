@@ -1,5 +1,9 @@
 from django.urls import path
-from .views import MedicalHistoryToSideEffectsAPIView, LoaderSynonymDictFileView
+from .views import (MedicalHistoryToSideEffectsAPIView, 
+                    ModelConfigView,
+                    DictionaryView,
+                    DictionaryDirectoryView
+                    )
 
 urlpatterns = [
     path(
@@ -7,7 +11,20 @@ urlpatterns = [
         MedicalHistoryToSideEffectsAPIView.as_view(),
         name='humandata_from_medcard'
     ),
-    path('cont_synonym_dict/',
-         LoaderSynonymDictFileView.as_view(),
-         name='contraindication-file-api'),
+
+    # Эндпоинт для работы с моделью
+    path('st_model/',
+         ModelConfigView.as_view(),
+         name='model-config'
+    ),
+
+    # Эндпоинты для словаря
+    path('dictionary/',
+         DictionaryView.as_view(),
+         name='dictionary'
+    ),
+    path('dictionary/directory/',
+         DictionaryDirectoryView.as_view(),
+         name='dictionary-reload'
+    )
 ]

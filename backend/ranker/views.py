@@ -30,200 +30,216 @@ class CalculationAPI(APIView):
     MAN = 'man'
     WOMEN = 'woman'
 
+    # Константы для совместимости
+    COMPATIBILITY_BANNED = 'banned'
+    COMPATIBILITY_BANNED_CONTRAINDICATIONS = 'banned-contraindications'
+    
+    # Константы для отменяющих эффектов
+    CANCELING_EFFECTS_GROUPS = [[2, 3], [5, 14], [7, 13], [32, 33], [51, 52], [86, 87]]
+
+    def post(self, request, normalization_calculate=True):
+        """
+        POST-запрос для расчета совместимости лекарственных средств.
+        
+        Args:
+            request: HTTP запрос с данными
+            normalization_calculate: флаг использования нормализации
+            
+        Returns:
+            CustomResponse с результатами расчета
+        """
+        try:
+            
+            # Валидация обязательных параметров
+            validation_result = self._validate_input_data(request.data)
+            if validation_result:
+                return validation_result
+            
+            drugs = request.data['drugs']
+            human_data = request.data.get('humanData')
+            
+            # Создаем базовый шаблон ответа
+            response_data = self._create_base_response_template(drugs)
+            
+            # Проверка запрещенных пар (banned)
+            banned_pairs = DrugPairChecker().check_banned(drugs)
+            if banned_pairs:
+                return self._create_banned_response(response_data, banned_pairs)
+            
+            # Проверка противопоказаний (если есть)
+            if human_data and human_data.get('cont_list'):
+                contraindications_result = self._exist_contraindications(
+                    drugs, human_data['cont_list']
+                )
+                if contraindications_result:
+                    return self._create_contraindications_response(
+                        response_data, contraindications_result
+                    )
+            
+            # Расчет совместимости
+            return self._calculate_compatibility(
+                response_data,
+                drugs, 
+                normalization_calculate
+            )
+            
+        except Exception as e:
+            logger.critical(f"Критическая ошибка: {traceback.format_exc()}")
+            return CustomResponse(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message='Ошибка определения совместимости',
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+               
+    def _validate_input_data(self, parsed_data):
+        """
+        Валидация входных данных.
+        
+        Returns:
+            CustomResponse с ошибкой или None, если валидация пройдена
+        """
+        drugs = parsed_data['drugs']
+        
+        if drugs is None:
+            message = "Обязательный параметр drugs отсутствует или некорректный."
+            logger.error(message)
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message=message,
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        return None
+    
+    def _create_base_response_template(self, drugs):
+        """
+        Создание базового шаблона ответа.
+        """
+        return {
+            "side_effects": [],
+            "SEFromDrug": [],
+            "drugs": list(Drug.objects.filter(id__in=drugs).values_list('drug_name', flat=True)),
+            "compatibility_fortran": None,              # Будет заполнено позже
+        }
+    
     def _exist_contraindications(self, drug_ids, contra_ids):
         """
-        Проверка наличия противопаказаний.
+        Проверка наличия противопоказаний.
 
         Проверка пересечения противопоказаний у ЛС из комбинации
-        и противопоказаний, указаных в запросе.
+        и противопоказаний, указанных в запросе.
         """
-        exist = False
-        submessages = []
+        result = []
 
         drugs = Drug.objects.filter(id__in=drug_ids).prefetch_related(
             "contraindications")
+        
         for drug in drugs:
             intersect = drug.contraindications.filter(id__in=contra_ids)
             logger.debug(f'drug = {drug.drug_name}')
             for contra in drug.contraindications.all():
                 logger.debug(f'contra - {contra.id}, {contra.name}')
+            
             if intersect.exists():
                 logger.debug('Противопоказание у ЛС есть')
-                names = ", ".join(list(intersect.values_list("name",
-                                                             flat=True)))
-                submessages.append(f'{drug.drug_name}: {names}')
-                exist = True
+                
+                # Получаем список ID найденных противопоказаний
+                contra_ids_list = list(intersect.values_list("id", flat=True))
+                
+                # Добавляем в результат в новом формате
+                result.append({
+                    "drug": drug.drug_name,
+                    "contraindications": contra_ids_list
+                })
 
-        if submessages:
-            *rest, last = submessages
-            message = ';\n'.join(rest + [last + '.'])
-        else:
-            message = None
+        logger.debug(f'result = {result}')
 
-        return exist, message
+        return result
 
-    def post(self, request, normalization_calculate=True):
-        """Временный метод для просмотра изначальной структуры выхода."""
-        # logger.debug(f'входная строка {request.build_absolute_uri()}')
+    def _create_banned_response(self, template_data, banned_pairs):
+        """
+        Создание ответа при обнаружении запрещенных пар.
+        """
 
-        # logger.debug(f'request.query_params = {request.query_params}')
+        logger.debug('Найдены запрещённые пары')
+        logger.debug(f'Результат: {banned_pairs}')
 
-        drugs_line = request.data.get('drugs', None)
+        # Заполняем шаблон
+        template_data.update({"compatibility_fortran": self.COMPATIBILITY_BANNED})
+        template_data["bannedPairs"] = banned_pairs
 
-        if isinstance(drugs_line, str):
-            drugs = json.loads(drugs_line)
-        else:
-            drugs = drugs_line
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            message='Совместимость ЛС по Fortran успешно расcчитана',
+            http_status=status.HTTP_200_OK,
+            data=template_data
+        )
+    
+    def _create_contraindications_response(self, template_data, contraindications_result):
+        """
+        Создание ответа при обнаружении противопоказаний.
+        """
+        logger.debug('Найдены противопоказания')
+        logger.debug(f'Результат: {contraindications_result}')
 
-        # drugs = json.loads(drugs_line) if drugs_line else None
+        # Заполняем шаблон
+        template_data.update({"compatibility_fortran": self.COMPATIBILITY_BANNED})
+        template_data["bannedPairsCont"] = contraindications_result
+        
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            message='Совместимость ЛС по Fortran успешно расcчитана',
+            http_status=status.HTTP_200_OK,
+            data=template_data
+        )
+    
+    # ИСПРАВИТЬ. ДИЧЬ ЖЕ
+    def _prepare_drugs_for_calculation(self, drugs, calculator):
+        """
+        Подготовка списка лекарств для расчета (дополнение нулями при необходимости).
+        """
+        prepared_drugs = drugs.copy()
+        while len(prepared_drugs) < calculator.n_side_effect:
+            prepared_drugs.append(0)
+        return prepared_drugs
+    
 
-        # logger.debug(f'data = {data}')
-
-        human_data_line = request.data.get('humanData', None)
-        if isinstance(human_data_line, str):
-            human_data = json.loads(human_data_line)
-        else:
-            human_data = human_data_line
-
-        med_card = request.FILES.get('medCard', None)
-
-        contraindications = None
-
-        if human_data is not None:
-            age = human_data.get('age', 30)
-            if age is None:
-                age = 30
-
-            gender = human_data.get('gender', 'man')
-            if gender is None:
-                gender = 'man'
-
-            contraindications = human_data.get('cont_list', None)
-
-        print('contraindications =', contraindications)
-
-        index = 0
-        # index = None
-        # if human_data is None:
-        #     index = 0
-        # else:
-        #     if age < self.AGE and gender == self.MAN:
-        #         index = 1
-        #     elif age < self.AGE and gender == self.WOMEN:
-        #         print('Моложая женщина')
-        #         index = 2
-        #     elif age >= self.AGE and gender == self.MAN:
-        #         index = 3
-        #     elif age >= self.AGE and gender == self.WOMEN:
-        #         index = 4
-
-        if drugs is None:
-            message = (
-                "Обязательный параметр drugs отсутствует"
-                " или некорректный.")
-            logger.error(message)
-            return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message=message,
-                http_status=status.HTTP_400_BAD_REQUEST)
-
-        if index >= len(IDX_2_RANK_NAME):
-            message = (
-                "Обязательный параметр humanData отсутствует"
-                " или некорректный.")
-            logger.error(message)
-            return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message=message,
-                http_status=status.HTTP_400_BAD_REQUEST)
-
-        if med_card:
-            filename = generate_unique_filename(med_card.name)
-            med_card_dir_path = Path(settings.CART_PATH) / filename
-            with open(med_card_dir_path, 'wb') as f:
-                for chunk in med_card.chunks():
-                    f.write(chunk)
-
-        сompatibility_fortran = None
-
-        banned = DrugPairChecker().check_banned(drugs)
-        logger.debug(f'banned = {banned}')
-        if banned:
-            сompatibility_fortran = "banned"
-            return CustomResponse(
-                status=status.HTTP_200_OK,
-                message='Совместимость ЛС по Fortran успешно расcчитана',
-                http_status=status.HTTP_200_OK,
-                data={
-                    "сompatibility_fortran": сompatibility_fortran,
-                    "combinations": [
-                        {
-                            "сompatibility": сompatibility_fortran,
-                            "drugs": banned
-
-                        }],
-                    "drugs": list(
-                            Drug.objects.filter(id__in=drugs
-                                                ).values_list(
-                                                    'drug_name', flat=True)),
-                    }
-                )
-
-        exist = None
-        if contraindications:
-            exist, description = (
-                self._exist_contraindications(drugs, contraindications))
-
-        if exist:
-            logger.debug('Есть найдено противопоказание')
-            сompatibility_fortran = 'banned-contraindications'
-
-        print('exist =', exist)
-
+    def _calculate_compatibility(self, template_data, drugs, normalization_calculate):
+        """
+        Расчет совместимости лекарственных средств.
+        """
         start_time = time.time()
         
+        # Выбор калькулятора
         if normalization_calculate:
             calculator = FortranCalculatorNormalization()
+            prepared_drugs = self._prepare_drugs_for_calculation(drugs, calculator)
+            context = calculator.calculate(
+                rank_name=IDX_2_RANK_NAME[0],
+                n_drug=prepared_drugs,
+                canceling_groups=self.CANCELING_EFFECTS_GROUPS
+            )
         else:
-            calculator = CalculatorMP()
+            calculator = FortranCalculator()
+            prepared_drugs = self._prepare_drugs_for_calculation(drugs, calculator)
+            context = calculator.calculate(
+                rank_name=IDX_2_RANK_NAME[0],
+                n_drug=prepared_drugs
+            )
 
-        while len(drugs) < calculator.n_k:
-            drugs.append(0)
-
-        try:
-            rank_name = IDX_2_RANK_NAME[index]
-            logger.debug(f'filename во вьюшке = {rank_name}')
-            if normalization_calculate:           
-                canceling_effects_json_manual=[[2,3],[5,14],[7,13],[32,33],[51,52],[86,87]]
-                context = calculator.calculate(
-                    rank_name=rank_name,
-                    nj=drugs,
-                    canceling_groups=canceling_effects_json_manual)
-            else:
-                context = calculator.calculate(
-                    rank_name=rank_name,
-                    nj=drugs)
-                
-            elapsed_time = time.time() - start_time
-            logger.debug(('Время выполнения экспорда данных '
-                          f'и рассчёта: {elapsed_time:.2f} сек.'))
-
-            if сompatibility_fortran:
-                context["сompatibility_fortran"] = сompatibility_fortran
-
-            return CustomResponse(
-                status=status.HTTP_200_OK,
-                message='Совместимость ЛС по Fortran успешно расcчитана',
-                http_status=status.HTTP_200_OK,
-                data=context)
-
-        except Exception:
-            logger.critical(traceback.format_exc())
-
-            return CustomResponse(
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message='Ошибка определения совместимости',
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # Объединяем шаблон с результатами расчета
+        # (композиция вместо обновления, чтобы не потерять поля)
+        final_data = {**template_data, **context}    
+        
+        elapsed_time = time.time() - start_time
+        logger.debug(f'Время выполнения расчета: {elapsed_time:.2f} сек.')
+        
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            message='Совместимость ЛС по Fortran успешно расcчитана',
+            http_status=status.HTTP_200_OK,
+            data=final_data
+        )
 
 
 class TablesView(APIView):
@@ -233,7 +249,7 @@ class TablesView(APIView):
     Таблицы:
         - ранги для ЛС;
         - исключения (они же запрещённые пары);
-        - ЛС, противопоказния и их веса.
+        - ЛС, противопоказания и их веса.
     """
 
     def post(self, request):
@@ -254,7 +270,7 @@ class TablesView(APIView):
 
             return CustomResponse(
                 status=status.HTTP_200_OK,
-                message="Excel-файл с таблици сгенерирован успешно",
+                message="Excel-файл с таблицы сгенерирован успешно",
                 http_status=status.HTTP_200_OK)
 
         except Exception as error:

@@ -2,7 +2,7 @@
 
 
 class ContraAdapter:
-    """Адаптер для ключей пропивопоказаний."""
+    """Адаптер для ключей противопоказаний."""
 
     def __init__(self, item, keys=None):
         """Создание адаптера для ключей противопоказаний."""
@@ -11,7 +11,7 @@ class ContraAdapter:
 
     @property
     def contras(self):
-        """Получение списка противоказаний по одному из ключей."""
+        """Получение списка противопоказаний по одному из ключей."""
         for key in self.keys:
             if key in self.item:
                 return self.item[key]

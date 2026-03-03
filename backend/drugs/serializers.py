@@ -11,7 +11,7 @@ logger = logging.getLogger('drugs')
 
 
 class DrugGroupSerializer(serializers.ModelSerializer):
-    """Сериализатор грппы ЛС."""
+    """Сериализатор группы ЛС."""
 
     class Meta:
         """Настройка сериализатора."""
@@ -44,7 +44,7 @@ class DrugSerializer(serializers.ModelSerializer):
 
     def validate_drug_name(self, value):
         """
-        Валидания названия ЛС.
+        Валидация названия ЛС.
 
         Проверяет наличие ЛС в БД перед его добавлением.
         """
@@ -190,9 +190,9 @@ class SideEffectSerializer(serializers.ModelSerializer):
 
 
 class DrugSideEffectSerializer(serializers.ModelSerializer):
-    """Сериализатор для рагнов.
+    """Сериализатор для рангов.
 
-    Форман данных:
+    Формат данных:
     "update_rags": [
         {
             "drug_id": 1,

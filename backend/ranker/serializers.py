@@ -3,7 +3,7 @@ from medscape_api.fields import ParsedListField
 
 
 class QueryParamsSerializer(serializers.Serializer):
-    """Сериализватор параметров URL-строк."""
+    """Сериализатор параметров URL-строк."""
 
     drugs = ParsedListField(required=False, field_name='drugs')
     humanData = serializers.IntegerField()

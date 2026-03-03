@@ -27,7 +27,7 @@ class BaseCalculator(ABC):
         """Инициализация вычислителя."""
 
     @abstractmethod
-    def calculate(self, rank_name, nj):
+    def calculate(self, rank_name, n_drug):
         """Вычисление рангов."""
 
 
@@ -36,19 +36,19 @@ class FortranCalculator(BaseCalculator):
 
     def __init__(self):
         """Инициализатор."""
-        self.n_j = Drug.objects.count()
-        self.n_k = SideEffect.objects.count()
+        self.n_drug = Drug.objects.count()
+        self.n_side_effect = SideEffect.objects.count()
         logger.debug(
-            f"Инициализирован оригинальный калькулятор: {self.n_j} ЛС, "
-            f"{self.n_k} ПЭ")
+            f"Инициализирован оригинальный калькулятор: {self.n_drug} ЛС, "
+            f"{self.n_side_effect} ПЭ")
 
-    def calculate(self, rank_name, nj):
+    def calculate(self, rank_name, n_drug):
         """Вычисление рангов."""
-        # logger.debug(f"Индексы входных ЛС (nj): {nj}")
+        # logger.debug(f"Индексы входных ЛС (n_drug): {n_drug}")
 
-        non_zero_nj = [idx for idx in nj if idx != 0]
-        unique_nj = list(set(non_zero_nj))
-        num_drugs = len(unique_nj)
+        non_zero_n_drug = [idx for idx in n_drug if idx != 0]
+        unique_n_drug = list(set(non_zero_n_drug))
+        num_drugs = len(unique_n_drug)
 
         if rank_name is None:
             rank_name = self.get_default_rank_name()
@@ -57,11 +57,11 @@ class FortranCalculator(BaseCalculator):
 
         # Создаем матрицу рангов для выбранных ЛС
         rangs = [getattr(r, rank_name) for r in DrugSideEffect.objects.all()]
-        rang1 = np.zeros((num_drugs, self.n_k))
+        rang1 = np.zeros((num_drugs, self.n_side_effect))
 
-        for j, drug_idx in enumerate(unique_nj):
-            for k in range(self.n_k):
-                rang1[j, k] = rangs[self.n_k * (drug_idx - 1) + k]
+        for j, drug_idx in enumerate(unique_n_drug):
+            for k in range(self.n_side_effect):
+                rang1[j, k] = rangs[self.n_side_effect * (drug_idx - 1) + k]
 
         # Вычисление суммы рангов по эффектам
         rangsum = np.sum(rang1, axis=0)
@@ -82,7 +82,7 @@ class FortranCalculator(BaseCalculator):
 
         # Распределение эффектов по классам
         side_effects = []
-        for k in range(self.n_k):
+        for k in range(self.n_side_effect):
             rank_val = rangsum[k]
             if rank_val >= 1.0:
                 cls = 3
@@ -111,15 +111,15 @@ class FortranCalculator(BaseCalculator):
         # logger.debug(f'len(side_effects) = {len(side_effects)}')
 
         # Анализ потенциальных ЛС
-        rangs_matrix = np.array(rangs).reshape(self.n_j, self.n_k)
+        rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
 
-        unique_nj_sub_1 = [idx - 1 for idx in unique_nj]
+        unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
         drugs_class_2, drugs_class_3 = [], []
         # print('rangs_matrix.shape =', rangs_matrix.shape)
         # logger.debug(f'rangs_matrix = {rangs_matrix}')
-        # logger.debug(f'unique_nj_sub_1 = {unique_nj_sub_1}')
-        for j in range(self.n_j):
-            # if j not in unique_nj_sub_1:
+        # logger.debug(f'unique_n_drug_sub_1 = {unique_n_drug_sub_1}')
+        for j in range(self.n_drug):
+            # if j not in unique_n_drug_sub_1:
             new_rangsum = rangsum + rangs_matrix[j]
             max_rang = np.max(new_rangsum)
             logger.debug(f'j = {j}')
@@ -154,9 +154,9 @@ class FortranCalculator(BaseCalculator):
         ]
 
         context['drugs'] = [Drug.objects.get(index=i).drug_name
-                            for i in unique_nj]
+                            for i in unique_n_drug]
         context["SEFromDrug"] = []
-        for drug in [Drug.objects.get(index=i) for i in unique_nj]:
+        for drug in [Drug.objects.get(index=i) for i in unique_n_drug]:
             # Получаем все связи DrugSideEffect для данного лекарства
             drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
 
@@ -182,11 +182,11 @@ class FortranCalculatorNormalization(BaseCalculator):
 
     def __init__(self, canceling_effects_json=None):
         """Инициализатор."""
-        self.n_j = Drug.objects.count()
-        self.n_k = SideEffect.objects.count()
+        self.n_drug = Drug.objects.count()
+        self.n_side_effect = SideEffect.objects.count()
         logger.debug(
-            f"Инициализирован калькулятор с нормализацией: {self.n_j} ЛС, "
-            f"{self.n_k} ПЭ")
+            f"Инициализирован калькулятор с нормализацией: {self.n_drug} ЛС, "
+            f"{self.n_side_effect} ПЭ")
 
     def _apply_canceling_normalization(self, rangsum, canceling_groups):
         normalized_rangsum = rangsum.copy()
@@ -213,7 +213,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         #logger.debug(f'normalized_rangsum = {normalized_rangsum}')
         return normalized_rangsum
 
-    def calculate(self, rank_name, nj, canceling_groups=None):
+    def calculate(self, rank_name, n_drug, canceling_groups=None):
         #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2], [4, 5], [7, 10]]
         # Валидация входного массива
         logger.debug(f"Групп нивелирования: {canceling_groups}")
@@ -227,16 +227,16 @@ class FortranCalculatorNormalization(BaseCalculator):
                 for group in canceling_groups:
                     if isinstance(group, list) and len(group) >= 2:
                         # Проверяем, что все индексы в допустимом диапазоне
-                        valid_indices = [idx for idx in group if isinstance(idx, int) and 1 <= idx <= self.n_k]
+                        valid_indices = [idx for idx in group if isinstance(idx, int) and 1 <= idx <= self.n_side_effect]
                         if len(valid_indices) >= 2:
                             valid_groups.append(valid_indices)
                 canceling_groups = valid_groups
 
         logger.debug(f"Групп нивелирования: {len(canceling_groups) if canceling_groups else 0}")
 
-        non_zero_nj = [idx for idx in nj if idx != 0]
-        unique_nj = list(set(non_zero_nj))
-        num_drugs = len(unique_nj)
+        non_zero_n_drug = [idx for idx in n_drug if idx != 0]
+        unique_n_drug = list(set(non_zero_n_drug))
+        num_drugs = len(unique_n_drug)
 
 
         if rank_name is None:
@@ -244,22 +244,22 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         # Создаем матрицу рангов для выбранных ЛС
         rangs = [getattr(r, rank_name) for r in DrugSideEffect.objects.all()]
-        rang1 = np.zeros((num_drugs, self.n_k))
+        rang1 = np.zeros((num_drugs, self.n_side_effect))
 
-        for j, drug_idx in enumerate(unique_nj):
-            for k in range(self.n_k):
-                rang1[j, k] = rangs[self.n_k * (drug_idx - 1) + k]
+        for j, drug_idx in enumerate(unique_n_drug):
+            for k in range(self.n_side_effect):
+                rang1[j, k] = rangs[self.n_side_effect * (drug_idx - 1) + k]
 
         # Вычисление суммы рангов по эффектам
         rangsum = np.sum(rang1, axis=0)
-        for k in range(self.n_k):
-            logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
+        # for k in range(self.n_side_effect):
+        #     logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
         # Применяем нормализацию для нивелирующих эффектов
         if canceling_groups:
             rangsum = self._apply_canceling_normalization(rangsum, canceling_groups)
         
-        for k in range(self.n_k):
-            logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
+        # for k in range(self.n_side_effect):
+        #     logger.debug(f'k = {k}, rangsum[k] = {rangsum[k]}')
        
         ram = np.max(rangsum)
 
@@ -278,7 +278,7 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         # Распределение эффектов по классам
         side_effects = []
-        for k in range(self.n_k):
+        for k in range(self.n_side_effect):
             rank_val = rangsum[k]
             if rank_val >= 1.0:
                 cls = 3
@@ -305,18 +305,18 @@ class FortranCalculatorNormalization(BaseCalculator):
             context['side_effects'][cls - 1]['effects'].append(effect)
 
         # Анализ потенциальных ЛС
-        rangs_matrix = np.array(rangs).reshape(self.n_j, self.n_k)
+        rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
 
-        unique_nj_sub_1 = [idx - 1 for idx in unique_nj]
+        unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
         drugs_class_2, drugs_class_3 = [], []
 
-        for j in range(self.n_j):
+        for j in range(self.n_drug):
             new_rangsum = rangsum + rangs_matrix[j]
             # Применяем нормализацию для потенциальных комбинаций
             if canceling_groups:
                 new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
             max_rang = np.max(new_rangsum)
-            logger.debug(f'j = {j}, max_rang = {max_rang}')
+            # logger.debug(f'j = {j}, max_rang = {max_rang}')
             if max_rang >= 1.0:
                 drugs_class_3.append(j)
             elif max_rang >= 0.5:
@@ -338,9 +338,9 @@ class FortranCalculatorNormalization(BaseCalculator):
         ]
 
         context['drugs'] = [Drug.objects.get(index=i).drug_name
-                            for i in unique_nj]
+                            for i in unique_n_drug]
         context["SEFromDrug"] = []
-        for drug in [Drug.objects.get(index=i) for i in unique_nj]:
+        for drug in [Drug.objects.get(index=i) for i in unique_n_drug]:
             # Получаем все связи DrugSideEffect для данного лекарства
             drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
 
@@ -367,14 +367,14 @@ class CalculatorMP(BaseCalculator):
         logger.debug("Загрузка данных для CalculatorMP")
 
         self.drugs = list(Drug.objects.order_by('index'))
-        self.n_j = len(self.drugs)
+        self.n_drug = len(self.drugs)
         self.drug_names = {drug.index: drug.drug_name for drug in self.drugs}
         self.drug_pk_to_index = {drug.pk: drug.index for drug in self.drugs}
         self.drug_name_to_index = {drug.drug_name: drug.index
                                    for drug in self.drugs}
 
         self.side_effects = list(SideEffect.objects.order_by('index'))
-        self.n_k = len(self.side_effects)
+        self.n_side_effects = len(self.side_effects)
         self.se_names = {se.index: se.se_name for se in self.side_effects}
 
         drug_side_effects = list(
@@ -392,7 +392,7 @@ class CalculatorMP(BaseCalculator):
         # Построение матриц рангов для каждого типа ранга
         self.ranks_matrices = {}
         for rank_name in self.available_ranks:
-            matrix = np.zeros((self.n_j, self.n_k), dtype=np.float32)
+            matrix = np.zeros((self.n_drug, self.n_side_effects), dtype=np.float32)
             for r in drug_side_effects:
                 drug_idx = r.drug.index - 1
                 se_idx = r.side_effect.index - 1
@@ -408,26 +408,26 @@ class CalculatorMP(BaseCalculator):
             })
 
         logger.debug(
-            f'CalculatorMP готов: {self.n_j} ЛС, {self.n_k} ПЭ, '
+            f'CalculatorMP готов: {self.n_drug} ЛС, {self.n_side_effects} ПЭ, '
             f'ранги: {self.available_ranks}'
         )
 
-    def calculate(self, rank_name=None, nj=None):
+    def calculate(self, rank_name=None, n_drug=None):
         """Вычисление БЕЗ обращений к БД — только работа с памятью."""
-        if nj is None:
-            nj = []
+        if n_drug is None:
+            n_drug = []
         if rank_name is None or rank_name not in self.ranks_matrices:
             rank_name = self._DEFAULT_RANK_NAME
 
-        non_zero_nj = [self.drug_pk_to_index[pk] for pk in nj if pk != 0]
-        unique_nj = list(set(non_zero_nj))
-        num_drugs = len(unique_nj)
+        non_zero_n_drug = [self.drug_pk_to_index[pk] for pk in n_drug if pk != 0]
+        unique_n_drug = list(set(non_zero_n_drug))
+        num_drugs = len(unique_n_drug)
 
         if num_drugs == 0:
             return self._empty_result()
 
         matrix = self.ranks_matrices[rank_name]
-        drug_indices_0based = [idx - 1 for idx in unique_nj]
+        drug_indices_0based = [idx - 1 for idx in unique_n_drug]
         rang1 = matrix[drug_indices_0based, :]
         rangsum = np.sum(rang1, axis=0)
         ram = float(np.max(rangsum))
@@ -447,7 +447,7 @@ class CalculatorMP(BaseCalculator):
 
         # Распределение побочных эффектов по классам
         side_effects = []
-        for k in range(self.n_k):
+        for k in range(self.n_side_effects):
             rank_val = float(rangsum[k])
             if rank_val >= 1.0:
                 cls = 3
@@ -475,8 +475,8 @@ class CalculatorMP(BaseCalculator):
         # Анализ потенциальных лекарств
         drugs_class_2, drugs_class_3 = [], []
 
-        for j in range(self.n_j):
-            if (j + 1) not in unique_nj:
+        for j in range(self.n_drug):
+            if (j + 1) not in unique_n_drug:
                 new_rangsum = rangsum + matrix[j]
                 max_rang = float(np.max(new_rangsum))
                 if max_rang >= 1.0:
@@ -497,12 +497,12 @@ class CalculatorMP(BaseCalculator):
         ]
 
         # Информация о лекарствах и их побочных эффектах
-        context['drugs'] = [self.drug_names[i] for i in unique_nj]
+        context['drugs'] = [self.drug_names[i] for i in unique_n_drug]
         context["SEFromDrug"] = [
             {
                 'd_name': self.drug_names[i],
                 'effects': self.drug_side_effects_cache[i]
-            } for i in unique_nj
+            } for i in unique_n_drug
         ]
 
         return context

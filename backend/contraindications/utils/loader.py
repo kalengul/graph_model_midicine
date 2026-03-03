@@ -46,12 +46,12 @@ class LoadAndBuildDrugContraindications:
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)
-                    logger.debug(f'противопоказания {name} найдено')
+                    logger.debug(f'противопоказание {name} найдено')
                 except Contraindication.DoesNotExist:
-                    logger.debug(f'противопоказания {name} не найдено')
+                    logger.debug(f'противопоказание {name} не найдено')
                     contraindication = Contraindication.objects.create(
                         name=name)
-                    logger.debug(f'противопоказания {name} добавлено')
+                    logger.debug(f'противопоказание {name} добавлено')
                 drug.contraindications.add(contraindication)
 
     def download(self):

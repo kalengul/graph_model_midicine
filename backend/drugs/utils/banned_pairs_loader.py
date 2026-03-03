@@ -146,7 +146,7 @@ class JSONBannedPairLoader(ABC):
     BANNED_GROUPS = "banned_groups"
 
     @staticmethod
-    def normalize_plus_sign(text):
+    def _normalize_plus_sign(text):
         """
         Нормализует пробелы вокруг знака '+'.
         Пример: "Препарат + Другой" -> "Препарат+Другой"
@@ -154,7 +154,7 @@ class JSONBannedPairLoader(ABC):
         # Заменяем пробелы вокруг + на просто +
         return re.sub(r'\s*\+\s*', '+', text)
 
-    def preprocess_drug_name(self, drug_name):
+    def _preprocess_drug_name(self, drug_name):
         """
         Предобработка названия препарата:
         1. Удаление пробелов в начале и конце
@@ -168,7 +168,7 @@ class JSONBannedPairLoader(ABC):
         processed = drug_name.strip()
         
         # Нормализуем пробелы вокруг знака +
-        processed = self.normalize_plus_sign(processed)
+        processed = self._normalize_plus_sign(processed)
         
         # Приводим к нижнему регистру для регистронезависимого сравнения
         processed = processed.lower()
@@ -184,14 +184,14 @@ class JSONBannedPairLoader(ABC):
         # Индекс группа → множество нормализованных препаратов
         group_to_drugs = {}
         for item in drugs_data:
-            drug = self.preprocess_drug_name(item.get(self.DRUG))
+            drug = self._preprocess_drug_name(item.get(self.DRUG))
             group = item.get('group')
             if drug and group:
                 group_to_drugs.setdefault(group, set()).add(drug)
 
         # Для каждого препарата расширяем banned_drugs
         for item in drugs_data:
-            drug1 = self.preprocess_drug_name(item.get(self.DRUG))
+            drug1 = self._preprocess_drug_name(item.get(self.DRUG))
             banned_groups = item.get('banned_groups', [])
             if not banned_groups:
                 continue
@@ -219,7 +219,7 @@ class JSONBannedPairLoader(ABC):
             for drug in drugs:
                 # Предобработка основного препарата
                 raw_drug1 = drug[self.DRUG]
-                drug1 = self.preprocess_drug_name(raw_drug1)
+                drug1 = self._preprocess_drug_name(raw_drug1)
                 
                 if not drug1:
                     logger.debug(f'Пустое название препарата, пропускаем')
@@ -227,7 +227,7 @@ class JSONBannedPairLoader(ABC):
 
                 for raw_drug2 in drug[self.BANNED_DRUGS]:
                     # Предобработка запрещённого препарата
-                    drug2 = self.preprocess_drug_name(raw_drug2)
+                    drug2 = self._preprocess_drug_name(raw_drug2)
                     
                     if not drug2:
                         logger.debug(f'Пустое название запрещённого препарата, пропускаем')
