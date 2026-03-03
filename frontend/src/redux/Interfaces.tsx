@@ -1,5 +1,5 @@
 export interface IResultBayes {
-  сompatibility_bayes: string ,
+  compatibility_bayes: string ,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputation[],
   SEFromDrug: ISEFromDrug[],
@@ -7,13 +7,25 @@ export interface IResultBayes {
   drugs: string[]
 }
 
+export interface IBannedPair{
+  pair: string[]
+  comment: string | null
+}
+
+export interface IBannedPairCont{
+  contraindications: string[]
+  drug: string
+}
+
 export interface IResultFortran{
-  сompatibility_fortran: string,
+  compatibility_fortran: string,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputation[],
   combinations: IDrugCombination[] | undefined
   SEFromDrug: ISEFromDrug[],
   drugs: string[]
+  bannedPairs: IBannedPair[],
+  bannedPairsCont: IBannedPairCont[]
 }
 
 export interface IComputationElem {
@@ -33,12 +45,12 @@ export interface ISE{
 }
 
 export interface ISideEffectComputation{
-  сompatibility: string,
+  compatibility: string,
   effects: ISE[]
 }
 
 interface IDrugCombination{
-  сompatibility: string
+  compatibility: string
   drugs: string[]
 }
 

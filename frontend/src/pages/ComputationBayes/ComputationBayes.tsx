@@ -103,12 +103,12 @@ export const ComputationBayes = () =>{
                     <h4>Результаты оценки совместимости</h4>
                     <h5>Проверяемые лекарственные средства: { Array.isArray(resultBayes.drugs) && resultBayes.drugs.join(" ")}</h5>
                     <h5 className="mt-3">Результаты: </h5>
-                    <ComputationResults compatibility={resultBayes.сompatibility_bayes} />
+                    <ComputationResults compatibility={resultBayes.compatibility_bayes} />
 
-                    {(resultBayes.сompatibility_bayes.trim()!=="banned") &&
+                    {(resultBayes.compatibility_bayes.trim()!=="banned") &&
                     <>
                         <h5 className="mt-3">Риски побочных эффектов: </h5>
-                        {!isRegex(resultBayes.сompatibility_bayes, "banned")&&<div className="mt-3">
+                        {!isRegex(resultBayes.compatibility_bayes, "banned")&&<div className="mt-3">
 
                             
                             <div className="mt-3 mb-2 flex jc-sb ai-center">
@@ -122,61 +122,61 @@ export const ComputationBayes = () =>{
                             </div>
 
                             {/* Вывод побочек по риску появления */}
-                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
+                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.compatibility.trim()==="incompatible") &&
                                 <CollapsList
                                     title = "Высокий уровень риска появления побочных эффектов"
                                     className="ComputationResults incompatible"  //default
                                     type="riscs"
-                                    content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects} //side_effect[0].effects
+                                    content= {resultBayes.side_effects.find(e=>e.compatibility.trim()==="incompatible")?.effects} //side_effect[0].effects
                                     visibleRisks = {true}
                                 />
                             }
                             {
-                                compareView && compareWithFortran.find(e=>e.сompatibility.trim()==="incompatible") &&
+                                compareView && compareWithFortran.find(e=>e.compatibility.trim()==="incompatible") &&
                                     <CollapsList
                                         title = "Высокий уровень риска появления побочных эффектов"
                                         className="ComputationResults incompatible"
                                         type="compare-riscs"
-                                        content= {compareWithFortran.find(e=>e.сompatibility.trim()==="incompatible")?.compareData}
+                                        content= {compareWithFortran.find(e=>e.compatibility.trim()==="incompatible")?.compareData}
                                         visibleRisks = {true}
                                     />
                             }
-                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
+                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.compatibility.trim()==="caution") &&
                                 <CollapsList
                                     title = "Средний уровень риска появления побочных эффектов"
                                     className="ComputationResults caution mt-2"  //default
                                     type="riscs"
-                                    content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects} //side_effect[0].effects
+                                    content= {resultBayes.side_effects.find(e=>e.compatibility.trim()==="caution")?.effects} //side_effect[0].effects
                                     visibleRisks = {true}
                                 />
                             }
                             {
-                                compareView && compareWithFortran.find(e=>e.сompatibility.trim()==="caution") &&
+                                compareView && compareWithFortran.find(e=>e.compatibility.trim()==="caution") &&
                                     <CollapsList
                                         title = "Средний уровень риска появления побочных эффектов"
                                         className="ComputationResults caution mt-2"
                                         type="compare-riscs"
-                                        content= {compareWithFortran.find(e=>e.сompatibility.trim()==="caution")?.compareData}
+                                        content= {compareWithFortran.find(e=>e.compatibility.trim()==="caution")?.compareData}
                                         visibleRisks = {true}
                                     />
                             }
 
-                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
+                            {!compareView && resultBayes.side_effects && resultBayes.side_effects.find(e=>e.compatibility.trim()==="compatible") &&
                                 <CollapsList
                                     title = "Низкий уровень риска появления побочных эффектов"
                                     className="ComputationResults compatible mt-2"  //default
                                     type="riscs"
-                                    content= {resultBayes.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects} //side_effect[0].effects
+                                    content= {resultBayes.side_effects.find(e=>e.compatibility.trim()==="compatible")?.effects} //side_effect[0].effects
                                     visibleRisks = {true}
                                 />
                             }
                             {
-                                compareView && compareWithFortran.find(e=>e.сompatibility.trim()==="compatible") &&
+                                compareView && compareWithFortran.find(e=>e.compatibility.trim()==="compatible") &&
                                     <CollapsList
                                         title = "Низкий уровень риска появления побочных эффектов"
                                         className="ComputationResults compatible mt-2"
                                         type="compare-riscs"
-                                        content= {compareWithFortran.find(e=>e.сompatibility.trim()==="compatible")?.compareData}
+                                        content= {compareWithFortran.find(e=>e.compatibility.trim()==="compatible")?.compareData}
                                         visibleRisks = {true}
                                     />
                             }

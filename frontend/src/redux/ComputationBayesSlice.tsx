@@ -14,7 +14,7 @@ interface IComputationBayesState {
 }
 
 const initStateBayes: IResultBayes = {
-    сompatibility_bayes: "unknown",
+    compatibility_bayes: "unknown",
     rank_iteractions: undefined,
     side_effects: [],
     SEFromDrug: [],
@@ -103,11 +103,11 @@ const ComputationBayesSlice = createSlice({
             state.resultBayes = action.payload.data
 
             //Сортруем результаты по убыванию ранга
-            if(action.payload.data.сompatibility_bayes.trim()!=="banned") {
+            if(action.payload.data.compatibility_bayes.trim()!=="banned") {
               //Сортируем результаты по убыванию ранга попбочки
               state.resultBayes.side_effects = state.resultBayes.side_effects.map(item => (
                 {
-                  сompatibility: item.сompatibility,
+                  compatibility: item.compatibility,
                   effects: item.effects.sort((a, b) => b.rank - a.rank)
                 }
               ))

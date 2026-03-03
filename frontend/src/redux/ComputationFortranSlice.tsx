@@ -13,12 +13,14 @@ interface IComputationFortranState {
 }
 
 const initStateFortran: IResultFortran = {
-    сompatibility_fortran: "unknown",
-    rank_iteractions: undefined,
-    side_effects: [],
-    SEFromDrug: [],
-    combinations: undefined,
-    drugs: [],
+  compatibility_fortran: "unknown",
+  rank_iteractions: undefined,
+  side_effects: [],
+  SEFromDrug: [],
+  combinations: undefined,
+  drugs: [],
+  bannedPairs:[],
+  bannedPairsCont:[]
 }
 
 interface IHumanData{
@@ -140,11 +142,12 @@ const ComputationFortranSlice = createSlice({
             state.resultFortran = action.payload.data
 
             //Сортруем результаты по убыванию ранга
-            if(action.payload.data.сompatibility_fortran.trim()!=="banned") {
+            console.log(action.payload.data)
+            if(action.payload.data.compatibility_fortran.trim()!=="banned") {
               //Сортируем результаты по убыванию ранга попбочки
               state.resultFortran.side_effects = state.resultFortran.side_effects.map(item => (
                 {
-                  сompatibility: item.сompatibility,
+                  compatibility: item.compatibility,
                   effects: item.effects.sort((a, b) => b.rank - a.rank)
                 }
               ))

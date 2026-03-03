@@ -31,6 +31,12 @@ export const ComputationFortran = () =>{
         setIsVisibleRick(!isVisibleRick)
     }
 
+    const ResultData = () => {
+        if (resultFortran.compatibility_fortran === "banned" && resultFortran.bannedPairs.length>0) return resultFortran.bannedPairs
+        else if(resultFortran.compatibility_fortran === "banned-contraindications" && resultFortran.bannedPairsCont.length>0) return resultFortran.bannedPairsCont
+        else return null
+    }
+
     return(
         <div className="flex">
         <Nav></Nav>
@@ -52,37 +58,40 @@ export const ComputationFortran = () =>{
                     <div>
                         <h5>Проверяемые лекарственные средства: {Array.isArray(resultFortran.drugs) && resultFortran.drugs.join(" ")}</h5>
                         <h5 className="mt-3">Результаты: </h5>
-                        <ComputationResults compatibility={resultFortran.сompatibility_fortran} />
-                        {resultFortran.сompatibility_fortran !== "banned" && resultFortran.сompatibility_fortran !== "banned-contraindications" &&
+                        <ComputationResults 
+                            compatibility={resultFortran.compatibility_fortran}
+                            data = {ResultData()}
+                        />
+                        {resultFortran.compatibility_fortran !== "banned" && resultFortran.compatibility_fortran !== "banned-contraindications" &&
                         <>
                             <h5 className="mt-3">Риски побочных эффектов: </h5>
                         
-                            {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible") &&
+                            {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.compatibility.trim()==="incompatible") &&
                                 <CollapsList
                                     title = "Высокий уровень риска появления побочных эффектов"
                                     className="ComputationResults incompatible"
                                     type="riscs"
-                                    content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="incompatible")?.effects}
+                                    content= {resultFortran.side_effects.find(e=>e.compatibility.trim()==="incompatible")?.effects}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }
 
-                            { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution") &&
+                            { resultFortran.side_effects && resultFortran.side_effects.find(e=>e.compatibility.trim()==="caution") &&
                                 <CollapsList 
                                     title = "Средний уровень риска появления побочных эффектов"
                                     className="ComputationResults incompatible caution mt-2"
                                     type="riscs"
-                                    content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="caution")?.effects}
+                                    content= {resultFortran.side_effects.find(e=>e.compatibility.trim()==="caution")?.effects}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }
 
-                            { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible") &&
+                            { resultFortran.side_effects &&  resultFortran.side_effects.find(e=>e.compatibility.trim()==="compatible") &&
                                 <CollapsList
                                     title = "Низкий уровень риска появления побочных эффектов" 
                                     className="ComputationResults incompatible compatible mt-2"
                                     type="riscs"
-                                    content= {resultFortran.side_effects.find(e=>e.сompatibility.trim()==="compatible")?.effects}
+                                    content= {resultFortran.side_effects.find(e=>e.compatibility.trim()==="compatible")?.effects}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }
@@ -108,33 +117,33 @@ export const ComputationFortran = () =>{
 
                             <h5 className="mt-3">Дополнительные лекарственные средства: </h5>
                     
-                            {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible") &&
+                            {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible") &&
                                 
                                 <CollapsList
                                     title = "Лекарственные средства, запрещенные с данной комбинацией"
                                     className="ComputationResults incompatible"
                                     type="drugs-combin"
-                                    content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="incompatible")?.drugs}
+                                    content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }
 
-                            { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution") &&
+                            { resultFortran.combinations &&  resultFortran.combinations.find(e=>e.compatibility.trim()==="caution") &&
                                 <CollapsList
                                     title = "Лекарственные средства, которые добавлять с осторожностью:"
                                     className="ComputationResults caution mt-2"
                                     type="drugs-combin"
-                                    content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="caution")?.drugs}
+                                    content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="caution")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }
 
-                            { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible") &&
+                            { resultFortran.combinations &&   resultFortran.combinations.find(e=>e.compatibility.trim()==="compatible") &&
                                 <CollapsList 
                                     title = "Лекарственные средства, которые можно добавлять к комбинации:"
                                     className="ComputationResults compatible mt-2"
                                     type="drugs-combin"
-                                    content= {resultFortran.combinations.find(e=>e.сompatibility.trim()==="compatible")?.drugs}
+                                    content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="compatible")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
                             }

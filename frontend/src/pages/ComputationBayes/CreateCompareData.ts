@@ -1,4 +1,5 @@
-import {ISideEffectComputationFortran} from "../../redux/ComputationSlice"
+// import {ISideEffectComputationFortran} from "../../redux/ComputationSlice"
+import { ISideEffectComputation } from "../../redux/Interfaces"
 
 export interface ICompareData{
   se_name: string,
@@ -7,19 +8,19 @@ export interface ICompareData{
 }
 
 export interface ICompareDataRisk{
-  сompatibility: string,
+  compatibility: string,
   compareData: ICompareData[]
 }
 
 //Построение данных для сравнения
-export const CreateCompareFunction = (resBayes: ISideEffectComputationFortran[], resFortran: ISideEffectComputationFortran[]): ICompareDataRisk[] => {
+export const CreateCompareFunction = (resBayes: ISideEffectComputation[], resFortran: ISideEffectComputation[]): ICompareDataRisk[] => {
     let compareData: ICompareDataRisk[] = []
 
     if(!resBayes||!resFortran||resBayes.length===0||resFortran.length===0) return []
     else{
         //Заполняем ранги и побочки для Байеса
         compareData = resBayes.map(item =>({
-            сompatibility: item.сompatibility,
+            compatibility: item.compatibility,
             compareData: item.effects.map(se=>({
                     se_name: se.se_name,
                     rankFortran:  "-",
