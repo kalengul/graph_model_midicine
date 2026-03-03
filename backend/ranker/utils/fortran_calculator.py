@@ -98,9 +98,9 @@ class FortranCalculator(BaseCalculator):
             })
 
         context['side_effects'] = [
-            {"сompatibility": "compatible", 'effects': []},
-            {"сompatibility": "caution", 'effects': []},
-            {"сompatibility": "incompatible", 'effects': []},
+            {"compatibility": "compatible", 'effects': []},
+            {"compatibility": "caution", 'effects': []},
+            {"compatibility": "incompatible", 'effects': []},
         ]
 
         side_effects.sort(key=lambda x: x['rank'], reverse=True)
@@ -147,9 +147,9 @@ class FortranCalculator(BaseCalculator):
         # print('drug_array3 =', drug_array3)
 
         context['combinations'] = [
-            {"сompatibility": 'cause', "drugs": [d['name']
+            {"compatibility": 'cause', "drugs": [d['name']
                                                  for d in drug_array2]},
-            {"сompatibility": 'incompatible', "drugs": [d['name']
+            {"compatibility": 'incompatible', "drugs": [d['name']
                                                         for d in drug_array3]},
         ]
 
@@ -294,9 +294,9 @@ class FortranCalculatorNormalization(BaseCalculator):
             })
 
         context['side_effects'] = [
-            {"сompatibility": "compatible", 'effects': []},
-            {"сompatibility": "caution", 'effects': []},
-            {"сompatibility": "incompatible", 'effects': []},
+            {"compatibility": "compatible", 'effects': []},
+            {"compatibility": "caution", 'effects': []},
+            {"compatibility": "incompatible", 'effects': []},
         ]
 
         side_effects.sort(key=lambda x: x['rank'], reverse=True)
@@ -331,9 +331,9 @@ class FortranCalculatorNormalization(BaseCalculator):
                        for j in drugs_class_3]
 
         context['combinations'] = [
-            {"сompatibility": 'cause', "drugs": [d['name']
+            {"compatibility": 'cause', "drugs": [d['name']
                                                  for d in drug_array2]},
-            {"сompatibility": 'incompatible', "drugs": [d['name']
+            {"compatibility": 'incompatible', "drugs": [d['name']
                                                         for d in drug_array3]},
         ]
 
@@ -462,9 +462,9 @@ class CalculatorMP(BaseCalculator):
             })
 
         context['side_effects'] = [
-            {"сompatibility": "compatible", 'effects': []},
-            {"сompatibility": "caution", 'effects': []},
-            {"сompatibility": "incompatible", 'effects': []},
+            {"compatibility": "compatible", 'effects': []},
+            {"compatibility": "caution", 'effects': []},
+            {"compatibility": "incompatible", 'effects': []},
         ]
 
         side_effects.sort(key=lambda x: x['rank'], reverse=True)
@@ -490,9 +490,9 @@ class CalculatorMP(BaseCalculator):
                        for j in drugs_class_3]  # ИСПРАВЛЕНО
 
         context['combinations'] = [
-            {"сompatibility": 'cause', "drugs": [d['name']
+            {"compatibility": 'cause', "drugs": [d['name']
                                                  for d in drug_array2]},
-            {"сompatibility": 'incompatible', "drugs": [d['name']
+            {"compatibility": 'incompatible', "drugs": [d['name']
                                                         for d in drug_array3]},
         ]
 
@@ -513,13 +513,13 @@ class CalculatorMP(BaseCalculator):
             'rank_iteractions': 0.0,
             'compatibility_fortran': 'compatible',
             'side_effects': [
-                {"сompatibility": "compatible", 'effects': []},
-                {"сompatibility": "caution", 'effects': []},
-                {"сompatibility": "incompatible", 'effects': []},
+                {"compatibility": "compatible", 'effects': []},
+                {"compatibility": "caution", 'effects': []},
+                {"compatibility": "incompatible", 'effects': []},
             ],
             'combinations': [
-                {"сompatibility": 'cause', "drugs": []},
-                {"сompatibility": 'incompatible', "drugs": []},
+                {"compatibility": 'cause', "drugs": []},
+                {"compatibility": 'incompatible', "drugs": []},
             ],
             'drugs': [],
             'SEFromDrug': []
