@@ -147,7 +147,7 @@ class BayeseView(APIView):
         exist = False
         description = None
         gender = None
-        сompatibility_bayes = 'unknown'
+        compatibility_bayes = 'unknown'
         contraindication_ids = []
 
         banned = DrugPairChecker().check_banned(drug_ids)
@@ -159,10 +159,10 @@ class BayeseView(APIView):
                 message='Совместимость ЛС по сети Байеса успешно рассчитана',
                 http_status=status.HTTP_200_OK,
                 data={
-                    "сompatibility_bayes": "banned",
+                    "compatibility_bayes": "banned",
                     "combinations": [
                         {
-                            "сompatibility": "banned",
+                            "compatibility": "banned",
                             "drugs": banned
 
                         }],
@@ -181,7 +181,7 @@ class BayeseView(APIView):
                 self._exist_contraindications(drug_ids, contraindication_ids))
         if exist:
             logger.debug('Есть найдено противопоказание')
-            сompatibility_bayes = 'banned-contraindications'
+            compatibility_bayes = 'banned-contraindications'
 
         drugs = []
         for id in drug_ids:
@@ -243,20 +243,20 @@ class BayeseView(APIView):
 
         result = {
                     "rank_iteractions": "unknown",
-                    "сompatibility_bayes": сompatibility_bayes,
+                    "compatibility_bayes": compatibility_bayes,
                     "side_effects": [
                         {
-                            "сompatibility": "compatible",
+                            "compatibility": "compatible",
                             "effects": []
 
                         },
                         {
-                            "сompatibility": "caution",
+                            "compatibility": "caution",
                             "effects": []
 
                         },
                         {
-                            "сompatibility": "incompatible",
+                            "compatibility": "incompatible",
                             "effects": []
 
                         }
@@ -310,11 +310,11 @@ class BayeseView(APIView):
 
         combinations = [
             {
-                "сompatibility": "cause",
+                "compatibility": "cause",
                 "drugs": []
             },
             {
-                "сompatibility": "incompatible",
+                "compatibility": "incompatible",
                 "drugs": []
             },
         ]
@@ -345,17 +345,17 @@ class BayeseView(APIView):
                 })
 
         if max_rank <= GREEN:
-            сompatibility_bayes = 'compatible'
+            compatibility_bayes = 'compatible'
         elif GREEN < max_rank <= YELLOW:
-            сompatibility_bayes = 'caution'
+            compatibility_bayes = 'caution'
             combinations[0]["drugs"] = drugs
         elif max_rank > YELLOW:
-            сompatibility_bayes = 'incompatible'
+            compatibility_bayes = 'incompatible'
             combinations[1]["drugs"] = drugs
 
-        print('сompatibility_bayes = ', сompatibility_bayes)
+        print('compatibility_bayes = ', compatibility_bayes)
 
-        result['сompatibility_bayes'] = сompatibility_bayes
+        result['compatibility_bayes'] = compatibility_bayes
 
         result["side_effects"][0]["effects"].sort(key=lambda x: x["rank"],
                                                   reverse=True)

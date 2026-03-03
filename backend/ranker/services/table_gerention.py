@@ -102,7 +102,7 @@ class ExcelTableGenerater():
                         continue
                     result = self.calculator.calculate(rank_name=rank, nj=ids)
 
-                    compatibility = result['сompatibility_fortran']
+                    compatibility = result['compatibility_fortran']
 
                     if compatibility == self.INCOMPATIBLE:
                         incompatible_row = {self.DRUG: ', '.join(drugs)}
