@@ -10,7 +10,7 @@ from ..models import (DrugGroup,
                       DrugSideEffect,
                       SideEffect)
 from drugs.utils.loaders import Loader
-from drugs.utils.cleaner import CleanProcessor
+from drugs.utils.cleaner import DrugCleanProcessor
 
 
 logger = logging.getLogger('drugs')
@@ -118,7 +118,7 @@ class DBManipulator(Loader):
         - DrugSifeEffect.
         """
         logger.debug('Удаление с CleanProcessor')
-        cleaner = CleanProcessor().get_cleaner()
+        cleaner = DrugCleanProcessor().get_cleaner()
         cleaner.clear_table()
 
     @classmethod

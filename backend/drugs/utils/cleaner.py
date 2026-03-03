@@ -54,7 +54,7 @@ class PostgresCleaner(BaseCleaner):
                             " RESTART IDENTITY CASCADE;"))
 
 
-class CleanProcessor:
+class DrugCleanProcessor:
     """Процессор очистки БД."""
 
     def get_cleaner(self):

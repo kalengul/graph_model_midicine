@@ -22,6 +22,46 @@ class LoadAndBuildDrugContraindications:
     NAME = 'drug'
     CONTRAS = 'extracted_contraindication'
     PATH = os.path.join(settings.TXT_DB_PATH, 'extracted_data_not_all.json')
+    CONT_DICT_PATH = os.path.join(settings.SYNONYM_PATH, 'dict_synonym_contraindications.json')
+
+    def load_from_keys(self):
+        """
+        Загружает противопоказания из ключей JSON.
+        """
+        
+        try:
+            with open(self.CONT_DICT_PATH, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+        except Exception as e:
+            logger.error(f"Неожиданная ошибка при чтении {self.CONT_DICT_PATH}: {e}")
+            return {}
+        
+        stats = {'created': 0, 'existed': 0, 'errors': 0}
+        
+        for contra_name in data.keys():
+            try:
+ 
+                contra_name = TextBuilder(contra_name).normalize().lower().strip().text
+                
+                # Создаем или получаем противопоказание
+                obj, created = Contraindication.objects.get_or_create(
+                    name__iexact=contra_name,
+                    defaults={'name': contra_name}
+                )
+            
+                if created:
+                    stats['created'] += 1
+                    logger.debug(f'Создано: {contra_name}')
+                else:
+                    stats['existed'] += 1
+                    logger.debug(f'Существует: {contra_name}')
+                    
+            except Exception as e:
+                stats['errors'] += 1
+                logger.error(f'Ошибка при обработке "{contra_name}": {e}')
+        
+        logger.info(f'Итог: создано {stats["created"]}, существовало {stats["existed"]}, ошибок {stats["errors"]}')
+        return stats
 
     def load(self, data=None):
         """Загрузка противопоказаний и связывание с ЛС."""
@@ -42,16 +82,14 @@ class LoadAndBuildDrugContraindications:
 
             for name in item[self.CONTRAS]:
                 name = TextBuilder(name).normalize().lower().strip().text
-                logger.debug(f'name = {name}')
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)
-                    logger.debug(f'противопоказание {name} найдено')
+                    logger.debug(f'\tcont_name = {name} найдено')
                 except Contraindication.DoesNotExist:
-                    logger.debug(f'противопоказание {name} не найдено')
                     contraindication = Contraindication.objects.create(
                         name=name)
-                    logger.debug(f'противопоказание {name} добавлено')
+                    logger.debug(f'\tcont_name = {name} добавлено')
                 drug.contraindications.add(contraindication)
 
     def download(self):

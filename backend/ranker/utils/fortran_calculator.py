@@ -147,7 +147,7 @@ class FortranCalculator(BaseCalculator):
         # print('drug_array3 =', drug_array3)
 
         context['combinations'] = [
-            {"compatibility": 'cause', "drugs": [d['name']
+            {"compatibility": 'caution', "drugs": [d['name']
                                                  for d in drug_array2]},
             {"compatibility": 'incompatible', "drugs": [d['name']
                                                         for d in drug_array3]},
@@ -490,7 +490,7 @@ class CalculatorMP(BaseCalculator):
                        for j in drugs_class_3]  # ИСПРАВЛЕНО
 
         context['combinations'] = [
-            {"compatibility": 'cause', "drugs": [d['name']
+            {"compatibility": 'caution', "drugs": [d['name']
                                                  for d in drug_array2]},
             {"compatibility": 'incompatible', "drugs": [d['name']
                                                         for d in drug_array3]},
