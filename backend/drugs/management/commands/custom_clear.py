@@ -2,7 +2,7 @@
 
 from django.core.management.base import BaseCommand
 
-from drugs.utils.cleaner import CleanProcessor
+from drugs.utils.cleaner import DrugCleanProcessor
 
 
 class Command(BaseCommand):
@@ -13,7 +13,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         """Выполнение очистки таблиц."""
-        cleaner = CleanProcessor().get_cleaner()
+        cleaner = DrugCleanProcessor().get_cleaner()
         cleaner.clear_table()
         self.stdout.write(self.style.SUCCESS(
             'Таблицы очищены и id сброшены'))

@@ -28,7 +28,9 @@ class DrugDataLoader:
     def load_all(self, data):
         """Загрузка всех данных."""
         if self.clear_before_load:
+            # Противопоказания
             CleanProcessor().get_cleaner().clean()
+            # Запрещенные пары
             self.loader_banned.clear_db()
 
         # Загрузка групп
@@ -89,6 +91,9 @@ class DrugDataLoader:
         
         # Используем существующий загрузчик
         self.loader_contra.load(data=data)
+
+        # Загрузка из словаря
+        self.loader_contra.load_from_keys()
         
         # Считаем новые связи
         new_count = Drug.contraindications.through.objects.count()
