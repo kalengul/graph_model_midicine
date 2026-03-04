@@ -159,8 +159,6 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if (res.data.age) setAge(res.data.age)
                     if (res.data.gender) setGender(res.data.gender)
                     if (res.data.cont_list) {
-                        console.log(typeof(res.data.cont_list[0]))
-
                         setCheckedContraindIds(res.data.cont_list.map(c=>c.toString())) //Заполняем список выбранных ID
                         //Заполняем противопоказания для отображения
                         setShowCheckedContraind([])
@@ -180,8 +178,6 @@ export const ComputationForm = (props: IComputationFormProps) =>{
         //вызов автозаполнения формы
 
     }
-
-    console.log(checkedContraindIds)
 
     //Отправка данных
     const SendDataHandler = (e: React.MouseEvent<HTMLButtonElement>) =>{
@@ -204,7 +200,6 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if(checkedContraindIds.length>0) sendData.humanData.cont_list = checkedContraindIds
                 }
 
-                console.log(sendData)
 
                  const sendDataF: sendFormFortran = {
                     drugs: checkedDrugIds.map(drugId => Number(drugId)),
@@ -217,8 +212,6 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     if(gender != "") sendDataF.humanData.gender = gender
                     if(checkedContraindIds.length>0) sendDataF.humanData.cont_list = checkedContraindIds
                 }
-
-                console.log(sendData)
 
                 dispatch(addDrugIds(checkedDrugIds))
                 dispatch(iteractionFortran(sendDataF))
@@ -239,8 +232,6 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                 }
 
                 if(selectedFile) sendData.medCard = selectedFile
-
-                console.log(sendData)
 
                 dispatch(iteractionFortran(sendData))
             }

@@ -1,7 +1,12 @@
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import axios, {AxiosError } from "axios";
 // import {IContElem} from "./ContraindicationsManageSlice"
-import {IResultFortran} from "./Interfaces"
+import {IResultFortran, ISEFromDrug} from "./Interfaces"
+
+interface IIncreasedRiskDrugs{
+  effect: string;
+  drugs: string;
+}
 
 interface IComputationFortranState {
   resultFortran: IResultFortran
@@ -9,6 +14,8 @@ interface IComputationFortranState {
   isLoad: boolean
   isSend: boolean
   errMessage: string | undefined
+
+  increasedRiskDrugs: IIncreasedRiskDrugs[]//ЛС из-за которых увеличился риск появления противопоказаний (для красного)
   [key: string]: any; // Если state может содержать другие динамические поля
 }
 
@@ -20,7 +27,7 @@ const initStateFortran: IResultFortran = {
   combinations: undefined,
   drugs: [],
   bannedPairs:[],
-  bannedPairsCont:[]
+  bannedPairsCont:[],
 }
 
 interface IHumanData{
@@ -119,7 +126,8 @@ const ComputationFortranSlice = createSlice({
       isresultFortran: false,
       isLoad: true,
       isSend: false,
-      errMessage: undefined
+      errMessage: undefined,
+      increasedRiskDrugs: [],
     } as IComputationFortranState,
     reducers: {
       initStates(state){
@@ -128,6 +136,7 @@ const ComputationFortranSlice = createSlice({
         state.isresultFortran = false
         state.resultFortran = initStateFortran
         state.errMessage = undefined
+        state.increasedRiskDrugs = []
       },
     },
     extraReducers: (builder) => {
@@ -142,7 +151,6 @@ const ComputationFortranSlice = createSlice({
             state.resultFortran = action.payload.data
 
             //Сортруем результаты по убыванию ранга
-            console.log(action.payload.data)
             if(action.payload.data.compatibility_fortran.trim()!=="banned") {
               //Сортируем результаты по убыванию ранга попбочки
               state.resultFortran.side_effects = state.resultFortran.side_effects.map(item => (
@@ -152,6 +160,33 @@ const ComputationFortranSlice = createSlice({
                 }
               ))
             }
+
+            //Получаем increasedRiskDrugs для определения почему стало хуже если стало
+            if(action.payload.data.compatibility_fortran.trim() === "incompatible" && action.payload.data.side_effects){
+              //Получаем побочки с высоким риском появления
+              const effects_incmpatible = action.payload.data.side_effects.find(e=>e.compatibility.trim()==="incompatible")
+              //Определяем у каких ЛС они максимальные
+              if(effects_incmpatible) {
+                const drugs = action.payload.data.SEFromDrug
+                effects_incmpatible.effects.map(e =>{
+                  let MaxRank: number = -1; //Максимальное значение ранга
+                  let drugName: string = ""//Название ЛС
+
+                  drugs.map(drug => {
+                    const drug_effect = GetDrugEffect(e.se_name, drug)
+                    if(drug_effect && drug_effect.rank >= MaxRank) {
+                      MaxRank = drug_effect.rank
+                      drugName = drug.d_name
+                    }
+                  })
+
+                  if(drugName!=="" &&  MaxRank!== -1){
+                    state.increasedRiskDrugs.push({effect: e.se_name, drugs: drugName})
+                  }
+                })
+              }
+            }
+
             break;
           default:
             state.isLoad = true
@@ -171,10 +206,17 @@ const ComputationFortranSlice = createSlice({
       })
       .addCase(iteractionFortran.pending, (state)=>{
         state.isLoad = false
+        state.increasedRiskDrugs = []
         state.isSend = true
       })
     },
 })
+
+//Получем ранг по имени эффекта из ЛС
+const GetDrugEffect = (effect_name: string, drug_effect: ISEFromDrug) =>{
+  const effect = drug_effect.effects.find(e => e.se_name.trim().toUpperCase() === effect_name.trim().toUpperCase())
+  return effect
+}
 
 export const { initStates} = ComputationFortranSlice.actions; //Actions создаются автоматически, нужно просто достать через деструкторизацию
 export default ComputationFortranSlice.reducer; //Формирование reduser из набора методов из redusers

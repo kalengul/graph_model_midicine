@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { use, useEffect, useState } from "react"
 
 import { ComputationForm } from "../../components/computationForm/ComputationForm";
 import { Nav } from '../../components/nav/nav';
@@ -21,6 +21,8 @@ export const ComputationFortran = () =>{
     const isResultFortran = useAppSelector(state=>state.computationFortran.isresultFortran);
     const errMessage = useAppSelector(state=>state.computationFortran.errMessage)
     const isSend = useAppSelector(state=>state.computationFortran.isSend)
+    const increasedRiskDrugs = useAppSelector(state => state.computationFortran.increasedRiskDrugs)
+    // console.log(increasedRiskDrugs)
 
     const [isVisibleRick, setIsVisibleRick] = useState(false)
     const [visibleTytle, setVisibleTytle] = useState("Показать объяснение")
@@ -64,6 +66,14 @@ export const ComputationFortran = () =>{
                         />
                         {resultFortran.compatibility_fortran !== "banned" && resultFortran.compatibility_fortran !== "banned-contraindications" &&
                         <>
+                            {increasedRiskDrugs.length>0 && 
+                            <div>
+                                <h5>Лекарственные средства с наибольшим влиянием:</h5>
+                                {increasedRiskDrugs.map(riskdrug=><div>
+                                    {riskdrug.effect} - {riskdrug.drugs}
+                                </div>)}
+
+                            </div>}
                             <h5 className="mt-3">Риски побочных эффектов: </h5>
                         
                             {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.compatibility.trim()==="incompatible") &&
