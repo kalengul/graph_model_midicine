@@ -85,7 +85,7 @@ class Drug(models.Model):
 class SideEffect(models.Model):
     """Класс ПД."""
 
-    id = models.PositiveIntegerField(editable=False)
+    id = models.PositiveIntegerField(primary_key=True, editable=False)
     se_name = models.CharField(max_length=MAX_LENGTH,
                                verbose_name="Побочный эффект",
                                unique=True)
