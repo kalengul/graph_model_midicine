@@ -90,7 +90,7 @@ class FortranCalculator(BaseCalculator):
                 cls = 2
             else:
                 cls = 1
-            effect = SideEffect.objects.get(index=k+1)
+            effect = SideEffect.objects.get(id=k+1)
             side_effects.append({
                 'se_name': effect.se_name,
                 'class': cls,
@@ -130,7 +130,7 @@ class FortranCalculator(BaseCalculator):
                 indices_class_3 = np.where(new_rangsum >= 1.0)[0]
                 if len(indices_class_3) > 0:
                     side_effects_class_3 = [{
-                        'name': SideEffect.objects.get(index=idx+1).effect_name,
+                        'name': SideEffect.objects.get(id=idx+1).se_name,
                         'value': float(new_rangsum[idx])
                     } for idx in indices_class_3]
                     drugs_class_3.append({
@@ -142,7 +142,7 @@ class FortranCalculator(BaseCalculator):
                 indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
                 if len(indices_class_2) > 0:
                     side_effects_class_2 = [{
-                        'name': SideEffect.objects.get(index=idx+1).effect_name,
+                        'name': SideEffect.objects.get(id=idx+1).se_name,
                         'value': float(new_rangsum[idx])
                     } for idx in indices_class_2]
                     drugs_class_2.append({
@@ -154,17 +154,17 @@ class FortranCalculator(BaseCalculator):
         # print('drugs_class_2 =', drugs_class_2)
 
         drug_array2 = [{
-            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
             'class': 2,
             'side_effects': item['side_effects']
         } for item in drugs_class_2]
 
         # for item in drugs_class_3:
-        #     print('Drug.objects.get(index=item["drug_index"]+1).drug_name =',
-        #           Drug.objects.get(index=item['drug_index']+1).drug_name)
+        #     print('Drug.objects.get(id=item["drug_index"]+1).drug_name =',
+        #           Drug.objects.get(id=item['drug_index']+1).drug_name)
 
         drug_array3 = [{
-            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
             'class': 3,
             'side_effects': item['side_effects']
         } for item in drugs_class_3]
@@ -190,10 +190,10 @@ class FortranCalculator(BaseCalculator):
 
 
         # Расчёт введённых препаратов по отдельности
-        context['drugs'] = [Drug.objects.get(index=i).drug_name
+        context['drugs'] = [Drug.objects.get(id=i).drug_name
                             for i in unique_n_drug]
         context["SEFromDrug"] = []
-        for drug in [Drug.objects.get(index=i) for i in unique_n_drug]:
+        for drug in [Drug.objects.get(id=i) for i in unique_n_drug]:
             # Получаем все связи DrugSideEffect для данного лекарства
             drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
 
@@ -323,7 +323,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                 cls = 2
             else:
                 cls = 1
-            effect = SideEffect.objects.get(index=k + 1)
+            effect = SideEffect.objects.get(id=k + 1)
             side_effects.append({
                 'se_name': effect.se_name,
                 'class': cls,
@@ -359,7 +359,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                 indices_class_3 = np.where(new_rangsum >= 1.0)[0]
                 if len(indices_class_3) > 0:
                     side_effects_class_3 = [{
-                        'se_name': SideEffect.objects.get(index=idx+1).se_name,
+                        'se_name': SideEffect.objects.get(id=idx+1).se_name,
                         'rank': round(float(new_rangsum[idx]), 2)
                     } for idx in indices_class_3]
                     drugs_class_3.append({
@@ -371,7 +371,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                 indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
                 if len(indices_class_2) > 0:
                     side_effects_class_2 = [{
-                        'se_name': SideEffect.objects.get(index=idx+1).se_name,
+                        'se_name': SideEffect.objects.get(id=idx+1).se_name,
                         'rank': round(float(new_rangsum[idx]),2)
                     } for idx in indices_class_2]
                     drugs_class_2.append({
@@ -380,13 +380,13 @@ class FortranCalculatorNormalization(BaseCalculator):
                     })
 
         drug_array2 = [{
-            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
             'class': 2,
             'side_effects': item['side_effects']
         } for item in drugs_class_2]
 
         drug_array3 = [{
-            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
             'class': 3,
             'side_effects': item['side_effects']
         } for item in drugs_class_3]
@@ -409,13 +409,13 @@ class FortranCalculatorNormalization(BaseCalculator):
         ]
 
 
-        context['drugs'] = [Drug.objects.get(index=i).drug_name
+        context['drugs'] = [Drug.objects.get(id=i).drug_name
                             for i in unique_n_drug]
         
 
         # Расчёт препаратов по отдельности
         context["SEFromDrug"] = []
-        for drug in [Drug.objects.get(index=i) for i in unique_n_drug]:
+        for drug in [Drug.objects.get(id=i) for i in unique_n_drug]:
             # Получаем все связи DrugSideEffect для данного лекарства
             drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
 
@@ -443,14 +443,14 @@ class CalculatorMP(BaseCalculator):
 
         self.drugs = list(Drug.objects.order_by('index'))
         self.n_drug = len(self.drugs)
-        self.drug_names = {drug.index: drug.drug_name for drug in self.drugs}
-        self.drug_pk_to_index = {drug.pk: drug.index for drug in self.drugs}
-        self.drug_name_to_index = {drug.drug_name: drug.index
+        self.drug_names = {drug.id: drug.drug_name for drug in self.drugs}
+        self.drug_pk_to_index = {drug.pk: drug.id for drug in self.drugs}
+        self.drug_name_to_index = {drug.drug_name: drug.id
                                    for drug in self.drugs}
 
         self.side_effects = list(SideEffect.objects.order_by('index'))
         self.n_side_effects = len(self.side_effects)
-        self.se_names = {se.index: se.se_name for se in self.side_effects}
+        self.se_names = {se.id: se.se_name for se in self.side_effects}
 
         drug_side_effects = list(
             DrugSideEffect.objects.select_related('drug', 'side_effect')
@@ -469,15 +469,15 @@ class CalculatorMP(BaseCalculator):
         for rank_name in self.available_ranks:
             matrix = np.zeros((self.n_drug, self.n_side_effects), dtype=np.float32)
             for r in drug_side_effects:
-                drug_idx = r.drug.index - 1
-                se_idx = r.side_effect.index - 1
+                drug_idx = r.drug.id - 1
+                se_idx = r.side_effect.id - 1
                 matrix[drug_idx, se_idx] = float(getattr(r, rank_name, 0.0))
             self.ranks_matrices[rank_name] = matrix
 
         # Кэш побочных эффектов для каждого лекарства
         self.drug_side_effects_cache = defaultdict(list)
         for r in drug_side_effects:
-            self.drug_side_effects_cache[r.drug.index].append({
+            self.drug_side_effects_cache[r.drug.id].append({
                 'se_name': r.side_effect.se_name,
                 'rank': float(getattr(r, self._DEFAULT_RANK_NAME, 0.0))
             })
