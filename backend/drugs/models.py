@@ -85,7 +85,7 @@ class Drug(models.Model):
 class SideEffect(models.Model):
     """Класс ПД."""
 
-    index = models.PositiveIntegerField(editable=False)
+    id = models.PositiveIntegerField(editable=False)
     se_name = models.CharField(max_length=MAX_LENGTH,
                                verbose_name="Побочный эффект",
                                unique=True)
@@ -108,10 +108,10 @@ class SideEffect(models.Model):
     def save(self, *args, **kwargs):
         """Сохранение ПД."""
         if not self.pk:
-            max_index = (
-                SideEffect.objects.aggregate(models.Max('index'))['index__max']
+            max_id = (
+                SideEffect.objects.aggregate(models.Max('id'))['id__max']
                 or 0)
-            self.index = max_index + 1
+            self.id = max_id + 1
         super().save(*args, **kwargs)
 
     class Meta:

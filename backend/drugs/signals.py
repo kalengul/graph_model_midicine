@@ -13,20 +13,20 @@ logger = logging.getLogger('apilog')
 @receiver(post_delete, sender=Drug)
 def reindex_drug_delete(sender, instance, **kwargs):
     """Изменение индекс при удалении ЛС."""
-    for i, item in enumerate(Drug.objects.order_by('index'),
+    for i, item in enumerate(Drug.objects.order_by('id'),
                              start=1):
-        if item.index != i:
-            item.index = i
+        if item.id != i:
+            item.id = i
             item.save()
 
 
 @receiver(post_delete, sender=SideEffect)
 def reindex_side_effect_delete(sender, instance, **kwargs):
     """Изменение индекс при удалении ПД."""
-    for i, item in enumerate(SideEffect.objects.order_by('index'),
+    for i, item in enumerate(SideEffect.objects.order_by('id'),
                              start=1):
-        if item.index != i:
-            item.index = i
+        if item.id != i:
+            item.id = i
             item.save()
 
 

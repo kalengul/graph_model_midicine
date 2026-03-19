@@ -249,8 +249,8 @@ class ExcelLoader(Loader):
 
     def _export_drugs(self):
         """Экспорт ЛС."""
-        drugs = Drug.objects.order_by('index')
-        numbers = [drug.index for drug in drugs]
+        drugs = Drug.objects.order_by('id')
+        numbers = [drug.id for drug in drugs]
         drug_names = [drug.drug_name for drug in drugs]
         self.drugs_df = pd.DataFrame(
             {
@@ -261,8 +261,8 @@ class ExcelLoader(Loader):
 
     def _export_side_effects(self):
         """Экспорт ПД."""
-        side_effects = SideEffect.objects.order_by('index')
-        numbers = [side_effect.index for side_effect in side_effects]
+        side_effects = SideEffect.objects.order_by('id')
+        numbers = [side_effect.id for side_effect in side_effects]
         side_effect_names = [side_effect.se_name for side_effect in side_effects]
         side_effect_names_en = [side_effect.se_name_en for side_effect in side_effects]
         weights = [side_effect.weight for side_effect in side_effects]
@@ -278,9 +278,9 @@ class ExcelLoader(Loader):
 
     def _export_rangs(self):
         """Экспорт рангов."""
-        side_effects = SideEffect.objects.order_by('index')
-        drugs = Drug.objects.order_by('index')
-        column_headers = [side_effect.index for side_effect in side_effects]
+        side_effects = SideEffect.objects.order_by('id')
+        drugs = Drug.objects.order_by('id')
+        column_headers = [side_effect.id for side_effect in side_effects]
         side_effect_names = [side_effect.se_name for side_effect in side_effects]
 
         rows = []
