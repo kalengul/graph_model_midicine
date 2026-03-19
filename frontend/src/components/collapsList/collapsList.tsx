@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { ISE, ICompareData, ISEFromDrug } from "../../redux/ComputationSlice"
+import { ISE, ICompareData, ISEFromDrug} from "../../redux/ComputationSlice"
+import {IDrugCombinationWithSE} from "../../redux/Interfaces"
 import "./collapsList.scss"
 
 interface ICollapsListProps{
     title?: string;
     className?: string
-    type: "riscs"|"compare-riscs"|"drugs-combin"|"riscs-from-drug"
-    content: ISE[] | string[] | ICompareData[] | ISEFromDrug[]| undefined
+    type: "riscs"|"compare-riscs"|"drugs-combin"|"riscs-from-drug"|"drugs-combin-fortran"
+    content: ISE[] | string[] | ICompareData[] | ISEFromDrug[]| IDrugCombinationWithSE[] | undefined
 
     visibleRisks: boolean
 }
@@ -54,6 +55,34 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, v
                     </div>
                 </div>
             );
+        case "drugs-combin-fortran":{
+            const drugItem = item as  IDrugCombinationWithSE;
+            return (
+                <>
+                <div className={`flex jc-sb w-100 ps-3 pe-3 ${index===0 && "mt-3"}`} key={index}>
+                    <div className="w-50">
+                        <span className='me-3'>{index + 1}.</span> 
+                        <span>{drugItem.name}</span>
+                    </div>
+                    <div className="w-50">
+                        <span>Есть риск появления побочных эффектов:</span>
+                        <div >
+                            {drugItem.side_effects.length>0 && drugItem.side_effects.map((se, se_index) =>
+                            <div className='flex jc-sb'>
+                                <div>
+                                    <span className='me-3'>{se_index + 1}.</span> 
+                                    <span>{se.se_name}</span>
+                                </div>
+                                {visibleRisks && <span>{se.rank}</span>}
+                            </div>)
+                            }
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                </>
+            );
+        }
         default:
             return null;
     }

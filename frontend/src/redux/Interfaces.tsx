@@ -21,7 +21,7 @@ export interface IResultFortran{
   compatibility_fortran: string,
   rank_iteractions: number | undefined,
   side_effects: ISideEffectComputation[],
-  combinations: IDrugCombination[] | undefined
+  combinations: IDrugCombinationFortran[] | undefined
   SEFromDrug: ISEFromDrug[],
   drugs: string[]
   bannedPairs: IBannedPair[],
@@ -52,5 +52,16 @@ export interface ISideEffectComputation{
 interface IDrugCombination{
   compatibility: string
   drugs: string[]
+}
+
+
+export interface IDrugCombinationWithSE{
+  name: string,
+  side_effects: ISE[]
+}
+
+interface IDrugCombinationFortran{
+  compatibility: string
+  drugs: IDrugCombinationWithSE[]
 }
 

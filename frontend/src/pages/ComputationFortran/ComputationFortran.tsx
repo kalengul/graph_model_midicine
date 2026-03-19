@@ -132,7 +132,7 @@ export const ComputationFortran = () =>{
                                 <CollapsList
                                     title = "Лекарственные средства, запрещенные с данной комбинацией"
                                     className="ComputationResults incompatible"
-                                    type="drugs-combin"
+                                    type="drugs-combin-fortran"
                                     content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
@@ -142,7 +142,7 @@ export const ComputationFortran = () =>{
                                 <CollapsList
                                     title = "Лекарственные средства, которые добавлять с осторожностью:"
                                     className="ComputationResults caution mt-2"
-                                    type="drugs-combin"
+                                    type="drugs-combin-fortran"
                                     content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="caution")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
@@ -152,7 +152,7 @@ export const ComputationFortran = () =>{
                                 <CollapsList 
                                     title = "Лекарственные средства, которые можно добавлять к комбинации:"
                                     className="ComputationResults compatible mt-2"
-                                    type="drugs-combin"
+                                    type="drugs-combin-fortran"
                                     content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="compatible")?.drugs}
                                     visibleRisks = {isVisibleRick}
                                 />
