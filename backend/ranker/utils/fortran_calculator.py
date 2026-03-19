@@ -115,44 +115,81 @@ class FortranCalculator(BaseCalculator):
 
         unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
         drugs_class_2, drugs_class_3 = [], []
-        # print('rangs_matrix.shape =', rangs_matrix.shape)
+        print('rangs_matrix.shape =', rangs_matrix.shape)
         # logger.debug(f'rangs_matrix = {rangs_matrix}')
         # logger.debug(f'unique_n_drug_sub_1 = {unique_n_drug_sub_1}')
         for j in range(self.n_drug):
             if j not in unique_n_drug_sub_1:
                 new_rangsum = rangsum + rangs_matrix[j]
-                max_rang = np.max(new_rangsum)
+                
                 logger.debug(f'j = {j}')
-                logger.debug(f'max_rang = {max_rang}')
-                if max_rang >= 1.0:
-                    drugs_class_3.append(j)
-                elif max_rang >= 0.5:
-                    drugs_class_2.append(j)
+                logger.debug(f'new_rangsum = {new_rangsum}')
+                
+                # Находим все побочные эффекты с value >= 1.0 для class 3
+                print(f'np.where(new_rangsum >= 1.0)[0] = {np.where(new_rangsum >= 1.0)[0]}')
+                indices_class_3 = np.where(new_rangsum >= 1.0)[0]
+                if len(indices_class_3) > 0:
+                    side_effects_class_3 = [{
+                        'name': SideEffect.objects.get(index=idx+1).effect_name,
+                        'value': float(new_rangsum[idx])
+                    } for idx in indices_class_3]
+                    drugs_class_3.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_3
+                    })
+                
+                # Находим все побочные эффекты с 0.5 <= value < 1.0 для class 2
+                indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
+                if len(indices_class_2) > 0:
+                    side_effects_class_2 = [{
+                        'name': SideEffect.objects.get(index=idx+1).effect_name,
+                        'value': float(new_rangsum[idx])
+                    } for idx in indices_class_2]
+                    drugs_class_2.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_2
+                    })
 
         # print('drugs_class_3 =', drugs_class_3)
         # print('drugs_class_2 =', drugs_class_2)
 
-        drug_array2 = [{'name': Drug.objects.get(index=j+1).drug_name,
-                        'class': 2}
-                       for j in drugs_class_2]
+        drug_array2 = [{
+            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'class': 2,
+            'side_effects': item['side_effects']
+        } for item in drugs_class_2]
 
-        # for j in drugs_class_3:
-        #     print('Drug.objects.get(index=j+1).drug_name =',
-        #           Drug.objects.get(index=j+1).drug_name)
+        # for item in drugs_class_3:
+        #     print('Drug.objects.get(index=item["drug_index"]+1).drug_name =',
+        #           Drug.objects.get(index=item['drug_index']+1).drug_name)
 
-        drug_array3 = [{'name': Drug.objects.get(index=j+1).drug_name,
-                        'class': 3} 
-                       for j in drugs_class_3]
+        drug_array3 = [{
+            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'class': 3,
+            'side_effects': item['side_effects']
+        } for item in drugs_class_3]
 
         # print('drug_array3 =', drug_array3)
 
         context['combinations'] = [
-            {"compatibility": 'caution', "drugs": [d['name']
-                                                 for d in drug_array2]},
-            {"compatibility": 'incompatible', "drugs": [d['name']
-                                                        for d in drug_array3]},
+            {
+                "compatibility": 'caution', 
+                "drugs": [{
+                    "name": d['name'],
+                    "side_effects": d['side_effects']
+                } for d in drug_array2]
+            },
+            {
+                "compatibility": 'incompatible', 
+                "drugs": [{
+                    "name": d['name'],
+                    "side_effects": d['side_effects']
+                } for d in drug_array3]
+            },
         ]
 
+
+        # Расчёт введённых препаратов по отдельности
         context['drugs'] = [Drug.objects.get(index=i).drug_name
                             for i in unique_n_drug]
         context["SEFromDrug"] = []
@@ -317,31 +354,66 @@ class FortranCalculatorNormalization(BaseCalculator):
                 # Применяем нормализацию для потенциальных комбинаций
                 if canceling_groups:
                     new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
-                max_rang = np.max(new_rangsum)
+
+                # Находим все побочные эффекты с value >= 1.0 для class 3
+                indices_class_3 = np.where(new_rangsum >= 1.0)[0]
+                if len(indices_class_3) > 0:
+                    side_effects_class_3 = [{
+                        'name': SideEffect.objects.get(index=idx+1).se_name,
+                        'value': round(float(new_rangsum[idx]), 2)
+                    } for idx in indices_class_3]
+                    drugs_class_3.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_3
+                    })
                 
-                # logger.debug(f'j = {j}, max_rang = {max_rang}')
-                if max_rang >= 1.0:
-                    drugs_class_3.append(j)
-                elif max_rang >= 0.5:
-                    drugs_class_2.append(j)
+                # Находим все побочные эффекты с 0.5 <= value < 1.0 для class 2
+                indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
+                if len(indices_class_2) > 0:
+                    side_effects_class_2 = [{
+                        'name': SideEffect.objects.get(index=idx+1).se_name,
+                        'value': round(float(new_rangsum[idx]),2)
+                    } for idx in indices_class_2]
+                    drugs_class_2.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_2
+                    })
 
-        drug_array2 = [{'name': Drug.objects.get(index=j + 1).drug_name,
-                        'class': 2}
-                       for j in drugs_class_2]
+        drug_array2 = [{
+            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'class': 2,
+            'side_effects': item['side_effects']
+        } for item in drugs_class_2]
 
-        drug_array3 = [{'name': Drug.objects.get(index=j + 1).drug_name,
-                        'class': 3}
-                       for j in drugs_class_3]
+        drug_array3 = [{
+            'name': Drug.objects.get(index=item['drug_index']+1).drug_name,
+            'class': 3,
+            'side_effects': item['side_effects']
+        } for item in drugs_class_3]
 
         context['combinations'] = [
-            {"compatibility": 'caution', "drugs": [d['name']
-                                                 for d in drug_array2]},
-            {"compatibility": 'incompatible', "drugs": [d['name']
-                                                        for d in drug_array3]},
+            {
+                "compatibility": 'caution', 
+                "drugs": [{
+                    "name": d['name'],
+                    "side_effects": d['side_effects']
+                } for d in drug_array2]
+            },
+            {
+                "compatibility": 'incompatible', 
+                "drugs": [{
+                    "name": d['name'],
+                    "side_effects": d['side_effects']
+                } for d in drug_array3]
+            },
         ]
+
 
         context['drugs'] = [Drug.objects.get(index=i).drug_name
                             for i in unique_n_drug]
+        
+
+        # Расчёт препаратов по отдельности
         context["SEFromDrug"] = []
         for drug in [Drug.objects.get(index=i) for i in unique_n_drug]:
             # Получаем все связи DrugSideEffect для данного лекарства
