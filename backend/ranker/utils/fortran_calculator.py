@@ -359,8 +359,8 @@ class FortranCalculatorNormalization(BaseCalculator):
                 indices_class_3 = np.where(new_rangsum >= 1.0)[0]
                 if len(indices_class_3) > 0:
                     side_effects_class_3 = [{
-                        'name': SideEffect.objects.get(index=idx+1).se_name,
-                        'value': round(float(new_rangsum[idx]), 2)
+                        'se_name': SideEffect.objects.get(index=idx+1).se_name,
+                        'rank': round(float(new_rangsum[idx]), 2)
                     } for idx in indices_class_3]
                     drugs_class_3.append({
                         'drug_index': j,
@@ -371,8 +371,8 @@ class FortranCalculatorNormalization(BaseCalculator):
                 indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
                 if len(indices_class_2) > 0:
                     side_effects_class_2 = [{
-                        'name': SideEffect.objects.get(index=idx+1).se_name,
-                        'value': round(float(new_rangsum[idx]),2)
+                        'se_name': SideEffect.objects.get(index=idx+1).se_name,
+                        'rank': round(float(new_rangsum[idx]),2)
                     } for idx in indices_class_2]
                     drugs_class_2.append({
                         'drug_index': j,
