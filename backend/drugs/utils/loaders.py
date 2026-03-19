@@ -172,9 +172,13 @@ class ExcelLoader(Loader):
             group, _ = DrugGroup.objects.get_or_create(
                 id=1,
                 defaults={'dg_name': 'Общая группа'})
+            
             for drug in df.iloc[:, 1].to_list():
-                Drug.objects.create(drug_name=drug.strip().casefold(),
-                                    drug_groups=group)
+                drug_obj = Drug.objects.create(
+                    drug_name=drug.strip().casefold()
+                )
+                drug_obj.drug_groups.add(group)
+                
             logger.info(f'Загружено ЛС: {Drug.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
