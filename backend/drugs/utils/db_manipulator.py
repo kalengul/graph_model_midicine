@@ -40,7 +40,7 @@ class DBManipulator(Loader):
             with open(cls.DRUGS_PATH, 'r', encoding='utf-8') as file:
                 for drug in [drug.strip() for drug in file if drug != '\n']:
                     Drug.objects.create(drug_name=drug.split('\t')[1].strip(),
-                                        drug_group=group)
+                                        drug_groups=group)
             logger.info(f'Загружено ЛС: {Drug.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')

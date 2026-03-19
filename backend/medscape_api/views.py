@@ -172,7 +172,7 @@ class AlternativeMedScapeOutView(APIView):
                 for i in range(len(drugs_list)):
                     drug = drugs_list[i].strip()
                     group = self.get_group_drug(drug)
-            return Response({'drug_group': group},
+            return Response({'drug_groups': group},
                             status=status.HTTP_200_OK)
         except ObjectDoesNotExist:
             return Response(
