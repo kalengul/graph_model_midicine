@@ -1,12 +1,12 @@
-import json
-import os
 import logging
-from django.conf import settings
 
-from ..models import Drug, DrugGroup, BannedDrugPair
+from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugSideEffect, SideEffect
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from contraindications.utils.cleaner import CleanProcessor
+from drugs.utils.cleaner import DrugCleanProcessor, BannedDrugPairCleanProcessor
+from django.db import transaction
+
 
 logger = logging.getLogger(__name__)
 
@@ -20,9 +20,10 @@ class DrugDataLoader:
         self.loader_contra = LoadAndBuildDrugContraindications()
         self.stats = {
             'drug_groups': 0,
-            'drugs_updated':0,
+            'drugs_updated': 0,
             'banned_pairs': 0,
-            'contraindications': 0
+            'contraindications': 0,
+            'nosology': 0,
         }
 
     def load_all(self, data):
@@ -30,6 +31,10 @@ class DrugDataLoader:
         if self.clear_before_load:
             # Противопоказания
             CleanProcessor().get_cleaner().clean()
+            BannedDrugPairCleanProcessor().get_cleaner().clear_table()
+            DrugCleanProcessor().get_cleaner().clear_table()
+            Nosology.objects.all().delete()
+
             # Запрещенные пары
             self.loader_banned.clear_db()
 
@@ -50,27 +55,42 @@ class DrugDataLoader:
         
         for item in data:
             drug_name = item.get('drug', '').strip()
-            group_name = item.get('global_group', '').strip()
+            groups = item.get('group', [])
+            nosology_name = item.get('nosology', '').strip()
             
-            if not drug_name or not group_name:
+            if not drug_name:
                 continue
             
-            # Получаем или создаем группу
-            group, created = DrugGroup.objects.get_or_create(
-                dg_name__iexact=group_name,
-                defaults={'dg_name': group_name}
+            drug, _ = Drug.objects.get_or_create(
+                drug_name__iexact=drug_name,
+                defaults={'drug_name': drug_name}
             )
-            if created:
-                self.stats['drug_groups'] += 1
             
-            # Обновляем лекарство
-            updated = Drug.objects.filter(
-                drug_name__iexact=drug_name
-            ).exclude(
-                drug_group=group
-            ).update(drug_group=group)
+            if groups:
+                for group_name in groups:
+                    if group_name:
+                        group, group_created = DrugGroup.objects.get_or_create(
+                            dg_name__iexact=group_name,
+                            defaults={'dg_name': group_name}
+                        )
+                        if group_created:
+                            self.stats['drug_groups'] += 1
+                        
+                        drug.drug_groups.add(group)
+                
+                self.stats['drugs_updated'] += 1
             
-            self.stats['drugs_updated'] += updated
+            if nosology_name:
+                nosology, nosology_created = Nosology.objects.get_or_create(
+                    name__iexact=nosology_name,
+                    defaults={'name': nosology_name}
+                )
+                if nosology_created:
+                    self.stats['nosology'] = self.stats.get('nosology', 0) + 1
+                
+                if drug.nosology != nosology:
+                    drug.nosology = nosology
+                    drug.save(update_fields=['nosology'])
 
     def _load_banned(self, data):
         """Загрузка запрещенных пар через существующий загрузчик."""

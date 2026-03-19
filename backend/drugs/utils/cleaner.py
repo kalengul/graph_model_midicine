@@ -15,15 +15,17 @@ class BaseCleaner(ABC):
     """Абстрактный очиститель таблиц."""
 
     table_names = [
-                'drugs_druggroup',
-                'drugs_drug',
-                'drugs_sideeffect',
-                'drugs_drugsideeffect',
-            ]
-    model_classes = [Drug,
-                     DrugGroup,
-                     SideEffect,
-                     DrugSideEffect,]
+        'drugs_drugsideeffect',
+        'drugs_drug',
+        'drugs_sideeffect',
+        'drugs_druggroup',
+    ]
+    model_classes = [
+        DrugSideEffect,
+        Drug,
+        SideEffect,
+        DrugGroup,
+    ]
 
     @abstractmethod
     def clear_table(self):
@@ -37,11 +39,13 @@ class SQLiteCleaner(BaseCleaner):
         """Очистка таблиц."""
         for model in self.model_classes:
             model.objects.all().delete()
+        
         with connection.cursor() as cursor:
             for table in self.table_names:
                 cursor.execute(
-                    "DELETE FROM sqlite_sequence WHERE name=%s",
-                    [table])
+                    "DELETE FROM sqlite_sequence WHERE name = %s",
+                    [table]
+                )
 
 
 class PostgresCleaner(BaseCleaner):
@@ -50,8 +54,10 @@ class PostgresCleaner(BaseCleaner):
     def clear_table(self):
         """Очистка таблиц."""
         with connection.cursor() as cursor:
-            cursor.execute((f"TRUNCATE TABLE {', '.join(self.table_names)}"
-                            " RESTART IDENTITY CASCADE;"))
+            quoted_tables = [f'"{table}"' for table in self.table_names]
+            cursor.execute(
+                f"TRUNCATE TABLE {', '.join(quoted_tables)} RESTART IDENTITY CASCADE;"
+            )
 
 
 class DrugCleanProcessor:
@@ -99,8 +105,11 @@ class PostgresBannedDrugCleaner(BannedDrugPairCleaner):
     def clear_table(self):
         """Очистка таблиц."""
         with connection.cursor() as cursor:
-            cursor.execute((f"TRUNCATE TABLE {', '.join(self.table_names)}"
-                            " RESTART IDENTITY CASCADE;"))
+            quoted_tables = [f'"{table}"' for table in self.table_names]
+            cursor.execute(
+                f"TRUNCATE TABLE {', '.join(quoted_tables)} "
+                "RESTART IDENTITY CASCADE;"
+            )
 
 
 class BannedDrugPairCleanProcessor:

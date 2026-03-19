@@ -4,6 +4,7 @@ from abc import ABC, abstractmethod
 
 from django.db import connection
 
+from drugs.models import Drug
 from contraindications.models import Contraindication
 
 
@@ -24,27 +25,28 @@ class PostgresCleaner(ContraindicationCleaner):
         """таблицы противопоказаний."""
         with connection.cursor() as cursor:
             cursor.execute(
-                (f'TRUNCATE TABLE "{self.model._meta.db_table}"'
-                 'RESTART IDENTITY CASCADE;'))
+                f'TRUNCATE TABLE "{self.model._meta.db_table}" '
+                'RESTART IDENTITY CASCADE;'
+            )
 
 
 class SQLiteCleaner(ContraindicationCleaner):
     """Очиститель БД SQLite от противопоказаний."""
 
     def clean(self):
-        """таблицы противопоказаний."""
-        with connection.cursor() as cursor:
-            cursor.execute("DELETE FROM drugs_drug_contraindications")
-            # Сбрасываем счетчик для связующей таблицы
-            cursor.execute("DELETE FROM sqlite_sequence WHERE name='drugs_drug_contraindications'")
-
-        # Потом удаляем противопоказания
+        """Очистка таблиц противопоказаний."""
+        # Сначала удаляем связи через through модель
+        Drug.contraindications.through.objects.all().delete()
+        
+        # Потом удаляем сами противопоказания
         self.model.objects.all().delete()
-
-        # Сбрасываем счетчик
+        
+        # Сбрасываем автоинкремент (если нужно)
         with connection.cursor() as cursor:
-            cursor.execute(('DELETE FROM sqlite_sequence '
-                            f'WHERE name="{self.model._meta.db_table}"'))
+            cursor.execute(
+                "UPDATE sqlite_sequence SET seq = 0 "
+                f"WHERE name = '{self.model._meta.db_table}'"
+            )
 
 
 class CleanProcessor:

@@ -4,7 +4,8 @@ from rest_framework import serializers
 from .models import (DrugGroup,
                      Drug,
                      SideEffect,
-                     DrugSideEffect)
+                     DrugSideEffect,
+                     Nosology)
 
 
 logger = logging.getLogger('drugs')
@@ -28,12 +29,21 @@ class DrugSerializer(serializers.ModelSerializer):
     (в том числе связь c группой и побочными эффектами).
     """
 
-    dg_id = serializers.PrimaryKeyRelatedField(
-        source='drug_group',
+    dg_ids = serializers.PrimaryKeyRelatedField(
+        source='drug_groups',
         queryset=DrugGroup.objects.all(),
+        many=True,
+        required=False,
+        allow_empty=True,
+        error_messages={'does_not_exist': 'Группа ЛС с таким ID не найдена'}
+    )
+
+    nosology_id = serializers.PrimaryKeyRelatedField(
+        source='nosology',
+        queryset=Nosology.objects.all(),
         required=False,
         allow_null=True,
-        error_messages={'does_not_exist': 'Группа ЛС с таким ID не найдена'}
+        error_messages={'does_not_exist': 'Нозология с таким ID не найдена'}
     )
 
     side_effects = serializers.ListField(
@@ -56,8 +66,12 @@ class DrugSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """Добавление ЛС."""
+        drug_groups = validated_data.pop('drug_groups', [])
         side_effects_data = validated_data.pop('side_effects', [])
         drug = Drug.objects.create(**validated_data)
+
+        if drug_groups:
+            drug.drug_groups.set(drug_groups)
 
         logger.debug(f'side_effects_data = {side_effects_data}')
         if side_effects_data:
@@ -97,7 +111,7 @@ class DrugSerializer(serializers.ModelSerializer):
         """Настройка сериализатора."""
 
         model = Drug
-        fields = ['id', 'drug_name', 'dg_id', 'side_effects']
+        fields = ['id', 'drug_name', 'dg_ids', 'nosology_id', 'side_effects']
 
 
 class DrugListRetrieveSerializer(serializers.ModelSerializer):

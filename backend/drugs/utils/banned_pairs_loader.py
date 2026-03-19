@@ -185,24 +185,41 @@ class JSONBannedPairLoader(ABC):
         group_to_drugs = {}
         for item in drugs_data:
             drug = self._preprocess_drug_name(item.get(self.DRUG))
-            group = item.get('group')
-            if drug and group:
-                group_to_drugs.setdefault(group, set()).add(drug)
+            groups = item.get('group', [])  # Теперь groups - это список
+            
+            if drug and groups:
+                # Если groups - список, берем каждый элемент
+                if isinstance(groups, list):
+                    for group in groups:
+                        if group:  # Проверяем что не пустое
+                            group_to_drugs.setdefault(group, set()).add(drug)
+                else:
+                    # Если вдруг строка (для обратной совместимости)
+                    group_to_drugs.setdefault(groups, set()).add(drug)
 
         # Для каждого препарата расширяем banned_drugs
         for item in drugs_data:
             drug1 = self._preprocess_drug_name(item.get(self.DRUG))
             banned_groups = item.get('banned_groups', [])
+            
             if not banned_groups:
                 continue
+                
             additional = set()
-            for banned_group in banned_groups:
-                for drug2 in group_to_drugs.get(banned_group, []):
+            # banned_groups может быть списком
+            if isinstance(banned_groups, list):
+                for banned_group in banned_groups:
+                    for drug2 in group_to_drugs.get(banned_group, []):
+                        if drug1 != drug2:
+                            additional.add(drug2)
+            else:
+                # Если строка
+                for drug2 in group_to_drugs.get(banned_groups, []):
                     if drug1 != drug2:
                         additional.add(drug2)
+                        
             if additional:
                 current = set(item.get(self.BANNED_DRUGS, []))
-                # Добавляем нормализованные названия (они будут обработаны в основном цикле)
                 item[self.BANNED_DRUGS] = list(current | additional)
     
     def load_to_db(self, *args, **kwargs):
@@ -245,9 +262,9 @@ class JSONBannedPairLoader(ABC):
                     
                     if drug1_obj and drug2_obj:
                         # Сортируем названия для единообразного хранения
-                        first, second = sorted([drug1, drug2])
-                        pair_key = f"{first}|{second}"  # Уникальный ключ пары
-                        
+                        drug_names = sorted([drug1, drug2])
+                        first, second = drug_names[0], drug_names[1]
+                        pair_key = f"{first}|{second}"
                         # Проверяем, не создавали ли уже такую пару
                         if pair_key not in created_pairs:
                             # Проверяем, нет ли уже такой пары в БД (на случай, если clear_db не очистила)

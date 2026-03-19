@@ -10,59 +10,62 @@ MAX_LENGTH = 255
 class DrugGroup(models.Model):
     """Класс группы ЛС."""
 
-    dg_name = models.CharField(max_length=MAX_LENGTH,
-                               verbose_name="Название группы",
-                               unique=True)
-    slug = models.SlugField(max_length=MAX_LENGTH,
-                            null=True,
-                            unique=True,
-                            db_index=True,
-                            verbose_name="URL")
-
-    def save(self, *args, **kwargs):
-        """Сохранение группы ЛС."""
-        if not self.slug:
-            base_slug = slugify(self.dg_name)
-            unique_slug = base_slug
-            counter = 1
-
-            while DrugGroup.objects.filter(slug=unique_slug).exists():
-                unique_slug = f'{base_slug}-{counter}'
-                counter += 1
-
-            self.slug = unique_slug
-        super().save(*args, **kwargs)
+    dg_name = models.CharField(
+        max_length=MAX_LENGTH,
+        verbose_name="Название группы",
+        unique=True
+    )
 
     def __str__(self):
-        """Строковое представление."""
         return self.dg_name
 
     class Meta:
-        """Настройка модели."""
-
         verbose_name = 'Группа ЛС'
         verbose_name_plural = 'Группы ЛС'
         ordering = ['dg_name']
 
 
+class Nosology(models.Model):
+    """Нозология ЛС"""
+    id = models.AutoField(primary_key=True, editable=False)
+    name = models.CharField(
+        max_length=MAX_LENGTH,
+        verbose_name="Название подгруппы",
+        unique=True
+    )
+    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Подгруппа ЛС'
+        verbose_name_plural = 'Подгруппы ЛС'
+        ordering = ['name']
+
+
 class Drug(models.Model):
     """Класс ЛС."""
 
-    index = models.PositiveIntegerField(editable=False)
+    id = models.AutoField(primary_key=True, editable=False)
     drug_name = models.CharField(max_length=MAX_LENGTH,
                                  verbose_name='Название ЛС',
                                  unique=True)
-    slug = models.SlugField(max_length=MAX_LENGTH,
-                            null=True,
-                            unique=True,
-                            db_index=True,
-                            verbose_name="URL")
-    drug_group = models.ForeignKey(DrugGroup,
-                                   on_delete=models.CASCADE,
-                                   related_name='drugs',
-                                   verbose_name='Группа ЛС',
-                                   default=1,
-                                   null=True)
+    
+    drug_groups = models.ManyToManyField(
+        DrugGroup,
+        related_name='drugs',
+        verbose_name='Фармакологические группы',
+        blank=True
+    )
+
+    nosology = models.ForeignKey(
+        Nosology,
+        on_delete=models.SET_NULL,
+        related_name='drugs',
+        verbose_name='Нозология',
+        null=True
+    )
+
     side_effects = models.ManyToManyField('SideEffect',
                                           through='DrugSideEffect',
                                           related_name='drugs')
@@ -70,33 +73,10 @@ class Drug(models.Model):
         'contraindications.Contraindication',
         related_name='drugs')
 
-    def save(self, *args, **kwargs):
-        """Сохранение ЛС."""
-        if not self.pk:
-            max_index = (
-                Drug.objects.aggregate(models.Max('index'))['index__max']
-                or 0)
-            self.index = max_index + 1
-
-        if not self.slug:
-            base_slug = slugify(self.drug_name)
-            unique_slug = base_slug
-            counter = 1
-
-            while Drug.objects.filter(slug=unique_slug).exists():
-                unique_slug = f'{base_slug}-{counter}'
-                counter += 1
-
-            self.slug = unique_slug
-        super().save(*args, **kwargs)
-
     def __str__(self):
-        """Строковое представление."""
         return self.drug_name
 
     class Meta:
-        """Настройка модели ЛС."""
-
         verbose_name = 'ЛС'
         verbose_name_plural = 'ЛС'
         ordering = ['drug_name']
