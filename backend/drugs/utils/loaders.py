@@ -9,7 +9,7 @@ import pandas as pd
 
 from django.conf import settings
 
-from ..models import (DrugGroup,
+from ..models import (Nosology,
                       Drug,
                       DrugSideEffect,
                       SideEffect)
@@ -169,35 +169,68 @@ class ExcelLoader(Loader):
 
         try:
             logger.info('Загрузка ЛС началась')
-            group, _ = DrugGroup.objects.get_or_create(
-                id=1,
-                defaults={'dg_name': 'Общая группа'})
-            
+            # Получаем или создаем нозологию "общая группа"
+            nosology, nosology_created = Nosology.objects.get_or_create(
+                name='общая нозология'
+            )
+
             for drug in df.iloc[:, 1].to_list():
-                drug_obj = Drug.objects.create(
-                    drug_name=drug.strip().casefold()
+                drug_name = drug.strip().casefold()
+                
+                # Создаем препарат только если его нет
+                drug_obj, drug_created = Drug.objects.get_or_create(
+                    drug_name=drug_name
                 )
-                drug_obj.drug_groups.add(group)
+                
+                # Для ForeignKey используем присваивание, а не add()
+                if drug_created:
+                    drug_obj.nosology = nosology
+                    drug_obj.save()  # Не забываем сохранить!
                 
             logger.info(f'Загружено ЛС: {Drug.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
     def _load_side_effects(self):
-        """Загрузка ПД."""        
+        """Загрузка ПД с обновлением существующих."""
         df = pd.read_excel(self.import_path,
-                           sheet_name=self.SIDE_EFFECTS_SHEET)        
+                        sheet_name=self.SIDE_EFFECTS_SHEET)
         try:
             logger.info('Загрузка побочных действий началась')
+            
+            created_count = 0
+            updated_count = 0
+            
             for _, side_effect, side_effect_en, weight in list(
-                 df.itertuples(index=False, name=None)):
-                SideEffect.objects.create(
-                    se_name=side_effect.strip(),
-                    se_name_en=side_effect_en.strip(),
-                    weight=weight)
-            logger.info(f'Загружено побочных действий: {SideEffect.objects.count()}')
+                df.itertuples(index=False, name=None)):
+                
+                # Проверяем, что значения не пустые
+                if not side_effect or not str(side_effect).strip():
+                    logger.warning(f"Пропущена запись с пустым названием ПД")
+                    continue
+                
+                # Обновляем или создаем запись
+                obj, created = SideEffect.objects.update_or_create(
+                    se_name=side_effect.strip().lower(),
+                    defaults={
+                        'se_name_en': side_effect_en.strip().lower() if side_effect_en else '',
+                        'weight': weight if weight is not None else 0.0
+                    }
+                )
+                
+                if created:
+                    created_count += 1
+                    logger.debug(f"Создано новое ПД: {side_effect}")
+                else:
+                    updated_count += 1
+                    logger.debug(f"Обновлено ПД: {side_effect}")
+            
+            logger.info(f'Побочных действий: создано {created_count}, обновлено {updated_count}')
+            logger.info(f'Всего в БД: {SideEffect.objects.count()}')
+            
         except Exception as error:
-            raise Exception(f'Проблема с загрузкой {error}')
+            logger.error(f'Ошибка при загрузке ПД: {error}')
+            raise Exception(f'Проблема с загрузкой ПД: {error}')
 
     def _load_ranks(self, transpose=False):
         """Загрузка рангов."""
