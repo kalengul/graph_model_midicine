@@ -342,6 +342,9 @@ class FortranCalculatorNormalization(BaseCalculator):
             context['side_effects'][cls - 1]['effects'].append(effect)
 
         # Анализ потенциальных ЛС
+
+        print("Группа ЛС:", )
+
         rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
 
         unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
@@ -412,6 +415,39 @@ class FortranCalculatorNormalization(BaseCalculator):
         context['drugs'] = [Drug.objects.get(id=i).drug_name
                             for i in unique_n_drug]
         
+
+        # Заглушка, если комбинация несовместима
+        print("context[compatibility_fortran] == incompatible", context["compatibility_fortran"] == "incompatible")
+        if context["compatibility_fortran"] == "incompatible":
+            context['rep_recommendations'] = [
+                {
+                "group_name:": "Название группы1",
+                "drugs": [
+                    {
+                        "drug_name": "Препарат1",
+                        "replace_drugs": ["Препарат2", "Препарат3"]
+                    },
+                    {
+                        "drug_name": "Препарат4",
+                        "replace_drugs": ["Препарат5", "Препарат6"]
+                    }
+                ]
+                },
+                {
+                "group_name:": "Название группы2",
+                "drugs": [
+                    {
+                        "drug_name": "Препарат4",
+                        "replace_drugs": ["Препарат5", "Препарат6"]
+                    },
+                    {
+                        "drug_name": "Препарат1",
+                        "replace_drugs": ["Препарат2", "Препарат3"]
+                    }
+                ]
+                }
+                
+            ]
 
         # Расчёт препаратов по отдельности
         context["SEFromDrug"] = []
