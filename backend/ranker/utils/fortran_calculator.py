@@ -342,12 +342,14 @@ class FortranCalculatorNormalization(BaseCalculator):
             context['side_effects'][cls - 1]['effects'].append(effect)
 
         # Анализ потенциальных ЛС
+        unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
 
-        print("Группа ЛС:", )
+        print("unique_n_drug:", unique_n_drug)
+        for idx in unique_n_drug_sub_1:
+            print("Группа ЛС:", Drug.objects.get(id=idx+1).drug_groups.all())
 
         rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
 
-        unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
         drugs_class_2, drugs_class_3 = [], []
 
         for j in range(self.n_drug):
@@ -421,7 +423,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         if context["compatibility_fortran"] == "incompatible":
             context['rep_recommendations'] = [
                 {
-                "group_name:": "Название группы1",
+                "group_name": "Название группы1",
                 "drugs": [
                     {
                         "drug_name": "Препарат1",
@@ -434,7 +436,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                 ]
                 },
                 {
-                "group_name:": "Название группы2",
+                "group_name": "Название группы2",
                 "drugs": [
                     {
                         "drug_name": "Препарат4",
