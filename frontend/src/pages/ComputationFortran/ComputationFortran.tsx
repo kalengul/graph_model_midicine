@@ -63,6 +63,7 @@ export const ComputationFortran = () =>{
                         <ComputationResults 
                             compatibility={resultFortran.compatibility_fortran}
                             data = {ResultData()}
+                            recommendations = {resultFortran.rep_recommendations}
                         />
                         {resultFortran.compatibility_fortran !== "banned" && resultFortran.compatibility_fortran !== "banned-contraindications" &&
                         <>

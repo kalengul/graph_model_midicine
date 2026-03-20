@@ -26,6 +26,17 @@ export interface IResultFortran{
   drugs: string[]
   bannedPairs: IBannedPair[],
   bannedPairsCont: IBannedPairCont[]
+  rep_recommendations?: IRepRecommendation[] | undefined
+}
+
+export interface IRepRecommendation{
+  group_name: string
+  drugs: IRepalceDrugs[]
+}
+
+export interface IRepalceDrugs{
+  drug_name: string
+  replace_drugs: string[]
 }
 
 export interface IComputationElem {

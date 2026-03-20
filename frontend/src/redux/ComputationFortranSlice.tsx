@@ -28,6 +28,7 @@ const initStateFortran: IResultFortran = {
   drugs: [],
   bannedPairs:[],
   bannedPairsCont:[],
+  rep_recommendations: undefined
 }
 
 interface IHumanData{

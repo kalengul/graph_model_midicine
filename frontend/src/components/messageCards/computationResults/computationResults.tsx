@@ -1,9 +1,11 @@
 import "./computationResults.scss"
-import { IBannedPair, IBannedPairCont } from "../../../redux/Interfaces"
+import { IBannedPair, IBannedPairCont, IRepRecommendation } from "../../../redux/Interfaces"
+
 
 interface IComputationResultsProps{
     compatibility: string
     data?: IBannedPair[] | IBannedPairCont[] | null //Дополнительные данные для вывода в блоке
+    recommendations?: IRepRecommendation[] | undefined
 }
 
 // const toUpperFirstSymbol = (str: string) =>{
@@ -16,25 +18,45 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
         case "compatible":
             return(
                 <div className="ComputationResults compatible">
-                    <p >Лекарственные средства совместимы</p>
+                    <h5 >Лекарственные средства совместимы</h5>
                 </div>
             )
         case "incompatible":
             return(
                 <div className="ComputationResults incompatible">
-                    <p >Лекарственные средства несовместимы</p>
+                    <h5> <b>Лекарственные средства несовместимы</b></h5>
+                    {props.recommendations && props.recommendations.length >0 && 
+                    <div className="mt-3">
+                        <h6>Рекомендации по замене лекарственных средств</h6>
+                        {props.recommendations.map((rec, index)=>
+                        <div className="mt-2">
+                            <div>
+                                <span className='me-3'><b>{index+1}.</b></span> 
+                                <span><b>Группа {rec.group_name}</b></span>
+                            </div>
+                            <div className="ms-4">
+                                {rec.drugs && rec.drugs.map(dr =>
+                                    <div className="mb-1">
+                                        <p>Лекарственное редство: {dr.drug_name}</p>
+                                        <p>Предлагаемые замены: {dr.replace_drugs.join("; ")}</p>
+                                    </div>
+                                )}
+                            </div>
+                        </div>)}
+                    </div>
+                    }
                 </div>
             )
         case "caution":
             return(
                 <div className="ComputationResults caution">
-                    <p >Лекарственные средства можно применять с осторожностью</p>
+                    <h5 >Лекарственные средства можно применять с осторожностью</h5>
                 </div>
             )
          case "banned":
             return(
                 <div className="ComputationResults incompatible">
-                    <p><b>В введённом списке присутствует лекарственные средства, сочетание которых запрещено:</b></p>
+                    <h5><b>В введённом списке присутствует лекарственные средства, сочетание которых запрещено:</b></h5>
                     {props.data && 
                         <div>
                             {props.data.map(e=>
@@ -50,7 +72,7 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
         case "banned-contraindications":
             return(
                 <div className="ComputationResults incompatible">
-                    <p><b>Примение запрещено в связи с индивидуальными противопоказаниями пациента</b></p>
+                    <h5><b>Примение запрещено в связи с индивидуальными противопоказаниями пациента</b></h5>
                      {props.data && 
                         <div>
                             {props.data.map(e=>
