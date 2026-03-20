@@ -524,9 +524,9 @@ class ExcelLoadView(APIView):
                 excel_path = os.path.abspath(excel_path)
                 loader = ExcelLoader(import_path=excel_path, transpose=transpose)
                 if loader._check_excel_file():
-                    logger.info('Очистка БД начинается')
-                    DBManipulator().clean_db()
-                    logger.info('БД очистилось')
+                    # logger.info('Очистка БД начинается')
+                    # DBManipulator().clean_db()
+                    # logger.info('БД очистилось')
                     loader.load_to_db()
                 else:
                     raise IncorrectFile((f'В {os.path.basename(excel_path)}'
