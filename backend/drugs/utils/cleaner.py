@@ -20,7 +20,7 @@ class BaseCleaner(ABC):
         'drugs_drug',
         'drugs_sideeffect',
         'drugs_druggroup',
-        'nosology'
+        'drugs_nosology',
     ]
     model_classes = [
         DrugSideEffect,
