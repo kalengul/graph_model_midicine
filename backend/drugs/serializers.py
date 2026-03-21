@@ -122,15 +122,21 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
     {
        "id": "...",
        "drug_name": "...",
-       "dg_id": "..."
+       "dg_id": [1, 2, 3],
+       "nosology_id": "..."
     }
     """
-    dg_id = serializers.IntegerField(source='drug_group.id', read_only=True)
+    dg_id = serializers.SerializerMethodField()
+    nosology_id = serializers.IntegerField(source='nosology.id', read_only=True, allow_null=True)
 
     class Meta:
         """Настройка сериализатора."""
         model = Drug
-        fields = ['id', 'drug_name', 'dg_id']
+        fields = ['id', 'drug_name', 'dg_id', 'nosology_id']
+    
+    def get_dg_id(self, obj):
+        """Получение списка ID групп ЛС."""
+        return list(obj.drug_groups.values_list('id', flat=True))
 
 
 class SideEffectSerializer(serializers.ModelSerializer):
