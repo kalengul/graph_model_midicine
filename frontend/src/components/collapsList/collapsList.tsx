@@ -65,6 +65,7 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, v
                         <span>{drugItem.name}</span>
                     </div>
                     <div className="w-50">
+                        {drugItem.side_effects && drugItem.side_effects.length> 0 &&<>
                         <span>Есть риск появления побочных эффектов:</span>
                         <div >
                             {drugItem.side_effects.length>0 && drugItem.side_effects.map((se, se_index) =>
@@ -77,6 +78,7 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, v
                             </div>)
                             }
                         </div>
+                        </>}
                     </div>
                 </div>
                 <hr/>
