@@ -42,7 +42,7 @@ export interface IRepalceDrugs{
 export interface IComputationElem {
   id: string,
   drug_name: string,
-  dg_id: string,
+  nosology_id: string,
 }
 
 export interface ISEFromDrug{

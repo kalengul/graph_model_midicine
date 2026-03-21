@@ -34,15 +34,20 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
                                 <span className='me-3'><b>{index+1}.</b></span> 
                                 <span><b>Группа {rec.group_name}</b></span>
                             </div>
-                            <div className="ms-4">
+                            <div className="ms-5">
                                 {rec.drugs && rec.drugs.map(dr =>
                                     <div className="mb-1">
-                                        <p>Лекарственное редство: {dr.drug_name}</p>
-                                        <p>Предлагаемые замены: {dr.replace_drugs.join("; ")}</p>
+                                        <p><b>Лекарственное средство:</b> {dr.drug_name}</p>
+                                        <p><b>Предлагаемые замены:</b> {dr.replace_drugs.join("; ")}</p>
                                     </div>
                                 )}
                             </div>
                         </div>)}
+                    </div>
+                    }
+                    {props.recommendations && props.recommendations.length == 0 &&
+                    <div className="mt-3">
+                        <span className='me-3'><b>Не удалось подобрать лекарственные средства для снижения риска</b></span> 
                     </div>
                     }
                 </div>
@@ -56,7 +61,7 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
          case "banned":
             return(
                 <div className="ComputationResults incompatible">
-                    <h5><b>В введённом списке присутствует лекарственные средства, сочетание которых запрещено:</b></h5>
+                    <h5><b>В введённом списке присутствуют лекарственные средства, сочетание которых запрещено:</b></h5>
                     {props.data && 
                         <div>
                             {props.data.map(e=>

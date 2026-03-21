@@ -141,7 +141,7 @@ export const ComputationInputForm = (props: IComputationInputFormProps) =>{
 
                             <div className='mt-1 mb-2'>
                                 {computationList.map((computationElem: IComputationElem) => (
-                                    <span key={computationElem.id} className={`mt-1 me-1 computation-badge dg-${computationElem.dg_id}`}>
+                                    <span key={computationElem.id} className={`mt-1 me-1 computation-badge dg-${computationElem.nosology_id}`}>
                                         {computationElem.drug_name}
                                         <button
                                             type="button"

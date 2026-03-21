@@ -68,7 +68,7 @@ export const ComputationFortran = () =>{
                         {resultFortran.compatibility_fortran !== "banned" && resultFortran.compatibility_fortran !== "banned-contraindications" &&
                         <>
                             {increasedRiskDrugs.length>0 && 
-                            <div>
+                            <div className="mt-3">
                                 <h5>Лекарственные средства с наибольшим влиянием:</h5>
                                 {increasedRiskDrugs.map(riskdrug=><div>
                                     {riskdrug.effect} - {riskdrug.drugs}

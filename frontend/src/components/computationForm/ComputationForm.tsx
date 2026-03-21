@@ -265,7 +265,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                         
                                         <div className='flex ai-start mb-2'>
                                             <button type="button" className="btn-close me-2" aria-label="Close" onClick={(e) => deleteDrugHandler(e, drug.id)}></button>
-                                            <span className={`dg-block dg-${drug.dg_id}`}> {drug.drug_name} </span>
+                                            <span className={`dg-block dg-${drug.nosology_id}`}> {drug.drug_name} </span>
                                         </div>
                                     ))
                                 }
