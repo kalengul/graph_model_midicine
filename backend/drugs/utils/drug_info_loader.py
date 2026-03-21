@@ -33,7 +33,6 @@ class DrugDataLoader:
             CleanProcessor().get_cleaner().clean()
             BannedDrugPairCleanProcessor().get_cleaner().clear_table()
             DrugCleanProcessor().get_cleaner().clear_table()
-            Nosology.objects.all().delete()
 
             # Запрещенные пары
             self.loader_banned.clear_db()
