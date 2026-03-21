@@ -401,7 +401,8 @@ class FortranCalculatorNormalization(BaseCalculator):
                 } for idx in indices_class_2]
                 drugs_class_2.append({
                     'drug_index': j,
-                    'side_effects': side_effects_class_2
+                    # 'side_effects': side_effects_class_2
+                    'side_effects': []
                 })
 
         drug_array2 = [{
