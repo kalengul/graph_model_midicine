@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.text import slugify
 from django.core.validators import (MinValueValidator,
                                     MaxValueValidator)
 
@@ -209,3 +208,36 @@ class BannedDrugPair(models.Model):
 
         ordering = ['first_drug', 'second_drug']
         unique_together = ['first_drug', 'second_drug']
+
+
+class DrugsAgeContraindications(models.Model):
+    RESTRICTION_TYPES = [
+        ('prohibited', 'Противопоказано'),
+        ('caution', 'С осторожностью'),
+    ]
+
+    drug = models.ForeignKey(Drug, on_delete=models.CASCADE, related_name='age_restrictions')
+    age_from = models.PositiveIntegerField(null=True, blank=True, verbose_name='Возраст от')
+    age_to = models.PositiveIntegerField(null=True, blank=True, verbose_name='Возраст до')
+    restriction_type = models.CharField(choices=RESTRICTION_TYPES, default='prohibited', verbose_name='Тип противопоказания')
+
+    class Meta:
+        constraints = [
+            models.CheckConstraint(
+                condition=(
+                    models.Q(age_from__isnull=True) | 
+                    models.Q(age_to__isnull=True) | 
+                    models.Q(age_from__lte=models.F('age_to'))
+                ),
+                name='valid_age_range'
+            )
+        ]
+
+    def __str__(self):
+        if self.age_from and self.age_to:
+            return f'{self.drug.drug_name}: {self.age_from}-{self.age_to} лет'
+        elif self.age_from:
+            return f'{self.drug.drug_name}: от {self.age_from} лет'
+        elif self.age_to:
+            return f'{self.drug.drug_name}: до {self.age_to} лет'
+        return f'{self.drug.drug_name}: возрастное ограничение'

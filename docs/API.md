@@ -91,17 +91,36 @@
 ## Назначение
 Расчет совместимости ЛС по Fortran
 ## URL
-```GET api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&humanData={номер файла}```
+```POST api/v1/polifarmakoterapiya-fortran/?drugs=[список лс для расчета]&humanData={номер файла}```
 ## Аутентификация
 Не требуется
 ## Вход
 |**параметр**|**Тип данных**|**Обязательность**|**Описание**|
 |:-----:|:--------|:--------|:------|
-|druds|Array(integer)|да|массив id ЛС|
-|humanData|integer|нет|Номер файла для расчетов|
+|drugs|Array(integer)|да|массив id ЛС|
+|humanData|Object|нет|Данные о пациенте (возраст, пол, противопоказания)|
+|medCard|File|нет|Файл с медицинской картой (multipart/form-data)|
+
+Объект humanData
+
+|**параметр**|**Тип данных**|**Обязательность**|**Описание**|
+|:-----:|:--------|:--------|:------|
+| age|integer|нет|Возраст пациента (лет)|
+| gender|string|нет|Пол пациента: "man" или "woman"|
+| cont_list|Array(string)|нет|Список ID противопоказаний (из справочника)|
 
 ### Пример входных данных
-```GET api/v1/polifarmakoterapiya-fortran/?drugs=[1, 2]&humanData=0```
+```json
+"POST api/v1/polifarmakoterapiya-fortran/"
+"data": {
+    "drugs": [3, 11],
+    "humanData": {
+        "age": 25,
+        "gender": "man",
+        "cont_list": ["118", "41"]
+    }
+}
+```
 
 ## Выход
 |**параметр**|**Тип данных**|**Обязательность**|**Описание**|

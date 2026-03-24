@@ -1,11 +1,9 @@
-import os
 import traceback
 import logging
 import time
 import json
 from pathlib import Path
 
-from django.utils import timezone
 from django.http import FileResponse
 from rest_framework.views import APIView
 from rest_framework import status
@@ -16,7 +14,6 @@ from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
 from ranker.services.table_gerention import ExcelTableGenerater
-from ranker.services.file_naming import generate_unique_filename
 from ranker.constants import IDX_2_RANK_NAME
 
 
@@ -71,7 +68,7 @@ class CalculationAPI(APIView):
             # Проверка противопоказаний (если есть)
             if human_data and human_data.get('cont_list'):
                 contraindications_result = self._exist_contraindications(
-                    drugs, human_data['cont_list']
+                    drugs, human_data
                 )
                 if contraindications_result:
                     return self._create_contraindications_response(
@@ -142,43 +139,57 @@ class CalculationAPI(APIView):
             "side_effects": [],
             "SEFromDrug": [],
             "drugs": list(Drug.objects.filter(id__in=drugs).values_list('drug_name', flat=True)),
-            "compatibility_fortran": None,              # Будет заполнено позже
+            "compatibility_fortran": None,
             "bannedPairs": [],
             "bannedPairsCont": [],
         }
     
-    def _exist_contraindications(self, drug_ids, contra_ids):
+    def _exist_contraindications(self, drug_ids, human_data):
         """
         Проверка наличия противопоказаний.
-
-        Проверка пересечения противопоказаний у ЛС из комбинации
-        и противопоказаний, указанных в запросе.
         """
         result = []
-
+        
+        explicit_contra_ids = human_data.get('cont_list', [])
+        age = human_data.get('age')
+        
         drugs = Drug.objects.filter(id__in=drug_ids).prefetch_related(
-            "contraindications")
+            "contraindications"
+        )
+        
+        if age is not None:
+            drugs = drugs.prefetch_related("age_restrictions")
         
         for drug in drugs:
-            intersect = drug.contraindications.filter(id__in=contra_ids)
-            logger.debug(f'drug = {drug.drug_name}')
-            for contra in drug.contraindications.all():
-                logger.debug(f'contra - {contra.id}, {contra.name}')
+            explicit_intersect = drug.contraindications.filter(id__in=explicit_contra_ids)
+            has_explicit = explicit_intersect.exists()
             
-            if intersect.exists():
-                logger.debug('Противопоказание у ЛС есть')
+            has_age_violation = False
+            age_violation_names = []
+            
+            if age is not None:
+                for restriction in drug.age_restrictions.all(): # type: ignore
+                    if restriction.age_from and age < restriction.age_from:
+                        has_age_violation = True
+                        age_violation_names.append(f"возраст до {restriction.age_from} лет")
+                    elif restriction.age_to and age > restriction.age_to:
+                        has_age_violation = True
+                        age_violation_names.append(f"возраст после {restriction.age_to} лет")
+            
+            if has_explicit or has_age_violation:
+                contra_names = []
                 
-                # Получаем список name найденных противопоказаний
-                contra_name_list = list(intersect.values_list("name", flat=True))
+                if has_explicit:
+                    contra_names.extend(explicit_intersect.values_list("name", flat=True))
                 
-                # Добавляем в результат в новом формате
+                if has_age_violation:
+                    contra_names.extend(age_violation_names)
+                
                 result.append({
                     "drug": drug.drug_name,
-                    "contraindications": contra_name_list
+                    "contraindications": contra_names
                 })
-
-        logger.debug(f'result = {result}')
-
+        
         return result
 
     def _create_banned_response(self, template_data, banned_pairs):
