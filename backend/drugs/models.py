@@ -241,3 +241,19 @@ class DrugsAgeContraindications(models.Model):
         elif self.age_to:
             return f'{self.drug.drug_name}: до {self.age_to} лет'
         return f'{self.drug.drug_name}: возрастное ограничение'
+
+
+class SideEffectsGender(models.Model):
+    GENDER_CHOICES = [
+        ('woman', 'женщина'),
+        ('man', 'мужчина'),
+    ]
+
+    side_effect = models.ForeignKey(SideEffect, on_delete=models.CASCADE, related_name='se_gender')
+    gender = models.CharField(max_length=20, choices=GENDER_CHOICES, verbose_name='пол')
+
+    class Meta:
+        unique_together = [['side_effect', 'gender']]
+
+    def __str__(self) -> str:
+        return f'{self.side_effect.se_name} - {self.gender}'

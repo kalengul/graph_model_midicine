@@ -76,11 +76,14 @@ class CalculationAPI(APIView):
                         response_data, contraindications_result
                     )
             
+            gender = human_data.get('gender')
+            
             # Расчет совместимости
             return self._calculate_compatibility(
                 response_data,
                 drugs, 
-                normalization_calculate
+                normalization_calculate,
+                gender
             )
             
         except Exception as e:
@@ -241,7 +244,7 @@ class CalculationAPI(APIView):
         return prepared_drugs
     
 
-    def _calculate_compatibility(self, template_data, drugs, normalization_calculate):
+    def _calculate_compatibility(self, template_data, drugs, normalization_calculate, gender):
         """
         Расчет совместимости лекарственных средств.
         """
@@ -254,14 +257,16 @@ class CalculationAPI(APIView):
             context = calculator.calculate(
                 rank_name=IDX_2_RANK_NAME[0],
                 n_drug=prepared_drugs,
-                canceling_groups=self.CANCELING_EFFECTS_GROUPS
+                canceling_groups=self.CANCELING_EFFECTS_GROUPS,
+                gender=gender,
             )
         else:
             calculator = FortranCalculator()
             prepared_drugs = self._prepare_drugs_for_calculation(drugs, calculator)
             context = calculator.calculate(
                 rank_name=IDX_2_RANK_NAME[0],
-                n_drug=prepared_drugs
+                n_drug=prepared_drugs,
+                gender=gender
             )
 
         # Объединяем шаблон с результатами расчета

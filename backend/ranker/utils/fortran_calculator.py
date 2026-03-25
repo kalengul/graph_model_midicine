@@ -42,7 +42,7 @@ class FortranCalculator(BaseCalculator):
             f"Инициализирован оригинальный калькулятор: {self.n_drug} ЛС, "
             f"{self.n_side_effect} ПЭ")
 
-    def calculate(self, rank_name, n_drug):
+    def calculate(self, rank_name, n_drug, gender):
         """Вычисление рангов."""
         # logger.debug(f"Индексы входных ЛС (n_drug): {n_drug}")
 
@@ -90,7 +90,13 @@ class FortranCalculator(BaseCalculator):
                 cls = 2
             else:
                 cls = 1
+            
             effect = SideEffect.objects.get(id=k+1)
+            
+            # Фильтрация по полу
+            if gender and effect.se_gender.exists() and not effect.se_gender.filter(gender=gender).exists(): # type: ignore
+                continue 
+            
             side_effects.append({
                 'se_name': effect.se_name,
                 'class': cls,
@@ -250,7 +256,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         #logger.debug(f'normalized_rangsum = {normalized_rangsum}')
         return normalized_rangsum
 
-    def calculate(self, rank_name, n_drug, canceling_groups=None):
+    def calculate(self, rank_name, n_drug, canceling_groups=None, gender=None):
         #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2], [4, 5], [7, 10]]
         # Валидация входного массива
         logger.debug(f"Групп нивелирования: {canceling_groups}")
@@ -278,11 +284,27 @@ class FortranCalculatorNormalization(BaseCalculator):
         if rank_name is None:
             rank_name = self.get_default_rank_name()
 
-        # мапа побочных эффектов по индексам
-        id2side_e = {
-            k: SideEffect.objects.get(id=k+1).se_name
-            for k in range(self.n_side_effect)
-        }
+        # # мапа побочных эффектов по индексам
+        # id2side_e = {
+        #     k: SideEffect.objects.get(id=k+1).se_name
+        #     for k in range(self.n_side_effect)
+        # }
+
+        id2side_e = {}
+        for k in range(self.n_side_effect):
+            try:
+                se = SideEffect.objects.get(id=k+1)
+                
+                # Проверяем половую принадлежность
+                if gender:
+                    # Если у побочки есть половая привязка и она не совпадает с полом пользователя
+                    if hasattr(se, 'se_gender') and se.se_gender and se.se_gender.filter(gender=gender).exists(): # type: ignore
+                        continue  # пропускаем эту побочку
+                
+                id2side_e[k] = se.se_name
+            except SideEffect.DoesNotExist:
+                continue
+
         side_e2id = {v: k for k, v in id2side_e.items()}
 
         # Создаем матрицу рангов для выбранных ЛС
