@@ -278,9 +278,9 @@ class JSONBannedPairLoader(ABC):
                                 )
                                 created_pairs.add(pair_key)
                                 created_count += 1
-                                logger.debug(f'Создана пара: {first} - {second}')
-                            else:
-                                logger.debug(f'Пара уже существует в БД: {first} - {second}')
+                                # logger.debug(f'Создана пара: {first} - {second}')
+                            # else:
+                                # logger.debug(f'Пара уже существует в БД: {first} - {second}')
                         else:
                             logger.debug(f'Дубликат пары в файле: {first} - {second}, пропускаем')
                     else:
