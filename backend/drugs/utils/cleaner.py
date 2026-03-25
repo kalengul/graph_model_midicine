@@ -10,9 +10,13 @@ from drugs.models import (DrugGroup,
                           DrugSideEffect,
                           BannedDrugPair,
                           Nosology,
-                          DrugsAgeContraindications
+                          DrugsAgeContraindications,
+                          SideEffectsGender
                           )
 
+# 
+# Чистильщик всей базы
+# 
 
 class BaseCleaner(ABC):
     """Абстрактный очиститель таблиц."""
@@ -23,7 +27,8 @@ class BaseCleaner(ABC):
         'drugs_sideeffect',
         'drugs_druggroup',
         'drugs_nosology',
-        'drugs_drugsagecontraindications'
+        'drugs_drugsagecontraindications',
+        'drugs_sideeffectsgender'
     ]
     model_classes = [
         DrugSideEffect,
@@ -31,7 +36,8 @@ class BaseCleaner(ABC):
         SideEffect,
         DrugGroup,
         Nosology,
-        DrugsAgeContraindications
+        DrugsAgeContraindications,
+        SideEffectsGender
     ]
 
     @abstractmethod
@@ -80,6 +86,10 @@ class DrugCleanProcessor:
         else:
             raise NotImplementedError(f"Неизвестный движок БД: {engine}")
 
+
+# 
+#  Чистильщик для запрещённых пар
+# 
 
 class BannedDrugPairCleaner(BaseCleaner):
     """Базовый очиститель таблицы БД для пар ЛС."""

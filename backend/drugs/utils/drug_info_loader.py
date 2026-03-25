@@ -55,6 +55,11 @@ class DrugDataLoader:
 
     def _load_groups_and_link_drugs(self, data):
         """Загрузка групп и связывание с лекарствами."""
+
+        # Создание общей нозологии
+        nosology, nosology_created = Nosology.objects.get_or_create(
+                name='общая нозология'
+            )
         
         for item in data:
             drug_name = item.get('drug', '').strip()

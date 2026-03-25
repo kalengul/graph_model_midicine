@@ -181,7 +181,7 @@ class SideEffectSerializer(serializers.ModelSerializer):
                 passed_ids.add(drug_id)
 
                 logger.debug(f'drug_id = {drug_id}')
-                logger.debug('rank = {rank}')
+                logger.debug(f'rank = {rank}')
                 try:
                     DrugSideEffect.objects.create(
                         drug=Drug.objects.get(id=drug_id),

@@ -98,7 +98,7 @@ loggers = {
     },
     'apilog': {
         'handlers': ['console'] + ([] if DEBUG else ['apilog_file']),
-        'level': 'INFO',
+        'level': 'WARNING',
         'propagate': False
     },
     'synonyms': {

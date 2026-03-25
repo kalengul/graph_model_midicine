@@ -6,7 +6,7 @@ from collections import defaultdict
 import json
 import numpy as np
 
-from drugs.models import Drug, SideEffect, DrugSideEffect
+from drugs.models import Drug, SideEffect, DrugSideEffect, SideEffectsGender
 
 
 logger = logging.getLogger('fortran')
@@ -284,26 +284,24 @@ class FortranCalculatorNormalization(BaseCalculator):
         if rank_name is None:
             rank_name = self.get_default_rank_name()
 
-        # # мапа побочных эффектов по индексам
-        # id2side_e = {
-        #     k: SideEffect.objects.get(id=k+1).se_name
-        #     for k in range(self.n_side_effect)
-        # }
-
+        excluded_se_ids = set()
+        if gender:
+            opposite_gender = 'woman' if gender == 'man' else 'man'
+            # Исключаем эффекты, у которых есть привязка к противоположному полу
+            excluded_se_ids = set(
+                SideEffectsGender.objects.filter(gender=opposite_gender)
+                                        .values_list('side_effect_id', flat=True)
+            )
+        logger.debug(f"Исключенные id побочек по полу:{excluded_se_ids}")
+    
         id2side_e = {}
         for k in range(self.n_side_effect):
-            try:
-                se = SideEffect.objects.get(id=k+1)
-                
-                # Проверяем половую принадлежность
-                if gender:
-                    # Если у побочки есть половая привязка и она не совпадает с полом пользователя
-                    if hasattr(se, 'se_gender') and se.se_gender and se.se_gender.filter(gender=gender).exists(): # type: ignore
-                        continue  # пропускаем эту побочку
-                
+            se_id = k + 1
+            if se_id in excluded_se_ids:
+                continue          # пропускаем эффекты, исключённые по полу
+            se = SideEffect.objects.get(id=se_id)
+            if se:
                 id2side_e[k] = se.se_name
-            except SideEffect.DoesNotExist:
-                continue
 
         side_e2id = {v: k for k, v in id2side_e.items()}
 
@@ -340,6 +338,9 @@ class FortranCalculatorNormalization(BaseCalculator):
         # Распределение эффектов по классам
         side_effects = []
         for k in range(self.n_side_effect):
+            se_id = k + 1
+            if se_id in excluded_se_ids:
+                continue
             rank_val = rangsum[k]
             if rank_val >= 1.0:
                 cls = 3
@@ -405,27 +406,42 @@ class FortranCalculatorNormalization(BaseCalculator):
             # Находим все побочные эффекты с value >= 1.0 для class 3
             indices_class_3 = np.where(new_rangsum >= 1.0)[0]
             if len(indices_class_3) > 0:
-                side_effects_class_3 = [{
-                    'se_name': SideEffect.objects.get(id=idx+1).se_name,
-                    'rank': round(float(new_rangsum[idx]), 2)
-                } for idx in indices_class_3]
-                drugs_class_3.append({
-                    'drug_index': j,
-                    'side_effects': side_effects_class_3
-                })
+                side_effects_class_3 = []
+                for idx in indices_class_3:
+                    se_id = idx + 1
+                    if se_id in excluded_se_ids:
+                        continue
+                    se = id2side_e.get(idx)
+                    if se:
+                        side_effects_class_3.append({
+                            'se_name': se,
+                            'rank': round(float(new_rangsum[idx]), 2)
+                        })
+                if side_effects_class_3:   # добавляем препарат только если есть неисключённые эффекты
+                    drugs_class_3.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_3
+                    })
             
             # Находим все побочные эффекты с 0.5 <= value < 1.0 для class 2
             indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
             if len(indices_class_2) > 0:
-                side_effects_class_2 = [{
-                    'se_name': SideEffect.objects.get(id=idx+1).se_name,
-                    'rank': round(float(new_rangsum[idx]),2)
-                } for idx in indices_class_2]
-                drugs_class_2.append({
-                    'drug_index': j,
-                    # 'side_effects': side_effects_class_2
-                    'side_effects': []
-                })
+                side_effects_class_2 = []
+                for idx in indices_class_2:
+                    se_id = idx + 1
+                    if se_id in excluded_se_ids:
+                        continue
+                    se = id2side_e.get(idx)
+                    if se:
+                        side_effects_class_2.append({
+                            'se_name': se,
+                            'rank': round(float(new_rangsum[idx]), 2)
+                        })
+                if side_effects_class_2:
+                    drugs_class_2.append({
+                        'drug_index': j,
+                        'side_effects': side_effects_class_2   # или оставить [], как в вашем коде
+                    })
 
         drug_array2 = [{
             'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
@@ -463,36 +479,8 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         # Если комбинация несовместима, нужны рекомендации
         if context["compatibility_fortran"] == "incompatible":
-            context['rep_recommendations'] = self.analyze_max_drug_contribution(context['side_effects'][2]['effects'], rangs, unique_n_drug, rangsum, side_e2id)
-            # context['rep_recommendations'] = [
-            #     {
-            #     "group_name": "Название группы1",
-            #     "drugs": [
-            #         {
-            #             "drug_name": "Препарат1",
-            #             "replace_drugs": ["Препарат2", "Препарат3"]
-            #         },
-            #         {
-            #             "drug_name": "Препарат4",
-            #             "replace_drugs": ["Препарат5", "Препарат6"]
-            #         }
-            #     ]
-            #     },
-            #     {
-            #     "group_name": "Название группы2",
-            #     "drugs": [
-            #         {
-            #             "drug_name": "Препарат4",
-            #             "replace_drugs": ["Препарат5", "Препарат6"]
-            #         },
-            #         {
-            #             "drug_name": "Препарат1",
-            #             "replace_drugs": ["Препарат2", "Препарат3"]
-            #         }
-            #     ]
-            #     }
-                
-            # ]
+            context['rep_recommendations'] = self._analyze_max_drug_contribution(context['side_effects'][2]['effects'],
+                                                                                rangs, unique_n_drug, rangsum, side_e2id)
 
         # Расчёт препаратов по отдельности
         context["SEFromDrug"] = []
@@ -502,6 +490,9 @@ class FortranCalculatorNormalization(BaseCalculator):
 
             effects_data = []
             for dse in drug_side_effects:
+                # Пропускаем эффекты, привязанные к противоположному полу
+                if dse.side_effect.id in excluded_se_ids:
+                    continue
                 effects_data.append({
                     'se_name': dse.side_effect.se_name,
                     'rank': dse.rang_base  # или другой нужный ранг в зависимости от rank_name
@@ -516,7 +507,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         return context
 
 
-    def analyze_max_drug_contribution(self, incompatible_side_e, rangs_matrix, drug_ids, rangsum, side_e2id):
+    def _analyze_max_drug_contribution(self, incompatible_side_e, rangs_matrix, drug_ids, rangsum, side_e2id):
         """
         Формирует рекомендации по замене препаратов
         с использованием векторизованных вычислений.
