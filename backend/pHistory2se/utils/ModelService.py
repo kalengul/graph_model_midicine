@@ -6,7 +6,7 @@ import json
 
 from django.conf import settings
 
-from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+from stm_service.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 logger = logging.getLogger('medical_history')
 

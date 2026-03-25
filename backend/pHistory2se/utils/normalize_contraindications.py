@@ -1,22 +1,36 @@
 import json
-
 from collections import defaultdict
 from pathlib import Path
 from typing import List, Dict, Set
 
-# import os
-# import django
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ml_pharm_web.settings')
-# django.setup()
+# from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
-from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+import requests
+from django.conf import settings
 
-# from .SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+class SemanticServiceClient:
+    def __init__(self, base_url):
+        self.base_url = base_url.rstrip('/')
+        self.session = requests.Session()
+        # можно настроить таймауты и retries
+
+    def find_similar(self, queries, corpus_terms, threshold=None, top_k=1):
+        url = f"{self.base_url}/find_similar"
+        payload = {
+            "queries": queries,
+            "corpus_terms": corpus_terms,
+            "threshold": threshold,
+            "top_k": top_k
+        }
+        resp = self.session.post(url, json=payload, timeout=30)
+        resp.raise_for_status()
+        return resp.json()["results"]
+    
 
 def normalize_contraindications(
     contraindications: List[str],
     synonym_dict: Dict[str, List[str]],
-    processor: SemanticEmbeddingProcessor,
+    client: SemanticServiceClient,
     threshold: float = 0.85
 ) -> List[str]:
     """
@@ -42,7 +56,7 @@ def normalize_contraindications(
     }
 
     # Поиск ближайших синонимов
-    matched_synonyms = processor.find_similar_terms(
+    matched_synonyms = client.find_similar(
         queries=contraindications,
         corpus_terms=list(synonym_to_standard.keys()),
         threshold=threshold

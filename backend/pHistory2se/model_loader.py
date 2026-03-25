@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from django.conf import settings
 
-from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
+from stm_service.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 # Пути (можно вынести в settings.py позже)
 # EMB_MODEL_PATH = 'data\\sentence_transformer_models\\all-MiniLM-L6-v2'
