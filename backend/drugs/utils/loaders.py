@@ -12,7 +12,11 @@ from django.conf import settings
 from ..models import (Nosology,
                       Drug,
                       DrugSideEffect,
-                      SideEffect)
+                      SideEffect,
+                      SideEffectsGender
+                      )
+
+from ..utils.universal_cleaner import universal_cleaner
 
 logger = logging.getLogger('drugs')
 
@@ -34,6 +38,13 @@ class Loader(ABC):
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""
+        
+        # Очищаем старые связи связанные с побочными эффектами
+        universal_cleaner(table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender'],
+                          model_classes = [DrugSideEffect, SideEffectsGender]
+                          ).clear_table()
+        logger.info('Таблицы: DrugSideEffect, SideEffectsGender очищены')
+
         self._load_drugs()
         self._load_side_effects()
         self._load_ranks()
@@ -73,6 +84,8 @@ class ExcelLoader(Loader):
     EFFECT_COLUMN_EN = 'эффект_en'
     RANK_COLUMN = 'ранг'
     EXPORT_DATE_SHEET = 'Export Date'
+    GENDER_COLUMN = 'пол'
+    GENDER_CHOICES = ['man', 'woman']
 
     def __init__(self, import_path=None, export_path=None, transpose=False):
         """
@@ -131,7 +144,7 @@ class ExcelLoader(Loader):
             """Проверка уникальности названий ЛС."""
             df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
             lv = df[self.DRUG_COLUMN].is_unique
-            logger.debug('Проверка уникальности названий ЛС. lv =', lv)
+            logger.debug(f'Проверка уникальности названий ЛС. lv = {lv}')
             return lv
 
         def check_side_effect_unique():
@@ -139,7 +152,7 @@ class ExcelLoader(Loader):
             df = pd.read_excel(self.import_path,
                                sheet_name=self.SIDE_EFFECTS_SHEET)
             lv = df[self.EFFECT_COLUMN].is_unique
-            logger.debug('Проверка уникальности названий ПД. lv =', lv)
+            logger.debug(f'Проверка уникальности названий ПД. lv = {lv}')
             return lv
 
         def check_side_effect_unique_en():
@@ -147,7 +160,7 @@ class ExcelLoader(Loader):
             df = pd.read_excel(self.import_path,
                                sheet_name=self.SIDE_EFFECTS_SHEET)
             lv = df[self.EFFECT_COLUMN_EN].is_unique
-            logger.debug('Проверка уникальности названий ПД на англ. lv =', lv)
+            logger.debug(f'Проверка уникальности названий ПД на англ. lv = {lv}')
             return lv
 
         if check_sheets():
@@ -185,31 +198,35 @@ class ExcelLoader(Loader):
                 # Для ForeignKey используем присваивание, а не add()
                 if drug_created:
                     drug_obj.nosology = nosology
-                    drug_obj.save()  # Не забываем сохранить!
+                    drug_obj.save()
                 
             logger.info(f'Загружено ЛС: {Drug.objects.count()}')
         except Exception as error:
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
     def _load_side_effects(self):
-        """Загрузка ПД с обновлением существующих."""
+        """Загрузка ПД с обновлением существующих и обработкой пола."""
+
         df = pd.read_excel(self.import_path,
-                        sheet_name=self.SIDE_EFFECTS_SHEET)
+                        sheet_name=self.SIDE_EFFECTS_SHEET).fillna('')
         try:
             logger.info('Загрузка побочных действий началась')
             
             created_count = 0
             updated_count = 0
+            gender_changes = 0
             
-            for _, side_effect, side_effect_en, weight in list(
-                df.itertuples(index=False, name=None)):
+            for _, row in df.iterrows():
+                side_effect = row[self.EFFECT_COLUMN]
+                side_effect_en = row.get(self.EFFECT_COLUMN_EN, '')
+                weight = row.get(self.RANK_COLUMN, 0.0)
+                gender_value = row[self.GENDER_COLUMN]
                 
-                # Проверяем, что значения не пустые
                 if not side_effect or not str(side_effect).strip():
                     logger.warning(f"Пропущена запись с пустым названием ПД")
                     continue
                 
-                # Обновляем или создаем запись
+                # Создаём или обновляем SideEffect
                 obj, created = SideEffect.objects.update_or_create(
                     se_name=side_effect.strip().lower(),
                     defaults={
@@ -220,13 +237,20 @@ class ExcelLoader(Loader):
                 
                 if created:
                     created_count += 1
-                    logger.debug(f"Создано новое ПД: {side_effect}")
                 else:
                     updated_count += 1
-                    logger.debug(f"Обновлено ПД: {side_effect}")
+                
+                # Обработка пола
+                if gender_value and gender_value in self.GENDER_CHOICES:
+                    _, gender_created = SideEffectsGender.objects.update_or_create(
+                        side_effect=obj,
+                        gender=gender_value
+                    )
+                    gender_changes += 1
             
             logger.info(f'Побочных действий: создано {created_count}, обновлено {updated_count}')
-            logger.info(f'Всего в БД: {SideEffect.objects.count()}')
+            logger.info(f'Изменений в связях по полу: {gender_changes}')
+            logger.info(f'Всего в БД: SideEffect: {SideEffect.objects.count()}, SideEffectsGender: {SideEffectsGender.objects.count()}')
             
         except Exception as error:
             logger.error(f'Ошибка при загрузке ПД: {error}')
@@ -234,6 +258,7 @@ class ExcelLoader(Loader):
 
     def _load_ranks(self, transpose=False):
         """Загрузка рангов."""
+
         df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
 
         df = df.iloc[1:, 2:]
@@ -259,8 +284,9 @@ class ExcelLoader(Loader):
 
         bulk = []
 
-        idx = 0
+        total_count = 0
         for i, drug in enumerate(drugs):
+            count = 0
             for j, effect in enumerate(effects):
                 bulk.append(
                     DrugSideEffect(
@@ -269,12 +295,14 @@ class ExcelLoader(Loader):
                         rang_base=df.iloc[i, j]
                     )
                 )
-                idx += 1
-                logger.info(f"Прогресс: {idx}/{len(effects)*len(drugs)} итераций")
+                count += 1
+
+            total_count += count
+            logger.info(f"Для {drug} загружено {count} побочных эффектов")
 
         DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
 
-        logger.info(f'Загружено рангов: {idx}') 
+        logger.info(f'Загружено всего рангов для {len(drugs)} препаратов: {total_count}') 
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""
