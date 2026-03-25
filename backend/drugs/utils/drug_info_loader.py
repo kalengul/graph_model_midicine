@@ -1,6 +1,6 @@
 import logging
 
-from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugSideEffect, SideEffect
+from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugsAgeContraindications
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from contraindications.utils.cleaner import CleanProcessor
@@ -24,6 +24,7 @@ class DrugDataLoader:
             'banned_pairs': 0,
             'contraindications': 0,
             'nosology': 0,
+            'age_contraindications': 0,
         }
 
     def load_all(self, data):
@@ -45,6 +46,9 @@ class DrugDataLoader:
 
         # Загрузка противопоказаний
         self._load_contraindications(data)
+
+        # Загрузка возрастных противопоказаний
+        self._load_age_contraindications(data)
 
         logger.info(f"Загрузка завершена: {self.stats}")
         return self.stats
@@ -117,3 +121,31 @@ class DrugDataLoader:
         # Считаем новые связи
         new_count = Drug.contraindications.through.objects.count()
         self.stats['contraindications'] = new_count - old_count
+
+    def _load_age_contraindications(self, data):
+        """Загрузка возрастных противопоказаний."""
+        
+        for item in data:
+            drug_name = item.get('drug', '').strip()
+            
+            if not drug_name:
+                continue
+            
+            # Получаем препарат
+            try:
+                drug = Drug.objects.get(drug_name__iexact=drug_name)
+            except Drug.DoesNotExist:
+                logger.warning(f"Препарат '{drug_name}' не найден при загрузке возрастных ограничений")
+                continue
+            
+            # Обрабатываем banned_under_18
+            banned_under_age = item.get('banned_under_age')
+            banned_after_age = item.get('banned_after_age')
+            if banned_under_age is not None or banned_after_age is not None:
+                DrugsAgeContraindications.objects.create(
+                    drug=drug,
+                    age_from=banned_under_age,
+                    age_to=banned_after_age,
+                )
+                self.stats['age_contraindications'] += 1
+            

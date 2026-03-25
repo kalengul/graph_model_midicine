@@ -66,7 +66,8 @@ class CalculationAPI(APIView):
                 return self._create_banned_response(response_data, banned_pairs)
             
             # Проверка противопоказаний (если есть)
-            if human_data and human_data.get('cont_list'):
+            if human_data and (human_data.get('cont_list') or human_data.get('age')):
+                logger.debug(f'Наличие данных о человеке: {human_data}')
                 contraindications_result = self._exist_contraindications(
                     drugs, human_data
                 )
