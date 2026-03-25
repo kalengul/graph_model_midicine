@@ -9,7 +9,9 @@ from drugs.models import (DrugGroup,
                           SideEffect,
                           DrugSideEffect,
                           BannedDrugPair,
-                          Nosology)
+                          Nosology,
+                          DrugsAgeContraindications
+                          )
 
 
 class BaseCleaner(ABC):
@@ -21,6 +23,7 @@ class BaseCleaner(ABC):
         'drugs_sideeffect',
         'drugs_druggroup',
         'drugs_nosology',
+        'drugs_drugsagecontraindications'
     ]
     model_classes = [
         DrugSideEffect,
@@ -28,6 +31,7 @@ class BaseCleaner(ABC):
         SideEffect,
         DrugGroup,
         Nosology,
+        DrugsAgeContraindications
     ]
 
     @abstractmethod
