@@ -76,7 +76,7 @@ class CalculationAPI(APIView):
                         response_data, contraindications_result
                     )
             
-            gender = human_data.get('gender')
+            gender = human_data.get('gender') if human_data else None
             
             # Расчет совместимости
             return self._calculate_compatibility(
@@ -232,17 +232,7 @@ class CalculationAPI(APIView):
             http_status=status.HTTP_200_OK,
             data=template_data
         )
-    
-    # ИСПРАВИТЬ. ДИЧЬ ЖЕ
-    def _prepare_drugs_for_calculation(self, drugs, calculator):
-        """
-        Подготовка списка лекарств для расчета (дополнение нулями при необходимости).
-        """
-        prepared_drugs = drugs.copy()
-        while len(prepared_drugs) < calculator.n_side_effect:
-            prepared_drugs.append(0)
-        return prepared_drugs
-    
+       
 
     def _calculate_compatibility(self, template_data, drugs, normalization_calculate, gender):
         """
@@ -253,19 +243,17 @@ class CalculationAPI(APIView):
         # Выбор калькулятора
         if normalization_calculate:
             calculator = FortranCalculatorNormalization()
-            prepared_drugs = self._prepare_drugs_for_calculation(drugs, calculator)
             context = calculator.calculate(
                 rank_name=IDX_2_RANK_NAME[0],
-                n_drug=prepared_drugs,
+                n_drug=drugs,
                 canceling_groups=self.CANCELING_EFFECTS_GROUPS,
                 gender=gender,
             )
         else:
             calculator = FortranCalculator()
-            prepared_drugs = self._prepare_drugs_for_calculation(drugs, calculator)
             context = calculator.calculate(
                 rank_name=IDX_2_RANK_NAME[0],
-                n_drug=prepared_drugs,
+                n_drug=drugs,
                 gender=gender
             )
 
