@@ -261,33 +261,53 @@ class ExcelLoader(Loader):
 
         df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
 
-        df = df.iloc[1:, 2:]
-        df = df.reset_index(drop=True)
-        df = df.fillna(0)
+        df = df.iloc[0:, 1:].reset_index(drop=True).fillna(0)
 
-        drugs = list(Drug.objects.order_by('id'))
-        effects = list(SideEffect.objects.order_by('id'))
+        # Функция для нормализации названий
+        def normalize_name(name):
+            return str(name).lower().strip()
+
+        # Определяем названия в зависимости от транспонирования
+        if self.transpose:
+            drug_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
+            effect_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
+        else:
+            drug_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
+            effect_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
+
+        df = df.iloc[1:, 1:].reset_index(drop=True).fillna(0)
+        
+        # Создаем словари для быстрого поиска объектов по названиям
+        drugs_dict = {drug.drug_name: drug for drug in Drug.objects.order_by('id')}
+        effects_dict = {effect.se_name: effect for effect in SideEffect.objects.order_by('id')}
 
         # Транспонирование если нужно
         if self.transpose:
             logger.info("Выполняется транспонирование матрицы рангов")
             df = df.T
             df = df.reset_index(drop=True)
-            logger.debug(f"Новая размерность после транспонирования: {df.shape}")
 
-        logger.debug(f'Число ЛС = {len(drugs)}')
-        logger.debug(f'Число ПД = {len(effects)}')
-        logger.debug(f'Число рангов = {df.shape}')
-
-        assert df.shape == (len(drugs), len(effects)), (
-            "Размерность рангов не совпадает!")
+        assert df.shape == (len(drug_names), len(effect_names)), (
+            f"Размерность рангов {df.shape} не совпадает с размерностью заголовков ({len(drug_names)} x {len(effect_names)})!")
 
         bulk = []
-
         total_count = 0
-        for i, drug in enumerate(drugs):
+        skipped_drugs = []
+        skipped_effects = set()
+        
+        for i, drug_name in enumerate(drug_names):
+            drug = drugs_dict.get(drug_name)
+            if not drug:
+                skipped_drugs.append(drug_name)
+                continue
+                    
             count = 0
-            for j, effect in enumerate(effects):
+            for j, effect_name in enumerate(effect_names):
+                effect = effects_dict.get(effect_name)
+                if not effect:
+                    skipped_effects.add(effect_name)
+                    continue
+                    
                 bulk.append(
                     DrugSideEffect(
                         drug=drug,
@@ -298,11 +318,17 @@ class ExcelLoader(Loader):
                 count += 1
 
             total_count += count
-            logger.info(f"Для {drug} загружено {count} побочных эффектов")
 
-        DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
+        if skipped_drugs:
+            logger.warning(f"Пропущено препаратов: {len(skipped_drugs)}")
+        if skipped_effects:
+            logger.warning(f"Пропущено побочных эффектов: {len(skipped_effects)}")
 
-        logger.info(f'Загружено всего рангов для {len(drugs)} препаратов: {total_count}') 
+        if bulk:
+            DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
+            logger.info(f'Загружено рангов: {total_count}')
+        else:
+            logger.warning("Нет данных для загрузки")
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""
