@@ -1,11 +1,10 @@
 import logging
 
-from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugsAgeContraindications
+from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugsAgeContraindications, TradeName
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from contraindications.utils.cleaner import CleanProcessor
 from drugs.utils.cleaner import DrugCleanProcessor, BannedDrugPairCleanProcessor
-from django.db import transaction
 
 
 logger = logging.getLogger(__name__)
@@ -24,6 +23,7 @@ class DrugDataLoader:
             'banned_pairs': 0,
             'contraindications': 0,
             'nosology': 0,
+            'tradenames': 0,
             'age_contraindications': 0,
         }
 
@@ -52,6 +52,66 @@ class DrugDataLoader:
 
         logger.info(f"Загрузка завершена: {self.stats}")
         return self.stats
+    
+    def load_trade_names(self, trade_names_data):
+        """
+        Загрузка торговых названий.
+        
+        Формат данных:
+        {
+            "гликлазид": ["глидиаб", "глидиаб мв", ...],
+            "ибупрофен": ["бруфен ср", "бумидол®", ...]
+        }
+        """
+        stats = {
+            'trade_names_processed': 0,
+            'trade_names_created': 0,
+            'trade_names_updated': 0,
+            'errors': []
+        }
+        
+        for drug_name, trade_names in trade_names_data.items():
+            drug_name = drug_name.strip().casefold()
+            
+            try:
+                drug = Drug.objects.get(drug_name__iexact=drug_name)
+            except Drug.DoesNotExist:
+                nosology, _ = Nosology.objects.get_or_create(name='общая нозология')
+                drug = Drug.objects.create(
+                    drug_name=drug_name,
+                    nosology=nosology
+                )
+                stats['trade_names_processed'] += 1
+                logger.info(f"Создано новое МНН: {drug_name}")
+            
+            if not isinstance(trade_names, list):
+                stats['errors'].append(f"Для {drug_name}: данные не являются списком")
+                continue
+            
+            # Загружаем торговые названия
+            for trade_name in trade_names:
+                trade_name = trade_name.strip()
+                if not trade_name:
+                    continue
+                
+                trade_obj, created = TradeName.objects.get_or_create(
+                    name=trade_name,
+                    defaults={'drug': drug}
+                )
+                
+                if created:
+                    stats['trade_names_created'] += 1
+                else:
+                    # Если уже существует, но привязан к другому МНН - обновляем
+                    if trade_obj.drug != drug:
+                        trade_obj.drug = drug
+                        trade_obj.save()
+                        stats['trade_names_updated'] += 1
+            
+            stats['trade_names_processed'] += 1
+        
+        logger.info(f"Загрузка торговых названий завершена: {stats}")
+        return stats
 
     def _load_groups_and_link_drugs(self, data):
         """Загрузка групп и связывание с лекарствами."""
