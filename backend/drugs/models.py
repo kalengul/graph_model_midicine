@@ -48,6 +48,9 @@ class TradeName(models.Model):
     name = models.CharField(max_length=MAX_LENGTH, unique=True, verbose_name='Торговое название')
     drug = models.ForeignKey('Drug', on_delete=models.CASCADE, related_name='trade_names')
 
+    def __str__(self):
+        return f'{self.name} ({self.drug})'
+
 
 class Drug(models.Model):
     """Класс ЛС."""

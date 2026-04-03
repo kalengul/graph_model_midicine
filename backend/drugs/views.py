@@ -14,7 +14,8 @@ from django.http import FileResponse
 from .models import (Drug,
                      DrugGroup,
                      SideEffect,
-                     DrugSideEffect)
+                     DrugSideEffect,
+                     TradeName)
 from .serializers import (
     DrugSerializer,
     DrugGroupSerializer,
@@ -706,19 +707,25 @@ class DrugDataLoadView(APIView):
     Принимает JSON файл с данными или список данных в теле запроса.
     """
     
+class TradeNamesLoadView(APIView):
+    """View для загрузки торговых названий."""
+    
     def post(self, request):
         """
-        Загрузка данных о ЛС.
-                Ожидает:
-        - файл в form-data с ключом 'file'
-        - или JSON в теле запроса со списком данных
+        Загрузка торговых названий.
+        
+        Ожидает JSON формата:
+        {
+            "гликлазид": ["глидиаб", "глидиаб мв", ...],
+            "ибупрофен": ["бруфен ср", ...]
+        }
         
         Параметры запроса (query params):
-        - clear: true/false - очищать ли таблицы перед загрузкой (по умолчанию true)
+        - clear: true/false - очищать ли существующие торговые названия перед загрузкой
         """
         try:
-            # Получаем параметр clear из query params
-            clear_before_load = request.GET.get('clear', 'true').lower() == 'true'
+            # Получаем параметр clear
+            clear_before_load = request.GET.get('clear', 'false').lower() == 'true'
             
             # Получаем данные
             data = self._get_data_from_request(request)
@@ -728,30 +735,49 @@ class DrugDataLoadView(APIView):
                     http_status=status.HTTP_400_BAD_REQUEST,
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Не предоставлены данные для загрузки. '
-                           'Отправьте файл с ключом "file".'
+                           'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
                 )
             
-            # Проверяем, что данные - это список
-            if not isinstance(data, list):
+            # Если данные в формате {"trade_names": {...}}
+            if 'trade_names' in data:
+                trade_names_data = data['trade_names']
+            else:
+                trade_names_data = data
+            
+            # Проверяем, что данные - это словарь
+            if not isinstance(trade_names_data, dict):
                 return CustomResponse(
                     http_status=status.HTTP_400_BAD_REQUEST,
                     status=status.HTTP_400_BAD_REQUEST,
-                    message='Данные должны быть списком (JSON array)'
+                    message='Данные должны быть объектом (dictionary) в формате {"МНН": ["торг1", ...]}'
                 )
             
+            # Очищаем существующие торговые названия если нужно
+            if clear_before_load:
+                TradeName.objects.all().delete()
+                logger.info("Существующие торговые названия очищены")
+            
             # Создаем загрузчик и загружаем данные
-            loader = DrugDataLoader(clear_before_load=clear_before_load)
-            stats = loader.load_all(data)
+            loader = DrugDataLoader(clear_before_load=False)  # clear=False, т.к. очистили выше
+            stats = loader.load_trade_names(trade_names_data)
+            
+            if stats['errors']:
+                return CustomResponse(
+                    http_status=status.HTTP_207_MULTI_STATUS,
+                    status=status.HTTP_207_MULTI_STATUS,
+                    message='Загрузка завершена с ошибками',
+                    data=stats
+                )
             
             return CustomResponse(
                 http_status=status.HTTP_200_OK,
                 status=status.HTTP_200_OK,
-                message='Данные успешно загружены',
-                data={'stats': stats}
+                message='Торговые названия успешно загружены',
+                data=stats
             )
             
         except Exception as e:
-            logger.error(f"Ошибка при загрузке данных: {e}", exc_info=True)
+            logger.error(f"Ошибка при загрузке торговых названий: {e}", exc_info=True)
             return CustomResponse(
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -759,30 +785,25 @@ class DrugDataLoadView(APIView):
             )
     
     def _get_data_from_request(self, request):
-        """
-        Извлекает данные из запроса.
-        Поддерживает:
-        - загрузку файла (form-data с ключом 'file')
-        - прямой JSON в теле запроса
-        """
+        """Извлекает данные из request (JSON или файл)."""
         # Проверяем, есть ли файл
-        if 'file' in request.FILES:
-            file_obj = request.FILES['file']
-            return self._parse_file(file_obj)
+        if request.FILES.get('file'):
+            uploaded_file = request.FILES['file']
+            try:
+                # Пробуем прочитать как JSON
+                data = json.load(uploaded_file)
+                return data
+            except json.JSONDecodeError as e:
+                logger.error(f"Ошибка парсинга JSON файла: {e}")
+                return None
+        
+        # Проверяем, есть ли JSON в теле запроса
+        if request.body:
+            try:
+                data = json.loads(request.body)
+                return data
+            except json.JSONDecodeError as e:
+                logger.error(f"Ошибка парсинга JSON тела запроса: {e}")
+                return None
         
         return None
-    
-    def _parse_file(self, file_obj):
-        """
-        Парсит загруженный файл.
-        Поддерживает JSON и текстовые файлы.
-        """
-        try:
-            content = file_obj.read().decode('utf-8')
-            return json.loads(content)
-        except json.JSONDecodeError as e:
-            logger.error(f"Ошибка парсинга JSON файла: {e}")
-            raise ValueError(f"Файл должен содержать валидный JSON: {e}")
-        except Exception as e:
-            logger.error(f"Ошибка чтения файла: {e}")
-            raise
