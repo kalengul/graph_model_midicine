@@ -42,6 +42,13 @@ class Nosology(models.Model):
         ordering = ['name']
 
 
+class TradeName(models.Model):
+    """Торговое название ЛС."""
+    
+    name = models.CharField(max_length=MAX_LENGTH, unique=True, verbose_name='Торговое название')
+    drug = models.ForeignKey('Drug', on_delete=models.CASCADE, related_name='trade_names')
+
+
 class Drug(models.Model):
     """Класс ЛС."""
 
