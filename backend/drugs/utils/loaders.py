@@ -184,7 +184,6 @@ class ExcelLoader(Loader):
         
         try:
             logger.info('Загрузка ЛС началась')
-            nosology, _ = Nosology.objects.get_or_create(name='общая нозология')
 
             for drug in df.iloc[:, 1].to_list():
                 drug_name = drug.strip().casefold()
@@ -204,7 +203,7 @@ class ExcelLoader(Loader):
                 unique_not_found = list(set(not_found_drugs))
                 error_msg = (
                     f'Не найдено препаратов в БД: {len(unique_not_found)} шт. '
-                    f'Примеры: {unique_not_found[:10]}'  # показываем первые 10
+                    f'Примеры: {unique_not_found}'
                 )
                 logger.error(error_msg)
                 raise ValueError(error_msg)  # или CustomError, если есть
