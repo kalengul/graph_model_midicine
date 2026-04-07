@@ -117,7 +117,7 @@ class DrugDataLoader:
         """Загрузка групп и связывание с лекарствами."""
 
         # Создание общей нозологии
-        nosology, nosology_created = Nosology.objects.get_or_create(
+        nosology_default, nosology_default_created = Nosology.objects.get_or_create(
                 name='общая нозология'
             )
         
@@ -156,9 +156,15 @@ class DrugDataLoader:
                 if nosology_created:
                     self.stats['nosology'] = self.stats.get('nosology', 0) + 1
                 
+                # Если отличается, то обновить
                 if drug.nosology != nosology:
                     drug.nosology = nosology
                     drug.save(update_fields=['nosology'])
+            
+            # Если нет, то устанавливается по дефолту
+            else:
+                drug.nosology = nosology_default
+                drug.save(update_fields=['nosology'])
 
     def _load_banned(self, data):
         """Загрузка запрещенных пар через существующий загрузчик."""
