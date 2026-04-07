@@ -177,31 +177,43 @@ class ExcelLoader(Loader):
         return False
 
     def _load_drugs(self):
-        """Загрузка ЛС."""
+        """Загрузка ЛС — только существующие препараты."""
         df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
-
+        count = 0
+        not_found_drugs = []  # собираем проблемные названия
+        
         try:
             logger.info('Загрузка ЛС началась')
-            # Получаем или создаем нозологию "общая группа"
-            nosology, nosology_created = Nosology.objects.get_or_create(
-                name='общая нозология'
-            )
+            nosology, _ = Nosology.objects.get_or_create(name='общая нозология')
 
             for drug in df.iloc[:, 1].to_list():
                 drug_name = drug.strip().casefold()
                 
-                # Создаем препарат только если его нет
-                drug_obj, drug_created = Drug.objects.get_or_create(
-                    drug_name=drug_name
+                try:
+                    # 🔍 Только поиск, без создания
+                    drug_obj = Drug.objects.get(drug_name=drug_name)
+                        
+                except Drug.DoesNotExist:
+                    # ❌ Препарат не найден — логируем и собираем в список
+                    not_found_drugs.append(drug_name)
+                    logger.warning(f'Препарат не найден в БД: "{drug_name}"')
+                    continue  # пропускаем и идём дальше
+                    
+            # После цикла — финальная проверка
+            if not_found_drugs:
+                unique_not_found = list(set(not_found_drugs))
+                error_msg = (
+                    f'Не найдено препаратов в БД: {len(unique_not_found)} шт. '
+                    f'Примеры: {unique_not_found[:10]}'  # показываем первые 10
                 )
+                logger.error(error_msg)
+                raise ValueError(error_msg)  # или CustomError, если есть
                 
-                # Для ForeignKey используем присваивание, а не add()
-                if drug_created:
-                    drug_obj.nosology = nosology
-                    drug_obj.save()
-                
-            logger.info(f'Загружено ЛС: {Drug.objects.count()}')
+            logger.info(f'Загружено ЛС: {count}, всего в БД: {Drug.objects.count()}')
+            
         except Exception as error:
+            if isinstance(error, ValueError):
+                raise  # переподнимаем нашу ошибку как есть
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
     def _load_side_effects(self):
@@ -326,7 +338,8 @@ class ExcelLoader(Loader):
 
         if bulk:
             DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
-            logger.info(f'Загружено рангов: {total_count}')
+            logger.info(f'Загружено рангов: {total_count}. '
+                        f'Должно {len(list(drugs_dict.keys()))*len(list(effects_dict.keys()))}')
         else:
             logger.warning("Нет данных для загрузки")
 
