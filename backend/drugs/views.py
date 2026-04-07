@@ -700,12 +700,93 @@ class BannedPairLoadView(APIView):
             )
             
 
-
 class DrugDataLoadView(APIView):
     """
     View для загрузки данных о лекарственных средствах.
     Принимает JSON файл с данными или список данных в теле запроса.
     """
+    
+    def post(self, request):
+        """
+        Загрузка данных о ЛС.
+                Ожидает:
+        - файл в form-data с ключом 'file'
+        - или JSON в теле запроса со списком данных
+        
+        Параметры запроса (query params):
+        - clear: true/false - очищать ли таблицы перед загрузкой (по умолчанию true)
+        """
+        try:
+            # Получаем параметр clear из query params
+            clear_before_load = request.GET.get('clear', 'true').lower() == 'true'
+            
+            # Получаем данные
+            data = self._get_data_from_request(request)
+            
+            if not data:
+                return CustomResponse(
+                    http_status=status.HTTP_400_BAD_REQUEST,
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message='Не предоставлены данные для загрузки. '
+                           'Отправьте файл с ключом "file".'
+                )
+            
+            # Проверяем, что данные - это список
+            if not isinstance(data, list):
+                return CustomResponse(
+                    http_status=status.HTTP_400_BAD_REQUEST,
+                    status=status.HTTP_400_BAD_REQUEST,
+                    message='Данные должны быть списком (JSON array)'
+                )
+            
+            # Создаем загрузчик и загружаем данные
+            loader = DrugDataLoader(clear_before_load=clear_before_load)
+            stats = loader.load_all(data)
+            
+            return CustomResponse(
+                http_status=status.HTTP_200_OK,
+                status=status.HTTP_200_OK,
+                message='Данные успешно загружены',
+                data={'stats': stats}
+            )
+            
+        except Exception as e:
+            logger.error(f"Ошибка при загрузке данных: {e}", exc_info=True)
+            return CustomResponse(
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
+            )
+    
+    def _get_data_from_request(self, request):
+        """
+        Извлекает данные из запроса.
+        Поддерживает:
+        - загрузку файла (form-data с ключом 'file')
+        - прямой JSON в теле запроса
+        """
+        # Проверяем, есть ли файл
+        if 'file' in request.FILES:
+            file_obj = request.FILES['file']
+            return self._parse_file(file_obj)
+        
+        return None
+    
+    def _parse_file(self, file_obj):
+        """
+        Парсит загруженный файл.
+        Поддерживает JSON и текстовые файлы.
+        """
+        try:
+            content = file_obj.read().decode('utf-8')
+            return json.loads(content)
+        except json.JSONDecodeError as e:
+            logger.error(f"Ошибка парсинга JSON файла: {e}")
+            raise ValueError(f"Файл должен содержать валидный JSON: {e}")
+        except Exception as e:
+            logger.error(f"Ошибка чтения файла: {e}")
+            raise
+
     
 class TradeNamesLoadView(APIView):
     """View для загрузки торговых названий."""
