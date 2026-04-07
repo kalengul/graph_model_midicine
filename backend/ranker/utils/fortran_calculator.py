@@ -256,73 +256,383 @@ class FortranCalculatorNormalization(BaseCalculator):
         #logger.debug(f'normalized_rangsum = {normalized_rangsum}')
         return normalized_rangsum
 
-    def calculate(self, rank_name, n_drug, canceling_groups=None, gender=None):
-        #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2], [4, 5], [7, 10]]
-        # Валидация входного массива
-        logger.debug(f"Групп нивелирования: {canceling_groups}")
-        if canceling_groups is not None:
-            if not isinstance(canceling_groups, list):
-                logger.error("cancel_groups должен быть списком")
-                canceling_groups = None
-            else:
-                # Фильтруем только валидные группы
-                valid_groups = []
-                for group in canceling_groups:
-                    if isinstance(group, list) and len(group) >= 2:
-                        # Проверяем, что все индексы в допустимом диапазоне
-                        valid_indices = [idx for idx in group if isinstance(idx, int) and 1 <= idx <= self.n_side_effect]
-                        if len(valid_indices) >= 2:
-                            valid_groups.append(valid_indices)
-                canceling_groups = valid_groups
+    # def calculate(self, rank_name, n_drug, canceling_groups=None, gender=None):
+    #     #canceling_groups: массив массивов индексов эффектов, которые нивелируют друг друга Формат: [[1, 2], [4, 5], [7, 10]]
+    #     # Валидация входного массива
+    #     logger.debug(f"Групп нивелирования: {canceling_groups}")
+    #     if canceling_groups is not None:
+    #         if not isinstance(canceling_groups, list):
+    #             logger.error("cancel_groups должен быть списком")
+    #             canceling_groups = None
+    #         else:
+    #             # Фильтруем только валидные группы
+    #             valid_groups = []
+    #             for group in canceling_groups:
+    #                 if isinstance(group, list) and len(group) >= 2:
+    #                     # Проверяем, что все индексы в допустимом диапазоне
+    #                     valid_indices = [idx for idx in group if isinstance(idx, int) and 1 <= idx <= self.n_side_effect]
+    #                     if len(valid_indices) >= 2:
+    #                         valid_groups.append(valid_indices)
+    #             canceling_groups = valid_groups
 
-        logger.debug(f"Групп нивелирования: {len(canceling_groups) if canceling_groups else 0}")
+    #     logger.debug(f"Групп нивелирования: {len(canceling_groups) if canceling_groups else 0}")
 
-        non_zero_n_drug = [idx for idx in n_drug if idx != 0]
-        unique_n_drug = list(set(non_zero_n_drug))
-        num_drugs = len(unique_n_drug)
+    #     non_zero_n_drug = [idx for idx in n_drug if idx != 0]
+    #     unique_n_drug = list(set(non_zero_n_drug))
+    #     num_drugs = len(unique_n_drug)
 
-        if rank_name is None:
-            rank_name = self.get_default_rank_name()
+    #     if rank_name is None:
+    #         rank_name = self.get_default_rank_name()
 
-        excluded_se_ids = set()
-        if gender:
-            opposite_gender = 'woman' if gender == 'man' else 'man'
-            # Исключаем эффекты, у которых есть привязка к противоположному полу
-            excluded_se_ids = set(
-                SideEffectsGender.objects.filter(gender=opposite_gender)
-                                        .values_list('side_effect_id', flat=True)
-            )
-        logger.debug(f"Исключенные id побочек по полу:{excluded_se_ids}")
+    #     excluded_se_ids = set()
+    #     if gender:
+    #         opposite_gender = 'woman' if gender == 'man' else 'man'
+    #         # Исключаем эффекты, у которых есть привязка к противоположному полу
+    #         excluded_se_ids = set(
+    #             SideEffectsGender.objects.filter(gender=opposite_gender)
+    #                                     .values_list('side_effect_id', flat=True)
+    #         )
+    #     logger.debug(f"Исключенные id побочек по полу:{excluded_se_ids}")
     
-        id2side_e = {}
-        for k in range(self.n_side_effect):
-            se_id = k + 1
-            if se_id in excluded_se_ids:
-                continue          # пропускаем эффекты, исключённые по полу
-            se = SideEffect.objects.get(id=se_id)
-            if se:
-                id2side_e[k] = se.se_name
+    #     id2side_e = {}
+    #     for k in range(self.n_side_effect):
+    #         se_id = k + 1
+    #         if se_id in excluded_se_ids:
+    #             continue          # пропускаем эффекты, исключённые по полу
+    #         se = SideEffect.objects.get(id=se_id)
+    #         if se:
+    #             id2side_e[k] = se.se_name
 
-        side_e2id = {v: k for k, v in id2side_e.items()}
+    #     side_e2id = {v: k for k, v in id2side_e.items()}
 
-        # Создаем матрицу рангов для выбранных ЛС
-        rangs = [getattr(r, rank_name) for r in DrugSideEffect.objects.all()]
-        rang1 = np.zeros((num_drugs, self.n_side_effect))
+    #     # Создаем матрицу рангов для выбранных ЛС
+    #     rangs = [getattr(r, rank_name) for r in DrugSideEffect.objects.all()]
+    #     rang1 = np.zeros((num_drugs, self.n_side_effect))
 
-        for j, drug_idx in enumerate(unique_n_drug):
-            for k in range(self.n_side_effect):
-                rang1[j, k] = rangs[self.n_side_effect * (drug_idx - 1) + k]
+    #     for j, drug_idx in enumerate(unique_n_drug):
+    #         for k in range(self.n_side_effect):
+    #             rang1[j, k] = rangs[self.n_side_effect * (drug_idx - 1) + k]
 
-        # Вычисление суммы рангов по эффектам
-        rangsum = np.sum(rang1, axis=0)
+    #     # Вычисление суммы рангов по эффектам
+    #     rangsum = np.sum(rang1, axis=0)
 
-        # Применяем нормализацию для нивелирующих эффектов
+    #     # Применяем нормализацию для нивелирующих эффектов
+    #     if canceling_groups:
+    #         rangsum = self._apply_canceling_normalization(rangsum, canceling_groups)
+               
+    #     ram = np.max(rangsum)
+
+    #     # Классификация
+    #     if ram >= 1.0:
+    #         classification = 'incompatible'
+    #     elif ram >= 0.5:
+    #         classification = 'caution'
+    #     else:
+    #         classification = 'compatible'
+
+    #     context = {
+    #         'rank_iteractions': round(float(ram), 2),
+    #         'compatibility_fortran': classification
+    #     }
+
+    #     # Распределение эффектов по классам
+    #     side_effects = []
+    #     for k in range(self.n_side_effect):
+    #         se_id = k + 1
+    #         if se_id in excluded_se_ids:
+    #             continue
+    #         rank_val = rangsum[k]
+    #         if rank_val >= 1.0:
+    #             cls = 3
+    #         elif rank_val >= 0.5:
+    #             cls = 2
+    #         else:
+    #             cls = 1
+    #         # effect = SideEffect.objects.get(id=k + 1)
+    #         side_effects.append({
+    #             # 'se_name': effect.se_name,
+    #             'se_name': id2side_e[k],
+    #             'class': cls,
+    #             'rank': round(float(rank_val), 2)
+    #         })
+
+    #     context['side_effects'] = [
+    #         {"compatibility": "compatible", 'effects': []},
+    #         {"compatibility": "caution", 'effects': []},
+    #         {"compatibility": "incompatible", 'effects': []},
+    #     ]
+
+    #     side_effects.sort(key=lambda x: x['rank'], reverse=True)
+    #     for effect in side_effects:
+    #         cls = effect.pop('class')
+    #         context['side_effects'][cls - 1]['effects'].append(effect)
+
+    #     # Анализ потенциальных ЛС
+
+    #     # Составление словаря групп
+    #     # Получаем ID всех групп, к которым относятся выбранные препараты
+    #     drugs_with_groups = Drug.objects.filter(id__in=unique_n_drug).prefetch_related('drug_groups')
+    #     group_ids = set()
+    #     for drug in drugs_with_groups:
+    #         for group in drug.drug_groups.all():
+    #             group_ids.add(group.id)
+
+    #     # 3. Получаем ID всех препаратов из этих групп (исключая выбранные)
+    #     excluded_drug_ids = set(
+    #         Drug.objects.filter(drug_groups__id__in=group_ids)
+    #         .exclude(id__in=unique_n_drug)
+    #         .values_list('id', flat=True)
+    #         .distinct()
+    #     )
+    #     # Переводим в 0-индексацию
+    #     excluded_drug_ids = {drug_id - 1 for drug_id in excluded_drug_ids}
+    #     logger.debug(f"Исключаемые индексы препаратов: {sorted(excluded_drug_ids)}")
+
+    #     rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
+    #     drugs_class_2, drugs_class_3 = [], []
+    #     unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
+
+    #     for j in range(self.n_drug):
+    #         # Пропускаем выбранные и исключенные препараты
+    #         if j in unique_n_drug_sub_1 or j in excluded_drug_ids:
+    #             continue
+
+    #         new_rangsum = rangsum + rangs_matrix[j]
+
+    #         # Применяем нормализацию для потенциальных комбинаций
+    #         if canceling_groups:
+    #             new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
+
+    #         # Находим все побочные эффекты с value >= 1.0 для class 3
+    #         indices_class_3 = np.where(new_rangsum >= 1.0)[0]
+    #         if len(indices_class_3) > 0:
+    #             side_effects_class_3 = []
+    #             for idx in indices_class_3:
+    #                 se_id = idx + 1
+    #                 if se_id in excluded_se_ids:
+    #                     continue
+    #                 se = id2side_e.get(idx)
+    #                 if se:
+    #                     side_effects_class_3.append({
+    #                         'se_name': se,
+    #                         'rank': round(float(new_rangsum[idx]), 2)
+    #                     })
+    #             if side_effects_class_3:   # добавляем препарат только если есть неисключённые эффекты
+    #                 drugs_class_3.append({
+    #                     'drug_index': j,
+    #                     'side_effects': side_effects_class_3
+    #                 })
+            
+    #         # Находим все побочные эффекты с 0.5 <= value < 1.0 для class 2
+    #         indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
+    #         if len(indices_class_2) > 0:
+    #             side_effects_class_2 = []
+    #             for idx in indices_class_2:
+    #                 se_id = idx + 1
+    #                 if se_id in excluded_se_ids:
+    #                     continue
+    #                 se = id2side_e.get(idx)
+    #                 if se:
+    #                     side_effects_class_2.append({
+    #                         'se_name': se,
+    #                         'rank': round(float(new_rangsum[idx]), 2)
+    #                     })
+    #             if side_effects_class_2:
+    #                 drugs_class_2.append({
+    #                     'drug_index': j,
+    #                     'side_effects': side_effects_class_2   # или оставить [], как в вашем коде
+    #                 })
+
+    #     drug_array2 = [{
+    #         'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
+    #         'class': 2,
+    #         'side_effects': item['side_effects']
+    #     } for item in drugs_class_2]
+
+    #     drug_array3 = [{
+    #         'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
+    #         'class': 3,
+    #         'side_effects': item['side_effects']
+    #     } for item in drugs_class_3]
+
+    #     context['combinations'] = [
+    #         {
+    #             "compatibility": 'caution', 
+    #             "drugs": [{
+    #                 "name": d['name'],
+    #                 "side_effects": d['side_effects']
+    #             } for d in drug_array2]
+    #         },
+    #         {
+    #             "compatibility": 'incompatible', 
+    #             "drugs": [{
+    #                 "name": d['name'],
+    #                 "side_effects": d['side_effects']
+    #             } for d in drug_array3]
+    #         },
+    #     ]
+
+
+    #     context['drugs'] = [Drug.objects.get(id=i).drug_name
+    #                         for i in unique_n_drug]
+        
+
+    #     # Если комбинация несовместима, нужны рекомендации
+    #     if context["compatibility_fortran"] == "incompatible":
+    #         context['rep_recommendations'] = self._analyze_max_drug_contribution(context['side_effects'][2]['effects'],
+    #                                                                             rangs, unique_n_drug, rangsum, side_e2id)
+
+    #     # Расчёт препаратов по отдельности
+    #     context["SEFromDrug"] = []
+    #     for drug in [Drug.objects.get(id=i) for i in unique_n_drug]:
+    #         # Получаем все связи DrugSideEffect для данного лекарства
+    #         drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
+
+    #         effects_data = []
+    #         for dse in drug_side_effects:
+    #             # Пропускаем эффекты, привязанные к противоположному полу
+    #             if dse.side_effect.id in excluded_se_ids:
+    #                 continue
+    #             effects_data.append({
+    #                 'se_name': dse.side_effect.se_name,
+    #                 'rank': dse.rang_base  # или другой нужный ранг в зависимости от rank_name
+    #             })
+
+    #         context["SEFromDrug"].append(
+    #             {
+    #                 'd_name': drug.drug_name,
+    #                 'effects': effects_data
+    #             }
+    #         )
+    #     return context
+    
+
+    def calculate(self, rank_name, n_drug, canceling_groups=None, gender=None):
+        """
+        Основной метод анализа взаимодействия препаратов.
+        """
+        # Валидация и предобработка
+        canceling_groups = self._validate_canceling_groups(canceling_groups)
+        excluded_se_ids = self._get_excluded_se_by_gender(gender)
+
+        logger.debug(f"Введённые препараты:{n_drug}")
+        logger.debug(f"Уникальные:{n_drug}")
+
+        # Загрузка справочных данных
+        id2side_e = self._load_side_effects_dict(excluded_se_ids)
+
+        # Построение матриц рангов
+        rangs_matrix, rang1, rangsum = self._build_rank_matrices(n_drug, rank_name)
+
+        # Применение нормализации
         if canceling_groups:
             rangsum = self._apply_canceling_normalization(rangsum, canceling_groups)
-               
-        ram = np.max(rangsum)
 
-        # Классификация
+        # Классификация и побочные эффекты
+        context = self._classify_and_build_side_effects(rangsum, id2side_e, excluded_se_ids)
+        context['rank_iteractions'] = round(float(np.max(rangsum)), 2)
+
+        # Исключённые препараты по группам
+        excluded_drug_ids = self._get_excluded_drugs_by_groups(n_drug)
+
+        # Анализ потенциальных ЛС
+        drugs_class_2, drugs_class_3 = self._analyze_potential_drugs(
+            rangs_matrix, rangsum, n_drug, excluded_drug_ids,
+            canceling_groups, excluded_se_ids, id2side_e
+        )
+        context.update(self._prepare_combination_context(drugs_class_2, drugs_class_3))
+
+        # Имена выбранных препаратов
+        context['drugs'] = self._get_drug_names_bulk(n_drug)
+
+        # Если несовместимо, рекомендации
+        if context["compatibility_fortran"] == "incompatible":
+            # Предполагается, что _analyze_max_drug_contribution использует side_e2id
+            side_e2id = {v: k for k, v in id2side_e.items()}
+            context['rep_recommendations'] = self._analyze_max_drug_contribution(
+                context['side_effects'][2]['effects'],
+                self._get_all_ranks(rank_name),
+                n_drug,
+                rangsum,
+                side_e2id
+            )
+
+        # Побочные эффекты по каждому препарату
+        context['SEFromDrug'] = self._get_se_from_drugs(n_drug, excluded_se_ids, rank_name)
+
+        return context
+    
+    def _validate_canceling_groups(self, canceling_groups):
+        """Валидация и фильтрация групп нивелирования."""
+        if not canceling_groups:
+            return None
+        if not isinstance(canceling_groups, list):
+            logger.error("cancel_groups должен быть списком")
+            return None
+        valid_groups = []
+        for group in canceling_groups:
+            if not isinstance(group, list) or len(group) < 2:
+                continue
+            valid_indices = [idx for idx in group
+                             if isinstance(idx, int) and 1 <= idx <= self.n_side_effect]
+            if len(valid_indices) >= 2:
+                valid_groups.append(valid_indices)
+        return valid_groups
+    
+    def _get_excluded_se_by_gender(self, gender):
+        """Возвращает множество ID побочных эффектов, исключённых по полу."""
+        if not gender:
+            return set()
+        opposite_gender = 'woman' if gender == 'man' else 'man'
+        excluded_ids = SideEffectsGender.objects.filter(gender=opposite_gender) \
+            .values_list('side_effect_id', flat=True)
+        return set(excluded_ids)
+    
+    def _load_side_effects_dict(self, excluded_se_ids):
+        """Загружает все побочные эффекты и возвращает словарь {0-индекс: название}."""
+        all_side_effects = SideEffect.objects.all().only('id', 'se_name')
+        id2side_e = {}
+        for se in all_side_effects:
+            if se.id in excluded_se_ids:
+                continue
+            # Используем 0-индексацию для ключей
+            id2side_e[se.id - 1] = se.se_name
+        return id2side_e
+    
+    def _build_rank_matrices(self, unique_n_drug, rank_name):
+        """
+        Строит:
+          - rangs_matrix: полная матрица рангов (n_drug x n_side_effect)
+          - rang1: матрица рангов только для выбранных препаратов (len(unique_n_drug) x n_side_effect)
+          - rangsum: сумма рангов по выбранным препаратам (вектор длины n_side_effect)
+        """
+        # Загружаем все связи DrugSideEffect, упорядоченные по drug_id и side_effect_id
+        # Предполагаем, что в БД данные хранятся в порядке (drug_id, side_effect_id)
+        all_ranks = list(DrugSideEffect.objects.order_by('drug_id', 'side_effect_id')
+                         .values_list(rank_name, flat=True))
+        # Если записей меньше, чем n_drug * n_side_effect, нужно дополнить нулями
+        # Но для надёжности создадим матрицу нужного размера и заполним.
+        rangs_matrix = np.zeros((self.n_drug, self.n_side_effect))
+        for i, val in enumerate(all_ranks):
+            drug_idx = i // self.n_side_effect
+            se_idx = i % self.n_side_effect
+            rangs_matrix[drug_idx, se_idx] = val
+
+        # Индексы выбранных препаратов (0-индексация)
+        selected_indices = [drug_id - 1 for drug_id in unique_n_drug]
+        rang1 = rangs_matrix[selected_indices, :]
+        rangsum = np.sum(rang1, axis=0)
+        return rangs_matrix, rang1, rangsum
+    
+    def _get_all_ranks(self, rank_name):
+        """Возвращает список всех рангов (для использования в _analyze_max_drug_contribution)."""
+        return list(DrugSideEffect.objects.order_by('drug_id', 'side_effect_id')
+                    .values_list(rank_name, flat=True))
+    
+
+    def _classify_and_build_side_effects(self, rangsum, id2side_e, excluded_se_ids):
+        """Классифицирует общую комбинацию и строит список побочных эффектов по классам."""
+        ram = np.max(rangsum)
         if ram >= 1.0:
             classification = 'incompatible'
         elif ram >= 0.5:
@@ -330,182 +640,206 @@ class FortranCalculatorNormalization(BaseCalculator):
         else:
             classification = 'compatible'
 
-        context = {
-            'rank_iteractions': round(float(ram), 2),
-            'compatibility_fortran': classification
-        }
-
-        # Распределение эффектов по классам
-        side_effects = []
-        for k in range(self.n_side_effect):
-            se_id = k + 1
-            if se_id in excluded_se_ids:
+        # Собираем все эффекты с их классами
+        side_effects_by_class = {1: [], 2: [], 3: []}
+        for se_idx, rank_val in enumerate(rangsum):
+            if se_idx not in id2side_e:  # пропускаем исключённые по полу
                 continue
-            rank_val = rangsum[k]
             if rank_val >= 1.0:
                 cls = 3
             elif rank_val >= 0.5:
                 cls = 2
             else:
                 cls = 1
-            # effect = SideEffect.objects.get(id=k + 1)
-            side_effects.append({
-                # 'se_name': effect.se_name,
-                'se_name': id2side_e[k],
-                'class': cls,
-                'rank': round(float(rank_val), 2)
+            side_effects_by_class[cls].append({
+                'se_name': id2side_e[se_idx],
+                'rank': round(float(rank_val), 2),
+                'class': cls
             })
 
-        context['side_effects'] = [
-            {"compatibility": "compatible", 'effects': []},
-            {"compatibility": "caution", 'effects': []},
-            {"compatibility": "incompatible", 'effects': []},
-        ]
+        # Сортируем внутри каждого класса по убыванию ранга
+        for cls in side_effects_by_class:
+            side_effects_by_class[cls].sort(key=lambda x: x['rank'], reverse=True)
+            # Убираем временное поле 'class'
+            for item in side_effects_by_class[cls]:
+                del item['class']
 
-        side_effects.sort(key=lambda x: x['rank'], reverse=True)
-        for effect in side_effects:
-            cls = effect.pop('class')
-            context['side_effects'][cls - 1]['effects'].append(effect)
-
-        # Анализ потенциальных ЛС
-
-        # Составление словаря групп
-        # Получаем ID всех групп, к которым относятся выбранные препараты
-        drugs_with_groups = Drug.objects.filter(id__in=unique_n_drug).prefetch_related('drug_groups')
+        context = {
+            'compatibility_fortran': classification,
+            'side_effects': [
+                {"compatibility": "compatible", 'effects': side_effects_by_class[1]},
+                {"compatibility": "caution", 'effects': side_effects_by_class[2]},
+                {"compatibility": "incompatible", 'effects': side_effects_by_class[3]},
+            ]
+        }
+        return context
+    
+    def _get_excluded_drugs_by_groups(self, unique_n_drug):
+        """
+        Возвращает множество ID препаратов (0-индексация),
+        которые принадлежат к тем же группам, что и выбранные, но сами не выбраны.
+        """
+        if not unique_n_drug:
+            return set()
+        # Получаем все группы выбранных препаратов
+        drugs = Drug.objects.filter(id__in=unique_n_drug).prefetch_related('drug_groups')
         group_ids = set()
-        for drug in drugs_with_groups:
-            for group in drug.drug_groups.all():
-                group_ids.add(group.id)
+        for drug in drugs:
+            group_ids.update(drug.drug_groups.values_list('id', flat=True))
 
-        # 3. Получаем ID всех препаратов из этих групп (исключая выбранные)
-        excluded_drug_ids = set(
-            Drug.objects.filter(drug_groups__id__in=group_ids)
-            .exclude(id__in=unique_n_drug)
-            .values_list('id', flat=True)
+        if not group_ids:
+            return set()
+
+        # ID всех препаратов из этих групп, исключая выбранные
+        excluded = Drug.objects.filter(drug_groups__id__in=group_ids) \
+            .exclude(id__in=unique_n_drug) \
+            .values_list('id', flat=True) \
             .distinct()
-        )
-        # Переводим в 0-индексацию
-        excluded_drug_ids = {drug_id - 1 for drug_id in excluded_drug_ids}
-        logger.debug(f"Исключаемые индексы препаратов: {sorted(excluded_drug_ids)}")
+        return {drug_id - 1 for drug_id in excluded}
+    
+    def _analyze_potential_drugs(self, rangs_matrix, rangsum, unique_n_drug,
+                                 excluded_drug_ids, canceling_groups,
+                                 excluded_se_ids, id2side_e):
+        """
+        Анализирует потенциальные ЛС, возвращает списки для классов 2 и 3.
+        """
+        unique_n_drug_0 = {idx - 1 for idx in unique_n_drug}
+        drugs_class_2 = []
+        drugs_class_3 = []
 
-        rangs_matrix = np.array(rangs).reshape(self.n_drug, self.n_side_effect)
-        drugs_class_2, drugs_class_3 = [], []
-        unique_n_drug_sub_1 = [idx - 1 for idx in unique_n_drug]
-
-        for j in range(self.n_drug):
-            # Пропускаем выбранные и исключенные препараты
-            if j in unique_n_drug_sub_1 or j in excluded_drug_ids:
+        for drug_idx in range(self.n_drug):
+            # Пропускаем выбранные и исключённые
+            if drug_idx in unique_n_drug_0 or drug_idx in excluded_drug_ids:
                 continue
 
-            new_rangsum = rangsum + rangs_matrix[j]
-
-            # Применяем нормализацию для потенциальных комбинаций
+            new_rangsum = rangsum + rangs_matrix[drug_idx]
             if canceling_groups:
                 new_rangsum = self._apply_canceling_normalization(new_rangsum, canceling_groups)
 
-            # Находим все побочные эффекты с value >= 1.0 для class 3
-            indices_class_3 = np.where(new_rangsum >= 1.0)[0]
-            if len(indices_class_3) > 0:
-                side_effects_class_3 = []
-                for idx in indices_class_3:
-                    se_id = idx + 1
-                    if se_id in excluded_se_ids:
-                        continue
-                    se = id2side_e.get(idx)
-                    if se:
-                        side_effects_class_3.append({
-                            'se_name': se,
-                            'rank': round(float(new_rangsum[idx]), 2)
-                        })
-                if side_effects_class_3:   # добавляем препарат только если есть неисключённые эффекты
-                    drugs_class_3.append({
-                        'drug_index': j,
-                        'side_effects': side_effects_class_3
-                    })
-            
-            # Находим все побочные эффекты с 0.5 <= value < 1.0 для class 2
-            indices_class_2 = np.where((new_rangsum >= 0.5) & (new_rangsum < 1.0))[0]
-            if len(indices_class_2) > 0:
-                side_effects_class_2 = []
-                for idx in indices_class_2:
-                    se_id = idx + 1
-                    if se_id in excluded_se_ids:
-                        continue
-                    se = id2side_e.get(idx)
-                    if se:
-                        side_effects_class_2.append({
-                            'se_name': se,
-                            'rank': round(float(new_rangsum[idx]), 2)
-                        })
-                if side_effects_class_2:
-                    drugs_class_2.append({
-                        'drug_index': j,
-                        'side_effects': side_effects_class_2   # или оставить [], как в вашем коде
-                    })
+            # Класс 3 (incompatible)
+            drugs_class_3 = self._add_drug_if_has_effects(
+                drugs_class_3, drug_idx, new_rangsum, id2side_e,
+                excluded_se_ids, threshold_min=1.0, threshold_max=None
+            )
+            # Класс 2 (caution)
+            drugs_class_2 = self._add_drug_if_has_effects(
+                drugs_class_2, drug_idx, new_rangsum, id2side_e,
+                excluded_se_ids, threshold_min=0.5, threshold_max=1.0
+            )
 
-        drug_array2 = [{
-            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
-            'class': 2,
-            'side_effects': item['side_effects']
-        } for item in drugs_class_2]
+        return drugs_class_2, drugs_class_3
+    
+    def _add_drug_if_has_effects(self, drug_list, drug_idx, rangsum_vec,
+                                 id2side_e, excluded_se_ids,
+                                 threshold_min, threshold_max):
+        """Вспомогательная функция для добавления препарата в список."""
+        if threshold_max is None:
+            mask = rangsum_vec >= threshold_min
+        else:
+            mask = (rangsum_vec >= threshold_min) & (rangsum_vec < threshold_max)
 
-        drug_array3 = [{
-            'name': Drug.objects.get(id=item['drug_index']+1).drug_name,
-            'class': 3,
-            'side_effects': item['side_effects']
-        } for item in drugs_class_3]
+        indices = np.where(mask)[0]
+        if len(indices) == 0:
+            return drug_list
 
-        context['combinations'] = [
-            {
-                "compatibility": 'caution', 
-                "drugs": [{
-                    "name": d['name'],
-                    "side_effects": d['side_effects']
-                } for d in drug_array2]
-            },
-            {
-                "compatibility": 'incompatible', 
-                "drugs": [{
-                    "name": d['name'],
-                    "side_effects": d['side_effects']
-                } for d in drug_array3]
-            },
-        ]
-
-
-        context['drugs'] = [Drug.objects.get(id=i).drug_name
-                            for i in unique_n_drug]
-        
-
-        # Если комбинация несовместима, нужны рекомендации
-        if context["compatibility_fortran"] == "incompatible":
-            context['rep_recommendations'] = self._analyze_max_drug_contribution(context['side_effects'][2]['effects'],
-                                                                                rangs, unique_n_drug, rangsum, side_e2id)
-
-        # Расчёт препаратов по отдельности
-        context["SEFromDrug"] = []
-        for drug in [Drug.objects.get(id=i) for i in unique_n_drug]:
-            # Получаем все связи DrugSideEffect для данного лекарства
-            drug_side_effects = DrugSideEffect.objects.filter(drug=drug).select_related('side_effect')
-
-            effects_data = []
-            for dse in drug_side_effects:
-                # Пропускаем эффекты, привязанные к противоположному полу
-                if dse.side_effect.id in excluded_se_ids:
-                    continue
-                effects_data.append({
-                    'se_name': dse.side_effect.se_name,
-                    'rank': dse.rang_base  # или другой нужный ранг в зависимости от rank_name
+        side_effects = []
+        for idx in indices:
+            se_id = idx + 1
+            if se_id in excluded_se_ids:
+                continue
+            se_name = id2side_e.get(idx)
+            if se_name:
+                side_effects.append({
+                    'se_name': se_name,
+                    'rank': round(float(rangsum_vec[idx]), 2)
                 })
 
-            context["SEFromDrug"].append(
-                {
-                    'd_name': drug.drug_name,
-                    'effects': effects_data
-                }
-            )
-        return context
+        if side_effects:
+            drug_list.append({
+                'drug_index': drug_idx,
+                'side_effects': side_effects
+            })
+        return drug_list
+    
+    def _prepare_combination_context(self, drugs_class_2, drugs_class_3):
+        """Преобразует списки препаратов в формат контекста."""
+        # Собираем все индексы для одного запроса
+        all_indices = set()
+        for drug in drugs_class_2 + drugs_class_3:
+            all_indices.add(drug['drug_index'] + 1)  # переводим в ID
 
+        drug_names = self._get_drug_names_bulk(list(all_indices))
+
+        def build_array(class_drugs, class_num):
+            return [
+                {
+                    'name': drug_names[d['drug_index'] + 1],
+                    'class': class_num,
+                    'side_effects': d['side_effects']
+                }
+                for d in class_drugs
+            ]
+
+        drug_array2 = build_array(drugs_class_2, 2)
+        drug_array3 = build_array(drugs_class_3, 3)
+
+        return {
+            'combinations': [
+                {
+                    "compatibility": 'caution',
+                    "drugs": [{"name": d['name'], "side_effects": d['side_effects']}
+                              for d in drug_array2]
+                },
+                {
+                    "compatibility": 'incompatible',
+                    "drugs": [{"name": d['name'], "side_effects": d['side_effects']}
+                              for d in drug_array3]
+                },
+            ]
+        }
+    
+    def _get_drug_names_bulk(self, drug_ids):
+        """Возвращает словарь {drug_id: drug_name} для заданных ID."""
+        if not drug_ids:
+            return {}
+        drugs = Drug.objects.filter(id__in=drug_ids).only('id', 'drug_name')
+        return {drug.id: drug.drug_name for drug in drugs}
+    
+    def _get_se_from_drugs(self, unique_n_drug, excluded_se_ids, rank_name):
+        """
+        Возвращает список словарей с побочными эффектами для каждого выбранного препарата.
+        """
+        from collections import defaultdict
+
+        if not unique_n_drug:
+            return []
+
+        # Загружаем все связи для выбранных препаратов одним запросом
+        drug_side_effects = DrugSideEffect.objects.filter(drug_id__in=unique_n_drug) \
+            .select_related('side_effect') \
+            .only('drug_id', 'side_effect_id', rank_name)
+
+        # Группируем по drug_id
+        effects_by_drug = defaultdict(list)
+        for dse in drug_side_effects:
+            if dse.side_effect.id in excluded_se_ids:
+                continue
+            effects_by_drug[dse.drug_id].append({
+                'se_name': dse.side_effect.se_name,
+                'rank': getattr(dse, rank_name)
+            })
+
+        # Преобразуем в список в порядке original unique_n_drug
+        result = []
+        for drug_id in unique_n_drug:
+            effects = effects_by_drug.get(drug_id, [])
+            # Сортируем по убыванию ранга
+            # effects.sort(key=lambda x: x['rank'], reverse=True)
+            result.append({
+                'd_name': Drug.objects.get(id=drug_id).drug_name,
+                'effects': effects
+            })
+        return result
 
     def _analyze_max_drug_contribution(self, incompatible_side_e, rangs_matrix, drug_ids, rangsum, side_e2id):
         """

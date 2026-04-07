@@ -177,31 +177,43 @@ class ExcelLoader(Loader):
         return False
 
     def _load_drugs(self):
-        """Загрузка ЛС."""
+        """Загрузка ЛС — только существующие препараты."""
         df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
-
+        count = 0
+        not_found_drugs = []  # собираем проблемные названия
+        
         try:
             logger.info('Загрузка ЛС началась')
-            # Получаем или создаем нозологию "общая группа"
-            nosology, nosology_created = Nosology.objects.get_or_create(
-                name='общая нозология'
-            )
+            nosology, _ = Nosology.objects.get_or_create(name='общая нозология')
 
             for drug in df.iloc[:, 1].to_list():
                 drug_name = drug.strip().casefold()
                 
-                # Создаем препарат только если его нет
-                drug_obj, drug_created = Drug.objects.get_or_create(
-                    drug_name=drug_name
+                try:
+                    # 🔍 Только поиск, без создания
+                    drug_obj = Drug.objects.get(drug_name=drug_name)
+                        
+                except Drug.DoesNotExist:
+                    # ❌ Препарат не найден — логируем и собираем в список
+                    not_found_drugs.append(drug_name)
+                    logger.warning(f'Препарат не найден в БД: "{drug_name}"')
+                    continue  # пропускаем и идём дальше
+                    
+            # После цикла — финальная проверка
+            if not_found_drugs:
+                unique_not_found = list(set(not_found_drugs))
+                error_msg = (
+                    f'Не найдено препаратов в БД: {len(unique_not_found)} шт. '
+                    f'Примеры: {unique_not_found[:10]}'  # показываем первые 10
                 )
+                logger.error(error_msg)
+                raise ValueError(error_msg)  # или CustomError, если есть
                 
-                # Для ForeignKey используем присваивание, а не add()
-                if drug_created:
-                    drug_obj.nosology = nosology
-                    drug_obj.save()
-                
-            logger.info(f'Загружено ЛС: {Drug.objects.count()}')
+            logger.info(f'Загружено ЛС: {count}, всего в БД: {Drug.objects.count()}')
+            
         except Exception as error:
+            if isinstance(error, ValueError):
+                raise  # переподнимаем нашу ошибку как есть
             raise Exception(f'Проблема с загрузкой ЛС: {error}')
 
     def _load_side_effects(self):
@@ -261,33 +273,53 @@ class ExcelLoader(Loader):
 
         df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
 
-        df = df.iloc[1:, 2:]
-        df = df.reset_index(drop=True)
-        df = df.fillna(0)
+        df = df.iloc[0:, 1:].reset_index(drop=True).fillna(0)
 
-        drugs = list(Drug.objects.order_by('id'))
-        effects = list(SideEffect.objects.order_by('id'))
+        # Функция для нормализации названий
+        def normalize_name(name):
+            return str(name).lower().strip()
+
+        # Определяем названия в зависимости от транспонирования
+        if self.transpose:
+            drug_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
+            effect_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
+        else:
+            drug_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
+            effect_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
+
+        df = df.iloc[1:, 1:].reset_index(drop=True).fillna(0)
+        
+        # Создаем словари для быстрого поиска объектов по названиям
+        drugs_dict = {drug.drug_name: drug for drug in Drug.objects.order_by('id')}
+        effects_dict = {effect.se_name: effect for effect in SideEffect.objects.order_by('id')}
 
         # Транспонирование если нужно
         if self.transpose:
             logger.info("Выполняется транспонирование матрицы рангов")
             df = df.T
             df = df.reset_index(drop=True)
-            logger.debug(f"Новая размерность после транспонирования: {df.shape}")
 
-        logger.debug(f'Число ЛС = {len(drugs)}')
-        logger.debug(f'Число ПД = {len(effects)}')
-        logger.debug(f'Число рангов = {df.shape}')
-
-        assert df.shape == (len(drugs), len(effects)), (
-            "Размерность рангов не совпадает!")
+        assert df.shape == (len(drug_names), len(effect_names)), (
+            f"Размерность рангов {df.shape} не совпадает с размерностью заголовков ({len(drug_names)} x {len(effect_names)})!")
 
         bulk = []
-
         total_count = 0
-        for i, drug in enumerate(drugs):
+        skipped_drugs = []
+        skipped_effects = set()
+        
+        for i, drug_name in enumerate(drug_names):
+            drug = drugs_dict.get(drug_name)
+            if not drug:
+                skipped_drugs.append(drug_name)
+                continue
+                    
             count = 0
-            for j, effect in enumerate(effects):
+            for j, effect_name in enumerate(effect_names):
+                effect = effects_dict.get(effect_name)
+                if not effect:
+                    skipped_effects.add(effect_name)
+                    continue
+                    
                 bulk.append(
                     DrugSideEffect(
                         drug=drug,
@@ -298,11 +330,18 @@ class ExcelLoader(Loader):
                 count += 1
 
             total_count += count
-            logger.info(f"Для {drug} загружено {count} побочных эффектов")
 
-        DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
+        if skipped_drugs:
+            logger.warning(f"Пропущено препаратов: {len(skipped_drugs)}")
+        if skipped_effects:
+            logger.warning(f"Пропущено побочных эффектов: {len(skipped_effects)}")
 
-        logger.info(f'Загружено всего рангов для {len(drugs)} препаратов: {total_count}') 
+        if bulk:
+            DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
+            logger.info(f'Загружено рангов: {total_count}. '
+                        f'Должно {len(list(drugs_dict.keys()))*len(list(effects_dict.keys()))}')
+        else:
+            logger.warning("Нет данных для загрузки")
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""
