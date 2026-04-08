@@ -357,21 +357,15 @@ class ExcelLoader(Loader):
         errors = []
         
         if missing_drugs:
-            unique_missing = sorted(set(missing_drugs))
-            examples = unique_missing[:10]
-            suffix = f"... и ещё {len(unique_missing) - 10}" if len(unique_missing) > 10 else ""
             errors.append(
-                f"Не найдено в БД препаратов ({len(unique_missing)}): "
-                f"{', '.join(f'«{d}»' for d in examples)}{suffix}"
+                f"Не найдено в БД препаратов ({len(missing_drugs)}): "
+                f"{', '.join(f'«{d}»' for d in missing_drugs)}"
             )
         
         if missing_effects:
-            unique_missing = sorted(missing_effects)
-            examples = unique_missing[:10]
-            suffix = f"... и ещё {len(unique_missing) - 10}" if len(unique_missing) > 10 else ""
             errors.append(
-                f"Не найдено в БД побочных эффектов ({len(unique_missing)}): "
-                f"{', '.join(f'«{e}»' for e in examples)}{suffix}"
+                f"Не найдено в БД побочных эффектов ({len(missing_effects)}): "
+                f"{', '.join(f'«{e}»' for e in missing_effects)}"
             )
 
         # Проверка: загрузили ли всё, что должны были?
