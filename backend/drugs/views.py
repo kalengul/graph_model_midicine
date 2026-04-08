@@ -465,7 +465,7 @@ class ExcelLoadView(APIView):
     NOT_FILE = 'Эксель-файл не обнаружен'
     INCORRECT_FILE = 'Неверный excel-файл'
     SUCCESSFUL_IMPORT = 'Данные в БД импортированы успешно'
-    IMPORT_ERROR = 'Импорт данные. Ошибка при обработке файл'
+    IMPORT_ERROR = 'Импорт данных. Ошибка при обработке файла'
 
     @bearer_token_required
     def get(self, request, *args, **kwargs):
@@ -524,15 +524,19 @@ class ExcelLoadView(APIView):
                     file.write(excel_file.read())
                 excel_path = os.path.abspath(excel_path)
                 loader = ExcelLoader(import_path=excel_path, transpose=transpose)
-                if loader._check_excel_file():
-                    # logger.info('Очистка БД начинается')
-                    # DBManipulator().clean_db()
-                    # logger.info('БД очистилось')
+                validation_errors = loader._check_excel_file()
+
+                if not validation_errors:
                     loader.load_to_db()
                 else:
-                    raise IncorrectFile((f'В {os.path.basename(excel_path)}'
-                                         ' некорректные листы, таблицы или '
-                                         'неуникальные названия ЛС и ПД'))
+                    # Формируем понятное сообщение: первая ошибка как заголовок, остальные списком
+                    main_error = validation_errors[0]
+                    additional_info = "\n - ".join(validation_errors[1:]) if len(validation_errors) > 1 else ""
+                    full_message = f"Ошибка в файле '{os.path.basename(excel_path)}':\n - {main_error}"
+                    if additional_info:
+                        full_message += f"\n - {additional_info}"
+                    
+                    raise IncorrectFile(full_message)
             except IncorrectFile as error:
                 logger.error(f'Ошибка при импорте Excel: {str(error)}')
                 return CustomResponse(
@@ -596,8 +600,8 @@ class BannedPairLoadView(APIView):
     """Вью для работы с запрещёнными парами ЛС."""
 
     INCORRECT_FILE = 'Неверный excel-файл'
-    IMPORT_ERROR = 'Импорт запрещённых пар ЛС. Ошибка при обработке файл'
-    SUCCESSFUL_IMPORT = 'Запрещённый пары ЛС импортированы в БД успешно'
+    IMPORT_ERROR = 'Импорт запрещённых пар ЛС. Ошибка при обработке файла'
+    SUCCESSFUL_IMPORT = 'Запрещённые пары ЛС импортированы в БД успешно'
 
     # @bearer_token_required
     def post(self, request, *args, **kwargs):

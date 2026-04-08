@@ -4,7 +4,6 @@ import os
 import logging
 from abc import ABC, abstractmethod
 from datetime import datetime
-
 import pandas as pd
 
 from django.conf import settings
@@ -17,6 +16,7 @@ from ..models import (Nosology,
                       )
 
 from ..utils.universal_cleaner import universal_cleaner
+from drugs.utils.custom_exception import IncorrectFile
 
 logger = logging.getLogger('drugs')
 
@@ -39,15 +39,26 @@ class Loader(ABC):
     def load_to_db(self):
         """Загрузка в БД всех данных."""
         
-        # Очищаем старые связи связанные с побочными эффектами
-        universal_cleaner(table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender'],
-                          model_classes = [DrugSideEffect, SideEffectsGender]
-                          ).clear_table()
+        # Очищаем старые связи
+        universal_cleaner(
+            table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender'],
+            model_classes=[DrugSideEffect, SideEffectsGender]
+        ).clear_table()
         logger.info('Таблицы: DrugSideEffect, SideEffectsGender очищены')
 
-        self._load_drugs()
-        self._load_side_effects()
-        self._load_ranks()
+        try:
+            # Каждый метод сам отвечает за валидацию и ошибки
+            self._load_drugs()
+            self._load_side_effects()
+            self._load_ranks()
+            
+        except IncorrectFile as e:
+            # Перехватываем, чтобы записать в лог общий статус, и пробрасываем дальше
+            logger.error(f"Загрузка прервана: {e}")
+            raise
+        except Exception as e:
+            logger.exception(f"Непредвиденная ошибка при загрузке: {e}")
+            raise
 
     @abstractmethod
     def _export_drugs(self):
@@ -116,104 +127,115 @@ class ExcelLoader(Loader):
                 '.xlsx', f'_{self.date_in_name}.xlsx')
 
     def _check_excel_file(self):
-        """Проверка корректности excel-файла."""
-        excel_file = pd.ExcelFile(self.import_path)
+        """Проверка корректности excel-файла (регистронезависимо).
+        
+        Returns:
+            list: Список строк с описанием ошибок. Пустой список = файл валиден.
+        """
+        errors = []
+        
+        try:
+            excel_file = pd.ExcelFile(self.import_path)
+        except Exception as e:
+            return [f"Не удалось открыть файл: {e}"]
 
-        def check_sheets():
-            """Проверка листов."""
-            return all([
-                self.DRUGS_SHEET in excel_file.sheet_names,
-                self.SIDE_EFFECTS_SHEET in excel_file.sheet_names,
-                self.RANKS_SHEET in excel_file.sheet_names
-            ])
+        # --- 1. Проверка листов ---
+        required_sheets = [self.DRUGS_SHEET, self.SIDE_EFFECTS_SHEET, self.RANKS_SHEET]
+        missing_sheets = [s for s in required_sheets if s not in excel_file.sheet_names]
+        if missing_sheets:
+            errors.append(f"Отсутствуют листы: {', '.join(missing_sheets)}")
+            logger.error(f"Ошибки валидации: {'; '.join(errors)}")
+            return errors
 
-        def check_tables():
-            """Проверка таблиц."""
-            colunms = []
-            for _, col in pd.read_excel(self.import_path,
-                                        sheet_name=None).items():
-                colunms.extend(col.columns)
-            return all(elem in colunms for elem in [
-                self.NUMBER_COLUMN,
-                self.DRUG_COLUMN,
-                self.EFFECT_COLUMN,
-                self.RANK_COLUMN
-            ])
+        # --- 2. Проверка колонок ---
+        try:
+            sheets_data = pd.read_excel(self.import_path, sheet_name=None)
+            all_columns = [col for df in sheets_data.values() for col in df.columns]
+            required_cols = [self.NUMBER_COLUMN, self.DRUG_COLUMN, self.EFFECT_COLUMN, self.RANK_COLUMN]
+            missing_cols = [c for c in required_cols if c not in all_columns]
+            if missing_cols:
+                errors.append(f"Отсутствуют колонки: {', '.join(missing_cols)}")
+                logger.error(f"Ошибки валидации: {'; '.join(errors)}")
+                return errors
+        except Exception as e:
+            errors.append(f"Ошибка чтения таблиц: {e}")
+            logger.error(f"Ошибки валидации: {'; '.join(errors)}")
+            return errors
 
-        def check_drug_unique():
-            """Проверка уникальности названий ЛС."""
-            df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
-            lv = df[self.DRUG_COLUMN].is_unique
-            logger.debug(f'Проверка уникальности названий ЛС. lv = {lv}')
-            return lv
+        # Загружаем данные листов один раз
+        df_drugs = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
+        df_effects = pd.read_excel(self.import_path, sheet_name=self.SIDE_EFFECTS_SHEET)
 
-        def check_side_effect_unique():
-            """Проверка уникальности названий ПД."""
-            df = pd.read_excel(self.import_path,
-                               sheet_name=self.SIDE_EFFECTS_SHEET)
-            lv = df[self.EFFECT_COLUMN].is_unique
-            logger.debug(f'Проверка уникальности названий ПД. lv = {lv}')
-            return lv
+        # Нормализуем: удаляем NaN, приводим к строке, убираем пробелы, приводим к нижнему регистру
+        drugs_clean = df_drugs[self.DRUG_COLUMN].dropna().astype(str).str.strip().str.lower()
+        effects_ru_clean = df_effects[self.EFFECT_COLUMN].dropna().astype(str).str.strip().str.lower()
+        effects_en_clean = df_effects[self.EFFECT_COLUMN_EN].dropna().astype(str).str.strip().str.lower()
 
-        def check_side_effect_unique_en():
-            """Проверка уникальности названий ПД на англ."""
-            df = pd.read_excel(self.import_path,
-                               sheet_name=self.SIDE_EFFECTS_SHEET)
-            lv = df[self.EFFECT_COLUMN_EN].is_unique
-            logger.debug(f'Проверка уникальности названий ПД на англ. lv = {lv}')
-            return lv
+        # Вспомогательная функция для форматирования сообщений
+        def format_dupes(dupes, prefix):
+            if not dupes:
+                return None
+            return f"{prefix}: {', '.join(map(str, dupes))}"
 
-        if check_sheets():
-            logger.debug('Все нужные листы в наличии')
-            if check_tables():
-                logger.debug('Все нужные таблицы в наличии')
-                return all([
-                    check_drug_unique(),
-                    check_side_effect_unique(),
-                    check_side_effect_unique_en(),
-                ])
-            else:
-                return False
-        return False
+        # --- 3. Проверка дубликатов ВНУТРИ файла ---
+        if err := format_dupes(drugs_clean[drugs_clean.duplicated(keep=False)].unique(), "Дублируются ЛС в файле"):
+            errors.append(err)
+        if err := format_dupes(effects_ru_clean[effects_ru_clean.duplicated(keep=False)].unique(), "Дублируются ПД (рус) в файле"):
+            errors.append(err)
+        if err := format_dupes(effects_en_clean[effects_en_clean.duplicated(keep=False)].unique(), "Дублируются ПД (англ) в файле"):
+            errors.append(err)
+
+        if errors:
+            logger.error(f"Ошибки валидации (структура файла): {'; '.join(errors)}")
+            return errors  # Прерываем, если файл сам по себе некорректен
+
+        # --- Итог ---
+        if errors:
+            logger.error(f"Ошибки валидации (данные в БД): {'; '.join(errors)}")
+        else:
+            logger.info(f"✅ Файл {self.import_path} успешно прошел все проверки")
+            
+        return errors
 
     def _load_drugs(self):
         """Загрузка ЛС — только существующие препараты."""
         df = pd.read_excel(self.import_path, sheet_name=self.DRUGS_SHEET)
-        count = 0
-        not_found_drugs = []  # собираем проблемные названия
+        # Используем set, чтобы сразу хранить только уникальные значения
+        not_found_drugs = set()
         
-        try:
-            logger.info('Загрузка ЛС началась')
+        logger.info('Загрузка ЛС началась')
 
-            for drug in df.iloc[:, 1].to_list():
-                drug_name = drug.strip().casefold()
-                
-                try:
-                    # 🔍 Только поиск, без создания
-                    drug_obj = Drug.objects.get(drug_name=drug_name)
-                        
-                except Drug.DoesNotExist:
-                    # ❌ Препарат не найден — логируем и собираем в список
-                    not_found_drugs.append(drug_name)
-                    logger.warning(f'Препарат не найден в БД: "{drug_name}"')
-                    continue  # пропускаем и идём дальше
-                    
-            # После цикла — финальная проверка
-            if not_found_drugs:
-                unique_not_found = list(set(not_found_drugs))
-                error_msg = (
-                    f'Не найдено препаратов в БД: {len(unique_not_found)} шт. '
-                    f'Примеры: {unique_not_found}'
-                )
-                logger.error(error_msg)
-                raise ValueError(error_msg)  # или CustomError, если есть
-                
-            logger.info(f'Загружено ЛС: {count}, всего в БД: {Drug.objects.count()}')
+        # Оптимизация: загружаем все существующие имена один раз, 
+        # чтобы не делать запрос к БД в цикле (N+1 проблема)
+        existing_drugs = set(Drug.objects.all().values_list('drug_name', flat=True))
+
+        for drug in df.iloc[:, 1].dropna().to_list():
+            drug_name = str(drug).strip().casefold()
             
-        except Exception as error:
-            if isinstance(error, ValueError):
-                raise  # переподнимаем нашу ошибку как есть
-            raise Exception(f'Проблема с загрузкой ЛС: {error}')
+            if drug_name not in existing_drugs:
+                not_found_drugs.add(drug_name)
+                logger.debug(f'Препарат не найден в БД: "{drug_name}"')
+        
+        # Формируем отчет
+        if not_found_drugs:
+            count = len(not_found_drugs)
+            
+            # 1. Полная информация — только в лог (для админа/разработчика)
+            logger.error(
+                f"Не найдено {count} препаратов.\n"
+                f"Полный список отсутствующих ЛС: {not_found_drugs}"
+            )
+            
+            # 2. Краткая информация — в исключение
+            error_msg = (
+                f"В файле обнаружены неизвестные препараты ({count} шт.).\n"
+                f"Примеры: {', '.join(f'«{d}»' for d in not_found_drugs)}.\n"
+            )
+            
+            # Используем конкретный тип ошибки, который вы определили ранее
+            raise IncorrectFile(error_msg)
+                
+        logger.info(f'Проверка ЛС завершена успешно. Найдено в файле: {len(df)}, в БД: {Drug.objects.count()}')
 
     def _load_side_effects(self):
         """Загрузка ПД с обновлением существующих и обработкой пола."""
@@ -268,13 +290,12 @@ class ExcelLoader(Loader):
             raise Exception(f'Проблема с загрузкой ПД: {error}')
 
     def _load_ranks(self, transpose=False):
-        """Загрузка рангов."""
+        """Загрузка рангов — строгая валидация, без пропусков."""
 
         df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
-
         df = df.iloc[0:, 1:].reset_index(drop=True).fillna(0)
 
-        # Функция для нормализации названий
+        # Функция нормализации
         def normalize_name(name):
             return str(name).lower().strip()
 
@@ -286,37 +307,42 @@ class ExcelLoader(Loader):
             drug_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
             effect_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
 
+        # Убираем пустые значения из списков (если есть)
+        drug_names = [n for n in drug_names if n and n != 'nan']
+        effect_names = [n for n in effect_names if n and n != 'nan']
+
         df = df.iloc[1:, 1:].reset_index(drop=True).fillna(0)
         
-        # Создаем словари для быстрого поиска объектов по названиям
-        drugs_dict = {drug.drug_name: drug for drug in Drug.objects.order_by('id')}
-        effects_dict = {effect.se_name: effect for effect in SideEffect.objects.order_by('id')}
+        # Создаем словари для быстрого поиска
+        drugs_dict = {drug.drug_name: drug for drug in Drug.objects.all()}
+        effects_dict = {effect.se_name: effect for effect in SideEffect.objects.all()}
 
         # Транспонирование если нужно
         if self.transpose:
             logger.info("Выполняется транспонирование матрицы рангов")
-            df = df.T
-            df = df.reset_index(drop=True)
+            df = df.T.reset_index(drop=True)
 
+        # Проверка размерности
         assert df.shape == (len(drug_names), len(effect_names)), (
-            f"Размерность рангов {df.shape} не совпадает с размерностью заголовков ({len(drug_names)} x {len(effect_names)})!")
+            f"Размерность данных {df.shape} не совпадает с заголовками "
+            f"({len(drug_names)} препаратов × {len(effect_names)} эффектов)"
+        )
 
+        # === Сбор ошибок ===
+        missing_drugs = []
+        missing_effects = set()
         bulk = []
-        total_count = 0
-        skipped_drugs = []
-        skipped_effects = set()
         
         for i, drug_name in enumerate(drug_names):
             drug = drugs_dict.get(drug_name)
             if not drug:
-                skipped_drugs.append(drug_name)
-                continue
-                    
-            count = 0
+                missing_drugs.append(drug_name)
+                continue  # продолжаем сбор, чтобы найти ВСЕ проблемы
+                
             for j, effect_name in enumerate(effect_names):
                 effect = effects_dict.get(effect_name)
                 if not effect:
-                    skipped_effects.add(effect_name)
+                    missing_effects.add(effect_name)
                     continue
                     
                 bulk.append(
@@ -326,21 +352,52 @@ class ExcelLoader(Loader):
                         rang_base=df.iloc[i, j]
                     )
                 )
-                count += 1
 
-            total_count += count
+        # === Валидация результатов ===
+        errors = []
+        
+        if missing_drugs:
+            errors.append(
+                f"Не найдено в БД препаратов ({len(missing_drugs)}): "
+                f"{', '.join(f'«{d}»' for d in missing_drugs)}"
+            )
+        
+        if missing_effects:
+            errors.append(
+                f"Не найдено в БД побочных эффектов ({len(missing_effects)}): "
+                f"{', '.join(f'«{e}»' for e in missing_effects)}"
+            )
 
-        if skipped_drugs:
-            logger.warning(f"Пропущено препаратов: {len(skipped_drugs)}")
-        if skipped_effects:
-            logger.warning(f"Пропущено побочных эффектов: {len(skipped_effects)}")
+        # Проверка: загрузили ли всё, что должны были?
+        expected_count = len(drug_names) * len(effect_names)
+        actual_count = len(bulk)
+        
+        if actual_count != expected_count:
+            errors.append(
+                f"Загружено связей: {actual_count}, ожидалось: {expected_count}. "
+                f"Потеряно {expected_count - actual_count} записей — проверьте данные"
+            )
 
+        # Если есть ошибки — выбрасываем исключение
+        if errors:
+            full_msg = (
+                f"Ошибка валидации рангов в файле '{os.path.basename(self.import_path)}':\n"
+                + "\n - ".join(errors)
+            )
+            logger.error(full_msg)
+            raise IncorrectFile(full_msg)
+
+        # === Загрузка ===
         if bulk:
             DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
-            logger.info(f'Загружено рангов: {total_count}. '
-                        f'Должно {len(list(drugs_dict.keys()))*len(list(effects_dict.keys()))}')
+            logger.info(
+                f'✅ Загружено рангов: {len(bulk)} '
+                f'({len(drug_names)} препаратов × {len(effect_names)} эффектов)'
+            )
         else:
-            logger.warning("Нет данных для загрузки")
+            logger.warning("⚠️ Нет данных для загрузки рангов")
+
+        return len(bulk), expected_count
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""
