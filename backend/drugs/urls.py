@@ -8,7 +8,8 @@ from .views import (
     ModifiedExcelLoadView,
     BannedPairLoadView,
     DrugDataLoadView,
-    TradeNamesLoadView)
+    TradeNamesLoadView,
+    DrugTradeSearchView)
 
 
 urlpatterns = [
@@ -47,4 +48,8 @@ urlpatterns = [
      path('trade_name_load/',
           TradeNamesLoadView.as_view(),
           name='import_trade_names'),
+
+     path('search-drugs/', 
+          DrugTradeSearchView.as_view(),
+          name='search_drugs'),
 ]
