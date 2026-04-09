@@ -789,8 +789,48 @@ class DrugDataLoadView(APIView):
             raise
 
     
-class TradeNamesLoadView(APIView):
+class TradeNameView(APIView):
     """View для загрузки торговых названий."""
+
+    def get(self, request):
+        """Метод для запросов GET."""
+        drug_id = request.query_params.get('drug_id')
+
+        if not drug_id:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message="Параметр drug_id обязателен",
+                http_status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            drug = Drug.objects.get(pk=drug_id)
+            trade_names = drug.trade_names.all() # type: ignore
+            
+            data = {
+                "drug_id": drug.id,
+                "drug_name": drug.drug_name,
+                "trade_names": [ tn.name for tn in trade_names ]
+            }
+            
+            return CustomResponse(
+                data=data,
+                status=status.HTTP_200_OK,
+                message="Торговые названия получены",
+                http_status=status.HTTP_200_OK)
+        
+        except Drug.DoesNotExist:
+            return CustomResponse(
+                status=status.HTTP_404_NOT_FOUND,
+                message="Лекарственное средство не найдено",
+                http_status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception:
+            traceback.print_exc()
+            return CustomResponse(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=SERVER_ERROR,
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     
     def post(self, request):
         """
