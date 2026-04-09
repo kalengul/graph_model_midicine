@@ -238,6 +238,13 @@ export const ComputationForm = (props: IComputationFormProps) =>{
         }
     }
 
+    const NosologyColorHandler = (nosology_id: string) =>{
+        if (nosology_id == null) return "1"
+        if (parseInt(nosology_id, 10) > 20) return "1"
+        
+        return nosology_id
+    }
+
     return(
         <>
             <div className='mt-4 flex'>
@@ -265,7 +272,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                         
                                         <div className='flex ai-start mb-2'>
                                             <button type="button" className="btn-close me-2" aria-label="Close" onClick={(e) => deleteDrugHandler(e, drug.id)}></button>
-                                            <span className={`dg-block dg-${drug.nosology_id}`}> {drug.drug_name} </span>
+                                            <span className={`dg-block dg-${NosologyColorHandler(drug.nosology_id)}`}> {drug.drug_name} </span>
                                         </div>
                                     ))
                                 }

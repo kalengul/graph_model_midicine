@@ -1,5 +1,6 @@
 @import "./css/flex.scss";
 @import "./css/btn.scss";
+@import "./css/nosologyGroup.scss";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -80,22 +81,6 @@ p.h7{
 .dg-block{
   padding: 2.5%;
   border-radius: 6px;
-}
-
-
-.dg-1{ /*Общая группа*/
-  color: #fff !important;
-  background-color: #6c757d !important;
-}
-
-.dg-2{ /*ХСН*/
-  color: #fff !important;
-  background-color: #316dac !important;
-}
-
-.dg-3{ /*Грипп*/
-  color: #fff !important;
-  background-color: #31ac47 !important;
 }
 
 input[type="color"]{
