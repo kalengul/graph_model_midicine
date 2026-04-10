@@ -85,17 +85,26 @@ class ExcelLoader(Loader):
     EXCEL_PATH = os.path.join(settings.TXT_DB_PATH,
                               'Список побочных эффектов edit_2.xlsx')
     EXPORT_PATH = os.path.join(settings.TXT_DB_PATH, 'TOSH_table.xlsx')
+
+    # Листы
     RANKS_SHEET = 'Common'
     SIDE_EFFECTS_SHEET = 'Side_e'
     DRUGS_SHEET = 'Drugs'
     DRUG_SIDE_EFFECT = 'ЛС/ПЭ'
+    EXPORT_DATE_SHEET = 'Export Date'
+    
+    # Колонки(общие)
     NUMBER_COLUMN = '№'
+    # Колонки (препараты)
     DRUG_COLUMN = 'ЛС'
+    # Колонки (побочные эффекты)
     EFFECT_COLUMN = 'эффект'
     EFFECT_COLUMN_EN = 'эффект_en'
     RANK_COLUMN = 'ранг'
-    EXPORT_DATE_SHEET = 'Export Date'
     GENDER_COLUMN = 'пол'
+    LIFE_THREATENING_COLUMN = 'жизнеугрожающий'
+
+    # Доступный выбор
     GENDER_CHOICES = ['man', 'woman']
 
     def __init__(self, import_path=None, export_path=None, transpose=False):
@@ -254,6 +263,7 @@ class ExcelLoader(Loader):
                 side_effect_en = row.get(self.EFFECT_COLUMN_EN, '')
                 weight = row.get(self.RANK_COLUMN, 0.0)
                 gender_value = row[self.GENDER_COLUMN]
+                is_life_threatening = row.get(self.LIFE_THREATENING_COLUMN, '+')
                 
                 if not side_effect or not str(side_effect).strip():
                     logger.warning(f"Пропущена запись с пустым названием ПД")
@@ -264,7 +274,8 @@ class ExcelLoader(Loader):
                     se_name=side_effect.strip().lower(),
                     defaults={
                         'se_name_en': side_effect_en.strip().lower() if side_effect_en else '',
-                        'weight': weight if weight is not None else 0.0
+                        'weight': weight if weight is not None else 0.0,
+                        'is_life_threatening': is_life_threatening.strip() == '+'
                     }
                 )
                 

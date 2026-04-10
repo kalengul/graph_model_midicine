@@ -109,6 +109,9 @@ class SideEffect(models.Model):
                                     MinValueValidator(0.0),
                                     MaxValueValidator(1.0)
                                ])
+    is_life_threatening = models.BooleanField(default=True,
+                                              verbose_name='Жизнеугрожающий'
+                                              )
 
     def __str__(self):
         """Строковое представление."""
