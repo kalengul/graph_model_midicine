@@ -242,12 +242,14 @@ class CalculationAPI(APIView):
         
         # Выбор калькулятора
         if normalization_calculate:
-            calculator = FortranCalculatorNormalization()
+            calculator = FortranCalculatorNormalization(
+                canceling_groups=self.CANCELING_EFFECTS_GROUPS,
+                cuttoff_not_life_threats_side_e = True
+                )
             context = calculator.calculate(
                 rank_name=IDX_2_RANK_NAME[0],
                 n_drug=drugs,
-                canceling_groups=self.CANCELING_EFFECTS_GROUPS,
-                gender=gender,
+                gender=gender
             )
         else:
             calculator = FortranCalculator()
