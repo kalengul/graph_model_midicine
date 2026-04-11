@@ -327,7 +327,7 @@ class FortranCalculatorNormalization(BaseCalculator):
             side_e2id = {v: k for k, v in id2side_e.items()}
             context['rep_recommendations'] = self._analyze_max_drug_contribution(
                 context['side_effects'][2]['effects'],
-                self._get_all_ranks(rank_name),
+                rangs_matrix,
                 n_drug,
                 rangsum,
                 side_e2id
@@ -400,12 +400,11 @@ class FortranCalculatorNormalization(BaseCalculator):
         rangsum = np.sum(rang1, axis=0)
         return rangs_matrix, rang1, rangsum
     
-    def _get_all_ranks(self, rank_name):
-        """Возвращает список всех рангов (для использования в _analyze_max_drug_contribution)."""
-        return list(DrugSideEffect.objects.order_by('drug_id', 'side_effect_id')
-                    .values_list(rank_name, flat=True))
+    # def _get_all_ranks(self, rank_name):
+    #     """Возвращает список всех рангов (для использования в _analyze_max_drug_contribution)."""
+    #     return list(DrugSideEffect.objects.order_by('drug_id', 'side_effect_id')
+    #                 .values_list(rank_name, flat=True))
     
-
     def _classify_and_build_side_effects(self, rangsum, id2side_e):
         """Классифицирует общую комбинацию и строит список побочных эффектов по классам."""
         ram = np.max(rangsum)
@@ -668,9 +667,12 @@ class FortranCalculatorNormalization(BaseCalculator):
         all_drug_ids = set(drug_ids) | set(alt_names.keys())
         
         for drug_id in all_drug_ids:
-            start_idx = (drug_id - 1) * n_side_effect
-            end_idx = start_idx + n_side_effect
-            drug_rank_rows[drug_id] = rangs_matrix[start_idx:end_idx].copy() if isinstance(rangs_matrix, np.ndarray) else np.array(rangs_matrix[start_idx:end_idx])
+            # Проверка, что drug_id не выходит за пределы размерности матрицы
+            if drug_id < 1 or drug_id > rangs_matrix.shape[0]:
+                logger.warning(f"ID препарата {drug_id} вне допустимого диапазона [1, {rangs_matrix.shape[0]}], пропускаем")
+                continue
+            # Берём строку из двумерной матрицы (0-индексация)
+            drug_rank_rows[drug_id] = rangs_matrix[drug_id - 1, :].copy()
 
         # 5. Преобразование списка эффектов
         effects_to_check = incompatible_side_e
