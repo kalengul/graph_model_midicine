@@ -306,7 +306,7 @@ class FortranCalculatorNormalization(BaseCalculator):
             rangsum = self._cap_non_life_threatening(rangsum)
 
         # Классификация и побочные эффекты
-        context = self._classify_and_build_side_effects(rangsum, id2side_e, excluded_se_ids)
+        context = self._classify_and_build_side_effects(rangsum, id2side_e)
         context['rank_iteractions'] = round(float(np.max(rangsum)), 2)
 
         # Исключённые препараты по группам
@@ -314,8 +314,7 @@ class FortranCalculatorNormalization(BaseCalculator):
 
         # Анализ потенциальных ЛС
         drugs_class_2, drugs_class_3 = self._analyze_potential_drugs(
-            rangs_matrix, rangsum, n_drug, excluded_drug_ids,
-             excluded_se_ids, id2side_e
+            rangs_matrix, rangsum, n_drug, excluded_drug_ids, id2side_e
         )
         context.update(self._prepare_combination_context(drugs_class_2, drugs_class_3))
 
@@ -407,7 +406,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                     .values_list(rank_name, flat=True))
     
 
-    def _classify_and_build_side_effects(self, rangsum, id2side_e, excluded_se_ids):
+    def _classify_and_build_side_effects(self, rangsum, id2side_e):
         """Классифицирует общую комбинацию и строит список побочных эффектов по классам."""
         ram = np.max(rangsum)
         if ram >= 1.0:
@@ -475,12 +474,20 @@ class FortranCalculatorNormalization(BaseCalculator):
         return {drug_id - 1 for drug_id in excluded}
     
     def _analyze_potential_drugs(self, rangs_matrix, rangsum, unique_n_drug,
-                                 excluded_drug_ids,
-                                 excluded_se_ids, id2side_e):
+                                        excluded_drug_ids, id2side_e):
         """
         Анализирует потенциальные ЛС, возвращает списки для классов 2 и 3.
         """
+
+        # Подготовка id препаратов
         unique_n_drug_0 = {idx - 1 for idx in unique_n_drug}
+
+        # Подготовка списка id допустимых побочных эффектов
+        allowed_se_indices = np.array(list(id2side_e.keys()))
+
+        # Преобразование словаря имён эффектов в список для быстрого доступа
+        side_names_list = [id2side_e.get(i) for i in range(self.n_side_effect)]
+
         drugs_class_2 = []
         drugs_class_3 = []
 
@@ -497,57 +504,22 @@ class FortranCalculatorNormalization(BaseCalculator):
             if self.cuttoff_not_life_threats_side_e:
                 new_rangsum = self._cap_non_life_threatening(new_rangsum)
 
-            # Класс 3
-            drug_data = self._build_drug_if_has_effects(
-                drug_idx, new_rangsum, id2side_e, excluded_se_ids,
-                1.0, None, include_side_e=True
-            )
-            if drug_data:
-                drugs_class_3.append(drug_data)
+            max_val = np.max(new_rangsum[allowed_se_indices])
 
-            # Класс 2
-            drug_data = self._build_drug_if_has_effects(
-                drug_idx, new_rangsum, id2side_e, excluded_se_ids,
-                0.5, 1.0, include_side_e=False
-            )
-            if drug_data:
-                drugs_class_2.append(drug_data)
+            if max_val >= 1.0:
+                # Фильтр: сначала по рангу, потом по allowed_se_indices
+                all_indices = np.where(new_rangsum >= 1.0)[0]
+                indices = np.intersect1d(all_indices, allowed_se_indices)
+
+                side_effects = [
+                    {'se_name': side_names_list[idx], 'rank': round(float(new_rangsum[idx]), 2)}
+                    for idx in indices
+                ]
+                drugs_class_3.append({'drug_index': drug_idx, 'side_effects': side_effects})
+            elif max_val >= 0.5:
+                drugs_class_2.append({'drug_index': drug_idx, 'side_effects': []})
 
         return drugs_class_2, drugs_class_3
-    
-    def _build_drug_if_has_effects(self, drug_idx, rangsum_vec,
-                                id2side_e, excluded_se_ids,
-                                threshold_min, threshold_max,
-                                include_side_e=True):
-        """Возвращает словарь препарата, если есть подходящие эффекты, иначе None."""
-        if threshold_max is None:
-            mask = rangsum_vec >= threshold_min
-        else:
-            mask = (rangsum_vec >= threshold_min) & (rangsum_vec < threshold_max)
-
-        indices = np.where(mask)[0]
-        if len(indices) == 0:
-            return None
-
-        side_effects = []
-        if include_side_e:
-            for idx in indices:
-                se_id = idx + 1
-                if se_id in excluded_se_ids:
-                    continue
-                se_name = id2side_e.get(idx)
-                if se_name:
-                    side_effects.append({
-                        'se_name': se_name,
-                        'rank': round(float(rangsum_vec[idx]), 2)
-                    })
-            if not side_effects:
-                return None   # все эффекты оказались исключены
-
-        return {
-            'drug_index': drug_idx,
-            'side_effects': side_effects
-        }
     
     def _prepare_combination_context(self, drugs_class_2, drugs_class_3):
         """Преобразует списки препаратов в формат контекста."""
