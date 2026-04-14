@@ -861,7 +861,7 @@ class TradeNameView(APIView):
                     http_status=status.HTTP_400_BAD_REQUEST,
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Не предоставлены данные для загрузки. '
-                           'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
+                        'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
                 )
             
             # Если данные в формате {"trade_names": {...}}
@@ -883,9 +883,8 @@ class TradeNameView(APIView):
                 TradeName.objects.all().delete()
                 logger.info("Существующие торговые названия очищены")
             
-            # Создаем загрузчик и загружаем данные
-            loader = DrugDataLoader(clear_before_load=False)  # clear=False, т.к. очистили выше
-            stats = loader.load_trade_names(trade_names_data)
+            # Загружаем торговые названия
+            stats = self._load_trade_names_only(trade_names_data)
             
             if stats['errors']:
                 return CustomResponse(
@@ -909,7 +908,65 @@ class TradeNameView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
             )
-    
+
+    def _load_trade_names_only(self, trade_names_data):
+        """
+        Загрузка только торговых названий к существующим МНН.
+        Новые МНН НЕ создаются.
+        
+        Формат данных:
+        {
+            "гликлазид": ["глидиаб", "глидиаб мв", ...],
+            "ибупрофен": ["бруфен ср", "бумидол®", ...]
+        }
+        """
+        stats = {
+            'trade_names_processed': 0,
+            'trade_names_created': 0,
+            'trade_names_updated': 0,
+            'errors': []
+        }
+        
+        for drug_name, trade_names in trade_names_data.items():
+            drug_name = drug_name.strip().casefold()
+            
+            # Ищем существующий препарат
+            try:
+                drug = Drug.objects.get(drug_name__iexact=drug_name)
+            except Drug.DoesNotExist:
+                continue
+            
+            if not isinstance(trade_names, list):
+                stats['errors'].append({
+                    'drug_name': drug_name,
+                    'error': 'Данные не являются списком'
+                })
+                continue
+            
+            # Загружаем торговые названия
+            for trade_name in trade_names:
+                trade_name = trade_name.strip()
+                if not trade_name:
+                    continue
+                
+                trade_obj, created = TradeName.objects.get_or_create(
+                    name=trade_name,
+                    defaults={'drug': drug}
+                )
+                
+                if created:
+                    stats['trade_names_created'] += 1
+                else:
+                    if trade_obj.drug != drug:
+                        trade_obj.drug = drug
+                        trade_obj.save()
+                        stats['trade_names_updated'] += 1
+            
+            stats['trade_names_processed'] += 1
+        
+        logger.info(f"Загрузка торговых названий завершена: {stats}")
+        return stats
+
     def _get_data_from_request(self, request):
         """Извлекает данные из request (JSON или файл)."""
         # Проверяем, есть ли файл
@@ -933,7 +990,6 @@ class TradeNameView(APIView):
                 return None
         
         return None
-
 
 class DrugTradeSearchView(APIView):
     """
