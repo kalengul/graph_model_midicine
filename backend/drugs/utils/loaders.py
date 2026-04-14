@@ -8,8 +8,7 @@ import pandas as pd
 
 from django.conf import settings
 
-from ..models import (Nosology,
-                      Drug,
+from ..models import (Drug,
                       DrugSideEffect,
                       SideEffect,
                       SideEffectsGender
@@ -46,19 +45,24 @@ class Loader(ABC):
         ).clear_table()
         logger.info('Таблицы: DrugSideEffect, SideEffectsGender очищены')
 
+        stats = {
+            'drugs': None,
+            'side_effects': None,
+            'ranks': None,
+        }
+        
         try:
-            # Каждый метод сам отвечает за валидацию и ошибки
-            self._load_drugs()
-            self._load_side_effects()
-            self._load_ranks()
-            
+            stats['drugs'] = self._load_drugs()
+            stats['side_effects'] = self._load_side_effects()
+            stats['ranks'] = self._load_ranks()
         except IncorrectFile as e:
-            # Перехватываем, чтобы записать в лог общий статус, и пробрасываем дальше
             logger.error(f"Загрузка прервана: {e}")
             raise
         except Exception as e:
-            logger.exception(f"Непредвиденная ошибка при загрузке: {e}")
+            logger.exception(f"Непредвиденная ошибка: {e}")
             raise
+        
+        return stats
 
     @abstractmethod
     def _export_drugs(self):
@@ -187,11 +191,14 @@ class ExcelLoader(Loader):
             return f"{prefix}: {', '.join(map(str, dupes))}"
 
         # --- 3. Проверка дубликатов ВНУТРИ файла ---
-        if err := format_dupes(drugs_clean[drugs_clean.duplicated(keep=False)].unique(), "Дублируются ЛС в файле"):
+        if err := format_dupes(drugs_clean[drugs_clean.duplicated(keep=False)].unique(),
+                               "Дублируются ЛС в файле"):
             errors.append(err)
-        if err := format_dupes(effects_ru_clean[effects_ru_clean.duplicated(keep=False)].unique(), "Дублируются ПД (рус) в файле"):
+        if err := format_dupes(effects_ru_clean[effects_ru_clean.duplicated(keep=False)].unique(),
+                               "Дублируются ПД (рус) в файле"):
             errors.append(err)
-        if err := format_dupes(effects_en_clean[effects_en_clean.duplicated(keep=False)].unique(), "Дублируются ПД (англ) в файле"):
+        if err := format_dupes(effects_en_clean[effects_en_clean.duplicated(keep=False)].unique(),
+                               "Дублируются ПД (англ) в файле"):
             errors.append(err)
 
         if errors:
@@ -300,96 +307,67 @@ class ExcelLoader(Loader):
             logger.error(f'Ошибка при загрузке ПД: {error}')
             raise Exception(f'Проблема с загрузкой ПД: {error}')
 
-    def _load_ranks(self, transpose=False):
-        """Загрузка рангов — строгая валидация, без пропусков."""
-
-        df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
-        df = df.iloc[0:, 1:].reset_index(drop=True).fillna(0)
+    def _load_ranks(self) -> dict:
+        """
+        Загружает ранги для ВСЕХ комбинаций препаратов и побочных эффектов из БД.
+        Требует, чтобы в Excel были указаны ранги для каждой возможной пары.
+        """
 
         # Функция нормализации
         def normalize_name(name):
             return str(name).lower().strip()
 
-        # Определяем названия в зависимости от транспонирования
+        # 1. Все объекты из БД
+        all_drugs = list(Drug.objects.all())
+        all_effects = list(SideEffect.objects.all())
+        total_pairs = len(all_drugs) * len(all_effects)
+
+        # Множества нормализованных имён из БД
+        drug_names_db = {normalize_name(drug.drug_name) for drug in all_drugs}
+        effect_names_db = {normalize_name(effect.se_name) for effect in all_effects}
+
+        # 2. Читаем Excel и строим словарь рангов
+        df = pd.read_excel(self.import_path, sheet_name=self.RANKS_SHEET)
+        df = df.iloc[0:, 1:].reset_index(drop=True).fillna(0)
+
+        # Чтение заголовков (в зависимости от транспонирования)
         if self.transpose:
-            drug_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
-            effect_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
+            drug_names_from_file = [normalize_name(name) for name in df.iloc[0, 1:].values]
+            effect_names_from_file = [normalize_name(name) for name in df.iloc[1:, 0].values]
         else:
-            drug_names = [normalize_name(name) for name in df.iloc[1:, 0].values]
-            effect_names = [normalize_name(name) for name in df.iloc[0, 1:].values]
+            drug_names_from_file = [normalize_name(name) for name in df.iloc[1:, 0].values]
+            effect_names_from_file = [normalize_name(name) for name in df.iloc[0, 1:].values]
 
-        # Убираем пустые значения из списков (если есть)
-        drug_names = [n for n in drug_names if n and n != 'nan']
-        effect_names = [n for n in effect_names if n and n != 'nan']
+        # Очистка
+        drug_names_from_file = [n for n in drug_names_from_file if n and n != 'nan']
+        effect_names_from_file = [n for n in effect_names_from_file if n and n != 'nan']
 
-        df = df.iloc[1:, 1:].reset_index(drop=True).fillna(0)
-        
-        # Создаем словари для быстрого поиска
-        drugs_dict = {drug.drug_name: drug for drug in Drug.objects.all()}
-        effects_dict = {effect.se_name: effect for effect in SideEffect.objects.all()}
-
-        # Транспонирование если нужно
+        # Данные рангов (матрица)
+        data_df = df.iloc[1:, 1:].reset_index(drop=True).fillna(0)
         if self.transpose:
-            logger.info("Выполняется транспонирование матрицы рангов")
-            df = df.T.reset_index(drop=True)
+            data_df = data_df.T.reset_index(drop=True)
 
-        # Проверка размерности
-        assert df.shape == (len(drug_names), len(effect_names)), (
-            f"Размерность данных {df.shape} не совпадает с заголовками "
-            f"({len(drug_names)} препаратов × {len(effect_names)} эффектов)"
-        )
+        # Проверка размерности (количество имён должно совпадать с размером матрицы)
+        assert data_df.shape == (len(drug_names_from_file), len(effect_names_from_file)), \
+            "Размерность данных не совпадает с заголовками"
 
-        # === Сбор ошибок ===
-        missing_drugs = []
-        missing_effects = set()
-        bulk = []
-        
-        for i, drug_name in enumerate(drug_names):
-            drug = drugs_dict.get(drug_name)
-            if not drug:
-                missing_drugs.append(drug_name)
-                continue  # продолжаем сбор, чтобы найти ВСЕ проблемы
-                
-            for j, effect_name in enumerate(effect_names):
-                effect = effects_dict.get(effect_name)
-                if not effect:
-                    missing_effects.add(effect_name)
-                    continue
-                    
-                bulk.append(
-                    DrugSideEffect(
-                        drug=drug,
-                        side_effect=effect,
-                        rang_base=df.iloc[i, j]
-                    )
-                )
+        # Словарь: (drug_name, effect_name) -> rank
+        rank_dict = {}
+        for i, drug_name in enumerate(drug_names_from_file):
+            for j, effect_name in enumerate(effect_names_from_file):
+                rank_dict[(drug_name, effect_name)] = data_df.iloc[i, j]
 
-        # === Валидация результатов ===
+        # 3. Генерируем все ожидаемые пары из БД
+        missing_drugs = drug_names_db - set(drug_names_from_file)
+        missing_effects = effect_names_db - set(effect_names_from_file)
+
+        # 4. Строгая валидация: никаких пропусков и лишних пар
         errors = []
-        
         if missing_drugs:
-            errors.append(
-                f"Не найдено в БД препаратов ({len(missing_drugs)}): "
-                f"{', '.join(f'«{d}»' for d in missing_drugs)}"
-            )
-        
+            errors.append(f"В файле отсутствуют препараты: {len(missing_drugs)} (пример: {list(missing_drugs)[:5]})")
         if missing_effects:
-            errors.append(
-                f"Не найдено в БД побочных эффектов ({len(missing_effects)}): "
-                f"{', '.join(f'«{e}»' for e in missing_effects)}"
-            )
+            errors.append(f" файле отсутствуют побочные эффекты: {len(missing_effects)} (пример: {list(missing_effects)[:5]})")
 
-        # Проверка: загрузили ли всё, что должны были?
-        expected_count = len(drug_names) * len(effect_names)
-        actual_count = len(bulk)
-        
-        if actual_count != expected_count:
-            errors.append(
-                f"Загружено связей: {actual_count}, ожидалось: {expected_count}. "
-                f"Потеряно {expected_count - actual_count} записей — проверьте данные"
-            )
-
-        # Если есть ошибки — выбрасываем исключение
         if errors:
             full_msg = (
                 f"Ошибка валидации рангов в файле '{os.path.basename(self.import_path)}':\n"
@@ -398,17 +376,30 @@ class ExcelLoader(Loader):
             logger.error(full_msg)
             raise IncorrectFile(full_msg)
 
-        # === Загрузка ===
-        if bulk:
-            DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
-            logger.info(
-                f'✅ Загружено рангов: {len(bulk)} '
-                f'({len(drug_names)} препаратов × {len(effect_names)} эффектов)'
-            )
-        else:
-            logger.warning("⚠️ Нет данных для загрузки рангов")
+        # 5. Формируем список для загрузки (все пары из БД, ранг из файла или 0, но при валидации все пары есть)
+        bulk = []
+        for drug in all_drugs:
+            drug_norm = drug.drug_name.lower().strip()
+            for effect in all_effects:
+                effect_norm = effect.se_name.lower().strip()
+                rank = rank_dict.get((drug_norm, effect_norm), 0)
+                bulk.append(DrugSideEffect(
+                    drug=drug,
+                    side_effect=effect,
+                    rang_base=rank
+                ))
 
-        return len(bulk), expected_count
+        # 6. Загрузка
+        DrugSideEffect.objects.bulk_create(bulk, batch_size=500)
+        logger.info(f"✅ Загружено рангов: {len(bulk)} (все возможные пары)")
+
+        # 7. Статистика (теперь pairs_found == total_pairs)
+        return {
+            'pairs_expected': total_pairs,
+            'pairs_loaded': len(bulk),
+            'drugs_in_db': len(all_drugs),
+            'effects_in_db': len(all_effects),
+        }
 
     def load_to_db(self):
         """Загрузка в БД всех данных."""

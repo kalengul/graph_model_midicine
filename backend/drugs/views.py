@@ -527,7 +527,15 @@ class ExcelLoadView(APIView):
                 validation_errors = loader._check_excel_file()
 
                 if not validation_errors:
-                    loader.load_to_db()
+                    stats = loader.load_to_db()
+                    
+                    logger.info('Импорт данных в БД закончился')
+                    return CustomResponse(
+                        status=status.HTTP_200_OK,
+                        message=stats,
+                        http_status=status.HTTP_200_OK
+                    )
+    
                 else:
                     # Формируем понятное сообщение: первая ошибка как заголовок, остальные списком
                     main_error = validation_errors[0]
@@ -551,15 +559,6 @@ class ExcelLoadView(APIView):
                     message=self.IMPORT_ERROR,
                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
                 )
-
-            logger.info('Импорт данных в БД закончился')
-
-            return CustomResponse(
-                status=status.HTTP_200_OK,
-                message=self.SUCCESSFUL_IMPORT,
-                http_status=status.HTTP_200_OK
-            )
-
         return CustomResponse(
             status=status.HTTP_400_BAD_REQUEST,
             message=self.INCORRECT_FILE,
