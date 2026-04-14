@@ -116,28 +116,24 @@ class DrugSerializer(serializers.ModelSerializer):
 
 class DrugListRetrieveSerializer(serializers.ModelSerializer):
     """
-    Сериализатор для вывода ЛС.
-
-    Вывода ЛС в формате:
-    {
-       "id": "...",
-       "drug_name": "...",
-       "dg_id": [1, 2, 3],
-       "nosology_id": "..."
-    }
+    Сериализатор для поиска ЛС с торговыми названиями.
     """
     dg_id = serializers.SerializerMethodField()
     nosology_id = serializers.IntegerField(source='nosology.id', read_only=True, allow_null=True)
-
+    trade_ids = serializers.SerializerMethodField()
+    
     class Meta:
-        """Настройка сериализатора."""
         model = Drug
-        fields = ['id', 'drug_name', 'dg_id', 'nosology_id']
+        fields = ['id', 'drug_name', 'dg_id', 'nosology_id', 'trade_ids']
     
     def get_dg_id(self, obj):
         """Получение списка ID групп ЛС."""
         return list(obj.drug_groups.values_list('id', flat=True))
-
+    
+    def get_trade_ids(self, obj):
+        """Получение списка ID торговых названий."""
+        return list(obj.trade_names.values_list('id', flat=True))
+    
 
 class SideEffectSerializer(serializers.ModelSerializer):
     """

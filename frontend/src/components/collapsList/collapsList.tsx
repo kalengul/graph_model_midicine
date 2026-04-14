@@ -59,12 +59,12 @@ const RenderItem = (type: ICollapsListProps['type'], item: any, index: number, v
             const drugItem = item as  IDrugCombinationWithSE;
             return (
                 <>
-                <div className={`flex jc-sb w-100 ps-3 pe-3 ${index===0 && "mt-3"}`} key={index}>
-                    <div className="w-50">
+                <div className={`drugs-combin-fortran-Container w-100 ps-3 pe-3 ${index===0 && "mt-3"}`} key={index}>
+                    <div className="drugs-list">
                         <span className='me-3'>{index + 1}.</span> 
                         <span>{drugItem.name}</span>
                     </div>
-                    <div className="w-50">
+                    <div className="drugsSE-list">
                         {drugItem.side_effects && drugItem.side_effects.length> 0 &&<>
                         <span>Есть риск появления побочных эффектов:</span>
                         <div >

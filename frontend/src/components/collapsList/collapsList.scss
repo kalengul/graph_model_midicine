@@ -1,0 +1,23 @@
+.drugs-list{
+    width: 50%;
+     @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.drugsSE-list{
+    width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+.drugs-combin-fortran-Container{
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}

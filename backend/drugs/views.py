@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
+from django.db.models import Q
 from django.http import FileResponse
 
 from .models import (Drug,
@@ -791,8 +792,48 @@ class DrugDataLoadView(APIView):
             raise
 
     
-class TradeNamesLoadView(APIView):
+class TradeNameView(APIView):
     """View для загрузки торговых названий."""
+
+    def get(self, request):
+        """Метод для запросов GET."""
+        drug_id = request.query_params.get('drug_id')
+
+        if not drug_id:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message="Параметр drug_id обязателен",
+                http_status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            drug = Drug.objects.get(pk=drug_id)
+            trade_names = drug.trade_names.all() # type: ignore
+            
+            data = {
+                "drug_id": drug.id,
+                "drug_name": drug.drug_name,
+                "trade_names": [ tn.name for tn in trade_names ]
+            }
+            
+            return CustomResponse(
+                data=data,
+                status=status.HTTP_200_OK,
+                message="Торговые названия получены",
+                http_status=status.HTTP_200_OK)
+        
+        except Drug.DoesNotExist:
+            return CustomResponse(
+                status=status.HTTP_404_NOT_FOUND,
+                message="Лекарственное средство не найдено",
+                http_status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception:
+            traceback.print_exc()
+            return CustomResponse(
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                message=SERVER_ERROR,
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
     
     def post(self, request):
         """
@@ -819,7 +860,7 @@ class TradeNamesLoadView(APIView):
                     http_status=status.HTTP_400_BAD_REQUEST,
                     status=status.HTTP_400_BAD_REQUEST,
                     message='Не предоставлены данные для загрузки. '
-                           'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
+                        'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
                 )
             
             # Если данные в формате {"trade_names": {...}}
@@ -841,9 +882,8 @@ class TradeNamesLoadView(APIView):
                 TradeName.objects.all().delete()
                 logger.info("Существующие торговые названия очищены")
             
-            # Создаем загрузчик и загружаем данные
-            loader = DrugDataLoader(clear_before_load=False)  # clear=False, т.к. очистили выше
-            stats = loader.load_trade_names(trade_names_data)
+            # Загружаем торговые названия
+            stats = self._load_trade_names_only(trade_names_data)
             
             if stats['errors']:
                 return CustomResponse(
@@ -867,7 +907,65 @@ class TradeNamesLoadView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
             )
-    
+
+    def _load_trade_names_only(self, trade_names_data):
+        """
+        Загрузка только торговых названий к существующим МНН.
+        Новые МНН НЕ создаются.
+        
+        Формат данных:
+        {
+            "гликлазид": ["глидиаб", "глидиаб мв", ...],
+            "ибупрофен": ["бруфен ср", "бумидол®", ...]
+        }
+        """
+        stats = {
+            'trade_names_processed': 0,
+            'trade_names_created': 0,
+            'trade_names_updated': 0,
+            'errors': []
+        }
+        
+        for drug_name, trade_names in trade_names_data.items():
+            drug_name = drug_name.strip().casefold()
+            
+            # Ищем существующий препарат
+            try:
+                drug = Drug.objects.get(drug_name__iexact=drug_name)
+            except Drug.DoesNotExist:
+                continue
+            
+            if not isinstance(trade_names, list):
+                stats['errors'].append({
+                    'drug_name': drug_name,
+                    'error': 'Данные не являются списком'
+                })
+                continue
+            
+            # Загружаем торговые названия
+            for trade_name in trade_names:
+                trade_name = trade_name.strip()
+                if not trade_name:
+                    continue
+                
+                trade_obj, created = TradeName.objects.get_or_create(
+                    name=trade_name,
+                    defaults={'drug': drug}
+                )
+                
+                if created:
+                    stats['trade_names_created'] += 1
+                else:
+                    if trade_obj.drug != drug:
+                        trade_obj.drug = drug
+                        trade_obj.save()
+                        stats['trade_names_updated'] += 1
+            
+            stats['trade_names_processed'] += 1
+        
+        logger.info(f"Загрузка торговых названий завершена: {stats}")
+        return stats
+
     def _get_data_from_request(self, request):
         """Извлекает данные из request (JSON или файл)."""
         # Проверяем, есть ли файл
@@ -891,3 +989,72 @@ class TradeNamesLoadView(APIView):
                 return None
         
         return None
+
+class DrugTradeSearchView(APIView):
+    """
+    Поиск лекарственных средств по МНН и торговым названиям.
+    """
+    
+    def get(self, request):
+        """
+        GET запрос для поиска ЛС.
+        
+        Query params:
+            q: строка поиска (обязательный)
+        """
+        query = request.query_params.get('q', '').strip()
+        
+        if not query:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Параметр "q" обязателен',
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        # Поиск МНН, у которых drug_name начинается с query
+        # ИЛИ у которых есть торговые названия, начинающиеся с query
+        drugs = Drug.objects.filter(
+            Q(drug_name__istartswith=query) |
+            Q(trade_names__name__istartswith=query)
+        ).distinct().prefetch_related('trade_names', 'drug_groups', 'nosology')
+        
+        # Формируем результат с фильтрацией торговых названий
+        results = []
+        for drug in drugs:
+            # Всегда фильтруем торговые названия по query
+            matching_trade_names = drug.trade_names.filter( # type: ignore
+                name__istartswith=query
+            )
+            
+            # Если нет подходящих торговых названий, но drug_name подходит - показываем пустой список
+            if not matching_trade_names.exists() and drug.drug_name.lower().startswith(query.lower()):
+                matching_trade_names = []  
+            
+            drug_data = {
+                "id": drug.id,
+                "drug_name": drug.drug_name,
+                "dg_id": list(drug.drug_groups.values_list('id', flat=True)),
+                "nosology_id": drug.nosology.id if drug.nosology else None,
+                "trade_names": [
+                    {"id": tn.id, "name": tn.name} 
+                    for tn in matching_trade_names
+                ]
+            }
+            results.append(drug_data)
+        
+        # Фильтруем результаты: убираем те, у которых нет ни подходящего drug_name, ни подходящих trade_names
+        results = [r for r in results if r['trade_names'] or r['drug_name'].lower().startswith(query.lower())]
+        
+        # Сортируем: сначала те, у кого drug_name начинается с query
+        results.sort(key=lambda x: not x['drug_name'].lower().startswith(query.lower()))
+        
+        return CustomResponse(
+            status=status.HTTP_200_OK,
+            message='Результаты поиска получены',
+            http_status=status.HTTP_200_OK,
+            data={
+                "query": query,
+                "count": len(results),
+                "results": results
+            }
+        )
