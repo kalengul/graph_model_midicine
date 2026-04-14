@@ -3,12 +3,18 @@
 }
 
 .checkBlock{
+    display: flex;
+     height: 100%;
+    flex-direction: column;
+    min-height: 0;
     width: 52%;
     
 }
 
 .checkBlock-list{
-    height: 50vh;
+    // height: 50vh;
+    height: 100%;
+    min-height: 0;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -27,11 +33,17 @@
 }
 
 .showBlock{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     width: 48%;
+    min-height: 0;
 }
 
 .showBlock-list{
-    height: 50vh;
+    height: 100%;
+    min-height: 0;
+    //height: 45vh;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -45,5 +57,52 @@
 }
 
 .size-s{
-    height: 30vh;
+    height: 100%;
+}
+
+.computationFormContainer{
+    height: 70vh;
+    min-height: 0;
+    @media (max-width: 768px) {
+        height: auto;
+        display: block;
+    }
+}
+
+.SuggestionsContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* занимает всё доступное место */
+    // height: 100%;
+    min-height: 0;
+}
+
+.SuggestionsContainer-data{
+    flex: 1; /* занимает всё доступное место */
+    min-height: 0;
+    // height: 100%;
+}
+
+/* Медкарта прижимается к низу */
+.medcardBlock{
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.computationFormContainer-data{
+    height: 100%;
+    min-height: 0
+}
+
+.computationFormBlock{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    @media (max-width: 768px) {
+        height: 70vh;
+        width: 100%;
+        margin-bottom: 1.5rem !important;
+    }
 }

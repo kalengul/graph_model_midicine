@@ -247,11 +247,11 @@ export const ComputationForm = (props: IComputationFormProps) =>{
 
     return(
         <>
-            <div className='mt-4 flex'>
+            <div className='mt-4 flex computationFormContainer'>
                 {/* Блок для ввода списка ЛС */}
-                <div className='w-50 me-4'>
+                <div className='me-4 computationFormBlock'>
                     <label className='form-label control-label lableCF'>Лекарственнные средства для расчета взаимодействия</label>
-                    <div className='flex'>
+                    <div className='flex computationFormContainer-data'>
                         <div className='checkBlock me-3'>
                             <input onChange = {serchSuggestionsDrugHandler} value={inputValueDrug} name="drug-search" className=" checkBlock-search form-control mb-0" type="text" placeholder='Поиск ...'></input>
                             <div className='checkBlock-list'>
@@ -282,7 +282,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                 </div>
 
                 {/* Блок для ввода персональной информации и загрузки файла с мед картой */}
-                <div className=' w-50'>
+                <div className='computationFormBlock'>
                     <label className='form-label control-label lableCF'>Персональная информация пациента</label>
                     {/* Пол пациента */}
                     <div className='flex mb-2 ai-center'>
@@ -304,12 +304,12 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                         <input className='form-control w-25' type="text" placeholder='Введите возраст' value={age === '' ? '' : age} onChange={ageChangeHandle}/>
                     </div>
                     {/* Противопоказания */}
-                    <div className='mb-2'>
+                    <div className='mb-2 SuggestionsContainer'>
                         <label className='form-label control-label'>Противопоказания:</label>
-                        <div className='flex' >
+                        <div className='flex fd-row SuggestionsContainer-data' >
                             <div className='checkBlock me-3'>
                                 <input onChange = {serchSuggestionsContraindHandler} value={inputValueContraind} name="drug-search" className=" checkBlock-search form-control mb-0" type="text" placeholder='Поиск ...'></input>
-                                <div className='checkBlock-list size-s'>
+                                <div className='checkBlock-list'>
                                     {suggestionsContraind && suggestionsContraind.map(cont=>(
                                         <div className='flex ai-start'>
                                             <input type="checkbox" checked={checkedContraindIds.includes(cont.cont_id.toString())} onChange={checkBoksContraindHandler} key={cont.cont_id} value={cont.cont_id} className='me-2'/>
@@ -321,7 +321,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                             </div> 
                             <div className='showBlock'>
                                 <label className='form-label control-label'>Противопоказания, выбранные для расчета:</label>
-                                <div className='showBlock-list size-s'>
+                                <div className='showBlock-list'>
                                     {
                                         showCkeckedContraind && showCkeckedContraind.map(cont=>(
                                             
@@ -336,7 +336,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                         </div>
                     </div>
                     {/* Загрузка медкарты */}
-                    <div>
+                    <div className='medcardBlock'>
                         <label className=' control-label'>Загрузить медицинскую карту:</label>
                         <input className="form-control" type="file" id="formFile" onChange={checkFileHandler}/>
                     </div>
@@ -344,7 +344,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
             
             </div>
 
-            <button className='btn send-btn' onClick={SendDataHandler}>Расчитать взаимодействие</button>
+            <button className='btn send-btn mt-3' onClick={SendDataHandler}>Расчитать взаимодействие</button>
         </>
     )
 }
