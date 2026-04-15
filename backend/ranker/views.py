@@ -9,7 +9,7 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
 
-from ranker.utils.fortran_calculator import FortranCalculator,FortranCalculatorNormalization
+from ranker.utils.fortran_calculator import FortranCalculatorSimple,FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
@@ -30,9 +30,6 @@ class CalculationAPI(APIView):
     # Константы для совместимости
     COMPATIBILITY_BANNED = 'banned'
     COMPATIBILITY_BANNED_CONTRAINDICATIONS = 'banned-contraindications'
-    
-    # Константы для отменяющих эффектов
-    CANCELING_EFFECTS_GROUPS = [[2, 3], [5, 14], [7, 13], [32, 33], [51, 52], [86, 87]]
 
     def post(self, request, normalization_calculate=True):
         """
@@ -240,24 +237,16 @@ class CalculationAPI(APIView):
         """
         start_time = time.time()
         
-        # Выбор калькулятора
-        if normalization_calculate:
-            calculator = FortranCalculatorNormalization(
-                canceling_groups=self.CANCELING_EFFECTS_GROUPS,
-                cuttoff_not_life_threats_side_e = True
-                )
-            context = calculator.calculate(
-                rank_name=IDX_2_RANK_NAME[0],
-                n_drug=drugs,
-                gender=gender
+        calculator = FortranCalculator(
+            normalize=normalization_calculate,
+            cuttoff_not_life_threats_side_e = True
             )
-        else:
-            calculator = FortranCalculator()
-            context = calculator.calculate(
-                rank_name=IDX_2_RANK_NAME[0],
-                n_drug=drugs,
-                gender=gender
-            )
+        
+        context = calculator.calculate(
+            rank_name=IDX_2_RANK_NAME[0],
+            n_drug=drugs,
+            gender=gender
+        )
 
         # Объединяем шаблон с результатами расчета
         # (композиция вместо обновления, чтобы не потерять поля)

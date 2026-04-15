@@ -15,7 +15,9 @@ logger = logging.getLogger('fortran')
 class BaseCalculator(ABC):
     """Абстрактный базовый класс для вычислителей рангов."""
 
+    # Константы для отменяющих эффектов
     _DEFAULT_RANK_NAME = 'rang_base'
+    CANCELING_EFFECTS_GROUPS = [[2, 3], [5, 14], [7, 13], [32, 33], [51, 52], [86, 87]]
 
     @classmethod
     def get_default_rank_name(cls):
@@ -31,7 +33,7 @@ class BaseCalculator(ABC):
         """Вычисление рангов."""
 
 
-class FortranCalculator(BaseCalculator):
+class FortranCalculatorSimple(BaseCalculator):
     """Вычислитель рангов для лекарств и побочных эффектов."""
 
     def __init__(self):
@@ -220,18 +222,22 @@ class FortranCalculator(BaseCalculator):
         return context
 
 
-class FortranCalculatorNormalization(BaseCalculator):
+class FortranCalculator(BaseCalculator):
     """Вычислитель рангов для лекарств и побочных эффектов."""
 
-    def __init__(self, canceling_groups = None,
+    def __init__(self, normalize = True,
                  cuttoff_not_life_threats_side_e = True):
         """Инициализатор."""
         self.n_drug = Drug.objects.count()
         self.n_side_effect = SideEffect.objects.count()
 
-        self.canceling_groups = self._validate_canceling_groups(canceling_groups)
-        self.cuttoff_not_life_threats_side_e = cuttoff_not_life_threats_side_e
+        # Нормализация
+        self.normalize = normalize
+        if normalize:
+            self.canceling_groups = self._validate_canceling_groups(self.CANCELING_EFFECTS_GROUPS)
 
+        # Отсечка жизненеугрожающих
+        self.cuttoff_not_life_threats_side_e = cuttoff_not_life_threats_side_e
         if  self.cuttoff_not_life_threats_side_e:
             self._life_threatening_map = {se.id: se.is_life_threatening
                                         for se in SideEffect.objects.all().only('id', 'is_life_threatening')
@@ -298,7 +304,7 @@ class FortranCalculatorNormalization(BaseCalculator):
         rangs_matrix, rang1, rangsum = self._build_rank_matrices(n_drug, rank_name)
 
         # Применение нормализации для противоположных побочных эффектов
-        if self.canceling_groups:
+        if self.normalize:
             rangsum = self._apply_canceling_normalization(rangsum)
 
         # Отсечка до 0,99 для жизненеугрожающих побочных эффектов
@@ -497,7 +503,7 @@ class FortranCalculatorNormalization(BaseCalculator):
 
             new_rangsum = rangsum + rangs_matrix[drug_idx]
 
-            if self.canceling_groups:
+            if self.normalize:
                 new_rangsum = self._apply_canceling_normalization(new_rangsum)
 
             if self.cuttoff_not_life_threats_side_e:
@@ -747,7 +753,7 @@ class FortranCalculatorNormalization(BaseCalculator):
                             new_total = rangsum - old_ranks + alt_ranks
 
                             # Нормализация для групп нивелирования
-                            if self.canceling_groups: 
+                            if self.normalize: 
                                 new_total = self._apply_canceling_normalization(new_total)
                             # Ограничение нежизнеугрожающих эффектов
                             if self.cuttoff_not_life_threats_side_e:
