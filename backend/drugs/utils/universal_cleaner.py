@@ -35,12 +35,25 @@ class PostgresCleaner(BaseCleaner):
             cursor.execute(f"TRUNCATE TABLE {', '.join(quoted_tables)} RESTART IDENTITY CASCADE;")
 
 
-def universal_cleaner(table_names, model_classes):
-    """Фабрика, возвращающая подходящий чистильщик для текущей БД."""
+def universal_cleaner(model_classes, table_names=None):
+    """Фабрика, возвращающая подходящий чистильщик для текущей БД.
+    
+    Args:
+        model_classes: список классов моделей Django (опционально)
+        table_names: список имен таблиц (опционально)
+    
+    Returns:
+        Экземпляр очистителя для соответствующей БД
+    """
+    if model_classes and not table_names:
+        table_names = [model._meta.db_table for model in model_classes]
+    elif not table_names:
+        raise ValueError("Необходимо передать model_classes или table_names")
+    
     engine = connection.settings_dict['ENGINE']
     if 'sqlite3' in engine:
-        return SQLiteCleaner(table_names, model_classes)
+        return SQLiteCleaner(table_names, model_classes or [])
     elif 'postgresql' in engine:
-        return PostgresCleaner(table_names, model_classes)
+        return PostgresCleaner(table_names, model_classes or [])
     else:
         raise NotImplementedError(f"Неизвестный движок БД: {engine}")
