@@ -281,8 +281,8 @@ class JSONBannedPairLoader(ABC):
                                 # logger.debug(f'Создана пара: {first} - {second}')
                             # else:
                                 # logger.debug(f'Пара уже существует в БД: {first} - {second}')
-                        else:
-                            logger.debug(f'Дубликат пары в файле: {first} - {second}, пропускаем')
+                        # else:
+                        #     logger.debug(f'Дубликат пары в файле: {first} - {second}, пропускаем')
                     else:
                         skipped_pairs += 1
                         if not drug1_obj:
@@ -290,9 +290,9 @@ class JSONBannedPairLoader(ABC):
                         if not drug2_obj:
                             not_found_drugs.add(f"'{raw_drug2}' (нормализовано: '{drug2}')")
                         
-            # Логируем отсутствующие препараты одной группой
-            if not_found_drugs:
-                logger.warning(f'Препараты не найдены в БД: {", ".join(not_found_drugs)}')
+            # # Логируем отсутствующие препараты одной группой
+            # if not_found_drugs:
+            #     logger.warning(f'Препараты не найдены в БД: {", ".join(not_found_drugs)}')
                 
             logger.info(f'Загрузка завершена. Создано пар: {created_count}, пропущено: {skipped_pairs}')
             

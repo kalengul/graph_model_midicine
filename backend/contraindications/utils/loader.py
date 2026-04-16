@@ -52,10 +52,10 @@ class LoadAndBuildDrugContraindications:
             
                 if created:
                     stats['created'] += 1
-                    logger.debug(f'Создано: {contra_name}')
+                    # logger.debug(f'Создано: {contra_name}')
                 else:
                     stats['existed'] += 1
-                    logger.debug(f'Существует: {contra_name}')
+                    # logger.debug(f'Существует: {contra_name}')
                     
             except Exception as e:
                 stats['errors'] += 1
@@ -73,7 +73,7 @@ class LoadAndBuildDrugContraindications:
 
         for item in data:
             drug_name = TextBuilder(item[self.NAME]).strip().text
-            logger.debug(f'drug_name = {drug_name}')
+            # logger.debug(f'drug_name = {drug_name}')
 
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
@@ -86,11 +86,11 @@ class LoadAndBuildDrugContraindications:
                 try:
                     contraindication = Contraindication.objects.get(
                         name__iexact=name)
-                    logger.debug(f'\tcont_name = {name} найдено')
+                    # logger.debug(f'\tcont_name = {name} найдено')
                 except Contraindication.DoesNotExist:
                     contraindication = Contraindication.objects.create(
                         name=name)
-                    logger.debug(f'\tcont_name = {name} добавлено')
+                    # logger.debug(f'\tcont_name = {name} добавлено')
                 drug.contraindications.add(contraindication)
 
     def download(self):

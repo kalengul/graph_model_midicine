@@ -49,7 +49,7 @@ class SQLiteCleaner(ContraindicationCleaner):
             )
 
 
-class CleanProcessor:
+class ContraindicationCleanProcessor:
     """Процессор очистки БД."""
 
     def get_cleaner(self):

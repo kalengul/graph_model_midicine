@@ -13,7 +13,7 @@ from contraindications.serializers import (ContraindicationListSerializer,
 from drugs.utils.custom_response import CustomResponse
 # from drugs.models import Drug
 # from contraindications.utils.adapters import ContraAdapter, DrugAdapter
-from contraindications.utils.cleaner import CleanProcessor
+from contraindications.utils.cleaner import ContraindicationCleanProcessor
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 
 
@@ -188,7 +188,7 @@ class LoadContraindicationView(APIView):
         data = json.load(loaded_file)
         try:
             # Очистка таблица противопоказаний
-            CleanProcessor().get_cleaner().clean()
+            ContraindicationCleanProcessor().get_cleaner().clean()
             # Непосредственно загрузка противопоказаний
             LoadAndBuildDrugContraindications().load(data)
             message = 'Противопоказания загружены успешно'
@@ -283,7 +283,7 @@ class ClearContraindication(APIView):
     def delete(self, request):
         """Очистка от всех противопоказаний."""
         try:
-            CleanProcessor().get_cleaner().clean()
+            ContraindicationCleanProcessor().get_cleaner().clean()
             message = "Таблица противопоказаний очищена успешно"
             logger.info(f'message = {message}')
             return CustomResponse(

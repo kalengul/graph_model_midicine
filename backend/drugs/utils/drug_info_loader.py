@@ -3,7 +3,7 @@ import logging
 from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugsAgeContraindications, TradeName
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
-from contraindications.utils.cleaner import CleanProcessor
+from contraindications.utils.cleaner import ContraindicationCleanProcessor
 from drugs.utils.cleaner import DrugCleanProcessor, BannedDrugPairCleanProcessor
 
 
@@ -30,8 +30,9 @@ class DrugDataLoader:
     def load_all(self, data):
         """Загрузка всех данных."""
         if self.clear_before_load:
+            logger.info('Очистка таблиц БД: Противопоказания; Запрещенные пары; Препараты')
             # Противопоказания
-            CleanProcessor().get_cleaner().clean()
+            ContraindicationCleanProcessor().get_cleaner().clean()
             BannedDrugPairCleanProcessor().get_cleaner().clear_table()
             DrugCleanProcessor().get_cleaner().clear_table()
 
@@ -39,15 +40,19 @@ class DrugDataLoader:
             self.loader_banned.clear_db()
 
         # Загрузка групп
+        logger.info(f'Загрузка групп...')
         self._load_groups_and_link_drugs(data)
 
         # Загрузка запрещенных пар
+        logger.info(f'Загрузка запрещенных пар...')
         self._load_banned(data)
 
         # Загрузка противопоказаний
+        logger.info(f'Загрузка противопоказаний...')
         self._load_contraindications(data)
 
         # Загрузка возрастных противопоказаний
+        logger.info(f'Загрузка возрастных противопоказаний...')
         self._load_age_contraindications(data)
 
         logger.info(f"Загрузка завершена: {self.stats}")
