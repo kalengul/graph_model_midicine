@@ -4,7 +4,7 @@ import traceback
 
 from django.core.management.base import BaseCommand
 
-from contraindications.utils.cleaner import CleanProcessor
+from contraindications.utils.cleaner import ContraindicationCleanProcessor
 
 
 class Command(BaseCommand):
@@ -15,7 +15,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         """Очистка противопоказания."""
         try:
-            CleanProcessor().get_cleaner().clean()
+            ContraindicationCleanProcessor().get_cleaner().clean()
             self.stdout.write(self.style.SUCCESS(
                 'Противопоказания удалины успешно!'))
         except Exception:
