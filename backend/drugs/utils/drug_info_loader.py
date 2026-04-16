@@ -70,12 +70,12 @@ class DrugDataLoader:
         self._load_age_contraindications(data)
 
         logger.info(f'Загрузка торговых наименований...')
-        self.load_trade_names(data)
+        self._load_trade_names(data)
 
         logger.info(f"Загрузка завершена: {self.stats}")
         return self.stats
     
-    def load_trade_names(self, data):
+    def _load_trade_names(self, data):
         """
         Загрузка торговых названий.
         
