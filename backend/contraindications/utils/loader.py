@@ -61,12 +61,12 @@ class LoadAndBuildDrugContraindications:
                 stats['errors'] += 1
                 logger.error(f'Ошибка при обработке "{contra_name}": {e}')
         
-        logger.info(f'Итог: создано {stats["created"]}, существовало {stats["existed"]}, ошибок {stats["errors"]}')
+        logger.info(f'Загрузка дополнительных противопоказаний завершена: '
+                    f'создано {stats["created"]}, существовало {stats["existed"]}, ошибок {stats["errors"]}')
         return stats
 
     def load(self, data=None):
         """Загрузка противопоказаний и связывание с ЛС."""
-        logger.debug(f'СУБД: {connection.vendor}')
         if not data:
             with open(self.PATH, 'r', encoding='utf-8') as f:
                 data = json.load(f)

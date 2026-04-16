@@ -835,160 +835,160 @@ class TradeNameView(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
-    def post(self, request):
-        """
-        Загрузка торговых названий.
+    # def post(self, request):
+    #     """
+    #     Загрузка торговых названий.
         
-        Ожидает JSON формата:
-        {
-            "гликлазид": ["глидиаб", "глидиаб мв", ...],
-            "ибупрофен": ["бруфен ср", ...]
-        }
+    #     Ожидает JSON формата:
+    #     {
+    #         "гликлазид": ["глидиаб", "глидиаб мв", ...],
+    #         "ибупрофен": ["бруфен ср", ...]
+    #     }
         
-        Параметры запроса (query params):
-        - clear: true/false - очищать ли существующие торговые названия перед загрузкой
-        """
-        try:
-            # Получаем параметр clear
-            clear_before_load = request.GET.get('clear', 'false').lower() == 'true'
+    #     Параметры запроса (query params):
+    #     - clear: true/false - очищать ли существующие торговые названия перед загрузкой
+    #     """
+    #     try:
+    #         # Получаем параметр clear
+    #         clear_before_load = request.GET.get('clear', 'false').lower() == 'true'
             
-            # Получаем данные
-            data = self._get_data_from_request(request)
+    #         # Получаем данные
+    #         data = self._get_data_from_request(request)
             
-            if not data:
-                return CustomResponse(
-                    http_status=status.HTTP_400_BAD_REQUEST,
-                    status=status.HTTP_400_BAD_REQUEST,
-                    message='Не предоставлены данные для загрузки. '
-                        'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
-                )
+    #         if not data:
+    #             return CustomResponse(
+    #                 http_status=status.HTTP_400_BAD_REQUEST,
+    #                 status=status.HTTP_400_BAD_REQUEST,
+    #                 message='Не предоставлены данные для загрузки. '
+    #                     'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
+    #             )
             
-            # Если данные в формате {"trade_names": {...}}
-            if 'trade_names' in data:
-                trade_names_data = data['trade_names']
-            else:
-                trade_names_data = data
+    #         # Если данные в формате {"trade_names": {...}}
+    #         if 'trade_names' in data:
+    #             trade_names_data = data['trade_names']
+    #         else:
+    #             trade_names_data = data
             
-            # Проверяем, что данные - это словарь
-            if not isinstance(trade_names_data, dict):
-                return CustomResponse(
-                    http_status=status.HTTP_400_BAD_REQUEST,
-                    status=status.HTTP_400_BAD_REQUEST,
-                    message='Данные должны быть объектом (dictionary) в формате {"МНН": ["торг1", ...]}'
-                )
+    #         # Проверяем, что данные - это словарь
+    #         if not isinstance(trade_names_data, dict):
+    #             return CustomResponse(
+    #                 http_status=status.HTTP_400_BAD_REQUEST,
+    #                 status=status.HTTP_400_BAD_REQUEST,
+    #                 message='Данные должны быть объектом (dictionary) в формате {"МНН": ["торг1", ...]}'
+    #             )
             
-            # Очищаем существующие торговые названия если нужно
-            if clear_before_load:
-                TradeName.objects.all().delete()
-                logger.info("Существующие торговые названия очищены")
+    #         # Очищаем существующие торговые названия если нужно
+    #         if clear_before_load:
+    #             TradeName.objects.all().delete()
+    #             logger.info("Существующие торговые названия очищены")
             
-            # Загружаем торговые названия
-            stats = self._load_trade_names_only(trade_names_data)
+    #         # Загружаем торговые названия
+    #         stats = self._load_trade_names_only(trade_names_data)
             
-            if stats['errors']:
-                return CustomResponse(
-                    http_status=status.HTTP_207_MULTI_STATUS,
-                    status=status.HTTP_207_MULTI_STATUS,
-                    message='Загрузка завершена с ошибками',
-                    data=stats
-                )
+    #         if stats['errors']:
+    #             return CustomResponse(
+    #                 http_status=status.HTTP_207_MULTI_STATUS,
+    #                 status=status.HTTP_207_MULTI_STATUS,
+    #                 message='Загрузка завершена с ошибками',
+    #                 data=stats
+    #             )
             
-            return CustomResponse(
-                http_status=status.HTTP_200_OK,
-                status=status.HTTP_200_OK,
-                message='Торговые названия успешно загружены',
-                data=stats
-            )
+    #         return CustomResponse(
+    #             http_status=status.HTTP_200_OK,
+    #             status=status.HTTP_200_OK,
+    #             message='Торговые названия успешно загружены',
+    #             data=stats
+    #         )
             
-        except Exception as e:
-            logger.error(f"Ошибка при загрузке торговых названий: {e}", exc_info=True)
-            return CustomResponse(
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
-            )
+    #     except Exception as e:
+    #         logger.error(f"Ошибка при загрузке торговых названий: {e}", exc_info=True)
+    #         return CustomResponse(
+    #             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+    #             message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
+    #         )
 
-    def _load_trade_names_only(self, trade_names_data):
-        """
-        Загрузка только торговых названий к существующим МНН.
-        Новые МНН НЕ создаются.
+    # def _load_trade_names_only(self, trade_names_data):
+    #     """
+    #     Загрузка только торговых названий к существующим МНН.
+    #     Новые МНН НЕ создаются.
         
-        Формат данных:
-        {
-            "гликлазид": ["глидиаб", "глидиаб мв", ...],
-            "ибупрофен": ["бруфен ср", "бумидол®", ...]
-        }
-        """
-        stats = {
-            'trade_names_processed': 0,
-            'trade_names_created': 0,
-            'trade_names_updated': 0,
-            'errors': []
-        }
+    #     Формат данных:
+    #     {
+    #         "гликлазид": ["глидиаб", "глидиаб мв", ...],
+    #         "ибупрофен": ["бруфен ср", "бумидол®", ...]
+    #     }
+    #     """
+    #     stats = {
+    #         'trade_names_processed': 0,
+    #         'trade_names_created': 0,
+    #         'trade_names_updated': 0,
+    #         'errors': []
+    #     }
         
-        for drug_name, trade_names in trade_names_data.items():
-            drug_name = drug_name.strip().casefold()
+    #     for drug_name, trade_names in trade_names_data.items():
+    #         drug_name = drug_name.strip().casefold()
             
-            # Ищем существующий препарат
-            try:
-                drug = Drug.objects.get(drug_name__iexact=drug_name)
-            except Drug.DoesNotExist:
-                continue
+    #         # Ищем существующий препарат
+    #         try:
+    #             drug = Drug.objects.get(drug_name__iexact=drug_name)
+    #         except Drug.DoesNotExist:
+    #             continue
             
-            if not isinstance(trade_names, list):
-                stats['errors'].append({
-                    'drug_name': drug_name,
-                    'error': 'Данные не являются списком'
-                })
-                continue
+    #         if not isinstance(trade_names, list):
+    #             stats['errors'].append({
+    #                 'drug_name': drug_name,
+    #                 'error': 'Данные не являются списком'
+    #             })
+    #             continue
             
-            # Загружаем торговые названия
-            for trade_name in trade_names:
-                trade_name = trade_name.strip()
-                if not trade_name:
-                    continue
+    #         # Загружаем торговые названия
+    #         for trade_name in trade_names:
+    #             trade_name = trade_name.strip()
+    #             if not trade_name:
+    #                 continue
                 
-                trade_obj, created = TradeName.objects.get_or_create(
-                    name=trade_name,
-                    defaults={'drug': drug}
-                )
+    #             trade_obj, created = TradeName.objects.get_or_create(
+    #                 name=trade_name,
+    #                 defaults={'drug': drug}
+    #             )
                 
-                if created:
-                    stats['trade_names_created'] += 1
-                else:
-                    if trade_obj.drug != drug:
-                        trade_obj.drug = drug
-                        trade_obj.save()
-                        stats['trade_names_updated'] += 1
+    #             if created:
+    #                 stats['trade_names_created'] += 1
+    #             else:
+    #                 if trade_obj.drug != drug:
+    #                     trade_obj.drug = drug
+    #                     trade_obj.save()
+    #                     stats['trade_names_updated'] += 1
             
-            stats['trade_names_processed'] += 1
+    #         stats['trade_names_processed'] += 1
         
-        logger.info(f"Загрузка торговых названий завершена: {stats}")
-        return stats
+    #     logger.info(f"Загрузка торговых названий завершена: {stats}")
+    #     return stats
 
-    def _get_data_from_request(self, request):
-        """Извлекает данные из request (JSON или файл)."""
-        # Проверяем, есть ли файл
-        if request.FILES.get('file'):
-            uploaded_file = request.FILES['file']
-            try:
-                # Пробуем прочитать как JSON
-                data = json.load(uploaded_file)
-                return data
-            except json.JSONDecodeError as e:
-                logger.error(f"Ошибка парсинга JSON файла: {e}")
-                return None
+    # def _get_data_from_request(self, request):
+    #     """Извлекает данные из request (JSON или файл)."""
+    #     # Проверяем, есть ли файл
+    #     if request.FILES.get('file'):
+    #         uploaded_file = request.FILES['file']
+    #         try:
+    #             # Пробуем прочитать как JSON
+    #             data = json.load(uploaded_file)
+    #             return data
+    #         except json.JSONDecodeError as e:
+    #             logger.error(f"Ошибка парсинга JSON файла: {e}")
+    #             return None
         
-        # Проверяем, есть ли JSON в теле запроса
-        if request.body:
-            try:
-                data = json.loads(request.body)
-                return data
-            except json.JSONDecodeError as e:
-                logger.error(f"Ошибка парсинга JSON тела запроса: {e}")
-                return None
+    #     # Проверяем, есть ли JSON в теле запроса
+    #     if request.body:
+    #         try:
+    #             data = json.loads(request.body)
+    #             return data
+    #         except json.JSONDecodeError as e:
+    #             logger.error(f"Ошибка парсинга JSON тела запроса: {e}")
+    #             return None
         
-        return None
+    #     return None
 
 class DrugTradeSearchView(APIView):
     """

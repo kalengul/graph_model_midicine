@@ -1,14 +1,20 @@
 import logging
 
-from ..models import Drug, DrugGroup, BannedDrugPair, Nosology, DrugsAgeContraindications, TradeName
+from ..models import (  BannedDrugPair,
+                        DrugSideEffect,
+                        Drug,
+                        SideEffect,
+                        DrugGroup,
+                        Nosology,
+                        DrugsAgeContraindications,
+                        SideEffectsGender,
+                        TradeName)
+from contraindications.models import Contraindication
 from .banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
-from contraindications.utils.cleaner import ContraindicationCleanProcessor
-from drugs.utils.cleaner import DrugCleanProcessor, BannedDrugPairCleanProcessor
-
+from drugs.utils.universal_cleaner import universal_cleaner
 
 logger = logging.getLogger(__name__)
-
 
 class DrugDataLoader:
     """Загрузчик данных о ЛС."""
@@ -23,74 +29,89 @@ class DrugDataLoader:
             'banned_pairs': 0,
             'contraindications': 0,
             'nosology': 0,
-            'tradenames': 0,
-            'age_contraindications': 0,
+            'trade_names_created': 0,
+            'trade_names_updated': 0,
+            'age_contraindications_created': 0,
+            'errors':[]
         }
 
     def load_all(self, data):
         """Загрузка всех данных."""
         if self.clear_before_load:
-            logger.info('Очистка таблиц БД: Противопоказания; Запрещенные пары; Препараты')
-            # Противопоказания
-            ContraindicationCleanProcessor().get_cleaner().clean()
-            BannedDrugPairCleanProcessor().get_cleaner().clear_table()
-            DrugCleanProcessor().get_cleaner().clear_table()
+            logger.info('Очистка таблиц БД: Противопоказания; Запрещенные пары; '
+                        'Побочные эффекты; Нозологии; Возрастные противопоказания; '
+                        'Группы препаратов; Торговые наименования; Препараты; '
+                        'Половая принадлежность побочного эффекта; '
+                        )
+            universal_cleaner(
+                model_classes=[ Drug,
+                                DrugGroup,
+                                DrugsAgeContraindications,
+                                DrugSideEffect,
+                                Contraindication,
+                                BannedDrugPair,
+                                SideEffect,
+                                Nosology,
+                                SideEffectsGender,
+                                TradeName
+                                ]
+            ).clear_table()
 
-            # Запрещенные пары
-            self.loader_banned.clear_db()
-
-        # Загрузка групп
         logger.info(f'Загрузка групп...')
         self._load_groups_and_link_drugs(data)
 
-        # Загрузка запрещенных пар
         logger.info(f'Загрузка запрещенных пар...')
         self._load_banned(data)
 
-        # Загрузка противопоказаний
         logger.info(f'Загрузка противопоказаний...')
         self._load_contraindications(data)
 
-        # Загрузка возрастных противопоказаний
         logger.info(f'Загрузка возрастных противопоказаний...')
         self._load_age_contraindications(data)
+
+        logger.info(f'Загрузка торговых наименований...')
+        self.load_trade_names(data)
 
         logger.info(f"Загрузка завершена: {self.stats}")
         return self.stats
     
-    def load_trade_names(self, trade_names_data):
+    def load_trade_names(self, data):
         """
         Загрузка торговых названий.
         
         Формат данных:
-        {
-            "гликлазид": ["глидиаб", "глидиаб мв", ...],
-            "ибупрофен": ["бруфен ср", "бумидол®", ...]
-        }
+        [
+            {
+                "drug": "амброксол",
+                "trade_name": ["амбробене", "амброксол", ...],
+                ...
+            },
+            ...
+        ]
         """
-        stats = {
-            'trade_names_processed': 0,
-            'trade_names_created': 0,
-            'trade_names_updated': 0,
-            'errors': []
-        }
         
-        for drug_name, trade_names in trade_names_data.items():
-            drug_name = drug_name.strip().casefold()
+        for item in data:
+            # Извлекаем основное МНН и торговые названия
+            drug_name = item.get('drug', '').strip().casefold()
+            trade_names = item.get('trade_name', [])
+            nosology_name = item.get('nosology', 'общая нозология')
+            
+            if not drug_name:
+                self.stats['errors'].append("Пропущена запись: отсутствует поле 'drug'")
+                continue
             
             try:
+                # Пытаемся найти существующее МНН
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
-                nosology, _ = Nosology.objects.get_or_create(name='общая нозология')
-                drug = Drug.objects.create(
-                    drug_name=drug_name,
-                    nosology=nosology
-                )
-                stats['trade_names_processed'] += 1
-                logger.info(f"Создано новое МНН: {drug_name}")
+                self.stats['errors'].append(f"МНН '{drug_name}' не найдено в базе данных")
+                continue
+            except Exception as e:
+                self.stats['errors'].append(f"Ошибка при поиске МНН '{drug_name}': {str(e)}")
+                continue
             
             if not isinstance(trade_names, list):
-                stats['errors'].append(f"Для {drug_name}: данные не являются списком")
+                self.stats['errors'].append(f"Для {drug_name}: поле 'trade_name' не является списком")
                 continue
             
             # Загружаем торговые названия
@@ -99,24 +120,27 @@ class DrugDataLoader:
                 if not trade_name:
                     continue
                 
-                trade_obj, created = TradeName.objects.get_or_create(
-                    name=trade_name,
-                    defaults={'drug': drug}
-                )
-                
-                if created:
-                    stats['trade_names_created'] += 1
-                else:
-                    # Если уже существует, но привязан к другому МНН - обновляем
-                    if trade_obj.drug != drug:
-                        trade_obj.drug = drug
-                        trade_obj.save()
-                        stats['trade_names_updated'] += 1
-            
-            stats['trade_names_processed'] += 1
+                try:
+                    trade_obj, created = TradeName.objects.get_or_create(
+                        name=trade_name,
+                        defaults={'drug': drug}
+                    )
+                    
+                    if created:
+                        self.stats['trade_names_created'] += 1
+                    else:
+                        # Если уже существует, но привязан к другому МНН - обновляем
+                        if trade_obj.drug != drug:
+                            trade_obj.drug = drug
+                            trade_obj.save()
+                            self.stats['trade_names_updated'] += 1
+                            
+                except Exception as e:
+                    self.stats['errors'].append(f"Ошибка при сохранении торгового названия '{trade_name}' для {drug_name}: {str(e)}")
         
-        logger.info(f"Загрузка торговых названий завершена: {stats}")
-        return stats
+        return {k: v
+                for k, v in self.stats.items()
+                if k in ['trade_names_created', 'trade_names_updated', 'errors']}
 
     def _load_groups_and_link_drugs(self, data):
         """Загрузка групп и связывание с лекарствами."""
@@ -202,26 +226,27 @@ class DrugDataLoader:
         """Загрузка возрастных противопоказаний."""
         
         for item in data:
-            drug_name = item.get('drug', '').strip()
-            
+            drug_name = item.get('drug')
             if not drug_name:
                 continue
-            
-            # Получаем препарат
             try:
                 drug = Drug.objects.get(drug_name__iexact=drug_name)
             except Drug.DoesNotExist:
                 logger.warning(f"Препарат '{drug_name}' не найден при загрузке возрастных ограничений")
                 continue
-            
-            # Обрабатываем banned_under_18
+
             banned_under_age = item.get('banned_under_age')
             banned_after_age = item.get('banned_after_age')
-            if banned_under_age is not None or banned_after_age is not None:
-                DrugsAgeContraindications.objects.create(
-                    drug=drug,
-                    age_from=banned_under_age,
-                    age_to=banned_after_age,
-                )
-                self.stats['age_contraindications'] += 1
-            
+            if banned_under_age is None and banned_after_age is None:
+                continue
+
+            # update_or_create, чтобы не плодить дубликаты
+            obj, created = DrugsAgeContraindications.objects.update_or_create(
+                drug=drug,
+                defaults={
+                    'age_from': banned_under_age,
+                    'age_to': banned_after_age,
+                }
+            )
+            if created:
+                self.stats['age_contraindications_created'] += 1
