@@ -101,8 +101,20 @@
     flex-direction: column;
     min-height: 0;
     @media (max-width: 768px) {
-        height: 70vh;
+        height: 60vh;
         width: 100%;
         margin-bottom: 1.5rem !important;
+    }
+}
+
+.computationFormBlock-h30{
+     @media (max-width: 768px) {
+        height: 30vh;
+    }
+}
+
+.computationFormBlock-h50{
+     @media (max-width: 768px) {
+        height: 50vh;
     }
 }

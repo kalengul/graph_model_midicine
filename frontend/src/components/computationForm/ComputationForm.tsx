@@ -249,7 +249,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
         <>
             <div className='mt-4 flex computationFormContainer'>
                 {/* Блок для ввода списка ЛС */}
-                <div className='me-4 computationFormBlock'>
+                <div className='me-4 computationFormBlock computationFormBlock-h30'>
                     <label className='form-label control-label lableCF'>Лекарственнные средства для расчета взаимодействия</label>
                     <div className='flex computationFormContainer-data'>
                         <div className='checkBlock me-3'>
@@ -282,7 +282,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                 </div>
 
                 {/* Блок для ввода персональной информации и загрузки файла с мед картой */}
-                <div className='computationFormBlock'>
+                <div className='computationFormBlock computationFormBlock-h50'>
                     <label className='form-label control-label lableCF'>Персональная информация пациента</label>
                     {/* Пол пациента */}
                     <div className='flex mb-2 ai-center'>
