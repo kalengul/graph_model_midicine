@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     'pHistory2se', 
-
+    'logging_system',
 ]
 
 

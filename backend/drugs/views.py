@@ -32,8 +32,12 @@ from drugs.utils.banned_pairs_loader import (CSVBannedPairLoader,
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
 from drugs.utils.drug_info_loader import DrugDataLoader
+from django.utils import timezone
 
 from accounts.auth import bearer_token_required
+
+from logging_system.utils.calc_hash import calculate_file_hash
+from logging_system.models import SystemState
 
 
 logger = logging.getLogger('drugs')
@@ -474,10 +478,6 @@ class ExcelLoadView(APIView):
         loader = ExcelLoader()
         loader.export_from_db()
         try:
-            # response = FileResponse(open(loader.EXPORT_PATH, 'rb'),
-            #                         content_type=self.TYPE)
-            # response[self.CONTENT] = f'{self.DOWN_LOAD_MODE}; filename={os.path.basename(loader.export_path)}'
-            # return response
             with open(loader.export_path, 'rb') as file:
                 encoded = base64.b64encode(file.read()).decode('utf-8')
             return CustomResponse(
@@ -523,12 +523,21 @@ class ExcelLoadView(APIView):
             try:
                 with open(excel_path, 'wb+') as file:
                     file.write(excel_file.read())
+
+                # Вычисляем хеш от сохранённого файла
+                file_hash = self._calculate_file_hash_from_path(excel_path)
+
                 excel_path = os.path.abspath(excel_path)
                 loader = ExcelLoader(import_path=excel_path, transpose=transpose)
                 validation_errors = loader._check_excel_file()
 
                 if not validation_errors:
                     stats = loader.load_to_db()
+
+                    # Успех – обновляем SystemState
+                    self._update_weights_state(file_name=excel_file.name, 
+                                               file_hash=file_hash,
+                                               uploaded_at=timezone.now())
                     
                     logger.info('Импорт данных в БД закончился')
                     return CustomResponse(
@@ -565,6 +574,21 @@ class ExcelLoadView(APIView):
             message=self.INCORRECT_FILE,
             http_status=status.HTTP_400_BAD_REQUEST
         )
+    
+    def _calculate_file_hash_from_path(self, file_path):
+        """Вычисляет MD5 хеш файла по его пути."""
+        with open(file_path, 'rb') as f:
+            # Используем существующую функцию calculate_file_hash, передавая файловый объект
+            return calculate_file_hash(f)
+
+    def _update_weights_state(self, file_name, file_hash, uploaded_at):
+        """Обновляет SystemState информацией о загруженном файле весов."""
+        state = SystemState.get_current_state()
+        state.weights_file_name = file_name
+        state.weights_file_hash = file_hash
+        state.weights_file_uploaded_at = uploaded_at
+        state.save()
+        logger.info(f"SystemState обновлён: weights_file={file_name}, hash={file_hash}")
 
 
 class ModifiedExcelLoadView(ExcelLoadView):
@@ -709,11 +733,11 @@ class DrugDataLoadView(APIView):
     View для загрузки данных о лекарственных средствах.
     Принимает JSON файл с данными или список данных в теле запроса.
     """
-    
+
     def post(self, request):
         """
         Загрузка данных о ЛС.
-                Ожидает:
+        Ожидает:
         - файл в form-data с ключом 'file'
         - или JSON в теле запроса со списком данных
         
@@ -723,10 +747,10 @@ class DrugDataLoadView(APIView):
         try:
             # Получаем параметр clear из query params
             clear_before_load = request.GET.get('clear', 'true').lower() == 'true'
-            
-            # Получаем данные
-            data = self._get_data_from_request(request)
-            
+
+            # Получаем данные и информацию о файле (если есть)
+            data, file_info = self._get_data_and_file_info(request)
+
             if not data:
                 return CustomResponse(
                     http_status=status.HTTP_400_BAD_REQUEST,
@@ -746,7 +770,11 @@ class DrugDataLoadView(APIView):
             # Создаем загрузчик и загружаем данные
             loader = DrugDataLoader(clear_before_load=clear_before_load)
             stats = loader.load_all(data)
-            
+
+            # Если загрузка прошла успешно и был файл, обновляем SystemState
+            if file_info:
+                self._update_system_state(file_info)
+
             return CustomResponse(
                 http_status=status.HTTP_200_OK,
                 status=status.HTTP_200_OK,
@@ -762,35 +790,60 @@ class DrugDataLoadView(APIView):
                 message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
             )
     
-    def _get_data_from_request(self, request):
-        """
-        Извлекает данные из запроса.
-        Поддерживает:
-        - загрузку файла (form-data с ключом 'file')
-        - прямой JSON в теле запроса
-        """
-        # Проверяем, есть ли файл
+    def _get_data_and_file_info(self, request):
+        """Извлекает данные и информацию о файле из запроса."""
         if 'file' in request.FILES:
             file_obj = request.FILES['file']
-            return self._parse_file(file_obj)
-        
-        return None
-    
+            
+            # Читаем содержимое один раз
+            content = file_obj.read()
+            
+            if not content:
+                raise ValueError("Загружен пустой файл")
+            
+            # Вычисляем хеш от байтов
+            import hashlib
+            file_hash = hashlib.md5(content).hexdigest()
+            
+            # Парсим JSON
+            try:
+                data = json.loads(content.decode('utf-8'))
+            except json.JSONDecodeError as e:
+                logger.error(f"Ошибка парсинга JSON: {e}")
+                raise ValueError(f"Файл должен содержать валидный JSON: {e}")
+            
+            file_info = {
+                'name': file_obj.name,
+                'hash': file_hash,
+                'uploaded_at': timezone.now()
+            }
+            return data, file_info
+        else:
+            # Если файла нет, пробуем получить JSON из тела запроса
+            data = request.data if hasattr(request, 'data') else None
+            return data, None
+
     def _parse_file(self, file_obj):
-        """
-        Парсит загруженный файл.
-        Поддерживает JSON и текстовые файлы.
-        """
         try:
             content = file_obj.read().decode('utf-8')
+            logger.debug(f"Первые 100 символов файла: {content[:100]}")
+            if not content.strip():
+                raise ValueError("Файл пуст")
             return json.loads(content)
         except json.JSONDecodeError as e:
-            logger.error(f"Ошибка парсинга JSON файла: {e}")
-            raise ValueError(f"Файл должен содержать валидный JSON: {e}")
-        except Exception as e:
-            logger.error(f"Ошибка чтения файла: {e}")
-            raise
+            logger.error(f"Ошибка парсинга JSON: {e}. Содержимое: {content[:200]}")
+            raise ValueError(f"Файл должен содержать валидный JSON. Первые символы: {content[:50]}")
 
+    def _update_system_state(self, file_info):
+        """
+        Обновляет SystemState информацией о загруженном файле препаратов.
+        """
+        state = SystemState.get_current_state()
+        state.drugs_file_name = file_info['name']
+        state.drugs_file_hash = file_info['hash']
+        state.drugs_file_uploaded_at = file_info['uploaded_at']
+        state.save()
+        logger.info(f"SystemState обновлён: drugs_file={file_info['name']}")
     
 class TradeNameView(APIView):
     """View для загрузки торговых названий."""
