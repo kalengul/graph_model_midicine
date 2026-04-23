@@ -5,18 +5,22 @@ import json
 from pathlib import Path
 
 from django.http import FileResponse
-from rest_framework.views import APIView
-from rest_framework import status
 from django.conf import settings
 
+from rest_framework.views import APIView
+from rest_framework import status
+from rest_framework.authentication import TokenAuthentication, SessionAuthentication
+
 from ranker.utils.fortran_calculator import FortranCalculatorSimple, FortranCalculator
-from drugs.utils.custom_response import CustomResponse
-from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
 from ranker.services.table_gerention import ExcelTableGenerater
 from ranker.constants import IDX_2_RANK_NAME
 
+from drugs.utils.custom_response import CustomResponse
+from drugs.models import Drug
+
 from logging_system.services import CalculationLoggingService
+
 
 logger = logging.getLogger('fortran')
 
@@ -30,6 +34,8 @@ class CalculationAPI(APIView):
     # Константы для совместимости
     COMPATIBILITY_BANNED = 'banned'
     COMPATIBILITY_BANNED_CONTRAINDICATIONS = 'banned-contraindications'
+
+    authentication_classes = [TokenAuthentication, SessionAuthentication]
 
     def post(self, request, normalization_calculate=True):
         """
