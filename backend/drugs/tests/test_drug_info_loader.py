@@ -62,7 +62,7 @@ class TestDrugDataLoader:
     @patch.object(DrugDataLoader, '_load_banned')
     @patch.object(DrugDataLoader, '_load_contraindications')
     @patch.object(DrugDataLoader, '_load_age_contraindications')
-    @patch.object(DrugDataLoader, 'load_trade_names')
+    @patch.object(DrugDataLoader, '_load_trade_names')
     def test_load_all_calls_submethods(
         self, mock_trade, mock_age, mock_contra, mock_banned, mock_groups, loader, sample_data
     ):
@@ -153,7 +153,7 @@ class TestDrugDataLoader:
         # Сначала нужно создать препараты
         loader._load_groups_and_link_drugs(sample_data)
 
-        loader.load_trade_names(sample_data)
+        loader._load_trade_names(sample_data)
 
         drug1 = Drug.objects.get(drug_name__iexact="амоксициллин+клавулановая кислота")
         drug2 = Drug.objects.get(drug_name__iexact="апиксабан")
@@ -176,7 +176,7 @@ class TestDrugDataLoader:
         # Создадим торговое имя, привязанное к другому препарату
         TradeName.objects.create(name="аксиорекс", drug=drug1)
 
-        loader.load_trade_names(sample_data)
+        loader._load_trade_names(sample_data)
 
         # Теперь "аксиорекс" должно быть привязано к drug2
         trade = TradeName.objects.get(name="аксиорекс")
@@ -189,7 +189,7 @@ class TestDrugDataLoader:
         data = [{"drug": "неизвестный", "trade_name": ["что-то"]}]
         # Убеждаемся, что ключ 'error' существует
         loader.stats['errors'] = []
-        loader.load_trade_names(data)
+        loader._load_trade_names(data)
         assert any("МНН 'неизвестный' не найдено" in err for err in loader.stats['errors'])
 
     @patch('drugs.utils.drug_info_loader.JSONBannedPairLoader')
@@ -266,7 +266,7 @@ class TestDrugDataLoader:
             {"drug": "амоксициллин+клавулановая кислота", "trade_name": "не список"},
             {"drug": "", "trade_name": ["пустое имя препарата"]},
         ]
-        loader.load_trade_names(bad_data)
+        loader._load_trade_names(bad_data)
 
         assert any("поле 'trade_name' не является списком" in err for err in loader.stats['errors'])
         assert any("Пропущена запись: отсутствует поле 'drug'" in err for err in loader.stats['errors'])
@@ -455,7 +455,7 @@ class TestDrugDataLoaderExtended:
     def test_load_trade_names_handles_duplicate_names_in_data(self, loader):
         Drug.objects.create(drug_name="препарат")
         data = [{"drug": "препарат", "trade_name": ["торговое1", "торговое1", "торговое2"]}]
-        loader.load_trade_names(data)
+        loader._load_trade_names(data)
         assert TradeName.objects.count() == 2
 
     def test_error_handling_during_load_all_continues(self, loader, sample_data_minimal):

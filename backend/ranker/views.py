@@ -9,16 +9,16 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.conf import settings
 
-from ranker.utils.fortran_calculator import FortranCalculatorSimple,FortranCalculator
+from ranker.utils.fortran_calculator import FortranCalculatorSimple, FortranCalculator
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug
 from ranker.utils.check_banned import DrugPairChecker
 from ranker.services.table_gerention import ExcelTableGenerater
 from ranker.constants import IDX_2_RANK_NAME
 
+from logging_system.services import CalculationLoggingService
 
 logger = logging.getLogger('fortran')
-
 
 class CalculationAPI(APIView):
     """Вычисление рангов."""
@@ -42,6 +42,10 @@ class CalculationAPI(APIView):
         Returns:
             CustomResponse с результатами расчета
         """
+
+        # Получаем пользователя
+        user = request.user if request.user.is_authenticated else None
+
         try:
 
             # Валидация и подготовка данных
@@ -54,13 +58,17 @@ class CalculationAPI(APIView):
             # Распаковываем данные
             drugs, human_data, med_card = validation_result
 
+            # Логгирование
+            CalculationLoggingService.log_request(user, drugs)
+
             # Создаем базовый шаблон ответа
             response_data = self._create_base_response_template(drugs)
             
             # Проверка запрещенных пар (banned)
             banned_pairs = DrugPairChecker().check_banned(drugs)
             if banned_pairs:
-                return self._create_banned_response(response_data, banned_pairs)
+                resp = self._create_banned_response(response_data, banned_pairs)
+                return resp
             
             # Проверка противопоказаний (если есть)
             if human_data and (human_data.get('cont_list') or human_data.get('age')):
@@ -70,18 +78,14 @@ class CalculationAPI(APIView):
                 )
                 if contraindications_result:
                     return self._create_contraindications_response(
-                        response_data, contraindications_result
-                    )
+                        response_data, contraindications_result)
             
+            # Расчёт совместимости
             gender = human_data.get('gender') if human_data else None
-            
-            # Расчет совместимости
-            return self._calculate_compatibility(
-                response_data,
-                drugs, 
-                normalization_calculate,
-                gender
-            )
+            resp = self._calculate_compatibility(response_data, drugs,
+                                                 normalization_calculate,
+                                                 gender)
+            return resp
             
         except Exception as e:
             logger.critical(f"Критическая ошибка: {traceback.format_exc()}")
@@ -235,8 +239,7 @@ class CalculationAPI(APIView):
         """
         Расчет совместимости лекарственных средств.
         """
-        start_time = time.time()
-        
+
         calculator = FortranCalculator(
             normalize=normalization_calculate,
             cuttoff_not_life_threats_side_e = True
@@ -249,11 +252,7 @@ class CalculationAPI(APIView):
         )
 
         # Объединяем шаблон с результатами расчета
-        # (композиция вместо обновления, чтобы не потерять поля)
         final_data = {**template_data, **context}    
-        
-        elapsed_time = time.time() - start_time
-        logger.debug(f'Время выполнения расчета: {elapsed_time:.2f} сек.')
         
         return CustomResponse(
             status=status.HTTP_200_OK,
