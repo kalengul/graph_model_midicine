@@ -17,7 +17,7 @@ from ranker.services.table_gerention import ExcelTableGenerater
 from ranker.constants import IDX_2_RANK_NAME
 
 from drugs.utils.custom_response import CustomResponse
-from drugs.models import Drug
+from drugs.models import Drug, SideEffect, DrugSideEffect
 
 from logging_system.services import CalculationLoggingService
 
@@ -26,10 +26,6 @@ logger = logging.getLogger('fortran')
 
 class CalculationAPI(APIView):
     """Вычисление рангов."""
-
-    AGE = 65
-    MAN = 'man'
-    WOMEN = 'woman'
 
     # Константы для совместимости
     COMPATIBILITY_BANNED = 'banned'
@@ -245,7 +241,12 @@ class CalculationAPI(APIView):
         """
         Расчет совместимости лекарственных средств.
         """
-
+        # 1. Валидация полноты весов
+        validation_error = self._validate_weights_completeness()
+        if validation_error:
+            return validation_error
+        
+        # 2. Основной расчёт
         calculator = FortranCalculator(
             normalize=normalization_calculate,
             cuttoff_not_life_threats_side_e = True
@@ -266,6 +267,42 @@ class CalculationAPI(APIView):
             http_status=status.HTTP_200_OK,
             data=final_data
         )
+    
+    def _validate_weights_completeness(self):
+        """
+        Проверяет контрольные суммы: 
+        1) Количество побочных эффектов должно быть больше 0
+        2) Общее количество записей DrugSideEffect
+        для общего количества препаратов должно равняться
+        (количество препаратов) × (количество побочных эффектов).
+            
+        Returns:
+            None, если всё OK, иначе CustomResponse с ошибкой 400
+        """
+        
+        total_se_count = SideEffect.objects.count()
+
+        if total_se_count == 0:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message=("Побочные эффекты и записи весов не загружены."),
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        total_drugs_count = Drug.objects.count()
+        actual = DrugSideEffect.objects.count()
+        expected = total_drugs_count * total_se_count
+
+        if actual != expected:     
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message=(
+                    f'Нарушена целостность данных:'
+                    f'ожидается {expected} записей весов, найдено {actual}.'
+                ),
+                http_status=status.HTTP_400_BAD_REQUEST
+            )
+        return None
 
 
 class TablesView(APIView):
