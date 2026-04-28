@@ -232,7 +232,7 @@ class DrugsAgeContraindications(models.Model):
     drug = models.ForeignKey(Drug, on_delete=models.CASCADE, related_name='age_restrictions')
     age_from = models.PositiveIntegerField(null=True, blank=True, verbose_name='Возраст от')
     age_to = models.PositiveIntegerField(null=True, blank=True, verbose_name='Возраст до')
-    restriction_type = models.CharField(choices=RESTRICTION_TYPES, default='prohibited', verbose_name='Тип противопоказания')
+    restriction_type = models.CharField(max_length=MAX_LENGTH, choices=RESTRICTION_TYPES, default='prohibited', verbose_name='Тип противопоказания')
 
     class Meta:
         constraints = [
