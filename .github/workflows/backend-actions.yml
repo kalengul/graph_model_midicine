@@ -14,21 +14,6 @@ jobs:
   test-backend:
     runs-on: ubuntu-latest
 
-    services:
-      postgres:
-        image: postgres:15
-        env:
-          POSTGRES_USER: test_user
-          POSTGRES_PASSWORD: test_password
-          POSTGRES_DB: test_db
-        ports:
-          - 5432:5432
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -45,12 +30,14 @@ jobs:
           pip install pytest pytest-django
           pip install -r requirements.txt
 
-      - name: Run tests
+      - name: Run tests with sqlite
         working-directory: ./backend
         env:
-          DATABASE_URL: postgres://test_user:test_password@localhost:5432/test_db
-          DJANGO_SETTINGS_MODULE: core.settings
+          USE_SQLITE: 'True'
+          SECRET_KEY: 'GHA-test'
           DEBUG: 'True'
+          ALLOWED_HOSTS: 'localhost,127.0.0.1'
+          DJANGO_SETTINGS_MODULE: core.settings
         run: |
           pytest
 
