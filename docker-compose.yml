@@ -43,10 +43,12 @@ services:
     volumes:
       - static_volume:/static
     networks:
-      - backend
+      - app_network
 
   pgadmin:
     image: dpage/pgadmin4
+    logging:
+      driver: "none"
     container_name: pgadmin
     restart: unless-stopped
     env_file:
