@@ -129,6 +129,11 @@ loggers = {
         'level': 'DEBUG',
         'propagate': False
     },
+    'system': {
+        'handlers': ['console'],
+        'level': 'INFO',
+        'propagate': False
+    },
 }
 
 LOGGING = {

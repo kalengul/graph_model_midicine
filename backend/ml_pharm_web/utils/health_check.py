@@ -1,11 +1,17 @@
+from logging import getLogger
 from django.http import JsonResponse
 from django.db import connection
 from django.conf import settings
 
 
+logger = getLogger('system')
+
+
 def health_check(request):
     try:
         connection.ensure_connection()
+        logger.info(f'Health check passed, version: {settings.GIT_COMMIT_HASH}')
+
         return JsonResponse({
             "status": "healthy",
             "version": settings.GIT_COMMIT_HASH
