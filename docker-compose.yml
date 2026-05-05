@@ -14,7 +14,12 @@ services:
       - backend
 
   backend:
-    build: ./backend
+    build: 
+      context: ./backend
+      args:
+        - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
+    environment:
+      - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown} 
     container_name: backend
     restart: unless-stopped
     volumes:
