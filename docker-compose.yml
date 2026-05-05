@@ -1,9 +1,12 @@
-version: "3.9"
-
 services:
 
   db:
     image: postgres:15
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     container_name: db
     restart: unless-stopped
     volumes:
@@ -25,11 +28,14 @@ services:
     volumes:
       - static_volume:/app/static
     depends_on:
-      - db
-    env_file:
-      - .env
-    networks:
-      - backend
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 15s
 
   nginx:
     build:
@@ -38,7 +44,8 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     volumes:
       - static_volume:/static
     networks:
@@ -57,7 +64,8 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     networks:
       - app_network
 
