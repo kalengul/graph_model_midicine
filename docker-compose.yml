@@ -23,7 +23,6 @@ services:
     container_name: backend
     restart: unless-stopped
     volumes:
-      - ./backend:/app
       - static_volume:/app/static
     depends_on:
       - db
