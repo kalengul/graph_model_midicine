@@ -15,6 +15,7 @@ COPY . .
 ARG GIT_COMMIT_HASH=unknown
 RUN echo "${GIT_COMMIT_HASH}" > /app/.version
 
+RUN python manage.py collectstatic --noinput
+
 CMD python manage.py migrate && \
-    python manage.py collectstatic --noinput && \
     gunicorn ml_pharm_web.wsgi:application --bind 0.0.0.0:8000
