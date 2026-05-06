@@ -22,6 +22,8 @@ services:
         - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
     environment:
       - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown} 
+      - USE_SQLITE=False
+      - POSTGRES_HOST=db
     container_name: backend
     restart: unless-stopped
     volumes:
