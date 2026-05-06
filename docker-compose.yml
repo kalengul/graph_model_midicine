@@ -4,9 +4,10 @@ services:
     image: postgres:15
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
-      interval: 5s
-      timeout: 5s
-      retries: 5
+      interval: 10s
+      timeout: 2s
+      retries: 3
+      start_period: 0s 
     container_name: db
     restart: unless-stopped
     volumes:
@@ -34,8 +35,8 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
       interval: 10s
       timeout: 3s
-      retries: 4
-      start_period: 20s
+      retries: 3
+      start_period: 5s
 
   nginx:
     container_name: nginx
@@ -45,7 +46,8 @@ services:
     ports:
       - "80:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     volumes:
       - static_volume:/static
 
