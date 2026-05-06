@@ -13,8 +13,6 @@ services:
       - postgres_data:/var/lib/postgresql/data
     env_file:
       - .env
-    networks:
-      - app_network
 
   backend:
     build: 
@@ -50,8 +48,6 @@ services:
         condition: service_healthy
     volumes:
       - static_volume:/static
-    networks:
-      - app_network
 
   pgadmin:
     image: dpage/pgadmin4
@@ -68,13 +64,8 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    networks:
-      - app_network
 
 volumes:
   postgres_data:
   pgadmin_data:
   static_volume:
-
-networks:
-  app_network:
