@@ -37,7 +37,8 @@ jobs:
           SECRET_KEY: 'GHA-test'
           DEBUG: 'True'
           ALLOWED_HOSTS: 'localhost,127.0.0.1'
-          DJANGO_SETTINGS_MODULE: core.settings
+          DJANGO_SETTINGS_MODULE: ml_pharm_web.settings
+          PYTHONPATH: .
         run: |
           pytest
 
