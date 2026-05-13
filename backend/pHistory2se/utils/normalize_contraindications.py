@@ -60,8 +60,8 @@ def normalize_contraindications(
 
 # --- Блок для быстрой проверки ---
 if __name__ == "__main__":
-    from ..parsers import SimpleDocxParser
-    from .extractors import SimpleMedicalExtractor
+    from pHistory2se.parsers import SimpleDocxParser
+    from pHistory2se.utils.extractors import SimpleMedicalExtractor
 
     # Пути (используем pathlib для кроссплатформенности)
     DATA_DIR = "backend\\data\\"

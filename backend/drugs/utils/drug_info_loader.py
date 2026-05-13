@@ -1,6 +1,6 @@
 import logging
 
-from ..models import (  BannedDrugPair,
+from drugs.models import (  BannedDrugPair,
                         DrugSideEffect,
                         Drug,
                         SideEffect,

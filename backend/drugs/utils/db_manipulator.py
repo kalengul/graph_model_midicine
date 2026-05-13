@@ -5,7 +5,7 @@ import logging
 
 from django.conf import settings
 
-from ..models import (DrugGroup,
+from drugs.models import (DrugGroup,
                       Drug,
                       DrugSideEffect,
                       SideEffect)
