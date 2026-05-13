@@ -8,7 +8,14 @@ up:
 
 deploy:
 	git pull origin deploy
-	docker compose up -d --build $(ARGS)
+	docker compose build $(ARGS)
+	docker compose up -d --remove-orphans $(ARGS)
 
-stop:
+down:
 	docker compose down
+
+logs:
+	docker compose logs -f
+
+ps:
+	docker compose ps
