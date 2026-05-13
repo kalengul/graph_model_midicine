@@ -11,7 +11,6 @@ from typing import List, Dict, Set
 
 from pHistory2se.utils.SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
-# from .SemanticEmbeddingProcessor import SemanticEmbeddingProcessor
 
 def normalize_contraindications(
     contraindications: List[str],

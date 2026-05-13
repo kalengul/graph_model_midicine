@@ -6,9 +6,9 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAdminUser
 
-from .models import SystemState
-from .serializers import SystemStateSerializer
-from .services import CalculationLoggingService
+from logging_system.models import SystemState
+from logging_system.serializers import SystemStateSerializer
+from logging_system.services import CalculationLoggingService
 
 # Определяем путь к лог-файлу
 LOG_FILE_PATH = os.path.join(settings.BASE_DIR, 'logs', 'requested_drugs.log')

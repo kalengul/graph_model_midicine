@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (SynonymGroupAPI, SynonymListAPI, LoadSynonymView,
+from synonyms.views import (SynonymGroupAPI, SynonymListAPI, LoadSynonymView,
                     SynonymStatusView)
 
 

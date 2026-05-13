@@ -1,5 +1,5 @@
 from django.db import models
-from .utils.get_current_commit_hash import get_current_commit_hash
+from logging_system.utils.get_current_commit_hash import get_current_commit_hash
 
 class SystemState(models.Model):
     """Хранит состояние системы: версии загруженных файлов и настройки логирования."""

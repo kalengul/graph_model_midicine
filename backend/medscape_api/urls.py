@@ -1,10 +1,10 @@
 from django.urls import path
-from .views import (InteractionMedScapeView,
-                    MedScapeOutDateView,
-                    InteractionMedScapeOutView,
-                    AlternativeMedScapeOutView,
-                    AllDrugTableView,
-                    LoadJSONView)
+from medscape_api.views import (InteractionMedScapeView,
+                                MedScapeOutDateView,
+                                InteractionMedScapeOutView,
+                                AlternativeMedScapeOutView,
+                                AllDrugTableView,
+                                LoadJSONView)
 
 
 urlpatterns = [

@@ -10,7 +10,7 @@ from drugs.models import (  BannedDrugPair,
                         SideEffectsGender,
                         TradeName)
 from contraindications.models import Contraindication
-from .banned_pairs_loader import JSONBannedPairLoader
+from drugs.utils.banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from drugs.utils.universal_cleaner import universal_cleaner
 

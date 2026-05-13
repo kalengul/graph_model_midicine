@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Graph
+from graphs.models import Graph
 
 
 class GraphSerializer(serializers.ModelSerializer):

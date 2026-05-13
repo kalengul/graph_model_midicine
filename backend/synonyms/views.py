@@ -16,7 +16,7 @@ from rest_framework.response import Response
 
 from accounts.auth import bearer_token_required
 from drugs.utils.custom_response import CustomResponse
-from .serializers import (
+from synonyms.serializers import (
     SynonymGroupCreateSerializer,
     SynonymGroupListSerializer,
     SynonymListSerializer,
@@ -26,7 +26,7 @@ from .serializers import (
     SynonymStatusSerializer,
     ChangeSynonymStatusSerializer,
 )
-from .models import Synonym, SynonymGroup, SynonymStatus
+from synonyms.models import Synonym, SynonymGroup, SynonymStatus
 from synonyms.utils.json_synonums_loader import (InnerJSONSynonymLoader,
                                                  )
 from synonyms.utils.synonym_cleaner import CleanProcessor

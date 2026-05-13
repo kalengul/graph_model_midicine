@@ -9,15 +9,13 @@ from rest_framework import status
 from django.conf import settings
 
 # Локальные импорты проекта
-from .parsers import SimpleDocxParser
-from .utils.extractors import SimpleMedicalExtractor
-from .utils.normalize_contraindications import normalize_contraindications
-# from .model_loader import get_embedding_processor, get_synonym_dict, set_synonym_dict
-# from .utils.json_storage import read_synonym_dict, write_synonym_dict
+from pHistory2se.parsers import SimpleDocxParser
+from pHistory2se.utils.extractors import SimpleMedicalExtractor
+from pHistory2se.utils.normalize_contraindications import normalize_contraindications
 
 # Синглтоны
-from .utils.ModelService import model_service
-from .utils.DictionaryService import dictionary_service
+from pHistory2se.utils.ModelService import model_service
+from pHistory2se.utils.DictionaryService import dictionary_service
 
 # Импорты из другого приложения
 from contraindications.models import Contraindication

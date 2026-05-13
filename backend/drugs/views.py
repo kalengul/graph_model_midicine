@@ -12,12 +12,12 @@ from django.db import IntegrityError
 from django.db.models import Q
 from django.http import FileResponse
 
-from .models import (Drug,
+from drugs.models import (Drug,
                      DrugGroup,
                      SideEffect,
                      DrugSideEffect,
                      TradeName)
-from .serializers import (
+from drugs.serializers import (
     DrugSerializer,
     DrugGroupSerializer,
     DrugListRetrieveSerializer,
