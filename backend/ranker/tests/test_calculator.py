@@ -302,7 +302,10 @@ class TestFortranCalculator:
 
         Препараты из тех же групп, не попавшие в исходный список, исключаются.
         """
+        DrugGroup.objects.all().delete()
         group = DrugGroup.objects.create(dg_name="Тестовая группа")
+
+        Drug.objects.all().delete()
         drug1 = Drug.objects.create(drug_name="Тест1")
         drug2 = Drug.objects.create(drug_name="Тест2")
         drug3 = Drug.objects.create(drug_name="Тест3")
@@ -505,6 +508,7 @@ class TestFortranCalculator:
         dse.rang_base = original
         dse.save()
 
+    @pytest.mark.django_db(transaction=True)
     def test_calculate_with_recommendations(self, filled_db):
         """
         Интеграционный тест: формирование рекомендаций при несовместимости.

@@ -8,7 +8,8 @@ from drugs.models import Drug, DrugGroup, SideEffect, DrugSideEffect
 @pytest.fixture
 def drug_group():
     """Создаёт группу препаратов."""
-    return DrugGroup.objects.create(id=1, dg_name="Анальгетики")
+    dg, _ = DrugGroup.objects.get_or_create(id=1, dg_name="Анальгетики")
+    return dg
 
 
 @pytest.fixture
@@ -21,7 +22,7 @@ def three_drugs(drug_group):
     ]
     drugs = []
     for data in drugs_data:
-        drug = Drug.objects.create(**data)
+        drug, _ = Drug.objects.get_or_create(**data)
         drug.drug_groups.add(drug_group)
         drugs.append(drug)
     return drugs
@@ -36,7 +37,7 @@ def three_side_effects():
     ]
     effects = []
     for data in effects_data:
-        effect = SideEffect.objects.create(**data)
+        effect, _ = SideEffect.objects.get_or_create(**data)
         effects.append(effect)
     return effects
 
@@ -129,7 +130,7 @@ def setup_ranks(three_drugs, three_side_effects):
     DrugSideEffect.objects.all().delete()
     for i, drug in enumerate(three_drugs):
         for j, effect in enumerate(three_side_effects):
-            DrugSideEffect.objects.create(
+            DrugSideEffect.objects.get_or_create(
                 drug=drug,
                 side_effect=effect,
                 rang_base=rank_matrix[i][j],
