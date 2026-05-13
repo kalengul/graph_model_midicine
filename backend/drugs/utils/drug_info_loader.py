@@ -44,17 +44,18 @@ class DrugDataLoader:
                         'Половая принадлежность побочного эффекта; '
                         )
             universal_cleaner(
-                model_classes=[ Drug,
-                                DrugGroup,
-                                DrugsAgeContraindications,
-                                DrugSideEffect,
-                                Contraindication,
-                                BannedDrugPair,
-                                SideEffect,
-                                Nosology,
-                                SideEffectsGender,
-                                TradeName
-                                ]
+                model_classes=[
+                    DrugsAgeContraindications,
+                    DrugSideEffect,
+                    SideEffectsGender,
+                    TradeName,
+                    BannedDrugPair,
+                    Contraindication,
+                    DrugGroup,
+                    Drug,
+                    Nosology,
+                    SideEffect,
+                ]
             ).clear_table()
 
         logger.info(f'Загрузка групп...')

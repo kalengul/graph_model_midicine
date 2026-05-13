@@ -295,6 +295,7 @@ class TestFortranCalculator:
         assert len(context['side_effects'][1]['effects']) == 0
         assert len(context['side_effects'][2]['effects']) == 0
 
+    @pytest.mark.django_db(transaction=True)
     def test_get_excluded_drugs_by_groups(self, calculator_base):
         """
         Проверка исключения препаратов, входящих в те же группы, что и выбранные.

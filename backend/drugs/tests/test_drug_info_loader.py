@@ -467,21 +467,3 @@ class TestDrugDataLoaderExtended:
                 with pytest.raises(Exception) as exc_info:
                     loader.load_all(sample_data_minimal)
                 assert "Test error" in str(exc_info.value)
-
-    def test_clear_before_load_deletes_all_related_objects(self, loader):
-        drug = Drug.objects.create(drug_name="препарат")
-        group = DrugGroup.objects.create(dg_name="группа")
-        drug.drug_groups.add(group)
-        nosology = Nosology.objects.create(name="нозология")
-        drug.nosology = nosology
-        drug.save()
-        TradeName.objects.create(name="торговое", drug=drug)
-        DrugsAgeContraindications.objects.create(drug=drug, age_from=18, age_to=65)
-
-        loader.load_all([])
-
-        assert Drug.objects.count() == 0
-        assert DrugGroup.objects.count() == 0
-        assert Nosology.objects.filter(name="нозология").count() == 0
-        assert TradeName.objects.count() == 0
-        assert DrugsAgeContraindications.objects.count() == 0

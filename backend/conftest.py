@@ -1,34 +1,28 @@
 import pytest
 from django.core.files.uploadedfile import SimpleUploadedFile
-from rest_framework.test import APIClient
-from django.contrib.auth.models import User
-from unittest.mock import patch
 import pandas as pd
-from io import BytesIO
-
-from drugs.models import Drug, DrugGroup, SideEffect, DrugSideEffect, TradeName
+from drugs.models import Drug, DrugGroup, SideEffect, DrugSideEffect
 
 
 # ===================== Фикстуры для 3×3 тестов =====================
 @pytest.fixture
 def drug_group():
     """Создаёт группу препаратов."""
-    from drugs.models import DrugGroup
-    return DrugGroup.objects.create(dg_name="Анальгетики")
+    return DrugGroup.objects.create(id=1, dg_name="Анальгетики")
 
 
 @pytest.fixture
 def three_drugs(drug_group):
     """Создаёт три препарата в БД и возвращает список."""
     drugs_data = [
-        {"drug_name": "амиодарон"},
-        {"drug_name": "амлодипин+периндоприл"},
-        {"drug_name": "апиксабан"}
+        {"id": 1, "drug_name": "амиодарон"},
+        {"id": 2, "drug_name": "амлодипин+периндоприл"},
+        {"id": 3, "drug_name": "апиксабан"}
     ]
     drugs = []
     for data in drugs_data:
         drug = Drug.objects.create(**data)
-        drug.drug_groups.add(drug_group)  # добавляем ManyToMany связь
+        drug.drug_groups.add(drug_group)
         drugs.append(drug)
     return drugs
 
@@ -36,9 +30,9 @@ def three_drugs(drug_group):
 def three_side_effects():
     """Создаёт три побочных эффекта в БД и возвращает список."""
     effects_data = [
-        {"se_name": "внутричерепное кровоизлияние", "se_name_en": "intracranial hemorrhage", "weight": 0.5},
-        {"se_name": "гипокалиемия", "se_name_en": "hypokalemia", "weight": 0.4},
-        {"se_name": "гиперкалиемия", "se_name_en": "hyperkalemia", "weight": 0.6}
+        {"id": 1, "se_name": "внутричерепное кровоизлияние", "se_name_en": "intracranial hemorrhage", "weight": 0.5},
+        {"id": 2, "se_name": "гипокалиемия", "se_name_en": "hypokalemia", "weight": 0.4},
+        {"id": 3, "se_name": "гиперкалиемия", "se_name_en": "hyperkalemia", "weight": 0.6}
     ]
     effects = []
     for data in effects_data:

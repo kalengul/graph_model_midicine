@@ -115,17 +115,13 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB', 'ml_db'),
-            'USER': os.environ.get('POSTGRES_USER', 'ml_user'),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'ml_pass'),
-            'HOST': os.environ.get('POSTGRES_HOST', 'db'),
-            'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+            'NAME': os.environ.get('POSTGRES_DB'),
+            'USER': os.environ.get('POSTGRES_USER'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+            'HOST': os.environ.get('POSTGRES_HOST'),
+            'PORT': os.environ.get('POSTGRES_PORT'),
             'TEST': {
-                'NAME': 'your_test_db',
-                'USER': 'your_db_user',
-                'PASSWORD': 'your_db_password',
-                'HOST': 'localhost',
-                'PORT': '5432',
+                'NAME': 'test_ml_db',
             },
         }
     }
