@@ -30,28 +30,9 @@ class PostgresCleaner(BaseCleaner):
         self.model_classes = model_classes
 
     def clear_table(self):
-        # with connection.cursor() as cursor:
-        #     for table in self.table_names:
-        #         cursor.execute(f'DELETE FROM "{table}";')
-        #         cursor.execute(f"""
-        #             SELECT pg_get_serial_sequence('"{table}"', 'id');
-        #         """)
-        #         seq = cursor.fetchone()[0]
-        #         if seq:
-        #             cursor.execute(f"ALTER SEQUENCE {seq} RESTART WITH 1;")
         with connection.cursor() as cursor:
-            # Отключаем проверки внешних ключей
-            cursor.execute("SET CONSTRAINTS ALL DEFERRED;")
-            # Удаляем данные
-            for table in self.table_names:
-                cursor.execute(f'DELETE FROM "{table}";')
-            # Сбрасываем последовательности на 1
-            for table in self.table_names:
-                try:
-                    cursor.execute(f"SELECT setval(pg_get_serial_sequence('{table}', 'id'), 1, false);")
-                except Exception:
-                    pass
-            cursor.execute("SET CONSTRAINTS ALL IMMEDIATE;")
+            quoted_tables = [f'"{table}"' for table in self.table_names]
+            cursor.execute(f"TRUNCATE TABLE {', '.join(quoted_tables)} RESTART IDENTITY CASCADE;")
 
 def universal_cleaner(model_classes, table_names=None):
     """Фабрика, возвращающая подходящий чистильщик для текущей БД.
