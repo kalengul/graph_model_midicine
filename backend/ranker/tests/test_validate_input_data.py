@@ -19,6 +19,7 @@ class TestValidateWeightsCompleteness:
     @patch('ranker.views.SideEffect')
     @patch('ranker.views.Drug')
     @patch('ranker.views.DrugSideEffect')
+    @pytest.mark.django_db
     def test_no_side_effects_returns_error(self, mock_dse, mock_drug, mock_se, api_instance):
         """Тест: если нет побочных эффектов → возвращается CustomResponse с ошибкой"""
         # Arrange
@@ -35,6 +36,7 @@ class TestValidateWeightsCompleteness:
     @patch('ranker.views.SideEffect')
     @patch('ranker.views.Drug')
     @patch('ranker.views.DrugSideEffect')
+    @pytest.mark.django_db
     def test_mismatch_returns_error(self, mock_dse, mock_drug, mock_se, api_instance):
         """Тест: несоответствие actual != expected → ошибка"""
         # Arrange
@@ -55,6 +57,7 @@ class TestValidateWeightsCompleteness:
     @patch('ranker.views.SideEffect')
     @patch('ranker.views.Drug')
     @patch('ranker.views.DrugSideEffect')
+    @pytest.mark.django_db
     def test_valid_returns_none(self, mock_dse, mock_drug, mock_se, api_instance):
         """Тест: корректные данные → возвращает None"""
         # Arrange
@@ -71,6 +74,7 @@ class TestValidateWeightsCompleteness:
     @patch('ranker.views.SideEffect')
     @patch('ranker.views.Drug')
     @patch('ranker.views.DrugSideEffect')
+    @pytest.mark.django_db
     def test_calls_expected_methods(self, mock_dse, mock_drug, mock_se, api_instance):
         """Тест: проверяет, что методы были вызваны с правильными параметрами"""
         # Arrange
@@ -111,6 +115,7 @@ class TestValidateWeightsCompletenessRealDB:
             'drugs': [drug1, drug2]
         }
     
+    @pytest.mark.django_db
     def test_valid_with_real_data(self, db, api_instance, setup_test_data):
         """Тест с реальными данными и полной матрицей связей"""
         
@@ -135,6 +140,7 @@ class TestValidateWeightsCompletenessRealDB:
         # Assert
         assert result is None
     
+    @pytest.mark.django_db
     def test_mismatch_with_real_data(self, db, api_instance, setup_test_data):
         """Тест с реальными данными и неполной матрицей связей"""
         

@@ -8,10 +8,8 @@ FILE_UPLOAD_MAX_MEMORY_SIZE = 104857600  # 100 MB
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-load_dotenv(override=True)
-MINI_FRONT_PATH = os.path.join(BASE_DIR, "mini_front", "dist")
 
-from .logging import LOGGING
+load_dotenv(override=True)
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-default-key')
@@ -20,9 +18,16 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'unsafe-default-key')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-# ALLOWED_HOSTS = ['*']
+
+GIT_COMMIT_HASH = os.getenv('GIT_COMMIT_HASH')
+
+if not GIT_COMMIT_HASH and not DEBUG:
+    raise ValueError('GIT_COMMIT_HASH environment variable is required in production')
+
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 os.makedirs(LOG_DIR, exist_ok=True)
+
+MINI_FRONT_PATH = os.path.join(BASE_DIR, "mini_front", "dist")
 
 # Application definition
 
@@ -110,17 +115,13 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ.get('POSTGRES_DB', 'ml_db'),
-            'USER': os.environ.get('POSTGRES_USER', 'ml_user'),
-            'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'ml_pass'),
-            'HOST': os.environ.get('POSTGRES_HOST', 'db'),
-            'PORT': os.environ.get('POSTGRES_PORT', '5432'),
+            'NAME': os.environ.get('POSTGRES_DB'),
+            'USER': os.environ.get('POSTGRES_USER'),
+            'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+            'HOST': os.environ.get('POSTGRES_HOST'),
+            'PORT': os.environ.get('POSTGRES_PORT'),
             'TEST': {
-                'NAME': 'your_test_db',
-                'USER': 'your_db_user',
-                'PASSWORD': 'your_db_password',
-                'HOST': 'localhost',
-                'PORT': '5432',
+                'NAME': 'test_ml_db',
             },
         }
     }

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import SystemState
+from logging_system.models import SystemState
 
 class SystemStateSerializer(serializers.ModelSerializer):
     class Meta:

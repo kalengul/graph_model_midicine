@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import BayeseView, BayesColor
+from med_bayes.views import BayeseView, BayesColor
 
 
 urlpatterns = [

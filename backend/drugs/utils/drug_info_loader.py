@@ -1,6 +1,6 @@
 import logging
 
-from ..models import (  BannedDrugPair,
+from drugs.models import (  BannedDrugPair,
                         DrugSideEffect,
                         Drug,
                         SideEffect,
@@ -10,7 +10,7 @@ from ..models import (  BannedDrugPair,
                         SideEffectsGender,
                         TradeName)
 from contraindications.models import Contraindication
-from .banned_pairs_loader import JSONBannedPairLoader
+from drugs.utils.banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from drugs.utils.universal_cleaner import universal_cleaner
 
@@ -44,17 +44,18 @@ class DrugDataLoader:
                         'Половая принадлежность побочного эффекта; '
                         )
             universal_cleaner(
-                model_classes=[ Drug,
-                                DrugGroup,
-                                DrugsAgeContraindications,
-                                DrugSideEffect,
-                                Contraindication,
-                                BannedDrugPair,
-                                SideEffect,
-                                Nosology,
-                                SideEffectsGender,
-                                TradeName
-                                ]
+                model_classes=[
+                    DrugsAgeContraindications,
+                    DrugSideEffect,
+                    SideEffectsGender,
+                    TradeName,
+                    BannedDrugPair,
+                    Contraindication,
+                    DrugGroup,
+                    Drug,
+                    Nosology,
+                    SideEffect,
+                ]
             ).clear_table()
 
         logger.info(f'Загрузка групп...')

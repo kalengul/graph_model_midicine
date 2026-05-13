@@ -8,13 +8,13 @@ import pandas as pd
 
 from django.conf import settings
 
-from ..models import (Drug,
+from drugs.models import (Drug,
                       DrugSideEffect,
                       SideEffect,
                       SideEffectsGender
                       )
 
-from ..utils.universal_cleaner import universal_cleaner
+from drugs.utils.universal_cleaner import universal_cleaner
 from drugs.utils.custom_exception import IncorrectFile
 
 logger = logging.getLogger('drugs')

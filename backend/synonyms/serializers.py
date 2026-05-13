@@ -1,7 +1,7 @@
 import os
 
 from rest_framework import serializers
-from .models import SynonymGroup, Synonym, SynonymStatus
+from synonyms.models import SynonymGroup, Synonym, SynonymStatus
 
 
 class SynonymGroupCreateSerializer(serializers.ModelSerializer):

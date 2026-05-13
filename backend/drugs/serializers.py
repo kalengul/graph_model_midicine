@@ -1,11 +1,11 @@
 import logging
 
 from rest_framework import serializers
-from .models import (DrugGroup,
-                     Drug,
-                     SideEffect,
-                     DrugSideEffect,
-                     Nosology)
+from drugs.models import (DrugGroup,
+                          Drug,
+                          SideEffect,
+                          DrugSideEffect,
+                          Nosology)
 
 
 logger = logging.getLogger('drugs')

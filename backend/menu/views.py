@@ -2,8 +2,8 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.response import Response
 
-from .models import Menu
-from .serializers import MenuSerializer
+from menu.models import Menu
+from menu.serializers import MenuSerializer
 
 
 class GetMenuAPI(APIView):

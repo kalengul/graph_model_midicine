@@ -30,14 +30,15 @@ class BaseCleaner(ABC):
         'drugs_drugsagecontraindications',
         'drugs_sideeffectsgender'
     ]
-    model_classes = [
-        DrugSideEffect,
-        Drug,
-        SideEffect,
-        DrugGroup,
-        Nosology,
+    model_classes=[
         DrugsAgeContraindications,
-        SideEffectsGender
+        DrugSideEffect,
+        SideEffectsGender,
+        BannedDrugPair,
+        DrugGroup,
+        Drug,
+        Nosology,
+        SideEffect
     ]
 
     @abstractmethod

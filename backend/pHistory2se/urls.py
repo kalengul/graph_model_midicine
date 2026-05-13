@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import (MedicalHistoryToSideEffectsAPIView, 
-                    ModelConfigView,
-                    DictionaryView,
-                    DictionaryDirectoryView
-                    )
+from pHistory2se.views import (MedicalHistoryToSideEffectsAPIView,
+                               ModelConfigView,
+                               DictionaryView,
+                               DictionaryDirectoryView
+                               )
 
 urlpatterns = [
     path(

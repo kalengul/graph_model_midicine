@@ -1,64 +1,70 @@
-version: "3.9"
-
 services:
 
   db:
     image: postgres:15
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 2s
+      retries: 3
+      start_period: 0s 
     container_name: db
     restart: unless-stopped
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
       - .env
-    networks:
-      - backend
 
   backend:
-    build: ./backend
+    build: 
+      context: ./backend
+      args:
+        - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
+    environment:
+      - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown} 
+      - USE_SQLITE=False
+      - POSTGRES_HOST=db
     container_name: backend
     restart: unless-stopped
     volumes:
-      - ./backend:/app
       - static_volume:/app/static
-    depends_on:
-      - db
     env_file:
       - .env
-    networks:
-      - backend
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health/"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
 
   nginx:
+    container_name: nginx
     build:
       context: .
       dockerfile: nginx/Dockerfile
     ports:
       - "80:80"
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     volumes:
       - static_volume:/static
-    networks:
-      - backend
 
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin
+  adminer:
+    image: adminer:latest
+    container_name: adminer
     restart: unless-stopped
-    env_file:
-      - .env
     ports:
-      - "5050:80"
-    volumes:
-      - pgadmin_data:/var/lib/pgadmin
+      - "8080:8080"
+    environment:
+      - ADMINER_DEFAULT_SERVER=db
     depends_on:
-      - db
-    networks:
-      - backend
+      db:
+        condition: service_healthy
 
 volumes:
   postgres_data:
-  pgadmin_data:
   static_volume:
-
-networks:
-  backend:

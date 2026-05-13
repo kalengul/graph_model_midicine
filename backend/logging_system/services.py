@@ -1,6 +1,6 @@
 # backend/logging_system/services.py
 import os
-from .config import get_logger, LOG_DIR
+from logging_system.config import get_logger, LOG_DIR
 from drugs.models import Drug
 from logging_system.models import SystemState
 

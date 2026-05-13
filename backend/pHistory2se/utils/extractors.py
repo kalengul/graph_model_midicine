@@ -213,13 +213,3 @@ class SimpleMedicalExtractor:
             result = lower_text
 
         return result
-
-# --- Блок для быстрой проверки ---
-if __name__ == "__main__":
-    from ..parsers import SimpleDocxParser
-
-    text = SimpleDocxParser.extract_text("backend\\data\\medcard_files\\Выписка_ХСН_2.docx")
-    parsed_text = SimpleMedicalExtractor.extract(text)
-    print(parsed_text)
-    contraindications = SimpleMedicalExtractor.extract_contraindications(parsed_text)
-    print(contraindications)
