@@ -14,9 +14,10 @@ def get_logger():
     """Настройка логгера с ротацией файлов (10 MB, 5 бэкапов)."""
     logger = logging.getLogger('calculation_api')
     if not logger.handlers:          # избегаем дублирования
+        git_version = os.getenv('GIT_COMMIT_VERSION')
         logger.setLevel(logging.INFO)
         formatter = logging.Formatter(
-            '{asctime} | {message}',
+            '{asctime} | {git_version} | {message}',
             style='{',
             datefmt='%Y-%m-%d %H:%M:%S'
         )
@@ -25,4 +26,12 @@ def get_logger():
         )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
+
+        class GitVersionFilter(logging.Filter):
+            def filter(self, record):
+                record.git_version = git_version
+                return True
+        
+        logger.addFilter(GitVersionFilter())
+        
     return logger

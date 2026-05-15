@@ -41,9 +41,8 @@ class CalculationLoggingService:
         state = SystemState.get_current_state()
         drugs_file = state.drugs_file_name or 'N/A'
         weights_file = state.weights_file_name or 'N/A'
-        commit = state.commit_hash or 'N/A'
 
         _logger.info(
             f"User: {user_str} | Drugs: {drug_names} | "
-            f"DrugsFile: {drugs_file} | WeightsFile: {weights_file} | Commit: {commit}"
+            f"DrugsFile: {drugs_file} | WeightsFile: {weights_file}"
         )
