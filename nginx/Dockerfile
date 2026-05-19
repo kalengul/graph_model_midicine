@@ -1,6 +1,6 @@
 
 # ===== Stage 1: Build main frontend =====
-FROM node:22 as main_front_builder
+FROM node:22 AS main_front_builder
 
 WORKDIR /app/frontend
 COPY frontend/package*.json ./
