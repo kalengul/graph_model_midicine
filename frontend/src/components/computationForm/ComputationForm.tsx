@@ -290,7 +290,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                         <div className='flex'>
                             <div className='flex ai-center me-3'>
                                 <input type="radio" value="man" name="gender" className='me-1' checked={gender === 'man'} onChange={genderChangeHandle}/>
-                                <label>Муской</label>
+                                <label>Мужской</label>
                             </div>
                             <div className='flex ai-center'>
                                 <input type="radio" value="woman" name="gender" className='me-1' checked={gender === 'woman'} onChange={genderChangeHandle}/>
@@ -344,7 +344,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
             
             </div>
 
-            <button className='btn send-btn mt-3' onClick={SendDataHandler}>Расчитать взаимодействие</button>
+            <button className='btn send-btn mt-3' onClick={SendDataHandler}>Рассчитать взаимодействие</button>
         </>
     )
 }
