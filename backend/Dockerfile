@@ -13,9 +13,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 ARG GIT_COMMIT_HASH=unknown
+ENV GIT_COMMIT_HASH=${GIT_COMMIT_HASH}
 RUN echo "${GIT_COMMIT_HASH}" > /app/.version
 
 RUN python manage.py collectstatic --noinput
 
-CMD python manage.py migrate && \
-    gunicorn ml_pharm_web.wsgi:application --bind 0.0.0.0:8000
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
