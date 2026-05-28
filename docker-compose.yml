@@ -47,11 +47,12 @@ services:
       dockerfile: nginx/Dockerfile
     ports:
       - "80:80"
+      - "443:443"
     depends_on:
       - backend
     volumes:
       - static_volume:/static
-
+      - /etc/letsencrypt:/etc/letsencrypt:ro
   adminer:
     image: adminer:latest
     container_name: adminer
