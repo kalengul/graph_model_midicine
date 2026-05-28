@@ -213,7 +213,7 @@ class CalculationAPI(APIView):
 
         return CustomResponse(
             status=status.HTTP_200_OK,
-            message='Совместимость ЛС по Fortran успешно расcчитана',
+            message='Совместимость ЛС по Fortran успешно рассчитана',
             http_status=status.HTTP_200_OK,
             data=template_data
         )
@@ -231,7 +231,7 @@ class CalculationAPI(APIView):
         
         return CustomResponse(
             status=status.HTTP_200_OK,
-            message='Совместимость ЛС по Fortran успешно расcчитана',
+            message='Совместимость ЛС по Fortran успешно рассчитана',
             http_status=status.HTTP_200_OK,
             data=template_data
         )
@@ -263,7 +263,7 @@ class CalculationAPI(APIView):
         
         return CustomResponse(
             status=status.HTTP_200_OK,
-            message='Совместимость ЛС по Fortran успешно расcчитана',
+            message='Совместимость ЛС по Fortran успешно рассчитана',
             http_status=status.HTTP_200_OK,
             data=final_data
         )
