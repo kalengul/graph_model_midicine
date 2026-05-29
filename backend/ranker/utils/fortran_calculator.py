@@ -325,7 +325,8 @@ class FortranCalculator(BaseCalculator):
         context.update(self._prepare_combination_context(drugs_class_2, drugs_class_3))
 
         # Имена выбранных препаратов
-        context['drugs'] = self._get_drug_names_bulk(n_drug)
+        # context['drugs'] = self._get_drug_names_bulk(n_drug)
+        context['drugs'] = list(self._get_drug_names_bulk(n_drug).values())
 
         # Если несовместимо, рекомендации
         if context["compatibility_fortran"] == "incompatible":
