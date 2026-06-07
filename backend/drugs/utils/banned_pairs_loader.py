@@ -10,7 +10,8 @@ import pandas as pd
 from drugs.models import BannedDrugPair, Drug
 from drugs.utils.custom_exception import (PairFileError,
                                           PairDBError)
-from drugs.utils.cleaner import BannedDrugPairCleanProcessor
+# from drugs.utils.cleaner import BannedDrugPairCleanProcessor
+from drugs.utils.universal_cleaner import universal_cleaner
 from typing import List, Dict, Tuple
 
 logger = logging.getLogger('drugs')
@@ -23,20 +24,24 @@ class BannedPairLoader(ABC):
     def load_to_db(self, *args, **kwargs):
         """Загрузка запрещённых пар."""
 
-    @abstractmethod
+    # @abstractmethod
     def clear_db(self):
         """Очистка БД от старых пар ЛС."""
+        universal_cleaner(model_classes=[BannedDrugPair]).clear_table()
 
 
 class PandasBannedPairLoader(BannedPairLoader):
-    """Загрузчик запрещённых пар с помощью pandas."""
+    """
+    Универсальный загрузчик запрещённых пар из CSV (; разделитель) и Excel.
+    Формат определяется по расширению файла.
+    """
 
-    DRUG1 = 'drug1'
-    DRUG2 = 'drug2'
+    DRUG1 = 'first_drug'
+    DRUG2 = 'second_drug'
     COMMENT = 'comment'
-    DRUG1_NUMBER = 0
-    DRUG2_NUMBER = 1
-    COMMENT_NUMBER = 2
+    # DRUG1_NUMBER = 0
+    # DRUG2_NUMBER = 1
+    # COMMENT_NUMBER = 2
     NULL_VALUES = ['', 'nan', 'NaN', 'NAN', 'null',
                    'NULL', 'none', 'None', 'NONE', ' ']
 
@@ -44,98 +49,100 @@ class PandasBannedPairLoader(BannedPairLoader):
         """Инициализатор."""
         self.import_path = import_path
 
-    @abstractmethod
-    def load_to_db(self, *args, **kwargs):
-        """Загрузка запрещённых пар."""
-
-    def clear_db(self):
-        """Очистка БД от старых пар ЛС."""
-        BannedDrugPairCleanProcessor().get_cleaner().clear_table()
-
-
-class CSVBannedPairLoader(PandasBannedPairLoader):
-    """Загрузчик запрещённых пар."""
-
-    def load_to_db(self, *args, **kwargs):
-        """Загрузка запрещённых пар из CSV-файлов."""
+    def _read_file_to_dataframe(self):
+        """Определяет формат файла и возвращает DataFrame."""
+        ext = os.path.splitext(self.import_path)[1].lower()
         try:
-            df = pd.read_csv(self.import_path,
-                             na_values=self.NULL_VALUES,
-                             keep_default_na=True,
-                             sep=';')
+            if ext == '.csv':
+                df = pd.read_csv(
+                    self.import_path,
+                    na_values=self.NULL_VALUES,
+                    keep_default_na=True,
+                    sep=';'
+                )
+            elif ext in ('.xlsx', '.xls'):
+                df = pd.read_excel(
+                    self.import_path,
+                    na_values=self.NULL_VALUES,
+                    keep_default_na=True,
+                    dtype=str   # читаем всё как строки для единой обработки
+                )
+            else:
+                raise PairFileError(f'Неподдерживаемый формат: {ext}. Ожидается .csv, .xlsx или .xls')
 
-            df = df.rename(
-                columns={df.columns[self.DRUG1_NUMBER]: self.DRUG1,
-                         df.columns[self.DRUG2_NUMBER]: self.DRUG2,
-                         df.columns[self.COMMENT_NUMBER]: self.COMMENT})
-
-            logger.debug(f'df.shape = {df.shape}')
-        except Exception as error:
+            logger.debug(f'Файл прочитан, форма={df.shape}')
+            return df
+        except Exception as e:
             message = (
-                'Проблема загрузки пар ЛС. '
-                'Ошибка чтения csv-файла'
-                f' {os.path.basename(self.import_path)}')
+                f'Проблема загрузки пар ЛС. '
+                f'Ошибка чтения файла {os.path.basename(self.import_path)}: {str(e)}'
+            )
             logger.error(message)
-            raise PairFileError(message) from error
+            raise PairFileError(message) from e
 
+    def load_to_db(self, *args, **kwargs):
+        """Загрузка запрещённых пар из CSV или Excel."""
+        df = self._read_file_to_dataframe()
+
+        # --- Общая логика обработки (как в CSVBannedPairLoader) ---
         df = df.dropna(subset=[self.DRUG1, self.DRUG2])
 
-        df[self.DRUG1] = df[self.DRUG1].str.strip()
-        df[self.DRUG2] = df[self.DRUG2].str.strip()
-        df[self.DRUG1] = df[self.DRUG1].str.replace(r'\s*\+\s*',
-                                                    '+',
-                                                    regex=True)
-        df[self.DRUG2] = df[self.DRUG2].str.replace(r'\s*\+\s*',
-                                                    '+',
-                                                    regex=True)
+        df[self.DRUG1] = df[self.DRUG1].astype(str).str.strip()
+        df[self.DRUG2] = df[self.DRUG2].astype(str).str.strip()
+        df[self.DRUG1] = df[self.DRUG1].str.replace(r'\s*\+\s*', '+', regex=True)
+        df[self.DRUG2] = df[self.DRUG2].str.replace(r'\s*\+\s*', '+', regex=True)
         df[self.DRUG1] = df[self.DRUG1].str.lower()
         df[self.DRUG2] = df[self.DRUG2].str.lower()
 
         seen_pairs = set()
-        unique_rows = []
+
+        stats = {
+            'duplicates_skipped': 0,            # дубли внутри файла
+            'drug_not_found': 0,                # нет одного из ЛС в справочнике
+            'created': 0,                       # успешно создано
+        }
 
         try:
             for _, row in df.iterrows():
                 drug1, drug2 = row[self.DRUG1], row[self.DRUG2]
-
                 normal_pair = (drug1, drug2)
                 reverse_pair = (drug2, drug1)
 
                 if reverse_pair in seen_pairs or normal_pair in seen_pairs:
+                    stats['duplicates_skipped'] += 1
                     continue
-
                 seen_pairs.add(normal_pair)
-                unique_rows.append((drug1, drug2))
 
-                comment = row[self.COMMENT]
-                comment = (
-                    None if pd.isna(comment)
-                    else str(comment).strip().lower())
-                print('comment =', comment)
+                comment = row.get(self.COMMENT)
+                comment = None if pd.isna(comment) else str(comment).strip().lower()
 
-                if (Drug.objects.filter(drug_name__iexact=drug1).exists()
-                        and Drug.objects.filter(drug_name__iexact=drug2
-                                                ).exists()):
-                    logger.debug('Есть в БД')
-                    logger.debug(f'drug1 = {drug1}')
-                    logger.debug(f'drug2 = {drug2}')
-                    BannedDrugPair.objects.create(first_drug=drug1,
-                                                  second_drug=drug2,
-                                                  comment=comment)
+                drug1_exists = Drug.objects.filter(drug_name__iexact=drug1).exists()
+                drug2_exists = Drug.objects.filter(drug_name__iexact=drug2).exists()
+
+                if drug1_exists and drug2_exists:
+                    _, created = BannedDrugPair.objects.get_or_create(
+                        first_drug=drug1,
+                        second_drug=drug2,
+                        defaults={'comment': comment}
+                    )
+                    if created:
+                        stats['created'] += 1
+                    else:
+                        # пара уже существовала в БД (хотя обычно таблица чистится)
+                        stats['duplicates_skipped'] += 1
                 else:
-                    logger.debug('Нет в БД')
-                    logger.debug(f'drug1 = {drug1}')
-                    logger.debug(f'drug2 = {drug2}')
-        except Exception as error:
-            message = ('Проблема загрузки пар ЛС. '
-                       'Ошибка при добавлении пары в БД')
+                    stats['drug_not_found'] += 1
+                    logger.debug(f'Нет в БД: {drug1}, {drug2}')
+
+            # Логируем или возвращаем статистику
+            logger.info(f'Статистика загрузки: {stats}')
+            # Если нужно вернуть в ответе – сохранить stats в self или вернуть из метода
+            return stats
+
+        except Exception as e:
+            message = 'Проблема загрузки пар ЛС. Ошибка при добавлении пары в БД'
             logger.error(message)
-            raise PairDBError(message) from error
-
-    def clear_db(self):
-        """Очистка БД от старых пар ЛС."""
-        super().clear_db()
-
+            raise PairDBError(message) from e
 
 class JSONBannedPairLoader(ABC):
     """Загрузчик запрещённых пар из JSON."""
@@ -303,115 +310,7 @@ class JSONBannedPairLoader(ABC):
             raise PairDBError(message) from error
 
 
-    def clear_db(self):
-        """Очистка БД от старых пар ЛС."""
-        BannedDrugPairCleanProcessor().get_cleaner().clear_table()
-
-
-# class GroupBannedPairLoader (ABC):
-#     """
-#     Загрузчик запрещённых пар ЛС на основе групп из .json.
-#     """
-
-#     # Ключи полей 
-#     DRUG_KEY = 'drug'
-#     GROUP_KEY = 'group'
-#     BANNED_GROUPS_KEY = 'banned_groups'
-
-#     @staticmethod
-#     def normalize_plus_sign(text: str) -> str:
-#         """
-#         Нормализует пробелы вокруг знака '+'.
-#         Пример: "Препарат + Другой" -> "Препарат+Другой"
-#         """
-#         return re.sub(r'\s*\+\s*', '+', text)
-
-#     @classmethod
-#     def preprocess_drug_name(self, drug_name):
-#         """
-#         Предобработка названия препарата:
-#         1. Удаление пробелов в начале и конце
-#         2. Нормализация пробелов вокруг знака +
-#         3. Приведение к нижнему регистру
-#         """
-#         if not drug_name:
-#             return drug_name
-            
-#         # Удаляем пробелы в начале и конце
-#         processed = drug_name.strip()
-        
-#         # Нормализуем пробелы вокруг знака +
-#         processed = self.normalize_plus_sign(processed)
-        
-#         # Приводим к нижнему регистру для регистронезависимого сравнения
-#         processed = processed.lower()
-        
-#         return processed
-
-#     def find_banned_pairs_by_group(self, data: List[Dict]) -> List[Tuple[str, str]]:
-#         """
-#         Анализирует входные данные и возвращает список уникальных пар (drug1, drug2),
-#         которые должны быть запрещены согласно логике групп.
-#         """
-#         # Индекс: группа -> множество препаратов
-#         group_to_drugs: Dict[str, Set[str]] = {}
-
-#         # Сначала заполняем индекс
-#         for item in data:
-#             drug = self.preprocess_drug_name(item.get(self.DRUG_KEY))
-#             group = item.get(self.GROUP_KEY)
-#             if drug and group:
-#                 group_to_drugs.setdefault(group, set()).add(drug)
-
-#         # Множество для хранения уникальных пар (отсортированных)
-#         pairs: Set[Tuple[str, str]] = set()
-
-#         # Проходим по данным и формируем пары
-#         for item in data:
-#             drug1 = self.preprocess_drug_name(item.get(self.DRUG_KEY))
-#             banned_groups = item.get(self.BANNED_GROUPS_KEY, [])
-
-#             for banned_group in banned_groups:
-#                 for drug2 in group_to_drugs.get(banned_group, []):
-#                     if drug1 == drug2:
-#                         continue
-#                     # Сортируем, чтобы пара была канонической (first_drug, second_drug)
-#                     pair = tuple(sorted([drug1, drug2]))
-#                     pairs.add(pair)
-
-#         return list(pairs)
-
-#     def load_to_db(self, *args, **kwargs):
-#         """
-#         Загружает запрещённые пары в БД.
-#         Ожидает именованный аргумент 'data' со списком словарей.
-#         Возвращает количество созданных записей.
-#         """
-#         data = kwargs.get('data')
-#         if data is None:
-#             raise ValueError("Не передан обязательный параметр 'data'")
-
-#         # 1. Получаем все потенциальные пары по группам
-#         new_pairs = self.find_banned_pairs_by_group(data)
-
-#         # 2. Получаем уже существующие пары из БД в виде множества отсортированных кортежей
-#         existing_pairs = set()
-#         for first, second in BannedDrugPair.objects.values_list('first_drug', 'second_drug'):
-#             # Приводим к нормализованному виду на случай, если в БД есть неканонические записи
-#             norm_first = self.normalize_drug_name(first)
-#             norm_second = self.normalize_drug_name(second)
-#             existing_pairs.add(tuple(sorted([norm_first, norm_second])))
-
-#         # 3. Оставляем только те, которых ещё нет
-#         pairs_to_add = [pair for pair in new_pairs if pair not in existing_pairs]
-
-#         # 4. Создаём записи в БД
-#         created_count = 0
-#         for first, second in pairs_to_add:
-#             BannedDrugPair.objects.create(first_drug=first, second_drug=second)
-#             created_count += 1
-#             # Здесь можно добавить логирование, например:
-#             # logger.debug(f"Создана пара: {first} – {second}")
-
-#         # 5. Возвращаем результат (можно также вернуть список добавленных пар)
-#         return created_count
+    # def clear_db(self):
+    #     """Очистка БД от старых пар ЛС."""
+    #     universal_cleaner(model_classes=[BannedDrugPair]).clear_table()
+        # BannedDrugPairCleanProcessor().get_cleaner().clear_table()

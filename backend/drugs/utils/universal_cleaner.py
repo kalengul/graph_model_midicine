@@ -16,8 +16,14 @@ class SQLiteCleaner(BaseCleaner):
         self.model_classes = model_classes
 
     def clear_table(self):
+        import threading
+        print(f"THREAD={threading.get_ident()} START CLEAR")
+
         for model in self.model_classes:
+            print(f"THREAD={threading.get_ident()} DELETE {model.__name__}")
             model.objects.all().delete()
+
+        print(f"THREAD={threading.get_ident()} END CLEAR")
         with connection.cursor() as cursor:
             for table in self.table_names:
                 cursor.execute("DELETE FROM sqlite_sequence WHERE name = %s", [table])
