@@ -159,17 +159,13 @@ class DrugDataLoader:
             if not drug_name:
                 continue
             
-            drug, _ = Drug.objects.get_or_create(
-                drug_name__iexact=drug_name,
-                defaults={'drug_name': drug_name}
-            )
+            drug, _ = Drug.objects.get_or_create(drug_name=drug_name)
             
             if groups:
                 for group_name in groups:
                     if group_name:
                         group, group_created = DrugGroup.objects.get_or_create(
-                            dg_name__iexact=group_name,
-                            defaults={'dg_name': group_name}
+                            dg_name=group_name
                         )
                         if group_created:
                             self.stats['drug_groups'] += 1
@@ -180,8 +176,7 @@ class DrugDataLoader:
             
             if nosology_name:
                 nosology, nosology_created = Nosology.objects.get_or_create(
-                    name__iexact=nosology_name,
-                    defaults={'name': nosology_name}
+                    name=nosology_name
                 )
                 if nosology_created:
                     self.stats['nosology'] = self.stats.get('nosology', 0) + 1
@@ -202,7 +197,7 @@ class DrugDataLoader:
         old_count = BannedDrugPair.objects.count()
         
         # Используем существующий загрузчик
-        self.loader_banned.load_to_db(data=data)
+        # self.loader_banned.load_to_db(data=data)
         
         # Считаем новые пары
         new_count = BannedDrugPair.objects.count()

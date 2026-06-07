@@ -27,7 +27,7 @@ from drugs.serializers import (
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
-from drugs.utils.banned_pairs_loader import (CSVBannedPairLoader,
+from drugs.utils.banned_pairs_loader import (PandasBannedPairLoader,
                                              JSONBannedPairLoader)
 from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
@@ -637,7 +637,9 @@ class BannedPairLoadView(APIView):
             logger.info('Импорт запрещённых пар ЛС в БД начался')
             importing_file = serializer.validated_data['file']
 
-            if importing_file.name.endswith('.csv'):
+            ext = os.path.splitext(importing_file.name)[1].lower()
+
+            if ext in ('.csv', '.xlsx', '.xls'):
                 path = os.path.join(settings.TXT_DB_PATH, importing_file.name)
 
                 if os.path.exists(path):
@@ -647,11 +649,10 @@ class BannedPairLoadView(APIView):
                     with open(path, 'wb+') as file:
                         file.write(importing_file.read())
                     path = os.path.abspath(path)
-                    loader = CSVBannedPairLoader(import_path=path)
-                    logger.info('Очистка БД начинается')
+
+                    loader = PandasBannedPairLoader(import_path=path)
                     loader.clear_db()
-                    logger.info('БД очистилось')
-                    loader.load_to_db()
+                    stats = loader.load_to_db()
                 except IncorrectFile as error:
                     logger.error(f'Ошибка работы с файлом: {str(error)}')
                     return CustomResponse(
@@ -672,9 +673,10 @@ class BannedPairLoadView(APIView):
                 return CustomResponse(
                     status=status.HTTP_200_OK,
                     message=self.SUCCESSFUL_IMPORT,
+                    data=stats,
                     http_status=status.HTTP_200_OK
                 )
-            elif importing_file.name.endswith('.json'):
+            elif ext == '.json':
                 file_content = importing_file.read()
 
                 if isinstance(file_content, bytes):
@@ -688,10 +690,6 @@ class BannedPairLoadView(APIView):
                     loader.clear_db()
                     logger.info('БД очистилось')
                     loader.load_to_db(data=data)
-                    # """"вообще тут оч плохо все. лоад ту дб надо вынести в отдельную функцию, как и 
-                    # def normalize_plus_sign  def preprocess_drug_name """
-                    # loader = GroupBannedPairLoader()
-                    # loader.load_to_db(data=data)
                 except IncorrectFile as error:
                     logger.error(f'Ошибка работы с файлом: {str(error)}')
                     return CustomResponse(
@@ -717,7 +715,7 @@ class BannedPairLoadView(APIView):
             else:
                 return CustomResponse(
                         status=status.HTTP_400_BAD_REQUEST,
-                        message='Файл должен быть .csv',
+                        message='Файл должен быть .csv, .xlsx, .xls или .json',
                         http_status=status.HTTP_400_BAD_REQUEST
                     )
 
