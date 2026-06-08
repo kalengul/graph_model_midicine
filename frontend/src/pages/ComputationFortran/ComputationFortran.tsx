@@ -64,14 +64,7 @@ export const ComputationFortran = () =>{
                         />
                         {resultFortran.compatibility_fortran !== "banned" && resultFortran.compatibility_fortran !== "banned-contraindications" &&
                         <>
-                            {increasedRiskDrugs.length>0 && 
-                            <div className="mt-3">
-                                <h5>Лекарственные средства с наибольшим влиянием:</h5>
-                                {increasedRiskDrugs.map(riskdrug=><div>
-                                    {riskdrug.effect} - {riskdrug.drugs}
-                                </div>)}
-
-                            </div>}
+                            
                             <h5 className="mt-3">Риски побочных эффектов: </h5>
                         
                             {resultFortran.side_effects && resultFortran.side_effects.find(e=>e.compatibility.trim()==="incompatible") &&
@@ -123,8 +116,16 @@ export const ComputationFortran = () =>{
                             }
                             <button className="btn send-btn mt-1" onClick={VisibleRanksHandler}>{visibleTytle}</button>
 
+                            {increasedRiskDrugs.length>0 && 
+                            <div className="mt-3">
+                                <h5>Лекарственные средства с наибольшим влиянием:</h5>
+                                {increasedRiskDrugs.map(riskdrug=><div>
+                                    {riskdrug.effect} - {riskdrug.drugs}
+                                </div>)}
+
+                            </div>}
+
                             <h5 className="mt-3">Дополнительные лекарственные средства: </h5>
-                    
                             {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible") &&
                                 
                                 <CollapsList
