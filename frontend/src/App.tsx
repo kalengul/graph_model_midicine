@@ -7,6 +7,8 @@ import { fetchContraindicationssList } from './redux/ContraindicationsManageSlic
 import { initStates } from './redux/ComputationSlice';
 import { checkAuth } from './redux/AuthSlice';
 
+import { Nav } from './components/nav/nav';
+
 function App() {
   const routes = useRoutes()
   const dispatch = useAppDispatch()
@@ -25,11 +27,15 @@ function App() {
 
   return (
     <>
+    
+      
       <BrowserRouter>
-
-            {routes}
-
+        <div className="flex">
+          <Nav></Nav>
+          {routes}
+        </div>
       </BrowserRouter>
+      
     </>
 )
 }

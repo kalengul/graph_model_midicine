@@ -1,7 +1,6 @@
 import {useEffect, useState } from "react"
 
-import { ComputationForm } from "../../components/computationForm/ComputationForm";
-import { Nav } from '../../components/nav/nav';
+import { ComputationForm } from "../../components/computationForm/ComputationForm";// import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
 
@@ -40,8 +39,6 @@ export const ComputationFortran = () =>{
     }
 
     return(
-        <div className="flex">
-        <Nav></Nav>
         <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по Fortran</h1>
 
@@ -111,7 +108,7 @@ export const ComputationFortran = () =>{
                             
                             {isVisibleRick &&
                                 <div className="mt-2">
-                                    <h6>Коэффициэнты побочных эффектов:</h6>
+                                    <h6>Коэффициенты побочных эффектов:</h6>
                                     { resultFortran.SEFromDrug && resultFortran.SEFromDrug.map((serd, index) =>
                                         <CollapsList
                                             title = {serd.d_name}
@@ -165,6 +162,5 @@ export const ComputationFortran = () =>{
             </>}
 
         </main>
-        </div>
     )
 }

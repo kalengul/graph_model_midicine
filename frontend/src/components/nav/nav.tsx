@@ -23,7 +23,6 @@ export const Nav = ()=>{
     const location = useLocation();
     const locat = useMemo(() => location.pathname, [location.pathname]);
 
-
     useEffect(()=>{
         dispatch(fetchMenu()) //Получение меню с сервера
     }, [dispatch])
@@ -37,12 +36,9 @@ export const Nav = ()=>{
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const viewElem = (menuStatus: boolean, authStatus: boolean):boolean => {
-        if(!menuStatus) return true //Вывод если не нужна авторизация
-        else if( authStatus ) return true
-        else return false
-    }
+    const viewElem = (menuStatus: boolean, authStatus: boolean) => !menuStatus || authStatus;
 
+    if (locat === '/login') return null;
     return (
         <>
             <nav className={`flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav ${isMenuOpen ? "mobilePosition" : ""}`}>
@@ -53,9 +49,10 @@ export const Nav = ()=>{
                 </div>
 
                 <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>                
-                    <h1 className='logo' onClick={()=>navigate("/")}>ТОШ</h1>
+                    <h1 className='logo' onClick={()=>navigate('/')}>ТОШ</h1>
                     <hr />
-
+                    
+                    {/* Отображение пользователя */}
                     {isAuth &&
                         <div className='userinfo mb-5 flex ai-center fd-column'>
                             <img src={person} alt="person"/>
@@ -64,7 +61,9 @@ export const Nav = ()=>{
                         </div>
                     }
 
+                    {/* Отображение меню */}
                     <ul className="nav nav-pills flex-column mb-auto">
+                        {/* Основные элементы */}
                         {Array.isArray(menu) && menu.map((elem, index)=>
                             viewElem(elem.is_auth, isAuth) &&
                                 <li className='nav-item mb-3 nav-main' key={index}>
@@ -72,20 +71,18 @@ export const Nav = ()=>{
                                             {elem.title}
                                     </a>
                                 </li>
-                            
                         )}
 
+                        {/* Вход и выход */}
                         <div className='nav-footer'>
-                            {
-                                !isAuth ? 
-                                <li className='nav-item mb-5 nav-main'>
-                                    <a href="/login" className='nav-link link-dark link-login'> Войти </a>
-                                </li>
-                                :
-                                <li className='nav-item mb-5 nav-main'>
-                                    <a onClick = {()=>dispatch(logout())} className='nav-link link-dark link-login'> Выйти </a>
-                                </li>
-                            }
+                            <li className='nav-item mb-5 nav-main'>
+                                {
+                                    !isAuth ? 
+                                        <a href="/login" className='nav-link link-dark link-login'> Войти </a>
+                                    :
+                                        <a onClick = {()=>dispatch(logout())} className='nav-link link-dark link-login'> Выйти </a>
+                                }
+                            </li>
                         </div>
                     </ul>
                 </div>

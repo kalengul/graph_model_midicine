@@ -5,6 +5,7 @@ interface IMenuElem{
     title: string //ключ сохраняемого объекта
     slug: string //значение для сохранения
     is_auth: boolean //Нужна ли авторизация для входа (true - да; false - нет)
+    group: string | "" //Группа элемента меню 'manage', 'main'
 }
 
 interface IMenuState {

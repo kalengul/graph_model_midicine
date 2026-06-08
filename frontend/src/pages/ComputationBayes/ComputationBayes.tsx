@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Nav } from '../../components/nav/nav';
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
 import { CollapsList } from "../../components/collapsList/collapsList";
 import { LoadBar } from "../../components/loadBar/loadBar";
@@ -85,8 +84,7 @@ export const ComputationBayes = () =>{
     // const fetchBayesStatus = useAppSelector(state=>state.computation.fetchBayesStatus)
 
     return(
-    <div className="flex">
-        <Nav></Nav>
+    
         <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по Байесу</h1>
 
@@ -230,6 +228,6 @@ export const ComputationBayes = () =>{
             ))
             }
         </main>
-    </div>
+
     )
 }

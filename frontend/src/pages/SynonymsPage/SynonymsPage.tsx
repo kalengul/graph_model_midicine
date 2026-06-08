@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Nav } from '../../components/nav/nav';
-
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 import {fetchSynonymGroupList, fetchSynonymList, updateSynonymList} from "../../redux/SynonymsSlice"
 
@@ -47,8 +45,6 @@ export const SynonymsPage = () =>{
     }
 
     return(
-        <div className="flex">
-            <Nav></Nav>
             <main className="ms-2 p-3 w-100">
                 <h1>Синонимы</h1>
                 <div className='mt-3'>
@@ -85,6 +81,5 @@ export const SynonymsPage = () =>{
                 </>
                 }
             </main>
-        </div>
     )
 }

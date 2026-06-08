@@ -1,4 +1,3 @@
-import { Nav } from '../../components/nav/nav';
 
 import axios from 'axios'
 import { saveAs } from 'file-saver';
@@ -21,8 +20,6 @@ export const StatisticBayesPage = () =>{
     }
 
     return (
-        <div className="flex">
-            <Nav></Nav>
             <main className="ms-2 p-3 w-100">
                 <h1>Статистика по работе сети Байеса</h1>
                 <div className='mt-4'>
@@ -30,6 +27,5 @@ export const StatisticBayesPage = () =>{
                 </div>
                 
             </main>
-        </div>
     )
 }

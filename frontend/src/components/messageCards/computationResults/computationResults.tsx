@@ -63,15 +63,23 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
                 <div className="ComputationResults incompatible">
                     <h5><b>В введённом списке присутствуют лекарственные средства, сочетание которых запрещено:</b></h5>
                     {props.data && 
+                    
                         <div>
                             {props.data.map(e=>
-                            <div>
-                                {('pair' in e) && e.pair.join(" - ")}
-                                {/* {e.pair[0]} - {e.pair[1]}  */}
-                            </div>
+                            <>
+                                <div>
+                                    {('pair' in e) && e.pair.join(" - ")}
+                                    {/* {e.pair[0]} - {e.pair[1]}  */}
+                                </div>
+                                <div className="mt-3">
+                                     {('comment' in e) && (e.comment!==null) && <span><b>Причина:  </b>{e.comment}</span>}
+                                </div>
+
+                            </>
                             )}
                         </div>
                     }
+                  
                 </div>
             )
         case "banned-contraindications":

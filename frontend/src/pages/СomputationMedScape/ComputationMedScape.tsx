@@ -1,4 +1,3 @@
-import { Nav } from '../../components/nav/nav';
 
 import { ComputationMedScapeForm } from "../../components/computationMedScapeForm/computationMedScapeForm"
 import { ComputationResults } from "../../components/messageCards/computationResults/computationResults"
@@ -12,8 +11,7 @@ export const ComputationMedScape = () =>{
     const resultMedScape = useAppSelector(state=>state.computation.resultMedscape)
     const isresultMedscape = useAppSelector(state => state.computation.isresultMedscape)
     return(
-        <div className="flex">
-        <Nav></Nav>
+        
         <main className="ms-2 p-3 w-100">
             <h1>Взаимодействие по MedScape</h1>
             <ComputationMedScapeForm/>
@@ -35,6 +33,5 @@ export const ComputationMedScape = () =>{
                 )
             }
         </main>
-        </div>
     )
 }
