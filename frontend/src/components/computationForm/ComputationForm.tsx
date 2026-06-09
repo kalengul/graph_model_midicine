@@ -305,7 +305,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     </div>
                     {/* Противопоказания */}
                     <div className='mb-2 SuggestionsContainer'>
-                        <label className='form-label control-label'>Противопоказания:</label>
+                        <label className='form-label control-label'>Сопутствующие заболевания (состояния):</label>
                         <div className='flex fd-row SuggestionsContainer-data' >
                             <div className='checkBlock me-3'>
                                 <input onChange = {serchSuggestionsContraindHandler} value={inputValueContraind} name="drug-search" className=" checkBlock-search form-control mb-0" type="text" placeholder='Поиск ...'></input>
