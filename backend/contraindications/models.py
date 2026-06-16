@@ -25,3 +25,22 @@ class Contraindication(models.Model):
         """Настройка противопоказаний."""
 
         ordering = ['name']
+
+class OriginalContraindication(models.Model):
+    """Оригинальное название противопоказания (синоним)."""
+    
+    name = models.CharField(max_length=MAX_LENGTH,
+                            unique=True,
+                            verbose_name='Оригинальное название')
+    standard = models.ForeignKey(Contraindication,
+                                 on_delete=models.CASCADE,
+                                 related_name='original_names',
+                                 verbose_name='Соответствует стандартному названию')
+
+    def __str__(self):
+        return f'{self.name} -> {self.standard.name}'
+
+    class Meta:
+        ordering = ['name']
+        verbose_name = 'Оригинальное название'
+        verbose_name_plural = 'Оригинальные названия'

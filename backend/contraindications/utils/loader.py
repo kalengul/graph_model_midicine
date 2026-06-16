@@ -7,7 +7,7 @@ import logging
 from django.conf import settings
 from django.db import connection
 
-from contraindications.models import Contraindication
+from contraindications.models import Contraindication, OriginalContraindication
 from drugs.models import Drug
 from contraindications.utils.adapters import DrugAdapter, ContraAdapter
 from graphs.utils.text_builder import TextBuilder
@@ -81,17 +81,37 @@ class LoadAndBuildDrugContraindications:
                 logger.debug(f'Drug.DoesNotExist: {drug_name}')
                 continue
 
-            for name in item[self.CONTRAS]:
-                name = TextBuilder(name).normalize().lower().strip().text
-                try:
-                    contraindication = Contraindication.objects.get(
-                        name__iexact=name)
-                    # logger.debug(f'\tcont_name = {name} найдено')
-                except Contraindication.DoesNotExist:
-                    contraindication = Contraindication.objects.create(
-                        name=name)
-                    # logger.debug(f'\tcont_name = {name} добавлено')
-                drug.contraindications.add(contraindication)
+            for original_name, standard_name in item[self.CONTRAS]:
+                # Нормализуем названия
+                original_name = TextBuilder(original_name).normalize().lower().strip().text
+                standard_name = TextBuilder(standard_name).normalize().lower().strip().text
+
+                # Создаем или получаем стандартное противопоказание
+                standard, _ = Contraindication.objects.get_or_create(
+                    name__iexact=standard_name,
+                    defaults={
+                        'name': standard_name,
+                        'weight': 0.0,
+                        'node_target': None
+                    }
+                )
+                
+                # Создаем или получаем оригинальное название и связываем со стандартным
+                original, created = OriginalContraindication.objects.get_or_create(
+                    name__iexact=original_name,
+                    defaults={
+                        'name': original_name,
+                        'standard': standard
+                    }
+                )
+                
+                # Если оригинальное название уже существовало, обновляем связь
+                if not created and original.standard_id != standard.id:
+                    original.standard = standard
+                    original.save()
+                
+                # Добавляем стандартное противопоказание к лекарству
+                drug.contraindications.add(standard)
 
     def download(self):
         """Выгрузка противопоказаний."""
