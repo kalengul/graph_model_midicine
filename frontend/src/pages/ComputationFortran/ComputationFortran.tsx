@@ -129,7 +129,7 @@ export const ComputationFortran = () =>{
                             {resultFortran.combinations &&   resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible") &&
                                 
                                 <CollapsList
-                                    title = "Лекарственные средства, запрещенные с данной комбинацией"
+                                    title = "Лекарственные средства, нерекомендованные с данной комбинацией"
                                     className="ComputationResults incompatible"
                                     type="drugs-combin-fortran"
                                     content= {resultFortran.combinations.find(e=>e.compatibility.trim()==="incompatible")?.drugs}
