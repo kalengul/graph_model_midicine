@@ -4,8 +4,25 @@
     }
 }
 
+.logoREU{
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 25%;
+    }
+}
+
+.LOGO{
+    width: 15vw;
+
+    @media (max-width: 768px) {
+        width: 49vw;
+    }
+}
+
 nav.mainNav{
     height: 100vh;
+    // width: 20vw;
     background-color: var(--nav-bg);
 
     box-shadow: 

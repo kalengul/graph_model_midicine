@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import {fetchMenu, addValue} from '../../redux/MenuSlice'
 
 import list from "../../../public/list.svg"
+import LogoREU from "../../../public/REULogo120.svg"
 import person from "../../../public/person-circle.svg"
 
 import "./nav.scss"
@@ -48,8 +49,11 @@ export const Nav = ()=>{
                     </div>
                 </div>
 
-                <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>                
-                    <h1 className='logo' onClick={()=>navigate('/')}>ТОШ</h1>
+                <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>  
+                    <div className='LOGO flex jc-sb'>              
+                        <h1 className='logo' onClick={()=>navigate('/')}>ТОШ</h1>
+                        <img src={LogoREU} className='logoREU'/>
+                    </div>
                     <hr />
                     
                     {/* Отображение пользователя */}
