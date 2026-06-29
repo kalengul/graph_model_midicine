@@ -23,7 +23,7 @@ class GraphStorage:
 
     def __init__(self):
         """Создание хранилища графа."""
-        self.DIR_PATH.mkdir(exist_ok=True)
+        self.DIR_PATH.mkdir(parents=True, exist_ok=True)
         self.graph_path = self.DIR_PATH / self.GRAPH_FILE
         self.probability_path = self.DIR_PATH / self.PROBABILITY_FILE
 
@@ -52,7 +52,7 @@ class GraphStorage:
 
     def download_probability(self):
         """Выгрузка вероятностей."""
-        with open(self.graph_path, 'r', encoding='utf-8') as f:
+        with open(self.probability_path, 'r', encoding='utf-8') as f:
             return json.load(f)
 
     @property
