@@ -55,6 +55,8 @@ INSTALLED_APPS = [
 
     'pHistory2se', 
     'logging_system',
+    'risk_assessments',
+    
 ]
 
 
