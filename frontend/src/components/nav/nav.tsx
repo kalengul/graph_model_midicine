@@ -1,10 +1,10 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import {useState, useEffect, useMemo} from 'react'
+import {useEffect, useMemo} from 'react'
 
 import { useAppDispatch, useAppSelector} from '../../redux/hooks';
 import {fetchMenu, addValue} from '../../redux/MenuSlice'
 
-import list from "../../../public/list.svg"
+// import list from "../../../public/list.svg"
 import LogoREU from "../../../public/REULogo120.svg"
 import Logo from "../../../public/LOGO.svg"
 import person from "../../../public/person-circle.svg"
@@ -33,10 +33,10 @@ export const Nav = ()=>{
         dispatch(addValue({title: "isActive", value: locat}));
     }, [dispatch, locat])
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const toggleMenu = () => { //Отскрытие и скрытие меню
-        setIsMenuOpen(!isMenuOpen);
-    };
+    // const [isMenuOpen, setIsMenuOpen] = useState(false);
+    // const toggleMenu = () => { //Отскрытие и скрытие меню
+    //     setIsMenuOpen(!isMenuOpen);
+    // };
 
     const viewElem = (menuStatus: boolean, authStatus: boolean) => !menuStatus || authStatus;
 
