@@ -52,7 +52,7 @@ export const Nav = ()=>{
 
                 <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>  
                     <div className='LOGO flex jc-sb'>              
-                         <img src={Logo} className='logoTOSH'/>
+                         <img src={Logo} className='logoTOSH' onClick={()=>navigate('/')}/>
                         {/* <h1 className='logo' onClick={()=>navigate('/')}>ТОШ</h1> */}
                         <img src={LogoREU} className='logoREU'/>
                     </div>
