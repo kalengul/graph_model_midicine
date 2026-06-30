@@ -39,7 +39,7 @@ export const ComputationFortran = () =>{
     }
 
     return(
-        <main className="ms-2 p-3 w-100">
+        <main className="p-3 w-100">
             <h1>Взаимодействие по Fortran</h1>
 
             <ComputationForm type="fortran"/>

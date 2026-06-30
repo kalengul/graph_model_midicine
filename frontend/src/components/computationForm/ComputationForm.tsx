@@ -344,7 +344,25 @@ export const ComputationForm = (props: IComputationFormProps) =>{
             
             </div>
 
-            <button className='btn send-btn mt-3' onClick={SendDataHandler}>Рассчитать взаимодействие</button>
+            <div className='flex jc-sb ai-center mt-3'>
+                {/* Кнопка для отправления данных */}
+                <button className='btn send-btn' onClick={SendDataHandler}>Рассчитать взаимодействие</button>
+
+                {/* Кнопка для удаления списка ЛС */}
+               {/* <div className='flex ai-center fd-row '> */}
+                    {/* <button className='btn delete-btn me-2'>Очистить лекарственные средства</button> */}
+                    {/* <button className='btn delete-btn'>Очистить персональные данные</button> */}
+                    {/* <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Очистить данные
+                    </a>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a className="dropdown-item" href="#">Лекарственные средства</a></li>
+                        <li><a className="dropdown-item" href="#">Персональные данные</a></li>
+                        <li><hr className="dropdown-divider"/></li>
+                        <li><a className="dropdown-item" href="#">Очистить все</a></li>
+                    </ul> */}
+               {/* </div> */}
+            </div>
         </>
     )
 }

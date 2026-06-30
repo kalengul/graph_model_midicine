@@ -20,7 +20,7 @@ export const StatisticBayesPage = () =>{
     }
 
     return (
-            <main className="ms-2 p-3 w-100">
+            <main className=" p-3 w-100">
                 <h1>Статистика по работе сети Байеса</h1>
                 <div className='mt-4'>
                     <button className='btn send-btn' onClick={ExportHandler}>Экспортировать</button>

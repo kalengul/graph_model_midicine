@@ -9,6 +9,8 @@ import { checkAuth } from './redux/AuthSlice';
 
 import { Nav } from './components/nav/nav';
 
+import "./App.css"
+
 function App() {
   const routes = useRoutes()
   const dispatch = useAppDispatch()
@@ -24,15 +26,16 @@ function App() {
     dispatch(checkAuth());
   }, [dispatch])
   
+  //flex
 
   return (
     <>
-    
-      
       <BrowserRouter>
-        <div className="flex">
+        <div className="container-fluid">
           <Nav></Nav>
-          {routes}
+          {/* <main className="ms-2 p-3 w-100"> */}
+            {routes}
+          {/* </main> */}
         </div>
       </BrowserRouter>
       

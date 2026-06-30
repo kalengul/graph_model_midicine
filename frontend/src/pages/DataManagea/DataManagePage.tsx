@@ -6,7 +6,7 @@ import { SideEffectManage } from "../../components/sideEffectManage/sideEffectMa
 
 export const DataManagePage = ()=>{
     return(
-        <main className="ms-2 p-3 w-100">
+        <main className=" p-3 w-100">
             <h1>Управление данными</h1>
 
             <nav className='mt-3'>

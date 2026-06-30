@@ -42,58 +42,105 @@ export const Nav = ()=>{
 
     if (locat === '/login') return null;
     return (
-        <>
-            <nav className={`flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav ${isMenuOpen ? "mobilePosition" : ""}`}>
-                <div className="burger-menu" onClick={toggleMenu}>
-                    <div className='w-100 flex jc-end'>
-                        <img src={list} className={isMenuOpen ? "menuOpen" : ""}/>
-                    </div>
+
+        <nav className='navbar navbar-expand-lg w-100'>
+            <div className='container-fluid'>
+                {/*Логотипы */}
+                <div className='logo'>              
+                    <img src={Logo} className='logoTOSH' onClick={()=>navigate('/')}/>
+                    <img src={LogoREU} className='logoREU'/>
                 </div>
 
-                <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>  
-                    <div className='LOGO flex jc-sb'>              
-                         <img src={Logo} className='logoTOSH' onClick={()=>navigate('/')}/>
-                        {/* <h1 className='logo' onClick={()=>navigate('/')}>ТОШ</h1> */}
-                        <img src={LogoREU} className='logoREU'/>
-                    </div>
-                    <hr />
+                {/* Кнопка для открытия меню на маленьких размеров */}
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+                {/* Основное меню */}
+                <div className="collapse navbar-collapse jc-sb" id="navbarSupportedContent">
+                     <ul className="nav-ul">
+                            {Array.isArray(menu) && menu.map((elem, index)=>
+                                viewElem(elem.is_auth, isAuth) &&
+                                    <li className='' key={index}>
+                                        <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
+                                                {elem.title}
+                                        </a>
+                                    </li>
+                            )}
+                        </ul>
+
+
+                        {/* Отображение пользователя */}
+                        <div className='userinfo'>
+                            {isAuth ? 
+                            <>
+                                <img className="user-img"src={person} alt="person"/>
+                                <p className='mb-0 username'>{user.username?.toLocaleUpperCase()}</p>
+                                {/* <p className='mb-0 userrole'>{user.role}</p> */}
+
+                                <a onClick = {()=>dispatch(logout())} className='nav-link link-login'> Выйти </a>
+                            </> :
+                            <a href="/login" className='nav-link link-login'> Войти </a>
+                            }
+                        </div>
+                </div>
+                
+               
+
+            </div>
+        </nav>
+
+        // <>
+        //     <nav className={`flex-column flex-shrink-0 p-3 sticky-top me-3 mainNav ${isMenuOpen ? "mobilePosition" : ""}`}>
+        //         <div className="burger-menu" onClick={toggleMenu}>
+        //             <div className='w-100 flex jc-end'>
+        //                 <img src={list} className={isMenuOpen ? "menuOpen" : ""}/>
+        //             </div>
+        //         </div>
+
+        //         <div className={`mobile-nav ${isMenuOpen ? 'mobile-open' : ''}`}>  
+        //             <div className='LOGO flex jc-sb'>              
+        //                 <img src={Logo} className='logoTOSH' onClick={()=>navigate('/')}/>
+        //                 <img src={LogoREU} className='logoREU'/>
+        //             </div>
+        //             <hr />
                     
-                    {/* Отображение пользователя */}
-                    {isAuth &&
-                        <div className='userinfo mb-5 flex ai-center fd-column'>
-                            <img src={person} alt="person"/>
-                            <p className='mb-0 username'>{user.username?.toLocaleUpperCase()}</p>
-                            <p className='mb-0 userrole'>{user.role}</p>
-                        </div>
-                    }
+        //             {/* Отображение пользователя */}
+        //             {isAuth &&
+        //                 <div className='userinfo mb-5 flex ai-center fd-column'>
+        //                     <img src={person} alt="person"/>
+        //                     <p className='mb-0 username'>{user.username?.toLocaleUpperCase()}</p>
+        //                     <p className='mb-0 userrole'>{user.role}</p>
+        //                 </div>
+        //             }
 
-                    {/* Отображение меню */}
-                    <ul className="nav nav-pills flex-column mb-auto">
-                        {/* Основные элементы */}
-                        {Array.isArray(menu) && menu.map((elem, index)=>
-                            viewElem(elem.is_auth, isAuth) &&
-                                <li className='nav-item mb-3 nav-main' key={index}>
-                                    <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
-                                            {elem.title}
-                                    </a>
-                                </li>
-                        )}
+        //             {/* Отображение меню */}
+        //             <ul className="nav nav-pills flex-column mb-auto">
+        //                 {/* Основные элементы */}
+        //                 {Array.isArray(menu) && menu.map((elem, index)=>
+        //                     viewElem(elem.is_auth, isAuth) &&
+        //                         <li className='nav-item mb-3 nav-main' key={index}>
+        //                             <a href={elem.slug} className={(activeLink==elem.slug)? 'nav-link link-dark active' : 'nav-link link-dark'}>
+        //                                     {elem.title}
+        //                             </a>
+        //                         </li>
+        //                 )}
 
-                        {/* Вход и выход */}
-                        <div className='nav-footer'>
-                            <li className='nav-item mb-5 nav-main'>
-                                {
-                                    !isAuth ? 
-                                        <a href="/login" className='nav-link link-dark link-login'> Войти </a>
-                                    :
-                                        <a onClick = {()=>dispatch(logout())} className='nav-link link-dark link-login'> Выйти </a>
-                                }
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-            </nav>
-        </>
+        //                 {/* Вход и выход */}
+        //                 <div className='nav-footer'>
+        //                     <li className='nav-item mb-5 nav-main'>
+        //                         {
+        //                             !isAuth ? 
+        //                                 <a href="/login" className='nav-link link-dark link-login'> Войти </a>
+        //                             :
+        //                                 <a onClick = {()=>dispatch(logout())} className='nav-link link-dark link-login'> Выйти </a>
+        //                         }
+        //                     </li>
+        //                 </div>
+        //             </ul>
+        //         </div>
+        //     </nav>
+        // </>
     )
 
 }

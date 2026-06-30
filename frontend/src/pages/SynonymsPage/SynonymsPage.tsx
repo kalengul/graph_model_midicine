@@ -45,7 +45,7 @@ export const SynonymsPage = () =>{
     }
 
     return(
-            <main className="ms-2 p-3 w-100">
+            <main className="p-3 w-100">
                 <h1>Синонимы</h1>
                 <div className='mt-3'>
                     <label htmlFor="symGroups" className="form-label control-label">Выберете группу синонимов</label>
