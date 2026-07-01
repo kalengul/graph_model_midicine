@@ -2,12 +2,13 @@
 @import "./css/btn.scss";
 @import "./css/nosologyGroup.scss";
 @import "./css/fonts/TikTokSans/TikTok_Sans/font.css";
+@import "./css/glassEffect.scss";
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
 
   /* color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -24,12 +25,18 @@
   --nav-link-hover: #C9D2DE;
   --nav-link-active: #C9D6E8;
 
-  --btn-send: #C6DBEC;
-  --btn-send-hover: #B2CFE5;
-  --btn-send-active: #9FC4DF;
+  --btn-text-send: #FEFFFF;
+  --btn-send: #0A1320;
+  --btn-send-hover: #263239;
+  --btn-send-active: #263239;
   --btn-delete: #faadad;
   --btn-delete-hover: #fc7878;
   --btn-delete-active: #fc7878;
+
+  --btn-second: #FEFFFF;
+  --btn-second-hover: #D7DFEA;
+  --btn-second-active: #D7DFEA;
+  --btn-second-color: #0A1320;
 
   --input-bg: #E0E5EC;
 
@@ -54,6 +61,10 @@
   --bg-dark: #0A1320;
 
 
+
+  --bs-border-width: 1px;
+  --bs-border-color: #8892af;
+
 }
 
 body {
@@ -64,6 +75,12 @@ body {
   margin-top: 0;
   color: var(--err-color);
   font-size: 0.7em;
+}
+
+h1{
+  font-size: 1.6rem;
+  font-family: "TikTok Sans";
+
 }
 
 h6{
@@ -92,6 +109,46 @@ p.h7{
 input[type="color"]{
   padding: 0;
   border: none; 
+}
+
+input[type="text"]{
+  background-color: transparent;
+}
+
+main{
+  height: 86vh;
+  background-image: url("../public/IMGBG.png");
+  background-size: cover;        
+  background-position: center;
+  background-position-y: top; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;  
+
+  overflow: auto; 
+  margin-bottom: 0.5rem;
+  border-radius: 21px;
+}
+
+/* Навбар поверх всего */
+nav {
+    height: 13vh;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 4px; /* ширина скролла */
+    background: transparent; /* прозрачный фон */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* прозрачный трек (дорожка) */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* полупрозрачный ползунок */
+    border-radius: 5px;
 }
 
 

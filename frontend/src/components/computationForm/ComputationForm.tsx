@@ -247,7 +247,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
 
     return(
         <>
-            <div className='mt-4 flex computationFormContainer'>
+            <div className='mt-2 flex computationFormContainer glass'>
                 {/* Блок для ввода списка ЛС */}
                 <div className='me-4 computationFormBlock computationFormBlock-h30'>
                     <label className='form-label control-label lableCF'>Лекарственнные средства для расчета взаимодействия</label>
@@ -338,7 +338,7 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                     {/* Загрузка медкарты */}
                     <div className='medcardBlock'>
                         <label className=' control-label'>Загрузить медицинскую карту:</label>
-                        <input className="form-control" type="file" id="formFile" onChange={checkFileHandler}/>
+                        <input className="form-control custom-file-transparent" type="file" id="formFile" onChange={checkFileHandler}/>
                     </div>
                 </div>
             

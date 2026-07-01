@@ -1,0 +1,23 @@
+.glass{
+     /* ---------- Базовое оформление ---------- */
+//   background: rgba(255, 255, 255, 0.75); /* fallback для всех браузеров */
+  border-radius: 16px;                  /* скругление для "стеклянного" вида */
+  padding: 24px 32px;                  /* воздух внутри */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08); /* лёгкая тень для отделения от фона */
+
+ /* ---------- Принудительное переопределение Bootstrap ---------- */
+//   background: rgba(255, 255, 255, 0.75) !important; /* !important для гарантии */
+  background: rgba(255, 255, 255, 0.4) !important; /* можно сделать чуть прозрачнее, чтобы был виден эффект */
+
+  /* ---------- Эффект стекла ---------- */
+  backdrop-filter: blur(3px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+
+  /* ---------- Остальное без изменений ---------- */
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12); /* чуть увеличу тень для глубины */
+  color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
