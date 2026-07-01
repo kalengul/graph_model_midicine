@@ -1,7 +1,20 @@
+/* Навбар поверх всего */
+nav {
+    height: 13vh;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+
+
+
 .navbar-collapse{
     @media(max-width: 991.5px){
+        background: #fff;
         display: flex;
         flex-direction: column-reverse;
+        border-radius: 7px;
+        padding-bottom: 25px;
     }
 }
 
@@ -30,6 +43,7 @@
      @media(max-width: 991.5px){
         margin-right: 0;
         margin-top: 1rem;
+        
      }
 }
 
