@@ -24,7 +24,7 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
         case "incompatible":
             return(
                 <div className="ComputationResults incompatible">
-                    <h5> <b>Лекарственные средства несовместимы</b></h5>
+                    <h5><b>Лекарственные средства не рекомендуются к совместному применению</b></h5>
                     {props.recommendations && props.recommendations.length >0 && 
                     <div className="mt-3">
                         <h6>Рекомендации по замене лекарственных средств</h6>
