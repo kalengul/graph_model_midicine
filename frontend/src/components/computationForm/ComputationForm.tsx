@@ -256,8 +256,9 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                             <input onChange = {serchSuggestionsDrugHandler} value={inputValueDrug} name="drug-search" className=" checkBlock-search form-control mb-0" type="text" placeholder='Поиск ...'></input>
                             <div className='checkBlock-list'>
                                 {suggestionsDrug && suggestionsDrug.map(drug=>(
-                                    <div className='flex ai-start'>
-                                        <input type="checkbox" checked={checkedDrugIds.includes(drug.id.toString())} onChange={checkBoksDrugHandler} key={drug.id} value={drug.id} className='me-2'/>
+                                    <div className='ListElem-container mb-2'>
+                                        <input type="checkbox" checked={checkedDrugIds.includes(drug.id.toString())} onChange={checkBoksDrugHandler} key={drug.id} value={drug.id}/>
+                                        <div className={`circle dg-${NosologyColorHandler(drug.nosology_id)}`}></div>
                                         <label>{drug.drug_name}</label>
                                     </div>
                                 ))
@@ -270,9 +271,11 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                 {
                                     showCkeckedDrug && showCkeckedDrug.map(drug=>(
                                         
-                                        <div className='flex ai-start mb-2'>
-                                            <button type="button" className="btn-close me-2" aria-label="Close" onClick={(e) => deleteDrugHandler(e, drug.id)}></button>
-                                            <span className={`dg-block dg-${NosologyColorHandler(drug.nosology_id)}`}> {drug.drug_name} </span>
+                                        <div className='ListElem-container mb-2'>
+                                            <button type="button" className="btn-close" aria-label="Close" onClick={(e) => deleteDrugHandler(e, drug.id)}></button>
+                                            <div className={`circle dg-${NosologyColorHandler(drug.nosology_id)}`}></div>
+                                            <label > {drug.drug_name} </label> 
+                                            {/* dg-${NosologyColorHandler(drug.nosology_id)} */}
                                         </div>
                                     ))
                                 }
@@ -311,8 +314,8 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                 <input onChange = {serchSuggestionsContraindHandler} value={inputValueContraind} name="drug-search" className=" checkBlock-search form-control mb-0" type="text" placeholder='Поиск ...'></input>
                                 <div className='checkBlock-list'>
                                     {suggestionsContraind && suggestionsContraind.map(cont=>(
-                                        <div className='flex ai-start'>
-                                            <input type="checkbox" checked={checkedContraindIds.includes(cont.cont_id.toString())} onChange={checkBoksContraindHandler} key={cont.cont_id} value={cont.cont_id} className='me-2'/>
+                                        <div className='ListElem-container mb-2'>
+                                            <input type="checkbox" checked={checkedContraindIds.includes(cont.cont_id.toString())} onChange={checkBoksContraindHandler} key={cont.cont_id} value={cont.cont_id}/>
                                             <label>{cont.cont_name}</label>
                                         </div>
                                     ))
@@ -325,9 +328,9 @@ export const ComputationForm = (props: IComputationFormProps) =>{
                                     {
                                         showCkeckedContraind && showCkeckedContraind.map(cont=>(
                                             
-                                            <div className='flex ai-start mb-2'>
-                                                <button type="button" className="btn-close me-2" aria-label="Close" onClick={(e) => deleteContraindHandler(e, cont.cont_id)}></button>
-                                                <span> {cont.cont_name} </span>
+                                            <div className='ListElem-container mb-2'>
+                                                <button type="button" className="btn-close" aria-label="Close" onClick={(e) => deleteContraindHandler(e, cont.cont_id)}></button>
+                                                <label> {cont.cont_name} </label>
                                             </div>
                                         ))
                                     }
