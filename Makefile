@@ -8,7 +8,7 @@ up:
 
 deploy:
 	git pull origin deploy
-	docker compose build $(ARGS)
+	GIT_COMMIT_HASH=$$(git rev-parse --short HEAD) docker compose build $(ARGS)
 	docker compose up -d --remove-orphans $(ARGS)
 
 down:
