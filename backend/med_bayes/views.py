@@ -20,6 +20,7 @@ from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
 from med_bayes.utils.color_management import colors, color_path
 from ranker.utils.check_banned import DrugPairChecker
+from med_bayes.utils.ds_interpretation.interpreter import tdsh_interpret
 
 from accounts.auth import bearer_token_required
 
@@ -369,6 +370,30 @@ class BayeseView(APIView):
             result["side_effects"][0]["effects"] = (
                 self._exclude_by_gender(result["side_effects"][0]["effects"],
                                         gender, GENDER_SIDE_EFFECT))
+
+        selected_ids = {
+            k for k, v in drug_states_input_data.items()
+            if float(v) == 1.0
+        }
+
+        tdsh_data = tdsh_interpret(
+            graph_data=graph,
+            final_probs=final_probs,
+            selected_prepare_ids=selected_ids
+        )
+
+        MIN_TDSH_PROBABILITY = 0.01
+
+        for side_effect_group in result["side_effects"]:
+            for effect in side_effect_group["effects"]:
+                se_name = effect[self.EFFECT_NAME]
+                source_prob = data["side_effects"].get(se_name, {}).get("probability", 0.0)
+
+                if source_prob < MIN_TDSH_PROBABILITY:
+                    continue
+
+                if se_name in tdsh_data:
+                    effect["tdsh"] = tdsh_data[se_name]
 
         message = 'Совместимость ЛС по сети Байеса успешно рассчитана'
         logger.info(f'message = {message}')

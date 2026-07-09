@@ -1,13 +1,6 @@
-K_BY_LENGTH = {
-    1: 0.95,
-    2: 0.85,
-    3: 0.70,
-    4: 0.55,
-    5: 0.40,
-}
+LAMBDA = 0.85 
 
-DEFAULT_K = 0.25
-MAX_PATH_LENGTH = 10
 
-HIGH_CONFIDENCE_WIDTH = 0.20
-MEDIUM_CONFIDENCE_WIDTH = 0.40
+def k_by_length(length: int) -> float:
+    """Коэффициент уверенности k = λ^(length-1)."""
+    return LAMBDA ** max(length - 1, 0)

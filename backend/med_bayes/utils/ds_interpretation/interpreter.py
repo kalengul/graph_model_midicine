@@ -1,129 +1,90 @@
-from med_bayes.utils.ds_interpretation.masses import Mass, make_mass
-from med_bayes.utils.ds_interpretation.paths import (
-    build_nx_graph,
-    get_side_effect_ids,
-    iter_drug_to_effect_paths,
-    length_to_confidence,
-)
+from typing import Any
+
+import networkx as nx
+
+from med_bayes.utils.ds_interpretation.masses import make_mass, Mass
+from med_bayes.utils.ds_interpretation.conf import k_by_length
 
 
-def _confidence_label(width: float) -> str:
-    if width < 0.20:
-        return "high"
-    if width < 0.40:
-        return "medium"
-    return "low"
+
+def _nx_graph(data: dict) -> nx.DiGraph:
+    g = nx.DiGraph()
+
+    for n in data["nodes"]:
+        g.add_node(n["id"], **n)
+
+    if data.get("links"):
+        for link in data["links"]:
+            g.add_edge(link["source"], link["target"])
+        return g
+
+    for n in data["nodes"]:
+        for p in n.get("parents", []):
+            g.add_edge(p, n["id"])
+
+    return g
 
 
-def _risk_label(belief: float) -> str:
-    if belief < 0.05:
-        return "low"
-    if belief < 0.20:
-        return "moderate"
-    return "high"
-
-
-def _round(value: float) -> float:
-    return round(float(value), 6)
-
-
-def interpret_ds(
-    graph_data: dict,
-    selected_drug_ids: set[str],
-    bayes_probs: dict[str, float],
-) -> dict:
-    """
-    Интерпретация результата байесовской сети через теорию Демпстера-Шафера.
-
-    graph_data: JSON-граф из GraphStorage.
-    selected_drug_ids: UUID prepare-узлов, выбранных пользователем.
-    bayes_probs: результат calculate_probabilities, то есть dict[id узла, float].
-    """
-
-    graph = build_nx_graph(graph_data)
-    node_by_id = {
-        node["id"]: node
-        for node in graph_data.get("nodes", [])
+def _side_effects(data: dict) -> dict[str, str]:
+    """id → name только для side-effect-узлов."""
+    return {
+        n["id"]: n["name"]
+        for n in data["nodes"]
+        if n.get("label") in {"side_e", "side_effect", "effect"}
     }
 
-    side_effect_ids = get_side_effect_ids(graph_data)
-    interpreted_effects = []
 
-    for effect_id in side_effect_ids:
-        effect_probability = float(bayes_probs.get(effect_id, 0.0))
+def _paths(g: nx.DiGraph, src: str, dst: str, cut: int = 8):
+    if src in g and dst in g and nx.has_path(g, src, dst):
+        yield from nx.all_simple_paths(g, src, dst, cutoff=cut)
 
-        combined_mass: Mass | None = None
-        paths_info = []
 
-        for drug_id in selected_drug_ids:
-            drug_node = node_by_id.get(drug_id)
-            if not drug_node:
-                continue
+def tdsh_interpret(
+    *,
+    graph_data: dict,
+    final_probs: dict[str, float],
+    selected_prepare_ids: set[str],
+) -> dict[str, dict[str, Any]]:
+    """
+    Возвращает словарь  se_name → {...}
+    (без каких-либо вербальных меток, только цифры и пути)
+    """
+    g = _nx_graph(graph_data)
+    nodes = {n["id"]: n["name"] for n in graph_data["nodes"]}
+    se_id2name = _side_effects(graph_data)
 
-            for path in iter_drug_to_effect_paths(graph, drug_id, effect_id):
-                path_length = len(path) - 1
-                confidence = length_to_confidence(path_length)
+    out: dict[str, dict[str, Any]] = {}
 
-                path_mass = make_mass(
-                    probability=effect_probability,
-                    confidence=confidence,
-                )
+    for se_id, se_name in se_id2name.items():
+        p = float(final_probs.get(se_id, 0.0))
+        combined: Mass | None = None
+        paths_out: list[dict] = []
+        path_count = 0
 
-                combined_mass = (
-                    path_mass
-                    if combined_mass is None
-                    else combined_mass.combine(path_mass)
-                )
+        for drug_id in selected_prepare_ids:
+            for path in _paths(g, drug_id, se_id):
+                k = k_by_length(len(path) - 1)
+                m = make_mass(p, k)
+                combined = m if combined is None else combined.combine(m)
+                path_count += 1
 
-                paths_info.append({
-                    "drug_id": drug_id,
-                    "drug_name": drug_node.get("name"),
-                    "length": path_length,
-                    "confidence": confidence,
-                    "node_ids": path,
-                    "node_names": [
-                        node_by_id.get(node_id, {}).get("name", node_id)
-                        for node_id in path
-                    ],
-                })
+                if len(paths_out) < 3:
+                    paths_out.append({
+                        "drug": nodes[drug_id],
+                        "length": len(path) - 1,
+                        "k": round(k, 4),
+                        "chain": " → ".join(nodes[n] for n in path)
+                    })
 
-        if combined_mass is None:
+        if combined is None:
             continue
 
-        belief = combined_mass.belief
-        plausibility = combined_mass.plausibility
-        uncertainty = combined_mass.uncertainty
+        out[se_name] = {
+            "belief": round(combined.belief, 6),
+            "plausibility": round(combined.plausibility, 6),
+            "uncertainty": round(combined.plausibility - combined.belief, 6),
+            "path_count": path_count,
+            "paths": paths_out
+        }
 
-        effect_node = node_by_id.get(effect_id, {})
-
-        interpreted_effects.append({
-            "effect_id": effect_id,
-            "se_name": effect_node.get("name", effect_id),
-            "bayes_probability": _round(effect_probability),
-            "belief": _round(belief),
-            "plausibility": _round(plausibility),
-            "uncertainty": _round(uncertainty),
-            "mass": {
-                "H": _round(combined_mass.m_h),
-                "not_H": _round(combined_mass.m_not_h),
-                "unknown": _round(combined_mass.m_unknown),
-            },
-            "risk_level": _risk_label(belief),
-            "confidence_level": _confidence_label(uncertainty),
-            "paths": paths_info,
-        })
-
-    interpreted_effects.sort(
-        key=lambda item: (
-            item["belief"],
-            item["bayes_probability"],
-        ),
-        reverse=True,
-    )
-
-    return {
-        "method": "dempster_shafer_classic",
-        "frame": ["H", "not_H"],
-        "selected_drugs": list(selected_drug_ids),
-        "effects": interpreted_effects,
-    }
+    return out
