@@ -1,5 +1,4 @@
 services:
-
   db:
     image: postgres:15
     healthcheck:
@@ -28,6 +27,7 @@ services:
     restart: unless-stopped
     volumes:
       - static_volume:/app/static
+      - logs:/app/logs
     env_file:
       - .env
     depends_on:
@@ -68,3 +68,4 @@ services:
 volumes:
   postgres_data:
   static_volume:
+  logs:
