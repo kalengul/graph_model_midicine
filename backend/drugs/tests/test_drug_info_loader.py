@@ -193,6 +193,7 @@ class TestDrugDataLoader:
         loader._load_trade_names(data)
         assert any("МНН 'неизвестный' не найдено" in err for err in loader.stats['errors'])
 
+    @pytest.mark.skip(reason="Врачи оставили только запрещенные пары не из инструкций, поэтому этот тест неактуален")
     @patch('drugs.utils.drug_info_loader.JSONBannedPairLoader')
     def test_load_banned_delegates_to_loader(self, mock_loader_class, sample_data):
         """Проверка, что _load_banned вызывает существующий загрузчик."""
