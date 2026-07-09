@@ -16,7 +16,7 @@ ARG GIT_COMMIT_HASH=unknown
 ENV GIT_COMMIT_HASH=${GIT_COMMIT_HASH}
 RUN echo "${GIT_COMMIT_HASH}" > /app/.version
 
-RUN python manage.py collectstatic --noinput
+RUN python manage.py collectstatic --noinput --clear
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
