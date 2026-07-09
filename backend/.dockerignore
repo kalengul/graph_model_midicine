@@ -1,5 +1,6 @@
 __pycache__/
 fixtures/
+.pytest_cache/
 *.pyc
 *.pyo
 *.pyd
@@ -10,7 +11,12 @@ env/
 *.xlsx
 *.txt
 *.csv
+*.db
+.DS_Store
+static/
+logs/
 
 !requirements.txt
 node_modules
 package-lock.json
+pytest.ini
