@@ -14,9 +14,15 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build and run containers
+      - name: Build dev containers
         run: |
-          make deploy ARGS='--abort-on-container-exit --exit-code-from backend'
+          make dev
+        env:
+          GIT_COMMIT_HASH: $(git rev-parse --short HEAD)
+
+      - name: Start dev containers
+        run: |
+          make dev-up
         env:
           GIT_COMMIT_HASH: $(git rev-parse --short HEAD)
 
@@ -33,3 +39,8 @@ jobs:
           else
             echo "Version is $VERSION"
           fi
+
+      - name: Cleanup
+        if: always()
+        run: |
+          make dev-down
