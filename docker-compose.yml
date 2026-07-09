@@ -15,7 +15,6 @@ services:
       - .env
 
   backend:
-    image: backend:latest
     container_name: backend
     build: 
       context: ./backend
@@ -42,7 +41,6 @@ services:
       start_period: 5s
 
   nginx:
-    image: nginx:latest
     container_name: nginx
     build:
       context: .
