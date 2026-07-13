@@ -1,24 +1,25 @@
 """
 Структурный слой ТДШ: построение графа, поиск путей drug → side_effect
-и их кластеризация по общему узлу-механизму.
+и их кластеризация по пересечению промежуточных узлов.
 
 Всё в этом модуле зависит только от графа и набора выбранных
-препаратов — не от байесовских вероятностей. Это осознанное
-разделение: структурная часть (эта) не меняется, пока не меняется
-граф или набор выбранных препаратов, и в отличие от расчёта масс
-(interpreter.py) её можно кэшировать между запросами с одной и той
-же комбинацией препаратов.
+препаратов — не от байесовских вероятностей. Можно кэшировать между
+запросами с одной и той же комбинацией препаратов.
+
+Кластеризация путей внутри препарата намеренно не использует типы
+вершин (mechanism/action/...) — это экспертная, не объективная
+разметка. Единственный объективный критерий — топология графа: два
+пути зависимы, если у них есть общий промежуточный узел (любой, в
+т.ч. side_e при связях side_e -> side_e), потому что тогда они
+описывают одну и ту же причинно-следственную цепочку, просто разной
+длины, а не два независимых источника.
 """
 
 from dataclasses import dataclass
 
 import networkx as nx
 
-from med_bayes.utils.ds_interpretation.conf import (
-    MAX_PATH_LENGTH,
-    MECHANISM_LABEL,
-    k_by_length,
-)
+from med_bayes.utils.ds_interpretation.conf import MAX_PATH_LENGTH, k_by_length
 
 SIDE_EFFECT_LABELS = ("side_e", "side_effect", "effect")
 
@@ -60,9 +61,6 @@ def iter_drug_to_effect_paths(graph: nx.DiGraph, drug_id: str, effect_id: str):
     if drug_id not in graph or effect_id not in graph:
         return
 
-    # all_simple_paths сам по себе корректно отдаёт пустой генератор
-    # для недостижимых пар узлов, отдельная проверка has_path() не нужна
-    # и только удваивает обход графа.
     yield from nx.all_simple_paths(
         graph,
         source=drug_id,
@@ -73,56 +71,82 @@ def iter_drug_to_effect_paths(graph: nx.DiGraph, drug_id: str, effect_id: str):
 
 @dataclass(frozen=True)
 class DrugEffectPath:
-    """Один найденный путь drug → side_effect с уже посчитанным k и кластером."""
+    """Один найденный путь drug → side_effect с уже посчитанным k."""
 
     drug_id: str
     node_ids: tuple[str, ...]
     length: int
     k: float
-    cluster_key: str
+
+    @property
+    def intermediate_nodes(self) -> frozenset[str]:
+        """Узлы строго между препаратом и эффектом (без концов пути)."""
+        return frozenset(self.node_ids[1:-1])
 
 
-def _cluster_key(drug_id: str, node_ids: tuple[str, ...], graph: nx.DiGraph) -> str:
+def cluster_paths_by_shared_nodes(
+    paths: list[DrugEffectPath],
+) -> list[list[DrugEffectPath]]:
     """
-    Ключ кластеризации по общему узлу-механизму.
+    Группирует пути одного препарата по пересечению множества
+    промежуточных узлов — union-find по общим узлам.
 
-    Пути, расходящиеся только после общего mechanism-узла, — это одно
-    и то же свидетельство, пересказанное несколько раз (разной длины),
-    а не независимые источники. Интерпретатор комбинирует такие пути
-    не через Демпстера, а берёт одного представителя на кластер.
+    Пути без промежуточных узлов (прямая связь prepare -> side_e,
+    когда второй слой графа пропущен) ни с чем не пересекаются по
+    определению и всегда остаются отдельным кластером из одного пути.
 
-    Путь без mechanism-узла среди промежуточных ни с чем не группируется
-    и остаётся собственным кластером — у нас нет принципиального
-    основания считать его зависимым с другими путями этого препарата.
+    Связность транзитивна: если путь A пересекается с B, а B — с C
+    (по разным узлам), все три — один кластер, даже если A и C общих
+    узлов не делят напрямую.
     """
 
-    intermediate = node_ids[1:-1]
+    n = len(paths)
+    parent = list(range(n))
 
-    for node_id in intermediate:
-        if graph.nodes[node_id].get("label") == MECHANISM_LABEL:
-            return f"mech:{node_id}"
+    def find(i: int) -> int:
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
 
-    if not intermediate:
-        return f"direct:{drug_id}:{node_ids[-1]}"
+    def union(i: int, j: int) -> None:
+        ri, rj = find(i), find(j)
+        if ri != rj:
+            parent[ri] = rj
 
-    return f"path:{'-'.join(node_ids)}"
+    intermediates = [p.intermediate_nodes for p in paths]
+
+    for i in range(n):
+        if not intermediates[i]:
+            continue
+        for j in range(i + 1, n):
+            if intermediates[i] & intermediates[j]:
+                union(i, j)
+
+    clusters: dict[int, list[DrugEffectPath]] = {}
+    for idx, path in enumerate(paths):
+        clusters.setdefault(find(idx), []).append(path)
+
+    return list(clusters.values())
 
 
 def find_clustered_paths(
     graph: nx.DiGraph,
     drug_ids: set[str],
     effect_id: str,
-) -> dict[str, list[DrugEffectPath]]:
+) -> dict[str, list[list[DrugEffectPath]]]:
     """
-    Находит все пути от каждого из drug_ids до effect_id и размечает
-    их cluster_key. Финальную дедупликацию (выбор представителя на
-    кластер) делает интерпретатор — здесь только структура.
+    Находит все пути от каждого из drug_ids до effect_id и группирует
+    их по пересечению промежуточных узлов.
 
-    Возвращает {drug_id: [DrugEffectPath, ...]}; препараты, для
-    которых пути не найдены, в словарь не попадают.
+    Возвращает {drug_id: [[путь, путь, ...], [путь, ...], ...]} —
+    список кластеров на препарат; финальный выбор представителя
+    внутри кластера и комбинирование между кластерами делает
+    интерпретатор. Препараты, для которых пути не найдены, в словарь
+    не попадают.
     """
 
-    result: dict[str, list[DrugEffectPath]] = {}
+    result: dict[str, list[list[DrugEffectPath]]] = {}
 
     for drug_id in drug_ids:
         found: list[DrugEffectPath] = []
@@ -136,11 +160,10 @@ def find_clustered_paths(
                     node_ids=node_ids,
                     length=length,
                     k=k_by_length(length),
-                    cluster_key=_cluster_key(drug_id, node_ids, graph),
                 )
             )
 
         if found:
-            result[drug_id] = found
+            result[drug_id] = cluster_paths_by_shared_nodes(found)
 
     return result

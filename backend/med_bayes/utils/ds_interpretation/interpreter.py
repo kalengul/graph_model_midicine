@@ -67,25 +67,22 @@ def _ru_count(n: int, one: str, few: str, many: str) -> str:
 
 
 def _combine_drug_clusters(
-    paths: list[DrugEffectPath],
+    clusters: list[list[DrugEffectPath]],
     probability: float,
 ) -> tuple[Mass, list[DrugEffectPath]]:
     """
-    Уровни 1 и 2 для одного препарата: дедуплицирует пути внутри
-    кластеров общего механизма (представитель — путь с максимальным k)
-    и комбинирует получившиеся независимые кластеры правилом Демпстера.
+    Уровни 1 и 2 для одного препарата: из каждого кластера (пути,
+    пересекающиеся хотя бы в одном промежуточном узле) берёт
+    представителя с максимальным k и комбинирует получившиеся
+    независимые кластеры правилом Демпстера.
 
     Возвращает (масса препарата, список представителей — по одному
     на кластер, то есть ровно те пути, что реально вошли в расчёт).
     """
 
-    clusters: dict[str, list[DrugEffectPath]] = {}
-    for path in paths:
-        clusters.setdefault(path.cluster_key, []).append(path)
-
     representatives = [
-        max(cluster_paths, key=lambda p: p.k)
-        for cluster_paths in clusters.values()
+        max(cluster, key=lambda p: p.k)
+        for cluster in clusters
     ]
 
     combined = vacuous_mass()
@@ -154,11 +151,11 @@ def interpret_side_effect(
     all_representatives: list[DrugEffectPath] = []
     total_path_count = 0
 
-    for drug_id, paths in per_drug_paths.items():
-        mass, representatives = _combine_drug_clusters(paths, probability)
+    for drug_id, clusters in per_drug_paths.items():
+        mass, representatives = _combine_drug_clusters(clusters, probability)
         per_drug_mass[drug_id] = mass
         all_representatives.extend(representatives)
-        total_path_count += len(paths)
+        total_path_count += sum(len(cluster) for cluster in clusters)
 
     combined = vacuous_mass()
     for mass in per_drug_mass.values():
