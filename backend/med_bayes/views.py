@@ -20,7 +20,14 @@ from graphs.utils.graph_storage import GraphStorage
 from graphs.utils.text_builder import TextBuilder
 from med_bayes.utils.color_management import colors, color_path
 from ranker.utils.check_banned import DrugPairChecker
-from med_bayes.utils.ds_interpretation.interpreter import tdsh_interpret
+from med_bayes.utils.ds_interpretation.interpreter import (
+    tdsh_interpret,
+    tdsh_target_effects,
+)
+from med_bayes.utils.ds_interpretation.conf import (
+    MIN_TDSH_PROBABILITY,
+    RANK_CHANGE_EPSILON,
+)
 
 from accounts.auth import bearer_token_required
 
@@ -376,22 +383,31 @@ class BayeseView(APIView):
             if float(v) == 1.0
         }
 
+        # Пул эффектов для ТДШ — только те, где комбинация препаратов дала
+        # прирост вероятности над максимальным значением по любому из
+        # препаратов отдельно (individual_drug_effects уже посчитан выше
+        # для SEFromDrug, повторный расчёт БС не нужен). Если ранг не
+        # изменился — это не эффект взаимодействия, а обычный эффект
+        # одного препарата, объяснять там через ТДШ нечего, и не стоит
+        # тратить на него поиск путей в графе.
+        target_se_names = tdsh_target_effects(
+            combined_side_effects=data["side_effects"],
+            individual_drug_effects=individual_drug_effects,
+            selected_drugs=drugs,
+            min_probability=MIN_TDSH_PROBABILITY,
+            rank_change_epsilon=RANK_CHANGE_EPSILON,
+        )
+
         tdsh_data = tdsh_interpret(
             graph_data=graph,
             final_probs=final_probs,
-            selected_prepare_ids=selected_ids
+            selected_prepare_ids=selected_ids,
+            target_se_names=target_se_names,
         )
-
-        MIN_TDSH_PROBABILITY = 0.01
 
         for side_effect_group in result["side_effects"]:
             for effect in side_effect_group["effects"]:
                 se_name = effect[self.EFFECT_NAME]
-                source_prob = data["side_effects"].get(se_name, {}).get("probability", 0.0)
-
-                if source_prob < MIN_TDSH_PROBABILITY:
-                    continue
-
                 if se_name in tdsh_data:
                     effect["tdsh"] = tdsh_data[se_name]
 

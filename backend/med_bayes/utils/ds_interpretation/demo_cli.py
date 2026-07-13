@@ -150,7 +150,7 @@ def main() -> None:
 
     from django.conf import settings
     from graphs.utils.graph_storage import GraphStorage
-    from med_bayes.utils.ds_interpretation.interpreter import interpret_ds
+    from med_bayes.utils.ds_interpretation.interpreter import tdsh_interpret
 
     (
         load_combined_data,
@@ -193,10 +193,10 @@ def main() -> None:
         combination_description,
     )
 
-    ds_result = interpret_ds(
+    ds_result = tdsh_interpret(
         graph_data=graph_data,
-        selected_drug_ids=selected_drug_ids,
-        bayes_probs=final_probs,
+        final_probs=final_probs,
+        selected_prepare_ids=selected_drug_ids,
     )
 
     result = {
@@ -217,7 +217,7 @@ def main() -> None:
     print(f"Трассировка Байеса: {trace_path}")
     print(f"Результат: {output_path.resolve()}")
     print(f"Выбранные препараты: {', '.join(DEFAULT_DRUG_NAMES)}")
-    print(f"Побочных эффектов в ds_interpretation: {len(ds_result.get('effects', []))}")
+    print(f"Побочных эффектов в ds_interpretation: {len(ds_result)}")
 
 
 if __name__ == "__main__":
