@@ -4,6 +4,13 @@
     border-radius: 7px;
 }
 
+.result-double-block{
+    display: grid;
+    grid-template-columns: 60% 39%; /* Задаем колонки */
+    gap: 10px;
+    width: 100%;
+}
+
 .incompatible{
     background-color: var(--bg-red);
     color: var(--color-red);
