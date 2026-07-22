@@ -1,6 +1,8 @@
 services:
   nginx:
     container_name: nginx-dev
+    ports:
+      - "80:80"
     volumes:
       - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf
 
