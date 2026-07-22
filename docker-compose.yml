@@ -59,7 +59,7 @@ services:
     container_name: adminer
     restart: unless-stopped
     ports:
-      - "8080:8080"
+      - "127.0.0.1:8080:8080" # ssh -L 8080:localhost:8080 user@ip
     environment:
       - ADMINER_DEFAULT_SERVER=db
       - ADMINER_DESIGN=pepa

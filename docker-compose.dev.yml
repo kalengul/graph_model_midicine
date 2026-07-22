@@ -3,3 +3,7 @@ services:
     container_name: nginx-dev
     volumes:
       - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf
+
+  adminer:
+    ports:
+      - "8080:8080"
