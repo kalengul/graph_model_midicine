@@ -106,3 +106,4 @@ class BayesSerializer(serializers.Serializer):
         child=serializers.IntegerField(), required=True
     )
     humanData = HumanDataSerializer(required=False)
+    interpretation = serializers.BooleanField(required=False, default=False)
