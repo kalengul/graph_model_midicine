@@ -11,6 +11,36 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run docker-compose integration test
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build dev containers
         run: |
-          docker-compose -f docker-compose.yml up --build --abort-on-container-exit --exit-code-from backend
+          make dev
+        env:
+          GIT_COMMIT_HASH: $(git rev-parse --short HEAD)
+
+      - name: Start dev containers
+        run: |
+          make dev-up
+        env:
+          GIT_COMMIT_HASH: $(git rev-parse --short HEAD)
+
+      - name: Wait for backend to be healthy
+        run: |
+          timeout 60 bash -c 'while [[ "$(curl -s -o /dev/null -w ''%{http_code}'' http://localhost/health/)" != "200" ]]; do sleep 2; done'
+
+      - name: Check version is not unknown
+        run: |
+          VERSION=$(curl -s http://localhost/health/ | jq -r .version)
+          if [ "$VERSION" = "unknown" ]; then
+            echo "Version is unknown"
+            exit 1
+          else
+            echo "Version is $VERSION"
+          fi
+
+      - name: Cleanup
+        if: always()
+        run: |
+          make dev-down

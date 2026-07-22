@@ -3,9 +3,9 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-import matplotlib.pyplot as plt
 import networkx as nx
 
+from django.conf import settings
 from graphs.utils.parser import GraphParser
 from graphs.utils import yedLib
 from graphs.utils.custom_pymorphy.custom_pymorphy import EnhancedMorphAnalyzer
@@ -400,6 +400,10 @@ class ProcessNxGraph():
         Вывод графа на экран с использованием поля label в качестве подписей узлов
         и координат x, y, если они заданы. Поддерживается отображение заголовка.
         """
+        if not settings.DEBUG:
+            raise RuntimeError("Графическое отображение доступно только в режиме отладки.")
+        
+        import matplotlib.pyplot as plt
         # Проверяем, есть ли у всех узлов координаты
         has_coords = all('x' in G.nodes[n] and 'y' in G.nodes[n] for n in G.nodes)
 

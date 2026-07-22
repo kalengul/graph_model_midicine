@@ -39,7 +39,7 @@ export const ComputationFortran = () =>{
     }
 
     return(
-        <main className="ms-2 p-3 w-100">
+        <main className="p-3 w-100">
             <h1>Взаимодействие по Fortran</h1>
 
             <ComputationForm type="fortran"/>
@@ -114,7 +114,7 @@ export const ComputationFortran = () =>{
                                     }
                                 </div>
                             }
-                            <button className="btn send-btn mt-1" onClick={VisibleRanksHandler}>{visibleTytle}</button>
+                            <button className="btn second-btn mt-2" onClick={VisibleRanksHandler}>{visibleTytle}</button>
 
                             {increasedRiskDrugs.length>0 && 
                             <div className="mt-3">

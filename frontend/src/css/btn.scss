@@ -1,5 +1,9 @@
 .send-btn{
-    padding: 1% 5%;
+    font-family: 'TikTok Sans';
+    padding: 8px 24px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: var(--btn-text-send);
     background-color: var(--btn-send);
     box-shadow: 
     -3px -3px 5px rgba(255, 255, 255, 0.8),   
@@ -7,9 +11,35 @@
 
     &:hover{
         background-color: var(--btn-send-hover);
+        color: var(--btn-text-send);
     }
     &:active{
         background-color: var(--btn-send-active);
+        color: var(--btn-text-send);
+    }
+}
+
+.second-btn{
+    font-family: 'TikTok Sans';
+    padding: 4px 14px;
+    border-radius: 5px;
+    // text-transform: uppercase;
+    color: var(--btn-second-color);
+    border: 1px solid var(--btn-second-color);
+    // background-color: var(--btn-send);
+    box-shadow: 
+    -3px -3px 5px rgba(255, 255, 255, 0.8),   
+    3px 3px 5px rgba(0, 0, 0, 0.2);       
+
+    &:hover{
+        // background-color: var(--btn-send-hover);
+        border: 1px solid var(--btn-second-hover);
+        color: var(--btn-second-color);
+    }
+    &:active{
+        // background-color: var(--btn-send-active);
+        border: 1px solid var(--btn-second-active);
+        color: var(--btn-second-color);
     }
 }
 
@@ -44,5 +74,23 @@
     &:hover{
         // border: 1px solid currentColor;
         // color: var(--color-durk-green);
+    }
+}
+
+
+.delete-btn{
+    box-shadow: 
+    -2px -2px 5px rgba(255, 255, 255, 0.8),   
+    2px 2px 5px rgba(0, 0, 0, 0.2);  
+
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: var(--btn-delete);
+
+    &:hover{
+        background-color: var(--btn-delete-hover);
+    }
+     &:active{
+        background-color: var(--btn-delete-active);
     }
 }

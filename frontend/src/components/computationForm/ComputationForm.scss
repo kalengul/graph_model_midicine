@@ -4,7 +4,7 @@
 
 .checkBlock{
     display: flex;
-     height: 100%;
+    height: 100%;
     flex-direction: column;
     min-height: 0;
     width: 52%;
@@ -61,7 +61,7 @@
 }
 
 .computationFormContainer{
-    height: 70vh;
+    height: 63vh;
     min-height: 0;
     @media (max-width: 768px) {
         height: auto;
@@ -108,7 +108,7 @@
 }
 
 .computationFormBlock-h30{
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
         height: 30vh;
     }
 }
@@ -117,4 +117,41 @@
      @media (max-width: 768px) {
         height: 50vh;
     }
+}
+
+.custom-file-transparent{
+    background-color: transparent; /* Делаем фон прозрачным */
+    // border: 1px solid rgba(255, 255, 255, 0.3); /* Добавляем красивую рамку */
+    // color: #fff; /* Меняем цвет текста, чтобы он был виден */
+}
+
+.ListElem-container{
+    display: flex;
+    align-items: start;
+    gap: 5px;
+}
+
+.ListElem-container > input[type="checkbox"]{
+//   margin-top: 5px;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.ListElem-container  > label {
+    line-height: 1;
+    flex: 1; /* занимает всё оставшееся место */
+  /* или flex-grow: 1; */
+}
+
+.ListElem-container  > button {
+    padding: 0;
+}
+
+.circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%; /* главное свойство для круга */
+//   margin-top: 5px;
+  flex-shrink: 0;
 }

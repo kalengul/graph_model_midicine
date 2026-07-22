@@ -23,33 +23,37 @@ export const ComputationResults = (props: IComputationResultsProps) =>{
             )
         case "incompatible":
             return(
-                <div className="ComputationResults incompatible">
-                    <h5> <b>Лекарственные средства несовместимы</b></h5>
-                    {props.recommendations && props.recommendations.length >0 && 
-                    <div className="mt-3">
-                        <h6>Рекомендации по замене лекарственных средств</h6>
-                        {props.recommendations.map((rec, index)=>
-                        <div className="mt-2">
-                            <div>
-                                <span className='me-3'><b>{index+1}.</b></span> 
-                                <span><b>Группа {rec.group_name}</b></span>
-                            </div>
-                            <div className="ms-5">
-                                {rec.drugs && rec.drugs.map(dr =>
-                                    <div className="mb-1">
-                                        <p><b>Лекарственное средство:</b> {dr.drug_name}</p>
-                                        <p><b>Предлагаемые замены:</b> {dr.replace_drugs.join("; ")}</p>
-                                    </div>
-                                )}
-                            </div>
-                        </div>)}
+                <div className="result-double-block">
+                    <div className="ComputationResults incompatible">
+                        <h5><b>Лекарственные средства не рекомендуются к совместному применению</b></h5>
                     </div>
-                    }
-                    {props.recommendations && props.recommendations.length == 0 &&
-                    <div className="mt-3">
-                        <span className='me-3'><b>Не удалось подобрать лекарственные средства для снижения риска</b></span> 
+                    <div className="ComputationResults glass">
+                        {props.recommendations && props.recommendations.length >0 && 
+                        <div>
+                            <h6>Рекомендации по замене лекарственных средств</h6>
+                            {props.recommendations.map((rec, index)=>
+                            <div className="mt-2">
+                                <div>
+                                    <span className='me-3'><b>{index+1}.</b></span> 
+                                    <span><b>Группа {rec.group_name}</b></span>
+                                </div>
+                                <div className="ms-5">
+                                    {rec.drugs && rec.drugs.map(dr =>
+                                        <div className="mb-1">
+                                            <p><b>Лекарственное средство:</b> {dr.drug_name}</p>
+                                            <p><b>Предлагаемые замены:</b> {dr.replace_drugs.join("; ")}</p>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>)}
+                        </div>
+                        }
+                        {props.recommendations && props.recommendations.length == 0 &&
+                        <div>
+                            <span><b>Не удалось подобрать лекарственные средства для снижения риска</b></span> 
+                        </div>
+                        }
                     </div>
-                    }
                 </div>
             )
         case "caution":

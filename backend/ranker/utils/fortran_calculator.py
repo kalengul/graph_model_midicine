@@ -9,6 +9,8 @@ import numpy as np
 from drugs.models import Drug, SideEffect, DrugSideEffect, SideEffectsGender
 
 
+RANG_LIMIT = 0.5  # Ограничение для нежизнеугрожающих побочных эффектов
+
 logger = logging.getLogger('fortran')
 
 
@@ -273,7 +275,7 @@ class FortranCalculator(BaseCalculator):
     
     def _cap_non_life_threatening(self, rangsum):
         """
-        Ограничивает сумму рангов для нежизнеугрожающих побочных эффектов до 0.99.
+        Ограничивает сумму рангов для нежизнеугрожающих побочных эффектов до RANG_LIMIT.
         rangsum: numpy array формы (n_side_effect,)
         Возвращает новый массив с ограничениями.
         """
@@ -281,9 +283,9 @@ class FortranCalculator(BaseCalculator):
         capped = rangsum.copy()
         for se_idx, se_id in enumerate(range(1, self.n_side_effect + 1)):
             if not self._life_threatening_map.get(se_id, True):
-                # Если эффект не жизнеугрожающий, ограничиваем до 0.99
-                if capped[se_idx] > 0.99:
-                    capped[se_idx] = 0.99
+                # Если эффект не жизнеугрожающий, ограничиваем до RANG_LIMIT
+                if capped[se_idx] > RANG_LIMIT:
+                    capped[se_idx] = RANG_LIMIT
         return capped
 
 

@@ -1,135 +1,237 @@
-.logo{
-    &:hover{
-        cursor: pointer;
+/* Навбар поверх всего */
+nav {
+    height: 13vh;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+
+
+
+.navbar-collapse{
+    @media(max-width: 991.5px){
+        background: #fff;
+        display: flex;
+        flex-direction: column-reverse;
+        border-radius: 7px;
+        padding-bottom: 25px;
     }
 }
 
-.logoREU{
-    width: 50%;
-
-    @media (max-width: 768px) {
-        width: 25%;
-    }
-}
-
-.logoTOSH{
-    width: 35%;
-
-    @media (max-width: 768px) {
-        width: 25%;
-    }
-}
-
-.LOGO{
-    width: 15vw;
-
-    @media (max-width: 768px) {
-        width: 49vw;
-    }
-}
-
-
-nav.mainNav{
-    height: 100vh;
-    // width: 20vw;
-    background-color: var(--nav-bg);
-
-    box-shadow: 
-    -2px -2px 5px rgba(255, 255, 255, 0.8),   
-    2px 2px 5px rgba(0, 0, 0, 0.2);  
-         
-}
-
-.mobilePosition{
-    @media (max-width: 768px) {
-        position: fixed;
-        top: 0;
-        left: 0;
-        
-    }
-}
-
-.mobile-nav{
-    @media (max-width: 768px) {
-        display: none;
-        
-        &.mobile-open {
-            display: block;
-        }
-    }
-}
-
-.burger-menu {
-    display: none;
-    cursor: pointer;
-    
-    @media (max-width: 768px) {
-        display: block;
-    }
-}
-
-nav.mainNav li.nav-main a.nav-link {
-    box-shadow: 
-    -2px -2px 5px rgba(255, 255, 255, 0.8),   
-    2px 2px 5px rgba(0, 0, 0, 0.2);       
-
-    &:focus{
-        background-color: var(--nav-bg) !important;
-        transition: background-color 0.1s ease;
-        box-shadow: 
-        inset -2px -2px 5px rgba(255, 255, 255, 0.8),   
-        inset 2px 2px 5px rgba(0, 0, 0, 0.2);       
-    }
-    &:hover{
-        cursor: pointer;
-        background-color: var(--nav-link-hover);
-        transition: background-color 0.5s ease;
-    }
-}
-
-nav.mainNav li.nav-main a.nav-link.active{
-    background-color: var(--nav-link-active);      
-}
-
-nav.mainNav li.nav-sub a.nav-link {
-    box-shadow: 
-    -1px -1px 5px rgba(255, 255, 255, 0.8),   
-    1px 1px 5px rgba(0, 0, 0, 0.2);       
-
-    &:focus{
-        background-color: var(--nav-bg) !important;
-        transition: background-color 0.1s ease;
-        box-shadow: 
-        inset -1px -1px 5px rgba(255, 255, 255, 0.8),   
-        inset 1px 1px 5px rgba(0, 0, 0, 0.2);       
-    }
-    &:hover{
-        cursor: pointer;
-        background-color: var(--nav-link-hover);
-        transition: background-color 0.5s ease;
-    }
-}
-
-div.nav-footer{
-    box-sizing: border-box;
-    width: calc(100% - 2rem);
-    position: absolute;
-    bottom: 0;
-}
-
-div.nav-footer a.link-login{
-    background-color: #adb9cb;
-}
-
-div.userinfo img{
-    width: 17%;
-    fill: #fff;
-}
-div.userinfo p.username{
+.navbar{
+    font-family: 'TikTok Sans';
     font-weight: 600;
-    font-size: 1.1rem;
+    letter-spacing: 4%;
+    text-transform: uppercase;
 }
-div.userinfo p.userrole{
-    font-weight: 400;
-    font-size: 0.9rem;
+
+.nav-ul{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    // padding-left: 5rem;
+
+    @media(max-width: 991.5px){
+        flex-direction: column;
+        // margin-top: 1rem;
+        padding-left: 0;
+    }
 }
+
+.nav-ul > li{
+    margin-right: 36px;
+     @media(max-width: 991.5px){
+        margin-right: 0;
+        margin-top: 1rem;
+        
+     }
+}
+
+.nav-ul > li > a{
+    text-align: center;
+    // @media(max-width: 991.5px){
+    //     
+    // }
+}
+
+.nav-ul > li .active{
+    font-weight: 800;
+}
+
+.userinfo{
+    display: flex;
+    align-items: center;
+    gap: 10px; //Одинаковое расстояние между всеми элементами
+
+    @media(max-width: 991.5px){
+        margin-bottom: 25px;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+.link-login{
+    color: var(--bg-color);
+    background-color: var(--bg-dark);
+    padding: 8px 16px;
+    border-radius: 10px;
+
+    &:hover{
+        cursor: pointer;
+        color: var(--bg-color);
+    }
+}
+
+.logo{
+    width: 95px;
+}
+.logo > img{
+    width: 80px;
+    margin-right: 10px;
+
+    // @media (max-width: 768px) {
+    //     width: 25%;
+    // }
+}
+
+.user-img{
+    width: 25px;
+}
+
+
+
+// .logo{
+//     &:hover{
+//         cursor: pointer;
+//     }
+// }
+
+// .logoREU{
+//     width: 50%;
+
+//     @media (max-width: 768px) {
+//         width: 25%;
+//     }
+// }
+
+// .logoTOSH{
+//     width: 35%;
+
+//     @media (max-width: 768px) {
+//         width: 25%;
+//     }
+// }
+
+// .LOGO{
+//     width: 15vw;
+
+//     @media (max-width: 768px) {
+//         width: 49vw;
+//     }
+// }
+
+
+// nav.mainNav{
+//     height: 100vh;
+//     // width: 20vw;
+//     background-color: var(--nav-bg);
+
+//     box-shadow: 
+//     -2px -2px 5px rgba(255, 255, 255, 0.8),   
+//     2px 2px 5px rgba(0, 0, 0, 0.2);  
+         
+// }
+
+// .mobilePosition{
+//     @media (max-width: 768px) {
+//         position: fixed;
+//         top: 0;
+//         left: 0;
+        
+//     }
+// }
+
+// .mobile-nav{
+//     @media (max-width: 768px) {
+//         display: none;
+        
+//         &.mobile-open {
+//             display: block;
+//         }
+//     }
+// }
+
+// .burger-menu {
+//     display: none;
+//     cursor: pointer;
+    
+//     @media (max-width: 768px) {
+//         display: block;
+//     }
+// }
+
+// nav.mainNav li.nav-main a.nav-link {
+//     box-shadow: 
+//     -2px -2px 5px rgba(255, 255, 255, 0.8),   
+//     2px 2px 5px rgba(0, 0, 0, 0.2);       
+
+//     &:focus{
+//         background-color: var(--nav-bg) !important;
+//         transition: background-color 0.1s ease;
+//         box-shadow: 
+//         inset -2px -2px 5px rgba(255, 255, 255, 0.8),   
+//         inset 2px 2px 5px rgba(0, 0, 0, 0.2);       
+//     }
+//     &:hover{
+//         cursor: pointer;
+//         background-color: var(--nav-link-hover);
+//         transition: background-color 0.5s ease;
+//     }
+// }
+
+// nav.mainNav li.nav-main a.nav-link.active{
+//     background-color: var(--nav-link-active);      
+// }
+
+// nav.mainNav li.nav-sub a.nav-link {
+//     box-shadow: 
+//     -1px -1px 5px rgba(255, 255, 255, 0.8),   
+//     1px 1px 5px rgba(0, 0, 0, 0.2);       
+
+//     &:focus{
+//         background-color: var(--nav-bg) !important;
+//         transition: background-color 0.1s ease;
+//         box-shadow: 
+//         inset -1px -1px 5px rgba(255, 255, 255, 0.8),   
+//         inset 1px 1px 5px rgba(0, 0, 0, 0.2);       
+//     }
+//     &:hover{
+//         cursor: pointer;
+//         background-color: var(--nav-link-hover);
+//         transition: background-color 0.5s ease;
+//     }
+// }
+
+// div.nav-footer{
+//     box-sizing: border-box;
+//     width: calc(100% - 2rem);
+//     position: absolute;
+//     bottom: 0;
+// }
+
+// div.nav-footer a.link-login{
+//     background-color: #adb9cb;
+// }
+
+// div.userinfo img{
+//     width: 17%;
+//     fill: #fff;
+// }
+// div.userinfo p.username{
+//     font-weight: 600;
+//     font-size: 1.1rem;
+// }
+// div.userinfo p.userrole{
+//     font-weight: 400;
+//     font-size: 0.9rem;
+// }
