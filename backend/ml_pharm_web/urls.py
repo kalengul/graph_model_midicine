@@ -18,7 +18,7 @@ urlpatterns = [
     path('api/v1/', include('drugs.urls')),
     path('api/v1/', include('menu.urls')),
     path('api/v1/', include('ranker.urls')),
-    path("api/v1.0/risk-assessments/", include("risk_assessments.urls")),
+    path("api/v1/risk-assessments/", include("risk_assessments.urls")),
     path('api/v1/', include('medscape_api.urls')),
     path('api/v1/', include('synonyms.urls')),
     path('api/v1/', include('graphs.urls')),
