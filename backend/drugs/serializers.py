@@ -128,11 +128,11 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
     
     def get_dg_id(self, obj):
         """Получение списка ID групп ЛС."""
-        return list(obj.drug_groups.values_list('id', flat=True))
+        return [g.id for g in obj.drug_groups.all()]
     
     def get_trade_ids(self, obj):
         """Получение списка ID торговых названий."""
-        return list(obj.trade_names.values_list('id', flat=True))
+        return [tn.id for tn in obj.trade_names.all()]
     
 
 class SideEffectSerializer(serializers.ModelSerializer):

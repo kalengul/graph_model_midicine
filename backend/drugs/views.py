@@ -194,7 +194,9 @@ class DrugAPI(APIView):
 
         # Если drug_id не указан, возвращаем список всех ЛС
         if not drug_id:
-            drugs = Drug.objects.all()
+            drugs = Drug.objects.select_related('nosology').prefetch_related(
+                'drug_groups', 'trade_names'
+            )
             serializer = DrugListRetrieveSerializer(drugs, many=True)
             return CustomResponse(
                 data=serializer.data,
@@ -204,7 +206,9 @@ class DrugAPI(APIView):
 
         # Если drug_id указан, пытаемся получить одно ЛС
         try:
-            drug = Drug.objects.get(pk=drug_id)
+            drug = Drug.objects.select_related('nosology').prefetch_related(
+                'drug_groups', 'trade_names'
+            ).get(pk=drug_id)
             serializer = DrugListRetrieveSerializer(drug)
             return CustomResponse(
                 data=serializer.data,
