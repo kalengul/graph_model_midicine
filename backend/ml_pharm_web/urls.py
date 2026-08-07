@@ -26,6 +26,7 @@ urlpatterns = [
     path('api/v1/', include('med_bayes.urls')),
     #path('api/v1/', include('pHistory2se.urls')),
     path('api/v1/', include('logging_system.urls')),
+    path('api/v1/', include('combination_checker.urls')),
 
     re_path(r'^mini-front-manager.*$', TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),

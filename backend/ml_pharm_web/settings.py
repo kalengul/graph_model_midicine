@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'pHistory2se', 
     'logging_system',
     'risk_assessments',
+    'combination_checker',          # Брутфорс запрещённых комбинаций
     
 ]
 
