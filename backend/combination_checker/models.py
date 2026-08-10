@@ -131,6 +131,41 @@ class CombinationReportManager(models.Manager):
                 current_combination="",
             )
         )
+    
+    def mark_failed(
+        self,
+        report_id: int,
+        *,
+        checked: int,
+        found: int,
+        error: str,
+    ):
+        now = timezone.now()
+        report = self.get(pk=report_id)
+
+        return (
+            self.filter(
+                pk=report_id,
+                status=CombinationReport.Status.RUNNING,
+            )
+            .update(
+                status=CombinationReport.Status.FAILED,
+                progress=0.0,  # либо оставить текущий progress
+                completed_iterations=checked,
+                checked_combinations=checked,
+                found_combinations=found,
+                finished_at=now,
+                updated_at=now,
+                is_active=False,
+                error_message=str(error),
+                duration=(
+                    now - report.started_at
+                    if report.started_at
+                    else None
+                ),
+                current_combination="",
+            )
+        )
 
     def is_cancelled(
         self,
@@ -180,6 +215,7 @@ class CombinationReport(models.Model):
         RUNNING = "running", "В работе"
         COMPLETED = "completed", "Завершён"
         CANCELED = "canceled", "Отменён"
+        FAILED = "failed", "Ошибка"
 
     RANK_FIELDS = (
         ("rang_base", "rang_base"),

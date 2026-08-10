@@ -38,11 +38,10 @@ class ProgressReporter:
         )
 
     def fail(self, exc, *, checked: int, found: int):
-        CombinationReport.objects.mark_completed(
+        CombinationReport.objects.mark_failed(
             self.report.pk,
             checked=checked,
             found=found,
-            result_file=None,
             error=str(exc),
         )
 

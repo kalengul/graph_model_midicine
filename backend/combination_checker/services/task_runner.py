@@ -65,11 +65,30 @@ class TaskRunner:
 
                 TaskRunner().run(report)
 
-            except Exception:
+            except Exception as exc:
                 logger.exception(
                     "Ошибка выполнения отчёта #%s",
                     report_id,
                 )
+
+                try:
+                    report = CombinationReport.objects.get(pk=report_id)
+
+                    if (
+                        report.status == CombinationReport.Status.RUNNING
+                        and report.is_active
+                    ):
+                        CombinationReport.objects.mark_failed(
+                            report_id,
+                            checked=report.checked_combinations,
+                            found=report.found_combinations,
+                            error=str(exc),
+                        )
+                except Exception:
+                    logger.exception(
+                        "Не удалось пометить отчёт #%s как failed",
+                        report_id,
+                    )
 
         thread = threading.Thread(
             target=worker,
