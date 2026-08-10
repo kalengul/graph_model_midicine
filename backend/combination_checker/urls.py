@@ -11,7 +11,8 @@ from .views import (
     ReportDownloadView,
     LatestCompletedReportView,
     LatestRunningReportView,
-    RunningReportCancelView
+    RunningReportCancelView,
+    LatestCompletedReportDownloadView
 )
 
 app_name = "combination_checker"
@@ -27,6 +28,8 @@ urlpatterns = [
 
     # Служебные
     path("reports/latest-completed/", LatestCompletedReportView.as_view(), name="report-completed"),
+    path("reports/latest-completed/download/", LatestCompletedReportDownloadView.as_view(), name="report-completed-download"),
     path("reports/running/", LatestRunningReportView.as_view(), name="report-running"),
     path("reports/running/cancel/", RunningReportCancelView.as_view(), name="report-running-cancel"),
+
 ]

@@ -115,16 +115,3 @@ class CombinationReportListSerializer(
             "max_combination_size",
             "weight_version_name",
         )
-
-class CombinationReportCancelSerializer(
-    serializers.Serializer
-):
-    cancel = serializers.BooleanField()
-
-    def validate_cancel(self, value):
-        if value is not True:
-            raise serializers.ValidationError(
-                "cancel must be true."
-            )
-
-        return value

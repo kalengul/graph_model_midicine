@@ -7,24 +7,20 @@ from django.http import FileResponse, Http404
 from django.shortcuts import get_object_or_404
 
 from rest_framework import status
-from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from combination_checker.models import (
-    CombinationReport,
-)
+from combination_checker.utils.custom_response import CustomResponse
+
+from combination_checker.models import CombinationReport
+
 from combination_checker.serializers import (
     CombinationReportCreateSerializer,
     CombinationReportListSerializer,
     CombinationReportSerializer,
-    CombinationReportCancelSerializer,
 )
-from combination_checker.services.report_service import (
-    ReportService,
-)
-from combination_checker.services.task_runner import (
-    TaskRunner,
-)
+
+from combination_checker.services.report_service import ReportService
+from combination_checker.services.task_runner import TaskRunner
 
 
 class ReportMixin:
@@ -58,8 +54,9 @@ class ReportListCreateView(APIView):
             )
         )
 
-        return Response(
-            serializer.data
+        return CustomResponse(
+            data=serializer.data,
+            message="Reports retrieved successfully.",
         )
 
     @transaction.atomic
@@ -75,17 +72,12 @@ class ReportListCreateView(APIView):
         )
 
         if active_report is not None:
-            return Response(
-                {
-                    "detail": (
-                        "Another combination report "
-                        "is already running."
-                    ),
-                    "active_report_id": (
-                        active_report.pk
-                    ),
+            return CustomResponse(
+                data={
+                    "active_report_id": active_report.pk,
                 },
                 status=status.HTTP_409_CONFLICT,
+                message="Another combination report is already running.",
             )
 
         # ------------------------------------------------------
@@ -117,14 +109,12 @@ class ReportListCreateView(APIView):
         # ------------------------------------------------------
 
         if not CombinationReport.objects.claim_active(report.pk):
-            return Response(
-                {
-                    "detail": (
-                        "Another combination report "
-                        "started concurrently."
-                    )
+            return CustomResponse(
+                data={
+                    "active_report_id": active_report.pk,
                 },
                 status=status.HTTP_409_CONFLICT,
+                message="Another combination report is already running.",
             )
 
         # ------------------------------------------------------
@@ -148,13 +138,13 @@ class ReportListCreateView(APIView):
             )
         )
 
-        return Response(
-            output_serializer.data,
+        return CustomResponse(
+            data=output_serializer.data,
             status=status.HTTP_201_CREATED,
+            message="Report created successfully.",
+            http_status=status.HTTP_201_CREATED,
             headers={
-                "Location": (
-                    f"/reports/{report.pk}/"
-                )
+                "Location": f"/reports/{report.pk}/"
             },
         )
 
@@ -184,8 +174,9 @@ class ReportDetailView(
             )
         )
 
-        return Response(
-            serializer.data
+        return CustomResponse(
+            data=serializer.data,
+            message="Report retrieved successfully.",
         )
 
     def delete(
@@ -196,14 +187,10 @@ class ReportDetailView(
         report = self.get_report(pk)
 
         if report.is_active:
-            return Response(
-                {
-                    "detail": (
-                        "Report is active. "
-                        "Cancel it first."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_409_CONFLICT,
+                message="Report is active. Cancel it first.",
             )
 
         self.report_service.delete(
@@ -211,8 +198,10 @@ class ReportDetailView(
             delete_file=True,
         )
 
-        return Response(
-            status=status.HTTP_204_NO_CONTENT
+        return CustomResponse(
+            data={},
+            status=status.HTTP_204_NO_CONTENT,
+            message="Report deleted successfully.",
         )
 
 class ReportCancelView(
@@ -220,10 +209,10 @@ class ReportCancelView(
     ReportMixin,
 ):
     """
-    POST /reports/<id>/cancel/
+    GET /reports/<id>/cancel/
     """
 
-    def post(
+    def get(
         self,
         request,
         pk,
@@ -231,24 +220,11 @@ class ReportCancelView(
         report = self.get_report(pk)
 
         if not report.is_active:
-            return Response(
-                {
-                    "detail": (
-                        "Report is not active."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_400_BAD_REQUEST,
+                message="Report is not active.",
             )
-
-        serializer = (
-            CombinationReportCancelSerializer(
-                data=request.data
-            )
-        )
-
-        serializer.is_valid(
-            raise_exception=True
-        )
 
         updated = (
             CombinationReport.objects
@@ -264,23 +240,18 @@ class ReportCancelView(
         )
 
         if not updated:
-            return Response(
-                {
-                    "detail": (
-                        "Report is no longer running."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_409_CONFLICT,
+                message="Report is no longer running.",
             )
 
-        return Response(
-            {
-                "detail": (
-                    "Cancellation requested."
-                ),
+        return CustomResponse(
+            data={
                 "report_id": report.pk,
             },
             status=status.HTTP_202_ACCEPTED,
+            message="Cancellation requested.",
         )
 
 
@@ -328,13 +299,10 @@ class LatestCompletedReportView(APIView):
         )
 
         if report is None:
-            return Response(
-                {
-                    "detail": (
-                        "No completed reports found."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_404_NOT_FOUND,
+                message="No completed reports found.",
             )
 
         serializer = (
@@ -346,8 +314,9 @@ class LatestCompletedReportView(APIView):
             )
         )
 
-        return Response(
-            serializer.data
+        return CustomResponse(
+            data=serializer.data,
+            message="Latest completed report retrieved successfully.",
         )
 
 
@@ -361,13 +330,10 @@ class LatestRunningReportView(APIView):
         )
 
         if report is None:
-            return Response(
-                {
-                    "detail": (
-                        "No running reports found."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_404_NOT_FOUND,
+                message="No running reports found.",
             )
 
         serializer = (
@@ -379,8 +345,40 @@ class LatestRunningReportView(APIView):
             )
         )
 
-        return Response(
-            serializer.data
+        return CustomResponse(
+            data=serializer.data,
+            message="Running report retrieved successfully.",
+        )
+    
+class LatestCompletedReportDownloadView(APIView):
+    report_service = ReportService()
+
+    def get(self, request):
+        report = (
+            self.report_service.latest()
+        )
+
+        if report is None:
+            raise Http404(
+                "No completed reports found."
+            )
+
+        file_path = (
+            self.report_service.get_download_path(report)
+        )
+
+        if (
+            file_path is None
+            or not file_path.is_file()
+        ):
+            raise Http404(
+                "Result file not found."
+            )
+
+        return FileResponse(
+            open(file_path, "rb"),
+            as_attachment=True,
+            filename=file_path.name,
         )
     
 
@@ -394,13 +392,10 @@ class RunningReportCancelView(APIView):
         )
 
         if report is None:
-            return Response(
-                {
-                    "detail": (
-                        "No running reports found."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_404_NOT_FOUND,
+                message="No running reports found.",
             )
 
         updated = (
@@ -417,19 +412,16 @@ class RunningReportCancelView(APIView):
         )
 
         if not updated:
-            return Response(
-                {
-                    "detail": (
-                        "Report is no longer running."
-                    )
-                },
+            return CustomResponse(
+                data={},
                 status=status.HTTP_409_CONFLICT,
+                message="Report is no longer running.",
             )
 
-        return Response(
-            {
-                "detail": "Cancellation requested.",
+        return CustomResponse(
+            data={
                 "report_id": report.pk,
             },
             status=status.HTTP_202_ACCEPTED,
+            message="Cancellation requested.",
         )
