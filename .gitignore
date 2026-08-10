@@ -35,6 +35,8 @@ Graph_parser/DataSetParse/Data/~$SideEffectTable.xlsx
 *.sqlite3
 pharm.db
 ml_pharm_web/pharm.db
+*db-shm
+*db-wal
 
 
 # ...
@@ -88,3 +90,5 @@ backend/data/st_models
 backend/mini_front/package-lock.json
 
 backend/**/*_trace.txt
+backend/**/repomix*.xml
+backend/**/*.prof
