@@ -81,7 +81,7 @@ class CombinationGenerator:
                     max_rank=result.max_rank,
                 )
 
-            def on_progress(checked):
+            def on_progress(checked, pruned):
                 if total_iterations <= 0:
                     progress = 100.0
                 else:
@@ -96,6 +96,7 @@ class CombinationGenerator:
                     progress=progress,
                     checked=checked,
                     found=found_counter,
+                    pruned=pruned,
                 )
 
             def is_cancelled():

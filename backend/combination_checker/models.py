@@ -45,6 +45,7 @@ class CombinationReportManager(models.Manager):
         progress: float,
         checked: int,
         found: int,
+        pruned: int
     ):
         progress = max(
             0.0,
@@ -61,6 +62,7 @@ class CombinationReportManager(models.Manager):
                 completed_iterations=checked,
                 checked_combinations=checked,
                 found_combinations=found,
+                pruned_combinations=pruned,
                 updated_at=timezone.now(),
             )
         )
@@ -321,10 +323,13 @@ class CombinationReport(models.Model):
         default=0,
     )
 
+    pruned_combinations = models.BigIntegerField(default=0)
+
     current_combination = models.TextField(
         blank=True,
         default="",
     )
+
 
     # ----------------------------------------------------------
     # Результат

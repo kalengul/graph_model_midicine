@@ -70,7 +70,7 @@ class CombinationReportCreateSerializer(
 class CombinationReportSerializer(
     serializers.ModelSerializer
 ):
-    download_url = serializers.SerializerMethodField()
+    progress = serializers.SerializerMethodField()
 
     class Meta:
         model = CombinationReport
@@ -79,7 +79,6 @@ class CombinationReportSerializer(
             "id",
             "name",
             "status",
-            "created_at",
             "started_at",
             "finished_at",
             "duration",
@@ -87,30 +86,17 @@ class CombinationReportSerializer(
             "weight_version_name",
             "total_iterations",
             "completed_iterations",
+            "checked_combinations",
+            "found_combinations",
+            "pruned_combinations",
             "progress",
-            "current_combination",
-            "result_file",
-            "download_url",
             "error_message",
         )
 
         read_only_fields = fields
 
-    def get_download_url(self, obj):
-        if not obj.result_file:
-            return None
-
-        request = self.context.get("request")
-
-        path = (
-            f"/api/v1/reports/"
-            f"{obj.pk}/download/"
-        )
-
-        if request is None:
-            return path
-
-        return request.build_absolute_uri(path)
+    def get_progress(self, obj):
+        return round(obj.progress, 2)
 
 
 class CombinationReportListSerializer(
@@ -129,27 +115,6 @@ class CombinationReportListSerializer(
             "max_combination_size",
             "weight_version_name",
         )
-
-
-class CombinationReportProgressSerializer(
-    serializers.ModelSerializer
-):
-    class Meta:
-        model = CombinationReport
-
-        fields = (
-            "id",
-            "status",
-            "progress",
-            "completed_iterations",
-            "total_iterations",
-            "current_combination",
-            "started_at",
-            "finished_at",
-            "duration",
-            "error_message",
-        )
-
 
 class CombinationReportCancelSerializer(
     serializers.Serializer

@@ -151,7 +151,7 @@ class CombinationChecker:
     def _notify_progress(self) -> None:
         if self.on_progress and self.checked >= self._next_progress_update:
             self._next_progress_update = self.checked + self._progress_throttle
-            self.on_progress(self.checked)
+            self.on_progress(self.checked, self.pruned)
 
     def _check_cancelled(self) -> None:
         if self.is_cancelled and self.is_cancelled():

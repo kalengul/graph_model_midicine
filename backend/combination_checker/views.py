@@ -16,7 +16,6 @@ from combination_checker.models import (
 from combination_checker.serializers import (
     CombinationReportCreateSerializer,
     CombinationReportListSerializer,
-    CombinationReportProgressSerializer,
     CombinationReportSerializer,
     CombinationReportCancelSerializer,
 )
@@ -216,33 +215,6 @@ class ReportDetailView(
             status=status.HTTP_204_NO_CONTENT
         )
 
-
-class ReportStatusView(
-    APIView,
-    ReportMixin,
-):
-    """
-    GET /reports/<id>/status/
-    """
-
-    def get(
-        self,
-        request,
-        pk,
-    ):
-        report = self.get_report(pk)
-
-        serializer = (
-            CombinationReportProgressSerializer(
-                report
-            )
-        )
-
-        return Response(
-            serializer.data
-        )
-
-
 class ReportCancelView(
     APIView,
     ReportMixin,
@@ -346,8 +318,7 @@ class ReportDownloadView(
             filename=file_path.name,
         )
 
-
-class LatestReportView(APIView):
+class LatestCompletedReportView(APIView):
     report_service = ReportService()
 
     def get(self, request):
@@ -380,43 +351,20 @@ class LatestReportView(APIView):
         )
 
 
-class LatestReportForWeightView(
-    APIView
-):
+class LatestRunningReportView(APIView):
     report_service = ReportService()
 
     def get(self, request):
-        version_id = (
-            request.query_params.get(
-                "version"
-            )
-        )
-
-        if not version_id:
-            return Response(
-                {
-                    "detail": (
-                        "Missing `version` "
-                        "query parameter."
-                    )
-                },
-                status=status.HTTP_400_BAD_REQUEST,
-            )
-
         report = (
             self.report_service
-            .latest_for_weights(
-                version_id
-            )
+            .latest_running()
         )
 
         if report is None:
             return Response(
                 {
                     "detail": (
-                        "No completed reports "
-                        "for weight version "
-                        f"{version_id}."
+                        "No running reports found."
                     )
                 },
                 status=status.HTTP_404_NOT_FOUND,
@@ -433,4 +381,55 @@ class LatestReportForWeightView(
 
         return Response(
             serializer.data
+        )
+    
+
+class RunningReportCancelView(APIView):
+    report_service = ReportService()
+
+    def get(self, request):
+        report = (
+            self.report_service
+            .latest_running()
+        )
+
+        if report is None:
+            return Response(
+                {
+                    "detail": (
+                        "No running reports found."
+                    )
+                },
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+        updated = (
+            CombinationReport.objects
+            .filter(
+                pk=report.pk,
+                is_active=True,
+                status=CombinationReport.Status.RUNNING,
+            )
+            .update(
+                status=CombinationReport.Status.CANCELED,
+                is_active=False,
+            )
+        )
+
+        if not updated:
+            return Response(
+                {
+                    "detail": (
+                        "Report is no longer running."
+                    )
+                },
+                status=status.HTTP_409_CONFLICT,
+            )
+
+        return Response(
+            {
+                "detail": "Cancellation requested.",
+                "report_id": report.pk,
+            },
+            status=status.HTTP_202_ACCEPTED,
         )

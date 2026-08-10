@@ -17,7 +17,7 @@ class ProgressReporter:
         )
         self._last_progress = 0.0
 
-    def update(self, *, progress: float, checked: int, found: int):
+    def update(self, *, progress: float, checked: int, found: int, pruned: int):
         progress = max(0.0, min(float(progress), 99.0))
         if progress == self._last_progress:
             return
@@ -27,6 +27,7 @@ class ProgressReporter:
             progress=progress,
             checked=checked,
             found=found,
+            pruned=pruned
         )
 
     def finish(self, *, checked: int, found: int, result_file=None):

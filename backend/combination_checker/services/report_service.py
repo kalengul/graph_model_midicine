@@ -85,17 +85,15 @@ class ReportService:
             .order_by("-finished_at")
             .first()
         )
-
-    def latest_for_weights(self, version_identifier):
-        from django.db.models import Q
-
+    
+    def latest_running(self):
         return (
-            CombinationReport.objects.filter(
-                Q(weight_version_name=version_identifier)
-                | Q(weight_version_hash=version_identifier),
-                status=CombinationReport.Status.COMPLETED,
+            CombinationReport.objects
+            .filter(
+                status=CombinationReport.Status.RUNNING,
+                is_active=True,
             )
-            .order_by("-finished_at")
+            .order_by("-started_at")
             .first()
         )
 
