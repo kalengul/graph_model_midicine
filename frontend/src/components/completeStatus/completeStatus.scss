@@ -1,0 +1,20 @@
+.faild, .canceled{
+    color: var(--err-color);
+    border: 1px solid var(--err-color);
+    border-radius: 4px;
+    padding: 1px 3px;
+}
+
+.completed{
+    color: var(--color-light-green);
+    border: 1px solid var(--color-light-green);
+    border-radius: 4px;
+    padding: 1px 3px;
+}
+
+.running{
+    color: var(--color-orange);
+    border: 1px solid var(--color-orange);
+    border-radius: 4px;
+    padding: 1px 3px;
+}

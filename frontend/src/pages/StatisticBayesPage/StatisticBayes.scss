@@ -1,0 +1,54 @@
+.combinationChecker-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.assesHistory-Block{
+    width: 60%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.assesNew-Block{
+    width: 40%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+.loadCreateNewRepoer-Block{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content:baseline;
+    }
+}
+
+.errStart{
+    color: var(--err-color);
+    font-weight: 600;
+}
+
+.form-select{
+    display: inline;
+    width: auto;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.MoomiIMG{
+    width: 15px;
+    height: 20px;
+}

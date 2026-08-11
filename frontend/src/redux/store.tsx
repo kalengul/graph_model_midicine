@@ -12,6 +12,7 @@ import ContraindicationsManageSlice from "./ContraindicationsManageSlice.tsx"
 import GraphSlice from './GraphSlice.tsx';
 import ComputationBayesSlice from './ComputationBayesSlice.tsx';
 import ComputationFortranSlice from "./ComputationFortranSlice.tsx"
+import CombinationCheckerSlice from "./CombinationCheckerSlice.ts"
 
 import AuthSlice from "./AuthSlice.ts"
 
@@ -26,6 +27,7 @@ const reducers = combineReducers({
     graph: GraphSlice,
     computationBayes: ComputationBayesSlice,
     computationFortran: ComputationFortranSlice,
+    combinationChecker: CombinationCheckerSlice,
 
     auth: AuthSlice,
 
