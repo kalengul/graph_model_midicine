@@ -13,11 +13,11 @@ from drugs.views import (
 
 
 urlpatterns = [
-     path('DrugGroup', DrugGroupAPI.as_view(), name='group_process'),
-     path('Drug/', DrugAPI.as_view(), name='drug_process'),
-     path('SideEffect/', SideEffectAPI.as_view(), name='side_e_process'),
-     path('Weights/', ExcelLoadView.as_view(), name='ranks_process'),
-     path('TradeName/', TradeNameView.as_view(), name='trade_name_process'),
+    path('DrugGroup/', DrugGroupAPI.as_view(), name='group_process'),
+    path('Drug/', DrugAPI.as_view(), name='drug_process'),
+    path('SideEffect/', SideEffectAPI.as_view(), name='side_e_process'),
+    path('Weights/', ExcelLoadView.as_view(), name='ranks_process'),
+    path('TradeName/', TradeNameView.as_view(), name='trade_name_process'),
      # path('Ranks/', DrugSideEffectView.as_view(), name='ranks_process'),
 
     path('simple_export_from_db/', ModifiedExcelLoadView.as_view(), name='simple_export_from_db'),
