@@ -9,16 +9,15 @@ from django.shortcuts import get_object_or_404
 from rest_framework import status
 from rest_framework.views import APIView
 
+from accounts.auth import bearer_token_required
+
 from combination_checker.utils.custom_response import CustomResponse
-
 from combination_checker.models import CombinationReport
-
 from combination_checker.serializers import (
     CombinationReportCreateSerializer,
     CombinationReportListSerializer,
     CombinationReportSerializer,
 )
-
 from combination_checker.services.report_service import ReportService
 from combination_checker.services.task_runner import TaskRunner
 
@@ -77,6 +76,7 @@ class ReportListCreateView(APIView):
 
     report_service = ReportService()
 
+    @bearer_token_required
     def get(self, request):
         queryset = (
             CombinationReport.objects
@@ -95,6 +95,7 @@ class ReportListCreateView(APIView):
             message="Reports retrieved successfully.",
         )
 
+    @bearer_token_required
     @transaction.atomic
     def post(self, request):
         # ------------------------------------------------------
@@ -219,6 +220,7 @@ class ReportDetailView(
     DELETE /reports/<id>/
     """
 
+    @bearer_token_required
     def get(
         self,
         request,
@@ -240,7 +242,7 @@ class ReportDetailView(
             message="Report retrieved successfully.",
         )
     
-
+    @bearer_token_required
     def delete(
         self,
         request,
@@ -298,6 +300,7 @@ class ReportCancelView(
     GET /reports/<id>/cancel/
     """
 
+    @bearer_token_required
     def get(
         self,
         request,
@@ -365,6 +368,7 @@ class ReportDownloadView(
     GET /reports/<id>/download/
     """
     
+    @bearer_token_required
     def get(
         self,
         request,
@@ -410,6 +414,7 @@ class ReportDownloadView(
 class LatestCompletedReportView(APIView):
     report_service = ReportService()
 
+    @bearer_token_required
     def get(self, request):
         report = (
             self.report_service
@@ -456,6 +461,7 @@ class LatestCompletedReportView(APIView):
 class LatestRunningReportView(APIView):
     report_service = ReportService()
 
+    @bearer_token_required
     def get(self, request):
         report = (
             self.report_service
@@ -502,6 +508,7 @@ class LatestRunningReportView(APIView):
 class LatestCompletedReportDownloadView(APIView):
     report_service = ReportService()
 
+    @bearer_token_required
     def get(self, request):
         report = (
             self.report_service.latest()
@@ -553,6 +560,7 @@ class LatestCompletedReportDownloadView(APIView):
 class RunningReportCancelView(APIView):
     report_service = ReportService()
     
+    @bearer_token_required
     def get(self, request):
         report = (
             self.report_service
