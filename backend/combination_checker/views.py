@@ -80,7 +80,7 @@ class ReportListCreateView(APIView):
     def get(self, request):
         queryset = (
             CombinationReport.objects
-            .order_by("-created_at")
+            .order_by("-started_at")
         )
 
         serializer = (
@@ -110,7 +110,7 @@ class ReportListCreateView(APIView):
         if active_report is not None:
             return CustomResponse(
                 data={
-                    "active_report_id": active_report.pk,
+                    "id": active_report.pk,
                 },
                 status=status.HTTP_409_CONFLICT,
                 message="Another combination report is already running.",
@@ -147,7 +147,7 @@ class ReportListCreateView(APIView):
         if not CombinationReport.objects.claim_active(report.pk):
             return CustomResponse(
                 data={
-                    "active_report_id": active_report.pk,
+                    "id": active_report.pk,
                 },
                 status=status.HTTP_409_CONFLICT,
                 message="Another combination report is already running.",
@@ -165,14 +165,7 @@ class ReportListCreateView(APIView):
 
         report.refresh_from_db()
 
-        output_serializer = (
-            CombinationReportSerializer(
-                report,
-                context={
-                    "request": request
-                },
-            )
-        )
+        output_serializer = CombinationReportListSerializer(report)
 
         return CustomResponse(
             data=output_serializer.data,
@@ -341,7 +334,8 @@ class ReportCancelView(
 
         return CustomResponse(
             data={
-                "report_id": report.pk,
+                "id": report.pk,
+                "status": CombinationReport.Status.CANCELED
             },
             status=status.HTTP_202_ACCEPTED,
             message="Cancellation requested.",
@@ -594,7 +588,8 @@ class RunningReportCancelView(APIView):
 
         return CustomResponse(
             data={
-                "report_id": report.pk,
+                "id": report.pk,
+                "status": CombinationReport.Status.CANCELED
             },
             status=status.HTTP_202_ACCEPTED,
             message="Cancellation requested.",

@@ -109,7 +109,7 @@ class CombinationReportListSerializer(
             "id",
             "name",
             "status",
-            "created_at",
+            "started_at",
             "finished_at",
             "progress",
             "max_combination_size",

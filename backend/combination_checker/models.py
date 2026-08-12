@@ -23,7 +23,6 @@ class CombinationReportManager(models.Manager):
             self.filter(pk=report_id)
             .update(
                 status=CombinationReport.Status.RUNNING,
-                started_at=now,
                 finished_at=None,
                 duration=None,
                 progress=0,
@@ -240,17 +239,13 @@ class CombinationReport(models.Model):
         db_index=True,
     )
 
-    created_at = models.DateTimeField(
-        auto_now_add=True,
-    )
-
     updated_at = models.DateTimeField(
         auto_now=True,
     )
 
     started_at = models.DateTimeField(
-        null=True,
-        blank=True,
+        default=timezone.now,
+        editable=False
     )
 
     finished_at = models.DateTimeField(
@@ -347,7 +342,7 @@ class CombinationReport(models.Model):
     )
 
     class Meta:
-        ordering = ("-created_at",)
+        ordering = ("-started_at",)
 
         constraints = [
             models.UniqueConstraint(
@@ -372,7 +367,6 @@ class CombinationReport(models.Model):
             models.Index(
                 fields=("weight_version_name",)
             ),
-            models.Index(fields=("created_at",)),
             models.Index(fields=("rank_name",)),
         ]
 
