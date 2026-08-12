@@ -22,6 +22,12 @@ from combination_checker.serializers import (
 from combination_checker.services.report_service import ReportService
 from combination_checker.services.task_runner import TaskRunner
 
+from drf_spectacular.utils import (extend_schema,
+                                   extend_schema_view,
+                                   OpenApiResponse,
+                                   OpenApiTypes
+                                   )
+
 
 class ReportMixin:
     report_service = ReportService()
@@ -32,7 +38,37 @@ class ReportMixin:
             pk=pk,
         )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='reports_list',
+        responses={
+            200: OpenApiResponse(
+                response=CombinationReportListSerializer(many=True),
+                description='Список отчётов успешно получен.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+    post=extend_schema(
+        operation_id='reports_create',
+        request=CombinationReportCreateSerializer,
+        responses={
+            201: OpenApiResponse(
+                response=CombinationReportSerializer,
+                description='Отчёт успешно создан.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Некорректные данные.',
+            ),
+            409: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Другой отчёт уже выполняется.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class ReportListCreateView(APIView):
     """
     GET  /reports/
@@ -148,7 +184,39 @@ class ReportListCreateView(APIView):
             },
         )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='report_detail',
+        responses={
+            200: OpenApiResponse(
+                response=CombinationReportSerializer,
+                description='Данные отчёта успешно получены.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт не найден.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+    delete=extend_schema(
+        operation_id='report_delete',
+        responses={
+            204: OpenApiResponse(
+                description='Отчёт успешно удалён.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт не найден.',
+            ),
+            409: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Нельзя удалить активный отчёт.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class ReportDetailView(
     APIView,
     ReportMixin,
@@ -178,6 +246,7 @@ class ReportDetailView(
             data=serializer.data,
             message="Report retrieved successfully.",
         )
+    
 
     def delete(
         self,
@@ -204,6 +273,30 @@ class ReportDetailView(
             message="Report deleted successfully.",
         )
 
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='report_cancel',
+        responses={
+            202: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Запрос на отмену отчёта принят.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт не является активным.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт не найден.',
+            ),
+            409: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт больше не выполняется.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class ReportCancelView(
     APIView,
     ReportMixin,
@@ -254,7 +347,22 @@ class ReportCancelView(
             message="Cancellation requested.",
         )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='report_download',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.BINARY,
+                description='Отчёт успешно скачан.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт или файл результата не найден.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class ReportDownloadView(
     APIView,
     ReportMixin,
@@ -262,7 +370,7 @@ class ReportDownloadView(
     """
     GET /reports/<id>/download/
     """
-
+    
     def get(
         self,
         request,
@@ -289,6 +397,22 @@ class ReportDownloadView(
             filename=file_path.name,
         )
 
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='latest_completed_report',
+        responses={
+            200: OpenApiResponse(
+                response=CombinationReportSerializer,
+                description='Последний завершённый отчёт успешно получен.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Завершённые отчёты не найдены.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class LatestCompletedReportView(APIView):
     report_service = ReportService()
 
@@ -319,7 +443,22 @@ class LatestCompletedReportView(APIView):
             message="Latest completed report retrieved successfully.",
         )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='latest_running_report',
+        responses={
+            200: OpenApiResponse(
+                response=CombinationReportSerializer,
+                description='Последний выполняющийся отчёт успешно получен.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Выполняющиеся отчёты не найдены.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class LatestRunningReportView(APIView):
     report_service = ReportService()
 
@@ -349,7 +488,23 @@ class LatestRunningReportView(APIView):
             data=serializer.data,
             message="Running report retrieved successfully.",
         )
-    
+
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='latest_completed_report_download',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.BINARY,
+                description='Последний завершённый отчёт успешно скачан.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Завершённый отчёт или файл результата не найден.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)    
 class LatestCompletedReportDownloadView(APIView):
     report_service = ReportService()
 
@@ -381,10 +536,29 @@ class LatestCompletedReportDownloadView(APIView):
             filename=file_path.name,
         )
     
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='running_report_cancel',
+        responses={
+            202: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Запрос на отмену выполняющегося отчёта принят.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Выполняющийся отчёт не найден.',
+            ),
+            409: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Отчёт больше не выполняется.',
+            ),
+        },
+        tags=['combination-checker'],
+    ),
+)
 class RunningReportCancelView(APIView):
     report_service = ReportService()
-
+    
     def get(self, request):
         report = (
             self.report_service

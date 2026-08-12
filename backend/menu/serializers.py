@@ -14,3 +14,13 @@ class MenuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Menu
         fields = ['title', 'slug', 'is_auth', 'group']
+
+
+class MenuResultSerializer(serializers.Serializer):
+    status = serializers.IntegerField()
+    message = serializers.CharField()
+
+
+class MenuResponseSerializer(serializers.Serializer):
+    result = MenuResultSerializer()
+    data = MenuSerializer(many=True)

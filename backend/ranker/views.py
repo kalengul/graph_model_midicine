@@ -19,11 +19,35 @@ from ranker.constants import IDX_2_RANK_NAME
 from drugs.utils.custom_response import CustomResponse
 from drugs.models import Drug, SideEffect, DrugSideEffect
 
+from ranker.serializers import (CalculationRequestSerializer,
+                                CalculationDataSerializer
+                                )
+
 from logging_system.services import CalculationLoggingService
+
+from drf_spectacular.utils import (
+    extend_schema,
+    extend_schema_view,
+    OpenApiResponse,
+)
+from drf_spectacular.types import OpenApiTypes
 
 
 logger = logging.getLogger('fortran')
 
+
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='rank_calculation',
+        tags=['ranker'],
+        request=CalculationRequestSerializer,
+        responses={
+            200: CalculationDataSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class CalculationAPI(APIView):
     """Вычисление рангов."""
 
@@ -305,6 +329,25 @@ class CalculationAPI(APIView):
         return None
 
 
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='table_generation',
+        tags=['ranker'],
+        request=None,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+    get=extend_schema(
+        operation_id='table_download',
+        tags=['ranker'],
+        responses={
+            200: OpenApiTypes.BINARY,
+            404: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class TablesView(APIView):
     """
     Генерация таблиц.
@@ -352,7 +395,7 @@ class TablesView(APIView):
         """Получение Excel-файла с таблицами."""
         path = Path(settings.GENERATED_TABLES)
 
-        if not path.exists() or not path.is_dir:
+        if not path.exists() or not path.is_dir():
             return CustomResponse(
                 status=status.HTTP_404_NOT_FOUND,
                 message="Нет директории с генерированными excel-таблицами",

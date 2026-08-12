@@ -10,16 +10,32 @@ from rest_framework.views import APIView
 from drugs.utils.custom_response import CustomResponse
 from logging_system.services import CalculationLoggingService
 
-from risk_assessments.serializers import DrugRiskAssessmentRequestSerializer
+from risk_assessments.serializers import (DrugRiskAssessmentRequestSerializer,
+                                          RiskAssessmentResponseSerializer
+                                          )
 from risk_assessments.services import (
     ContraindicationNotFoundError,
     DrugNotFoundError,
     assess_drug_risks,
 )
 
+from drf_spectacular.utils import extend_schema, extend_schema_view
+from drf_spectacular.types import OpenApiTypes
+
 logger = logging.getLogger("risk_assessments.views")
 
 
+@extend_schema_view(
+    post=extend_schema(
+        tags=["risk-assessments"],
+        request=DrugRiskAssessmentRequestSerializer,
+        responses={
+            200: RiskAssessmentResponseSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    )
+)
 class DrugRiskAssessmentView(APIView):
     """
     POST /api/v1.0/risk-assessments/drug-compatibility

@@ -7,8 +7,12 @@ from rest_framework import status
 from rest_framework.permissions import IsAdminUser
 
 from logging_system.models import SystemState
-from logging_system.serializers import SystemStateSerializer
+from logging_system.serializers import (SystemStateSerializer,
+                                        LoggingToggleSerializer
+                                        )
 from logging_system.services import CalculationLoggingService
+
+from drf_spectacular.utils import extend_schema, OpenApiResponse, OpenApiTypes
 
 # Определяем путь к лог-файлу
 LOG_FILE_PATH = os.path.join(settings.BASE_DIR, 'logs', 'requested_drugs.log')
@@ -21,12 +25,22 @@ class SystemStateView(APIView):
     """
     # permission_classes = [IsAdminUser]
 
+    @extend_schema(
+        operation_id='system_state',
+        responses={
+            200: OpenApiResponse(
+                response=SystemStateSerializer,
+                description='Текущее состояние системы.',
+            ),
+        },
+        tags=['logging'],
+    )
     def get(self, request):
         state = SystemState.get_current_state()
         serializer = SystemStateSerializer(state)
         return Response(serializer.data)
 
-
+@extend_schema(tags=['logging'])
 class LoggingToggleView(APIView):
     """
     Включение/выключение логирования.
@@ -35,9 +49,31 @@ class LoggingToggleView(APIView):
     """
     # permission_classes = [IsAdminUser]
 
+    @extend_schema(
+        operation_id='logging_toggle_status',
+        responses={
+            200: OpenApiResponse(
+                response=SystemStateSerializer,
+                description='Текущее состояние логирования.',
+            ),
+        },
+        tags=['logging'],
+    )
     def get(self, request):
         return Response({'enabled': CalculationLoggingService.is_enabled()})
 
+
+    @extend_schema(
+        operation_id='logging_toggle',
+        request=LoggingToggleSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=SystemStateSerializer,
+                description='Состояние логирования успешно изменено.',
+            ),
+        },
+        tags=['logging'],
+    )
     def post(self, request):
         enabled = request.data.get('enabled')
         if enabled is None:
@@ -54,7 +90,13 @@ class LogsExportView(APIView):
     Экспорт файла логов для скачивания.
     """
     # permission_classes = [IsAdminUser]
-
+    @extend_schema(
+        operation_id='logs_export',
+        responses={
+            200: OpenApiTypes.BINARY,
+        },
+        tags=['logging'],
+    )
     def get(self, request):
         if not os.path.exists(LOG_FILE_PATH):
             return Response(
@@ -77,6 +119,24 @@ class LogsDeleteView(APIView):
     """
     # permission_classes = [IsAdminUser]
 
+    @extend_schema(
+        operation_id='logs_delete',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Логи успешно очищены.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Файл логов не найден.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка очистки логов.',
+            ),
+        },
+        tags=['logging'],
+    )
     def delete(self, request):
         if not os.path.exists(LOG_FILE_PATH):
             return Response(

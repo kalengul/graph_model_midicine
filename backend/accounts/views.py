@@ -17,10 +17,31 @@ from django.http import FileResponse
 from drugs.utils.custom_response import CustomResponse
 from accounts.auth import bearer_token_required
 
+from accounts.serializers import (
+    LoginRequestSerializer,
+    LoginResponseSerializer,
+    MessageResponseSerializer,
+    TokenCheckRequestSerializer,
+    TokenCheckResponseSerializer
+)
+
+from drf_spectacular.utils import extend_schema
+from drf_spectacular.types import OpenApiTypes
+
 
 class LoginUser(APIView):
     permission_classes = [permissions.AllowAny]
 
+    @extend_schema(
+    operation_id='login_user',
+    request=LoginRequestSerializer,
+    responses={
+        200: LoginResponseSerializer,
+        400: MessageResponseSerializer,
+        401: MessageResponseSerializer,
+    },
+    tags=['accounts'],
+    )
     def post(self, request):
         username = request.data.get('username')
         password = request.data.get('password')
@@ -67,6 +88,16 @@ class LogoutUser(APIView):
     permission_classes = [AllowAny]
     authentication_classes = [TokenAuthentication]
 
+    @extend_schema(
+    operation_id='logout_user',
+    request=LoginRequestSerializer,
+    responses={
+        200: LoginResponseSerializer,
+        400: MessageResponseSerializer,
+        401: MessageResponseSerializer,
+    },
+    tags=['accounts'],
+    )
     def post(self, request):
         user = request.user
 
@@ -83,6 +114,17 @@ class LogoutUser(APIView):
 
 
 class TokenCheck(APIView):
+    
+    @extend_schema(
+        operation_id='token_check',
+        request=TokenCheckRequestSerializer,
+        responses={
+            200: TokenCheckResponseSerializer,
+            400: MessageResponseSerializer,
+            403: MessageResponseSerializer,
+        },
+        tags=['accounts'],
+    )
     @bearer_token_required
     def post(self, request):
         req_username = request.data.get('username')
@@ -112,6 +154,13 @@ class TokenCheck(APIView):
 class BackupView(APIView):
     """Вьюшка для бэкапа."""
 
+    @extend_schema(
+        operation_id='backup_download',
+        responses={
+            200: OpenApiTypes.BINARY,
+        },
+        tags=['accounts'],
+    )
     @bearer_token_required
     def get(self, request):
         """Выгрузка файла бэкапа"""

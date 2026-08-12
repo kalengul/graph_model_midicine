@@ -9,6 +9,12 @@ from ml_pharm_web.utils.health_check import health_check
 from drugs.utils.handler404 import API404
 from django.conf import settings
 
+from drf_spectacular.views import (
+    SpectacularAPIView,
+    SpectacularSwaggerView,
+    SpectacularRedocView,
+)
+
 
 urlpatterns = [
     path('health/', health_check, name='health'),
@@ -27,6 +33,11 @@ urlpatterns = [
     #path('api/v1/', include('pHistory2se.urls')),
     path('api/v1/', include('logging_system.urls')),
     path('api/v1/', include('combination_checker.urls')),
+
+    # OpenAPI
+    path('api/schema/',SpectacularAPIView.as_view(),name='schema'),
+    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     re_path(r'^mini-front-manager.*$', TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),

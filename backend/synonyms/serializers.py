@@ -73,6 +73,10 @@ class SynonymUpdateSerializer(serializers.Serializer):
         
         return attrs
 
+class SynonymUpdateResponseSerializer(serializers.Serializer):
+    updated_ids = serializers.ListField(
+        child=serializers.DictField()
+    )
 
 class SynonymCreateSerializer(serializers.Serializer):
      sg_id = serializers.IntegerField()

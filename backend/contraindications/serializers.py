@@ -3,7 +3,7 @@ from rest_framework import serializers
 from contraindications.models import Contraindication
 
 
-class BaseContraindicationSerialize(serializers.ModelSerializer):
+class BaseContraindicationSerializer(serializers.ModelSerializer):
     """Класс прародитель для сериализаторов """
 
     cont_id = serializers.IntegerField(read_only=True, source='id')
@@ -17,7 +17,7 @@ class BaseContraindicationSerialize(serializers.ModelSerializer):
         fields = ('cont_id', 'cont_name', 'cont_weigth')
 
 
-class ContraindicationListSerializer(BaseContraindicationSerialize):
+class ContraindicationListSerializer(BaseContraindicationSerializer):
     """
     Сериализатор противопоказаний.
 
@@ -39,10 +39,29 @@ class ContraindicationListSerializer(BaseContraindicationSerialize):
         return value
 
 
-class ContraindicationDetailSerializer(BaseContraindicationSerialize):
-    """
-    Сериализатор противопоказаний.
+class ContraindicationDetailSerializer(BaseContraindicationSerializer):
+    """Получение и изменение одного противопоказания."""
 
-    Используется для запросов PUT, PATCH и GET
-    для получения одного противопоказания по ID.
-    """
+    def validate_cont_name(self, value):
+        queryset = Contraindication.objects.filter(
+            name__iexact=value
+        )
+
+        if self.instance is not None:
+            queryset = queryset.exclude(pk=self.instance.pk)
+
+        if queryset.exists():
+            raise serializers.ValidationError(
+                f"Противопоказание с названием '{value}' уже существует."
+            )
+
+        return value
+
+
+class ContraindicationFileUploadSerializer(serializers.Serializer):
+    """Загрузка JSON-файла противопоказаний."""
+
+    file = serializers.FileField(
+        help_text='JSON-файл с противопоказаниями и лекарственными средствами.'
+    )
+

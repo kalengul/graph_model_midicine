@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'logging_system',
     'risk_assessments',
     'combination_checker',          # Брутфорс запрещённых комбинаций
+    'drf_spectacular',              # Контракт для генерации клиента
     
 ]
 
@@ -166,7 +167,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    MINI_FRONT_PATH,
+    # MINI_FRONT_PATH,
 ]
 
 # Default primary key field type
@@ -194,6 +195,75 @@ REST_FRAMEWORK = {
     #     'rest_framework.renderers.JSONRenderer',
     #     'rest_framework.renderers.BrowsableAPIRenderer',
     # )
+
+    # Контракт для генерации клиента
+    'DEFAULT_SCHEMA_CLASS':
+        'ml_pharm_web.schema.ContractAutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Graph Model Medicine API',
+    'DESCRIPTION': 'API медицинской системы Graph Model Medicine',
+    'VERSION': '1.0.0',
+
+    'SERVE_INCLUDE_SCHEMA': False,
+
+    'SCHEMA_PATH_PREFIX': r'/api/v1',
+
+    'COMPONENT_SPLIT_REQUEST': True,
+
+    'SORT_OPERATIONS': False,
+
+    'TAGS': [
+        {
+            'name': 'accounts',
+            'description': 'Авторизация и управление токенами',
+        },
+        {
+            'name': 'drugs',
+            'description': 'Лекарственные препараты',
+        },
+        {
+            'name': 'graphs',
+            'description': 'Медицинские графы',
+        },
+        {
+            'name': 'risk-assessments',
+            'description': 'Оценка совместимости препаратов',
+        },
+        {
+            'name': 'contraindications',
+            'description': 'Противопоказания',
+        },
+        {
+            'name': 'combination-checker',
+            'description': 'Проверка комбинаций препаратов',
+        },
+        {
+            'name': 'ranker',
+            'description': 'Матричный ранговый калькулятор',
+        },
+        {
+            'name': 'logging',
+            'description': 'Система логирования вычислений калькулятора',
+        },
+        {
+            'name': 'synonyms',
+            'description': 'Модуль по сбору датасета синонимов',
+        },
+        {
+            'name': 'medscape',
+            'description': 'Демонстрация совместимостей по medscape',
+        },
+        {
+            'name': 'med-bayes',
+            'description': 'Калькулятор совместимостей по Байесу',
+        },
+        {
+            'name': 'menu',
+            'description': 'Получение меню',
+        },
+    ],
 }
 
 TXT_DB_PATH = os.path.join(BASE_DIR, 'data/txt_files_db')

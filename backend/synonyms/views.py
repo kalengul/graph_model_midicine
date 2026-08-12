@@ -25,16 +25,40 @@ from synonyms.serializers import (
     FileUploadSerializer,
     SynonymStatusSerializer,
     ChangeSynonymStatusSerializer,
+    SynonymUpdateResponseSerializer
 )
 from synonyms.models import Synonym, SynonymGroup, SynonymStatus
 from synonyms.utils.json_synonums_loader import (InnerJSONSynonymLoader,
                                                  )
 from synonyms.utils.synonym_cleaner import CleanProcessor
 
+from drf_spectacular.utils import (extend_schema,
+                                   extend_schema_view,
+                                   OpenApiTypes,
+                                   OpenApiParameter
+                                   )
+
 
 logger = logging.getLogger('synonyms')
 
-
+@extend_schema_view(
+    get=extend_schema(
+        tags=['synonyms'],
+        responses={
+            200: SynonymGroupListSerializer(many=True),
+            400: OpenApiTypes.OBJECT,
+        },
+    ),
+    post=extend_schema(
+        tags=['synonyms'],
+        request=SynonymGroupCreateSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class SynonymGroupAPI(APIView):
     """Вью для групп синонимов."""
 
@@ -103,6 +127,41 @@ class SynonymGroupAPI(APIView):
             )
 
 
+@extend_schema_view(
+    get=extend_schema(
+        tags=['synonyms'],
+        parameters=[
+            OpenApiParameter(
+                name='sg_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses={
+            200: SynonymListSerializer(many=True),
+            400: OpenApiTypes.OBJECT,
+        },
+    ),
+    post=extend_schema(
+        tags=['synonyms'],
+        request=SynonymCreateSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+    put=extend_schema(
+        tags=['synonyms'],
+        request=SynonymUpdateSerializer,
+        responses={
+            200: SynonymUpdateResponseSerializer,
+            400: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class SynonymListAPI(APIView):
     """Вью для синонимов."""
 
@@ -213,6 +272,27 @@ class SynonymListAPI(APIView):
         )
 
 
+@extend_schema_view(
+    post=extend_schema(
+        tags=['synonyms'],
+        request=FileUploadSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+    get=extend_schema(
+        tags=['synonyms'],
+        responses={
+            200: {
+                'type': 'string',
+                'format': 'binary',
+            },
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class LoadSynonymView(APIView):
     """Вью импорта синонимов."""
 
@@ -278,7 +358,34 @@ class LoadSynonymView(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        tags=['synonyms'],
+        responses={
+            200: SynonymStatusSerializer(many=True),
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+    post=extend_schema(
+        tags=['synonyms'],
+        request=SynonymStatusSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+    put=extend_schema(
+        tags=['synonyms'],
+        request=ChangeSynonymStatusSerializer,
+        responses={
+            200: ChangeSynonymStatusSerializer,
+            400: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    ),
+)
 class SynonymStatusView(APIView):
     """Вью для статуса синонима."""
 

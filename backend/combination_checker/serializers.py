@@ -95,7 +95,7 @@ class CombinationReportSerializer(
 
         read_only_fields = fields
 
-    def get_progress(self, obj):
+    def get_progress(self, obj) -> float:
         return round(obj.progress, 2)
 
 
