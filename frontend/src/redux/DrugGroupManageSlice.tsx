@@ -23,7 +23,7 @@ export interface ISendDrugGroupDataError{
 // Асинхронный Thunk для загрузки списка групп ЛС с сервера
 export const fetchDrugGroupList = createAsyncThunk('drugGroupManage/fetchDrugGroupList', async () => {
     try {
-        const response = await axios.get('/api/getDrugGroup/');
+        const response = await axios.get('/api/DrugGroup/');
         if (response.data.result.status === 200) {
             return response.data.data;
         }
@@ -39,7 +39,7 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
     try {
         const data = new FormData();
         data.append('dg_name', dg_name)
-        const response = await axios.post('/api/addDrugGroup/', data, {
+        const response = await axios.post('/api/DrugGroup/', data, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'multipart/form-data'
@@ -54,7 +54,7 @@ export const addDrugGroup = createAsyncThunk('drugGroupManage/addDrugGroup', asy
 
 export const deleteDrugGroup = createAsyncThunk('drugGroupManage/deleteDrugGroup', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/deleteDrugGroup/`,  { 
+        const response = await axios.delete(`/api/DrugGroup/`,  { 
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
             },

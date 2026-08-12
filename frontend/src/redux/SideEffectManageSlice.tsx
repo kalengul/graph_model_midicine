@@ -34,7 +34,7 @@ export interface ISendSideEffectDataError{
 // Асинхронный Thunk для загрузки списка побочных эффектов с сервера
 export const fetchSideEffectList = createAsyncThunk('sideEffectManage/fetchSideEffectList', async () => {
     try {
-        const response = await axios.get('/api/getSideEffect/');
+        const response = await axios.get('/api/SideEffect/');
         if (response.data.result.status === 200) {
             return response.data.data;
         }
@@ -47,7 +47,7 @@ export const fetchSideEffectList = createAsyncThunk('sideEffectManage/fetchSideE
 
 export const fetchSideEffectRankList = createAsyncThunk('sideEffectManage/fetchSideEffectRankList', async () => {
     try {
-        const response = await axios.get('/api/getRanks/');
+        const response = await axios.get('/api/Ranks/');
         if (response.data.result.status === 200) {
             return response.data.data;
         }
@@ -63,7 +63,7 @@ export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updat
         // console.log(updateData)
         const data = {update_rsgs: updateData}
         // console.log(data)
-        const response = await axios.put('/api/updateRanks/', data , {
+        const response = await axios.put('/api/Ranks/', data , {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
@@ -79,7 +79,7 @@ export const updateSideEffectRankList = createAsyncThunk('sideEffectManage/updat
 
 export const addSideEffect = createAsyncThunk('sideEffectManage/addSideEffect', async (data: ISendSideEffectData)=>{
     try {
-        const response = await axios.post("/api/addSideEffect/", data, {
+        const response = await axios.post("/api/SideEffect/", data, {
             headers: { 
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'application/json'
@@ -94,7 +94,7 @@ export const addSideEffect = createAsyncThunk('sideEffectManage/addSideEffect', 
 
 export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEffect', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/deleteSideEffect/`,  {
+        const response = await axios.delete(`/api/SideEffect/`,  {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
             },
@@ -109,7 +109,7 @@ export const deleteSideEffect = createAsyncThunk('sideEffectManage/deleteSideEff
 
 export const exportRanksFile = createAsyncThunk('sideEffectManage/exportRanksFile', async ()=>{
     try {
-        const response = await axios.get(`/api/export_from_db/`, {
+        const response = await axios.get(`/api/Weights/`, {
             // responseType: 'arraybuffer',
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,

@@ -25,7 +25,7 @@ interface IDrugsState {
 // Асинхронный Thunk для загрузки списка ЛС с сервера
 export const fetchDrugsList = createAsyncThunk('drugManage/fetchDrugsList', async () => {
     try {
-        const response = await axios.get('/api/getDrug/');
+        const response = await axios.get('/api/Drug/');
         if (response.data.result.status === 200) {
             return response.data.data;
         }
@@ -41,7 +41,7 @@ export const addDrug = createAsyncThunk('drugManage/addDrug', async (formData: I
     try {
         const data = new FormData();
         data.append('drug_name', formData.drug_name)
-        const response = await axios.post('/api/addDrug/', data, {
+        const response = await axios.post('/api/Drug/', data, {
             headers: {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 'Content-Type': 'multipart/form-data'
@@ -56,7 +56,7 @@ export const addDrug = createAsyncThunk('drugManage/addDrug', async (formData: I
 
 export const deleteDrug = createAsyncThunk('drugManage/deleteDrug', async (id: string)=>{
     try {
-        const response = await axios.delete(`/api/deleteDrug/`,  {
+        const response = await axios.delete(`/api/Drug/`,  {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('token')}`,
                 },
