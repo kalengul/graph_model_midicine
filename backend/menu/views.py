@@ -3,10 +3,20 @@ from rest_framework import status
 from rest_framework.response import Response
 
 from menu.models import Menu
-from menu.serializers import MenuSerializer
+from menu.serializers import MenuSerializer, MenuResponseSerializer
+
+from drf_spectacular.utils import extend_schema, OpenApiResponse
 
 
 class GetMenuAPI(APIView):
+
+    @extend_schema(
+        operation_id='menu_list',
+        responses={
+            200: MenuResponseSerializer,
+        },
+        tags=['menu'],
+    )
     def get(self, request):
         try:
             menu_items = Menu.objects.filter(is_active=True)

@@ -18,11 +18,17 @@ from medscape_api.interaction_retriever import (InteractionRetriever,
                                                 NameDrugsMedScape,)
 from medscape_api.json_loader import JSONLoader
 from drugs.utils.custom_response import CustomResponse
-from medscape_api.serializers import QueryParamsSerializer
+from medscape_api.serializers import (QueryParamsSerializer,
+                                      AlternativeMedScapeOutSerializer,
+                                      AllDrugTableResponseSerializer,
+                                      LoadJSONResponseSerializer
+                                    )
 from medscape_api.utils.medscape_exceptions import (WrongDrugNumberError,
                                                     WrongInputDataError)
 from medscape_api.utils.term_replacer import TermReplace
 
+from drf_spectacular.utils import extend_schema
+from drf_spectacular.types import OpenApiTypes
 
 logger = logging.getLogger('medscape')
 
@@ -38,6 +44,17 @@ class InteractionMedScapeView(APIView):
 
     COMBINATION_LONG = 2
 
+    @extend_schema(
+        tags=["medscape"],
+        parameters=[QueryParamsSerializer],
+        responses={
+            200: OpenApiTypes.OBJECT,
+            204: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+    )
     def get(self, request):
         """Метод отвечающий на GET-запрос."""
         logger.debug(f'входная строка {request.build_absolute_uri()}')
@@ -125,6 +142,13 @@ class InteractionMedScapeView(APIView):
 class MedScapeOutDateView(APIView):
     """Получение списка взаимодействии ЛС."""
 
+    @extend_schema(
+            tags=["medscape"],
+            responses={
+                200: OpenApiTypes.OBJECT,
+                404: OpenApiTypes.OBJECT,
+            },
+    )
     def get(self, request):
         """Метод получения списка взаимодействий."""
         try:
@@ -162,6 +186,12 @@ class AlternativeMedScapeOutView(APIView):
         ПОка ничего не делает.
         """
 
+    @extend_schema(
+        tags=['medscape'],
+        responses={
+            200: AlternativeMedScapeOutSerializer,
+        },
+    )
     def get(self, request):
         """Метод получения альтернативного списка ЛС."""
         try:
@@ -183,70 +213,119 @@ class AlternativeMedScapeOutView(APIView):
 class AllDrugTableView(APIView):
     """Работа с таблицей со всеми ЛС."""
 
+    serializer_class = AllDrugTableResponseSerializer
+
+    @extend_schema(
+        tags=['medscape'],
+        request=None,
+        responses={
+            200: AllDrugTableResponseSerializer,
+            404: OpenApiTypes.OBJECT,
+        },
+    )
     def post(self, request):
         """Вывод таблицы ЛС и их взаимодействия."""
         try:
             dg = DrugGroup.objects.all()
             dr = Drug.objects.all()
-            dit = {}
-            string_table = ''
-            selected_drug2 = ''
-            if request.method == 'POST':
-                selected_drug = request.POST.get('selected_drug')
-                selected_drug2 = request.POST.get('selected_drug2')
-            else:
-                selected_drug = 'Амиодарон'
 
-            selected_drug_obj = Drug.objects.get(name=selected_drug)
-            if selected_drug2 != '':
-                string_table = ('Другие взаимодействия'
-                                'с лекарственным средством')
+            selected_drug = request.POST.get(
+                'selected_drug',
+                'Амиодарон',
+            )
+            selected_drug2 = request.POST.get(
+                'selected_drug2',
+                '',
+            )
+
+            selected_drug_obj = Drug.objects.get(
+                name=selected_drug
+            )
+
+            if selected_drug2:
+                string_table = (
+                    'Другие взаимодействия '
+                    'с лекарственным средством'
+                )
             else:
-                string_table = 'Взаимодействие с лекарственным средством'
+                string_table = (
+                    'Взаимодействие с лекарственным средством'
+                )
+
             dit = DrugInteractionTable.objects.filter(
                 Q(DrugOne=selected_drug_obj.id)
-                | Q(DrugTwo=selected_drug_obj.id))
+                | Q(DrugTwo=selected_drug_obj.id)
+            )
 
-            if selected_drug2 != '':
-                selected_drug_obj2 = Drug.objects.get(name=selected_drug2)
+            if selected_drug2:
+                selected_drug_obj2 = Drug.objects.get(
+                    name=selected_drug2
+                )
+
                 dit2 = DrugInteractionTable.objects.filter(
-                    Q(DrugOne=selected_drug_obj.id,
-                      DrugTwo=selected_drug_obj2.id)
-                    | Q(DrugOne=selected_drug_obj2.id,
-                        DrugTwo=selected_drug_obj.id))
+                    Q(
+                        DrugOne=selected_drug_obj.id,
+                        DrugTwo=selected_drug_obj2.id,
+                    )
+                    | Q(
+                        DrugOne=selected_drug_obj2.id,
+                        DrugTwo=selected_drug_obj.id,
+                    )
+                )
             else:
-                dit2 = {}
+                dit2 = DrugInteractionTable.objects.none()
 
-            Response(
+            return Response(
                 {
-                    'DrugGroup': dg,
+                    'DrugGroup': list(dg.values()),
                     'sd': selected_drug,
                     'sd2': selected_drug2,
-                    'Drug': dr,
-                    'DrugInteractionTable': dit,
-                    'DrugInteraction': dit2,
+                    'Drug': list(dr.values()),
+                    'DrugInteractionTable': list(dit.values()),
+                    'DrugInteraction': list(dit2.values()),
                     'StringTable': string_table,
                 },
-                status=status.HTTP_200_OK)
+                status=status.HTTP_200_OK,
+            )
+
         except ObjectDoesNotExist:
             return Response(
                 {'error': NO_DRUG},
-                status=status.HTTP_404_NOT_FOUND)
+                status=status.HTTP_404_NOT_FOUND,
+            )
 
 
 class LoadJSONView(APIView):
     """Загрузка данных в БД MedScape."""
 
+    serializer_class = LoadJSONResponseSerializer
+
+    @extend_schema(
+        tags=['medscape'],
+        request=None,
+        responses={
+            200: LoadJSONResponseSerializer,
+            500: OpenApiTypes.OBJECT,
+        },
+    )
     def post(self, request):
         """Метод загрузки."""
         try:
+            result = JSONLoader().load_json_Medscape(
+                settings.BASE_DIR
+            )
+
             return Response(
                 {
-                    'main_element': ('show_model + ',
-                                     JSONLoader().load_json_Medscape(
-                                         settings.BASE_DIR))
-                })
+                    'main_element': result,
+                },
+                status=status.HTTP_200_OK,
+            )
+
         except Exception:
+            logger.exception('Проблемы загрузки данных!')
+
             return Response(
                 {'error': 'Проблемы загрузки данных!'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            )

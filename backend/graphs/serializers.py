@@ -107,3 +107,18 @@ class BayesSerializer(serializers.Serializer):
     )
     humanData = HumanDataSerializer(required=False)
     interpretation = serializers.BooleanField(required=False, default=False)
+
+class GraphFilesUploadSerializer(serializers.Serializer):
+    file = serializers.FileField()
+    file2 = serializers.FileField()
+
+class GraphStorageUploadSerializer(serializers.Serializer):
+    graph_file = serializers.FileField()
+    probability_file = serializers.FileField()
+
+class GraphVisualizationSerializer(serializers.Serializer):
+    name = serializers.ListField(
+        child=serializers.CharField()
+    )
+    nodes = serializers.ListField()
+    links = serializers.ListField()

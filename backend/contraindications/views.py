@@ -9,12 +9,21 @@ from django.core.exceptions import ObjectDoesNotExist
 
 from contraindications.models import Contraindication
 from contraindications.serializers import (ContraindicationListSerializer,
-                                           ContraindicationDetailSerializer)
+                                           ContraindicationDetailSerializer,
+                                           ContraindicationFileUploadSerializer)
 from drugs.utils.custom_response import CustomResponse
 # from drugs.models import Drug
 # from contraindications.utils.adapters import ContraAdapter, DrugAdapter
 from contraindications.utils.cleaner import ContraindicationCleanProcessor
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
+
+from drf_spectacular.utils import (
+    extend_schema,
+    extend_schema_view,
+    OpenApiParameter,
+    OpenApiResponse,
+)
+from drf_spectacular.types import OpenApiTypes
 
 
 logger = logging.getLogger('contraindications')
@@ -51,6 +60,82 @@ def require_contraindication(func):
     return wrapper
 
 
+
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='contraindications_list',
+        responses={
+            200: OpenApiResponse(
+                response=ContraindicationListSerializer(many=True),
+                description='Список противопоказаний.',
+            ),
+            404: OpenApiResponse(
+                description='Противопоказание не найдено.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+    post=extend_schema(
+        operation_id='contraindication_create',
+        request=ContraindicationListSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказание успешно создано.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Некорректные данные.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка добавления противопоказания.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+    put=extend_schema(
+        operation_id='contraindication_update',
+        request=ContraindicationDetailSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказание успешно изменено.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Некорректные данные.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказание не найдено.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка изменения противопоказания.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+    delete=extend_schema(
+        operation_id='contraindication_delete',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказание успешно удалено.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='ID не указан.',
+            ),
+            404: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказание не найдено.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+)
 class ContraindicationView(APIView):
     """Вью для противопоказаний."""
 
@@ -94,6 +179,7 @@ class ContraindicationView(APIView):
             http_status=status.HTTP_200_OK,
             message=message,
             data=serializer.data)
+
 
     def post(self, request):
         """Добавление противопоказания."""
@@ -171,6 +257,41 @@ class ContraindicationView(APIView):
         )
 
 
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='contraindications_load',
+        request=ContraindicationFileUploadSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Противопоказания успешно загружены.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Файл не передан.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка загрузки противопоказаний.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+    get=extend_schema(
+        operation_id='contraindications_export',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.BINARY,
+                description='JSON-файл с противопоказаниями.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка выгрузки.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+)
 class LoadContraindicationView(APIView):
     """Загрузка противопоказаний из загружаемого файла."""
 
@@ -276,7 +397,22 @@ class LoadContraindicationView(APIView):
 #             message=message
 #         )
 
-
+@extend_schema_view(
+    delete=extend_schema(
+        operation_id='contraindications_clear',
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Таблица противопоказаний успешно очищена.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка очистки.',
+            ),
+        },
+        tags=['contraindications'],
+    ),
+)
 class ClearContraindication(APIView):
     """Вью полной очистки противопоказания."""
 

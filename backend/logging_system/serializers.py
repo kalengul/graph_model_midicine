@@ -15,3 +15,8 @@ class SystemStateSerializer(serializers.ModelSerializer):
             'updated_at',
             'commit_hash',
         ]
+
+class LoggingToggleSerializer(serializers.Serializer):
+    """Сериализатор переключения логирования."""
+
+    enabled = serializers.BooleanField()

@@ -31,3 +31,57 @@ class DrugRiskAssessmentRequestSerializer(serializers.Serializer):
                 "Массив drugs содержит дублирующиеся значения после нормализации."
             )
         return normalized
+    
+
+class SideEffectSerializer(serializers.Serializer):
+    seName = serializers.CharField()
+    rank = serializers.FloatField()
+
+
+class DrugEffectSerializer(serializers.Serializer):
+    compatibility = serializers.CharField()
+    effects = SideEffectSerializer(many=True)
+
+
+class CombinationDrugSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    sideEffects = SideEffectSerializer(many=True)
+
+
+class CombinationSerializer(serializers.Serializer):
+    compatibility = serializers.CharField()
+    drugs = CombinationDrugSerializer(many=True)
+
+
+class SeFromDrugItemSerializer(serializers.Serializer):
+    name = serializers.CharField()
+    sideEffects = SideEffectSerializer(many=True)
+
+
+class CompatibilitySerializer(serializers.Serializer):
+    status = serializers.CharField()
+    rank = serializers.FloatField()
+
+
+class BannedPairSerializer(serializers.Serializer):
+    ids = serializers.ListField(child=serializers.IntegerField())
+    names = serializers.ListField(child=serializers.CharField())
+    reason = serializers.CharField(allow_null=True)
+
+
+class BannedPairContSerializer(serializers.Serializer):
+    drugId = serializers.IntegerField()
+    drugName = serializers.CharField()
+    contraindicationId = serializers.CharField()
+    contraindicationName = serializers.CharField()
+    reason = serializers.CharField(allow_null=True)
+
+
+class RiskAssessmentResponseSerializer(serializers.Serializer):
+    drugs = serializers.DictField(child=serializers.CharField())
+    compatibility = CompatibilitySerializer()
+    bannedPairs = BannedPairSerializer(many=True)
+    bannedPairsCont = BannedPairContSerializer(many=True)
+    sideEffects = DrugEffectSerializer(many=True)
+    combinations = CombinationSerializer(many=True)
+    seFromDrug = SeFromDrugItemSerializer(many=True)

@@ -126,11 +126,11 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
         model = Drug
         fields = ['id', 'drug_name', 'dg_id', 'nosology_id', 'trade_ids']
     
-    def get_dg_id(self, obj):
+    def get_dg_id(self, obj) -> int | None:
         """Получение списка ID групп ЛС."""
         return [g.id for g in obj.drug_groups.all()]
     
-    def get_trade_ids(self, obj):
+    def get_trade_ids(self, obj) -> list[int]:
         """Получение списка ID торговых названий."""
         return [tn.id for tn in obj.trade_names.all()]
     
@@ -252,3 +252,42 @@ class FileSerializer(serializers.Serializer):
     """Сериализатор для файлов."""
 
     file = serializers.FileField()
+
+class DrugDataLoadSerializer(serializers.Serializer):
+    file = serializers.FileField(
+        required=False,
+        allow_null=True,
+    )
+
+class TradeNameResponseSerializer(serializers.Serializer):
+    drug_id = serializers.IntegerField()
+    drug_name = serializers.CharField()
+    trade_names = serializers.ListField(
+        child=serializers.CharField()
+    )
+
+class DrugTradeSearchTradeNameSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    name = serializers.CharField()
+
+
+class DrugTradeSearchResultSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    drug_name = serializers.CharField()
+    dg_id = serializers.ListField(
+        child=serializers.IntegerField()
+    )
+    nosology_id = serializers.IntegerField(
+        allow_null=True
+    )
+    trade_names = DrugTradeSearchTradeNameSerializer(
+        many=True
+    )
+
+
+class DrugTradeSearchResponseSerializer(serializers.Serializer):
+    query = serializers.CharField()
+    count = serializers.IntegerField()
+    results = DrugTradeSearchResultSerializer(
+        many=True
+    )

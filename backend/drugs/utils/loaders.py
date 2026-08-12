@@ -40,8 +40,8 @@ class Loader(ABC):
         
         # Очищаем старые связи
         universal_cleaner(
-            table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender'],
-            model_classes=[DrugSideEffect, SideEffectsGender]
+            table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender', 'drugs_sideeffect'],
+            model_classes=[DrugSideEffect, SideEffectsGender, SideEffect]
         ).clear_table()
         logger.info('Таблицы: DrugSideEffect, SideEffectsGender очищены')
 

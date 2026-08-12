@@ -15,15 +15,21 @@ from django.http import FileResponse
 from drugs.models import (Drug,
                      DrugGroup,
                      SideEffect,
-                     DrugSideEffect,
-                     TradeName)
+                    #  DrugSideEffect,
+                    #  TradeName
+                     )
 from drugs.serializers import (
     DrugSerializer,
     DrugGroupSerializer,
     DrugListRetrieveSerializer,
     SideEffectSerializer,
-    DrugSideEffectSerializer,
-    FileSerializer
+    # DrugSideEffectSerializer,
+    FileSerializer,
+    DrugDataLoadSerializer,
+    TradeNameResponseSerializer,
+    DrugTradeSearchTradeNameSerializer,
+    DrugTradeSearchResultSerializer,
+    DrugTradeSearchResponseSerializer
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
@@ -39,6 +45,14 @@ from accounts.auth import bearer_token_required
 from logging_system.utils.calc_hash import calculate_file_hash
 from logging_system.models import SystemState
 
+from drf_spectacular.utils import (
+    extend_schema,
+    extend_schema_view,
+    OpenApiParameter,
+    OpenApiResponse,
+)
+from drf_spectacular.types import OpenApiTypes
+
 
 logger = logging.getLogger('drugs')
 
@@ -49,6 +63,16 @@ SERVER_ERROR = 'Неизвестная ошибка сервера'
 class DrugGroupAPI(APIView):
     """Вью-класс для работы с группами ЛС."""
 
+    @extend_schema(
+        operation_id='drug_group_create',
+        request=DrugGroupSerializer,
+        responses={
+            200: DrugGroupSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    )
     @bearer_token_required
     def post(self, request):
         """Метод для запросов POST."""
@@ -84,6 +108,22 @@ class DrugGroupAPI(APIView):
                       ' уже существует')),
             http_status=status.HTTP_400_BAD_REQUEST)
 
+    @extend_schema(
+        operation_id='drug_group_list',
+        parameters=[
+            OpenApiParameter(
+                name='dg_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses={
+            200: DrugGroupSerializer,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    )
     def get(self, request):
         """Пример вью, которая возвращает группу/список групп."""
         pk = request.query_params.get('dg_id')
@@ -109,6 +149,23 @@ class DrugGroupAPI(APIView):
                 message='Группа ЛС не найдена',
                 http_status=status.HTTP_404_NOT_FOUND)
 
+    @extend_schema(
+        operation_id='drug_group_delete',
+        parameters=[
+            OpenApiParameter(
+                name='dg_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=True,
+            ),
+        ],
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    )
     @bearer_token_required
     def delete(self, request):
         """Метод для запроса DELETE."""
@@ -132,6 +189,87 @@ class DrugGroupAPI(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='drug_create',
+        request=DrugSerializer,
+        responses={200: DrugSerializer},
+        tags=['drugs'],
+    ),
+    get=extend_schema(
+        operation_id='drug_list_retrieve',
+        parameters=[
+            OpenApiParameter(
+                name='drug_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses={200: DrugListRetrieveSerializer(many=True)},
+        tags=['drugs'],
+    ),
+    delete=extend_schema(
+        operation_id='drug_delete',
+        parameters=[
+            OpenApiParameter(
+                name='drug_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=True,
+            ),
+        ],
+        responses={200: OpenApiTypes.OBJECT},
+        tags=['drugs'],
+    ),
+)
+
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='drug_create',
+        request=DrugSerializer,
+        responses={
+            200: DrugSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+    get=extend_schema(
+        operation_id='drug_list_retrieve',
+        parameters=[
+            OpenApiParameter(
+                name='drug_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses={
+            200: DrugListRetrieveSerializer(many=True),
+            404: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+    delete=extend_schema(
+        operation_id='drug_delete',
+        parameters=[
+            OpenApiParameter(
+                name='drug_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=True,
+            ),
+        ],
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class DrugAPI(APIView):
     """
     Вью-класс для создания ЛС.
@@ -251,6 +389,52 @@ class DrugAPI(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='side_effect_create',
+        request=SideEffectSerializer,
+        responses={
+            200: SideEffectSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+    get=extend_schema(
+        operation_id='side_effect_list_retrieve',
+        parameters=[
+            OpenApiParameter(
+                name='se_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses={
+            200: SideEffectSerializer(many=True),
+            404: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+    delete=extend_schema(
+        operation_id='side_effect_delete',
+        parameters=[
+            OpenApiParameter(
+                name='se_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=True,
+            ),
+        ],
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class SideEffectAPI(APIView):
     """
     Вью для побочных действий.
@@ -343,7 +527,7 @@ class SideEffectAPI(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message=SERVER_ERROR,
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
+    
     @bearer_token_required
     def delete(self, request):
         """Метод для DELETE-запросы."""
@@ -367,103 +551,122 @@ class SideEffectAPI(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-class DrugSideEffectView(APIView):
-    """Вью для работы с рангами."""
+# class DrugSideEffectView(APIView):
+#     """Вью для работы с рангами."""
 
-    @bearer_token_required
-    def put(self, request):
-        """Метод для запроса PUT."""
-        update_data = request.data.get('update_rsgs')
+#     @bearer_token_required
+#     def put(self, request):
+#         """Метод для запроса PUT."""
+#         update_data = request.data.get('update_rsgs')
 
-        if not update_data or not isinstance(update_data, list):
-            return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message='Передан некорректный формат данных',
-                http_status=status.HTTP_400_BAD_REQUEST)
+#         if not update_data or not isinstance(update_data, list):
+#             return CustomResponse(
+#                 status=status.HTTP_400_BAD_REQUEST,
+#                 message='Передан некорректный формат данных',
+#                 http_status=status.HTTP_400_BAD_REQUEST)
 
-        for item in update_data:
-            drug_id = item.get('drug_id')
-            logger.info(f'drug_id = {drug_id}')
-            se_id = item.get('se_id')
-            logger.info(f'se_id = {se_id}')
-            rank = item.get('rank')
-            logger.info(f'rank = {rank}')
+#         for item in update_data:
+#             drug_id = item.get('drug_id')
+#             logger.info(f'drug_id = {drug_id}')
+#             se_id = item.get('se_id')
+#             logger.info(f'se_id = {se_id}')
+#             rank = item.get('rank')
+#             logger.info(f'rank = {rank}')
 
-            if not drug_id:
-                return CustomResponse(
-                    status=status.HTTP_400_BAD_REQUEST,
-                    message='id ЛС не передан',
-                    http_status=status.HTTP_400_BAD_REQUEST)
+#             if not drug_id:
+#                 return CustomResponse(
+#                     status=status.HTTP_400_BAD_REQUEST,
+#                     message='id ЛС не передан',
+#                     http_status=status.HTTP_400_BAD_REQUEST)
 
-            if not se_id:
-                return CustomResponse(
-                    status=status.HTTP_400_BAD_REQUEST,
-                    message='id побочного действия не передан',
-                    http_status=status.HTTP_400_BAD_REQUEST)
+#             if not se_id:
+#                 return CustomResponse(
+#                     status=status.HTTP_400_BAD_REQUEST,
+#                     message='id побочного действия не передан',
+#                     http_status=status.HTTP_400_BAD_REQUEST)
 
-            if not Drug.objects.filter(id=drug_id).exists():
-                return CustomResponse(
-                    status=status.HTTP_404_NOT_FOUND,
-                    message=f'ЛС с id={drug_id} не найдено',
-                    http_status=status.HTTP_404_NOT_FOUND)
+#             if not Drug.objects.filter(id=drug_id).exists():
+#                 return CustomResponse(
+#                     status=status.HTTP_404_NOT_FOUND,
+#                     message=f'ЛС с id={drug_id} не найдено',
+#                     http_status=status.HTTP_404_NOT_FOUND)
 
-            if not SideEffect.objects.filter(id=se_id).exists():
-                return CustomResponse(
-                    status=status.HTTP_404_NOT_FOUND,
-                    message=f'Побочный эффект с id={se_id} не найден',
-                    http_status=status.HTTP_404_NOT_FOUND)
+#             if not SideEffect.objects.filter(id=se_id).exists():
+#                 return CustomResponse(
+#                     status=status.HTTP_404_NOT_FOUND,
+#                     message=f'Побочный эффект с id={se_id} не найден',
+#                     http_status=status.HTTP_404_NOT_FOUND)
 
-            try:
-                drug_side_effect = DrugSideEffect.objects.get(
-                    drug_id=drug_id,
-                    side_effect_id=se_id
-                )
-            except DrugSideEffect.DoesNotExist:
-                return CustomResponse(
-                    status=status.HTTP_404_NOT_FOUND,
-                    message=(f'Связь drug_id={drug_id} '
-                             f'и se_id={se_id} не найдена'),
-                    http_status=status.HTTP_404_NOT_FOUND
-                )
+#             try:
+#                 drug_side_effect = DrugSideEffect.objects.get(
+#                     drug_id=drug_id,
+#                     side_effect_id=se_id
+#                 )
+#             except DrugSideEffect.DoesNotExist:
+#                 return CustomResponse(
+#                     status=status.HTTP_404_NOT_FOUND,
+#                     message=(f'Связь drug_id={drug_id} '
+#                              f'и se_id={se_id} не найдена'),
+#                     http_status=status.HTTP_404_NOT_FOUND
+#                 )
 
-            serializer = DrugSideEffectSerializer(drug_side_effect, data=item)
-            if serializer.is_valid():
-                serializer.save()
-            else:
-                return CustomResponse(
-                    status=status.HTTP_400_BAD_REQUEST,
-                    message=f'Некорректный ранг: {serializer.errors}',
-                    http_status=status.HTTP_400_BAD_REQUEST
-                )
+#             serializer = DrugSideEffectSerializer(drug_side_effect, data=item)
+#             if serializer.is_valid():
+#                 serializer.save()
+#             else:
+#                 return CustomResponse(
+#                     status=status.HTTP_400_BAD_REQUEST,
+#                     message=f'Некорректный ранг: {serializer.errors}',
+#                     http_status=status.HTTP_400_BAD_REQUEST
+#                 )
 
-        return CustomResponse(
-            status=status.HTTP_200_OK,
-            message='Ранги успешно обновлены',
-            http_status=status.HTTP_200_OK
-        )
+#         return CustomResponse(
+#             status=status.HTTP_200_OK,
+#             message='Ранги успешно обновлены',
+#             http_status=status.HTTP_200_OK
+#         )
 
-    def get(self, request):
-        """Метод для PUT-запросов."""
-        try:
-            serializer = DrugSideEffectSerializer(DrugSideEffect.objects.all(),
-                                                  many=True)
-            return CustomResponse(
-                data=serializer.data,
-                status=status.HTTP_200_OK,
-                message="Ранги получены",
-                http_status=status.HTTP_200_OK)
-        except ValueError:
-            return CustomResponse(
-                status=status.HTTP_400_BAD_REQUEST,
-                message="Ошибка при получении ранга",
-                http_status=status.HTTP_400_BAD_REQUEST)
-        except Exception:
-            return CustomResponse(
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message="Неизвестная ошибка сервера",
-                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#     def get(self, request):
+#         """Метод для PUT-запросов."""
+#         try:
+#             serializer = DrugSideEffectSerializer(DrugSideEffect.objects.all(),
+#                                                   many=True)
+#             return CustomResponse(
+#                 data=serializer.data,
+#                 status=status.HTTP_200_OK,
+#                 message="Ранги получены",
+#                 http_status=status.HTTP_200_OK)
+#         except ValueError:
+#             return CustomResponse(
+#                 status=status.HTTP_400_BAD_REQUEST,
+#                 message="Ошибка при получении ранга",
+#                 http_status=status.HTTP_400_BAD_REQUEST)
+#         except Exception:
+#             return CustomResponse(
+#                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#                     message="Неизвестная ошибка сервера",
+#                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='weights_export',
+        responses={
+            200: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+    post=extend_schema(
+        operation_id='weights_upload',
+        request=FileSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class ExcelLoadView(APIView):
     """Вью для скачивания файла с данными из БД."""
 
@@ -594,7 +797,11 @@ class ExcelLoadView(APIView):
         state.save()
         logger.info(f"SystemState обновлён: weights_file={file_name}, hash={file_hash}")
 
-
+@extend_schema_view(
+    post=extend_schema(
+        exclude=True,
+    ),
+)
 class ModifiedExcelLoadView(ExcelLoadView):
     """
     Усовершенствованная версия вью.
@@ -603,6 +810,18 @@ class ModifiedExcelLoadView(ExcelLoadView):
     минуя фронтэнд.
     """
 
+    @extend_schema(exclude=True)
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+    @extend_schema(
+        operation_id='simple_export_from_db',
+        responses={
+            200: OpenApiTypes.BINARY,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    )
     # @bearer_token_required
     def get(self, request, *args, **kwargs):
         """Скачивание файла с данными из БД."""
@@ -623,13 +842,25 @@ class ModifiedExcelLoadView(ExcelLoadView):
                 http_status=status.HTTP_404_NOT_FOUND
             )
 
-
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='banned_pair_upload',
+        request=FileSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class BannedPairLoadView(APIView):
     """Вью для работы с запрещёнными парами ЛС."""
 
     INCORRECT_FILE = 'Неверный excel-файл'
     IMPORT_ERROR = 'Импорт запрещённых пар ЛС. Ошибка при обработке файла'
     SUCCESSFUL_IMPORT = 'Запрещённые пары ЛС импортированы в БД успешно'
+
 
     # @bearer_token_required
     def post(self, request, *args, **kwargs):
@@ -729,7 +960,26 @@ class BannedPairLoadView(APIView):
                 http_status=status.HTTP_400_BAD_REQUEST
             )
             
-
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='drug_data_load',
+        request=DrugDataLoadSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        parameters=[
+            OpenApiParameter(
+                name='clear',
+                type=OpenApiTypes.BOOL,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        tags=['drugs'],
+    ),
+)
 class DrugDataLoadView(APIView):
     """
     View для загрузки данных о лекарственных средствах.
@@ -846,7 +1096,27 @@ class DrugDataLoadView(APIView):
         state.drugs_file_uploaded_at = file_info['uploaded_at']
         state.save()
         logger.info(f"SystemState обновлён: drugs_file={file_info['name']}")
-    
+
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='trade_name_list',
+        parameters=[
+            OpenApiParameter(
+                name='drug_id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=True,
+            ),
+        ],
+        responses={
+            200: TradeNameResponseSerializer,
+            400: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class TradeNameView(APIView):
     """View для загрузки торговых названий."""
 
@@ -890,161 +1160,26 @@ class TradeNameView(APIView):
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     
-    # def post(self, request):
-    #     """
-    #     Загрузка торговых названий.
-        
-    #     Ожидает JSON формата:
-    #     {
-    #         "гликлазид": ["глидиаб", "глидиаб мв", ...],
-    #         "ибупрофен": ["бруфен ср", ...]
-    #     }
-        
-    #     Параметры запроса (query params):
-    #     - clear: true/false - очищать ли существующие торговые названия перед загрузкой
-    #     """
-    #     try:
-    #         # Получаем параметр clear
-    #         clear_before_load = request.GET.get('clear', 'false').lower() == 'true'
-            
-    #         # Получаем данные
-    #         data = self._get_data_from_request(request)
-            
-    #         if not data:
-    #             return CustomResponse(
-    #                 http_status=status.HTTP_400_BAD_REQUEST,
-    #                 status=status.HTTP_400_BAD_REQUEST,
-    #                 message='Не предоставлены данные для загрузки. '
-    #                     'Отправьте JSON с ключом "trade_names" или файл с ключом "file".'
-    #             )
-            
-    #         # Если данные в формате {"trade_names": {...}}
-    #         if 'trade_names' in data:
-    #             trade_names_data = data['trade_names']
-    #         else:
-    #             trade_names_data = data
-            
-    #         # Проверяем, что данные - это словарь
-    #         if not isinstance(trade_names_data, dict):
-    #             return CustomResponse(
-    #                 http_status=status.HTTP_400_BAD_REQUEST,
-    #                 status=status.HTTP_400_BAD_REQUEST,
-    #                 message='Данные должны быть объектом (dictionary) в формате {"МНН": ["торг1", ...]}'
-    #             )
-            
-    #         # Очищаем существующие торговые названия если нужно
-    #         if clear_before_load:
-    #             TradeName.objects.all().delete()
-    #             logger.info("Существующие торговые названия очищены")
-            
-    #         # Загружаем торговые названия
-    #         stats = self._load_trade_names_only(trade_names_data)
-            
-    #         if stats['errors']:
-    #             return CustomResponse(
-    #                 http_status=status.HTTP_207_MULTI_STATUS,
-    #                 status=status.HTTP_207_MULTI_STATUS,
-    #                 message='Загрузка завершена с ошибками',
-    #                 data=stats
-    #             )
-            
-    #         return CustomResponse(
-    #             http_status=status.HTTP_200_OK,
-    #             status=status.HTTP_200_OK,
-    #             message='Торговые названия успешно загружены',
-    #             data=stats
-    #         )
-            
-    #     except Exception as e:
-    #         logger.error(f"Ошибка при загрузке торговых названий: {e}", exc_info=True)
-    #         return CustomResponse(
-    #             http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    #             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    #             message=f'При загрузке данных в БД произошла ошибка: {str(e)}'
-    #         )
-
-    # def _load_trade_names_only(self, trade_names_data):
-    #     """
-    #     Загрузка только торговых названий к существующим МНН.
-    #     Новые МНН НЕ создаются.
-        
-    #     Формат данных:
-    #     {
-    #         "гликлазид": ["глидиаб", "глидиаб мв", ...],
-    #         "ибупрофен": ["бруфен ср", "бумидол®", ...]
-    #     }
-    #     """
-    #     stats = {
-    #         'trade_names_processed': 0,
-    #         'trade_names_created': 0,
-    #         'trade_names_updated': 0,
-    #         'errors': []
-    #     }
-        
-    #     for drug_name, trade_names in trade_names_data.items():
-    #         drug_name = drug_name.strip().casefold()
-            
-    #         # Ищем существующий препарат
-    #         try:
-    #             drug = Drug.objects.get(drug_name__iexact=drug_name)
-    #         except Drug.DoesNotExist:
-    #             continue
-            
-    #         if not isinstance(trade_names, list):
-    #             stats['errors'].append({
-    #                 'drug_name': drug_name,
-    #                 'error': 'Данные не являются списком'
-    #             })
-    #             continue
-            
-    #         # Загружаем торговые названия
-    #         for trade_name in trade_names:
-    #             trade_name = trade_name.strip()
-    #             if not trade_name:
-    #                 continue
-                
-    #             trade_obj, created = TradeName.objects.get_or_create(
-    #                 name=trade_name,
-    #                 defaults={'drug': drug}
-    #             )
-                
-    #             if created:
-    #                 stats['trade_names_created'] += 1
-    #             else:
-    #                 if trade_obj.drug != drug:
-    #                     trade_obj.drug = drug
-    #                     trade_obj.save()
-    #                     stats['trade_names_updated'] += 1
-            
-    #         stats['trade_names_processed'] += 1
-        
-    #     logger.info(f"Загрузка торговых названий завершена: {stats}")
-    #     return stats
-
-    # def _get_data_from_request(self, request):
-    #     """Извлекает данные из request (JSON или файл)."""
-    #     # Проверяем, есть ли файл
-    #     if request.FILES.get('file'):
-    #         uploaded_file = request.FILES['file']
-    #         try:
-    #             # Пробуем прочитать как JSON
-    #             data = json.load(uploaded_file)
-    #             return data
-    #         except json.JSONDecodeError as e:
-    #             logger.error(f"Ошибка парсинга JSON файла: {e}")
-    #             return None
-        
-    #     # Проверяем, есть ли JSON в теле запроса
-    #     if request.body:
-    #         try:
-    #             data = json.loads(request.body)
-    #             return data
-    #         except json.JSONDecodeError as e:
-    #             logger.error(f"Ошибка парсинга JSON тела запроса: {e}")
-    #             return None
-        
-    #     return None
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='drug_trade_search',
+        parameters=[
+            OpenApiParameter(
+                name='q',
+                type=OpenApiTypes.STR,
+                location=OpenApiParameter.QUERY,
+                required=True,
+                description='Поисковая строка по МНН и торговому названию.',
+            ),
+        ],
+        responses={
+            200: DrugTradeSearchResponseSerializer,
+            400: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['drugs'],
+    ),
+)
 class DrugTradeSearchView(APIView):
     """
     Поиск лекарственных средств по МНН и торговым названиям.

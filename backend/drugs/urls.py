@@ -3,7 +3,7 @@ from drugs.views import (
     DrugGroupAPI,
     DrugAPI,
     SideEffectAPI,
-    DrugSideEffectView,
+#     DrugSideEffectView,
     ExcelLoadView,
     ModifiedExcelLoadView,
     BannedPairLoadView,
@@ -13,48 +13,19 @@ from drugs.views import (
 
 
 urlpatterns = [
-    path('addDrugGroup/', DrugGroupAPI.as_view(), name='add_drug_group'),
-    path('getDrugGroup/', DrugGroupAPI.as_view(), name='get_drug_group'),
-    path('deleteDrugGroup/', DrugGroupAPI.as_view(), name='delete_drug_group'),
+     path('DrugGroup', DrugGroupAPI.as_view(), name='group_process'),
+     path('Drug/', DrugAPI.as_view(), name='drug_process'),
+     path('SideEffect/', SideEffectAPI.as_view(), name='side_e_process'),
+     path('Weights/', ExcelLoadView.as_view(), name='ranks_process'),
+     path('TradeName/', TradeNameView.as_view(), name='trade_name_process'),
+     # path('Ranks/', DrugSideEffectView.as_view(), name='ranks_process'),
 
-    path('addDrug/', DrugAPI.as_view(), name='add_drug'),
-    path('getDrug/', DrugAPI.as_view(), name='get_drug'),
-    path('deleteDrug/', DrugAPI.as_view(), name='delete_drug'),
+    path('simple_export_from_db/', ModifiedExcelLoadView.as_view(), name='simple_export_from_db'),
 
-    path('addSideEffect/', SideEffectAPI.as_view(), name='add_side_effect'),
-    path('getSideEffect/', SideEffectAPI.as_view(), name='get_side_effect'),
-    path('deleteSideEffect/', SideEffectAPI.as_view(),
-         name='delete_drug_group'),
-
-    path('getRanks/', DrugSideEffectView.as_view(), name='get_ranks'),
-    path('updateRanks/', DrugSideEffectView.as_view(), name='update_ranks'),
-
-    path('export_from_db/', ExcelLoadView.as_view(), name='export_from_db'),
-    path('import_to_db/', ExcelLoadView.as_view(), name='import_to_db'),
-
-    path('simple_export_from_db/',
-         ModifiedExcelLoadView.as_view(),
-         name='simple_export_from_db'),
-
-    path('import_banned_pair/',
-         BannedPairLoadView.as_view(),
-         name='import_banned_pair'),
+    path('BannedPair/', BannedPairLoadView.as_view(), name='banned_pair_process'),
 
      # Загрузка информации о препаратах
-     path('drug_data_load/',
-          DrugDataLoadView.as_view(),
-          name='import_banned_pair'),
-     
-     path('getTradeName',
-          TradeNameView.as_view(),
-          name='get_trade_name'
-          ),
+     path('drug_data_load/', DrugDataLoadView.as_view(), name='drug_data_load'),
 
-     path('trade_name_load/',
-          TradeNameView.as_view(),
-          name='import_trade_names'),
-
-     path('search-drugs/', 
-          DrugTradeSearchView.as_view(),
-          name='search_drugs'),
+     path('search-drugs/', DrugTradeSearchView.as_view(), name='search_drugs'),
 ]

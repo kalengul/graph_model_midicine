@@ -104,7 +104,7 @@ class ReportService:
     def list_reports(self):
         return (
             CombinationReport.objects
-            .order_by("-created_at")
+            .order_by("-started_at")
         )
 
     # ==========================================================
@@ -136,7 +136,7 @@ class ReportService:
         filename = (
             f"report_{report.pk}"
             f"_weights_{safe_weight_name}"
-            f"_{report.created_at:%Y%m%d_%H%M%S}"
+            f"_{report.started_at:%Y%m%d_%H%M%S}"
             f".{extension.lstrip('.')}"
         )
 
@@ -210,7 +210,7 @@ class ReportService:
     ):
         reports = (
             CombinationReport.objects
-            .order_by("-created_at")
+            .order_by("-started_at")
         )
 
         for report in reports[keep_last:]:

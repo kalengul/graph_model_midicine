@@ -10,6 +10,7 @@ from django.conf import settings
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import BayesSerializer
+from med_bayes.serializers import BayesColorSerializer
 from med_bayes.utils.bayes_calculation_2 import (load_combined_data,
                                                  get_result,
                                                  build_network,
@@ -30,6 +31,15 @@ from med_bayes.utils.ds_interpretation.conf import (
 )
 
 from accounts.auth import bearer_token_required
+
+
+from drf_spectacular.utils import (
+    extend_schema,
+    extend_schema_view,
+    OpenApiParameter,
+    OpenApiResponse,
+)
+from drf_spectacular.types import OpenApiTypes
 
 
 logger = logging.getLogger('med_bayes')
@@ -134,6 +144,25 @@ class BayeseView(APIView):
             bin_id[drug2id[drug.lower()]] = 1
         return bin_id
 
+    @extend_schema(
+        operation_id='bayes_calculate',
+        request=BayesSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Расчёт сети Байеса успешно выполнен.',
+            ),
+            400: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Некорректные входные данные.',
+            ),
+            500: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Ошибка расчёта сети Байеса.',
+            ),
+        },
+        tags=['med-bayes'],
+    )
     # @bearer_token_required
     def post(self, request):
         """Вычисление сети Байеса."""
@@ -428,6 +457,17 @@ class BayeseView(APIView):
 class BayesColor(APIView):
     """Управление цветами для Байеса."""
 
+    @extend_schema(
+        operation_id='bayes_color_update',
+        request=BayesColorSerializer,
+        responses={
+            200: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Цвета успешно обновлены.',
+            ),
+        },
+        tags=['med-bayes'],
+    )
     def post(self, request):
         """Указание значений для цветов."""
         with open(color_path, 'r', encoding='utf-8') as file:

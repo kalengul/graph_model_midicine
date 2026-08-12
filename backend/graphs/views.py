@@ -17,7 +17,11 @@ import numpy as np
 
 from drugs.utils.custom_response import CustomResponse
 from graphs.serializers import (GraphSerializer, UpdateGraphSerializer,
-                                BayesSerializer, GraphListSerializer)
+                                BayesSerializer, GraphListSerializer,
+                                GraphFilesUploadSerializer,
+                                GraphStorageUploadSerializer,
+                                GraphVisualizationSerializer
+                                )
 from graphs.models import Graph
 from graphs.utils.cleaner_graph_db import CleanProcessor
 from graphs.utils.graph_loader import JSONGraphLoader
@@ -37,6 +41,14 @@ from graphs.utils.graph_optimization.lineman import Lineman
 #     SimpleNonRelativeNodesDeleter)
 # from graphs.utils.parser import GraphParser
 from accounts.auth import bearer_token_required
+
+from drf_spectacular.utils import (
+    extend_schema,
+    extend_schema_view,
+    OpenApiParameter,
+    OpenApiResponse,
+)
+from drf_spectacular.types import OpenApiTypes
 
 
 logger = logging.getLogger('graphs')
@@ -72,6 +84,19 @@ class GraphView(APIView):
                 parsed_ids.append(item)
         return parsed_ids
 
+
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name='id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.QUERY,
+                required=False,
+            ),
+        ],
+        responses=OpenApiTypes.OBJECT,
+        tags=['graphs'],
+    )
     def get(self, request, id=None):
         """Получение графа по id или список."""
         try:
@@ -138,7 +163,48 @@ class GraphView(APIView):
                     message=self.ERROR_COMPATIBILITY
             )
 
-
+@extend_schema_view(
+    get=extend_schema(
+        operation_id='graph_list',
+        responses=GraphListSerializer(many=True),
+        tags=['graphs'],
+    ),
+    post=extend_schema(
+        operation_id='graph_create_from_files',
+        request=GraphFilesUploadSerializer,
+        responses={
+            201: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+        },
+        tags=['graphs'],
+    ),
+    put=extend_schema(
+        operation_id='graph_update',
+        request=GraphFilesUploadSerializer,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            400: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['graphs'],
+    ),
+    delete=extend_schema(
+        operation_id='graph_delete',
+        parameters=[
+            OpenApiParameter(
+                name='id',
+                type=OpenApiTypes.INT,
+                location=OpenApiParameter.PATH,
+                required=True,
+            ),
+        ],
+        responses={
+            200: OpenApiTypes.OBJECT,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['graphs'],
+    ),
+)
 class CRUDGraphView(APIView):
     """Вью для CRUD."""
 
@@ -178,6 +244,11 @@ class CRUDGraphView(APIView):
 
         return graph_json, graph_xml, None
 
+    @extend_schema(
+        operation_id='graph_list',
+        responses=GraphListSerializer(many=True),
+        tags=['graphs'],
+    )
     def get(self, request):
         """Получение списка графов или отдельных графов."""
         graphs = Graph.objects.all()
@@ -189,6 +260,12 @@ class CRUDGraphView(APIView):
             data=serializer.data
         )
 
+    @extend_schema(
+        operation_id='graph_create_from_files',
+        request=GraphFilesUploadSerializer,
+        responses={201: OpenApiTypes.OBJECT},
+        tags=['graphs'],
+    )
     def post(self, request):
         """Добавление графа."""
         graph_json, graph_xml, error = self._get_graph_from_file(request)
@@ -271,6 +348,15 @@ class CRUDGraphView(APIView):
 class LoadGraphView(APIView):
     """Вью для загрузки данных в БД."""
 
+    @extend_schema(
+        operation_id='load_graphs',
+        request=None,
+        responses={
+            200: OpenApiTypes.OBJECT,
+            500: OpenApiTypes.OBJECT,
+        },
+        tags=['graphs'],
+    )
     def post(self, request):
         """Загрузка графов в БД."""
         try:
@@ -294,6 +380,11 @@ class LoadGraphView(APIView):
 class MergeView(APIView):
     """Вьюшка слияния."""
 
+    @extend_schema(
+        operation_id='graph_merge',
+        responses=OpenApiTypes.OBJECT,
+        tags=['graphs'],
+    )
     @parse_ids
     def get(self, request, ids, *args, **kwargs):
         """Слияние графов."""
@@ -313,7 +404,19 @@ class MergeView(APIView):
                 message='При слиянии графа произошла ошибка'
             )
 
-
+@extend_schema_view(
+    post=extend_schema(
+        operation_id='graph_storage_import',
+        request=GraphStorageUploadSerializer,
+        responses=OpenApiTypes.OBJECT,
+        tags=['graphs'],
+    ),
+    get=extend_schema(
+        operation_id='graph_storage_export',
+        responses=OpenApiTypes.BINARY,
+        tags=['graphs'],
+    ),
+)
 class GraphStorageView(APIView):
     """Вью экспорта/импорта графов для СБ."""
 
@@ -404,6 +507,11 @@ class GraphStorageView(APIView):
 class GraphVisualizationView(APIView):
     """Отдаёт граф для визуализации на фронтенде."""
 
+    @extend_schema(
+        operation_id='graph_visualization',
+        responses=GraphVisualizationSerializer,
+        tags=['graphs'],
+    )
     def get(self, request):
         """Отправка json-файл графа для визуализации."""
         graph = GraphStorage().download_graph()
@@ -439,6 +547,15 @@ class BayesTableView(APIView):
             bin_id[drug2id[drug.lower()]] = 1
         return bin_id
 
+
+    @extend_schema(
+        operation_id='bayes_statistics_file',
+        responses={
+            200: OpenApiTypes.BINARY,
+            404: OpenApiTypes.OBJECT,
+        },
+        tags=['graphs'],
+    )
     # @bearer_token_required
     def get(self, request):
         """Получения таблицы рангов Байеса."""
