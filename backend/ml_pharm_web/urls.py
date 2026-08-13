@@ -38,12 +38,12 @@ urlpatterns = [
     path('api/v1/', include('combination_checker.urls')),
 
     # OpenAPI
-    path('api/v1/schema/', SpectacularAPIView.as_view(authentication_classes=[BearerTokenAuthentication],
+    path('api/dev/schema/', SpectacularAPIView.as_view(authentication_classes=[BearerTokenAuthentication],
                                                       permission_classes=[IsAuthenticated] ), name='schema'),
-    path('api/v1/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema',
+    path('api/dev/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema',
                                                                      authentication_classes=[BearerTokenAuthentication],
                                                                      permission_classes=[IsAuthenticated]) , name='swagger-ui'),
-    path('api/v1/schema/redoc/', SpectacularRedocView.as_view(url_name='schema', 
+    path('api/dev/schema/redoc/', SpectacularRedocView.as_view(url_name='schema', 
                                                               authentication_classes=[BearerTokenAuthentication],
                                                               permission_classes=[IsAuthenticated]), name='redoc'),
 
