@@ -35,9 +35,9 @@ urlpatterns = [
     path('api/v1/', include('combination_checker.urls')),
 
     # OpenAPI
-    path('api/schema/',SpectacularAPIView.as_view(),name='schema'),
-    path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
-    path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+    path('api/dev/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/dev/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema') , name='swagger-ui'),
+    path('api/dev/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     re_path(r'^mini-front-manager.*$', TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),
