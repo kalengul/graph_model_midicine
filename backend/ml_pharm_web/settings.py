@@ -206,12 +206,6 @@ SPECTACULAR_SETTINGS = {
     'DESCRIPTION': 'API медицинской системы Graph Model Medicine',
     'VERSION': '1.0.0',
 
-    'SECURITY': [{'BearerAuth': []}],  # указываем, что используется Bearer-токен
-    'SWAGGER_UI_SETTINGS': {
-        'persistAuthorization': True,  # чтобы токен не сбрасывался при перезагрузке
-    },
-    'COMPONENT_SPLIT_REQUEST': True,   # необязательно, но может пригодиться
-
     'SERVE_INCLUDE_SCHEMA': False,
 
     'SCHEMA_PATH_PREFIX': r'/api/v1',
