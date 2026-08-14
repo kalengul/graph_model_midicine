@@ -15,9 +15,6 @@ from drf_spectacular.views import (
     SpectacularRedocView,
 )
 
-from rest_framework.permissions import IsAuthenticated
-from accounts.auth import bearer_token_required, BearerTokenAuthentication
-
 
 urlpatterns = [
     path('health/', health_check, name='health'),
@@ -38,14 +35,9 @@ urlpatterns = [
     path('api/v1/', include('combination_checker.urls')),
 
     # OpenAPI
-    path('api/dev/schema/', SpectacularAPIView.as_view(authentication_classes=[BearerTokenAuthentication],
-                                                      permission_classes=[IsAuthenticated] ), name='schema'),
-    path('api/dev/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema',
-                                                                     authentication_classes=[BearerTokenAuthentication],
-                                                                     permission_classes=[IsAuthenticated]) , name='swagger-ui'),
-    path('api/dev/schema/redoc/', SpectacularRedocView.as_view(url_name='schema', 
-                                                              authentication_classes=[BearerTokenAuthentication],
-                                                              permission_classes=[IsAuthenticated]), name='redoc'),
+    path('api/dev/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/dev/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema') , name='swagger-ui'),
+    path('api/dev/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
     re_path(r'^mini-front-manager.*$', TemplateView.as_view(template_name='index.html')),
     re_path('', API404.as_view(), name='api-404'),
