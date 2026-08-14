@@ -8,6 +8,7 @@
 """
 import logging
 from typing import Optional
+import re
 
 from drugs.models import Drug
 from contraindications.models import Contraindication
@@ -77,7 +78,7 @@ def resolve_contraindication_ids(contra_names: list[str]) -> list[int]:
     missing: list[str] = []
 
     for name in contra_names:
-        normalized = normalize_drug_name(name)
+        normalized = re.sub(r"\s+", " ", name.lower()).strip()
         contra = Contraindication.objects.filter(name__iexact=normalized).first()
         if contra is None:
             missing.append(name)  # возвращаем исходное имя в ошибке — понятнее пользователю
