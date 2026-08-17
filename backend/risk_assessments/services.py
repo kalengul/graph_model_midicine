@@ -85,8 +85,9 @@ def resolve_contraindication_ids(contra_names: list[str]) -> list[int]:
         else:
             found_ids.append(contra.id)
 
-    if missing:
-        raise ContraindicationNotFoundError(missing)
+    # Отключен поиск некорректных противопоказаний
+    # if missing:
+    #     raise ContraindicationNotFoundError(missing)
 
     return found_ids
 
