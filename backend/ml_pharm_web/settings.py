@@ -46,14 +46,11 @@ INSTALLED_APPS = [
     'medscape_api',
     'menu',
     'synonyms',
-    'graphs.apps.GraphsConfig',
     'contraindications.apps.ContraindicationsConfig',
-    'med_bayes.apps.MedBayesConfig',
 
     'rest_framework',
     'rest_framework.authtoken',
 
-    'pHistory2se', 
     'logging_system',
     'risk_assessments',
     'combination_checker',          # Брутфорс запрещённых комбинаций
