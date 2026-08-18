@@ -52,7 +52,7 @@ services:
       - backend
     volumes:
       - static_volume:/static
-      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf
 
 volumes:
   postgres_data:

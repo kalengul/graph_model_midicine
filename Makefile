@@ -29,20 +29,3 @@ prod-down:
 # Список запущенных контейнеров
 prod-status:
 	docker compose ps
-
-# --- Development commands ---
-# Собрать dev (без SSL, локальная разработка)
-dev:
-	docker compose -f docker-compose.yml -f docker-compose.dev.yml build $(ARGS)
-
-# Запустить dev-сборку
-dev-up:
-	docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d $(ARGS)
-
-# Остановить dev-сборку
-dev-down:
-	docker compose -f docker-compose.yml -f docker-compose.dev.yml down
-
-# Список запущенных контейнеров dev-сборки
-dev-status:
-	docker compose -f docker-compose.yml -f docker-compose.dev.yml ps
