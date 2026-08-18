@@ -6,6 +6,8 @@ import logging
 from rest_framework import status
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.views import APIView
+from rest_framework.parsers import JSONParser
+from risk_assessments.utils.parsers import XMLRiskAssessmentParser
 
 from drugs.utils.custom_response import CustomResponse
 from logging_system.services import CalculationLoggingService
@@ -44,6 +46,7 @@ class DrugRiskAssessmentView(APIView):
     """
 
     authentication_classes = [TokenAuthentication, SessionAuthentication]
+    parser_classes = [JSONParser, XMLRiskAssessmentParser]
 
     def post(self, request):
         # 1. Валидация входных данных
