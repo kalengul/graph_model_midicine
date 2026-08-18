@@ -50,7 +50,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
 
 volumes:
   postgres_data:
