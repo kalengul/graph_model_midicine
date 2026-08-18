@@ -54,19 +54,6 @@ services:
       - static_volume:/static
       - /etc/letsencrypt:/etc/letsencrypt:ro
 
-  adminer:
-    image: adminer:latest
-    container_name: adminer
-    restart: unless-stopped
-    ports:
-      - "127.0.0.1:8080:8080" # ssh -L 8080:localhost:8080 user@ip
-    environment:
-      - ADMINER_DEFAULT_SERVER=db
-      - ADMINER_DESIGN=pepa
-    depends_on:
-      db:
-        condition: service_healthy
-
 volumes:
   postgres_data:
   static_volume:
