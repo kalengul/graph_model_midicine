@@ -1,7 +1,3 @@
-"""
-backend\medscape_api\serializers.py
-"""
-
 from rest_framework import serializers
 
 from medscape_api.fields import ParsedListField

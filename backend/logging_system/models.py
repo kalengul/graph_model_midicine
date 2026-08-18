@@ -1,7 +1,3 @@
-"""
-logging_system\models.py
-"""
-
 from django.db import models
 from logging_system.utils.get_current_commit_hash import get_current_commit_hash
 
