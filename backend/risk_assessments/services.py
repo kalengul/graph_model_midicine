@@ -17,7 +17,7 @@ from ranker.utils.check_banned import DrugPairChecker
 from ranker.utils.fortran_calculator import FortranCalculator
 from ranker.constants import IDX_2_RANK_NAME
 
-from risk_assessments.utils import normalize_drug_name
+from risk_assessments.utils.normalize_drug_name import normalize_drug_name
 
 logger = logging.getLogger("risk_assessments.service")
 
