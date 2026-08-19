@@ -7,7 +7,6 @@ help:
 	/^#/ {comment=substr($$0,3)} \
 	/^[a-zA-Z0-9_-]+:/ {printf "\033[36m%-20s\033[0m %s\n", $$1, comment}' Makefile
 
-# --- Production commands ---
 # Собрать образы сервисов
 prod:
 	docker compose build $(ARGS)
@@ -18,13 +17,17 @@ prod-deploy:
 	GIT_COMMIT_HASH=$$(git rev-parse --short HEAD) docker compose build $(ARGS)
 	docker compose up -d --remove-orphans $(ARGS)
 
-# Запустить контейнеры (продакшен)
+# Запустить контейнеры
 prod-up:
 	docker compose up -d $(ARGS)
 
 # Остановить контейнеры
 prod-down:
-	docker compose down
+	docker compose down $(ARGS)
+
+# Логи контейнеров
+prod-logs:
+	docker compose logs -f $(ARGS)
 
 # Список запущенных контейнеров
 prod-status:
