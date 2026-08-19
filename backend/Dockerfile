@@ -5,8 +5,6 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
-
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -15,9 +13,14 @@ RUN chmod +x /entrypoint.sh
 
 COPY . .
 
+RUN chmod +x /app/healthcheck.py
+
 ARG GIT_COMMIT_HASH=unknown
 ENV GIT_COMMIT_HASH=${GIT_COMMIT_HASH}
 RUN echo "${GIT_COMMIT_HASH}" > /app/.version
+
+HEALTHCHECK --interval=10s --timeout=4s --retries=3 --start-period=5s \
+    CMD python /app/healthcheck.py
 
 EXPOSE 8000
 
