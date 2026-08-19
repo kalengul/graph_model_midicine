@@ -10,6 +10,8 @@ from drugs.models import (
     DrugsAgeContraindications, BannedDrugPair
 )
 from contraindications.models import Contraindication
+from drugs.utils.banned_pairs_loader import PandasBannedPairLoader
+from drugs.utils.custom_exception import PairFileError
 
 @pytest.fixture
 def sample_data():
@@ -340,23 +342,32 @@ class TestJSONBannedPairLoader:
         banned_loader.load_to_db(data=data)
         assert BannedDrugPair.objects.count() == 1
 
+    @pytest.mark.django_db
     def test_expand_by_groups(self, banned_loader, sample_drugs):
-        # Группы пока не поддерживаются — создаётся только явная пара
-        group = DrugGroup.objects.create(dg_name="антикоагулянты")
-        apix = Drug.objects.get(drug_name="апиксабан")
-        warf = Drug.objects.get(drug_name="варфарин")
-        riva = Drug.objects.get(drug_name="ривароксабан")
-        apix.drug_groups.add(group)
-        warf.drug_groups.add(group)
-        riva.drug_groups.add(group)
+        # group = DrugGroup.objects.create(dg_name="антикоагулянты")
+        # apix = Drug.objects.get(drug_name="апиксабан")
+        # warf = Drug.objects.get(drug_name="варфарин")
+        # riva = Drug.objects.get(drug_name="ривароксабан")
+        # apix.drug_groups.add(group)
+        # warf.drug_groups.add(group)
+        # riva.drug_groups.add(group)
 
-        data = [{
-            "drug": "амоксициллин",
-            "banned_groups": ["антикоагулянты"],
-            "banned_drugs": ["пробенецид"],
-        }]
+        data = [
+            {
+                "drug": "амоксициллин",
+                "banned_groups": ["антикоагулянты"],
+                "banned_drugs": ["пробенецид"],
+            },
+            # Включаем препараты группы, чтобы _expand_by_groups знал о них
+            {"drug": "апиксабан", "group": ["антикоагулянты"], "banned_drugs": []},
+            {"drug": "варфарин", "group": ["антикоагулянты"], "banned_drugs": []},
+            {"drug": "ривароксабан", "group": ["антикоагулянты"], "banned_drugs": []},
+        ]
         banned_loader.load_to_db(data=data)
-        assert BannedDrugPair.objects.count() == 1
+
+        # Должны создаться пары: амоксициллин-пробенецид + амоксициллин-апиксабан,
+        # амоксициллин-варфарин, амоксициллин-ривароксабан
+        assert BannedDrugPair.objects.count() == 4
 
     def test_avoid_duplicate_pairs(self, banned_loader, sample_drugs):
         data = [{"drug": "амоксициллин", "banned_drugs": ["пробенецид", "пробенецид", "аллопуринол"]}]
@@ -377,6 +388,129 @@ class TestJSONBannedPairLoader:
         # Пара 'a'-'b' осталась
         assert BannedDrugPair.objects.filter(first_drug="a").exists()
 
+
+@pytest.mark.django_db
+class TestPandasBannedPairLoader:
+    """Тесты для загрузчика запрещённых пар из CSV/Excel."""
+
+    @pytest.fixture
+    def banned_loader(self):
+        BannedDrugPair.objects.all().delete()
+        return PandasBannedPairLoader()  # без import_path
+
+    @pytest.fixture
+    def sample_drugs(self, db):
+        """Создаёт тестовые препараты в БД, включая составной."""
+        Drug.objects.create(drug_name="амоксициллин")
+        Drug.objects.create(drug_name="клавулановая кислота")
+        Drug.objects.create(drug_name="пробенецид")
+        Drug.objects.create(drug_name="аллопуринол")
+        Drug.objects.create(drug_name="варфарин")
+        Drug.objects.create(drug_name="ривароксабан")
+        Drug.objects.create(drug_name="апиксабан")
+        Drug.objects.create(drug_name="амоксициллин+клавулановая кислота")
+
+    def _create_csv(self, tmp_path, content, filename="pairs.csv"):
+        """Создаёт временный CSV-файл и возвращает путь."""
+        file_path = tmp_path / filename
+        file_path.write_text(content, encoding="utf-8")
+        return str(file_path)
+
+    # --------------------------------------------------------------
+    # Тесты
+    # --------------------------------------------------------------
+    def test_load_to_db_creates_pairs(self, tmp_path, sample_drugs):
+        csv_content = (
+            "first_drug;second_drug;comment\n"
+            "амоксициллин;пробенецид;Опасно\n"
+            "амоксициллин;аллопуринол;\n"
+            "варфарин;ривароксабан;Комментарий\n"
+        )
+        file_path = self._create_csv(tmp_path, csv_content)
+        loader = PandasBannedPairLoader(import_path=file_path)
+        loader.clear_db()
+        stats = loader.load_to_db()
+
+        assert BannedDrugPair.objects.count() == 3
+        assert stats["created"] == 3
+        assert stats["drug_not_found"] == 0
+        assert stats["duplicates_skipped"] == 0
+
+    def test_skips_duplicates_and_reverse(self, tmp_path, sample_drugs):
+        csv_content = (
+            "first_drug;second_drug\n"
+            "амоксициллин;пробенецид\n"
+            "пробенецид;амоксициллин\n"   # обратная пара
+            "амоксициллин;пробенецид\n"   # точный дубликат
+            "варфарин;ривароксабан\n"
+        )
+        file_path = self._create_csv(tmp_path, csv_content)
+        loader = PandasBannedPairLoader(import_path=file_path)
+        loader.clear_db()
+        stats = loader.load_to_db()
+
+        assert BannedDrugPair.objects.count() == 2  # амокс-проб, варф-рива
+        assert stats["duplicates_skipped"] == 2
+
+    def test_skips_nonexistent_drugs(self, tmp_path, sample_drugs):
+        csv_content = (
+            "first_drug;second_drug\n"
+            "амоксициллин;неизвестный\n"
+            "амоксициллин;пробенецид\n"
+        )
+        file_path = self._create_csv(tmp_path, csv_content)
+        loader = PandasBannedPairLoader(import_path=file_path)
+        loader.clear_db()
+        stats = loader.load_to_db()
+
+        assert BannedDrugPair.objects.count() == 1
+        assert stats["drug_not_found"] == 1
+        assert stats["created"] == 1
+
+    def test_normalizes_names_and_plus(self, tmp_path, sample_drugs):
+        # Препарат с пробелами вокруг + и в разных регистрах
+        csv_content = (
+            "first_drug;second_drug;comment\n"
+            " Амоксициллин + Клавулановая кислота ; Пробенецид ; Тест + комментарий\n"
+        )
+        file_path = self._create_csv(tmp_path, csv_content)
+        loader = PandasBannedPairLoader(import_path=file_path)
+        loader.clear_db()
+        loader.load_to_db()
+
+        pair = BannedDrugPair.objects.get()
+        assert pair.first_drug == "амоксициллин+клавулановая кислота"
+        assert pair.second_drug == "пробенецид"
+        assert pair.comment == "тест + комментарий"  # комментарий в нижнем регистре и strip
+
+    def test_load_unsupported_extension(self, tmp_path, sample_drugs):
+        file_path = tmp_path / "pairs.txt"
+        file_path.write_text("амоксициллин;пробенецид", encoding="utf-8")
+
+        loader = PandasBannedPairLoader(import_path=str(file_path))
+        with pytest.raises(PairFileError):
+            loader.load_to_db()
+
+    def test_clear_db(self, sample_drugs):
+        BannedDrugPair.objects.create(first_drug="a", second_drug="b")
+        loader = PandasBannedPairLoader()
+        loader.clear_db()
+        assert BannedDrugPair.objects.count() == 0
+
+    def test_load_does_not_clear_existing_pairs(self, tmp_path, sample_drugs):
+        # Создаём существующую пару до загрузки
+        BannedDrugPair.objects.create(first_drug="a", second_drug="b")
+        csv_content = (
+            "first_drug;second_drug\n"
+            "амоксициллин;пробенецид\n"
+        )
+        file_path = self._create_csv(tmp_path, csv_content)
+        loader = PandasBannedPairLoader(import_path=file_path)
+        # Не вызываем clear_db
+        loader.load_to_db()
+        # Пара 'a'-'b' должна остаться, плюс новая пара
+        assert BannedDrugPair.objects.filter(first_drug="a", second_drug="b").exists()
+        assert BannedDrugPair.objects.count() == 2
 
 # ================== ИСПРАВЛЕННЫЕ ТЕСТЫ ДЛЯ DrugDataLoaderExtended ==================
 @pytest.mark.django_db

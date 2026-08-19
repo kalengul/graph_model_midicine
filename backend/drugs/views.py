@@ -169,9 +169,14 @@ class DrugGroupAPI(APIView):
     @bearer_token_required
     def delete(self, request):
         """Метод для запроса DELETE."""
+        drug_group_id = request.data.get('dg_id') or request.query_params.get('dg_id')
+        if not drug_group_id:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Ошибка определения удаляемого объекта',
+                http_status=status.HTTP_400_BAD_REQUEST)
         try:
-            instance = DrugGroup.objects.get(
-                pk=request.query_params.get('dg_id'))
+            instance = DrugGroup.objects.get(pk=drug_group_id)
             instance.delete()
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -368,9 +373,14 @@ class DrugAPI(APIView):
     @bearer_token_required
     def delete(self, request):
         """Метод для DELETE-запросов."""
+        drug_id = request.data.get('drug_id') or request.query_params.get('drug_id')
+        if not drug_id:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Ошибка определения удаляемого ЛС',
+                http_status=status.HTTP_400_BAD_REQUEST)
         try:
-            instance = Drug.objects.get(
-                pk=request.query_params.get('drug_id'))
+            instance = Drug.objects.get(pk=drug_id)
             instance.delete()
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -531,9 +541,14 @@ class SideEffectAPI(APIView):
     @bearer_token_required
     def delete(self, request):
         """Метод для DELETE-запросы."""
+        se_id = request.data.get('se_id') or request.query_params.get('se_id')
+        if not se_id:
+            return CustomResponse(
+                status=status.HTTP_400_BAD_REQUEST,
+                message='Ошибка определения удаляемого объекта',
+                http_status=status.HTTP_400_BAD_REQUEST)
         try:
-            instance = SideEffect.objects.get(
-                pk=request.query_params.get('se_id'))
+            instance = SideEffect.objects.get(pk=se_id)
             instance.delete()
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -797,50 +812,50 @@ class ExcelLoadView(APIView):
         state.save()
         logger.info(f"SystemState обновлён: weights_file={file_name}, hash={file_hash}")
 
-@extend_schema_view(
-    post=extend_schema(
-        exclude=True,
-    ),
-)
-class ModifiedExcelLoadView(ExcelLoadView):
-    """
-    Усовершенствованная версия вью.
+# @extend_schema_view(
+#     post=extend_schema(
+#         exclude=True,
+#     ),
+# )
+# class ModifiedExcelLoadView(ExcelLoadView):
+#     """
+#     Усовершенствованная версия вью.
 
-    Вью для прямого обращения к бекэнду,
-    минуя фронтэнд.
-    """
+#     Вью для прямого обращения к бекэнду,
+#     минуя фронтэнд.
+#     """
 
-    @extend_schema(exclude=True)
-    def post(self, request, *args, **kwargs):
-        return super().post(request, *args, **kwargs)
+#     @extend_schema(exclude=True)
+#     def post(self, request, *args, **kwargs):
+#         return super().post(request, *args, **kwargs)
 
-    @extend_schema(
-        operation_id='simple_export_from_db',
-        responses={
-            200: OpenApiTypes.BINARY,
-            404: OpenApiTypes.OBJECT,
-        },
-        tags=['drugs'],
-    )
-    # @bearer_token_required
-    def get(self, request, *args, **kwargs):
-        """Скачивание файла с данными из БД."""
-        loader = ExcelLoader()
-        loader.export_from_db()
-        try:
-            response = FileResponse(open(loader.export_path, 'rb'),
-                                    content_type=self.TYPE)
-            response[self.CONTENT] = (
-                f'{self.DOWN_LOAD_MODE}; '
-                f'filename={os.path.basename(loader.export_path)}')
-            return response
-        except FileExistsError:
-            traceback.print_exc()
-            return CustomResponse(
-                status=status.HTTP_404_NOT_FOUND,
-                message=self.NOT_FILE,
-                http_status=status.HTTP_404_NOT_FOUND
-            )
+#     @extend_schema(
+#         operation_id='simple_export_from_db',
+#         responses={
+#             200: OpenApiTypes.BINARY,
+#             404: OpenApiTypes.OBJECT,
+#         },
+#         tags=['drugs'],
+#     )
+#     # @bearer_token_required
+#     def get(self, request, *args, **kwargs):
+#         """Скачивание файла с данными из БД."""
+#         loader = ExcelLoader()
+#         loader.export_from_db()
+#         try:
+#             response = FileResponse(open(loader.export_path, 'rb'),
+#                                     content_type=self.TYPE)
+#             response[self.CONTENT] = (
+#                 f'{self.DOWN_LOAD_MODE}; '
+#                 f'filename={os.path.basename(loader.export_path)}')
+#             return response
+#         except FileExistsError:
+#             traceback.print_exc()
+#             return CustomResponse(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message=self.NOT_FILE,
+#                 http_status=status.HTTP_404_NOT_FOUND
+#             )
 
 @extend_schema_view(
     post=extend_schema(
@@ -1193,51 +1208,43 @@ class DrugTradeSearchView(APIView):
             q: строка поиска (обязательный)
         """
         query = request.query_params.get('q', '').strip()
-        
+
         if not query:
             return CustomResponse(
                 status=status.HTTP_400_BAD_REQUEST,
                 message='Параметр "q" обязателен',
                 http_status=status.HTTP_400_BAD_REQUEST
             )
-        
-        # Поиск МНН, у которых drug_name начинается с query
-        # ИЛИ у которых есть торговые названия, начинающиеся с query
-        drugs = Drug.objects.filter(
-            Q(drug_name__istartswith=query) |
-            Q(trade_names__name__istartswith=query)
-        ).distinct().prefetch_related('trade_names', 'drug_groups', 'nosology')
-        
-        # Формируем результат с фильтрацией торговых названий
+
+        query_lower = query.lower()
+
+        # Загружаем все препараты со связями
+        drugs = Drug.objects.prefetch_related('trade_names', 'drug_groups', 'nosology').all()
+
         results = []
         for drug in drugs:
-            # Всегда фильтруем торговые названия по query
-            matching_trade_names = drug.trade_names.filter( # type: ignore
-                name__istartswith=query
-            )
-            
-            # Если нет подходящих торговых названий, но drug_name подходит - показываем пустой список
-            if not matching_trade_names.exists() and drug.drug_name.lower().startswith(query.lower()):
-                matching_trade_names = []  
-            
-            drug_data = {
-                "id": drug.id,
-                "drug_name": drug.drug_name,
-                "dg_id": list(drug.drug_groups.values_list('id', flat=True)),
-                "nosology_id": drug.nosology.id if drug.nosology else None,
-                "trade_names": [
-                    {"id": tn.id, "name": tn.name} 
-                    for tn in matching_trade_names
-                ]
-            }
-            results.append(drug_data)
-        
-        # Фильтруем результаты: убираем те, у которых нет ни подходящего drug_name, ни подходящих trade_names
-        results = [r for r in results if r['trade_names'] or r['drug_name'].lower().startswith(query.lower())]
-        
-        # Сортируем: сначала те, у кого drug_name начинается с query
-        results.sort(key=lambda x: not x['drug_name'].lower().startswith(query.lower()))
-        
+            drug_name_match = drug.drug_name.lower().startswith(query_lower)
+
+            # Фильтруем торговые названия вручную
+            matching_trade_names = [
+                tn for tn in drug.trade_names.all()
+                if tn.name.lower().startswith(query_lower)
+            ]
+
+            if drug_name_match or matching_trade_names:
+                results.append({
+                    "id": drug.id,
+                    "drug_name": drug.drug_name,
+                    "dg_id": list(drug.drug_groups.values_list('id', flat=True)),
+                    "nosology_id": drug.nosology.id if drug.nosology else None,
+                    "trade_names": [
+                        {"id": tn.id, "name": tn.name} for tn in matching_trade_names
+                    ]
+                })
+
+        # Сортировка: сначала препараты с совпадением по МНН
+        results.sort(key=lambda x: not x['drug_name'].lower().startswith(query_lower))
+
         return CustomResponse(
             status=status.HTTP_200_OK,
             message='Результаты поиска получены',
