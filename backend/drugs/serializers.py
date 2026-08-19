@@ -20,6 +20,18 @@ class DrugGroupSerializer(serializers.ModelSerializer):
         model = DrugGroup
         fields = ['id', 'dg_name']
 
+    # Проверка на дубликат
+    def validate_dg_name(self, value):
+        qs = DrugGroup.objects.all()
+        if self.instance:
+            qs = qs.exclude(pk=self.instance.pk)
+        for obj in qs:
+            if obj.dg_name.lower() == value.lower():
+                raise serializers.ValidationError(
+                    "Группа с таким названием уже существует"
+                )
+        return value
+
 
 class DrugSerializer(serializers.ModelSerializer):
     """
@@ -58,10 +70,14 @@ class DrugSerializer(serializers.ModelSerializer):
 
         Проверяет наличие ЛС в БД перед его добавлением.
         """
-        if Drug.objects.filter(drug_name__iexact=value).exists():
-            message = f'ЛС {value} уже существует'
-            logger.info(message)
-            raise serializers.ValidationError(message)
+        qs = Drug.objects.all()
+        if self.instance:
+            qs = qs.exclude(pk=self.instance.pk)
+        for obj in qs:
+            if obj.drug_name.lower() == value.lower():
+                raise serializers.ValidationError(
+                    f"ЛС {value} уже существует"
+                )
         return value
 
     def create(self, validated_data):
@@ -155,10 +171,14 @@ class SideEffectSerializer(serializers.ModelSerializer):
 
         Проверяет наличие ПД в БД перед его добавлением.
         """
-        if SideEffect.objects.filter(se_name__iexact=value).exists():
-            message = f'Побочный эффект {value} уже существует'
-            logger.info(message)
-            raise serializers.ValidationError(message)
+        qs = SideEffect.objects.all()
+        if self.instance:
+            qs = qs.exclude(pk=self.instance.pk)
+        for obj in qs:
+            if obj.se_name.lower() == value.lower():
+                raise serializers.ValidationError(
+                    f"Побочный эффект {value} уже существует"
+                )
         return value
 
     def create(self, validated_data):
