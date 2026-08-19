@@ -144,7 +144,7 @@ class PandasBannedPairLoader(BannedPairLoader):
             logger.error(message)
             raise PairDBError(message) from e
 
-class JSONBannedPairLoader(ABC):
+class JSONBannedPairLoader(BannedPairLoader):
     """Загрузчик запрещённых пар из JSON."""
 
     DRUG = "drug"
