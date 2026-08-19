@@ -27,10 +27,7 @@ urlpatterns = [
     path("api/v1/risk-assessments/", include("risk_assessments.urls")),
     path('api/v1/', include('medscape_api.urls')),
     path('api/v1/', include('synonyms.urls')),
-    path('api/v1/', include('graphs.urls')),
     path('api/v1/', include('contraindications.urls')),
-    path('api/v1/', include('med_bayes.urls')),
-    #path('api/v1/', include('pHistory2se.urls')),
     path('api/v1/', include('logging_system.urls')),
     path('api/v1/', include('combination_checker.urls')),
 
