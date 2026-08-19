@@ -5,7 +5,7 @@ from drugs.views import (
     SideEffectAPI,
 #     DrugSideEffectView,
     ExcelLoadView,
-    ModifiedExcelLoadView,
+    # ModifiedExcelLoadView,
     BannedPairLoadView,
     DrugDataLoadView,
     TradeNameView,
@@ -20,7 +20,7 @@ urlpatterns = [
     path('TradeName/', TradeNameView.as_view(), name='trade_name_process'),
      # path('Ranks/', DrugSideEffectView.as_view(), name='ranks_process'),
 
-    path('simple_export_from_db/', ModifiedExcelLoadView.as_view(), name='simple_export_from_db'),
+    # path('simple_export_from_db/', ModifiedExcelLoadView.as_view(), name='simple_export_from_db'),
 
     path('BannedPair/', BannedPairLoadView.as_view(), name='banned_pair_process'),
 
