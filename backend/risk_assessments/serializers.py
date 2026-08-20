@@ -2,6 +2,7 @@
 Сериализаторы модуля risk_assessments.
 """
 from rest_framework import serializers
+from risk_assessments.utils.normalize_drug_name import normalize_drug_name
 
 
 class PatientProfileSerializer(serializers.Serializer):
@@ -25,7 +26,7 @@ class DrugRiskAssessmentRequestSerializer(serializers.Serializer):
     patientProfile = PatientProfileSerializer(required=False, allow_null=True)
 
     def validate_drugs(self, value: list[str]) -> list[str]:
-        normalized = [v.lower().replace("/", "+").replace(" ", "") for v in value]
+        normalized = [normalize_drug_name(v) for v in value]
         if len(normalized) != len(set(normalized)):
             raise serializers.ValidationError(
                 "Массив drugs содержит дублирующиеся значения после нормализации."
