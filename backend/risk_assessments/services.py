@@ -355,5 +355,5 @@ def _build_response(
         "bannedPairsCont": banned_pairs_cont or [],
         "sideEffects": side_effects or [],
         "combinations": combinations or [],
-        "seFromDrug": se_from_drug or [],
+        # "seFromDrug": se_from_drug or [],
     }

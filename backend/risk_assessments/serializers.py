@@ -46,7 +46,7 @@ class DrugEffectSerializer(serializers.Serializer):
 
 class CombinationDrugSerializer(serializers.Serializer):
     name = serializers.CharField()
-    sideEffects = SideEffectSerializer(many=True)
+    sideEffects = serializers.StringRelatedField(many=True)
 
 
 class CombinationSerializer(serializers.Serializer):
@@ -54,9 +54,9 @@ class CombinationSerializer(serializers.Serializer):
     drugs = CombinationDrugSerializer(many=True)
 
 
-class SeFromDrugItemSerializer(serializers.Serializer):
-    name = serializers.CharField()
-    sideEffects = SideEffectSerializer(many=True)
+# class SeFromDrugItemSerializer(serializers.Serializer):
+#     name = serializers.CharField()
+#     sideEffects = SideEffectSerializer(many=True)
 
 
 class CompatibilitySerializer(serializers.Serializer):
@@ -85,4 +85,4 @@ class RiskAssessmentResponseSerializer(serializers.Serializer):
     bannedPairsCont = BannedPairContSerializer(many=True)
     sideEffects = DrugEffectSerializer(many=True)
     combinations = CombinationSerializer(many=True)
-    seFromDrug = SeFromDrugItemSerializer(many=True)
+    # seFromDrug = SeFromDrugItemSerializer(many=True)
