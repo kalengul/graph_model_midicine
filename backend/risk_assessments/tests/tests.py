@@ -42,16 +42,24 @@ class TestNormalizeDrugName(TestCase):
 
     def test_slash_to_plus(self):
         assert normalize_drug_name("амлодипин/периндоприл") == "амлодипин+периндоприл"
+    
+    def test_semicolon_point_to_plus(self):
+        assert normalize_drug_name("амлодипин;периндоприл") == "амлодипин+периндоприл"
 
     def test_spaces_removed(self):
-        assert normalize_drug_name("амлодипин + периндоприл") == "амлодипин+периндоприл"
+        assert normalize_drug_name("амлодипин  + периндоприл") == "амлодипин+периндоприл"
 
     def test_combined(self):
-        assert normalize_drug_name("Амлодипин / Периндоприл") == "амлодипин+периндоприл"
+        assert normalize_drug_name("Амлодипин /  Периндоприл") == "амлодипин+периндоприл"
 
     def test_already_normalized(self):
         assert normalize_drug_name("амлодипин+периндоприл") == "амлодипин+периндоприл"
 
+    def test_double_word(self):
+        assert normalize_drug_name("   Ацетилсалицилловая  кислота") == "ацетилсалицилловая кислота"
+
+    def test_triple_word(self):
+        assert normalize_drug_name(" Железа   (III) гидроксид полимальтозат   ") == "железа (iii) гидроксид полимальтозат"
 
 # ===========================================================================
 # Сериализатор
