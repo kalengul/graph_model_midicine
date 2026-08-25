@@ -122,6 +122,17 @@ def assess_drug_risks(
 
     # 3. Проверка запрещённых пар
     banned_pairs = DrugPairChecker().check_banned(drug_ids)
+    banned_pairs = [
+        {
+            "ids": [
+                Drug.objects.filter(drug_name__iexact=item["pair"][0]).first().id,
+                Drug.objects.filter(drug_name__iexact=item["pair"][1]).first().id
+            ],
+            "names": item["pair"],
+            "reason": item["comment"]
+        }
+        for item in banned_pairs
+    ]
     if banned_pairs:
         return _build_response(
             drugs_map=drugs_map,
@@ -348,5 +359,5 @@ def _build_response(
         "bannedPairsCont": banned_pairs_cont or [],
         "sideEffects": side_effects or [],
         "combinations": combinations or [],
-        "seFromDrug": se_from_drug or [],
+        # "seFromDrug": se_from_drug or [],
     }
