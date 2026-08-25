@@ -1,7 +1,4 @@
-# risk_assessments/parsers.py
-
-import re
-from xml.etree import ElementTree
+from defusedxml import ElementTree
 from rest_framework.parsers import BaseParser
 from rest_framework.exceptions import ParseError
 
@@ -73,7 +70,8 @@ class XMLRiskAssessmentParser(BaseParser):
                     patient_profile['contList'] = cont_list
 
         # Собираем итоговый словарь, который ожидает сериализатор
-        result = {'drugs': drugs}
+        result = {}
+        result['drugs'] = drugs
         if patient_profile:
             result['patientProfile'] = patient_profile
 
@@ -82,3 +80,4 @@ class XMLRiskAssessmentParser(BaseParser):
             raise ParseError('В запросе отсутствует список Drugs')
 
         return result
+
