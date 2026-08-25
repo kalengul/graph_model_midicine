@@ -142,7 +142,7 @@ class DrugListRetrieveSerializer(serializers.ModelSerializer):
         model = Drug
         fields = ['id', 'drug_name', 'dg_id', 'nosology_id', 'trade_ids']
     
-    def get_dg_id(self, obj) -> int | None:
+    def get_dg_id(self, obj) -> list[int]:
         """Получение списка ID групп ЛС."""
         return [g.id for g in obj.drug_groups.all()]
     
