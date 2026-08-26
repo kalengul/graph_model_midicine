@@ -8,11 +8,8 @@ import pandas as pd
 
 from django.conf import settings
 
-from drugs.models import (Drug,
-                      DrugSideEffect,
-                      SideEffect,
-                      SideEffectsGender
-                      )
+from drugs.models import Drug
+from side_effects.models import DrugSideEffect, SideEffect, SideEffectsGender
 
 from drugs.utils.universal_cleaner import universal_cleaner
 from drugs.utils.custom_exception import IncorrectFile
@@ -40,7 +37,7 @@ class Loader(ABC):
         
         # Очищаем старые связи
         universal_cleaner(
-            table_names=['drugs_drugsideeffect', 'drugs_sideeffectsgender', 'drugs_sideeffect'],
+            table_names=['side_effects_drugsideeffect', 'side_effects_sideeffectsgender', 'side_effects_sideeffect'],
             model_classes=[DrugSideEffect, SideEffectsGender, SideEffect]
         ).clear_table()
         logger.info('Таблицы: DrugSideEffect, SideEffectsGender очищены')

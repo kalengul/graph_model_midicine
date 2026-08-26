@@ -1,6 +1,5 @@
 import traceback
 import logging
-import time
 import json
 from pathlib import Path
 
@@ -11,13 +10,14 @@ from rest_framework.views import APIView
 from rest_framework import status
 from rest_framework.authentication import TokenAuthentication, SessionAuthentication
 
-from ranker.utils.fortran_calculator import FortranCalculatorSimple, FortranCalculator
+from ranker.utils.fortran_calculator import FortranCalculator
 from ranker.utils.check_banned import DrugPairChecker
 from ranker.services.table_gerention import ExcelTableGenerater
 from ranker.constants import IDX_2_RANK_NAME
 
 from drugs.utils.custom_response import CustomResponse
-from drugs.models import Drug, SideEffect, DrugSideEffect
+from drugs.models import Drug
+from side_effects.models import DrugSideEffect, SideEffect
 
 from ranker.serializers import (CalculationRequestSerializer,
                                 CalculationDataSerializer
@@ -28,7 +28,6 @@ from logging_system.services import CalculationLoggingService
 from drf_spectacular.utils import (
     extend_schema,
     extend_schema_view,
-    OpenApiResponse,
 )
 from drf_spectacular.types import OpenApiTypes
 

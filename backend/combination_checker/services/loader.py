@@ -4,7 +4,8 @@ from dataclasses import dataclass
 
 import numpy as np
 
-from drugs.models import Drug, DrugSideEffect, SideEffect
+from drugs.models import Drug 
+from side_effects.models import DrugSideEffect, SideEffect
 from ranker.utils.fortran_calculator import FortranCalculator
 
 

@@ -10,9 +10,8 @@ import pandas as pd
 from drugs.models import BannedDrugPair, Drug
 from drugs.utils.custom_exception import (PairFileError,
                                           PairDBError)
-# from drugs.utils.cleaner import BannedDrugPairCleanProcessor
 from drugs.utils.universal_cleaner import universal_cleaner
-from typing import List, Dict, Tuple
+
 
 logger = logging.getLogger('drugs')
 

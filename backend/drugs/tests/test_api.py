@@ -12,12 +12,11 @@ from django.contrib.auth.models import User
 from drugs.models import (
     Drug,
     DrugGroup,
-    DrugsAgeContraindications,
     Nosology,
-    SideEffect,
     TradeName,
     BannedDrugPair
 )
+from side_effects.models import SideEffect
 
 FORMAT = "json"
 DATA = "data"

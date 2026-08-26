@@ -9,33 +9,23 @@ from rest_framework.views import APIView
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import IntegrityError
-from django.db.models import Q
-from django.http import FileResponse
 
-from drugs.models import (Drug,
-                     DrugGroup,
-                     SideEffect,
-                    #  DrugSideEffect,
-                    #  TradeName
-                     )
+from drugs.models import Drug, DrugGroup
+from side_effects.models import SideEffect
+from side_effects.serializers import SideEffectSerializer
 from drugs.serializers import (
     DrugSerializer,
     DrugGroupSerializer,
     DrugListRetrieveSerializer,
-    SideEffectSerializer,
-    # DrugSideEffectSerializer,
     FileSerializer,
     DrugDataLoadSerializer,
     TradeNameResponseSerializer,
-    DrugTradeSearchTradeNameSerializer,
-    DrugTradeSearchResultSerializer,
     DrugTradeSearchResponseSerializer
 )
 from drugs.utils.custom_response import CustomResponse
 from drugs.utils.loaders import ExcelLoader
 from drugs.utils.banned_pairs_loader import (PandasBannedPairLoader,
                                              JSONBannedPairLoader)
-from drugs.utils.db_manipulator import DBManipulator
 from drugs.utils.custom_exception import IncorrectFile
 from drugs.utils.drug_info_loader import DrugDataLoader
 from django.utils import timezone
@@ -49,7 +39,6 @@ from drf_spectacular.utils import (
     extend_schema,
     extend_schema_view,
     OpenApiParameter,
-    OpenApiResponse,
 )
 from drf_spectacular.types import OpenApiTypes
 

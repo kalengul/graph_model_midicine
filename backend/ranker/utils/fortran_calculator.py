@@ -3,10 +3,10 @@
 import logging
 from abc import ABC, abstractmethod
 from collections import defaultdict
-import json
 import numpy as np
 
-from drugs.models import Drug, SideEffect, DrugSideEffect, SideEffectsGender
+from drugs.models import Drug
+from side_effects.models import DrugSideEffect, SideEffect, SideEffectsGender
 
 
 RANG_LIMIT = 0.5  # Ограничение для нежизнеугрожающих побочных эффектов

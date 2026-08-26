@@ -1,7 +1,8 @@
 import pytest
 from django.core.files.uploadedfile import SimpleUploadedFile
 import pandas as pd
-from drugs.models import Drug, DrugGroup, SideEffect, DrugSideEffect
+from drugs.models import Drug, DrugGroup
+from side_effects.models import SideEffect, DrugSideEffect
 
 
 # ===================== Фикстуры для 3×3 тестов =====================

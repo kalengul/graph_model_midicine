@@ -1,10 +1,9 @@
 import pytest
 import pandas as pd
-from django.core.files.uploadedfile import SimpleUploadedFile
-from pathlib import Path
 
-from drugs.utils.loaders import ExcelLoader  # замените на реальный импорт
-from drugs.models import Drug, SideEffect, SideEffectsGender, DrugSideEffect
+from drugs.utils.loaders import ExcelLoader
+from drugs.models import Drug
+from side_effects.models import SideEffect, SideEffectsGender, DrugSideEffect
 from drugs.utils.custom_exception import IncorrectFile
 
 

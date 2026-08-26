@@ -1,20 +1,20 @@
 import logging
 
 from drugs.models import (  BannedDrugPair,
-                        DrugSideEffect,
                         Drug,
-                        SideEffect,
                         DrugGroup,
                         Nosology,
                         DrugsAgeContraindications,
-                        SideEffectsGender,
                         TradeName)
+from side_effects.models import DrugSideEffect, SideEffect, SideEffectsGender
 from contraindications.models import Contraindication
 from drugs.utils.banned_pairs_loader import JSONBannedPairLoader
 from contraindications.utils.loader import LoadAndBuildDrugContraindications
 from drugs.utils.universal_cleaner import universal_cleaner
 
+
 logger = logging.getLogger(__name__)
+
 
 class DrugDataLoader:
     """Загрузчик данных о ЛС."""

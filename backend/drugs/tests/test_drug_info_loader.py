@@ -1,17 +1,15 @@
 import pytest
-import json
-from pathlib import Path
 from unittest.mock import mock_open, patch
 
 from drugs.utils.drug_info_loader import DrugDataLoader
-from drugs.utils.drug_info_loader import JSONBannedPairLoader, LoadAndBuildDrugContraindications
+from drugs.utils.drug_info_loader import JSONBannedPairLoader
 from drugs.models import (
     Drug, DrugGroup, Nosology, TradeName,
     DrugsAgeContraindications, BannedDrugPair
 )
-from contraindications.models import Contraindication
 from drugs.utils.banned_pairs_loader import PandasBannedPairLoader
 from drugs.utils.custom_exception import PairFileError
+
 
 @pytest.fixture
 def sample_data():

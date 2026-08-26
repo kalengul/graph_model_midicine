@@ -11,7 +11,6 @@ from django.utils import timezone
 
 from ranker.utils.fortran_calculator import get_calculator
 from ranker.utils.check_banned import DrugPairChecker
-# from ranker.constants import RANK_NAMES
 from drugs.models import Drug, BannedDrugPair
 from contraindications.models import Contraindication
 

@@ -6,7 +6,8 @@ from rest_framework import status
 from ranker.views import CalculationAPI
 
 from drugs.utils.custom_response import CustomResponse
-from drugs.models import Drug, SideEffect, DrugSideEffect
+from drugs.models import Drug
+from side_effects.models import DrugSideEffect, SideEffect
 
 
 class TestValidateWeightsCompleteness:

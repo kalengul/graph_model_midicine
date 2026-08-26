@@ -5,10 +5,8 @@ import logging
 
 from django.conf import settings
 
-from drugs.models import (DrugGroup,
-                      Drug,
-                      DrugSideEffect,
-                      SideEffect)
+from drugs.models import DrugGroup, Drug
+from side_effects.models import DrugSideEffect, SideEffect
 from drugs.utils.loaders import Loader
 from drugs.utils.cleaner import DrugCleanProcessor
 

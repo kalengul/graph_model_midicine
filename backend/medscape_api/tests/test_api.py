@@ -7,8 +7,7 @@ from rest_framework import status
 from drugs.models import (Drug,
                           DrugGroup)
 from medscape_api.models import (TypeDrugsMedScape,
-                                 NameDrugsMedScape,
-                                 InteractionMedScape)
+                                 NameDrugsMedScape)
 
 
 DATA = 'data'

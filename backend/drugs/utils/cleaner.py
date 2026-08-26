@@ -6,29 +6,27 @@ from django.db import connection
 
 from drugs.models import (DrugGroup,
                           Drug,
-                          SideEffect,
-                          DrugSideEffect,
                           BannedDrugPair,
                           Nosology,
                           DrugsAgeContraindications,
-                          SideEffectsGender
                           )
+from side_effects.models import (SideEffect, 
+                                 DrugSideEffect, 
+                                 SideEffectsGender
+                                )
 
-# 
-# Чистильщик всей базы
-# 
 
 class BaseCleaner(ABC):
     """Абстрактный очиститель таблиц."""
 
     table_names = [
-        'drugs_drugsideeffect',
+        'side_effects_drugsideeffect',
         'drugs_drug',
-        'drugs_sideeffect',
+        'side_effects_sideeffect',
         'drugs_druggroup',
         'drugs_nosology',
         'drugs_drugsagecontraindications',
-        'drugs_sideeffectsgender'
+        'side_effects_sideeffectsgender'
     ]
     model_classes=[
         DrugsAgeContraindications,

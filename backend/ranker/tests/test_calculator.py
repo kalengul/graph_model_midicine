@@ -1,7 +1,9 @@
 import pytest
 import numpy as np
-from drugs.models import Drug, SideEffect, DrugSideEffect, SideEffectsGender, DrugGroup
+from drugs.models import Drug, DrugGroup
+from side_effects.models import DrugSideEffect, SideEffect, SideEffectsGender
 from ranker.utils.fortran_calculator import FortranCalculator
+
 
 pytestmark = pytest.mark.django_db
 

@@ -3,7 +3,6 @@ import io
 import zipfile
 import logging
 from pathlib import Path
-from datetime import datetime
 
 import networkx as nx
 from rest_framework.views import APIView
@@ -31,22 +30,17 @@ from graphs.utils.merger import Merger
 from graphs.utils.parse_ids import parse_ids
 from graphs.bayes_calculation import (load_combined_data, get_result,
                                       build_network, calculate_probabilities)
-from drugs.models import Drug, SideEffect, DrugSideEffect
+from drugs.models import Drug
+from side_effects.models import DrugSideEffect, SideEffect
 from graphs.utils.load_gender_side_effect import GENDER_SIDE_EFFECT
 from graphs.utils.graph_storage import GraphStorage
-from graphs.utils.text_builder import TextBuilder
 from graphs.utils.graph_optimization.lineman import Lineman
-# from graphs.utils.graph_optimization.deleter_non_relative_nodes import (
-#     SmartNonRelativeNodesDeleter,
-#     SimpleNonRelativeNodesDeleter)
-# from graphs.utils.parser import GraphParser
 from accounts.auth import bearer_token_required
 
 from drf_spectacular.utils import (
     extend_schema,
     extend_schema_view,
     OpenApiParameter,
-    OpenApiResponse,
 )
 from drf_spectacular.types import OpenApiTypes
 
