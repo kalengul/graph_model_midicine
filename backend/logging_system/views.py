@@ -4,13 +4,15 @@ from django.http import FileResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.permissions import IsAdminUser
+
+from accounts.auth import bearer_token_required
 
 from logging_system.models import SystemState
 from logging_system.serializers import (SystemStateSerializer,
                                         LoggingToggleSerializer
                                         )
 from logging_system.services import CalculationLoggingService
+
 
 from drf_spectacular.utils import extend_schema, OpenApiResponse, OpenApiTypes
 
@@ -23,7 +25,6 @@ class SystemStateView(APIView):
     Получение текущего состояния системы (GET).
     Доступно только администраторам.
     """
-    # permission_classes = [IsAdminUser]
 
     @extend_schema(
         operation_id='system_state',
@@ -35,6 +36,7 @@ class SystemStateView(APIView):
         },
         tags=['logging'],
     )
+    @bearer_token_required
     def get(self, request):
         state = SystemState.get_current_state()
         serializer = SystemStateSerializer(state)
@@ -47,7 +49,6 @@ class LoggingToggleView(APIView):
     GET – получить текущий статус.
     POST – изменить статус (передать {"enabled": true/false}).
     """
-    # permission_classes = [IsAdminUser]
 
     @extend_schema(
         operation_id='logging_toggle_status',
@@ -59,6 +60,7 @@ class LoggingToggleView(APIView):
         },
         tags=['logging'],
     )
+    @bearer_token_required
     def get(self, request):
         return Response({'enabled': CalculationLoggingService.is_enabled()})
 
@@ -74,6 +76,7 @@ class LoggingToggleView(APIView):
         },
         tags=['logging'],
     )
+    @bearer_token_required
     def post(self, request):
         enabled = request.data.get('enabled')
         if enabled is None:
@@ -89,7 +92,7 @@ class LogsExportView(APIView):
     """
     Экспорт файла логов для скачивания.
     """
-    # permission_classes = [IsAdminUser]
+
     @extend_schema(
         operation_id='logs_export',
         responses={
@@ -97,6 +100,7 @@ class LogsExportView(APIView):
         },
         tags=['logging'],
     )
+    @bearer_token_required
     def get(self, request):
         if not os.path.exists(LOG_FILE_PATH):
             return Response(
@@ -117,7 +121,7 @@ class LogsDeleteView(APIView):
     """
     Очистка файла логов (DELETE).
     """
-    # permission_classes = [IsAdminUser]
+
 
     @extend_schema(
         operation_id='logs_delete',
@@ -137,6 +141,7 @@ class LogsDeleteView(APIView):
         },
         tags=['logging'],
     )
+    @bearer_token_required
     def delete(self, request):
         if not os.path.exists(LOG_FILE_PATH):
             return Response(
