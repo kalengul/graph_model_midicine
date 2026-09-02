@@ -85,7 +85,7 @@ class CalculationAPI(APIView):
             drugs, human_data, med_card = validation_result
 
             # Логгирование
-            CalculationLoggingService.log_request(user, drugs)
+            CalculationLoggingService.log_request(user, drug_ids=drugs)
 
             # Создаем базовый шаблон ответа
             response_data = self._create_base_response_template(drugs)
