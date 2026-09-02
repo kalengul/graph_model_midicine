@@ -28,21 +28,30 @@ class CalculationLoggingService:
             _logger.info(f"Логирование {'включено' if enabled else 'выключено'}")
 
     @staticmethod
-    def log_request(user, drug_ids):
+    def log_request(user, drug_ids=None, drug_names=None):
         """
         Логирует пользователя, список препаратов, версии файлов и хэш коммита.
+        :param user: объект пользователя (или None)
+        :param drug_ids: список ID препаратов (для старого сервиса)
+        :param drug_names: список названий препаратов (для нового сервиса)
         """
         if not CalculationLoggingService.is_enabled():
             return
 
-        drug_names = list(Drug.objects.filter(id__in=drug_ids).values_list('drug_name', flat=True))
-        user_str = user.username if user and user.is_authenticated else "Anonymous"
+        # Определяем названия препаратов
+        if drug_names is not None:
+            drugs = drug_names
+        elif drug_ids is not None:
+            drugs = list(Drug.objects.filter(id__in=drug_ids).values_list('drug_name', flat=True))
+        else:
+            drugs = []
 
+        user_str = user.username if user and user.is_authenticated else "Anonymous"
         state = SystemState.get_current_state()
         drugs_file = state.drugs_file_name or 'N/A'
         weights_file = state.weights_file_name or 'N/A'
 
         _logger.info(
-            f"User: {user_str} | Drugs: {drug_names} | "
+            f"User: {user_str} | Drugs: {drugs} | "
             f"DrugsFile: {drugs_file} | WeightsFile: {weights_file}"
         )

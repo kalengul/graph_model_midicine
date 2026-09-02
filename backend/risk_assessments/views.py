@@ -60,9 +60,9 @@ class DrugRiskAssessmentView(APIView):
         drug_names: list[str] = serializer.validated_data["drugs"]
         patient_profile: dict | None = serializer.validated_data.get("patientProfile")
 
-        # 2. Логирование запроса ДОПИСАТЬ ЛОГИРОВАНИЕ ПЕРЕОПРЕДЕЛИТЬ МЕТОД
+        # 2. Логирование запроса
         user = request.user if request.user.is_authenticated else None
-        #CalculationLoggingService.log_request(user, drug_names)
+        CalculationLoggingService.log_request(user, drug_names=drug_names)
 
         # 3. Оценка рисков
         try:
