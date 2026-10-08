@@ -27,6 +27,7 @@ from risk_assessments.services import (
     assess_drug_risks,
     resolve_contraindication_ids,
     resolve_drug_ids,
+    _build_incompatible_effect_drug_map
 )
 from risk_assessments.utils.normalize_drug_name import normalize_drug_name
 from risk_assessments.views import DrugRiskAssessmentView
@@ -315,3 +316,317 @@ class TestDrugRiskAssessmentView(TestCase):
 
         response = self._post({"drugs": ["варфарин", "ампициллин"]})
         assert response.status_code == 500
+
+# ===========================================================================
+# _build_incompatible_effect_drug_map
+# ===========================================================================
+
+class TestBuildIncompatibleEffectDrugMap(TestCase):
+    """
+    Для каждого эффекта из группы compatibility == "incompatible"
+    функция должна вернуть список препаратов из SEFromDrug
+    с максимальным rank по этому эффекту.
+    """
+
+    def _context(self, side_effects, se_from_drug):
+        return {
+            "compatibility_fortran": "incompatible",
+            "side_effects": side_effects,
+            "SEFromDrug": se_from_drug,
+        }
+
+    # ------------------------------------------------------------------ #
+    # Базовые случаи
+    # ------------------------------------------------------------------ #
+
+    def test_picks_drug_with_max_rank(self):
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [
+                        {"se_name": "удлинение интервала qt", "rank": 1.3},
+                        {"se_name": "брадикардия", "rank": 1.01},
+                    ],
+                },
+            ],
+            se_from_drug=[
+                {
+                    "d_name": "амиодарон",
+                    "effects": [
+                        {"se_name": "удлинение интервала qt", "rank": 0.65},
+                        {"se_name": "брадикардия", "rank": 0.5},
+                    ],
+                },
+                {
+                    "d_name": "соталол",
+                    "effects": [
+                        {"se_name": "удлинение интервала qt", "rank": 0.65},
+                        {"se_name": "брадикардия", "rank": 0.36},
+                    ],
+                },
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        # qt — tie 0.65 у обоих препаратов => оба попадают в список
+        assert {d["d_name"] for d in result["удлинение интервала qt"]} == {
+            "амиодарон",
+            "соталол",
+        }
+        # брадикардия — максимум 0.5 только у амиодарона
+        assert result["брадикардия"] == [{"d_name": "амиодарон", "rank": 0.5}]
+
+    def test_only_incompatible_group_is_considered(self):
+        """Эффекты из compatible / caution игнорируются."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "compatible",
+                    "effects": [{"se_name": "тошнота", "rank": 0.9}],
+                },
+                {
+                    "compatibility": "caution",
+                    "effects": [{"se_name": "гипотензия", "rank": 0.8}],
+                },
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {
+                    "d_name": "амиодарон",
+                    "effects": [
+                        {"se_name": "тошнота", "rank": 0.1},
+                        {"se_name": "гипотензия", "rank": 0.2},
+                        {"se_name": "брадикардия", "rank": 0.5},
+                    ],
+                },
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert set(result.keys()) == {"брадикардия"}
+
+    def test_returns_first_by_max_rank_when_all_distinct(self):
+        """У каждого препарата свой rank — берём с максимальным."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "желудочно-кишечное кровотечение", "rank": 1.07}],
+                },
+            ],
+            se_from_drug=[
+                {
+                    "d_name": "варфарин",
+                    "effects": [{"se_name": "желудочно-кишечное кровотечение", "rank": 0.4}],
+                },
+                {
+                    "d_name": "кеторолак",
+                    "effects": [{"se_name": "желудочно-кишечное кровотечение", "rank": 0.9}],
+                },
+                {
+                    "d_name": "аллопуринол",
+                    "effects": [{"se_name": "желудочно-кишечное кровотечение", "rank": 0.1}],
+                },
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert result == {
+            "желудочно-кишечное кровотечение": [
+                {"d_name": "кеторолак", "rank": 0.9}
+            ]
+        }
+
+    # ------------------------------------------------------------------ #
+    # Граничные случаи
+    # ------------------------------------------------------------------ #
+
+    def test_empty_result_when_no_incompatible_group(self):
+        context = self._context(
+            side_effects=[
+                {"compatibility": "compatible", "effects": [{"se_name": "тошнота", "rank": 0.1}]},
+                {"compatibility": "caution",    "effects": []},
+            ],
+            se_from_drug=[{"d_name": "амиодарон", "effects": []}],
+        )
+
+        assert _build_incompatible_effect_drug_map(context) == {}
+
+    def test_empty_result_when_side_effects_missing(self):
+        assert _build_incompatible_effect_drug_map({}) == {}
+
+    def test_empty_result_when_se_from_drug_missing(self):
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[],
+        )
+
+        # Эффект есть в incompatible, но ни у одного препарата его нет
+        assert _build_incompatible_effect_drug_map(context) == {"брадикардия": None}
+
+    def test_empty_effect_list_in_incompatible_group(self):
+        context = self._context(
+            side_effects=[{"compatibility": "incompatible", "effects": []}],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        assert _build_incompatible_effect_drug_map(context) == {}
+
+    def test_effect_present_in_incompatible_but_absent_for_all_drugs(self):
+        """incompatible-эффект, которого нет ни у одного препарата → None."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [
+                        {"se_name": "брадикардия", "rank": 1.0},
+                        {"se_name": "редкий эффект", "rank": 0.9},
+                    ],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert result["брадикардия"] == [{"d_name": "амиодарон", "rank": 0.5}]
+        assert result["редкий эффект"] is None
+
+    def test_skips_effect_without_se_name(self):
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [
+                        {"se_name": None, "rank": 1.0},
+                        {"se_name": "брадикардия", "rank": 1.0},
+                    ],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert set(result.keys()) == {"брадикардия"}
+
+    def test_zero_rank_is_kept(self):
+        """rank=0.0 — валидное значение, не должно теряться."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "редкий эффект", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "редкий эффект", "rank": 0.0}]},
+                {"d_name": "соталол",   "effects": [{"se_name": "редкий эффект", "rank": 0.0}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert len(result["редкий эффект"]) == 2
+        assert all(d["rank"] == 0.0 for d in result["редкий эффект"])
+
+    def test_returns_all_drugs_with_tied_max_rank(self):
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+                {"d_name": "соталол",   "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+                {"d_name": "карведилол","effects": [{"se_name": "брадикардия", "rank": 0.36}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert {d["d_name"] for d in result["брадикардия"]} == {"амиодарон", "соталол"}
+        assert all(d["rank"] == 0.5 for d in result["брадикардия"])
+
+    def test_drug_without_d_name_is_ignored(self):
+        """Если у препарата нет d_name — он не должен попадать в результат."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {"effects": [{"se_name": "брадикардия", "rank": 0.9}]},  # нет d_name
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert result == {"брадикардия": [{"d_name": None, "rank": 0.9}]}
+
+    def test_drug_without_effects_key_is_ignored(self):
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон"},  # нет ключа effects
+                {"d_name": "соталол", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert result == {"брадикардия": [{"d_name": "соталол", "rank": 0.5}]}
+
+    # ------------------------------------------------------------------ #
+    # Контракт по формату вывода
+    # ------------------------------------------------------------------ #
+
+    def test_output_shape(self):
+        """Ключи результата — se_name из incompatible-группы,
+        значения — список словарей {d_name, rank}."""
+        context = self._context(
+            side_effects=[
+                {
+                    "compatibility": "incompatible",
+                    "effects": [{"se_name": "брадикардия", "rank": 1.0}],
+                },
+            ],
+            se_from_drug=[
+                {"d_name": "амиодарон", "effects": [{"se_name": "брадикардия", "rank": 0.5}]},
+            ],
+        )
+
+        result = _build_incompatible_effect_drug_map(context)
+
+        assert isinstance(result, dict)
+        assert list(result.keys()) == ["брадикардия"]
+        assert isinstance(result["брадикардия"], list)
+        assert result["брадикардия"][0].keys() == {"d_name", "rank"}

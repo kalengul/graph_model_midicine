@@ -78,13 +78,14 @@ class CalculationAPI(APIView):
             
             # Проверяем, не вернулась ли ошибка
             if isinstance(validation_result, CustomResponse):
+                CalculationLoggingService.log_request(
+                    user,
+                    status='error',
+                )
                 return validation_result
             
             # Распаковываем данные
             drugs, human_data, med_card = validation_result
-
-            # Логгирование
-            CalculationLoggingService.log_request(user, drug_ids=drugs)
 
             # Создаем базовый шаблон ответа
             response_data = self._create_base_response_template(drugs)
@@ -93,6 +94,12 @@ class CalculationAPI(APIView):
             banned_pairs = DrugPairChecker().check_banned(drugs)
             if banned_pairs:
                 resp = self._create_banned_response(response_data, banned_pairs)
+                CalculationLoggingService.log_request(
+                    user,
+                    status=self.COMPATIBILITY_BANNED,
+                    drug_ids=drugs,
+                    banned_pairs=banned_pairs
+                )
                 return resp
             
             # Проверка противопоказаний (если есть)
@@ -102,22 +109,57 @@ class CalculationAPI(APIView):
                     drugs, human_data
                 )
                 if contraindications_result:
-                    return self._create_contraindications_response(
-                        response_data, contraindications_result)
+                    resp = self._create_contraindications_response(
+                        response_data, contraindications_result
+                    )
+                    CalculationLoggingService.log_request(
+                        user,
+                        status=self.COMPATIBILITY_BANNED_CONTRAINDICATIONS,
+                        drug_ids=drugs,
+                        banned_pairs_cont=contraindications_result
+                    )
+                    return resp
             
             # Расчёт совместимости
             gender = human_data.get('gender') if human_data else None
-            resp = self._calculate_compatibility(response_data, drugs,
+            result_compatibility = self._calculate_compatibility(response_data, drugs,
                                                  normalization_calculate,
                                                  gender)
-            return resp
             
-        except Exception as e:
+            # Извлекаем status/rank из ответа
+            if isinstance(result_compatibility, dict):
+                status_raw = result_compatibility.get('compatibility_fortran') or 'error'
+                rank = result_compatibility.get('rank_iteractions')
+            else:
+                # сюда попадаем, если _calculate_compatibility вернул
+                # ошибку валидации весов (CustomResponse без data)
+                status_raw = 'error'
+                rank = None
+
+            CalculationLoggingService.log_request(
+                user,
+                status=status_raw,
+                rank=rank,
+                drug_ids=drugs
+            )
+
+            return CustomResponse(
+                status=status.HTTP_200_OK,
+                message='Совместимость ЛС по Fortran успешно рассчитана',
+                http_status=status.HTTP_200_OK,
+                data=result_compatibility
+            )
+
+        except Exception:
             logger.critical(f"Критическая ошибка: {traceback.format_exc()}")
+            CalculationLoggingService.log_request(
+                user,
+                status='error',
+            )
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
                
     def _validate_input_data(self, request):
@@ -282,14 +324,10 @@ class CalculationAPI(APIView):
         )
 
         # Объединяем шаблон с результатами расчета
-        final_data = {**template_data, **context}    
+        final_data = {**template_data, **context}
+        return final_data    
         
-        return CustomResponse(
-            status=status.HTTP_200_OK,
-            message='Совместимость ЛС по Fortran успешно рассчитана',
-            http_status=status.HTTP_200_OK,
-            data=final_data
-        )
+
     
     def _validate_weights_completeness(self):
         """

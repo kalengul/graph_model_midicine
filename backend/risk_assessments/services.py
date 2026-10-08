@@ -7,7 +7,7 @@
   3. Запускаем существующий расчёт совместимости через FortranCalculator
 """
 import logging
-from typing import Optional
+from typing import Optional, Any, Dict, List, Optional
 import re
 
 from drugs.models import Drug
@@ -24,14 +24,17 @@ logger = logging.getLogger("risk_assessments.service")
 
 class DrugNotFoundError(Exception):
     """Один или несколько препаратов не найдены в БД."""
-    def __init__(self, missing: list[str]):
+    def __init__(self, missing: list[str], found: Optional[dict[int, str]] = None):
         self.missing = missing
+        self.found = found or {}
 
 
 class ContraindicationNotFoundError(Exception):
     """Одно или несколько противопоказаний не найдены в БД."""
-    def __init__(self, missing: list[str]):
+    def __init__(self, missing: list[str], found: Optional[dict[int, str]] = None):
         self.missing = missing
+        self.found = found or {}
+        
 
 
 # Маппинг значений compatibility_fortran из калькулятора в наш API-enum.
@@ -60,7 +63,7 @@ def resolve_drug_ids(drug_names: list[str]) -> dict[int, str]:
             found[drug.id] = drug.drug_name
 
     if missing:
-        raise DrugNotFoundError(missing)
+        raise DrugNotFoundError(missing, found=found)
 
     return found
 
@@ -118,7 +121,12 @@ def assess_drug_risks(
     cont_ids: list[int] = []
     if patient_profile:
         raw_cont_list = patient_profile.get("contList") or []
-        cont_ids = resolve_contraindication_ids(raw_cont_list)
+        try:
+            cont_ids = resolve_contraindication_ids(raw_cont_list)
+        except ContraindicationNotFoundError as exc:
+            # прикрепим уже найденные препараты, чтобы залогировать drug_ids
+            exc.found = drugs_map
+            raise
 
     # 3. Проверка запрещённых пар
     banned_pairs = DrugPairChecker().check_banned(drug_ids)
@@ -173,7 +181,58 @@ def assess_drug_risks(
         side_effects=_map_side_effects(context.get("side_effects", [])),
         combinations=_map_combinations(context.get("combinations", [])),
         se_from_drug=_map_se_from_drug(context.get("SEFromDrug", [])),
+        incompatible_effect_drug_map = _build_incompatible_effect_drug_map(context)
     )
+
+def _build_incompatible_effect_drug_map(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Для каждого побочного эффекта из группы compatibility == "incompatible"
+    находит препарат из SEFromDrug с максимальным rank по этому эффекту.
+    """
+    side_effects = payload.get("side_effects", [])
+    se_from_drug = payload.get("SEFromDrug", [])
+
+    # 1. Находим incompatible-группу
+    incompatible_group = next(
+        (group for group in side_effects if group.get("compatibility") == "incompatible"),
+        None
+    )
+    if not incompatible_group:
+        return {}
+
+    # 2. Индексируем SEFromDrug: se_name -> [(d_name, rank), ...]
+    se_index: Dict[str, List[tuple]] = {}
+    for drug in se_from_drug:
+        d_name = drug.get("d_name")
+        for effect in drug.get("effects", []):
+            se_name = effect.get("se_name")
+            rank = effect.get("rank", 0.0)
+            if se_name:
+                se_index.setdefault(se_name, []).append((d_name, rank))
+
+    result: Dict[str, Any] = {}
+
+    # 3. Идём по эффектам incompatible
+    for effect in incompatible_group.get("effects", []):
+        se_name = effect.get("se_name")
+        if not se_name:
+            continue
+
+        candidates = se_index.get(se_name, [])
+        if not candidates:
+            result[se_name] = None
+            continue
+
+        max_rank = max(rank for _, rank in candidates)
+        best = [
+            {"d_name": d_name, "rank": rank}
+            for d_name, rank in candidates
+            if rank == max_rank
+        ]
+
+        result[se_name] = best
+
+    return result
 
 
 # ---------------------------------------------------------------------------
@@ -348,6 +407,7 @@ def _build_response(
     side_effects: Optional[list] = None,
     combinations: Optional[list] = None,
     se_from_drug: Optional[list] = None,
+    incompatible_effect_drug_map: Optional[dict] = None
 ) -> dict:
     return {
         "drugs": {str(k): v for k, v in drugs_map.items()},
@@ -360,4 +420,6 @@ def _build_response(
         "sideEffects": side_effects or [],
         "combinations": combinations or [],
         # "seFromDrug": se_from_drug or [],
+        "incompatible_effect_drug_map": incompatible_effect_drug_map or {}
+
     }

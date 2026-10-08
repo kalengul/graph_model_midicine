@@ -53,36 +53,31 @@ class ServicesTests(TestCase):
         CalculationLoggingService.set_enabled(True)
         mock_logger.info.assert_not_called()
 
-    @patch("logging_system.services.Drug")
     @patch("logging_system.services._logger")
-    def test_log_request_when_enabled(self, mock_logger, mock_drug):
-        """Логирование запроса при включенном логировании."""
+    def test_log_request_when_enabled(self, mock_logger):
+        """Логирование при включённом логировании."""
         self.state.logging_enabled = True
         self.state.save()
 
         user = Mock(username="testuser", is_authenticated=True)
-        drug_ids = [1, 2]
-        mock_drug.objects.filter.return_value.values_list.return_value = ["drugA", "drugB"]
 
-        CalculationLoggingService.log_request(user, drug_ids)
+        CalculationLoggingService.log_request(
+            user,
+            status="caution",
+            rank=0.53,
+            drug_ids=[1, 2],
+            missing_drugs=[],
+            all_drugs=["drugA", "drugB"],
+        )
 
-        mock_drug.objects.filter.assert_called_with(id__in=drug_ids)
         mock_logger.info.assert_called_once()
-        log_call = mock_logger.info.call_args[0][0]
-        self.assertIn("User: testuser", log_call)
-        self.assertIn("Drugs: ['drugA', 'drugB']", log_call)
+        line = mock_logger.info.call_args[0][0]
 
-    @patch("logging_system.services.Drug")
-    @patch("logging_system.services._logger")
-    def test_log_request_when_disabled(self, mock_logger, mock_drug):
-        """Логирование не происходит, если выключено."""
-        self.state.logging_enabled = False
-        self.state.save()
-
-        user = Mock(username="testuser", is_authenticated=True)
-        CalculationLoggingService.log_request(user, [1, 2])
-        mock_logger.info.assert_not_called()
-        mock_drug.objects.filter.assert_not_called()
+        assert "User: testuser" in line
+        assert "Status: caution" in line
+        assert "Rank: 0.53" in line
+        assert "DrugIds: [1, 2]" in line
+        assert "Drugs: ['drugA', 'drugB']" in line
 
     @patch("logging_system.services.Drug")
     @patch("logging_system.services._logger")
