@@ -62,13 +62,20 @@ class DrugRiskAssessmentView(APIView):
 
         # 2. Логирование запроса
         user = request.user if request.user.is_authenticated else None
-        CalculationLoggingService.log_request(user, drug_names=drug_names)
+        # CalculationLoggingService.log_request(user, drug_names=drug_names)
 
         # 3. Оценка рисков
         try:
             result = assess_drug_risks(drug_names, patient_profile)
 
         except DrugNotFoundError as exc:
+            CalculationLoggingService.log_request(
+                user,
+                status="error",
+                drug_ids=list(exc.found.keys()),
+                missing_drugs=exc.missing,
+                all_drugs=drug_names,
+            )
             missing_str = ", ".join(f"`{m}`" for m in exc.missing)
             return _error_response(
                 message="В поле `drugs` указано некорректное значение",
@@ -76,6 +83,13 @@ class DrugRiskAssessmentView(APIView):
             )
 
         except ContraindicationNotFoundError as exc:
+            CalculationLoggingService.log_request(
+                user,
+                status="error",
+                drug_ids=list(exc.found.keys()),
+                missing_drugs=exc.missing,
+                all_drugs=drug_names,
+            )
             missing_str = ", ".join(f"`{m}`" for m in exc.missing)
             return _error_response(
                 message="В поле `contList` указано некорректное значение",
@@ -84,11 +98,29 @@ class DrugRiskAssessmentView(APIView):
 
         except Exception:
             logger.exception("Критическая ошибка при оценке рисков")
+            CalculationLoggingService.log_request(
+                user,
+                status="error",
+                all_drugs=drug_names,
+            )
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message="Ошибка оценки рисков совместимости препаратов",
                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
+        
+        # Успех
+        drug_ids = [int(k) for k in result["drugs"].keys()]
+        CalculationLoggingService.log_request(
+            user,
+            status=result["compatibility"]["status"].lower(),
+            rank=result["compatibility"].get("rank"),
+            drug_ids=drug_ids,
+            missing_drugs=[],
+            all_drugs=drug_names,
+            banned_pairs=result.get("bannedPairs"),
+            banned_pairs_cont=result.get("bannedPairsCont"),
+        )
 
         return CustomResponse(
             status=status.HTTP_200_OK,
