@@ -10,7 +10,8 @@ from rest_framework.parsers import JSONParser
 from risk_assessments.utils.parsers import XMLRiskAssessmentParser
 
 from drugs.utils.custom_response import CustomResponse
-from logging_system.services import CalculationLoggingService
+# from logging_system.services import CalculationLoggingService
+from logging_system.services import RiskAssessmentLoggingService as RiskLog
 
 from risk_assessments.serializers import (DrugRiskAssessmentRequestSerializer,
                                           RiskAssessmentResponseSerializer
@@ -62,20 +63,21 @@ class DrugRiskAssessmentView(APIView):
 
         # 2. Логирование запроса
         user = request.user if request.user.is_authenticated else None
-        # CalculationLoggingService.log_request(user, drug_names=drug_names)
+
+        def log_error(exc=None, all_drugs=None):
+            RiskLog.log_request(
+                user,
+                status="error",
+                missing_drugs=list(exc.missing) if exc else [],
+                all_drugs=all_drugs,
+            )
 
         # 3. Оценка рисков
         try:
             result = assess_drug_risks(drug_names, patient_profile)
 
         except DrugNotFoundError as exc:
-            CalculationLoggingService.log_request(
-                user,
-                status="error",
-                drug_ids=list(exc.found.keys()),
-                missing_drugs=exc.missing,
-                all_drugs=drug_names,
-            )
+            log_error(exc, all_drugs=drug_names)
             missing_str = ", ".join(f"`{m}`" for m in exc.missing)
             return _error_response(
                 message="В поле `drugs` указано некорректное значение",
@@ -83,13 +85,7 @@ class DrugRiskAssessmentView(APIView):
             )
 
         except ContraindicationNotFoundError as exc:
-            CalculationLoggingService.log_request(
-                user,
-                status="error",
-                drug_ids=list(exc.found.keys()),
-                missing_drugs=exc.missing,
-                all_drugs=drug_names,
-            )
+            log_error(exc, all_drugs=drug_names)
             missing_str = ", ".join(f"`{m}`" for m in exc.missing)
             return _error_response(
                 message="В поле `contList` указано некорректное значение",
@@ -98,11 +94,7 @@ class DrugRiskAssessmentView(APIView):
 
         except Exception:
             logger.exception("Критическая ошибка при оценке рисков")
-            CalculationLoggingService.log_request(
-                user,
-                status="error",
-                all_drugs=drug_names,
-            )
+            log_error(all_drugs=drug_names)
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message="Ошибка оценки рисков совместимости препаратов",
@@ -110,12 +102,10 @@ class DrugRiskAssessmentView(APIView):
             )
         
         # Успех
-        drug_ids = [int(k) for k in result["drugs"].keys()]
-        CalculationLoggingService.log_request(
+        RiskLog.log_request(
             user,
             status=result["compatibility"]["status"].lower(),
             rank=result["compatibility"].get("rank"),
-            drug_ids=drug_ids,
             missing_drugs=[],
             all_drugs=drug_names,
             banned_pairs=result.get("bannedPairs"),

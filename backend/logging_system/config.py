@@ -1,28 +1,38 @@
-# backend/logging_system/config.py
+# logging_system/config.py
 import os
 import logging
 from logging.handlers import RotatingFileHandler
+from django.conf import settings
 
-# Директория для логов (относительно backend)
-LOG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'logs')
-os.makedirs(LOG_DIR, exist_ok=True)
+LOG_DIR = settings.LOG_DIR
+LOG_FILES = {
+    'fortran_calc': 'fortran_calc.log',
+    'risk_assessments': 'risk_assessments.log',
+}
 
-# Файл с логами расчётов
-LOG_FILE = os.path.join(LOG_DIR, 'requested_drugs.log')
+def get_logger(logger_name: str, log_file: str):
+    """
+    Возвращает логгер с ротацией.
+    logger_name — уникальное имя логгера, например 'fortran_calc'.
+    log_file — имя файла внутри LOG_DIR.
+    """
+    logger = logging.getLogger(logger_name)
 
-def get_logger():
-    """Настройка логгера с ротацией файлов (10 MB, 5 бэкапов)."""
-    logger = logging.getLogger('calculation_api')
-    if not logger.handlers:          # избегаем дублирования
+    if not logger.handlers:
         git_version = os.getenv('GIT_COMMIT_VERSION')
         logger.setLevel(logging.INFO)
+
         formatter = logging.Formatter(
             '{asctime} | {git_version} | {message}',
             style='{',
             datefmt='%Y-%m-%d %H:%M:%S'
         )
+
         handler = RotatingFileHandler(
-            LOG_FILE, maxBytes=10*1024*1024, backupCount=5, encoding='utf-8'
+            os.path.join(LOG_DIR, log_file),
+            maxBytes=10 * 1024 * 1024,
+            backupCount=5,
+            encoding='utf-8'
         )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
@@ -31,7 +41,7 @@ def get_logger():
             def filter(self, record):
                 record.git_version = git_version
                 return True
-        
+
         logger.addFilter(GitVersionFilter())
-        
+
     return logger
