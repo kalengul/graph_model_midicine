@@ -260,10 +260,9 @@ class TestDrugRiskAssessmentView(TestCase):
         request.user = MagicMock(is_authenticated=False)
         return DrugRiskAssessmentView.as_view()(request)
 
-    @patch("risk_assessments.views.CalculationLoggingService")
+    @patch("risk_assessments.views.RiskLog")
     @patch("risk_assessments.views.assess_drug_risks")
     def test_200_on_success(self, mock_assess, mock_log):
-        mock_log.log_request = MagicMock()
         mock_assess.return_value = {
             "drugs": {"1": "варфарин", "2": "ампициллин"},
             "compatibility": {"status": "COMPATIBLE", "rank": 8.5},
@@ -276,10 +275,9 @@ class TestDrugRiskAssessmentView(TestCase):
         response = self._post({"drugs": ["варфарин", "ампициллин"]})
         assert response.status_code == 200
 
-    @patch("risk_assessments.views.CalculationLoggingService")
+    @patch("risk_assessments.views.RiskLog")
     @patch("risk_assessments.views.assess_drug_risks")
     def test_400_on_drug_not_found(self, mock_assess, mock_log):
-        mock_log.log_request = MagicMock()
         mock_assess.side_effect = DrugNotFoundError(["несуществующий"])
 
         response = self._post({"drugs": ["несуществующий", "варфарин"]})
@@ -289,10 +287,9 @@ class TestDrugRiskAssessmentView(TestCase):
         assert "drugs" in body["message"]
         assert "несуществующий" in body["additionalData"]
 
-    @patch("risk_assessments.views.CalculationLoggingService")
+    @patch("risk_assessments.views.RiskLog")
     @patch("risk_assessments.views.assess_drug_risks")
     def test_400_on_contraindication_not_found(self, mock_assess, mock_log):
-        mock_log.log_request = MagicMock()
         mock_assess.side_effect = ContraindicationNotFoundError(["анимия"])
 
         response = self._post({
@@ -308,10 +305,9 @@ class TestDrugRiskAssessmentView(TestCase):
         response = self._post({"drugs": ["только_один"]})
         assert response.status_code == 400
 
-    @patch("risk_assessments.views.CalculationLoggingService")
+    @patch("risk_assessments.views.RiskLog")
     @patch("risk_assessments.views.assess_drug_risks")
     def test_500_on_unexpected_error(self, mock_assess, mock_log):
-        mock_log.log_request = MagicMock()
         mock_assess.side_effect = RuntimeError("что-то сломалось")
 
         response = self._post({"drugs": ["варфарин", "ампициллин"]})
