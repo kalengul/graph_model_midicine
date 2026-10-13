@@ -77,6 +77,10 @@ class BannedPairContSerializer(serializers.Serializer):
     contraindicationName = serializers.CharField()
     reason = serializers.CharField(allow_null=True)
 
+class MaxImpactDrugSerializer(serializers.Serializer):
+    sideEffect = serializers.CharField()
+    drugName = serializers.CharField()
+    rank = serializers.FloatField()
 
 class RiskAssessmentResponseSerializer(serializers.Serializer):
     drugs = serializers.DictField(child=serializers.CharField())
@@ -86,3 +90,4 @@ class RiskAssessmentResponseSerializer(serializers.Serializer):
     sideEffects = DrugEffectSerializer(many=True)
     combinations = CombinationSerializer(many=True)
     # seFromDrug = SeFromDrugItemSerializer(many=True)
+    max_impact_drugs = MaxImpactDrugSerializer(required=False)

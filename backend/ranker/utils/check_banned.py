@@ -29,21 +29,41 @@ class DrugPairChecker(BannedChecker):
         Returns:
             list[tuple] - список запрещённых пар (название1, название2, комментарий)
         """
-        drug_map = (
-            {drug.id: drug for drug in Drug.objects.filter(id__in=drugs)})
+        drug_map = {
+            drug.id: drug for drug in Drug.objects.filter(id__in=drugs)
+        }
+
+        # Загружаем все запрещённые пары одним запросом и индексируем
+        # по нормализованному (casefold) кортежу имён.
+        banned_index: dict[tuple[str, str], str | None] = {}
+        for pair in BannedDrugPair.objects.only(
+            "first_drug", "second_drug", "comment"
+        ):
+            key = (
+                (pair.first_drug or "").casefold(),
+                (pair.second_drug or "").casefold(),
+            )
+            # Первое вхождение выигрывает — сохраняем семантику .first()
+            banned_index.setdefault(key, pair.comment)
+
         banned_pairs = []
         for id1, id2 in combinations(drugs, 2):
             name1 = drug_map[id1].drug_name
             name2 = drug_map[id2].drug_name
 
-            pair = BannedDrugPair.objects.filter(
-                Q(first_drug__iexact=name1, second_drug__iexact=name2) |
-                Q(first_drug__iexact=name2, second_drug__iexact=name1)
-            ).first()
+            forward = (name1.casefold(), name2.casefold())
+            reverse = (forward[1], forward[0])
 
-            if pair:
-                banned_pairs.append({
-                        "pair": [name1, name2],
-                        "comment": pair.comment
-                    })
+            if forward in banned_index:
+                comment = banned_index[forward]
+            elif reverse in banned_index:
+                comment = banned_index[reverse]
+            else:
+                continue
+
+            banned_pairs.append({
+                "pair": [name1, name2],
+                "comment": comment,
+            })
+
         return banned_pairs

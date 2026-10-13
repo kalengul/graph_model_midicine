@@ -23,7 +23,7 @@ from ranker.serializers import (CalculationRequestSerializer,
                                 CalculationDataSerializer
                                 )
 
-from logging_system.services import CalculationLoggingService
+from logging_system.services import FortranCalcLoggingService as FortranLog
 
 from drf_spectacular.utils import (
     extend_schema,
@@ -71,6 +71,18 @@ class CalculationAPI(APIView):
         # Получаем пользователя
         user = request.user if request.user.is_authenticated else None
 
+        def log(status, rank=None, all_drugs=None,
+                banned_pairs=None, banned_pairs_cont=None):
+            """Пишет одну строку в fortran_calc.log."""
+            FortranLog.log_request(
+                user,
+                status=status,
+                rank=rank,
+                all_drugs=all_drugs,
+                banned_pairs=banned_pairs,
+                banned_pairs_cont=banned_pairs_cont,
+            )
+
         try:
 
             # Валидация и подготовка данных
@@ -78,10 +90,7 @@ class CalculationAPI(APIView):
             
             # Проверяем, не вернулась ли ошибка
             if isinstance(validation_result, CustomResponse):
-                CalculationLoggingService.log_request(
-                    user,
-                    status='error',
-                )
+                log('error')
                 return validation_result
             
             # Распаковываем данные
@@ -89,17 +98,14 @@ class CalculationAPI(APIView):
 
             # Создаем базовый шаблон ответа
             response_data = self._create_base_response_template(drugs)
+            all_drugs = response_data['drugs']
             
             # Проверка запрещенных пар (banned)
             banned_pairs = DrugPairChecker().check_banned(drugs)
             if banned_pairs:
                 resp = self._create_banned_response(response_data, banned_pairs)
-                CalculationLoggingService.log_request(
-                    user,
-                    status=self.COMPATIBILITY_BANNED,
-                    drug_ids=drugs,
-                    banned_pairs=banned_pairs
-                )
+                log(self.COMPATIBILITY_BANNED, all_drugs=all_drugs,
+                    banned_pairs=banned_pairs)
                 return resp
             
             # Проверка противопоказаний (если есть)
@@ -112,12 +118,9 @@ class CalculationAPI(APIView):
                     resp = self._create_contraindications_response(
                         response_data, contraindications_result
                     )
-                    CalculationLoggingService.log_request(
-                        user,
-                        status=self.COMPATIBILITY_BANNED_CONTRAINDICATIONS,
-                        drug_ids=drugs,
-                        banned_pairs_cont=contraindications_result
-                    )
+                    log(self.COMPATIBILITY_BANNED_CONTRAINDICATIONS,
+                        all_drugs=all_drugs,
+                        banned_pairs_cont=contraindications_result)
                     return resp
             
             # Расчёт совместимости
@@ -127,21 +130,14 @@ class CalculationAPI(APIView):
                                                  gender)
             
             # Извлекаем status/rank из ответа
-            if isinstance(result_compatibility, dict):
-                status_raw = result_compatibility.get('compatibility_fortran') or 'error'
-                rank = result_compatibility.get('rank_iteractions')
-            else:
-                # сюда попадаем, если _calculate_compatibility вернул
-                # ошибку валидации весов (CustomResponse без data)
-                status_raw = 'error'
-                rank = None
+            if not isinstance(result_compatibility, dict):
+                log('error', all_drugs=all_drugs)
+                return result_compatibility
 
-            CalculationLoggingService.log_request(
-                user,
-                status=status_raw,
-                rank=rank,
-                drug_ids=drugs
-            )
+            status_raw = result_compatibility.get('compatibility_fortran') or 'error'
+            rank = result_compatibility.get('rank_iteractions')
+
+            log(status_raw, rank=rank, all_drugs=all_drugs)
 
             return CustomResponse(
                 status=status.HTTP_200_OK,
@@ -152,10 +148,7 @@ class CalculationAPI(APIView):
 
         except Exception:
             logger.critical(f"Критическая ошибка: {traceback.format_exc()}")
-            CalculationLoggingService.log_request(
-                user,
-                status='error',
-            )
+            log('error')
             return CustomResponse(
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 message='Ошибка определения совместимости',
@@ -257,10 +250,7 @@ class CalculationAPI(APIView):
                 if has_age_violation:
                     contra_names.extend(age_violation_names)
                 
-                result.append({
-                    "drug": drug.drug_name,
-                    "contraindications": contra_names
-                })
+                result.append((drug.drug_name, contra_names))
         
         return result
 
@@ -290,9 +280,15 @@ class CalculationAPI(APIView):
         logger.debug('Найдены противопоказания')
         logger.debug(f'Результат: {contraindications_result}')
 
-        # Заполняем шаблон
-        template_data.update({"compatibility_fortran": self.COMPATIBILITY_BANNED_CONTRAINDICATIONS})
-        template_data["bannedPairsCont"] = contraindications_result
+        banned_pairs_cont = [
+            {"drug": drug_name, "contraindications": contras}
+            for drug_name, contras in contraindications_result
+        ]
+
+        template_data.update({
+            "compatibility_fortran": self.COMPATIBILITY_BANNED_CONTRAINDICATIONS,
+            "bannedPairsCont": banned_pairs_cont,
+        })
         
         return CustomResponse(
             status=status.HTTP_200_OK,

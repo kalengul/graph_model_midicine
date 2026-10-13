@@ -6,18 +6,24 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from accounts.auth import bearer_token_required
+from django.conf import settings
 
 from logging_system.models import SystemState
 from logging_system.serializers import (SystemStateSerializer,
                                         LoggingToggleSerializer
                                         )
-from logging_system.services import CalculationLoggingService
+from logging_system.services import LoggingToggleService
 
 
 from drf_spectacular.utils import extend_schema, OpenApiResponse, OpenApiTypes
 
 # Определяем путь к лог-файлу
-LOG_FILE_PATH = os.path.join(settings.BASE_DIR, 'logs', 'requested_drugs.log')
+LOG_DIR = settings.LOG_DIR
+LOG_FILES = {
+    'fortran_calc': os.path.join(LOG_DIR, 'fortran_calc.log'),
+    'risk_assessments': os.path.join(LOG_DIR, 'risk_assesments.log'),
+    'logging_system':   os.path.join(LOG_DIR, 'logging_system.log'),
+}
 
 
 class SystemStateView(APIView):
@@ -62,7 +68,7 @@ class LoggingToggleView(APIView):
     )
     @bearer_token_required
     def get(self, request):
-        return Response({'enabled': CalculationLoggingService.is_enabled()})
+        return Response({'enabled': LoggingToggleService.is_enabled()})
 
 
     @extend_schema(
@@ -84,8 +90,8 @@ class LoggingToggleView(APIView):
                 {'error': 'Поле "enabled" обязательно'},
                 status=status.HTTP_400_BAD_REQUEST
             )
-        CalculationLoggingService.set_enabled(bool(enabled))
-        return Response({'enabled': CalculationLoggingService.is_enabled()})
+        LoggingToggleService.set_enabled(bool(enabled))
+        return Response({'enabled': LoggingToggleService.is_enabled()})
 
 
 class LogsExportView(APIView):
@@ -101,20 +107,19 @@ class LogsExportView(APIView):
         tags=['logging'],
     )
     @bearer_token_required
-    def get(self, request):
-        if not os.path.exists(LOG_FILE_PATH):
+    def get(self, request, log_type: str):
+        path = LOG_FILES.get(log_type)
+        if not path or not os.path.exists(path):
             return Response(
                 {'error': 'Файл логов не найден'},
                 status=status.HTTP_404_NOT_FOUND
             )
-        # Отдаём файл как вложение
-        response = FileResponse(
-            open(LOG_FILE_PATH, 'rb'),
+        return FileResponse(
+            open(path, 'rb'),
             content_type='text/plain',
             as_attachment=True,
-            filename='requested_drugs.log'
+            filename=os.path.basename(path)
         )
-        return response
 
 
 class LogsDeleteView(APIView):
@@ -142,18 +147,19 @@ class LogsDeleteView(APIView):
         tags=['logging'],
     )
     @bearer_token_required
-    def delete(self, request):
-        if not os.path.exists(LOG_FILE_PATH):
-            return Response(
-                {'error': 'Файл логов не найден'},
-                status=status.HTTP_404_NOT_FOUND
-            )
-        try:
-            with open(LOG_FILE_PATH, 'w') as f:
-                f.truncate(0)
-            return Response({'message': 'Логи очищены'})
-        except Exception as e:
-            return Response(
-                {'error': f'Ошибка очистки логов: {str(e)}'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+    def delete(self, request, log_type: str):
+            path = LOG_FILES.get(log_type)
+            if not path or not os.path.exists(path):
+                return Response(
+                    {'error': 'Файл логов не найден'},
+                    status=status.HTTP_404_NOT_FOUND
+                )
+            try:
+                with open(path, 'w') as f:
+                    f.truncate(0)
+                return Response({'message': 'Логи очищены'})
+            except Exception as e:
+                return Response(
+                    {'error': f'Ошибка очистки логов: {str(e)}'},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                )
