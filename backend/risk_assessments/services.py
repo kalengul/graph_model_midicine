@@ -181,13 +181,19 @@ def assess_drug_risks(
         side_effects=_map_side_effects(context.get("side_effects", [])),
         combinations=_map_combinations(context.get("combinations", [])),
         se_from_drug=_map_se_from_drug(context.get("SEFromDrug", [])),
-        incompatible_effect_drug_map = _build_incompatible_effect_drug_map(context)
+        max_impact_drugs = _build_max_impact_drugs(context)
     )
 
-def _build_incompatible_effect_drug_map(payload: Dict[str, Any]) -> Dict[str, Any]:
+def _build_max_impact_drugs(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
     """
     Для каждого побочного эффекта из группы compatibility == "incompatible"
-    находит препарат из SEFromDrug с максимальным rank по этому эффекту.
+    находит препараты из SEFromDrug с максимальным rank по этому эффекту.
+
+    Возвращает плоский список:
+      [
+        {"sideEffect": "<название эффекта>", "drugName": "<название препарата>", "rank": 0.87},
+        ...
+      ]
     """
     side_effects = payload.get("side_effects", [])
     se_from_drug = payload.get("SEFromDrug", [])
@@ -195,10 +201,10 @@ def _build_incompatible_effect_drug_map(payload: Dict[str, Any]) -> Dict[str, An
     # 1. Находим incompatible-группу
     incompatible_group = next(
         (group for group in side_effects if group.get("compatibility") == "incompatible"),
-        None
+        None,
     )
     if not incompatible_group:
-        return {}
+        return []
 
     # 2. Индексируем SEFromDrug: se_name -> [(d_name, rank), ...]
     se_index: Dict[str, List[tuple]] = {}
@@ -210,7 +216,7 @@ def _build_incompatible_effect_drug_map(payload: Dict[str, Any]) -> Dict[str, An
             if se_name:
                 se_index.setdefault(se_name, []).append((d_name, rank))
 
-    result: Dict[str, Any] = {}
+    result: List[Dict[str, Any]] = []
 
     # 3. Идём по эффектам incompatible
     for effect in incompatible_group.get("effects", []):
@@ -220,17 +226,16 @@ def _build_incompatible_effect_drug_map(payload: Dict[str, Any]) -> Dict[str, An
 
         candidates = se_index.get(se_name, [])
         if not candidates:
-            result[se_name] = None
             continue
 
         max_rank = max(rank for _, rank in candidates)
-        best = [
-            {"d_name": d_name, "rank": rank}
-            for d_name, rank in candidates
-            if rank == max_rank
-        ]
-
-        result[se_name] = best
+        for d_name, rank in candidates:
+            if rank == max_rank:
+                result.append({
+                    "sideEffect": se_name,
+                    "drugName": d_name,
+                    "rank": rank,
+                })
 
     return result
 
@@ -407,7 +412,7 @@ def _build_response(
     side_effects: Optional[list] = None,
     combinations: Optional[list] = None,
     se_from_drug: Optional[list] = None,
-    incompatible_effect_drug_map: Optional[dict] = None
+    max_impact_drugs: Optional[list] = None
 ) -> dict:
     return {
         "drugs": {str(k): v for k, v in drugs_map.items()},
@@ -420,6 +425,6 @@ def _build_response(
         "sideEffects": side_effects or [],
         "combinations": combinations or [],
         # "seFromDrug": se_from_drug or [],
-        "incompatible_effect_drug_map": incompatible_effect_drug_map or {}
+        "max_impact_drugs": max_impact_drugs or {}
 
     }
