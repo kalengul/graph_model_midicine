@@ -1,20 +1,19 @@
 import os
+import re
+import csv
+
 from django.conf import settings
-from django.http import FileResponse
+from django.http import FileResponse, StreamingHttpResponse
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
 from accounts.auth import bearer_token_required
-from django.conf import settings
-
 from logging_system.models import SystemState
 from logging_system.serializers import (SystemStateSerializer,
                                         LoggingToggleSerializer
                                         )
 from logging_system.services import LoggingToggleService
-
-
 from drf_spectacular.utils import extend_schema, OpenApiResponse, OpenApiTypes
 
 # Определяем путь к лог-файлу
@@ -114,6 +113,16 @@ class LogsExportView(APIView):
                 {'error': 'Файл логов не найден'},
                 status=status.HTTP_404_NOT_FOUND
             )
+        if request.query_params.get('export', '').lower() == 'csv':
+            response = StreamingHttpResponse(
+                self._export_csv(path),
+                content_type='text/csv; charset=utf-8',
+            )
+            response['Content-Disposition'] = (
+                f'attachment; filename="{os.path.basename(path)}.csv"'
+            )
+            return response
+
         return FileResponse(
             open(path, 'rb'),
             content_type='text/plain',
@@ -121,6 +130,28 @@ class LogsExportView(APIView):
             filename=os.path.basename(path)
         )
 
+    def _export_csv(self, path: str):
+        """Генератор CSV-строк. Без заголовков, 4 колонки, разделитель — запятая."""
+
+        def escape(value: str) -> str:
+            if any(ch in value for ch in (';', '"', '\n', '\r')):
+                return '"' + value.replace('"', '""') + '"'
+            return value
+
+        def generate():
+            yield '\ufeff0,1,2,3\n' # BOM для Excel UTF-8
+
+            with open(path, 'r', encoding='utf-8', errors='replace') as f:
+                for line in f:
+                    line = line.rstrip('\n')
+                    if not line:
+                        continue
+
+                    parts = [p.strip() for p in line.split('|')]
+
+                    yield ';'.join(escape(p) for p in parts) + '\n'
+
+        return generate()
 
 class LogsDeleteView(APIView):
     """

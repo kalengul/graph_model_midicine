@@ -11,7 +11,7 @@ DEBUG = getattr(settings, 'DEBUG', True)
 # Общий форматтер
 formatters = {
     'detailed': {
-        'format': '{asctime} {levelname} {name} {message}',
+        'format': '{asctime} | {levelname} | {name} | {message}',
         'style': '{',
     },
 }
@@ -124,8 +124,8 @@ loggers = {
         'propagate': False
     },
     'medical_history': {
-        'handlers': ['console'] + ([] if DEBUG 
-                                   else ['contraindications_file']), 
+        'handlers': ['console'] + ([] if DEBUG
+                                   else ['contraindications_file']),
         'level': 'DEBUG',
         'propagate': False
     },
