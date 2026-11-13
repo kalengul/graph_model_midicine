@@ -3,10 +3,17 @@
 import os
 import sys
 
+from logging_system.utils.get_current_commit_hash import get_current_commit_hash
+
 
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ml_pharm_web.settings')
+
+    # Поставить актуальный хэш
+    if not os.getenv('GIT_COMMIT_VERSION'):
+        os.environ['GIT_COMMIT_VERSION'] = get_current_commit_hash() or 'N/A'
+
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
