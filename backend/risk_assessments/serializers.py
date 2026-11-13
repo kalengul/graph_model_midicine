@@ -82,6 +82,19 @@ class MaxImpactDrugSerializer(serializers.Serializer):
     drugName = serializers.CharField()
     rank = serializers.FloatField()
 
+class RepRecommendationDrugSerializer(serializers.Serializer):
+    drug_name = serializers.CharField()
+    replace_drugs = serializers.ListField(
+        child=serializers.CharField(),
+        allow_empty=True,
+        required=False,
+        default=list,
+    )
+
+class RepRecommendationGroupSerializer(serializers.Serializer):
+    group_name = serializers.CharField()
+    drugs = RepRecommendationDrugSerializer(many=True)
+
 class RiskAssessmentResponseSerializer(serializers.Serializer):
     drugs = serializers.DictField(child=serializers.CharField())
     compatibility = CompatibilitySerializer()
@@ -91,3 +104,4 @@ class RiskAssessmentResponseSerializer(serializers.Serializer):
     combinations = CombinationSerializer(many=True)
     # seFromDrug = SeFromDrugItemSerializer(many=True)
     max_impact_drugs = MaxImpactDrugSerializer(required=False)
+    rep_recommendations = RepRecommendationGroupSerializer(many=True)

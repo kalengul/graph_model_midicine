@@ -181,7 +181,8 @@ def assess_drug_risks(
         side_effects=_map_side_effects(context.get("side_effects", [])),
         combinations=_map_combinations(context.get("combinations", [])),
         se_from_drug=_map_se_from_drug(context.get("SEFromDrug", [])),
-        max_impact_drugs = _build_max_impact_drugs(context)
+        max_impact_drugs = _build_max_impact_drugs(context),
+        rep_recommendations = context.get("rep_recommendations")
     )
 
 def _build_max_impact_drugs(payload: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -412,7 +413,8 @@ def _build_response(
     side_effects: Optional[list] = None,
     combinations: Optional[list] = None,
     se_from_drug: Optional[list] = None,
-    max_impact_drugs: Optional[list] = None
+    max_impact_drugs: Optional[list] = None,
+    rep_recommendations: Optional[list] = None,
 ) -> dict:
     return {
         "drugs": {str(k): v for k, v in drugs_map.items()},
@@ -425,6 +427,6 @@ def _build_response(
         "sideEffects": side_effects or [],
         "combinations": combinations or [],
         # "seFromDrug": se_from_drug or [],
-        "max_impact_drugs": max_impact_drugs or {}
-
+        "max_impact_drugs": max_impact_drugs or {},
+        "rep_recommendations": rep_recommendations or []
     }
