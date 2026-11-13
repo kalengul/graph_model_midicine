@@ -833,25 +833,6 @@ class FortranCalculator(BaseCalculator):
         logger.info(f"Сформировано рекомендаций: {len(recommendations)}")
         return recommendations
 
-def get_calculator(use_multiprocessing=False, use_normalization=True):
-    """
-    Фабрика калькуляторов.
-
-    Аргументы:
-        use_multiprocessing (bool): True — использовать оптимизированную версию
-
-    Возвращает:
-        Экземпляр калькулятора
-    """
-    if use_multiprocessing:
-        pass
-        #return CalculatorMP()
-    elif use_normalization:
-        canceling_effects_json_manual=[[2,3],[5,14],[32,33],[51,52],[86,87]]
-        #return FortranCalculatorNormalization(canceling_effects_json=canceling_effects_json_manual)
-    else:
-        pass
-        #return FortranCalculator()
     # def _analyze_max_drug_contribution(self, incompatible_side_e, rangs_matrix,
     #                                    drug_ids, rangsum, side_e2id):
     #     """
@@ -1044,3 +1025,189 @@ def get_calculator(use_multiprocessing=False, use_normalization=True):
     #     return recommendations
 
 
+# class CalculatorMP(BaseCalculator):
+#     """Оптимизированная реализация для многопроцессорности."""
+
+#     def __init__(self):
+#         """Инициализация калькулятора рангов для многопроцессности."""
+#         logger.debug("Загрузка данных для CalculatorMP")
+
+#         self.drugs = list(Drug.objects.order_by('index'))
+#         self.n_drug = len(self.drugs)
+#         self.drug_names = {drug.id: drug.drug_name for drug in self.drugs}
+#         self.drug_pk_to_index = {drug.pk: drug.id for drug in self.drugs}
+#         self.drug_name_to_index = {drug.drug_name: drug.id
+#                                    for drug in self.drugs}
+
+#         self.side_effects = list(SideEffect.objects.order_by('index'))
+#         self.n_side_effects = len(self.side_effects)
+#         self.se_names = {se.id: se.se_name for se in self.side_effects}
+
+#         drug_side_effects = list(
+#             DrugSideEffect.objects.select_related('drug', 'side_effect')
+#             .order_by('drug__index', 'side_effect__index')
+#         )
+
+#         # Определение доступных типов рангов
+#         sample = drug_side_effects[0] if drug_side_effects else None
+#         self.available_ranks = [
+#             attr for attr in dir(sample)
+#             if attr.startswith('rang_') and not attr.startswith('_')
+#         ] if sample else [self._DEFAULT_RANK_NAME]
+
+#         # Построение матриц рангов для каждого типа ранга
+#         self.ranks_matrices = {}
+#         for rank_name in self.available_ranks:
+#             matrix = np.zeros((self.n_drug, self.n_side_effects), dtype=np.float32)
+#             for r in drug_side_effects:
+#                 drug_idx = r.drug.id - 1
+#                 se_idx = r.side_effect.id - 1
+#                 matrix[drug_idx, se_idx] = float(getattr(r, rank_name, 0.0))
+#             self.ranks_matrices[rank_name] = matrix
+
+#         # Кэш побочных эффектов для каждого лекарства
+#         self.drug_side_effects_cache = defaultdict(list)
+#         for r in drug_side_effects:
+#             self.drug_side_effects_cache[r.drug.id].append({
+#                 'se_name': r.side_effect.se_name,
+#                 'rank': float(getattr(r, self._DEFAULT_RANK_NAME, 0.0))
+#             })
+
+#         logger.debug(
+#             f'CalculatorMP готов: {self.n_drug} ЛС, {self.n_side_effects} ПЭ, '
+#             f'ранги: {self.available_ranks}'
+#         )
+
+#     def calculate(self, rank_name=None, n_drug=None):
+#         """Вычисление БЕЗ обращений к БД — только работа с памятью."""
+#         if n_drug is None:
+#             n_drug = []
+#         if rank_name is None or rank_name not in self.ranks_matrices:
+#             rank_name = self._DEFAULT_RANK_NAME
+
+#         non_zero_n_drug = [self.drug_pk_to_index[pk] for pk in n_drug if pk != 0]
+#         unique_n_drug = list(set(non_zero_n_drug))
+#         num_drugs = len(unique_n_drug)
+
+#         if num_drugs == 0:
+#             return self._empty_result()
+
+#         matrix = self.ranks_matrices[rank_name]
+#         drug_indices_0based = [idx - 1 for idx in unique_n_drug]
+#         rang1 = matrix[drug_indices_0based, :]
+#         rangsum = np.sum(rang1, axis=0)
+#         ram = float(np.max(rangsum))
+
+#         # Классификация
+#         if ram >= 1.0:
+#             classification = 'incompatible'
+#         elif ram >= 0.5:
+#             classification = 'caution'
+#         else:
+#             classification = 'compatible'
+
+#         context = {
+#             'rank_iteractions': round(ram, 2),
+#             'compatibility_fortran': classification
+#         }
+
+#         # Распределение побочных эффектов по классам
+#         side_effects = []
+#         for k in range(self.n_side_effects):
+#             rank_val = float(rangsum[k])
+#             if rank_val >= 1.0:
+#                 cls = 3
+#             elif rank_val >= 0.5:
+#                 cls = 2
+#             else:
+#                 cls = 1
+#             side_effects.append({
+#                 'se_name': self.se_names[k + 1],
+#                 'class': cls,
+#                 'rank': round(rank_val, 2)
+#             })
+
+#         context['side_effects'] = [
+#             {"compatibility": "compatible", 'effects': []},
+#             {"compatibility": "caution", 'effects': []},
+#             {"compatibility": "incompatible", 'effects': []},
+#         ]
+
+#         side_effects.sort(key=lambda x: x['rank'], reverse=True)
+#         for effect in side_effects:
+#             cls = effect.pop('class')
+#             context['side_effects'][cls - 1]['effects'].append(effect)
+
+#         # Анализ потенциальных лекарств
+#         drugs_class_2, drugs_class_3 = [], []
+
+#         for j in range(self.n_drug):
+#             if (j + 1) not in unique_n_drug:
+#                 new_rangsum = rangsum + matrix[j]
+#                 max_rang = float(np.max(new_rangsum))
+#                 if max_rang >= 1.0:
+#                     drugs_class_3.append(j)
+#                 elif max_rang >= 0.5:
+#                     drugs_class_2.append(j)
+
+#         drug_array2 = [{'name': self.drug_names[j + 1], 'class': 2}
+#                        for j in drugs_class_2]
+#         drug_array3 = [{'name': self.drug_names[j + 1], 'class': 3}
+#                        for j in drugs_class_3]  # ИСПРАВЛЕНО
+
+#         context['combinations'] = [
+#             {"compatibility": 'caution', "drugs": [d['name']
+#                                                  for d in drug_array2]},
+#             {"compatibility": 'incompatible', "drugs": [d['name']
+#                                                         for d in drug_array3]},
+#         ]
+
+#         # Информация о лекарствах и их побочных эффектах
+#         context['drugs'] = [self.drug_names[i] for i in unique_n_drug]
+#         context["SEFromDrug"] = [
+#             {
+#                 'd_name': self.drug_names[i],
+#                 'effects': self.drug_side_effects_cache[i]
+#             } for i in unique_n_drug
+#         ]
+
+#         return context
+
+#     def _empty_result(self):
+#         """Результат для пустой комбинации."""
+#         return {
+#             'rank_iteractions': 0.0,
+#             'compatibility_fortran': 'compatible',
+#             'side_effects': [
+#                 {"compatibility": "compatible", 'effects': []},
+#                 {"compatibility": "caution", 'effects': []},
+#                 {"compatibility": "incompatible", 'effects': []},
+#             ],
+#             'combinations': [
+#                 {"compatibility": 'cause', "drugs": []},
+#                 {"compatibility": 'incompatible', "drugs": []},
+#             ],
+#             'drugs': [],
+#             'SEFromDrug': []
+#         }
+
+
+# def get_calculator(use_multiprocessing=False, use_normalization=True):
+#     """
+#     Фабрика калькуляторов.
+
+#     Аргументы:
+#         use_multiprocessing (bool): True — использовать оптимизированную версию
+
+#     Возвращает:
+#         Экземпляр калькулятора
+#     """
+#     if use_multiprocessing:
+#         pass
+#         #return CalculatorMP()
+#     elif use_normalization:
+#         canceling_effects_json_manual=[[2,3],[5,14],[32,33],[51,52],[86,87]]
+#         #return FortranCalculatorNormalization(canceling_effects_json=canceling_effects_json_manual)
+#     else:
+#         pass
+#         #return FortranCalculator()
