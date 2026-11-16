@@ -42,13 +42,11 @@ def get_logger(logger_name: str, log_file: str):
                 super().__init__()
                 self.git_version = git_version
             def filter(self, record):
-                if not hasattr(record, 'git_version'):
-                    record.git_version = self.git_version or 'N/A'
+                record.git_version = self.git_version or 'N/A'
                 return True
 
         handler.setFormatter(formatter)
-        handler.addFilter(GitVersionFilter(git_version))
         logger.addHandler(handler)
-        # logger.addFilter(GitVersionFilter())
+        logger.addFilter(GitVersionFilter(git_version))
 
     return logger
