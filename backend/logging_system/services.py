@@ -73,9 +73,12 @@ class BaseLoggingService:
         **extra,
     ):
         user_str = user.username if user and user.is_authenticated else "Anonymous"
-        state = SystemState.get_current_state()
-        drugs_file = state.drugs_file_name or "N/A"
-        weights_file = state.weights_file_name or "N/A"
+        try:
+            state = SystemState.get_current_state()
+            drugs_file = state.drugs_file_name or "N/A"
+            weights_file = state.weights_file_name or "N/A"
+        except Exception:
+            drugs_file = weights_file = "N/A"
 
         parts = [
             f"User: {user_str}",
@@ -108,15 +111,18 @@ class FortranCalcLoggingService(BaseLoggingService):
         if not cls.is_enabled():
             return
 
-        parts = cls._common_parts(
-            user=user,
-            status=status,
-            rank=rank,
-            all_drugs=all_drugs,
-            banned_pairs=banned_pairs,
-            banned_pairs_cont=banned_pairs_cont,
-        )
-        cls.logger.info(" | ".join(parts))
+        try:
+            parts = cls._common_parts(
+                user=user,
+                status=status,
+                rank=rank,
+                all_drugs=all_drugs,
+                banned_pairs=banned_pairs,
+                banned_pairs_cont=banned_pairs_cont,
+            )
+            cls.logger.info(" | ".join(parts))
+        except Exception:
+            cls.logger.exception("Не удалось записать лог fortran_calc")
 
 
 class RiskAssessmentLoggingService(BaseLoggingService):
@@ -157,17 +163,19 @@ class RiskAssessmentLoggingService(BaseLoggingService):
         if not cls.is_enabled():
             return
 
-        parts = cls._common_parts(
-            user=user,
-            status=status,
-            rank=rank,
-            all_drugs=all_drugs,
-            banned_pairs=banned_pairs,
-            banned_pairs_cont=banned_pairs_cont,
-            # extra-поля уезжают в _middle_parts
-            missing_drugs=missing_drugs,
-        )
-        cls.logger.info(" | ".join(parts))
+        try:
+            parts = cls._common_parts(
+                user=user,
+                status=status,
+                rank=rank,
+                all_drugs=all_drugs,
+                banned_pairs=banned_pairs,
+                banned_pairs_cont=banned_pairs_cont,
+                missing_drugs=missing_drugs,
+            )
+            cls.logger.info(" | ".join(parts))
+        except Exception:
+            cls.logger.exception("Не удалось записать лог risk_assessments")
 
 class LoggingToggleService(BaseLoggingService):
     """

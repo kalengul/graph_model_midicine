@@ -12,7 +12,7 @@ from rest_framework.authentication import TokenAuthentication, SessionAuthentica
 
 from ranker.utils.fortran_calculator import FortranCalculator
 from ranker.utils.check_banned import DrugPairChecker
-from ranker.services.table_gerention import ExcelTableGenerater
+# from ranker.services.table_gerention import ExcelTableGenerater
 from ranker.constants import IDX_2_RANK_NAME
 
 from drugs.utils.custom_response import CustomResponse
@@ -362,95 +362,95 @@ class CalculationAPI(APIView):
         return None
 
 
-@extend_schema_view(
-    post=extend_schema(
-        operation_id='table_generation',
-        tags=['ranker'],
-        request=None,
-        responses={
-            200: OpenApiTypes.OBJECT,
-            500: OpenApiTypes.OBJECT,
-        },
-    ),
-    get=extend_schema(
-        operation_id='table_download',
-        tags=['ranker'],
-        responses={
-            200: OpenApiTypes.BINARY,
-            404: OpenApiTypes.OBJECT,
-        },
-    ),
-)
-class TablesView(APIView):
-    """
-    Генерация таблиц.
+# @extend_schema_view(
+#     post=extend_schema(
+#         operation_id='table_generation',
+#         tags=['ranker'],
+#         request=None,
+#         responses={
+#             200: OpenApiTypes.OBJECT,
+#             500: OpenApiTypes.OBJECT,
+#         },
+#     ),
+#     get=extend_schema(
+#         operation_id='table_download',
+#         tags=['ranker'],
+#         responses={
+#             200: OpenApiTypes.BINARY,
+#             404: OpenApiTypes.OBJECT,
+#         },
+#     ),
+# )
+# class TablesView(APIView):
+#     """
+#     Генерация таблиц.
 
-    Таблицы:
-        - ранги для ЛС;
-        - исключения (они же запрещённые пары);
-        - ЛС, противопоказания и их веса.
-    """
+#     Таблицы:
+#         - ранги для ЛС;
+#         - исключения (они же запрещённые пары);
+#         - ЛС, противопоказания и их веса.
+#     """
 
-    def post(self, request):
-        """Генерация Excel-файла с таблицами."""
-        try:
-            buffer = ExcelTableGenerater().generate_tables()
+#     def post(self, request):
+#         """Генерация Excel-файла с таблицами."""
+#         try:
+#             buffer = ExcelTableGenerater().generate_tables()
 
-            file_size = len(buffer.getvalue())
-            logger.debug(f"Размер файла: {file_size} байт")
+#             file_size = len(buffer.getvalue())
+#             logger.debug(f"Размер файла: {file_size} байт")
 
-            if file_size < 1000:
-                logger.error('Сгенерированный файл слишком маленький. '
-                             'Вероятно, поврежден.')
-                return CustomResponse(
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                    message='Сгенерированный файл поврежден',
-                    http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#             if file_size < 1000:
+#                 logger.error('Сгенерированный файл слишком маленький. '
+#                              'Вероятно, поврежден.')
+#                 return CustomResponse(
+#                     status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#                     message='Сгенерированный файл поврежден',
+#                     http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            return CustomResponse(
-                status=status.HTTP_200_OK,
-                message="Excel-файл с таблицы сгенерирован успешно",
-                http_status=status.HTTP_200_OK)
+#             return CustomResponse(
+#                 status=status.HTTP_200_OK,
+#                 message="Excel-файл с таблицы сгенерирован успешно",
+#                 http_status=status.HTTP_200_OK)
 
-        except Exception as error:
-            message = 'Ошибка генерации таблиц'
-            logger.error(f'{message}. {error}')
-            print("=" * 80)
-            print("КРИТИЧЕСКАЯ ОШИБКА в генерации таблиц:")
-            traceback.print_exc()
-            print("=" * 80)
-            return CustomResponse(
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                message=message,
-                http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+#         except Exception as error:
+#             message = 'Ошибка генерации таблиц'
+#             logger.error(f'{message}. {error}')
+#             print("=" * 80)
+#             print("КРИТИЧЕСКАЯ ОШИБКА в генерации таблиц:")
+#             traceback.print_exc()
+#             print("=" * 80)
+#             return CustomResponse(
+#                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#                 message=message,
+#                 http_status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    def get(self, request):
-        """Получение Excel-файла с таблицами."""
-        path = Path(settings.GENERATED_TABLES)
+#     def get(self, request):
+#         """Получение Excel-файла с таблицами."""
+#         path = Path(settings.GENERATED_TABLES)
 
-        if not path.exists() or not path.is_dir():
-            return CustomResponse(
-                status=status.HTTP_404_NOT_FOUND,
-                message="Нет директории с генерированными excel-таблицами",
-                http_status=status.HTTP_404_NOT_FOUND
-            )
+#         if not path.exists() or not path.is_dir():
+#             return CustomResponse(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message="Нет директории с генерированными excel-таблицами",
+#                 http_status=status.HTTP_404_NOT_FOUND
+#             )
 
-        files = [f for f in path.iterdir() if f.is_file()]
+#         files = [f for f in path.iterdir() if f.is_file()]
 
-        if not files:
-            return CustomResponse(
-                status=status.HTTP_404_NOT_FOUND,
-                message="В директории нет сгенерированного excel-таблицами",
-                http_status=status.HTTP_404_NOT_FOUND
-            )
+#         if not files:
+#             return CustomResponse(
+#                 status=status.HTTP_404_NOT_FOUND,
+#                 message="В директории нет сгенерированного excel-таблицами",
+#                 http_status=status.HTTP_404_NOT_FOUND
+#             )
 
-        tables_file = max(files, key=lambda f: f.stat().st_mtime)
+#         tables_file = max(files, key=lambda f: f.stat().st_mtime)
 
-        print('tables_file.name =', tables_file.name)
+#         print('tables_file.name =', tables_file.name)
 
-        return FileResponse(
-                tables_file.open('rb'),
-                content_type=('application/vnd.openxmlformats-officedocument.'
-                              'spreadsheetml.sheet'),
-                filename=tables_file.name,
-                as_attachment=True)
+#         return FileResponse(
+#                 tables_file.open('rb'),
+#                 content_type=('application/vnd.openxmlformats-officedocument.'
+#                               'spreadsheetml.sheet'),
+#                 filename=tables_file.name,
+#                 as_attachment=True)

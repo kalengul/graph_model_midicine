@@ -4,10 +4,13 @@ from unittest.mock import patch
 
 from django.test import TestCase
 from django.contrib.auth.models import User
+from django.db.utils import OperationalError
 from rest_framework.test import APIClient
 from rest_framework.authtoken.models import Token
 from rest_framework import status
+from rest_framework.test import APIRequestFactory
 
+from risk_assessments.views import DrugRiskAssessmentView
 from logging_system.models import SystemState
 
 
@@ -148,3 +151,40 @@ class ViewsTests(TestCase):
                     self.assertIn("error", response.data)
 
         os.unlink(tmp_path)
+
+class TestLoggingDoesNotBreakResponse(TestCase):
+    """Сбой подсистемы логирования не должен превращать успешный расчёт в 500."""
+
+    SUCCESS_RESULT = {
+        "drugs": {"1": "варфарин", "2": "ампициллин"},
+        "compatibility": {"status": "COMPATIBLE", "rank": 8.5},
+        "bannedPairs": [],
+        "bannedPairsCont": [],
+        "sideEffects": [],
+        "combinations": [],
+        "max_impact_drugs": [],
+        "rep_recommendations": [],
+    }
+
+    def _post(self, data: dict):
+        request = APIRequestFactory().post(
+            "/api/v1/risk-assessments/drug-compatibility", data, format="json"
+        )
+        return DrugRiskAssessmentView.as_view()(request)
+
+    @patch("risk_assessments.views.RiskLog.logger")            # не пишем в реальный файл
+    @patch(
+        "logging_system.services.SystemState.get_current_state",
+        side_effect=OperationalError("database is locked"),
+    )
+    @patch("risk_assessments.views.assess_drug_risks")         # изолируем от Fortran/БД
+    def test_200_even_if_logging_state_unavailable(self, mock_assess, _state, _logger):
+        mock_assess.return_value = self.SUCCESS_RESULT
+
+        try:
+            response = self._post({"drugs": ["варфарин", "ампициллин"]})
+        except Exception as exc:
+            self.fail(f"Сбой логирования не должен ломать запрос: {exc!r}")
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.data["data"]["compatibility"]["status"], "COMPATIBLE")        

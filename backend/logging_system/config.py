@@ -20,12 +20,14 @@ def get_logger(logger_name: str, log_file: str):
 
     if not logger.handlers:
         git_version = os.getenv('GIT_COMMIT_VERSION')
+        # git_version = os.getenv('GIT_COMMIT_VERSION') or get_current_commit_hash() or 'N/A'
         logger.setLevel(logging.INFO)
 
         formatter = logging.Formatter(
             '{asctime} | {git_version} | {message}',
             style='{',
-            datefmt='%Y-%m-%d %H:%M:%S'
+            datefmt='%Y-%m-%d %H:%M:%S',
+            defaults={'git_version': git_version or 'N/A'},
         )
 
         handler = RotatingFileHandler(
@@ -34,14 +36,17 @@ def get_logger(logger_name: str, log_file: str):
             backupCount=5,
             encoding='utf-8'
         )
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
 
         class GitVersionFilter(logging.Filter):
+            def __init__(self, git_version):
+                super().__init__()
+                self.git_version = git_version
             def filter(self, record):
-                record.git_version = git_version
+                record.git_version = self.git_version or 'N/A'
                 return True
 
-        logger.addFilter(GitVersionFilter())
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+        logger.addFilter(GitVersionFilter(git_version))
 
     return logger

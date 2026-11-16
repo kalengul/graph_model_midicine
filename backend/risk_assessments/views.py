@@ -53,6 +53,7 @@ class DrugRiskAssessmentView(APIView):
         # 1. Валидация входных данных
         serializer = DrugRiskAssessmentRequestSerializer(data=request.data)
         if not serializer.is_valid():
+            RiskLog.logger.info(f"INVALID: {serializer.errors}, raw={request.data!r}")
             return _error_response(
                 message="Некорректные входные данные",
                 additional_data=serializer.errors,
