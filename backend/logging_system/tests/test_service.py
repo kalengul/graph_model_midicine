@@ -1,5 +1,6 @@
 from unittest.mock import patch, Mock
 from django.test import TestCase
+from django.db.utils import OperationalError
 
 from logging_system.models import SystemState
 from logging_system.services import (
@@ -247,3 +248,34 @@ class FormatBannedPairsTests(TestCase):
             )
             line = mock_logger.info.call_args[0][0]
             self.assertIn("BannedPairs: [['Аспирин', 'Варфарин']]", line)
+
+
+class RiskLogDegradationTests(TestCase):
+    """
+    Регресс: недоступность SystemState не должна ни пробрасывать исключение,
+    ни приводить к потере записи о запросе.
+    """
+
+    @patch("logging_system.services.RiskAssessmentLoggingService.logger")
+    @patch(
+        "logging_system.services.SystemState.get_current_state",
+        side_effect=OperationalError("database is locked"),
+    )
+    def test_log_request_degrades_to_na_when_state_unavailable(self, _state, mock_logger):
+        try:
+            RiskAssessmentLoggingService.log_request(
+                user=Mock(username="u", is_authenticated=True),
+                status="compatible",
+                rank=8.5,
+                all_drugs=["варфарин", "ампициллин"],
+            )
+        except Exception as exc:
+            self.fail(f"log_request не должен пробрасывать исключение наружу: {exc!r}")
+
+        mock_logger.info.assert_called_once()
+        line = mock_logger.info.call_args[0][0]
+        self.assertIn("User: u", line)
+        self.assertIn("Status: compatible", line)
+        self.assertIn("DrugsFile: N/A", line)
+        self.assertIn("WeightsFile: N/A", line)
+
