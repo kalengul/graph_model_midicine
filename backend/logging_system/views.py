@@ -1,3 +1,4 @@
+import errno
 import os
 import re
 import csv
@@ -22,6 +23,8 @@ LOG_FILES = {
     'fortran_calc': os.path.join(LOG_DIR, 'fortran_calc.log'),
     'risk_assessments': os.path.join(LOG_DIR, 'risk_assesments.log'),
     'logging_system':   os.path.join(LOG_DIR, 'logging_system.log'),
+    'nginx_access': settings.NGINX_ACCESS_LOG,
+    'nginx_error':  settings.NGINX_ERROR_LOG,
 }
 
 
@@ -96,6 +99,9 @@ class LoggingToggleView(APIView):
 class LogsExportView(APIView):
     """
     Экспорт файла логов для скачивания.
+
+    Доступные типы: fortran_calc, risk_assessments, logging_system,
+    nginx_access, nginx_error.
     """
 
     @extend_schema(
@@ -108,10 +114,15 @@ class LogsExportView(APIView):
     @bearer_token_required
     def get(self, request, log_type: str):
         path = LOG_FILES.get(log_type)
-        if not path or not os.path.exists(path):
+        if not path or not os.path.isfile(path):
             return Response(
                 {'error': 'Файл логов не найден'},
                 status=status.HTTP_404_NOT_FOUND
+            )
+        if not os.access(path, os.R_OK):
+            return Response(
+                {'error': 'Нет доступа к файлу логов'},
+                status=status.HTTP_403_FORBIDDEN
             )
         if request.query_params.get('export', '').lower() == 'csv':
             response = StreamingHttpResponse(
@@ -123,12 +134,23 @@ class LogsExportView(APIView):
             )
             return response
 
-        return FileResponse(
-            open(path, 'rb'),
-            content_type='text/plain',
-            as_attachment=True,
-            filename=os.path.basename(path)
-        )
+        try:
+            return FileResponse(
+                open(path, 'rb'),
+                content_type='text/plain',
+                as_attachment=True,
+                filename=os.path.basename(path)
+            )
+        except FileNotFoundError:
+            return Response(
+                {'error': 'Файл логов не найден'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        except OSError:
+            return Response(
+                {'error': 'Не удалось прочитать файл логов'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
 
     def _export_csv(self, path: str):
         """Генератор CSV-строк. Без заголовков, 4 колонки, разделитель — запятая."""
@@ -156,6 +178,9 @@ class LogsExportView(APIView):
 class LogsDeleteView(APIView):
     """
     Очистка файла логов (DELETE).
+
+    Логи nginx (nginx_access, nginx_error) смонтированы только для чтения,
+    поэтому для них возвращается 403.
     """
 
 
@@ -170,6 +195,10 @@ class LogsDeleteView(APIView):
                 response=OpenApiTypes.OBJECT,
                 description='Файл логов не найден.',
             ),
+            403: OpenApiResponse(
+                response=OpenApiTypes.OBJECT,
+                description='Файл логов доступен только для чтения.',
+            ),
             500: OpenApiResponse(
                 response=OpenApiTypes.OBJECT,
                 description='Ошибка очистки логов.',
@@ -179,18 +208,33 @@ class LogsDeleteView(APIView):
     )
     @bearer_token_required
     def delete(self, request, log_type: str):
-            path = LOG_FILES.get(log_type)
-            if not path or not os.path.exists(path):
+        path = LOG_FILES.get(log_type)
+        if not path or not os.path.isfile(path):
+            return Response(
+                {'error': 'Файл логов не найден'},
+                status=status.HTTP_404_NOT_FOUND
+            )
+        try:
+            with open(path, 'w'):
+                pass
+            return Response({'message': 'Логи очищены'})
+        except OSError as exc:
+            if exc.errno == errno.ENOENT:
                 return Response(
                     {'error': 'Файл логов не найден'},
                     status=status.HTTP_404_NOT_FOUND
                 )
-            try:
-                with open(path, 'w') as f:
-                    f.truncate(0)
-                return Response({'message': 'Логи очищены'})
-            except Exception as e:
+            if exc.errno in (errno.EROFS, errno.EACCES):
                 return Response(
-                    {'error': f'Ошибка очистки логов: {str(e)}'},
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR
+                    {'error': 'Файл логов доступен только для чтения'},
+                    status=status.HTTP_403_FORBIDDEN
                 )
+            return Response(
+                {'error': f'Ошибка очистки логов: {str(exc)}'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        except Exception as exc:
+            return Response(
+                {'error': f'Ошибка очистки логов: {str(exc)}'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )

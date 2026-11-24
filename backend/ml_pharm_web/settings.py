@@ -27,6 +27,12 @@ if not GIT_COMMIT_HASH and not DEBUG:
 LOG_DIR = os.path.join(BASE_DIR, 'logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 
+# Имена файлов должны совпадать с access_log/error_log в nginx/default.conf.
+NGINX_LOG_DIR = os.path.join(BASE_DIR, 'nginx_logs')
+NGINX_ACCESS_LOG = os.path.join(NGINX_LOG_DIR, 'http_access.log')
+NGINX_ERROR_LOG = os.path.join(NGINX_LOG_DIR, 'http_error.log')
+os.makedirs(NGINX_LOG_DIR, exist_ok=True)
+
 MINI_FRONT_PATH = os.path.join(BASE_DIR, "mini_front", "dist")
 
 # Application definition
@@ -56,7 +62,7 @@ INSTALLED_APPS = [
     'risk_assessments',
     'combination_checker',          # Брутфорс запрещённых комбинаций
     'drf_spectacular',              # Контракт для генерации клиента
-    
+
 ]
 
 

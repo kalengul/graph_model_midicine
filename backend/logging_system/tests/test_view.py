@@ -1,7 +1,9 @@
+import errno
 import os
 import tempfile
 from unittest.mock import patch
 
+from django.conf import settings
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django.db.utils import OperationalError
@@ -12,6 +14,7 @@ from rest_framework.test import APIRequestFactory
 
 from risk_assessments.views import DrugRiskAssessmentView
 from logging_system.models import SystemState
+from logging_system.views import LOG_FILES
 
 
 class ViewsTests(TestCase):
@@ -96,11 +99,51 @@ class ViewsTests(TestCase):
         os.unlink(tmp_path)
 
     def test_logs_export_get_file_not_found(self):
-        with patch("logging_system.views.os.path.exists", return_value=False):
+        with patch("logging_system.views.os.path.isfile", return_value=False):
             url = f"{self.API_BASE}logs/export/fortran_calc/"
             response = self._auth_get(url)
             self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
             self.assertIn("error", response.data)
+
+    def test_logs_export_no_read_access(self):
+        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+            tmp_path = tmp.name
+
+        try:
+            with patch("logging_system.views.LOG_FILES",
+                       {'fortran_calc': tmp_path}):
+                with patch("logging_system.views.os.access",
+                           return_value=False):
+                    url = f"{self.API_BASE}logs/export/fortran_calc/"
+                    response = self._auth_get(url)
+                    self.assertEqual(
+                        response.status_code,
+                        status.HTTP_403_FORBIDDEN,
+                    )
+                    self.assertIn("error", response.data)
+        finally:
+            os.unlink(tmp_path)
+
+    def test_logs_export_read_error(self):
+        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+            tmp_path = tmp.name
+
+        try:
+            with patch("logging_system.views.LOG_FILES",
+                       {'fortran_calc': tmp_path}):
+                with patch(
+                    "builtins.open",
+                    side_effect=OSError(errno.EIO, "I/O error"),
+                ):
+                    url = f"{self.API_BASE}logs/export/fortran_calc/"
+                    response = self._auth_get(url)
+                    self.assertEqual(
+                        response.status_code,
+                        status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    )
+                    self.assertIn("error", response.data)
+        finally:
+            os.unlink(tmp_path)
 
     def test_logs_export_unknown_log_type(self):
         """Неизвестный log_type → 404."""
@@ -108,6 +151,19 @@ class ViewsTests(TestCase):
         response = self._auth_get(url)
         self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
         self.assertIn("error", response.data)
+
+    def test_nginx_logs_are_in_shared_volume(self):
+        """nginx-логи читаются из каталога, смонтированного из общего volume."""
+        self.assertEqual(LOG_FILES['nginx_access'], settings.NGINX_ACCESS_LOG)
+        self.assertEqual(LOG_FILES['nginx_error'], settings.NGINX_ERROR_LOG)
+        self.assertEqual(
+            os.path.dirname(LOG_FILES['nginx_access']),
+            settings.NGINX_LOG_DIR,
+        )
+        self.assertEqual(
+            os.path.dirname(LOG_FILES['nginx_error']),
+            settings.NGINX_LOG_DIR,
+        )
 
     # ---------- LogsDeleteView ----------
 
@@ -128,7 +184,7 @@ class ViewsTests(TestCase):
         os.unlink(tmp_path)
 
     def test_logs_delete_not_found(self):
-        with patch("logging_system.views.os.path.exists", return_value=False):
+        with patch("logging_system.views.os.path.isfile", return_value=False):
             url = f"{self.API_BASE}logs/delete/fortran_calc/"
             response = self._auth_delete(url)
             self.assertEqual(response.status_code, status.HTTP_404_NOT_FOUND)
@@ -140,7 +196,7 @@ class ViewsTests(TestCase):
 
         with patch("logging_system.views.LOG_FILES",
                    {'fortran_calc': tmp_path}):
-            with patch("logging_system.views.os.path.exists", return_value=True):
+            with patch("logging_system.views.os.path.isfile", return_value=True):
                 with patch("builtins.open", side_effect=Exception("Some error")):
                     url = f"{self.API_BASE}logs/delete/fortran_calc/"
                     response = self._auth_delete(url)
@@ -149,6 +205,27 @@ class ViewsTests(TestCase):
                         status.HTTP_500_INTERNAL_SERVER_ERROR,
                     )
                     self.assertIn("error", response.data)
+
+        os.unlink(tmp_path)
+
+    def test_logs_delete_read_only(self):
+        """Очистка nginx-логов на read-only volume → понятная 403."""
+        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+            tmp_path = tmp.name
+
+        with patch("logging_system.views.LOG_FILES",
+                   {'nginx_access': tmp_path}):
+            with patch(
+                "builtins.open",
+                side_effect=OSError(errno.EROFS, "Read-only file system"),
+            ):
+                url = f"{self.API_BASE}logs/delete/nginx_access/"
+                response = self._auth_delete(url)
+                self.assertEqual(
+                    response.status_code,
+                    status.HTTP_403_FORBIDDEN,
+                )
+                self.assertIn("error", response.data)
 
         os.unlink(tmp_path)
 

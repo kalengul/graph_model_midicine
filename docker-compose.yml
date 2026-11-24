@@ -8,7 +8,7 @@ services:
       interval: 10s
       timeout: 2s
       retries: 3
-      start_period: 0s 
+      start_period: 0s
     container_name: db
     restart: unless-stopped
     volumes:
@@ -18,17 +18,18 @@ services:
 
   backend:
     container_name: backend
-    build: 
+    build:
       context: ./backend
       args:
         - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
     environment:
-      - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown} 
+      - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
       - USE_SQLITE=False
       - POSTGRES_HOST=db
     restart: unless-stopped
     volumes:
       - logs:/app/logs
+      - nginx_logs:/app/nginx_logs:ro
     env_file:
       - .env
     depends_on:
@@ -43,11 +44,14 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    restart: unless-stopped
     depends_on:
       - backend
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+      - nginx_logs:/var/log/nginx
 
 volumes:
   postgres_data:
   logs:
+  nginx_logs:
