@@ -1,5 +1,9 @@
 name: tosh
 
+x-timezone: &timezone
+  TZ: ${TZ:-Europe/Moscow}
+  DJANGO_TIME_ZONE: ${TZ:-Europe/Moscow}
+
 services:
   db:
     image: postgres:15
@@ -11,6 +15,14 @@ services:
       start_period: 0s
     container_name: db
     restart: unless-stopped
+    environment:
+      <<: *timezone
+    command:
+      - postgres
+      - -c
+      - log_timezone=${TZ:-Europe/Moscow}
+      - -c
+      - timezone=${TZ:-Europe/Moscow}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     env_file:
@@ -23,9 +35,10 @@ services:
       args:
         - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
     environment:
-      - GIT_COMMIT_HASH=${GIT_COMMIT_HASH:-unknown}
-      - USE_SQLITE=False
-      - POSTGRES_HOST=db
+      <<: *timezone
+      GIT_COMMIT_HASH: ${GIT_COMMIT_HASH:-unknown}
+      USE_SQLITE: "False"
+      POSTGRES_HOST: db
     restart: unless-stopped
     volumes:
       - logs:/app/logs
@@ -45,6 +58,8 @@ services:
       - "80:80"
       - "443:443"
     restart: unless-stopped
+    environment:
+      <<: *timezone
     depends_on:
       - backend
     volumes:
