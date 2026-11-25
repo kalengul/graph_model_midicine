@@ -68,3 +68,22 @@ class ConfigTests(TestCase):
         called_names = [c.args[0] for c in mock_get_logger.call_args_list]
         self.assertIn('fortran_calc', called_names)
         self.assertIn('risk_assessments', called_names)
+
+
+    @patch("logging_system.config.RotatingFileHandler",
+           side_effect=PermissionError(13, "Permission denied"))
+    @patch("logging_system.config.logging.StreamHandler")
+    @patch("logging_system.config.logging.getLogger")
+    def test_get_logger_falls_back_to_stderr(
+        self, mock_get_logger, mock_stream_handler, mock_file_handler
+    ):
+        """Ошибка доступа к файлу лога не должна ронять приложение."""
+        mock_logger = Mock()
+        mock_logger.handlers = []
+        mock_get_logger.return_value = mock_logger
+        config.get_logger('fortran_calc', 'fortran_calc.log')
+        mock_file_handler.assert_called_once()
+        mock_stream_handler.assert_called_once()
+        mock_logger.addHandler.assert_called_once_with(
+            mock_stream_handler.return_value
+        )

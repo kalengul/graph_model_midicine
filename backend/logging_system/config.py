@@ -30,12 +30,22 @@ def get_logger(logger_name: str, log_file: str):
             defaults={'git_version': git_version or 'N/A'},
         )
 
-        handler = RotatingFileHandler(
-            os.path.join(LOG_DIR, log_file),
-            maxBytes=10 * 1024 * 1024,
-            backupCount=5,
-            encoding='utf-8'
-        )
+        log_path = os.path.join(LOG_DIR, log_file)
+        try:
+            handler = RotatingFileHandler(
+                log_path,
+                maxBytes=10 * 1024 * 1024,
+                backupCount=5,
+                encoding='utf-8'
+            )
+        except OSError as exc:
+            logging.getLogger(__name__).warning(
+                "Не удалось открыть лог-файл %s: %s. "
+                "Запись идет в stderr, приложение продолжает работу.",
+                log_path,
+                exc,
+            )
+            handler = logging.StreamHandler()
 
         class GitVersionFilter(logging.Filter):
             def __init__(self, git_version):
